@@ -24,7 +24,8 @@ class Comment(models.Model):
 		ordering = ['date_time']
 	
 	id = models.UUIDField(primary_key=True, auto_created=True, default=uuid.uuid4, editable=False)
-	wearticle = models.ForeignKey(to = Wearticle, to_field= 'id', on_delete = models.CASCADE, help_text = 'article')
+
+	wearticle = models.ForeignKey(to = Wearticle, to_field= 'id',  on_delete = models.CASCADE, help_text = 'article')
 	
 	user = models.ForeignKey( to = User, to_field= 'id', on_delete= models.CASCADE, help_text = 'user')
 
