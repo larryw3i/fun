@@ -18,6 +18,7 @@ from django.urls import include , path
 from wearticle import views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('_wearticle/hello', views.hello_django_bbs),
