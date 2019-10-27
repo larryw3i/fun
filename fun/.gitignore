@@ -120,4 +120,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# static files
+static/libs/bootstrap-4.3.1-dist/
+static/libs/jquery-3.4.1/
+static/libs/popper.js-1.16.0/
+
+
 # End of https://www.gitignore.io/api/django

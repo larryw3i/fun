@@ -20,7 +20,10 @@ from wearticle import views
 
 
 urlpatterns = [
+    
+    path('', include('funhome.urls')),
+
     path('admin/', admin.site.urls),
 	path('_wearticle/hello', views.hello_django_bbs),
-	path('wearticle/', include('wearticle.urls') )
+	path('wearticle/', include('wearticle.urls') ),
 ]
