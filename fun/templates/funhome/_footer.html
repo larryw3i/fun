@@ -1,0 +1,12 @@
+
+{% load i18n %}
+{% load account %}
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; {% now "Y" %} 
+        {# a bug >> site name coudn`t get here #}
+        - <a href="/"></a> {% blocktrans %}x-dove{% endblocktrans %} 
+        - <a href="#">{% trans 'Privacy' %}</a>
+    </div>
+</footer>

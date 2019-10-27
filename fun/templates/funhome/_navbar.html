@@ -1,10 +1,11 @@
 
 
+{% load i18n %}
 {% load static %}
 
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-sm navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="{% static 'images/x_dove.webp' %}" width="30" height="30" class="d-inline-block align-top" alt="">
             x-dove
         </a>
@@ -16,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -37,11 +38,11 @@
             <ul class="form-inline my-2 my-lg-0"> 
 
                 {% if user.is_authenticated %}
-                    <a class="p-2 text-dark" href="{% url 'account_logout' %}">Log Out</a>
-                    <a class="p-2 text-dark" href="{% url 'account_logout' %}">Log Out</a>
+                    <a class="p-2 text-dark" href="{% url 'account_logout' %}">{% trans 'Hello' %}! {{ user.username }}</a>
+                    <a class="p-2 text-dark" href="{% url 'account_logout' %}">{% trans 'Log Out' %}</a>
                 {% else %}
-                    <a class="p-2 text-dark" href="{% url 'account_login' %}">Log In</a>
-                    <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Sign Up</a>
+                    <a class="p-2 text-dark" href="{% url 'account_login' %}">{% trans 'Log In' %}</a>
+                    <a class="btn btn-outline-primary" href="{% url 'account_signup' %}">{% trans 'Sign Up' %}</a>
                 {% endif %}
             
             </ul>
@@ -49,5 +50,4 @@
         </div>
     </div>
        
-    </nav>
-    
+</nav>
