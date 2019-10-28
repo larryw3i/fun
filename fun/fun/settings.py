@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     "compressor",
 
     'wearticle.apps.WearticleConfig',
-    'funhome.apps.FunhomeConfig'
+    'funhome.apps.FunhomeConfig',
+    'eduhub.apps.EduhubConfig'
 ]
 
 MIDDLEWARE = [
@@ -134,6 +135,8 @@ AUTHENTICATION_BACKENDS = (
 
 # EMAIL_BACKEND = 'allauth.account.auth_backends.AuthenticationBackend' #'django.core.mail.backends.console.EmailBackend' 
 
+# ACCUNT_AND_EMAIL
+
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
 
 ACCOUNT_AUTHENTICATION_METHOD = "username_email" 
@@ -159,6 +162,9 @@ ACCOUNT_USERNAME_MIN_LENGTH = 2
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
+
+
+# END ACCUNT_AND_EMAIL
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4' 
 
@@ -198,3 +204,11 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     'compressor.finders.CompressorFinder',
 ]
+
+
+# MEDIA_FILE
+
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+
+# END MEDIA_FILE
