@@ -1,0 +1,23 @@
+
+{% load account %}
+{% user_display user as user_display %}
+{% load i18n %}
+
+{% autoescape off %}
+
+    <h2>Hello from {% trans  current_site.name  %}!</h2>
+    <p>
+        You're receiving this e-mail because user <h3>{{ user_display }}</h3> has given yours as an e-mail address to connect their account.
+
+        To confirm this is correct, go to <a href='{{ activate_url }}'>{% trans 'RESET PASSWORD' %}</a>
+    </p>
+
+    {% blocktrans with  site_name=current_site.name  site_domain=current_site.domain %}
+
+        <div style='width:100%;text-align:right'>
+            Thank you from {{ site_name }}!
+            <br/>
+            {{ site_domain }}
+        </div>
+    {% endblocktrans %}
+{% endautoescape %}

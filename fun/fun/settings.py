@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'crispy_forms',    
+    'crispy_forms',
+    
     'allauth',
     'allauth.account',
 
@@ -131,8 +132,10 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend', 
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+# EMAIL_BACKEND = 'allauth.account.auth_backends.AuthenticationBackend' #'django.core.mail.backends.console.EmailBackend' 
+
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
+
 ACCOUNT_AUTHENTICATION_METHOD = "username_email" 
 
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
@@ -140,6 +143,8 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_FROM = os.environ.get('EMAIL_FROM')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = True
@@ -147,9 +152,10 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True 
 
-EMAIL_FROM = os.environ.get('EMAIL_FROM')
+ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 2
 
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
