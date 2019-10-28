@@ -23,6 +23,8 @@ urlpatterns = [
     
     path('', include('funhome.urls')),
     
+    path('eduhub/', include('eduhub.urls')),
+    
     path('accounts/', include('allauth.urls')), 
 
     path('admin/', admin.site.urls),
