@@ -26,7 +26,7 @@ class ArticleListView( ListView ):
 
 
 
-class ArticleCreateView(CreateView):
+class ArticleCreateView( CreateView ):
     model = Article
     template_name =EduhubConfig.name + '/create.html'
     fields = ['title', 'document_file',]
@@ -38,11 +38,28 @@ class ArticleCreateView(CreateView):
 
 
 
-class ArticleUpdateView(UpdateView):
+class ArticleUpdateView( UpdateView ):
     model = Article
     template_name =EduhubConfig.name + '/update.html'
     fields = ['title', 'document_file',]
-
+    
     def form_valid(self, form):
-        form.author = self.request.user
-        return super(ArticleUpdateView, self).form_valid(form)
+        if form.instance.author != self.request.user:
+            return Http404('nice try')
+        return super(ArticleCreateView, self).form_valid(form)
+
+
+
+class ArticleDeleteView( DeleteView ):
+    model = Article
+    template_name =EduhubConfig.name + '/delete.html'
+    fields = ['title', 'document_file',]
+    success_url ='/'+ EduhubConfig.name + '/list'   
+
+class ArticleDetailView( DetailView ):
+    model = Article
+
+    template_name =EduhubConfig.name + '/detail.html'
+    fields = ['title', 'document_file',]
+    pk_url_kwarg = 'id'
+        

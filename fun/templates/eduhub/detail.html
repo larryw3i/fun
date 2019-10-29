@@ -1,0 +1,35 @@
+
+
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Home{% endblock title %}
+
+{% load i18n %}
+
+{% block content %}      
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"> {% trans 'title'%}  </th>
+                <td>{{ object.title }}</td>
+            </tr>
+            
+            <tr>
+                <th scope="row"> {% trans 'upload time'%}  </th>
+                <td>{{ object.uploaded_time }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

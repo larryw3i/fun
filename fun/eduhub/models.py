@@ -6,6 +6,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext as _t
 import uuid
+from django.core import validators
 
 
 class Article( models.Model ):
@@ -15,7 +16,10 @@ class Article( models.Model ):
 
     title = models.CharField( max_length = 64 , unique = True, help_text = _t('title') )
 
-    document_file = models.FileField(upload_to = 'eduhub_document_files', help_text = _t('document file') )
+    document_file = models.FileField(
+        upload_to = 'eduhub_document_files', 
+        validators=[validators.FileExtensionValidator(['pdf','mp4','webm','mkv'])] , 
+        help_text = _t('document file')+" ("+_t('.pdf, .mp4, .webm, .mkv only')+")" )
 
     uploaded_time = models.DateTimeField( auto_now_add = True, help_text = _t( 'uploaded time') )
 
