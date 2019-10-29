@@ -7,12 +7,6 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext as _t
 import uuid
 
-class Classification( models.Model ):
-
-    id = models.UUIDField(primary_key=True, auto_created=True, default=uuid.uuid4, editable=False)
-
-    name = models.CharField(max_length = 16, help_text = _t( 'classification name') )
-
 
 class Article( models.Model ):
 
@@ -26,6 +20,4 @@ class Article( models.Model ):
     uploaded_time = models.DateTimeField( auto_now_add = True, help_text = _t( 'uploaded time') )
 
     author = models.ForeignKey( to = User, to_field= 'id', on_delete= models.CASCADE, help_text = _t('author') )
-
-    classifications = models.ManyToManyField( to= Classification, help_text = _t('classifications') )
 

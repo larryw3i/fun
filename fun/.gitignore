@@ -127,5 +127,9 @@ static/libs/popper.js-1.16.0/
 static/libs/jquery-validation-1.19.1/
 
 
+# migrations
+**/migrations/
+
+
 
 # End of https://www.gitignore.io/api/django

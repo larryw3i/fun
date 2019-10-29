@@ -1,0 +1,72 @@
+
+
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Home{% endblock title %}
+
+{% load i18n %}
+
+{% block content %} 
+    <h2>{% trans 'Article list' %}</h2>
+    <div class="row">
+        <div class="col col-12">
+            <form action="{% url 'list' %}" method="get" class='float-right form-inline pl-1'>
+                <input name="q" class="form-control" type="text" placeholder="Search...">
+                <input type="submit" class="btn btn-primary" value="{% trans 'Search' %}"/>
+            </form>
+                
+            <a class="float-right btn btn-outline-info" href="{% url 'create' %}">{% trans 'Add' %}</a>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">{% trans 'Article title' %}</th>
+            <th scope="col"> {% trans 'Article author' %} </th>
+        </tr>
+        </thead>
+        <tbody>
+
+            {% for article in Articles %}
+                <tr>
+                    <th scope="row">{{ article.title }}</th>
+                    <td>{{ article.author }}</td>
+                </tr>   
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if is_paginated %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination  justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li  class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                    <li class="disabled  page-item"><span class="page-link">&laquo;</span></li>
+                {% endif %}
+
+                {% for i in page_obj.paginator.page_range %}
+                    {% if page_obj.number == i %}
+                        <li class="page-item active"><span  class="page-link" >{{ i }} <span  class="sr-only page-link">(current)</span></span></li>
+                    {% else %}
+                        <li  class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <li  class=" page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                    <li class="disabled page-item"><span class="page-link">&raquo;</span></li>
+                {% endif %}
+
+
+            </ul>
+        </nav>
+    {% endif %}
+    
+{% endblock %}
