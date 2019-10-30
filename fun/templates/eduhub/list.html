@@ -34,7 +34,7 @@
 
             {% for article in Articles %}
                 <tr>
-                    <th scope="row"> <a href="{% url 'detail' id=article.id %}"> {{ article.title }} </a> </th>
+                    <th scope="row"> <a href="{% url 'detail' pk=article.id %}"> {{ article.title }} </a> </th>
                     <td>{{ article.author }}</td>
                 </tr>   
             {% endfor %}

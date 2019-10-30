@@ -10,19 +10,18 @@
 
 {% block content %} 
 
-    <form method="post"  
-        id="eduhub_create_form"
-        data-filefield_name="id_media_file"
-        data-media_file_help_text="{{ media_file_help_text }}"
-        data-pdf_document_max_size="{{pdf_document_max_size}}"
-        data-video_max_size="{{video_max_size}}"
+    <form method="post" 
+        class="preview-file"
+        data-file-field-id="#id_media_file"
+        data-preview-target="#file_field_preview"
         enctype="multipart/form-data">
         
         {% csrf_token %}
         
         {{ form|crispy }}
 
-        <input class="btn btn-outline-info" type="submit" value="Upload" />
+        <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
     </form>
+    <div id="file_field_preview" class="col offset-1 col-10 h-auto"></div>
 
 {% endblock %}

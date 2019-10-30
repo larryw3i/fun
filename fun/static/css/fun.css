@@ -39,3 +39,7 @@ body {
   background-color: rgba(229, 92, 247, 0.082);
   border-radius: 10px;
 }
+
+.fun_test{
+  height: fit-content;
+}

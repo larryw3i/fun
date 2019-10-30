@@ -22,6 +22,14 @@ from django.utils.translation import gettext as _t
 from django.core import validators
 from django.core.exceptions import ValidationError
 
+from fun import settings
+from .apps import EduhubConfig
+
+import os
+from django.http import FileResponse
+
+eduhub_document_file_dir ='eduhub_document_files'
+
 
 class ArticleListView( ListView ):
     model = Article
@@ -67,9 +75,28 @@ class ArticleDeleteView( DeleteView ):
 class ArticleDetailView( DetailView ):
     model = Article
 
-    template_name =EduhubConfig.name + '/detail.html'
-    fields = ['title', 'media_file',]
-    pk_url_kwarg = 'id'
+    template_name = EduhubConfig.name + '/detail.html'
+    
+    pk_url_kwarg = 'pk'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        file_path = os.path.join(settings.MEDIA_ROOT, Article.objects.get(pk =  self.kwargs['pk'] ).media_file.file.name)
+        
+        file_type = magic.from_file( file_path ,mime=True)
+
+        context['is_video']=1 if file_type.startswith('video/') else 0
+
+        print(context)
+        return context
+    
+
         
 
-
+def get_file(request,file_path): 
+    file_path = os.path.join(settings.MEDIA_ROOT,  file_path) 
+    if(os.path.exists( file_path )):
+        return FileResponse(open(file_path, 'rb'))
+    else:
+        return Http404()
