@@ -16,6 +16,11 @@ from django.shortcuts import *
 
 from django.core.paginator import Paginator
 from django.db.models import *
+import magic 
+from django.utils.translation import gettext as _t
+
+from django.core import validators
+from django.core.exceptions import ValidationError
 
 
 class ArticleListView( ListView ):
@@ -29,11 +34,14 @@ class ArticleListView( ListView ):
 class ArticleCreateView( CreateView ):
     model = Article
     template_name =EduhubConfig.name + '/create.html'
-    fields = ['title', 'document_file',]
+    fields = ['title', 'media_file',]
     success_url ='/'+ EduhubConfig.name + '/list'   
+
+    
     
     def form_valid(self, form):
         form.instance.author = self.request.user
+        
         return super(ArticleCreateView, self).form_valid(form)
 
 
@@ -41,7 +49,7 @@ class ArticleCreateView( CreateView ):
 class ArticleUpdateView( UpdateView ):
     model = Article
     template_name =EduhubConfig.name + '/update.html'
-    fields = ['title', 'document_file',]
+    fields = ['title', 'media_file',]
     
     def form_valid(self, form):
         if form.instance.author != self.request.user:
@@ -53,13 +61,15 @@ class ArticleUpdateView( UpdateView ):
 class ArticleDeleteView( DeleteView ):
     model = Article
     template_name =EduhubConfig.name + '/delete.html'
-    fields = ['title', 'document_file',]
+    fields = ['title', 'media_file',]
     success_url ='/'+ EduhubConfig.name + '/list'   
 
 class ArticleDetailView( DetailView ):
     model = Article
 
     template_name =EduhubConfig.name + '/detail.html'
-    fields = ['title', 'document_file',]
+    fields = ['title', 'media_file',]
     pk_url_kwarg = 'id'
         
+
+

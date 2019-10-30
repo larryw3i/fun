@@ -10,7 +10,13 @@
 
 {% block content %} 
 
-    <form method="post"  enctype="multipart/form-data">
+    <form method="post"  
+        id="eduhub_create_form"
+        data-filefield_name="id_media_file"
+        data-media_file_help_text="{{ media_file_help_text }}"
+        data-pdf_document_max_size="{{pdf_document_max_size}}"
+        data-video_max_size="{{video_max_size}}"
+        enctype="multipart/form-data">
         
         {% csrf_token %}
         
