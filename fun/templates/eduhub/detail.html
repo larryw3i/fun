@@ -19,12 +19,10 @@
     <div class="col col-12">
 
         {% if is_video  %}
-            <video class="w-100 h-auto" controls src="{% url 'get_file' file_path=article.media_file.name %}"></video>
+            <video class="w-100 h-auto" controls src="{% url 'funfile:get_file' file_id=article.id %}"></video>
         {% else %}
-            <object class="w-100" height="670px" data="{% url 'get_file' file_path=article.media_file.name %}"></object>
-
+            <object class="w-100" data="{% url 'funfile:get_file' file_id=article.id %}" height="670px" ></object>
         {% endif %}
     </div>
-
 
 {% endblock %}

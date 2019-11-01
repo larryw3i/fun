@@ -73,11 +73,11 @@ class ArticleDetailView( DetailView ):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         
-        file_path = os.path.join(settings.MEDIA_ROOT, Article.objects.get(pk =  self.kwargs['pk'] ).media_file.file.name)
+        file_path = os.path.join(settings.MEDIA_ROOT, str(Article.objects.get(pk =  self.kwargs['pk'] ).id))
         
         file_type = magic.from_file( file_path ,mime=True)
 
-        context['is_video']=1 if file_type.startswith('video/') else 0
+        context['is_video']= file_type.startswith('video/') 
 
         print(context)
         return context

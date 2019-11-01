@@ -17,6 +17,7 @@ import os
 from django import forms
 
 
+
 media_file_help_text = _t('document file')+" ("+_t('.pdf, video/* only')+", "+_t("pdf size less than %d Mib, others size less than %d Mib")%(pdf_document_max_size/pow(1024,2), video_max_size/pow(1024,2) )+")"
 
 eduhub_document_file_dir ='eduhub_document_files'
@@ -24,7 +25,7 @@ eduhub_document_file_dir ='eduhub_document_files'
 media_file_validators= [   validators.FileExtensionValidator(['pdf', 'mp4', 'mov', 'mkv' ,'webm',]) ]
 
 def media_file_upload_to (instance, filename):
-    return os.path.join( eduhub_document_file_dir, str(instance.id) + os.path.splitext( ( filename ) )[1] ) 
+    return os.path.join(  str(instance.id)  ) 
 
 
 class Article( models.Model ):

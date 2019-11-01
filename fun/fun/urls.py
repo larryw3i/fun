@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from wearticle import views
 from django.conf.urls.static import static
-from django.conf import settings
+from fun import settings
 
 urlpatterns = [
 
@@ -31,5 +31,5 @@ urlpatterns = [
 
     path('wearticle/', include('wearticle.urls')),
 
-    path(settings.MEDIA_URL, include('funfile.urls'))
+    path('funfile/', include('funfile.urls'))
 ]  # + static( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )
