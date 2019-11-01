@@ -14,9 +14,11 @@
         
         {% csrf_token %}
         
-        {{ form|crispy }}
+        {{ article|crispy }}
 
         <input class="btn btn-outline-info" type="submit" value="{% trans 'Update' %}" />
     </form>
+
+    <div preview-for='id_media_file' id="file_field_preview" class="col offset-1 col-10 h-auto"></div>
 
 {% endblock %}

@@ -14,22 +14,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include , path
+from django.urls import include, path
 from wearticle import views
 from django.conf.urls.static import static
 from django.conf import settings
 
-
-
 urlpatterns = [
-    
+
     path('', include('funhome.urls')),
-    
+
     path('eduhub/', include('eduhub.urls')),
-    
-    path('accounts/', include('allauth.urls')), 
+
+    path('accounts/', include('allauth.urls')),
 
     path('admin/', admin.site.urls),
 
-	path('wearticle/', include('wearticle.urls') ),
-] + static( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )
+    path('wearticle/', include('wearticle.urls')),
+
+    path(settings.MEDIA_URL, include('funfile.urls'))
+]  # + static( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )

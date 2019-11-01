@@ -5,6 +5,7 @@ from django.db import models
 
 from django.contrib.auth.models import User
 from django.utils.translation import gettext as _t
+from django.utils.translation import gettext as _
 import uuid
 from django.core import validators
 from django.core.exceptions import ValidationError
@@ -20,13 +21,13 @@ media_file_help_text = _t('document file')+" ("+_t('.pdf, video/* only')+", "+_t
 
 eduhub_document_file_dir ='eduhub_document_files'
 
-media_file_validators= [  MediaFileValidator, ]
+media_file_validators= [   validators.FileExtensionValidator(['pdf', 'mp4', 'mov', 'mkv' ,'webm',]) ]
 
-media_file_upload_to =lambda  instance, filename : os.path.join( eduhub_document_file_dir, str(uuid.uuid4()) + os.path.splitext( ( filename ) )[1] ) 
+def media_file_upload_to (instance, filename):
+    return os.path.join( eduhub_document_file_dir, str(instance.id) + os.path.splitext( ( filename ) )[1] ) 
 
 
 class Article( models.Model ):
-
 
     id = models.UUIDField(primary_key=True, auto_created=True, default=uuid.uuid4, editable=False)
 
@@ -36,6 +37,8 @@ class Article( models.Model ):
 
     author = models.ForeignKey( to = User, to_field= 'id', on_delete= models.CASCADE, help_text = _t('author') )
 
-    media_file = models.FileField( upload_to = media_file_upload_to,  validators= media_file_validators,  help_text = media_file_help_text )
+    media_file = models.FileField( upload_to = media_file_upload_to,  validators= media_file_validators ,  help_text = media_file_help_text )
+
+    is_forbade = models.BooleanField( default= False,  help_text = _('is forbade'))
 
 

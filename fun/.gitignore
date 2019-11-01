@@ -131,7 +131,10 @@ static/libs/jquery-validation-1.19.1/
 **/migrations/
 
 # js npm
-static/js/node_modules/ 
+static/js/node_modules/
+
+# files
+funfile/files/
 
 
 

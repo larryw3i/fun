@@ -55,7 +55,8 @@ INSTALLED_APPS = [
 
     'wearticle.apps.WearticleConfig',
     'funhome.apps.FunhomeConfig',
-    'eduhub.apps.EduhubConfig'
+    'eduhub.apps.EduhubConfig',
+    'funfile.apps.FunfileConfig',
 ]
 
 MIDDLEWARE = [
@@ -208,7 +209,7 @@ STATICFILES_FINDERS = [
 
 # MEDIA_FILE
 
-MEDIA_URL = '/media/' 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = 'funfile/files/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile','files') 
 
 # END MEDIA_FILE
