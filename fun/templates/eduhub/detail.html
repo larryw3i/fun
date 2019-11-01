@@ -10,32 +10,16 @@
 
 {% load i18n %}
 
-{% block content %}      
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"> {% trans 'title'%}  </th>
-                <td>{{ article.title }}</td>
-            </tr>
-            
-            <tr>
-                <th scope="row"> {% trans 'upload time'%}  </th>
-                <td>{{ article.uploaded_time }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% block content %}       
+    <div class='col col-12'>
+        <h2 class="text-center">{{ article.title }}</h2>
+        <h6 class="float-right">{{ article.uploaded_time }}</h6>
+    </div>
     <hr/>
     <div class="col col-12">
 
         {% if is_video  %}
-            <video class="w-100 h-auto" src="{% url 'get_file' file_path=article.media_file.name %}"></video>
+            <video class="w-100 h-auto" controls src="{% url 'get_file' file_path=article.media_file.name %}"></video>
         {% else %}
             <object class="w-100" height="670px" data="{% url 'get_file' file_path=article.media_file.name %}"></object>
 

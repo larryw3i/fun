@@ -130,6 +130,9 @@ static/libs/jquery-validation-1.19.1/
 # migrations
 **/migrations/
 
+# js npm
+static/js/node_modules/ 
+
 
 
 # End of https://www.gitignore.io/api/django

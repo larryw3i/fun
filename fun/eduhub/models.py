@@ -13,16 +13,16 @@ from djangovalidators.validators import *
 
 from .validators import *
 import os
+from django import forms
 
-media_file_help_text = _t('document file')+" ("+_t('.pdf, .mp4, .webm, .mkv only')+", "+_t("pdf size less than %d Mib, others size less than %d Mib")%(pdf_document_max_size/pow(1024,2), video_max_size/pow(1024,2) )+")"
 
+media_file_help_text = _t('document file')+" ("+_t('.pdf, video/* only')+", "+_t("pdf size less than %d Mib, others size less than %d Mib")%(pdf_document_max_size/pow(1024,2), video_max_size/pow(1024,2) )+")"
 
 eduhub_document_file_dir ='eduhub_document_files'
 
+media_file_validators= [  MediaFileValidator, ]
 
-
-def media_file_upload_to(instance, filename):
-    return os.path.join(eduhub_document_file_dir, str(uuid.uuid4()) + os.path.splitext( (filename) )[1] )
+media_file_upload_to =lambda  instance, filename : os.path.join( eduhub_document_file_dir, str(uuid.uuid4()) + os.path.splitext( ( filename ) )[1] ) 
 
 
 class Article( models.Model ):
@@ -36,10 +36,6 @@ class Article( models.Model ):
 
     author = models.ForeignKey( to = User, to_field= 'id', on_delete= models.CASCADE, help_text = _t('author') )
 
-    media_file = models.FileField(
-        upload_to = media_file_upload_to, 
-        validators=[  MediaFileValidator ] , 
-        help_text = media_file_help_text
-    )
+    media_file = models.FileField( upload_to = media_file_upload_to,  validators= media_file_validators,  help_text = media_file_help_text )
 
 

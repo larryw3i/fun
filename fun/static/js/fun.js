@@ -1,23 +1,28 @@
 (function(){
-    var file_field_id = document.querySelector('.preview-file').dataset.fileFieldId;
-    if(file_field_id){
-        var file_field = document.querySelector( file_field_id );
-        var preview_target = document.querySelector('.preview-file').dataset.previewTarget;
-        file_field.addEventListener('change',()=>{
-            var file = file_field.files[0];
-            var file_type = String(file.type);
-            if(file_type.startsWith('video/') || file_type.endsWith('/pdf')){
-                var reader  = new FileReader();
-                reader.onload=function(){
-                    var src = this.result
-                    document.querySelector(preview_target).innerHTML='<hr/>'+(
-                        file_type.startsWith('video/')?
-                        `<video src="${src}" controls="controls" class='mh-80 w-100'></video>`:
-                        `<object data='${src}'  type=${file_type} height='560px' class=' w-100'></object>`)
-                }
-                reader.readAsDataURL(file);
+    $(document).on('change', $(`input[type='file'] .preview`), ()=>{
+
+    })
+    if($(`input[type='file']`).hasClass('preview'))
+    {
+        var file_input = $(`input[type='file']`);
+        var file_input_id = file_input.attr('id');
+        file_input.on('change',()=>{
+            var reader = new FileReader();
+            var file = document.getElementById(file_input_id).files[0] ;
+            let html = ''
+
+            if(String(file.name).endsWith('.pdf')){
+                
+                html = `<hr/><object data='${window.URL.createObjectURL(file)}' type='${file.type}' class='w-100' height='560px'></object>`
+                $(`[preview-for='${file_input_id}']`).html( html ); 
             }
-            
+            else if(String(file.type).startsWith('video/') ){
+                
+                html = `<hr/><video src='${window.URL.createObjectURL(file)}' controls class='w-100 mh-100'></video>`
+                $(`[preview-for='${file_input_id}']`).html( html ); 
+                
+            }
+
         })
     }
 })();

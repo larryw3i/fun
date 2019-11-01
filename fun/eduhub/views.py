@@ -27,6 +27,9 @@ from .apps import EduhubConfig
 
 import os
 from django.http import FileResponse
+from django.forms import ModelForm
+from .modelform import *
+from django.views.decorators.csrf import csrf_protect
 
 eduhub_document_file_dir ='eduhub_document_files'
 
@@ -36,22 +39,6 @@ class ArticleListView( ListView ):
     context_object_name = 'Articles'   
     template_name = EduhubConfig.name + '/list.html'    
     paginate_by = 5
-
-
-
-class ArticleCreateView( CreateView ):
-    model = Article
-    template_name =EduhubConfig.name + '/create.html'
-    fields = ['title', 'media_file',]
-    success_url ='/'+ EduhubConfig.name + '/list'   
-
-    
-    
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        
-        return super(ArticleCreateView, self).form_valid(form)
-
 
 
 class ArticleUpdateView( UpdateView ):
@@ -91,6 +78,34 @@ class ArticleDetailView( DetailView ):
         print(context)
         return context
     
+
+class ArticleCreateView( CreateView ):
+    model = Article
+    template_name =EduhubConfig.name + '/create.html'
+    fields = ['title', 'media_file',]
+    success_url ='/'+ EduhubConfig.name + '/list'   
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        
+        return super(ArticleCreateView, self).form_valid(form)
+
+
+
+def create(request):
+        if request.method == 'POST': 
+            article = ArticleModelForm(request.POST,  request.FILES) 
+            
+            if article.is_valid(): 
+                article.instance.author = request.user
+                article.save()
+                return redirect(reverse( 'list') )
+                
+            return render(request , EduhubConfig.name + "/create.html", context={ 'article':article })
+
+        else:
+            article = ArticleModelForm
+            return render(request , EduhubConfig.name + "/create.html", context={ 'article':article })
 
         
 

@@ -10,18 +10,16 @@
 
 {% block content %} 
 
-    <form method="post" 
-        class="preview-file"
-        data-file-field-id="#id_media_file"
-        data-preview-target="#file_field_preview"
-        enctype="multipart/form-data">
+    <form method="post"  enctype="multipart/form-data">
         
         {% csrf_token %}
         
-        {{ form|crispy }}
+        {{ article|crispy }}
 
         <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
+
     </form>
-    <div id="file_field_preview" class="col offset-1 col-10 h-auto"></div>
+
+    <div preview-for='id_media_file' id="file_field_preview" class="col offset-1 col-10 h-auto"></div>
 
 {% endblock %}
