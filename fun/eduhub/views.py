@@ -32,6 +32,9 @@ from .modelform import *
 from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render_to_response, get_object_or_404
 
+import hashlib
+
+
 eduhub_document_file_dir ='eduhub_document_files'
 
 
@@ -42,7 +45,7 @@ class list( ListView ):
     paginate_by = 5
 
     def get_queryset(self):
-        query_set = Article.objects.filter(is_forbade = False)
+        query_set = Article.objects.filter(is_forbade = False).order_by('-uploaded_time')
         return query_set
 
 
@@ -134,7 +137,7 @@ def update(request, pk):
             print(request.FILES.get('media_file'))
             
             if article.is_valid(): 
-                update_post_file(request.FILES['media_file'], pk)
+                handle_post_file(request.FILES['media_file'], pk)
                 article.save()
                 return redirect(reverse( 'list') )
                 
@@ -182,7 +185,7 @@ def get_file(request,file_path):
         return Http404()
 
 
-def update_post_file(post_file,pk):
-     with open( os.path.join( settings.MEDIA_ROOT, str(pk) ) , 'wb+') as destination:
+def handle_post_file(post_file,pk):
+    with open( os.path.join( settings.MEDIA_ROOT, str(pk) ) , 'wb+') as destination:
         for chunk in post_file.chunks():
             destination.write(chunk)
