@@ -117,30 +117,32 @@ def create(request):
 
 
 def update(request, pk):
+
         article_object =  get_object_or_404(Article, pk=pk)
 
         if(article_object.author != request.user):
             return Http404()
 
-        article = ArticleModelForm(instance=article_object)
-
-        file_path = os.path.join( settings.MEDIA_ROOT, str(article_object.id) )
         
-        file_type = magic.from_file( file_path ,mime=True)
+        file_type = magic.from_file(  os.path.join( settings.MEDIA_ROOT, str(pk) )  ,mime=True)
 
         is_video = file_type.startswith('video/') 
 
         if request.method == 'POST': 
-            article = ArticleModelForm(request.POST,  request.FILES) 
+            article = ArticleModelForm(request.POST,  request.FILES, instance=article_object) 
+
+            print(request.FILES.get('media_file'))
             
             if article.is_valid(): 
-                article.instance.author = request.user
+                update_post_file(request.FILES['media_file'], pk)
                 article.save()
                 return redirect(reverse( 'list') )
                 
             return render(request , EduhubConfig.name + "/update.html", context={ 'article':article, 'is_video':is_video, 'article_id':pk })
 
         else:
+
+            article = ArticleModelForm(instance=article_object)
 
             return render(request , EduhubConfig.name + "/update.html", context={ 'article':article, 'is_video':is_video, 'article_id':pk })
 
@@ -178,3 +180,9 @@ def get_file(request,file_path):
         return FileResponse(open(file_path, 'rb'))
     else:
         return Http404()
+
+
+def update_post_file(post_file,pk):
+     with open( os.path.join( settings.MEDIA_ROOT, str(pk) ) , 'wb+') as destination:
+        for chunk in post_file.chunks():
+            destination.write(chunk)

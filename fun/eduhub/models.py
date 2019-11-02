@@ -32,7 +32,7 @@ class Article( models.Model ):
 
     id = models.UUIDField(primary_key=True, auto_created=True, default=uuid.uuid4, editable=False)
 
-    title = models.CharField( max_length = 64 , unique = True, help_text = _t('title') )
+    title = models.CharField( max_length = 64 ,  help_text = _t('title') )
 
     uploaded_time = models.DateTimeField( auto_now_add = True, help_text = _t( 'uploaded time') )
 
