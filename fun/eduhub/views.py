@@ -30,11 +30,12 @@ from django.http import FileResponse
 from django.forms import ModelForm
 from .modelform import *
 from django.views.decorators.csrf import csrf_protect
+from django.shortcuts import render_to_response, get_object_or_404
 
 eduhub_document_file_dir ='eduhub_document_files'
 
 
-class ArticleListView( ListView ):
+class list( ListView ):
     model = Article
     context_object_name = 'Articles'   
     template_name = EduhubConfig.name + '/list.html'    
@@ -45,25 +46,26 @@ class ArticleListView( ListView ):
         return query_set
 
 
-class ArticleUpdateView( UpdateView ):
+class _update( UpdateView ):
     model = Article
     template_name =EduhubConfig.name + '/update.html'
     fields = ['title', 'media_file',]
     
+    
     def form_valid(self, form):
         if form.instance.author != self.request.user:
             return Http404('nice try')
-        return super(ArticleCreateView, self).form_valid(form)
+        return super(update, self).form_valid(form)
 
 
 
-class ArticleDeleteView( DeleteView ):
+class _delete( DeleteView ):
     model = Article
     template_name =EduhubConfig.name + '/delete.html'
     fields = ['title', 'media_file',]
     success_url ='/'+ EduhubConfig.name + '/list'   
 
-class ArticleDetailView( DetailView ):
+class detail( DetailView ):
     model = Article
 
     template_name = EduhubConfig.name + '/detail.html'
@@ -83,7 +85,7 @@ class ArticleDetailView( DetailView ):
         return context
     
 
-class ArticleCreateView( CreateView ):
+class _create( CreateView ):
     model = Article
     template_name =EduhubConfig.name + '/create.html'
     fields = ['title', 'media_file',]
@@ -92,7 +94,7 @@ class ArticleCreateView( CreateView ):
     def form_valid(self, form):
         form.instance.author = self.request.user
         
-        return super(ArticleCreateView, self).form_valid(form)
+        return super(_create, self).form_valid(form)
 
 
 
@@ -114,7 +116,20 @@ def create(request):
         
 
 
-def update(request, pk=''):
+def update(request, pk):
+        article_object =  get_object_or_404(Article, pk=pk)
+
+        if(article_object.author != request.user):
+            return Http404()
+
+        article = ArticleModelForm(instance=article_object)
+
+        file_path = os.path.join( settings.MEDIA_ROOT, str(article_object.id) )
+        
+        file_type = magic.from_file( file_path ,mime=True)
+
+        is_video = file_type.startswith('video/') 
+
         if request.method == 'POST': 
             article = ArticleModelForm(request.POST,  request.FILES) 
             
@@ -123,13 +138,38 @@ def update(request, pk=''):
                 article.save()
                 return redirect(reverse( 'list') )
                 
-            return render(request , EduhubConfig.name + "/create.html", context={ 'article':article })
+            return render(request , EduhubConfig.name + "/update.html", context={ 'article':article, 'is_video':is_video, 'article_id':pk })
 
         else:
-            article = ArticleModelForm(Article.objects.get(id = pk))
-            return render(request , EduhubConfig.name + "/create.html", context={ 'article':article })
 
-        
+            return render(request , EduhubConfig.name + "/update.html", context={ 'article':article, 'is_video':is_video, 'article_id':pk })
+
+def delete(request, pk):
+    article_object =  Article.objects.get( id=pk )
+    
+    if(article_object.author != request.user):
+        return Http404()
+
+    print(article_object)
+
+    if  article_object is None:
+        return Http404()
+
+    file_path = os.path.join( settings.MEDIA_ROOT, str(pk) )
+    
+    file_type = magic.from_file( file_path ,mime=True)
+
+    is_video = file_type.startswith('video/') 
+
+    if request.method == 'POST':
+        article_object.delete()
+        return redirect(reverse( 'list') )
+                
+    else:
+
+        return render(request , EduhubConfig.name + "/delete.html", context={ 'article':article_object, 'is_video':is_video, 'article_id':pk })
+
+    
 
 def get_file(request,file_path): 
     file_path = os.path.join(settings.MEDIA_ROOT,  file_path)  

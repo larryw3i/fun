@@ -28,6 +28,7 @@
         <tr>
             <th scope="col">{% trans 'Article title' %}</th>
             <th scope="col"> {% trans 'Article author' %} </th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -36,6 +37,12 @@
                 <tr>
                     <th scope="row"> <a href="{% url 'detail' pk=article.id %}"> {{ article.title }} </a> </th>
                     <td>{{ article.author }}</td>
+                    <td>
+                        {% if article.author.id == request.user.id %}
+                            <a href="{% url 'update' pk=article.id %}"><script>document.write('\ud83d\udcdd')</script></a>
+                            <a href="{% url 'delete' pk=article.id %}"><script>document.write('\ud83d\uddd1\ufe0f')</script></a>
+                        {% endif %}
+                    </td>
                 </tr>   
             {% endfor %}
         </tbody>

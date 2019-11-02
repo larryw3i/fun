@@ -13,36 +13,25 @@
 {% block content %} 
 
 
-{% extends '_base.html' %}
+    <div class='col col-12'>
+        <h2 class="text-center">{{ article.title }}</h2>
+        <h6 class="text-center">{{ article.uploaded_time }}</h6>
+    </div>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" value="{{ article_id }}"/>
 
-{% load static %}
+        <input class="btn btn-danger float-right" type="submit" value="{% trans 'Delete' %}" />
+    </form>
+    <hr/>
+    <div class="col col-12">
 
-{% load crispy_forms_tags %}
-
-{% block title %}Home{% endblock title %}
-
-{% load i18n %}
-
-{% block content %}      
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"> {% trans 'title'%}  </th>
-                <td>{{ object.title }}</td>
-            </tr>
-            
-            <tr>
-                <th scope="row"> {% trans 'upload time'%}  </th>
-                <td>{{ object.uploaded_time }}</td>
-            </tr>
-        </tbody>
-    </table>
+        {% if is_video  %}
+            <video class="w-100 h-auto" controls src="{% url 'funfile:get_file' file_id=article_id %}"></video>
+        {% else %}
+            <object class="w-100" data="{% url 'funfile:get_file' file_id=article_id %}" height="670px" ></object>
+        {% endif %}
+    </div>
 
 {% endblock %}
