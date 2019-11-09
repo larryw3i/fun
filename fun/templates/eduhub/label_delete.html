@@ -1,0 +1,51 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Delete label'  %}
+{% endblock title %}
+
+
+{% block content %} 
+    <div class="row">
+
+        <div class="col col-auto ">
+            <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" />
+        </div>
+        <div class="col col-auto">
+
+            <table class="table table-striped ">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{% trans 'Name' %}</th>
+                        <td>{{ label.name }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{% trans 'Creating date' %}</th>
+                        <td>{{ label.creating_date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form method="post">
+                {% csrf_token %}
+                <p>{% trans 'Are you sure you want to delete' %} {{ object }} ?</p>
+                <input type="submit" value="{% trans 'Delete' %}" class="btn btn-danger"/>
+            </form>     
+        </div>
+    </div>
+
+
+{% endblock %}

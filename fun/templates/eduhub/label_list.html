@@ -9,7 +9,27 @@
 {% load i18n %}
 
 {% block content %} 
+    <h2 class="text-center">{% trans 'Eduhub labels' %}</h2>
+    <a href="{% url 'eduhub:label_create' %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
+    <hr/>
+    <div class="row">
+            {% for label in labels %}
+                <div class="col col-auto">
 
-
-
+                    <div class="card" style="max-width: 18rem;">
+                        <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" class="card-img-top" alt="">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ label.name }}</h5>
+                        <p class="card-text">{{ label.comment }}</p>
+                        <a href="#" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
+                        {% if request.user == label.author %}    
+                            <a href="{% url 'eduhub:label_update' pk=label.id %}" class="btn btn-sm btn-outline-info">{% trans 'Edit' %}</a>
+                            <a href="{% url 'eduhub:label_delete' pk=label.id %}" class="btn  btn-sm btn-outline-danger">{% trans 'Delete' %}</a>
+                        {% endif %}
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+    
+    </div>
 {% endblock %}

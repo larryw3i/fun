@@ -1,3 +1,4 @@
+
 {% extends '_base.html' %}
 
 {% load static %}
@@ -6,12 +7,15 @@
 
 {% load i18n %}
 
-{% block title %}Home{% endblock title %}
+{% block title %}
+    {% trans 'Update label'  %}
+{% endblock title %}
+
 
 {% block content %} 
 
     <form method="post"  enctype="multipart/form-data">
-        
+         
         {% csrf_token %}
         
         {{ form|crispy }}
@@ -19,6 +23,5 @@
         <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
 
     </form>
-
 
 {% endblock %}

@@ -15,7 +15,7 @@ import sys
 from dotenv import find_dotenv,load_dotenv
 from django.utils.translation import gettext_lazy
 
-load_dotenv(find_dotenv())
+load_dotenv( find_dotenv() )
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'crispy_forms',
+    'imagekit',
     
     'allauth',
     'allauth.account',
@@ -210,7 +211,13 @@ STATICFILES_FINDERS = [
 
 # MEDIA_FILE
 
-MEDIA_URL = 'funfile/files/'
+MEDIA_URL = 'funfile/get_file/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile','files') 
 
 # END MEDIA_FILE
+
+# FILE_STORAGE
+
+DEFAULT_FILE_STORAGE = 'funfile.models.FunFileStorage'
+
+# END FILE_STORAGE

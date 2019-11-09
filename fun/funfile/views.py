@@ -12,13 +12,12 @@ import magic
 
 
 def get_file(request, file_id):
-    print(file_id)
     file_path = os.path.join(settings.MEDIA_ROOT, str(file_id))
-    print(file_path)
+    # is_file_illegal = Checkup.objects.filter(file_id=file_id, is_legal=False).exists()
 
-    is_file_illegal = Checkup.objects.filter(file_id=file_id, is_legal=False).exists()
-    if os.path.exists(file_path) and not is_file_illegal:
+    if os.path.exists(file_path) :
         content_type = magic.from_file( file_path ,mime=True)
         return FileResponse(open(file_path, 'rb'),content_type = content_type)
     else:
         return Http404()
+
