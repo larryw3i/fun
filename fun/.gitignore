@@ -136,6 +136,9 @@ static/js/node_modules/
 # files
 funfile/files/
 
+# idea
+.idea/
+
 
 
 # End of https://www.gitignore.io/api/django

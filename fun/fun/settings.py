@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import sys
 from dotenv import find_dotenv,load_dotenv
 from django.utils.translation import gettext_lazy
 
@@ -35,6 +36,7 @@ SITE_ID = 1
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,10 +55,9 @@ INSTALLED_APPS = [
 
     "compressor",
 
-    'wearticle.apps.WearticleConfig',
     'funhome.apps.FunhomeConfig',
-    'eduhub.apps.EduhubConfig',
     'funfile.apps.FunfileConfig',
+    'eduhub.apps.EduhubConfig',
 ]
 
 MIDDLEWARE = [
