@@ -43,3 +43,7 @@ body {
 .fun_test{
   height: fit-content;
 }
+
+img.preview{
+  width: 100%;
+}
