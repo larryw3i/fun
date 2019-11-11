@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'funhome.apps.FunhomeConfig',
     'funfile.apps.FunfileConfig',
     'eduhub.apps.EduhubConfig',
+    'funuser.apps.FunuserConfig',
 ]
 
 MIDDLEWARE = [

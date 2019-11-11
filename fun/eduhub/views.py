@@ -23,61 +23,11 @@ label_update_template = f'{EduhubConfig.name}/label_update.html'
 label_list_template =   f'{EduhubConfig.name}/label_list.html'
 
 
-def label_list(request):
-    if request.method == 'GET':
-        labels = Label.objects.filter( is_legal = True )
-        return render(request, label_list_template, context= {'labels':labels})
-        
-
-def label_create( request ,LoginRequiredMixin):
-    if request.method == 'POST':
-        labelform = LabelModelForm( request.POST, request.FILES )
-        labelform.instance.author = request.user
-        labelform.save()
-        return redirect(  reverse_lazy('eduhub:label_list') )
-
-
-    if request.method == 'GET':
-        labelform = LabelModelForm()
-        return render(request, label_create_template, context= {'labelform':labelform})
-        
-
-def label_update(request, pk, LoginRequiredMixin):
-    if request.method == 'POST':
-        labelform = LabelModelForm( request.POST, request.FILES )
-        labelform.instance.author = request.user
-        labelform.save()
-        return redirect(  reverse_lazy('eduhub:label_list') )
-
-
-    if request.method == 'GET':
-        labelform = LabelModelForm()
-        return render(request, label_create_template, context= {'labelform':labelform})
-        
-
-def label_delete(request, pk, LoginRequiredMixin):
-    if request.method == 'POST':
-        labelform = LabelModelForm( request.POST, request.FILES )
-        labelform.instance.author = request.user
-        labelform.save()
-        return redirect(  reverse_lazy('eduhub:label_list') )
-
-
-    if request.method == 'GET':
-        labelform = LabelModelForm()
-        return render(request, label_create_template, context= {'labelform':labelform})
-        
-'''generic_view'''
-
 class LabelCreateView( CreateView, LoginRequiredMixin ):
     model = Label
     form_class = LabelModelForm
     template_name = label_create_template
-    # fields = ['name', 'cover', 'comment']
     success_url = reverse_lazy('eduhub:label_list')
-
-    def get_form(self, form_class=None):
-        return super().get_form(form_class=form_class)
 
 
     def form_valid(self, form):
@@ -128,10 +78,6 @@ class LabelUpdateView( UpdateView, LoginRequiredMixin ):
     # fields = ['name', 'cover', 'comment']
     success_url = reverse_lazy('eduhub:label_list')
 
-    def get_form(self, form_class=None):
-        form = super().get_form(form_class=form_class)
-        print(form)
-        return form
 
     def get_object(self, queryset=None):
         label = super().get_object(queryset=queryset)

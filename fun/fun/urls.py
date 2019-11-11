@@ -30,6 +30,8 @@ urlpatterns = [
     path('funfile/', include('funfile.urls')),
     
     path('eduhub/', include('eduhub.urls')),
+
+    path('funuser/', include('funuser.urls')),
     
 
 ]  # + static( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )
