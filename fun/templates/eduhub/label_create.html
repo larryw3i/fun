@@ -19,7 +19,7 @@
         
                 {% csrf_token %}
                 
-                {{ labelform|crispy }}
+                {{ form|crispy }}
         
                 <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
         
