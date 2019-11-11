@@ -1,16 +1,19 @@
 
-from django.shortcuts import render, reverse, HttpResponseRedirect, Http404 ,redirect
-from .modelforms import LabelModelForm
-from .apps import EduhubConfig
-from .models import Label
-from django.contrib.auth.mixins import LoginRequiredMixin 
-from django.views.generic import ListView, DeleteView, DetailView, CreateView, UpdateView
-from django.shortcuts import render, reverse, redirect
-from django.utils.translation import gettext_lazy as _
-from hurry import filesize
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import ValidationError
-from django.urls import reverse_lazy
 from django.http import Http404
+from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
+                              reverse)
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
+from hurry import filesize
+
+from .apps import EduhubConfig
+from .modelforms import LabelModelForm
+from .models import Label
+from django.core import paginator
 
 # Create your views here.
 
@@ -52,6 +55,15 @@ class LabelListView( ListView ):
     form_class = LabelModelForm
     template_name = label_list_template
     context_object_name = 'labels'
+    ordering =  ('-creating_date', )
+    paginate_by = 1
+    paginate_orphans= 2
+    
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['max_left_item_count'] = '2'
+        return context_data
+
 
 class LabelDeleteView( DeleteView,  LoginRequiredMixin ):
     model = Label

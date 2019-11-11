@@ -9,7 +9,6 @@ from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
 import  time, random
 from urllib.parse import urljoin
-
 from django.conf import settings
 from django.core.exceptions import SuspiciousFileOperation
 from django.core.files import File, locks
