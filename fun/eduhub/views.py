@@ -57,11 +57,19 @@ class LabelListView( ListView ):
     context_object_name = 'labels'
     ordering =  ('-creating_date', )
     paginate_by = 1
-    paginate_orphans= 2
-    
+    paginate_orphans= 1
+
+    def get(self, request, *args, **kwargs):
+        request.COOKIES['page'] = request.GET.get('page')
+        return super().get(request, *args, **kwargs)
+    def  render_to_response(self, context, **response_kwargs):
+        response =  super().render_to_response(context, **response_kwargs)
+        response.set_cookie('page', self.request.GET.get('page', 1) )
+        return response
+ 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['max_left_item_count'] = '2'
+        context_data['max_left_item_count'] = 2
         return context_data
 
 
@@ -86,10 +94,10 @@ class LabelUpdateView( UpdateView, LoginRequiredMixin ):
     model = Label
     form_class = LabelModelForm
     template_name = label_update_template
-    context_object_name = 'label'
-    # fields = ['name', 'cover', 'comment']
-    success_url = reverse_lazy('eduhub:label_list')
+    context_object_name = 'label' 
 
+    def get_success_url(self):
+        return '/eduhub/label_list?page='+self.request.COOKIES['page']
 
     def get_object(self, queryset=None):
         label = super().get_object(queryset=queryset)
