@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
                 ('name', models.CharField(max_length=64)),
                 ('comment', models.CharField(max_length=64)),
-                ('cover', models.ImageField(upload_to=funfile.models.upload_to)),
+                ('cover', models.ImageField(upload_to=funfile.storage.upload_to)),
                 ('creating_date', models.DateTimeField(auto_now_add=True)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],

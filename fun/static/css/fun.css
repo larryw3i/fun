@@ -1,10 +1,12 @@
 
-html {
+html 
+{
   position: relative;
   min-height: 100%;
 }
 
-body {
+body 
+{
   /* Margin bottom by footer height */
   padding-bottom: 66px;
 }
@@ -40,10 +42,19 @@ body {
   border-radius: 10px;
 }
 
-.fun_test{
+.fun_test
+{
   height: fit-content;
 }
 
-img.preview{
+img.preview
+{
   width: 100%;
+}
+
+.card:hover
+{
+  z-index: 99;
+  border: solid #e281ff81;
+  animation: common_hover_animation 0.2s 1 forwards;
 }

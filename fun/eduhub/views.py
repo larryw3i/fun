@@ -25,6 +25,12 @@ label_delete_template = f'{EduhubConfig.name}/label_delete.html'
 label_update_template = f'{EduhubConfig.name}/label_update.html'
 label_list_template =   f'{EduhubConfig.name}/label_list.html'
 
+content_create_template = f'{EduhubConfig.name}/content_create.html'
+content_detail_template = f'{EduhubConfig.name}/content_detail.html'
+content_delete_template = f'{EduhubConfig.name}/content_delete.html'
+content_update_template = f'{EduhubConfig.name}/content_update.html'
+content_list_template =   f'{EduhubConfig.name}/content_list.html'
+
 
 class LabelCreateView( CreateView, LoginRequiredMixin ):
     model = Label
@@ -56,7 +62,7 @@ class LabelListView( ListView ):
     template_name = label_list_template
     context_object_name = 'labels'
     ordering =  ('-creating_date', )
-    paginate_by = 1
+    paginate_by = 5
     paginate_orphans= 1
 
     def get(self, request, *args, **kwargs):

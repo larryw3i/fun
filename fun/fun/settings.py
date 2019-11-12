@@ -219,6 +219,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile','files')
 
 # FILE_STORAGE
 
-DEFAULT_FILE_STORAGE = 'funfile.models.FunFileStorage'
+DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
 
 # END FILE_STORAGE

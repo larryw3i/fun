@@ -1,7 +1,7 @@
 from django.db import models
 import uuid
 from django.contrib.auth.models import User
-from funfile.models import upload_to
+from funfile.storage import upload_to
 
 # Create your models here.
 
