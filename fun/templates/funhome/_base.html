@@ -1,6 +1,7 @@
 
 
 {% load static %}
+{% load fun_tag %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +16,8 @@
         {% include 'funhome/_css.html' %}
 
     </head>
-    <body>
+
+    <body class="{% get_body_theme %}">
         <header>
             {% include 'funhome/_navbar.html' %}
         </header>

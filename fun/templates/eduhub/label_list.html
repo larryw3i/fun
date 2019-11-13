@@ -1,4 +1,4 @@
-{% extends '_base.html' %}
+{% extends 'funhome/_base.html' %}
 
 {% load static %}
 
@@ -63,12 +63,18 @@
                     {% endif %}
                 {% endif %}
 
+                <li class="page-item disabled">
+                    <span class="page-link">|</span>
+                </li>
+                <li class="page-item disabled">
+                    <span class="page-link">
+                        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    </span>
+                </li>
 
             </ul>
         </nav>
-        <span class="float-right">
-            {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-        </span>
     {% endif %} 
+
 
 {% endblock %}

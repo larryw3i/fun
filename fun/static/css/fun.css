@@ -5,10 +5,11 @@ html
   min-height: 100%;
 }
 
+/* body and footer css is partially referenced from microsoft docs */
 body 
 {
   /* Margin bottom by footer height */
-  padding-bottom: 66px;
+  padding-bottom: 68px;
 }
 
 .body-content
@@ -33,7 +34,7 @@ body
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 66px; /* Vertically center the text there */
 }
 
 .carousel-control-next,.carousel-control-prev

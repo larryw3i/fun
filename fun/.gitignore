@@ -121,11 +121,17 @@ dmypy.json
 .pyre/
 
 # static files
+## https://github.com/twbs/bootstrap
 static/libs/bootstrap-4.3.1-dist/
+## https://github.com/jquery/jquery
 static/libs/jquery-3.4.1/
+## https://github.com/FezVrasta/popper.js
 static/libs/popper.js-1.16.0/
+## https://github.com/jquery-validation/jquery-validation
 static/libs/jquery-validation-1.19.1/
-
+## https://github.com/js-cookie/js-cookie
+static/libs/js-cookie/
+# end static files
 
 # migrations
 **/migrations/

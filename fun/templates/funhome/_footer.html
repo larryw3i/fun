@@ -8,5 +8,21 @@
         {# a bug >> site name coudn`t get here #}
         - <a href="/"> {% blocktrans %}x-dove{% endblocktrans %} </a>
         - <a href="#">{% trans 'Privacy' %}</a>
+         
+        <div class="btn-group dropup  float-right">
+
+            <button type="button" class="btn  dropdown-toggle text-info" id="themeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {% trans 'Theme' %}
+            </button>
+            <div class="dropdown-menu bg-primary theme-dropdown-menu"  aria-labelledby='themeDropdown'>
+                <span class="dropdown-item-text btn-sm" >{% trans 'Select theme' %}</span>
+                <a class="dropdown-item btn-link btn-sm" data-theme="dark" >{% trans 'dark' %}</a>
+                <a class="dropdown-item btn-link btn-sm" data-theme="care">{% trans 'care' %}</a>
+                <a class="dropdown-item btn-link btn-sm" data-theme="light">{% trans 'light' %}</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item btn-link btn-sm" data-theme="auto">{% trans 'auto' %}</a>
+            </div>
+        </div>
+
     </div>
 </footer>

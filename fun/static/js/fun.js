@@ -1,7 +1,20 @@
 (function(){
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
         previewImage(event);
-    })
+    });
+    
+    $(document).on('click', `.theme-dropdown-menu a` , (event) =>{
+        changeTheme(event);
+    });
+
+    /**
+     * 
+     * @param { JQuery.ChangeEvent<Document, undefined, any, any> } event 
+     */
+    function changeTheme(event){
+        Cookies.set('theme', event.target.dataset.theme);
+        location.reload();
+    }
 
     /**
      * 
