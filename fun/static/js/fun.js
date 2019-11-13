@@ -1,7 +1,17 @@
 (function(){
+    $(document).ready(()=>{
+        insertThemeDropdownItems()
+    });
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
         previewImage(event);
     });
+
+    function insertThemeDropdownItems(){
+        $.get(`/get_dropdown_items`, (dropdown_items) =>{
+            $(`[aria-labelledby='themeDropdown']`).append(dropdown_items);
+        })
+
+    }
     
     $(document).on('click', `.theme-dropdown-menu a` , (event) =>{
         changeTheme(event);

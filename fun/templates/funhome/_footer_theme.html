@@ -1,0 +1,14 @@
+
+{% load i18n %}
+
+<span class="dropdown-item-text btn-sm" >{% trans 'Select theme' %}</span>
+<div class="dropdown-divider small"></div> 
+{% for bootswatch_theme in bootswatch_themes %} 
+    <a class="dropdown-item btn-link btn-sm" data-theme="{{ bootswatch_theme }}" >
+        {% blocktrans %}
+            {{ bootswatch_theme }}
+        {% endblocktrans %}
+    </a>                    
+{% endfor %}
+<div class="dropdown-divider small"></div>
+<a class="dropdown-item btn-link btn-sm" data-theme="auto">{% trans 'auto' %}</a>

@@ -88,7 +88,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
             'libraries':{
-                'fun_tag': 'funhome.templatetags.fun_tag',
+                'funtag': 'funtag.templatetag',
             }
         },
     },

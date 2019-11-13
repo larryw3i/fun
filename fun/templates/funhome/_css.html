@@ -4,12 +4,14 @@
 
 {% load compress %}
 
+{% load funtag %}
+
 {% compress css %}
 
-    <link rel="stylesheet" href="{% static 'css/fun.css' %}">
-    <link rel="stylesheet" href="{% static 'css/keyframes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fun.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/keyframes.css' %}"/>
 
-    <link rel="stylesheet" href="{% static 'libs/bootstrap-4.3.1-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="/static/libs/bootswatch/dist/{% get_current_theme %}/bootstrap.min.css"/>
 
     <style>html{overflow-y:scroll;}</style>
 
