@@ -14,10 +14,13 @@ from .apps import EduhubConfig
 from .modelforms import LabelModelForm, ContentModelForm
 from .models import Label, Content
 from django.core import paginator
-
+import math
 # Create your views here.
 
 max_cover_size = 500*1024
+
+max_pdf_content_file_size = 5 * math.pow( 1024, 2 )
+max_video_content_file_size = 100 * math.pow( 1024, 2 )
 
 label_create_template = f'{EduhubConfig.name}/label_create.html'
 label_detail_template = f'{EduhubConfig.name}/label_detail.html'
@@ -129,7 +132,6 @@ class ContentListView(ListView):
     paginate_orphans= 1
 
     def get_queryset(self): 
-        print( self.kwargs['label'] )
         return Content.objects.filter( label = self.kwargs['label'] , is_legal = True)
 
     def get(self, request, *args, **kwargs): 
@@ -137,11 +139,56 @@ class ContentListView(ListView):
 
     def  render_to_response(self, context, **response_kwargs):
         response =  super().render_to_response(context, **response_kwargs)
+        # for updating label
         response.set_cookie('page', self.request.GET.get('page', 1) )
         return response
  
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
         context_data['max_left_item_count'] = 2
+        context_data['label'] = self.kwargs['label']
         return context_data
+
+
+class ContentCreateView( CreateView, LoginRequiredMixin ):
+    model = Content
+    form_class = ContentModelForm
+    template_name = content_create_template
+
+    def __init__(self):
+        self.label_id  = None
+        super().__init__()
+
+    def get_success_url(self):
+        return reverse( 'eduhub:content_list', kwargs={ 'label': self.label_id })
+    
+
+    def get_initial(self):
+        initial = super().get_initial()
+        initial['label'] = self.kwargs['label'] 
+        return initial
+
+    def get_form( self, form_class = None ):
+        form = super().get_form( form_class = form_class ) 
+        form.base_fields['label'].label_from_instance = lambda label: label.name
+        return form
+
+    def form_valid(self, form):
+        content_file = form.instance.content_file.file
+        if not  content_file :
+            form.add_error('content_file',  _('Content file is required') )
+            return render(self.request, content_create_template, context={ 'form': form })
+
+        if str( content_file.content_type ).startswith('video/') and content_file.size > max_video_content_file_size :
+            form.add_error('content_file',  _('The length of video file should be less than')+' '+filesize.size( max_video_content_file_size ) )
+            return render(self.request, content_create_template, context={ 'form': form })
+
+        if str( content_file.content_type ).endswith('/pdf') and content_file.size > max_pdf_content_file_size :
+            form.add_error('content_file',  _('The length of pdf file should be less than')+' '+filesize.size( max_pdf_content_file_size ) )
+            return render(self.request, content_create_template, context={ 'form': form })
+        self.label_id = form.instance.label.id
+        form.instance.author = self.request.user
+
+        return super().form_valid(form)
+
 

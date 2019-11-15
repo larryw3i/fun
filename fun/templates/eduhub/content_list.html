@@ -9,16 +9,24 @@
 {% load i18n %}
 
 {% block content %} 
-    <h2 class="text-center">{% trans 'Eduhub labels' %}</h2>
-    <a href="{% url 'eduhub:label_create'  %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
+    <h2 class="text-center">{% trans 'Eduhub contents' %}</h2>
+    <a href="{% url 'eduhub:content_create' label=label %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
     <hr/>
     <div class="row">
-            {% for content in Contents %} 
-                <a href="#" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
-                {% if request.user == label.author %}    
-                    <a href="{% url 'eduhub:label_update' pk=label.id %}" class="btn btn-sm btn-outline-info">{% trans 'Edit' %}</a>
-                    <a href="{% url 'eduhub:label_delete' pk=label.id %}" class="btn  btn-sm btn-outline-danger">{% trans 'Delete' %}</a>
-                {% endif %}
+            {% for content in contents %} 
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ content.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ content.uploading_date }}</h6>
+                    <p class="card-text">{{ content.comment }}</p>
+
+                    {% if content.label.author == request.user %}    
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    {% endif %}
+
+                    </div>
+                </div>
             {% endfor %}
     
     </div>

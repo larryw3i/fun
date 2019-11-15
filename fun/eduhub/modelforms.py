@@ -28,13 +28,24 @@ class LabelModelForm(ModelForm):
 class ContentModelForm(ModelForm):
     class Meta:
         model = Content
-        fields = ['title', 'content_file' ,'comment']
+        fields = ['title', 'content_file' ,'comment', 'label']
         
         labels = {
             'title': _('Title name'),
+            'label': _('Label'),
             'content_file': _('Content file'),
             'comment': _('Comment'),
         }
+
+        help_texts = {
+            'content_file': _('content file, pdf and video file is allowed only')
+        }
+
+        widgets = {
+            'content_file': forms.FileInput( attrs={ 'class': 'preview-pdf' } ),
+            'comment': forms.Textarea( attrs={ 'rows': '5' } ),
+        }
+
     
 
         
