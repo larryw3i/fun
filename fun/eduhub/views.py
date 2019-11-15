@@ -19,7 +19,7 @@ import math
 
 max_cover_size = 500*1024
 
-max_pdf_content_file_size = 5 * math.pow( 1024, 2 )
+max_pdf_content_file_size =   5 * math.pow( 1024, 2 )
 max_video_content_file_size = 100 * math.pow( 1024, 2 )
 
 label_create_template = f'{EduhubConfig.name}/label_create.html'
@@ -158,6 +158,7 @@ class ContentCreateView( CreateView, LoginRequiredMixin ):
     def __init__(self):
         self.label_id  = None
         super().__init__()
+    
 
     def get_success_url(self):
         return reverse( 'eduhub:content_list', kwargs={ 'label': self.label_id })
@@ -192,3 +193,20 @@ class ContentCreateView( CreateView, LoginRequiredMixin ):
         return super().form_valid(form)
 
 
+class ContentDetailView( DetailView ):
+
+    model = Content
+    form_class = ContentModelForm
+    template_name = content_create_template
+
+class ContentDeleteView( DeleteView, LoginRequiredMixin ):
+
+    model = Content
+    form_class = ContentModelForm
+    template_name = content_create_template
+
+class ContentUpdateView( UpdateView, LoginRequiredMixin ):
+
+    model = Content
+    form_class = ContentModelForm
+    template_name = content_create_template

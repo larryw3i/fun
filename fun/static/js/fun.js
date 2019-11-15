@@ -15,6 +15,9 @@
         changeTheme(event);
     });
 
+    $(document).on('click', `.label_card` , (event) =>{
+        window.location = event.currentTarget.dataset.url;
+    });
 
 
     /**

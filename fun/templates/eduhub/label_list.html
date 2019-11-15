@@ -16,13 +16,13 @@
             {% for label in labels %}
                 <div class="col col-auto mt-2">
 
-                    <div class="card" style="max-width: 18rem;">
+                    <div class="card label_card" style="max-width: 18rem;" data-url="{% url 'eduhub:content_list' label=label.id %}">
                         <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{ label.name }}</h5>
                             <p class="card-text">{{ label.comment }}</p>
-                            <a href="{% url 'eduhub:content_list' label=label.id %}" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
-                            {% if request.user == label.author %}    
+                            <a href="{% url 'eduhub:content_list' label=label.id %}" class="btn  btn-sm btn-primary view_content_list">{% trans 'View' %}</a>
+                            {% if request.user == label.author %}
                                 <a href="{% url 'eduhub:label_update' pk=label.id %}" class="btn btn-sm btn-outline-info">{% trans 'Edit' %}</a>
                                 <a href="{% url 'eduhub:label_delete' pk=label.id %}" class="btn  btn-sm btn-outline-danger">{% trans 'Delete' %}</a>
                             {% endif %}

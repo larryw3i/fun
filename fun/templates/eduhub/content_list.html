@@ -14,19 +14,25 @@
     <hr/>
     <div class="row">
             {% for content in contents %} 
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                    <h5 class="card-title">{{ content.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ content.uploading_date }}</h6>
-                    <p class="card-text">{{ content.comment }}</p>
 
-                    {% if content.label.author == request.user %}    
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    {% endif %}
+                <div class="col col-auto mt-2">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{ content.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ content.uploading_date }}</h6>
+                        <p class="card-text">{{ content.comment }}</p>
 
+                        <a href="#" class="card-link">{% trans 'View' %}</a>
+
+                        {% if content.label.author == request.user %}    
+                            <a href="#" class="card-link">{% trans 'Edit' %}</a>
+                            <a href="#" class="card-link">{% trans 'Delete' %}</a>
+                        {% endif %}
+
+                        </div>
                     </div>
                 </div>
+
             {% endfor %}
     
     </div>
