@@ -26,8 +26,9 @@ class Label(models.Model):
 
 class Content(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    label = models.ForeignKey( to = Label, on_delete= models.CASCADE )
     title = models.CharField(  max_length = 64,  )
-    content_file = models.FileField(  upload_to = upload_to, )
+    content_file = models.FileField(  upload_to = upload_to, blank = True)
     uploading_date = models.DateTimeField(   auto_now_add = True,)
     comment = models.CharField(   max_length  = 64, )
     is_legal = models.BooleanField(   default = True,  )

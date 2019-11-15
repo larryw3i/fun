@@ -5,15 +5,18 @@
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; {% now "Y" %} 
-        {# a bug >> site name coudn`t get here #}
-        - <a href="/"> {% blocktrans %}x-dove{% endblocktrans %} </a>
-        - <a href="#">{% trans 'Privacy' %}</a>
-        <div class="btn-group dropup  float-right">
-            <button type="button" class="btn  dropdown-toggle " id="themeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {% trans 'Theme' %}:{% get_current_theme %}
-            </button>
-            <div class="dropdown-menu  theme-dropdown-menu"  aria-labelledby='themeDropdown'>
+        <div class="row">
+
+            <div class="col col-auto">
+                &copy; {% now "Y" %} 
+                {# a bug >> site name coudn`t get here #}
+                - <a href="/"> {% blocktrans %}x-dove{% endblocktrans %} </a>
+            </div>
+            <div class="col col-auto">
+                <a href="#">{% trans 'Privacy' %}</a>
+            </div>
+            <div class="col col-auto float-right">
+                {% include 'funhome/_footer_theme.html' %}
             </div>
         </div>
 

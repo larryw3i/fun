@@ -11,8 +11,8 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from hurry import filesize
 
 from .apps import EduhubConfig
-from .modelforms import LabelModelForm
-from .models import Label
+from .modelforms import LabelModelForm, ContentModelForm
+from .models import Label, Content
 from django.core import paginator
 
 # Create your views here.
@@ -41,16 +41,20 @@ class LabelCreateView( CreateView, LoginRequiredMixin ):
 
     def form_valid(self, form):
         
+        if not form.instance.cover.file :
+            form.add_error('cover',  _('Cover image is required') )
+            return render(self.request, label_create_template, context={ 'form': form })
+
         if not str(form.instance.cover.file.content_type).startswith('image/') :
             form.add_error('cover',  _('Image allowed only') )
             return render(self.request, label_create_template, context={ 'form': form })
-
         
         if form.instance.cover.file.size > max_cover_size :
             form.add_error('cover',  _('The length of cover should be less than')+' '+filesize.size(max_cover_size) )
             return render(self.request, label_create_template, context={ 'form': form })
 
         form.instance.author = self.request.user
+
         return super().form_valid(form)
 
 
@@ -113,4 +117,31 @@ class LabelUpdateView( UpdateView, LoginRequiredMixin ):
         return label
         
 
-'''end_generic_view'''
+class ContentListView(ListView):
+
+    model =  Content
+
+    form_class = ContentModelForm
+    template_name = content_list_template
+    context_object_name = 'contents'
+    ordering =  ('-uploading_date', )
+    paginate_by = 5
+    paginate_orphans= 1
+
+    def get_queryset(self): 
+        print( self.kwargs['label'] )
+        return Content.objects.filter( label = self.kwargs['label'] , is_legal = True)
+
+    def get(self, request, *args, **kwargs): 
+        return super().get(request, *args, **kwargs)
+
+    def  render_to_response(self, context, **response_kwargs):
+        response =  super().render_to_response(context, **response_kwargs)
+        response.set_cookie('page', self.request.GET.get('page', 1) )
+        return response
+ 
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['max_left_item_count'] = 2
+        return context_data
+

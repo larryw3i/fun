@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ label.name }}</h5>
                             <p class="card-text">{{ label.comment }}</p>
-                            <a href="#" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
+                            <a href="{% url 'eduhub:content_list' label=label.id %}" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
                             {% if request.user == label.author %}    
                                 <a href="{% url 'eduhub:label_update' pk=label.id %}" class="btn btn-sm btn-outline-info">{% trans 'Edit' %}</a>
                                 <a href="{% url 'eduhub:label_delete' pk=label.id %}" class="btn  btn-sm btn-outline-danger">{% trans 'Delete' %}</a>
@@ -44,7 +44,6 @@
                     {% endif %}
                     <li  class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
                 {% endif %}
-
 
                 {% for i in page_obj.paginator.page_range %}
                     {% if page_obj.number == i %}

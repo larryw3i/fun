@@ -19,11 +19,3 @@ class HomeView(TemplateView):
 def get_all_bootswatch_themes(request):
     if request.method == 'GET':
         return JsonResponse(os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs', 'bootswatch', 'dist')), safe=False)
-
-
-def get_dropdown_items(request):
-    if request.method == 'GET':
-        return render(
-            request,
-            os.path.join(FunhomeConfig.name, '_footer_theme.html'),
-            context={'bootswatch_themes': os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs', 'bootswatch', 'dist'))})

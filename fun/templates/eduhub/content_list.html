@@ -13,27 +13,16 @@
     <a href="{% url 'eduhub:label_create'  %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
     <hr/>
     <div class="row">
-            {% for label in labels %}
-                <div class="col col-auto mt-2">
-
-                    <div class="card" style="max-width: 18rem;">
-                        <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ label.name }}</h5>
-                            <p class="card-text">{{ label.comment }}</p>
-                            <a href="#" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
-                            {% if request.user == label.author %}    
-                                <a href="{% url 'eduhub:label_update' pk=label.id %}" class="btn btn-sm btn-outline-info">{% trans 'Edit' %}</a>
-                                <a href="{% url 'eduhub:label_delete' pk=label.id %}" class="btn  btn-sm btn-outline-danger">{% trans 'Delete' %}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                    
-                </div>
+            {% for content in Contents %} 
+                <a href="#" class="btn  btn-sm btn-primary">{% trans 'View' %}</a>
+                {% if request.user == label.author %}    
+                    <a href="{% url 'eduhub:label_update' pk=label.id %}" class="btn btn-sm btn-outline-info">{% trans 'Edit' %}</a>
+                    <a href="{% url 'eduhub:label_delete' pk=label.id %}" class="btn  btn-sm btn-outline-danger">{% trans 'Delete' %}</a>
+                {% endif %}
             {% endfor %}
     
     </div>
-
+    
     
     {% if is_paginated %}
         <nav aria-label="Page navigation ">
@@ -44,7 +33,6 @@
                     {% endif %}
                     <li  class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
                 {% endif %}
-
 
                 {% for i in page_obj.paginator.page_range %}
                     {% if page_obj.number == i %}
@@ -63,12 +51,18 @@
                     {% endif %}
                 {% endif %}
 
+                <li class="page-item disabled">
+                    <span class="page-link">|</span>
+                </li>
+                <li class="page-item disabled">
+                    <span class="page-link">
+                        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    </span>
+                </li>
 
             </ul>
         </nav>
-        <span class="float-right">
-            {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-        </span>
     {% endif %} 
+
 
 {% endblock %}
