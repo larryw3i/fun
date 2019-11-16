@@ -1,4 +1,6 @@
-
+import magic
+import os
+from fun import settings
 import math
 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -37,7 +39,7 @@ content_update_template = f'{EduhubConfig.name}/content_update.html'
 content_list_template = f'{EduhubConfig.name}/content_list.html'
 
 
-class LabelCreateView(CreateView, LoginRequiredMixin):
+class LabelCreateView( LoginRequiredMixin, CreateView ):
     model = Label
     form_class = LabelModelForm
     template_name = label_create_template
@@ -84,7 +86,7 @@ class LabelListView(ListView):
         return context_data
 
 
-class LabelDeleteView(DeleteView,  LoginRequiredMixin):
+class LabelDeleteView( LoginRequiredMixin, DeleteView ):
     model = Label
     form_class = LabelModelForm
     template_name = label_delete_template
@@ -99,7 +101,7 @@ class LabelDeleteView(DeleteView,  LoginRequiredMixin):
         return super().post(request, *args, **kwargs)
 
 
-class LabelUpdateView(UpdateView, LoginRequiredMixin):
+class LabelUpdateView( LoginRequiredMixin, UpdateView ):
 
     model = Label
     form_class = LabelModelForm
@@ -142,7 +144,7 @@ class ContentListView(ListView):
         return context_data
 
 
-class ContentCreateView(CreateView, LoginRequiredMixin):
+class ContentCreateView( LoginRequiredMixin,  CreateView ):
     model = Content
     form_class = ContentModelForm
     template_name = content_create_template
@@ -186,8 +188,14 @@ class ContentDetailView(DetailView):
     form_class = ContentModelForm
     template_name = content_detail_template
 
+    def get_context_data(self, **kwargs):
+        context_data =  super().get_context_data(**kwargs)
+        file_path = os.path.join(settings.MEDIA_ROOT, str( context_data['object'].content_file.name ))
+        context_data['is_video'] = str( magic.from_file( file_path ,mime=True) ).startswith('video/')
+        return context_data
 
-class ContentDeleteView(DeleteView, LoginRequiredMixin):
+ 
+class ContentDeleteView( LoginRequiredMixin,  DeleteView ):
 
     model = Content
     form_class = ContentModelForm
@@ -209,7 +217,7 @@ class ContentDeleteView(DeleteView, LoginRequiredMixin):
         return reverse('eduhub:content_list', kwargs={'label': self.label_id})
 
 
-class ContentUpdateView(UpdateView, LoginRequiredMixin):
+class ContentUpdateView( LoginRequiredMixin,  UpdateView ):
 
     model = Content
     form_class = ContentModelForm

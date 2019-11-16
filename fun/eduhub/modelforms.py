@@ -44,7 +44,7 @@ class ContentModelForm(ModelForm):
         }
 
         widgets = {
-            'content_file': forms.FileInput( attrs={ 'class': 'preview-pdf' } ),
+            'content_file': forms.FileInput( attrs={ 'class': 'preview-pdf preview-video', 'accept':'video/*, .pdf' } ),
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
             'label': forms.HiddenInput()
         }

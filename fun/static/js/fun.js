@@ -11,6 +11,10 @@
         previewPdf(event);
     });
 
+    $(document).on('change', `input[type='file'].preview-video`, (event)=> {
+        previewVideo(event);
+    });
+
     $(document).on('click', `.theme-dropdown-menu a` , (event) =>{
         changeTheme(event);
     });
@@ -28,12 +32,37 @@
      * 
      * @param { JQuery.ChangeEvent<Document, undefined, any, any> } event 
      */
-    function previewPdf(event){
-        var fileReader = new FileReader();
-        fileReader.onload = function(){
-            $(`object[preview-for='#${event.target.id}']`).attr( {'data': this.result });
+    function previewVideo(event){
+        var preview_for =  $(`video[preview-for='#${event.target.id}']`) ;
+        if( ! String(event.target.files[0].type).startsWith('video/') ){
+            preview_for.removeAttr('src');
+            preview_for.hide();
+            return;
         }
-        fileReader.readAsDataURL(event.target.files[0])
+        preview_for.show();
+        preview_for.attr( {
+            'src': URL.createObjectURL( event.target.files[0] )
+        });
+ 
+    }
+
+
+    /**
+     * 
+     * @param { JQuery.ChangeEvent<Document, undefined, any, any> } event 
+     */
+    function previewPdf(event){
+        var preview_for =$(`object[preview-for='#${event.target.id}']`);
+        if( ! String(event.target.files[0].type).endsWith('/pdf') ) {
+            preview_for.removeAttr('data');
+            preview_for.hide();
+            return;
+        }
+        preview_for.show();
+        preview_for.attr( {
+            'data': URL.createObjectURL( event.target.files[0] ) 
+        });
+ 
     }
 
 

@@ -32,6 +32,8 @@ urlpatterns = [
     path('eduhub/', include('eduhub.urls')),
 
     path('funuser/', include('funuser.urls')),
+
+    # path('django_bfm/', include('django_bfm.urls')),
     
 
 ]  # + static( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT )
