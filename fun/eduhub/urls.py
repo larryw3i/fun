@@ -14,4 +14,5 @@ urlpatterns = [
     path('content_create/<uuid:label>', views.ContentCreateView.as_view(), name = 'content_create'),
     path('content_detail/<uuid:pk>', views.ContentDetailView.as_view(), name = 'content_detail'),
     path('content_delete/<uuid:pk>', views.ContentDeleteView.as_view(), name = 'content_delete'),
+    path('content_update/<uuid:pk>', views.ContentUpdateView.as_view(), name = 'content_update'),
 ]

@@ -25,8 +25,8 @@
                         <a href="{% url 'eduhub:content_detail' pk=content.id %}" class="card-link">{% trans 'View' %}</a>
 
                         {% if content.label.author == request.user %}    
-                            <a href="#" class="card-link">{% trans 'Edit' %}</a>
-                            <a href="#" class="card-link">{% trans 'Delete' %}</a>
+                            <a href="{% url 'eduhub:content_update'  pk=content.id %}" class="card-link">{% trans 'Edit' %}</a>
+                            <a href="{% url 'eduhub:content_delete'  pk=content.id %}" class="card-link">{% trans 'Delete' %}</a>
                         {% endif %}
 
                         </div>

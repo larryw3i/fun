@@ -193,8 +193,42 @@ class ContentDeleteView( DeleteView, LoginRequiredMixin ):
     form_class = ContentModelForm
     template_name = content_delete_template
 
+    def __init__(self):
+        self.label_id = None
+        super().__init__()
+    
+    def get(self, request, *args, **kwargs):
+        if not Content.objects.filter( pk = kwargs['pk'], label__author = request.user).exists():
+            raise Http404()
+        
+        return super().get(request, *args, **kwargs)
+    
+    def post(self, request, *args, **kwargs):
+        self.label_id = Content.objects.get( pk = kwargs['pk'] ).label.id
+        return super().post(request, *args, **kwargs)
+
+    def get_success_url(self):
+        return reverse( 'eduhub:content_list', kwargs={ 'label': self.label_id })
+
 class ContentUpdateView( UpdateView, LoginRequiredMixin ):
 
     model = Content
     form_class = ContentModelForm
     template_name = content_update_template
+
+    def __init__(self):
+        self.label_id = None
+        super().__init__()
+
+    def get(self, request, *args, **kwargs):
+        if not Content.objects.filter( pk = kwargs['pk'], label__author = request.user).exists():
+            raise Http404()
+
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.label_id = Content.objects.get( pk = kwargs['pk'] ).label.id
+        return super().post(request, *args, **kwargs)
+    
+    def get_success_url(self):
+        return reverse( 'eduhub:content_list', kwargs={ 'label': self.label_id })
