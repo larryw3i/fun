@@ -5,9 +5,12 @@ from funfile.storage import upload_to
 
 # Create your models here.
 
+
+funuser_mame = 'funuser'
+
 class Funuser(models.Model):
     id = models.UUIDField( primary_key=True, default=uuid.uuid4, editable=False, unique=True )
-    user_id = models.ForeignKey( to= User,  on_delete=models.CASCADE, )
+    user = models.ForeignKey( to= User,  on_delete=models.CASCADE, )
 
     avatar = models.ImageField( upload_to = upload_to )
     

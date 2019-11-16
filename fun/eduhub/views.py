@@ -17,7 +17,8 @@ from hurry import filesize
 
 from .apps import EduhubConfig
 from .modelforms import ContentModelForm, LabelModelForm
-from .models import Content, Label
+from .models import Content, Label, label_name, content_name
+from fun import funvalue
 
 # Create your views here.
 
@@ -26,17 +27,17 @@ max_cover_size = 500*1024
 max_pdf_content_file_size = 5 * math.pow(1024, 2)
 max_video_content_file_size = 100 * math.pow(1024, 2)
 
-label_create_template = f'{EduhubConfig.name}/label_create.html'
-label_detail_template = f'{EduhubConfig.name}/label_detail.html'
-label_delete_template = f'{EduhubConfig.name}/label_delete.html'
-label_update_template = f'{EduhubConfig.name}/label_update.html'
-label_list_template = f'{EduhubConfig.name}/label_list.html'
+label_create_template   = f'{EduhubConfig.name}/{label_name}{funvalue.create_html}'
+label_detail_template   = f'{EduhubConfig.name}/{label_name}{funvalue.detail_html}'
+label_delete_template   = f'{EduhubConfig.name}/{label_name}{funvalue.delete_html}'
+label_update_template   = f'{EduhubConfig.name}/{label_name}{funvalue.update_html}'
+label_list_template     = f'{EduhubConfig.name}/{label_name}{funvalue.list_html}'
 
-content_create_template = f'{EduhubConfig.name}/content_create.html'
-content_detail_template = f'{EduhubConfig.name}/content_detail.html'
-content_delete_template = f'{EduhubConfig.name}/content_delete.html'
-content_update_template = f'{EduhubConfig.name}/content_update.html'
-content_list_template = f'{EduhubConfig.name}/content_list.html'
+content_create_template = f'{EduhubConfig.name}/{content_name}{funvalue.create_html}'
+content_detail_template = f'{EduhubConfig.name}/{content_name}{funvalue.detail_html}'
+content_delete_template = f'{EduhubConfig.name}/{content_name}{funvalue.delete_html}'
+content_update_template = f'{EduhubConfig.name}/{content_name}{funvalue.update_html}'
+content_list_template   = f'{EduhubConfig.name}/{content_name}{funvalue.list_html}'
 
 
 class LabelCreateView( LoginRequiredMixin, CreateView ):
@@ -212,6 +213,12 @@ class ContentDeleteView( LoginRequiredMixin,  DeleteView ):
 
         self.label_id = Content.objects.get(pk=kwargs['pk']).label.id
         return super().post(request, *args, **kwargs)
+ 
+    def get_context_data(self, **kwargs):
+        context_data =  super().get_context_data(**kwargs)
+        file_path = os.path.join(settings.MEDIA_ROOT, str( context_data['object'].content_file.name ))
+        context_data['is_video'] = str( magic.from_file( file_path ,mime=True) ).startswith('video/')
+        return context_data
 
     def get_success_url(self):
         return reverse('eduhub:content_list', kwargs={'label': self.label_id})
@@ -234,6 +241,13 @@ class ContentUpdateView( LoginRequiredMixin,  UpdateView ):
 
         self.label_id = Content.objects.get(pk=kwargs['pk']).label.id
         return super().post(request, *args, **kwargs)
+ 
+
+    def get_context_data(self, **kwargs):
+        context_data =  super().get_context_data(**kwargs)
+        file_path = os.path.join(settings.MEDIA_ROOT, str( context_data['object'].content_file.name ))
+        context_data['is_video'] = str( magic.from_file( file_path ,mime=True) ).startswith('video/')
+        return context_data
 
     def get_success_url(self):
         return reverse('eduhub:content_list', kwargs={'label': self.label_id})
