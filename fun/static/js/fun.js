@@ -15,7 +15,11 @@
         changeTheme(event);
     });
 
-    $(document).on('click', `.label_card` , (event) =>{
+    $(document).on('click', `.eduhub-label-card` , (event) =>{
+        window.location = event.currentTarget.dataset.url;
+    });
+
+    $(document).on('click', `.eduhub-content-card` , (event) =>{
         window.location = event.currentTarget.dataset.url;
     });
 

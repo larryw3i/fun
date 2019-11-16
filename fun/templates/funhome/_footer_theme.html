@@ -4,7 +4,7 @@
 
 <div class="btn-group dropup">
     <button type="button" class="btn  dropdown-toggle " id="themeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {% trans 'Theme' %}:{% get_current_theme %}
+      {% trans 'Theme' %}:{% get_current_theme_name %}
     </button>
     <div class="dropdown-menu  theme-dropdown-menu"  aria-labelledby='themeDropdown'>
         <span class="dropdown-item-text btn-sm" >{% trans 'Select theme' %}</span>
@@ -31,6 +31,7 @@
         <a class="dropdown-item btn-link btn-sm" data-theme="spacelab" >{% trans 'spacelab' %}</a>
         <a class="dropdown-item btn-link btn-sm" data-theme="united" >{% trans 'united' %}</a>
         <a class="dropdown-item btn-link btn-sm" data-theme="materia" >{% trans 'materia' %}</a>
+        <a class="dropdown-item btn-link btn-sm" data-theme="default" >{% trans 'default' %}</a>
         {% comment %}
             <div class="dropdown-divider small"></div>
             <a class="dropdown-item btn-link btn-sm" data-theme="auto">{% trans 'auto' %}</a>

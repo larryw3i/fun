@@ -16,7 +16,7 @@
             {% for label in labels %}
                 <div class="col col-auto mt-2">
 
-                    <div class="card label_card" style="max-width: 18rem;" data-url="{% url 'eduhub:content_list' label=label.id %}">
+                    <div class="card eduhub-label-card" style="max-width: 18rem;" data-url="{% url 'eduhub:content_list' label=label.id %}">
                         <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{ label.name }}</h5>

@@ -1,5 +1,8 @@
 
+import math
+
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core import paginator
 from django.core.exceptions import ValidationError
 from django.http import Http404
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
@@ -11,10 +14,9 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from hurry import filesize
 
 from .apps import EduhubConfig
-from .modelforms import LabelModelForm, ContentModelForm
-from .models import Label, Content
-from django.core import paginator
-import math
+from .modelforms import ContentModelForm, LabelModelForm
+from .models import Content, Label
+
 # Create your views here.
 
 max_cover_size = 500*1024
@@ -68,13 +70,10 @@ class LabelListView( ListView ):
     form_class = LabelModelForm
     template_name = label_list_template
     context_object_name = 'labels'
-    ordering =  ('-creating_date', )
+    ordering =  ['-creating_date', ]
     paginate_by = 5
     paginate_orphans= 1
 
-    def get(self, request, *args, **kwargs):
-        request.COOKIES['page'] = request.GET.get('page')
-        return super().get(request, *args, **kwargs)
     def  render_to_response(self, context, **response_kwargs):
         response =  super().render_to_response(context, **response_kwargs)
         response.set_cookie('page', self.request.GET.get('page', 1) )
@@ -127,19 +126,15 @@ class ContentListView(ListView):
     form_class = ContentModelForm
     template_name = content_list_template
     context_object_name = 'contents'
-    ordering =  ('-uploading_date', )
+    ordering =  ['-uploading_date', ]
     paginate_by = 5
     paginate_orphans= 1
 
     def get_queryset(self): 
-        return Content.objects.filter( label = self.kwargs['label'] , is_legal = True)
-
-    def get(self, request, *args, **kwargs): 
-        return super().get(request, *args, **kwargs)
+        return Content.objects.filter( label = self.kwargs['label'] , is_legal = True).order_by('-uploading_date')
 
     def  render_to_response(self, context, **response_kwargs):
-        response =  super().render_to_response(context, **response_kwargs)
-        # for updating label
+        response =  super().render_to_response(context, **response_kwargs) 
         response.set_cookie('page', self.request.GET.get('page', 1) )
         return response
  
@@ -158,22 +153,15 @@ class ContentCreateView( CreateView, LoginRequiredMixin ):
     def __init__(self):
         self.label_id  = None
         super().__init__()
-    
 
     def get_success_url(self):
         return reverse( 'eduhub:content_list', kwargs={ 'label': self.label_id })
-    
 
     def get_initial(self):
         initial = super().get_initial()
         initial['label'] = self.kwargs['label'] 
         return initial
-
-    def get_form( self, form_class = None ):
-        form = super().get_form( form_class = form_class ) 
-        form.base_fields['label'].label_from_instance = lambda label: label.name
-        return form
-
+         
     def form_valid(self, form):
         content_file = form.instance.content_file.file
         if not  content_file :
@@ -197,16 +185,16 @@ class ContentDetailView( DetailView ):
 
     model = Content
     form_class = ContentModelForm
-    template_name = content_create_template
+    template_name = content_detail_template
 
 class ContentDeleteView( DeleteView, LoginRequiredMixin ):
 
     model = Content
     form_class = ContentModelForm
-    template_name = content_create_template
+    template_name = content_delete_template
 
 class ContentUpdateView( UpdateView, LoginRequiredMixin ):
 
     model = Content
     form_class = ContentModelForm
-    template_name = content_create_template
+    template_name = content_update_template
