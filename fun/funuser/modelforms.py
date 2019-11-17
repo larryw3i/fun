@@ -11,3 +11,4 @@ from djangovalidators.validators import FileSizeValidator
 class FunuserModelForm(ModelForm):
     class Meta:
         model = Funuser
+        fields = '__all__'
