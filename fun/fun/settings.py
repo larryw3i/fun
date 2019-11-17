@@ -33,7 +33,7 @@ DEBUG = bool( os.environ.get('DEBUG') )
 
 SITE_ID = 1
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 
