@@ -148,6 +148,8 @@ funfile/files/
 # idea
 .idea/
 
+# uwsgi.ini 
+uwsgi.ini
 
 
 # End of https://www.gitignore.io/api/django
