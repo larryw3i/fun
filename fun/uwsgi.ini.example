@@ -1,6 +1,6 @@
 [uwsgi]
 
-socket      = 0.0.0.0:8899
+socket      = :8899
 chdir       = .
 module      = fun.wsgi
 master      = true

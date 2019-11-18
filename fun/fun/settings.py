@@ -33,7 +33,7 @@ DEBUG = bool( os.environ.get('DEBUG') )
 
 SITE_ID = 1
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', ]
 
 
 
@@ -54,7 +54,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
 
-    "compressor",
+    'compressor',
+
+    'werkzeug_debugger_runserver',
+    'django_extensions',
 
     'funhome.apps.FunhomeConfig',
     'funfile.apps.FunfileConfig',
@@ -203,7 +206,9 @@ LOCALE_PATHS=(
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+] 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 
 STATICFILES_FINDERS = [
