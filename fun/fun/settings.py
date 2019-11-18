@@ -56,9 +56,6 @@ INSTALLED_APPS = [
 
     'compressor',
 
-    'werkzeug_debugger_runserver',
-    'django_extensions',
-
     'funhome.apps.FunhomeConfig',
     'funfile.apps.FunfileConfig',
     'eduhub.apps.EduhubConfig',
