@@ -36,4 +36,4 @@ urlpatterns = [
     # path('django_bfm/', include('django_bfm.urls')),
     
 
-]   + static( settings.STATIC_URL, document_root = settings.STATICFILES_DIRS )
+]   + static( settings.STATIC_URL, document_root = settings.STATIC_ROOT )
