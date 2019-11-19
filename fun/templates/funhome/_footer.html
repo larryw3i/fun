@@ -1,5 +1,6 @@
 
 {% load i18n %}
+{% load l10n %}
 {% load account %}
 {% load funtag %}
 
@@ -14,6 +15,9 @@
             </div>
             <div class="col col-auto">
                 <a href="#">{% trans 'Privacy' %}</a>
+            </div>
+            <div class="col col-auto float-right">
+                {% include 'funhome/_footer_language.html' %}
             </div>
             <div class="col col-auto float-right">
                 {% include 'funhome/_footer_theme.html' %}

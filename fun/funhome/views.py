@@ -1,21 +1,18 @@
 import os
 
+import magic
 from django.core import serializers
-from django.http import JsonResponse
+from django.http import FileResponse, Http404, JsonResponse, HttpResponse
 from django.shortcuts import render
+from django.utils import translation
 # Create your views here.
 from django.views import View
 from django.views.generic import TemplateView
 
 from fun import settings
-
-from .apps import FunhomeConfig
- 
-from django.http import FileResponse, Http404
-
 from funfile.models import Checkup
 
-import magic
+from .apps import FunhomeConfig
 
 
 class HomeView(TemplateView):
@@ -35,3 +32,14 @@ def get_favicon_ico( request ):
         return FileResponse(open(file_path, 'rb'),content_type = content_type)
     else:
         return Http404()
+
+def change_language( request ):
+    LANGUAGE_CODE = request.COOKIES.get('language')
+    
+    cur_language = translation.get_language()
+    try:
+        translation.activate(LANGUAGE_CODE) 
+    finally:
+        translation.activate(cur_language)
+    
+    return HttpResponse('OK')

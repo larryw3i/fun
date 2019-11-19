@@ -26,4 +26,3 @@ def get_current_theme_url(context):
 @register.simple_tag(takes_context=True)
 def get_current_theme_name(context):
     return context['request'].COOKIES.get('theme', 'default') 
-

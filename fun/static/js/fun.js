@@ -18,6 +18,12 @@
     $(document).on('click', `.theme-dropdown-menu a` , (event) =>{
         changeTheme(event);
     });
+    
+    $(document).on('click', `.language-dropdown-menu .language-dropdown-item` , (event) =>{
+        $(`#language_form input[name='language']`).val(event.target.dataset.language);
+        $(`#language_form`).submit();
+    });
+    
 
     $(document).on('click', `.eduhub-label-card` , (event) =>{
         window.location = event.currentTarget.dataset.url;
@@ -65,6 +71,7 @@
  
     }
 
+ 
 
     /**
      * 

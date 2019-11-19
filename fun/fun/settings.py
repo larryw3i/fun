@@ -191,8 +191,8 @@ USE_TZ = True
 
 LANGUAGES = (
     ('en', ('English')),
-    ('zh-Hans', ('中文简体')),
-    ('zh-Hant', ('中文繁體')),
+    ('zh-hans', ('中文简体')),
+    ('zh-hant', ('中文繁體')),
 )
 
 LOCALE_PATHS=(
