@@ -9,7 +9,7 @@ html
 body 
 {
   /* Margin bottom by footer height */
-  padding-bottom: 68px;
+  padding-bottom: 68px; 
 }
 
 .body-content
@@ -34,7 +34,7 @@ body
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 66px; /* Vertically center the text there */
+  height: 66px;
 }
 
 .carousel-control-next,.carousel-control-prev
