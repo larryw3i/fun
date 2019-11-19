@@ -133,6 +133,8 @@ static/libs/popper.js-1.16.0/
 static/libs/jquery-validation-1.19.1/
 ## https://github.com/js-cookie/js-cookie
 static/libs/js-cookie/
+## https://github.com/mozilla/pdf.js
+static/libs/pdfjs-2.2.228-dist/
 
 # end static files
 
