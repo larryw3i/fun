@@ -27,7 +27,7 @@
                     {% for homesticker in homestickers|slice:':3' %}
                         <div class="carousel-item {% if forloop.first %} active {% endif %}">
                             <img src="{% url 'funfile:get_file' file_id=homesticker.cover.name %}" class="d-block w-100" alt="">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption ">
                                 <h5>{{ homesticker.title }}</h5>
                                 <p>{{  homesticker.subtitle }}</p>
                             </div>
@@ -37,7 +37,7 @@
                         
                     <div class="carousel-item active">
                         <img src="{% static '/images/default_carousel_image.webp'' %}" class="d-block w-100" alt="">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption ">
                             <h5>{% trans 'About X-DOVE' %}</h5>
                             <p>
                                 {% blocktrans %}
