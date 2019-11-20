@@ -11,7 +11,11 @@
             <div class="col col-auto">
                 &copy; {% now "Y" %} 
                 {# a bug >> site name coudn`t get here #}
-                - <a href="/"> {% blocktrans %}x-dove{% endblocktrans %} </a>
+                - <a href="/"> 
+                    {% blocktrans %}
+                        x-dove
+                    {% endblocktrans %} 
+                </a>
             </div>
             <div class="col col-auto">
                 <a href="#">{% trans 'Privacy' %}</a>

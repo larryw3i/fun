@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import sys
-from dotenv import find_dotenv,load_dotenv
-from django.utils.translation import gettext_lazy
+from dotenv import find_dotenv,load_dotenv 
+from django.utils.translation import gettext_lazy as _
 
 load_dotenv( find_dotenv() )
 
@@ -85,7 +85,8 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages',  
+                'django.template.context_processors.i18n', 
             ],
             'libraries':{
                 'funtag': 'funtag.templatetag',
@@ -190,14 +191,15 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = (
-    ('en', ('English')),
-    ('zh-hans', ('中文简体')),
-    ('zh-hant', ('中文繁體')),
+    ('en', _('English')),
+    ('zh-hans', _('中文简体')),
+    ('zh-hant', _('中文繁體')),
 )
 
 LOCALE_PATHS=(
     os.path.join(BASE_DIR, 'locale'),
 )
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -207,6 +209,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
 ] 
+
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
 
 STATICFILES_FINDERS = [
