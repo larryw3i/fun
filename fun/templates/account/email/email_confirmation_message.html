@@ -1,19 +1,27 @@
 
 {% load account %}
-{% user_display user as user_display %}
 {% load i18n %}
+{% user_display user as user_display %}
+
+{% current_site.domain as site_domain %}
+
 
 {% autoescape off %}
 
-    <h2>Hello from {% trans  current_site.name  %}!</h2>
+    <h2>{% trans 'Hello from x-dove'%}!</h2>
     <p>
-        You're receiving this e-mail because user <h3>{{ user_display }}</h3> has given yours as an e-mail address to connect their account.
+        You're receiving this e-mail because user 
+        <h3>{{ user_display }}</h3> 
+        has given yours as an e-mail address to connect their account.
 
         To confirm this is correct, go to <a href='{{ activate_url }}'>{% trans 'CONFIRM EMAIL' %}</a>
     </p>
  
     <div style='width:100%;text-align:right'>
-        {% trans 'Thank you from' %} {% trans current_site.name %}!
+        
+        {% blocktrans  %} 
+            Thank you from x-dove!
+        {% endblocktrans %} 
         <br/>
         {{ site_domain }}
     </div> 

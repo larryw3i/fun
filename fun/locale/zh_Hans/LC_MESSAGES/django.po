@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 12:11+0800\n"
-"PO-Revision-Date: 2019-11-20 12:10+0800\n"
+"POT-Creation-Date: 2019-11-20 16:51+0800\n"
+"PO-Revision-Date: 2019-11-20 16:53+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: eduhub/modelforms.py:16
 msgid "Label name"
-msgstr ""
+msgstr "标签名"
 
 #: eduhub/modelforms.py:17
 msgid "Cover image"
-msgstr ""
+msgstr "封面图片"
 
 #: eduhub/modelforms.py:18 eduhub/modelforms.py:39
 msgid "Comment"
@@ -31,126 +31,148 @@ msgstr "备注"
 
 #: eduhub/modelforms.py:36
 msgid "Title name"
-msgstr ""
+msgstr "标题名"
 
 #: eduhub/modelforms.py:37
 msgid "Label"
-msgstr ""
+msgstr "标签"
 
 #: eduhub/modelforms.py:38
 msgid "Content file"
-msgstr ""
+msgstr "内容文件"
 
 #: eduhub/modelforms.py:43
 msgid "content file, pdf and video file is allowed only"
-msgstr ""
+msgstr "内容文件只能为pdf或视频哦"
 
 #: eduhub/views.py:52
 msgid "Cover image is required"
-msgstr ""
+msgstr "未选择封面图片"
 
 #: eduhub/views.py:56
 msgid "Image allowed only"
-msgstr ""
+msgstr "只能选择图片"
 
 #: eduhub/views.py:61
 msgid "The length of cover should be less than"
-msgstr ""
+msgstr "封面图片的大小应该小于"
 
 #: eduhub/views.py:168
 msgid "Content file is required"
-msgstr ""
+msgstr "未选择内容文件"
 
 #: eduhub/views.py:173
 msgid "The length of video file should be less than"
-msgstr ""
+msgstr "视频文件应该小于"
 
 #: eduhub/views.py:178
 msgid "The length of pdf file should be less than"
-msgstr ""
+msgstr "Pdf文件应该小于"
+
+#: fun/settings.py:194
+msgid "English"
+msgstr "English"
+
+#: fun/settings.py:195
+msgid "中文简体"
+msgstr "中文简体"
+
+#: fun/settings.py:196
+msgid "中文繁體"
+msgstr "中文繁體"
 
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:8
 msgid "Account Inactive"
-msgstr ""
+msgstr "账号未激活"
 
 #: templates/account/account_inactive.html:10
 msgid "This account is inactive."
-msgstr ""
+msgstr "账号未激活."
 
-#: templates/account/email.html:5
+#: templates/account/email.html:6
 msgid "Account"
-msgstr ""
-
-#: templates/account/email.html:9
-msgid "E-mail Addresses"
-msgstr ""
+msgstr "账号"
 
 #: templates/account/email.html:11
-msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgid "E-mail Addresses"
+msgstr "邮箱地址"
 
-#: templates/account/email.html:25
-msgid "Verified"
-msgstr ""
+#: templates/account/email.html:13
+msgid "The following e-mail addresses are associated with your account:"
+msgstr "以下邮箱地址关联你的账号:"
 
 #: templates/account/email.html:27
+msgid "Verified"
+msgstr "已验证"
+
+#: templates/account/email.html:29
 msgid "Unverified"
-msgstr ""
+msgstr "未验证"
 
-#: templates/account/email.html:31
+#: templates/account/email.html:33
 msgid "Primary"
-msgstr ""
+msgstr "常用"
 
-#: templates/account/email.html:40
+#: templates/account/email.html:42
 msgid "Make Primary"
-msgstr ""
+msgstr "改为常用"
 
-#: templates/account/email.html:41
+#: templates/account/email.html:43
 msgid "Re-send Verification"
-msgstr ""
+msgstr "重新发送"
 
-#: templates/account/email.html:42 templates/socialaccount/connections.html:39
+#: templates/account/email.html:44 templates/socialaccount/connections.html:39
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
-#: templates/account/email.html:50
+#: templates/account/email.html:52
 msgid "Warning:"
-msgstr ""
+msgstr "警告:"
 
-#: templates/account/email.html:51
+#: templates/account/email.html:53
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
-msgstr ""
+msgstr "你还没有设置邮箱地址哦!  添加可用的邮箱地址然后重置密码吧."
 
-#: templates/account/email.html:57
+#: templates/account/email.html:59
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "添加邮箱地址"
 
-#: templates/account/email.html:62
+#: templates/account/email.html:64
 msgid "Add E-mail"
-msgstr ""
+msgstr "添加邮箱"
 
-#: templates/account/email.html:71
+#: templates/account/email.html:73
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
+msgstr "确定要移除吗?"
 
-#: templates/account/email/email_confirmation_message.html:12
+#: templates/account/email/email_confirmation_message.html:11
+msgid "Hello from x-dove"
+msgstr "来自 x-dove 的问候"
+
+#: templates/account/email/email_confirmation_message.html:17
 msgid "CONFIRM EMAIL"
-msgstr ""
+msgstr "确认邮箱"
 
-#: templates/account/email/email_confirmation_message.html:16
-msgid "Thank you from"
+#: templates/account/email/email_confirmation_message.html:22
+msgid ""
+" \n"
+"            Thank you from x-dove!\n"
+"        "
 msgstr ""
+" \n"
+"         谢谢亲, (来自 x-dove )! \n"
+"        "
 
 #: templates/account/email/email_confirmation_subject.html:3
 msgid "Please Confirm Your E-mail Address"
-msgstr ""
+msgstr "请验证你的邮箱地址"
 
 #: templates/account/email/password_reset_key_message.html:9
 msgid "Hello from"
-msgstr ""
+msgstr "问候来自"
 
 #: templates/account/email/password_reset_key_message.html:11
 msgid ""
@@ -161,10 +183,14 @@ msgid ""
 "Click the link below to reset your password.\n"
 "    "
 msgstr ""
+"\n"
+"        亲! 您好, 重置密码邮件送达 \n"
+"        (亲没有重置密码请忽略).\n"
+"    "
 
 #: templates/account/email/password_reset_key_message.html:16
 msgid "RESET PASSWORD"
-msgstr ""
+msgstr "重置密码"
 
 #: templates/account/email/password_reset_key_message.html:19
 #, python-format
@@ -173,51 +199,56 @@ msgid ""
 "                In case you forgot, your username is %(username)s.\n"
 "        "
 msgstr ""
+"\n"
+"                提前和亲说, 亲的用户名是: %(username)s.\n"
+"        "
 
 #: templates/account/email/password_reset_key_message.html:26
 msgid "Thank you for using"
-msgstr ""
+msgstr "很高兴为您服务"
 
 #: templates/account/email/password_reset_key_subject.html:3
 msgid ""
 "\n"
 "    Password Reset E-mail\n"
 msgstr ""
+"\n"
+"    重置电子邮件\n"
 
 #: templates/account/email_confirm.html:7
 #: templates/account/email_confirm.html:12
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "确认电子邮件"
 
 #: templates/account/email_confirm.html:19
 msgid "Please confirm that"
-msgstr ""
+msgstr "请确认"
 
 #: templates/account/email_confirm.html:26
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 #: templates/account/email_confirm.html:35
 msgid "This e-mail confirmation link expired or is invalid. Please"
-msgstr ""
+msgstr "邮件链接非法或已失效哦! 请"
 
-#: templates/account/email_confirm.html:35
+#: templates/account/email_confirm.html:36
 msgid "issue a new e-mail confirmation request"
-msgstr ""
+msgstr "重新发送吧"
 
 #: templates/account/login.html:14 templates/account/login.html:19
 #: templates/account/login.html:83
 msgid "Sign In"
-msgstr ""
+msgstr "登录"
 
 #: templates/account/login.html:67
 msgid ""
-"\n"
-"      If you have not created an account yet, then please\n"
+" \n"
+"      If you have not created an account yet, then please \n"
 "    "
 msgstr ""
-"\n"
-"      没有账号? 请 \n"
+" \n"
+"      没有账号吗? 请 \n"
 "    "
 
 #: templates/account/login.html:70
@@ -226,7 +257,7 @@ msgstr "注册"
 
 #: templates/account/login.html:87
 msgid "Forgot Password?"
-msgstr ""
+msgstr "忘记密码?"
 
 #: templates/account/logout.html:7 templates/account/logout.html:11
 #: templates/account/logout.html:23
@@ -235,7 +266,7 @@ msgstr "退出"
 
 #: templates/account/logout.html:13
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "亲要确认退出吗?"
 
 #: templates/account/messages/cannot_delete_primary_email.html:2
 #, python-format
@@ -243,6 +274,8 @@ msgid ""
 "\n"
 "    You cannot remove your primary e-mail address (%(email)s).\n"
 msgstr ""
+"\n"
+"    常用电子邮件不能移除哦! (%(email)s).\n"
 
 #: templates/account/messages/email_confirmation_sent.html:2
 #, python-format
@@ -250,6 +283,8 @@ msgid ""
 "\n"
 "    Confirmation e-mail sent to %(email)s.\n"
 msgstr ""
+"\n"
+"    去 %(email)s 邮箱检查邮件吧\n"
 
 #: templates/account/messages/email_confirmed.html:2
 #, python-format
@@ -257,6 +292,8 @@ msgid ""
 "\n"
 "    You have confirmed %(email)s.\n"
 msgstr ""
+"\n"
+"     %(email)s 邮件已确认\n"
 
 #: templates/account/messages/email_deleted.html:2
 #, python-format
@@ -264,6 +301,8 @@ msgid ""
 "\n"
 "    Removed e-mail address %(email)s.\n"
 msgstr ""
+"\n"
+"    移除邮件地址 %(email)s\n"
 
 #: templates/account/messages/logged_in.html:4
 #, python-format
@@ -271,6 +310,8 @@ msgid ""
 "\n"
 "    Successfully signed in as %(name)s.\n"
 msgstr ""
+"\n"
+"    登录成功 !  %(name)s.\n"
 
 #: templates/account/messages/logged_out.html:2
 msgid ""
@@ -285,24 +326,33 @@ msgid ""
 "\n"
 "    Password successfully changed.\n"
 msgstr ""
+"\n"
+"更改密码成功.\n"
 
 #: templates/account/messages/password_set.html:2
 msgid ""
 "\n"
 "    Password successfully set.\n"
 msgstr ""
+"\n"
+"设置密码成功.\n"
 
 #: templates/account/messages/primary_email_set.html:2
 msgid ""
 "\n"
 "    Primary e-mail address set.\n"
 msgstr ""
+"\n"
+" \n"
+"已设为常用邮箱.\n"
 
 #: templates/account/messages/unverified_primary_email.html:2
 msgid ""
 "\n"
 "    Your primary e-mail address must be verified.\n"
 msgstr ""
+"\n"
+"    亲, 常用邮箱地址要被验证哦.\n"
 
 #: templates/account/password_change.html:5
 #: templates/account/password_change.html:8
@@ -312,28 +362,35 @@ msgstr ""
 #: templates/account/password_reset_from_key_done.html:6
 #: templates/account/password_reset_from_key_done.html:9
 msgid "Change Password"
-msgstr ""
+msgstr "更改密码"
 
-#: templates/account/password_reset.html:6
-#: templates/account/password_reset.html:10
+#: templates/account/password_reset.html:7
+#: templates/account/password_reset.html:12
 #: templates/account/password_reset_done.html:6
 #: templates/account/password_reset_done.html:9
 msgid "Password Reset"
-msgstr ""
+msgstr "密码已重置"
 
-#: templates/account/password_reset.html:15
+#: templates/account/password_reset.html:18
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
-msgstr ""
-
-#: templates/account/password_reset.html:20
-msgid "Reset My Password"
-msgstr ""
+msgstr "忘记密码了? 填写电子邮箱然后发送重置密码邮件."
 
 #: templates/account/password_reset.html:23
-msgid "Please contact us if you have any trouble resetting your password."
+msgid "Reset My Password"
+msgstr "重置密码"
+
+#: templates/account/password_reset.html:27
+msgid ""
+"\n"
+"            Please contact us if you have any trouble resetting your "
+"password.\n"
+"        "
 msgstr ""
+"\n"
+"            如果重置密码失败请联系我们.\n"
+"        "
 
 #: templates/account/password_reset_done.html:16
 msgid ""
@@ -342,10 +399,13 @@ msgid ""
 "receive it within a few minutes.\n"
 "        "
 msgstr ""
+"\n"
+"            邮件已送出, 未收到请联系我们.\n"
+"        "
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr ""
+msgstr "令牌无效"
 
 #: templates/account/password_reset_from_key.html:18
 msgid ""
@@ -354,24 +414,27 @@ msgid ""
 "already been used.  Please request a \n"
 "            "
 msgstr ""
+"\n"
+"                链接非法, 可能链接已被使用.  请  \n"
+"            "
 
 #: templates/account/password_reset_from_key.html:21
 msgid "new password reset"
-msgstr ""
+msgstr "新密码已重置"
 
 #: templates/account/password_reset_from_key.html:29
 msgid "change password"
-msgstr ""
+msgstr "更改密码"
 
 #: templates/account/password_reset_from_key.html:32
 #: templates/account/password_reset_from_key_done.html:10
 msgid "Your password is now changed."
-msgstr ""
+msgstr "密码已更改."
 
 #: templates/account/password_set.html:5 templates/account/password_set.html:8
 #: templates/account/password_set.html:13
 msgid "Set Password"
-msgstr ""
+msgstr "设置密码"
 
 #: templates/account/signup.html:5 templates/socialaccount/signup.html:6
 msgid "Signup"
@@ -384,27 +447,33 @@ msgid "Sign Up"
 msgstr "注册"
 
 #: templates/account/signup.html:14
-#, python-format
 msgid ""
 "\n"
 "      Already have an account? Then please \n"
-"      <a href=\"%(login_url)s\">sign in</a>.\n"
 "    "
 msgstr ""
+"\n"
+"       已有账号吗?请\n"
+"    "
+
+#: templates/account/signup.html:17
+#: templates/socialaccount/login_cancelled.html:18
+msgid "sign in"
+msgstr "登录"
 
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:8
 msgid "Sign Up Closed"
-msgstr ""
+msgstr "注册已关闭"
 
 #: templates/account/signup_closed.html:10
 msgid "We are sorry, but the sign up is currently closed."
-msgstr ""
+msgstr "非常抱歉, 注册暂时关闭了."
 
 #: templates/account/snippets/already_logged_in.html:6
 #: templates/account/verified_email_required.html:31
 msgid "Note"
-msgstr ""
+msgstr "留心一下"
 
 #: templates/account/snippets/already_logged_in.html:7
 #, python-format
@@ -413,13 +482,16 @@ msgid ""
 "        you are already logged in as %(user_display)s.\n"
 "    "
 msgstr ""
+"\n"
+"        已登录, %(user_display)s.\n"
+"    "
 
 #: templates/account/verification_sent.html:6
 #: templates/account/verification_sent.html:10
 #: templates/account/verified_email_required.html:6
 #: templates/account/verified_email_required.html:10
 msgid "Verify Your E-mail Address"
-msgstr ""
+msgstr "验证你的电子邮件"
 
 #: templates/account/verification_sent.html:13
 msgid ""
@@ -429,6 +501,10 @@ msgid ""
 "receive it within a few minutes.\n"
 "        "
 msgstr ""
+"\n"
+"            验证邮件已送出, 查看邮箱并按要求完成注册, (未收到邮件? 重新发送或"
+"联系我们).\n"
+"        "
 
 #: templates/account/verified_email_required.html:15
 msgid ""
@@ -439,6 +515,12 @@ msgid ""
 "            verify ownership of your e-mail address. \n"
 "        "
 msgstr ""
+"\n"
+"            This part of the site requires us to verify that\n"
+"            you are who you claim to be. For this purpose, we require that "
+"you\n"
+"            verify ownership of your e-mail address. \n"
+"        "
 
 #: templates/account/verified_email_required.html:23
 msgid ""
@@ -449,46 +531,51 @@ msgid ""
 "            contact us if you do not receive it within a few minutes.\n"
 "        "
 msgstr ""
+"\n"
+"            验证邮件已送出 \n"
+"            点击邮箱内链接完成验证哦! \n"
+"            未收到邮件? 联系我们.\n"
+"        "
 
 #: templates/account/verified_email_required.html:31
 msgid "you can still"
-msgstr ""
+msgstr "你也可以"
 
 #: templates/account/verified_email_required.html:32
 msgid "change your e-mail address"
-msgstr ""
+msgstr "更改邮箱地址"
 
 #: templates/eduhub/content_create.html:16
 #: templates/eduhub/content_update.html:25
 #: templates/eduhub/label_create.html:16 templates/eduhub/label_update.html:21
 msgid "Preview"
-msgstr ""
+msgstr "预览"
 
 #: templates/eduhub/content_create.html:27
 #: templates/eduhub/label_create.html:26 templates/eduhub/label_update.html:31
 msgid "Upload"
-msgstr ""
+msgstr "上传"
 
 #: templates/eduhub/content_delete.html:11
 #: templates/eduhub/content_detail.html:11
 #: templates/eduhub/label_delete.html:11 templates/eduhub/label_detail.html:11
 msgid "Delete label"
-msgstr ""
+msgstr "删除标签"
 
 #: templates/eduhub/content_delete.html:18
 #: templates/eduhub/label_delete.html:46
 msgid "Are you sure you want to delete"
-msgstr ""
+msgstr "确定要删除"
 
 #: templates/eduhub/content_delete.html:19
 #: templates/eduhub/content_list.html:29 templates/eduhub/label_delete.html:49
 #: templates/eduhub/label_list.html:28
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: templates/eduhub/content_list.html:13
 msgid "Eduhub contents"
-msgstr ""
+msgstr "教资 内容"
 
 #: templates/eduhub/content_list.html:14 templates/eduhub/label_list.html:14
 msgid "Add"
@@ -505,7 +592,7 @@ msgstr "编辑"
 #: templates/eduhub/content_update.html:12
 #: templates/eduhub/label_update.html:12
 msgid "Update label"
-msgstr ""
+msgstr "更新标签"
 
 #: templates/eduhub/content_update.html:48
 msgid "Update"
@@ -517,7 +604,7 @@ msgstr "标题名"
 
 #: templates/eduhub/label_delete.html:38
 msgid "Creating date"
-msgstr " 创建时间"
+msgstr "创建时间"
 
 #: templates/eduhub/label_list.html:13
 msgid "Eduhub labels"
@@ -529,10 +616,13 @@ msgid ""
 "                        x-dove\n"
 "                    "
 msgstr ""
+"\n"
+"                        x-dove\n"
+"                    "
 
 #: templates/funhome/_footer.html:21
 msgid "Privacy"
-msgstr ""
+msgstr "隐私"
 
 #: templates/funhome/_footer_language.html:22
 msgid "language"
@@ -548,107 +638,115 @@ msgstr "选择主题"
 
 #: templates/funhome/_footer_theme.html:17
 msgid "cerulean"
-msgstr ""
+msgstr "天蓝色"
 
 #: templates/funhome/_footer_theme.html:18
 msgid "cyborg"
-msgstr ""
+msgstr "科技"
 
 #: templates/funhome/_footer_theme.html:19
 msgid "flatly"
-msgstr ""
+msgstr "干净利落"
 
 #: templates/funhome/_footer_theme.html:20
 msgid "litera"
-msgstr ""
+msgstr "文青"
 
 #: templates/funhome/_footer_theme.html:21
 msgid "lux"
-msgstr ""
+msgstr "照明"
 
 #: templates/funhome/_footer_theme.html:22
 msgid "minty"
-msgstr ""
+msgstr "薄荷"
 
 #: templates/funhome/_footer_theme.html:23
 msgid "sandstone"
-msgstr ""
+msgstr "岩石"
 
 #: templates/funhome/_footer_theme.html:24
 msgid "sketchy"
-msgstr ""
+msgstr "素描"
 
 #: templates/funhome/_footer_theme.html:25
 msgid "solar"
-msgstr ""
+msgstr "阳光"
 
 #: templates/funhome/_footer_theme.html:26
 msgid "superhero"
-msgstr ""
+msgstr "锐气"
 
 #: templates/funhome/_footer_theme.html:27
 msgid "yeti"
-msgstr ""
+msgstr "雪人"
 
 #: templates/funhome/_footer_theme.html:28
 msgid "cosmo"
-msgstr ""
+msgstr "都市"
 
 #: templates/funhome/_footer_theme.html:29
 msgid "darkly"
-msgstr ""
+msgstr "熬夜"
 
 #: templates/funhome/_footer_theme.html:30
 msgid "journal"
-msgstr ""
+msgstr "报纸"
 
 #: templates/funhome/_footer_theme.html:31
 msgid "lumen"
-msgstr ""
+msgstr "流光"
 
 #: templates/funhome/_footer_theme.html:32
 msgid "pulse"
-msgstr ""
+msgstr "电子"
 
 #: templates/funhome/_footer_theme.html:33
 msgid "simplex"
-msgstr ""
+msgstr "d调"
 
 #: templates/funhome/_footer_theme.html:34
 msgid "slate"
-msgstr ""
+msgstr "石片"
 
 #: templates/funhome/_footer_theme.html:35
 msgid "spacelab"
-msgstr ""
+msgstr "太空"
 
 #: templates/funhome/_footer_theme.html:36
 msgid "united"
-msgstr ""
+msgstr "一体"
 
 #: templates/funhome/_footer_theme.html:37
 msgid "materia"
-msgstr ""
+msgstr "材质"
 
 #: templates/funhome/_footer_theme.html:38
 msgid "default"
-msgstr ""
+msgstr "默认"
 
 #: templates/funhome/_navbar.html:23
 msgid "Home"
-msgstr ""
+msgstr "主页"
 
 #: templates/funhome/_navbar.html:26
 msgid "Eduhub"
-msgstr ""
+msgstr "资源"
+
+#: templates/funhome/_navbar.html:29
+msgid "Developer"
+msgstr "开发者"
+
+#: templates/funhome/_navbar.html:33
+msgid "Message"
+msgstr "消息"
 
 #: templates/funhome/_navbar.html:47
 msgid "Hello"
-msgstr ""
+msgstr "你好"
 
 #: templates/funhome/_navbar.html:48
 msgid "Log Out"
-msgstr ""
+msgstr "退出"
 
 #: templates/funhome/_navbar.html:50
 msgid "Log In"
@@ -656,22 +754,22 @@ msgstr "登录"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
-msgstr ""
+msgstr "OpenID 登录"
 
 #: templates/socialaccount/authentication_error.html:5
 #: templates/socialaccount/authentication_error.html:8
 msgid "Social Network Login Failure"
-msgstr ""
+msgstr "登录失败"
 
 #: templates/socialaccount/authentication_error.html:10
 msgid ""
 "An error occurred while attempting to login via your social network account."
-msgstr ""
+msgstr "登录账户时出现异常了."
 
 #: templates/socialaccount/connections.html:5
 #: templates/socialaccount/connections.html:8
 msgid "Account Connections"
-msgstr ""
+msgstr "账号连接"
 
 #: templates/socialaccount/connections.html:12
 msgid ""
@@ -680,20 +778,23 @@ msgid ""
 "party accounts:\n"
 "        "
 msgstr ""
+"\n"
+"            账号已登录 :\n"
+"        "
 
 #: templates/socialaccount/connections.html:48
 msgid ""
 "You currently have no social network accounts connected to this account."
-msgstr ""
+msgstr "没有关联账号哦."
 
 #: templates/socialaccount/connections.html:52
 msgid "Add a 3rd Party Account"
-msgstr ""
+msgstr "增加关联账号"
 
 #: templates/socialaccount/login_cancelled.html:5
 #: templates/socialaccount/login_cancelled.html:9
 msgid "Login Cancelled"
-msgstr ""
+msgstr "登录取消"
 
 #: templates/socialaccount/login_cancelled.html:14
 msgid ""
@@ -702,28 +803,33 @@ msgid ""
 "existing accounts. If this was a mistake, please proceed to \n"
 "        "
 msgstr ""
-
-#: templates/socialaccount/login_cancelled.html:18
-msgid "sign in"
-msgstr ""
+"\n"
+"            确定取消吗?  \n"
+"        "
 
 #: templates/socialaccount/messages/account_connected.txt:2
 msgid ""
 "\n"
 "    The social account has been connected.\n"
 msgstr ""
+"\n"
+"关联账号被连接.\n"
 
 #: templates/socialaccount/messages/account_connected_other.txt:2
 msgid ""
 "\n"
 "    The social account is already connected to a different account.\n"
 msgstr ""
+"\n"
+"亲! 这个第三方账号已被关联.\n"
 
 #: templates/socialaccount/messages/account_disconnected.txt:2
 msgid ""
 "\n"
 "    The social account has been disconnected.\n"
 msgstr ""
+"\n"
+"第三方账号已取消连接.\n"
 
 #: templates/socialaccount/signup.html:16
 #, python-format
@@ -733,3 +839,21 @@ msgid ""
 "      %(site_name)s. As a final step, please complete the following form:\n"
 "    "
 msgstr ""
+"\n"
+"      你将使用 %(provider_name)s 账号登录\n"
+"      %(site_name)s. :\n"
+"    "
+
+#~ msgid ""
+#~ "\n"
+#~ "      Already have an account? Then please \n"
+#~ "      <a href=\"%(login_url)s\">sign in</a>.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "      已有账号?  \n"
+#~ "      <a href=\"%(login_url)s\">登录</a>.\n"
+#~ "    "
+
+#~ msgid "Thank you from"
+#~ msgstr "谢谢亲"

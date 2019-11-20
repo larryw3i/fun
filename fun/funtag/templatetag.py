@@ -3,6 +3,7 @@ import os
 from urllib.parse import unquote
 
 from django import template
+from django.utils.translation import gettext_lazy as _
 
 from fun import settings
 
@@ -25,4 +26,4 @@ def get_current_theme_url(context):
 
 @register.simple_tag(takes_context=True)
 def get_current_theme_name(context):
-    return context['request'].COOKIES.get('theme', 'default') 
+    return _(context['request'].COOKIES.get('theme', 'default') )

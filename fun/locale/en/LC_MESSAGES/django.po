@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 12:11+0800\n"
+"POT-Creation-Date: 2019-11-20 16:51+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,6 +70,18 @@ msgstr ""
 msgid "The length of pdf file should be less than"
 msgstr ""
 
+#: fun/settings.py:194
+msgid "English"
+msgstr ""
+
+#: fun/settings.py:195
+msgid "中文简体"
+msgstr ""
+
+#: fun/settings.py:196
+msgid "中文繁體"
+msgstr ""
+
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:8
 msgid "Account Inactive"
@@ -79,70 +91,77 @@ msgstr ""
 msgid "This account is inactive."
 msgstr ""
 
-#: templates/account/email.html:5
+#: templates/account/email.html:6
 msgid "Account"
 msgstr ""
 
-#: templates/account/email.html:9
+#: templates/account/email.html:11
 msgid "E-mail Addresses"
 msgstr ""
 
-#: templates/account/email.html:11
+#: templates/account/email.html:13
 msgid "The following e-mail addresses are associated with your account:"
 msgstr ""
 
-#: templates/account/email.html:25
+#: templates/account/email.html:27
 msgid "Verified"
 msgstr ""
 
-#: templates/account/email.html:27
+#: templates/account/email.html:29
 msgid "Unverified"
 msgstr ""
 
-#: templates/account/email.html:31
+#: templates/account/email.html:33
 msgid "Primary"
 msgstr ""
 
-#: templates/account/email.html:40
+#: templates/account/email.html:42
 msgid "Make Primary"
 msgstr ""
 
-#: templates/account/email.html:41
+#: templates/account/email.html:43
 msgid "Re-send Verification"
 msgstr ""
 
-#: templates/account/email.html:42 templates/socialaccount/connections.html:39
+#: templates/account/email.html:44 templates/socialaccount/connections.html:39
 msgid "Remove"
 msgstr ""
 
-#: templates/account/email.html:50
+#: templates/account/email.html:52
 msgid "Warning:"
 msgstr ""
 
-#: templates/account/email.html:51
+#: templates/account/email.html:53
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 
-#: templates/account/email.html:57
+#: templates/account/email.html:59
 msgid "Add E-mail Address"
 msgstr ""
 
-#: templates/account/email.html:62
+#: templates/account/email.html:64
 msgid "Add E-mail"
 msgstr ""
 
-#: templates/account/email.html:71
+#: templates/account/email.html:73
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
-#: templates/account/email/email_confirmation_message.html:12
+#: templates/account/email/email_confirmation_message.html:11
+msgid "Hello from x-dove"
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.html:17
 msgid "CONFIRM EMAIL"
 msgstr ""
 
-#: templates/account/email/email_confirmation_message.html:16
-msgid "Thank you from"
+#: templates/account/email/email_confirmation_message.html:22
+msgid ""
+" \n"
+"            Thank you from x-dove!\n"
+"        "
 msgstr ""
 
 #: templates/account/email/email_confirmation_subject.html:3
@@ -202,7 +221,7 @@ msgstr ""
 msgid "This e-mail confirmation link expired or is invalid. Please"
 msgstr ""
 
-#: templates/account/email_confirm.html:35
+#: templates/account/email_confirm.html:36
 msgid "issue a new e-mail confirmation request"
 msgstr ""
 
@@ -213,8 +232,8 @@ msgstr ""
 
 #: templates/account/login.html:67
 msgid ""
-"\n"
-"      If you have not created an account yet, then please\n"
+" \n"
+"      If you have not created an account yet, then please \n"
 "    "
 msgstr ""
 
@@ -310,25 +329,29 @@ msgstr ""
 msgid "Change Password"
 msgstr ""
 
-#: templates/account/password_reset.html:6
-#: templates/account/password_reset.html:10
+#: templates/account/password_reset.html:7
+#: templates/account/password_reset.html:12
 #: templates/account/password_reset_done.html:6
 #: templates/account/password_reset_done.html:9
 msgid "Password Reset"
 msgstr ""
 
-#: templates/account/password_reset.html:15
+#: templates/account/password_reset.html:18
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
 
-#: templates/account/password_reset.html:20
+#: templates/account/password_reset.html:23
 msgid "Reset My Password"
 msgstr ""
 
-#: templates/account/password_reset.html:23
-msgid "Please contact us if you have any trouble resetting your password."
+#: templates/account/password_reset.html:27
+msgid ""
+"\n"
+"            Please contact us if you have any trouble resetting your "
+"password.\n"
+"        "
 msgstr ""
 
 #: templates/account/password_reset_done.html:16
@@ -380,12 +403,15 @@ msgid "Sign Up"
 msgstr ""
 
 #: templates/account/signup.html:14
-#, python-format
 msgid ""
 "\n"
 "      Already have an account? Then please \n"
-"      <a href=\"%(login_url)s\">sign in</a>.\n"
 "    "
+msgstr ""
+
+#: templates/account/signup.html:17
+#: templates/socialaccount/login_cancelled.html:18
+msgid "sign in"
 msgstr ""
 
 #: templates/account/signup_closed.html:5
@@ -638,6 +664,14 @@ msgstr ""
 msgid "Eduhub"
 msgstr ""
 
+#: templates/funhome/_navbar.html:29
+msgid "Developer"
+msgstr ""
+
+#: templates/funhome/_navbar.html:33
+msgid "Message"
+msgstr ""
+
 #: templates/funhome/_navbar.html:47
 msgid "Hello"
 msgstr ""
@@ -697,10 +731,6 @@ msgid ""
 "            You decided to cancel logging in to our site using one of your "
 "existing accounts. If this was a mistake, please proceed to \n"
 "        "
-msgstr ""
-
-#: templates/socialaccount/login_cancelled.html:18
-msgid "sign in"
 msgstr ""
 
 #: templates/socialaccount/messages/account_connected.txt:2
