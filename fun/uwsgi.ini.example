@@ -6,3 +6,5 @@ module          = fun.wsgi
 master          = true
 processes       = 4
 vacuum          = true
+stats           =%(chdir)/uwsgi/uwsgi.status
+pidfile         =%(chdir)/uwsgi/uwsgi.pid
