@@ -27,7 +27,7 @@
                     {% for homesticker in homestickers|slice:':3' %}
                         <div class="carousel-item {% if forloop.first %} active {% endif %}">
                             <img src="{% url 'funfile:get_file' file_id=homesticker.cover.name %}" class="d-block w-100" alt="">
-                            <div class="carousel-caption ">
+                            <div class="carousel-caption " style="background-color: rgba(113, 25, 255, 0.493);">
                                 <h5>{{ homesticker.title }}</h5>
                                 <p>{{  homesticker.subtitle }}</p>
                             </div>
