@@ -66,7 +66,7 @@
         }
         preview_for.show();
         preview_for.attr( {
-            'data':'/static/libs/pdfjs-2.2.228-dist/web/viewer.html?file='+ URL.createObjectURL( event.target.files[0] ) 
+            'data':'/static/libs/pdfjs-2.2.228-dist/web/viewer.min.html?file='+ URL.createObjectURL( event.target.files[0] ) 
         });
  
     }

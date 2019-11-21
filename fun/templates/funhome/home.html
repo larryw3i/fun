@@ -22,34 +22,18 @@
                     <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
                 {% endif %}
             </ol>
-            <div class="carousel-inner home-carousel-inner">
-                {% if homestickers %}
+            <div class="carousel-inner home-carousel-inner"> 
 
-                    {% for homesticker in homestickers|slice:':3' %}
-                        <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                            <img src="{% url 'funfile:get_file' file_id=homesticker.cover.name %}" class="d-block w-100" alt="">
-                            <div class="carousel-caption homesticker-carousel-caption" >
-                                <h5>{{ homesticker.title }}</h5>
-                                <p>{{  homesticker.subtitle }}</p>
-                            </div>
-                        </div>
-                    {% endfor %}
-
-                {% else %}
-                        
-                    <div class="carousel-item active">
-                        <img src="{% static '/images/default_carousel_image.webp'' %}" class="d-block w-100" alt="">
-                        <div class="carousel-caption homesticker-carousel-caption">
-                            <h5>{% trans 'About X-DOVE' %}</h5>
-                            <p>
-                                {% blocktrans %}
-                                    Larry's sharing
-                                {% endblocktrans %}
-                            </p>
+                {% for homesticker in homestickers|slice:':3' %}
+                    <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                        <img src="{% url 'funfile:get_file' file_id=homesticker.cover.name %}" class="d-block w-100" alt="">
+                        <div class="carousel-caption homesticker-carousel-caption" >
+                            <h5>{{ homesticker.title }}</h5>
+                            <p>  {{  homesticker.subtitle }}  </p> 
                         </div>
                     </div>
-
-                {% endif %}
+                {% endfor %}
+                        
             </div>
             <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

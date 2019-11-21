@@ -30,7 +30,7 @@
  
             {% else %}     
 
-                <object class="preview" data="{% static '/libs/pdfjs-2.2.228-dist/web/viewer.html' %}?file={% url 'funfile:get_file' file_id=content.content_file.name %}" 
+                <object class="preview" data="{% static '/libs/pdfjs-2.2.228-dist/web/viewer.min.html' %}?file={% url 'funfile:get_file' file_id=content.content_file.name %}" 
                         preview-for='#id_content_file' type="application/pdf" width="100%" height="567px" ></object>
                         
                 <video  preview-for='#id_content_file' width="100%" height="auto" style="display: none;" controls  ></video>
