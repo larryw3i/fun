@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 16:51+0800\n"
-"PO-Revision-Date: 2019-11-20 16:53+0800\n"
+"POT-Creation-Date: 2019-11-21 23:40+0800\n"
+"PO-Revision-Date: 2019-11-21 23:43+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -41,7 +41,7 @@ msgstr "标签"
 msgid "Content file"
 msgstr "内容文件"
 
-#: eduhub/modelforms.py:43
+#: eduhub/modelforms.py:43 funhome/modelforms.py:26
 msgid "content file, pdf and video file is allowed only"
 msgstr "内容文件只能为pdf或视频哦"
 
@@ -77,9 +77,33 @@ msgstr "English"
 msgid "中文简体"
 msgstr "中文简体"
 
-#: fun/settings.py:196
-msgid "中文繁體"
-msgstr "中文繁體"
+#: funhome/modelforms.py:19
+msgid "Sticker title"
+msgstr "贴纸标题"
+
+#: funhome/modelforms.py:20
+msgid "Sticker Cover"
+msgstr "贴纸背景"
+
+#: funhome/modelforms.py:21
+msgid "Sticker content file"
+msgstr "贴纸文件"
+
+#: funhome/modelforms.py:22
+msgid "Sticker Comment"
+msgstr "备注"
+
+#: funhome/views.py:88
+msgid "X-DOVE"
+msgstr "X-DOVE"
+
+#: funhome/views.py:89
+msgid "Larry`s sharing"
+msgstr "Larry 的分享"
+
+#: funhome/views.py:94
+msgid "larry"
+msgstr "Larry"
 
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:8
@@ -752,6 +776,19 @@ msgstr "退出"
 msgid "Log In"
 msgstr "登录"
 
+#: templates/funhome/home.html:64
+msgid "View more"
+msgstr "更多"
+
+#: templates/funhome/homesticker_detail.html:11
+msgid "Sticker detail"
+msgstr "贴纸详细"
+
+#: templates/funhome/homesticker_list.html:11
+#: templates/funhome/homesticker_list.html:16
+msgid "Sticker list"
+msgstr "所有贴纸"
+
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
 msgstr "OpenID 登录"
@@ -843,6 +880,9 @@ msgstr ""
 "      你将使用 %(provider_name)s 账号登录\n"
 "      %(site_name)s. :\n"
 "    "
+
+#~ msgid "中文繁體"
+#~ msgstr "中文繁體"
 
 #~ msgid ""
 #~ "\n"

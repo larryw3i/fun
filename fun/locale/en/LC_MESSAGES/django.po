@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 16:51+0800\n"
+"POT-Creation-Date: 2019-11-21 23:40+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Content file"
 msgstr ""
 
-#: eduhub/modelforms.py:43
+#: eduhub/modelforms.py:43 funhome/modelforms.py:26
 msgid "content file, pdf and video file is allowed only"
 msgstr ""
 
@@ -78,8 +78,32 @@ msgstr ""
 msgid "中文简体"
 msgstr ""
 
-#: fun/settings.py:196
-msgid "中文繁體"
+#: funhome/modelforms.py:19
+msgid "Sticker title"
+msgstr ""
+
+#: funhome/modelforms.py:20
+msgid "Sticker Cover"
+msgstr ""
+
+#: funhome/modelforms.py:21
+msgid "Sticker content file"
+msgstr ""
+
+#: funhome/modelforms.py:22
+msgid "Sticker Comment"
+msgstr ""
+
+#: funhome/views.py:88
+msgid "X-DOVE"
+msgstr ""
+
+#: funhome/views.py:89
+msgid "Larry`s sharing"
+msgstr ""
+
+#: funhome/views.py:94
+msgid "larry"
 msgstr ""
 
 #: templates/account/account_inactive.html:5
@@ -682,6 +706,19 @@ msgstr ""
 
 #: templates/funhome/_navbar.html:50
 msgid "Log In"
+msgstr ""
+
+#: templates/funhome/home.html:64
+msgid "View more"
+msgstr ""
+
+#: templates/funhome/homesticker_detail.html:11
+msgid "Sticker detail"
+msgstr ""
+
+#: templates/funhome/homesticker_list.html:11
+#: templates/funhome/homesticker_list.html:16
+msgid "Sticker list"
 msgstr ""
 
 #: templates/openid/login.html:10
