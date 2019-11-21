@@ -38,7 +38,16 @@ class HomestickerListView( ListView ):
     model = Homesticker
     form_class = HomestickerModelForm
     template_name = homesticker_list_template
+
+    ordering = ['-promulgating_date', ]
+
+    paginate_by = 8
+    paginate_orphans = 1
     context_object_name = 'homestickers'
+
+    def get_queryset(self):
+        queryset = Homesticker.objects.filter( is_hidden = False ).order_by('-promulgating_date')
+        return queryset
 
 
 class HomestickerDetailView( DetailView ):  
@@ -58,7 +67,7 @@ class HomeView( TemplateView ):
 
     def get_context_data(self, **kwargs):
         context_data =  super().get_context_data(**kwargs)
-        homestickers = Homesticker.objects.all().order_by('-promulgating_date')[:8]
+        homestickers = Homesticker.objects.filter( is_hidden = False ).order_by('-promulgating_date')[:8]
         if homestickers.count() < 1:
             homestickers = [  get_default_homesticker()  ]
             context_data['is_homestickers_null']  = True 

@@ -222,7 +222,7 @@ STATICFILES_FINDERS = [
 
 # MEDIA_FILE
 
-MEDIA_URL = 'funfile/get_file/'
+MEDIA_URL = '/funfile/get_file/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile','files') 
 
 # END MEDIA_FILE

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 23:40+0800\n"
-"PO-Revision-Date: 2019-11-21 23:43+0800\n"
+"POT-Creation-Date: 2019-11-22 01:20+0800\n"
+"PO-Revision-Date: 2019-11-22 01:36+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -17,7 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.4\n"
 
-#: eduhub/modelforms.py:16
+#: eduhub/apps.py:9 templates/funhome/_navbar.html:26
+msgid "Eduhub"
+msgstr "资源"
+
+#: eduhub/modelforms.py:16 eduhub/models.py:25
 msgid "Label name"
 msgstr "标签名"
 
@@ -37,13 +41,69 @@ msgstr "标题名"
 msgid "Label"
 msgstr "标签"
 
-#: eduhub/modelforms.py:38
+#: eduhub/modelforms.py:38 eduhub/models.py:42
 msgid "Content file"
 msgstr "内容文件"
 
 #: eduhub/modelforms.py:43 funhome/modelforms.py:26
 msgid "content file, pdf and video file is allowed only"
 msgstr "内容文件只能为pdf或视频哦"
+
+#: eduhub/models.py:21
+msgid "Eduhub label"
+msgstr "教资标签"
+
+#: eduhub/models.py:22
+msgid "Eduhub  labels"
+msgstr "教资标签"
+
+#: eduhub/models.py:26
+msgid "Label comment"
+msgstr "备注"
+
+#: eduhub/models.py:27
+msgid "Label cover"
+msgstr "封面"
+
+#: eduhub/models.py:28
+msgid "Label creating date"
+msgstr "创建时间"
+
+#: eduhub/models.py:29
+msgid "Label author"
+msgstr "作者"
+
+#: eduhub/models.py:30
+msgid "Is label legal"
+msgstr "合法"
+
+#: eduhub/models.py:36
+msgid "Eduhub content"
+msgstr "教资 内容"
+
+#: eduhub/models.py:37 templates/eduhub/content_list.html:13
+msgid "Eduhub contents"
+msgstr "内容"
+
+#: eduhub/models.py:40
+msgid "Content label"
+msgstr "标签"
+
+#: eduhub/models.py:41
+msgid "Content title"
+msgstr "标题"
+
+#: eduhub/models.py:43
+msgid "Content uploading date"
+msgstr "上传时间"
+
+#: eduhub/models.py:44
+msgid "Content comment"
+msgstr "备注"
+
+#: eduhub/models.py:45
+msgid "Is content legal"
+msgstr "合法"
 
 #: eduhub/views.py:52
 msgid "Cover image is required"
@@ -77,7 +137,11 @@ msgstr "English"
 msgid "中文简体"
 msgstr "中文简体"
 
-#: funhome/modelforms.py:19
+#: funhome/apps.py:8
+msgid "Fun home"
+msgstr "主页"
+
+#: funhome/modelforms.py:19 funhome/models.py:20
 msgid "Sticker title"
 msgstr "贴纸标题"
 
@@ -85,7 +149,7 @@ msgstr "贴纸标题"
 msgid "Sticker Cover"
 msgstr "贴纸背景"
 
-#: funhome/modelforms.py:21
+#: funhome/modelforms.py:21 funhome/models.py:24
 msgid "Sticker content file"
 msgstr "贴纸文件"
 
@@ -93,17 +157,45 @@ msgstr "贴纸文件"
 msgid "Sticker Comment"
 msgstr "备注"
 
-#: funhome/views.py:88
+#: funhome/models.py:16 funhome/models.py:17
+msgid "Home sticker"
+msgstr "主页贴纸"
+
+#: funhome/models.py:21
+msgid "Sticker subtitle"
+msgstr "贴纸子标题"
+
+#: funhome/models.py:22
+msgid "Sticker cover"
+msgstr "贴纸背景"
+
+#: funhome/models.py:23
+msgid "Sticker promulgator"
+msgstr "贴纸的管理员"
+
+#: funhome/models.py:25
+msgid "Sticker promulgating date"
+msgstr "贴纸时间"
+
+#: funhome/models.py:26
+msgid "Sticker comment"
+msgstr "备注"
+
+#: funhome/models.py:27
+msgid "Hidden"
+msgstr "隐藏(不贴)"
+
+#: funhome/views.py:97
 msgid "X-DOVE"
 msgstr "X-DOVE"
 
-#: funhome/views.py:89
+#: funhome/views.py:98
 msgid "Larry`s sharing"
 msgstr "Larry 的分享"
 
-#: funhome/views.py:94
+#: funhome/views.py:103
 msgid "larry"
-msgstr "Larry"
+msgstr "larry"
 
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:8
@@ -597,10 +689,6 @@ msgstr "确定要删除"
 msgid "Delete"
 msgstr "删除"
 
-#: templates/eduhub/content_list.html:13
-msgid "Eduhub contents"
-msgstr "教资 内容"
-
 #: templates/eduhub/content_list.html:14 templates/eduhub/label_list.html:14
 msgid "Add"
 msgstr "添加"
@@ -752,10 +840,6 @@ msgstr "默认"
 msgid "Home"
 msgstr "主页"
 
-#: templates/funhome/_navbar.html:26
-msgid "Eduhub"
-msgstr "资源"
-
 #: templates/funhome/_navbar.html:29
 msgid "Developer"
 msgstr "开发者"
@@ -788,6 +872,26 @@ msgstr "贴纸详细"
 #: templates/funhome/homesticker_list.html:16
 msgid "Sticker list"
 msgstr "所有贴纸"
+
+#: templates/funhome/homesticker_list.html:44
+msgid "first page"
+msgstr "第一页"
+
+#: templates/funhome/homesticker_list.html:45
+msgid "previous page"
+msgstr "上一页"
+
+#: templates/funhome/homesticker_list.html:49
+msgid "Page"
+msgstr "页"
+
+#: templates/funhome/homesticker_list.html:53
+msgid "next page"
+msgstr "下一页"
+
+#: templates/funhome/homesticker_list.html:54
+msgid "last page"
+msgstr "最后页"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
@@ -880,6 +984,14 @@ msgstr ""
 "      你将使用 %(provider_name)s 账号登录\n"
 "      %(site_name)s. :\n"
 "    "
+
+#~ msgid "Home content"
+#~ msgstr "内容"
+
+#, fuzzy
+#~| msgid "Eduhub contents"
+#~ msgid "Home contents"
+#~ msgstr "教资 内容"
 
 #~ msgid "中文繁體"
 #~ msgstr "中文繁體"

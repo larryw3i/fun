@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 23:40+0800\n"
+"POT-Creation-Date: 2019-11-22 01:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: eduhub/modelforms.py:16
+#: eduhub/apps.py:9 templates/funhome/_navbar.html:26
+msgid "Eduhub"
+msgstr ""
+
+#: eduhub/modelforms.py:16 eduhub/models.py:25
 msgid "Label name"
 msgstr ""
 
@@ -38,12 +42,68 @@ msgstr ""
 msgid "Label"
 msgstr ""
 
-#: eduhub/modelforms.py:38
+#: eduhub/modelforms.py:38 eduhub/models.py:42
 msgid "Content file"
 msgstr ""
 
 #: eduhub/modelforms.py:43 funhome/modelforms.py:26
 msgid "content file, pdf and video file is allowed only"
+msgstr ""
+
+#: eduhub/models.py:21
+msgid "Eduhub label"
+msgstr ""
+
+#: eduhub/models.py:22
+msgid "Eduhub  labels"
+msgstr ""
+
+#: eduhub/models.py:26
+msgid "Label comment"
+msgstr ""
+
+#: eduhub/models.py:27
+msgid "Label cover"
+msgstr ""
+
+#: eduhub/models.py:28
+msgid "Label creating date"
+msgstr ""
+
+#: eduhub/models.py:29
+msgid "Label author"
+msgstr ""
+
+#: eduhub/models.py:30
+msgid "Is label legal"
+msgstr ""
+
+#: eduhub/models.py:36
+msgid "Eduhub content"
+msgstr ""
+
+#: eduhub/models.py:37 templates/eduhub/content_list.html:13
+msgid "Eduhub contents"
+msgstr ""
+
+#: eduhub/models.py:40
+msgid "Content label"
+msgstr ""
+
+#: eduhub/models.py:41
+msgid "Content title"
+msgstr ""
+
+#: eduhub/models.py:43
+msgid "Content uploading date"
+msgstr ""
+
+#: eduhub/models.py:44
+msgid "Content comment"
+msgstr ""
+
+#: eduhub/models.py:45
+msgid "Is content legal"
 msgstr ""
 
 #: eduhub/views.py:52
@@ -78,7 +138,11 @@ msgstr ""
 msgid "中文简体"
 msgstr ""
 
-#: funhome/modelforms.py:19
+#: funhome/apps.py:8
+msgid "Fun home"
+msgstr ""
+
+#: funhome/modelforms.py:19 funhome/models.py:20
 msgid "Sticker title"
 msgstr ""
 
@@ -86,7 +150,7 @@ msgstr ""
 msgid "Sticker Cover"
 msgstr ""
 
-#: funhome/modelforms.py:21
+#: funhome/modelforms.py:21 funhome/models.py:24
 msgid "Sticker content file"
 msgstr ""
 
@@ -94,15 +158,43 @@ msgstr ""
 msgid "Sticker Comment"
 msgstr ""
 
-#: funhome/views.py:88
+#: funhome/models.py:16 funhome/models.py:17
+msgid "Home sticker"
+msgstr ""
+
+#: funhome/models.py:21
+msgid "Sticker subtitle"
+msgstr ""
+
+#: funhome/models.py:22
+msgid "Sticker cover"
+msgstr ""
+
+#: funhome/models.py:23
+msgid "Sticker promulgator"
+msgstr ""
+
+#: funhome/models.py:25
+msgid "Sticker promulgating date"
+msgstr ""
+
+#: funhome/models.py:26
+msgid "Sticker comment"
+msgstr ""
+
+#: funhome/models.py:27
+msgid "Hidden"
+msgstr ""
+
+#: funhome/views.py:97
 msgid "X-DOVE"
 msgstr ""
 
-#: funhome/views.py:89
+#: funhome/views.py:98
 msgid "Larry`s sharing"
 msgstr ""
 
-#: funhome/views.py:94
+#: funhome/views.py:103
 msgid "larry"
 msgstr ""
 
@@ -532,10 +624,6 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: templates/eduhub/content_list.html:13
-msgid "Eduhub contents"
-msgstr ""
-
 #: templates/eduhub/content_list.html:14 templates/eduhub/label_list.html:14
 msgid "Add"
 msgstr ""
@@ -684,10 +772,6 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/funhome/_navbar.html:26
-msgid "Eduhub"
-msgstr ""
-
 #: templates/funhome/_navbar.html:29
 msgid "Developer"
 msgstr ""
@@ -719,6 +803,26 @@ msgstr ""
 #: templates/funhome/homesticker_list.html:11
 #: templates/funhome/homesticker_list.html:16
 msgid "Sticker list"
+msgstr ""
+
+#: templates/funhome/homesticker_list.html:44
+msgid "first page"
+msgstr ""
+
+#: templates/funhome/homesticker_list.html:45
+msgid "previous page"
+msgstr ""
+
+#: templates/funhome/homesticker_list.html:49
+msgid "Page"
+msgstr ""
+
+#: templates/funhome/homesticker_list.html:53
+msgid "next page"
+msgstr ""
+
+#: templates/funhome/homesticker_list.html:54
+msgid "last page"
 msgstr ""
 
 #: templates/openid/login.html:10
