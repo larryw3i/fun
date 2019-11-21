@@ -76,3 +76,13 @@ img.preview
   border-radius: 5px;
  }
  
+ .homesticker-list-card
+ {
+   font-size: small;
+ }
+ .homesticker-list-card-text
+ {
+   background-color: #e95afc9f;
+   border-radius: 6px;
+   padding: 2px;
+ }

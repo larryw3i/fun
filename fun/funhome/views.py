@@ -33,6 +33,14 @@ homesticker_list_template   = f'{FunhomeConfig.name}/{homesticker_name}{funvalue
 
 
 
+
+class HomestickerListView( ListView ):  
+    model = Homesticker
+    form_class = HomestickerModelForm
+    template_name = homesticker_list_template
+    context_object_name = 'homestickers'
+
+
 class HomestickerDetailView( DetailView ):  
     model = Homesticker
     form_class = HomestickerModelForm
