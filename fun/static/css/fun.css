@@ -75,14 +75,11 @@ img.preview
   background-color: rgba(113, 25, 255, 0.37);
   border-radius: 5px;
  }
- 
- .homesticker-list-card
- {
-   font-size: small;
- }
+  
  .homesticker-list-card-text
  {
    background-color: #e95afc9f;
    border-radius: 6px;
    padding: 2px;
- }
+   font-size: small;
+}
