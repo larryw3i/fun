@@ -9,7 +9,7 @@ html
 body 
 {
   /* Margin bottom by footer height */
-  padding-bottom: 68px; 
+  padding-bottom: 88px; 
 } 
 
 .body-content
@@ -60,4 +60,19 @@ img.preview
   animation: common_hover_animation 0.2s 1 forwards;
 }
 
+ .home-carousel-inner
+ {
+   border-radius: 6px;
+ }
+
+ .homesticker-card
+ {
+   cursor: pointer;
+ }
+
+ .homesticker-carousel-caption
+ {
+  background-color: rgba(113, 25, 255, 0.37);
+  border-radius: 5px;
+ }
  

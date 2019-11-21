@@ -22,22 +22,24 @@
                     <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
                 {% endif %}
             </ol>
-            <div class="carousel-inner">
+            <div class="carousel-inner home-carousel-inner">
                 {% if homestickers %}
+
                     {% for homesticker in homestickers|slice:':3' %}
                         <div class="carousel-item {% if forloop.first %} active {% endif %}">
                             <img src="{% url 'funfile:get_file' file_id=homesticker.cover.name %}" class="d-block w-100" alt="">
-                            <div class="carousel-caption " style="background-color: rgba(113, 25, 255, 0.493);">
+                            <div class="carousel-caption homesticker-carousel-caption" >
                                 <h5>{{ homesticker.title }}</h5>
                                 <p>{{  homesticker.subtitle }}</p>
                             </div>
                         </div>
                     {% endfor %}
+
                 {% else %}
                         
                     <div class="carousel-item active">
                         <img src="{% static '/images/default_carousel_image.webp'' %}" class="d-block w-100" alt="">
-                        <div class="carousel-caption ">
+                        <div class="carousel-caption homesticker-carousel-caption">
                             <h5>{% trans 'About X-DOVE' %}</h5>
                             <p>
                                 {% blocktrans %}
@@ -46,6 +48,7 @@
                             </p>
                         </div>
                     </div>
+
                 {% endif %}
             </div>
             <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
@@ -61,13 +64,15 @@
     <div class="row mt-2">
 
         {% for homesticker in homestickers|slice:'3:' %}
-            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-3 col-6">
-                <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">{{ homesticker.title }}</h5>
-                    <p class="card-text">{{ homesticker.subtitle }}</p>
-                    <a href="#" class="btn btn-primary" hidden>{% trans 'view' %}</a>
-                </div>
+            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-3 col-6 mt-2">
+                <div class="card homesticker-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ homesticker.title }}</h5>
+                        <p class="card-text"> 
+                            {{ homesticker.subtitle }} 
+                            <span class="border-right small float-right">{{ homesticker.promulgating_date }}</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         {% endfor %}
