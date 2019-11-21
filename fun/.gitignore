@@ -12,6 +12,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
+!static/media/
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -134,7 +135,8 @@ static/libs/jquery-validation-1.19.1/
 ## https://github.com/js-cookie/js-cookie
 static/libs/js-cookie/
 ## https://github.com/mozilla/pdf.js
-# static/libs/pdfjs-2.2.228-dist/
+## You should minify it maybe
+static/libs/pdfjs-2.2.228-dist/
 
 # end static files
 

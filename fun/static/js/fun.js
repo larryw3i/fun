@@ -29,7 +29,11 @@
         window.location = event.currentTarget.dataset.url;
     });
 
-    $(document).on('click', `.eduhub-content-card` , (event) =>{
+    $(document).on('click', `.eduhub-label-card` , (event) =>{
+        window.location = event.currentTarget.dataset.url;
+    });
+ 
+    $(document).on('click', `.click-to-url` , (event) =>{
         window.location = event.currentTarget.dataset.url;
     });
 
