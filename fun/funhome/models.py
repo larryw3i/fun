@@ -23,5 +23,5 @@ class Homesticker(models.Model):
     promulgator = models.ForeignKey(  to = User, on_delete=models.CASCADE, verbose_name = _('Sticker promulgator') )    
     content_file = models.FileField( upload_to = upload_to , verbose_name = _('Sticker content file') )
     promulgating_date = models.DateTimeField(   auto_now_add = True,  verbose_name = _('Sticker promulgating date'))
-    comment = models.CharField( max_length = 64 , verbose_name = _('Sticker comment') )
+    comment = models.TextField( max_length = 64 , verbose_name = _('Sticker comment') )
     is_hidden = models.BooleanField( default= False , verbose_name = _('Hidden')+" ?" )
