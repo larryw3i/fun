@@ -6,6 +6,8 @@
 
 {% load i18n %}
 {% load l10n %}
+{% load tz %}
+
 
 {% block title %}
     {% trans 'Sticker list'  %}
@@ -27,7 +29,7 @@
 
                             <p class="card-title text-center">{{ homesticker.title }}</p>
                             <p class="card-subtitle text-center d-none d-md-block">{{ homesticker.subtitle }}</p>
-                            <p class="card-text text-right">{{ homesticker.promulgating_date }}</p>
+                            <p class="card-text text-right">{{ homesticker.promulgating_date|localtime }}</p>
                         </div>
                     </div>
                 </div>

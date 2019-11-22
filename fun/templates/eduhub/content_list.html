@@ -8,6 +8,8 @@
 
 {% load i18n %}
 {% load l10n %}
+{% load tz %}
+
 
 {% block content %} 
     <h2 class="text-center">{% trans 'Eduhub contents' %}</h2>
@@ -28,7 +30,7 @@
                             <a href="{% url 'eduhub:content_update'  pk=content.id %}" class="card-link small">{% trans 'Edit' %}</a>
                             <a href="{% url 'eduhub:content_delete'  pk=content.id %}" class="card-link small">{% trans 'Delete' %}</a>
                         {% endif %}
-                        <p class="text-right border-left" style="font-size: xx-small;">{{ content.uploading_date }}</p>
+                        <p class="text-right border-left" style="font-size: xx-small;">{{ content.uploading_date|localtime }}</p>
 
                         </div>
                     </div>
@@ -39,45 +41,25 @@
     </div>
     
     
-    {% if is_paginated %}
-        <nav aria-label="Page navigation ">
-            <ul class="pagination  justify-content-end">
+    {% if page_obj %}
+        <div class="pagination justify-content-center  align-items-center mt-5" style="font-size: large;">
+            <span class="step-links">
                 {% if page_obj.has_previous %}
-                    {% if page_obj.number >= max_left_item_count|add:max_left_item_count %}
-                        <li  class="page-item"><a class="page-link" href="?page=1">&laquo;&laquo;</a></li>
-                    {% endif %}
-                    <li  class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                    <a href="?page=1" class="btn btn-primary">&laquo; {% trans 'first page' %}</a>
+                    <a href="?page={{ page_obj.previous_page_number }}"  class="btn btn-primary">{% trans 'previous page' %}</a>
                 {% endif %}
 
-                {% for i in page_obj.paginator.page_range %}
-                    {% if page_obj.number == i %}
-                        <li class="page-item active">
-                            <span  class="page-link" >{{ i }} <span  class="sr-only page-link">(current)</span></span>
-                        </li>
-                    {%  elif  page_obj.number|add:max_left_item_count >= i and  i|add:max_left_item_count  >= page_obj.number  %}
-                        <li  class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
-                    {% endif %}
-                {% endfor %}
+                <span class="current">
+                    {{ page_obj.number }}/{{ page_obj.paginator.num_pages }} {% trans 'Page' %} 
+                </span>
 
                 {% if page_obj.has_next %}
-                    <li  class=" page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
-                    {% if  page_obj.paginator.num_pages >  page_obj.number|add:max_left_item_count  %}
-                        <li  class=" page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">&raquo;&raquo;</a></li>
-                    {% endif %}
+                    <a href="?page={{ page_obj.next_page_number }}"  class="btn btn-primary">{% trans 'next page' %}</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}"  class="btn btn-primary">{% trans 'last page' %} &raquo;</a>
                 {% endif %}
-
-                <li class="page-item disabled">
-                    <span class="page-link">|</span>
-                </li>
-                <li class="page-item disabled">
-                    <span class="page-link">
-                        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-                    </span>
-                </li>
-
-            </ul>
-        </nav>
-    {% endif %} 
+            </span>
+        </div>
+    {% endif %}
 
 
 {% endblock %}

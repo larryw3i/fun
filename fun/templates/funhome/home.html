@@ -3,7 +3,7 @@
 
 {% load i18n %}
 {% load l10n %}
-
+{% load tz %}
 
 {% load static %}
 
@@ -53,7 +53,7 @@
                         <h5 class="card-title">{{ homesticker.title }}</h5>
                         <p class="card-text"> 
                             {{ homesticker.subtitle }} 
-                            <span class="border-right small float-right">{{ homesticker.promulgating_date }}</span>
+                            <span class="border-right small float-right">{{ homesticker.promulgating_date|localtime }}</span>
                         </p>
                     </div>
                 </div>

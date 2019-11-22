@@ -6,6 +6,8 @@
 
 {% load i18n %}
 {% load l10n %}
+{% load tz %}
+
 
 {% block title %}
     {% trans 'Sticker detail'  %}
@@ -24,7 +26,7 @@
     
     <hr/>
     <p class="text-right small">{{ homesticker.promulgator.author }}</p>
-    <p class="text-right small">{{ homesticker.promulgating_date }}</p>
+    <p class="text-right small">{{ homesticker.promulgating_date|localtime }}</p>
     <hr/>
     <p class="small">
         {{ homesticker.comment }}

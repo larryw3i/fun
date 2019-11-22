@@ -7,6 +7,9 @@
 {% load i18n %}
 {% load l10n %}
 
+{% load tz %}
+
+
 {% block title %}
     {% trans 'Delete label'  %}
 {% endblock title %}
@@ -30,7 +33,7 @@
     
     <hr/>
     <h6 class="text-right">{{ content.label.author }}</h6>
-    <h6 class="text-right">{{ content.uploading_date }}</h6>
+    <h6 class="text-right">{{ content.uploading_date|localtime }}</h6>
     <hr/>
     <p>
         {{ content.comment }}

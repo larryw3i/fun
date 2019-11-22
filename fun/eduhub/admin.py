@@ -9,6 +9,8 @@ class HomestickerAdmin(admin.ModelAdmin):
     list_display = ( 'title',  'label__name',  'uploading_date' , 'is_legal' )
     list_per_page = 10
 
+    ordering = ('-uploading_date',)
+    
     def label__name(self, obj):
         return obj.label.name
     
@@ -17,6 +19,8 @@ class HomestickerAdmin(admin.ModelAdmin):
     fields = ['name','comment','cover', 'is_legal'  ] 
     list_display = ( 'name','author','comment', 'creating_date' , 'is_legal' , )
     list_per_page = 10
+    
+    ordering = ('-creating_date',)
     
     def save_model(self, request, obj, form, change):
         obj.author = request.user

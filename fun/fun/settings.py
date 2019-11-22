@@ -182,13 +182,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LANGUAGE_CODE ='zh-hans'
 
-TIME_ZONE = 'UTC'
+USE_TZ = True
+
+TIME_ZONE = 'Asia/Shanghai' # 'UTC'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
 
 LANGUAGES = (
     ('en', _('English')),

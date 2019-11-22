@@ -7,6 +7,9 @@
 {% load i18n %}
 {% load l10n %}
 
+{% load tz %}
+
+
 {% block title %}
     {% trans 'Delete label'  %}
 {% endblock title %}
@@ -36,7 +39,7 @@
                     </tr>
                     <tr>
                         <th scope="row">{% trans 'Creating date' %}</th>
-                        <td>{{ label.creating_date }}</td>
+                        <td>{{ label.creating_date|localtime }}</td>
                     </tr>
                 </tbody>
             </table>
