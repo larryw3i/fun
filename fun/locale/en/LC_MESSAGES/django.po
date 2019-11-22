@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-22 13:10+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2019-11-22 17:56+0800\n"
+"PO-Revision-Date: 2019-11-22 17:57+0800\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: eduhub/apps.py:9 templates/funhome/_navbar.html:26
 msgid "Eduhub"
@@ -130,11 +130,11 @@ msgstr ""
 msgid "The length of pdf file should be less than"
 msgstr ""
 
-#: fun/settings.py:195
+#: fun/settings.py:196
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:196
+#: fun/settings.py:197
 msgid "中文简体"
 msgstr ""
 
@@ -186,15 +186,15 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: funhome/views.py:97
+#: funhome/views.py:98
 msgid "X-DOVE"
 msgstr ""
 
-#: funhome/views.py:98
+#: funhome/views.py:99
 msgid "Larry`s sharing"
 msgstr ""
 
-#: funhome/views.py:103
+#: funhome/views.py:104
 msgid "larry"
 msgstr ""
 
@@ -636,31 +636,6 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: templates/eduhub/content_list.html:48 templates/eduhub/label_list.html:46
-#: templates/funhome/homesticker_list.html:46
-msgid "first page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:49 templates/eduhub/label_list.html:47
-#: templates/funhome/homesticker_list.html:47
-msgid "previous page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:53 templates/eduhub/label_list.html:51
-#: templates/funhome/homesticker_list.html:51
-msgid "Page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:57 templates/eduhub/label_list.html:55
-#: templates/funhome/homesticker_list.html:55
-msgid "next page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:58 templates/eduhub/label_list.html:56
-#: templates/funhome/homesticker_list.html:56
-msgid "last page"
-msgstr ""
-
 #: templates/eduhub/content_update.html:14
 #: templates/eduhub/label_update.html:12
 msgid "Update label"
@@ -695,10 +670,6 @@ msgstr ""
 
 #: templates/funhome/_footer.html:22
 msgid "Privacy"
-msgstr ""
-
-#: templates/funhome/_footer.html:31
-msgid "Asia/Shanghai"
 msgstr ""
 
 #: templates/funhome/_footer_language.html:22
@@ -824,6 +795,26 @@ msgstr ""
 #: templates/funhome/_navbar.html:50
 msgid "Log In"
 msgstr ""
+
+#: templates/funhome/common_pagination.html:13
+msgid "first page"
+msgstr "first"
+
+#: templates/funhome/common_pagination.html:15
+msgid "previous page"
+msgstr "prev"
+
+#: templates/funhome/common_pagination.html:19
+msgid "Page"
+msgstr ""
+
+#: templates/funhome/common_pagination.html:23
+msgid "next page"
+msgstr "next"
+
+#: templates/funhome/common_pagination.html:25
+msgid "last page"
+msgstr "last"
 
 #: templates/funhome/home.html:64
 msgid "View more"

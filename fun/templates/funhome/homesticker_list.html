@@ -39,24 +39,7 @@
 
     </div>
 
-    {% if page_obj %}
-        <div class="pagination justify-content-center  align-items-center mt-5" style="font-size: large;">
-            <span class="step-links">
-                {% if page_obj.has_previous %}
-                    <a href="?page=1" class="btn btn-primary">&laquo; {% trans 'first page' %}</a>
-                    <a href="?page={{ page_obj.previous_page_number }}"  class="btn btn-primary">{% trans 'previous page' %}</a>
-                {% endif %}
 
-                <span class="current">
-                    {{ page_obj.number }}/{{ page_obj.paginator.num_pages }} {% trans 'Page' %} 
-                </span>
-
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}"  class="btn btn-primary">{% trans 'next page' %}</a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}"  class="btn btn-primary">{% trans 'last page' %} &raquo;</a>
-                {% endif %}
-            </span>
-        </div>
-    {% endif %}
+    {% include 'funhome/common_pagination.html' %}
 
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-22 13:10+0800\n"
+"POT-Creation-Date: 2019-11-22 17:56+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,11 +129,11 @@ msgstr ""
 msgid "The length of pdf file should be less than"
 msgstr ""
 
-#: fun/settings.py:195
+#: fun/settings.py:196
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:196
+#: fun/settings.py:197
 msgid "中文简体"
 msgstr ""
 
@@ -185,15 +185,15 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: funhome/views.py:97
+#: funhome/views.py:98
 msgid "X-DOVE"
 msgstr ""
 
-#: funhome/views.py:98
+#: funhome/views.py:99
 msgid "Larry`s sharing"
 msgstr ""
 
-#: funhome/views.py:103
+#: funhome/views.py:104
 msgid "larry"
 msgstr ""
 
@@ -635,31 +635,6 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: templates/eduhub/content_list.html:48 templates/eduhub/label_list.html:46
-#: templates/funhome/homesticker_list.html:46
-msgid "first page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:49 templates/eduhub/label_list.html:47
-#: templates/funhome/homesticker_list.html:47
-msgid "previous page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:53 templates/eduhub/label_list.html:51
-#: templates/funhome/homesticker_list.html:51
-msgid "Page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:57 templates/eduhub/label_list.html:55
-#: templates/funhome/homesticker_list.html:55
-msgid "next page"
-msgstr ""
-
-#: templates/eduhub/content_list.html:58 templates/eduhub/label_list.html:56
-#: templates/funhome/homesticker_list.html:56
-msgid "last page"
-msgstr ""
-
 #: templates/eduhub/content_update.html:14
 #: templates/eduhub/label_update.html:12
 msgid "Update label"
@@ -694,10 +669,6 @@ msgstr ""
 
 #: templates/funhome/_footer.html:22
 msgid "Privacy"
-msgstr ""
-
-#: templates/funhome/_footer.html:31
-msgid "Asia/Shanghai"
 msgstr ""
 
 #: templates/funhome/_footer_language.html:22
@@ -822,6 +793,26 @@ msgstr ""
 
 #: templates/funhome/_navbar.html:50
 msgid "Log In"
+msgstr ""
+
+#: templates/funhome/common_pagination.html:13
+msgid "first page"
+msgstr ""
+
+#: templates/funhome/common_pagination.html:15
+msgid "previous page"
+msgstr ""
+
+#: templates/funhome/common_pagination.html:19
+msgid "Page"
+msgstr ""
+
+#: templates/funhome/common_pagination.html:23
+msgid "next page"
+msgstr ""
+
+#: templates/funhome/common_pagination.html:25
+msgid "last page"
 msgstr ""
 
 #: templates/funhome/home.html:64

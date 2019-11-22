@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-22 13:10+0800\n"
+"POT-Creation-Date: 2019-11-22 17:56+0800\n"
 "PO-Revision-Date: 2019-11-22 13:12+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -129,11 +129,11 @@ msgstr "视频文件应该小于"
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
-#: fun/settings.py:195
+#: fun/settings.py:196
 msgid "English"
 msgstr "English"
 
-#: fun/settings.py:196
+#: fun/settings.py:197
 msgid "中文简体"
 msgstr "中文简体"
 
@@ -185,15 +185,15 @@ msgstr "备注"
 msgid "Hidden"
 msgstr "隐藏(不贴)"
 
-#: funhome/views.py:97
+#: funhome/views.py:98
 msgid "X-DOVE"
 msgstr "X-DOVE"
 
-#: funhome/views.py:98
+#: funhome/views.py:99
 msgid "Larry`s sharing"
 msgstr "Larry 的分享"
 
-#: funhome/views.py:103
+#: funhome/views.py:104
 msgid "larry"
 msgstr "larry"
 
@@ -701,31 +701,6 @@ msgstr "查看"
 msgid "Edit"
 msgstr "编辑"
 
-#: templates/eduhub/content_list.html:48 templates/eduhub/label_list.html:46
-#: templates/funhome/homesticker_list.html:46
-msgid "first page"
-msgstr "第一页"
-
-#: templates/eduhub/content_list.html:49 templates/eduhub/label_list.html:47
-#: templates/funhome/homesticker_list.html:47
-msgid "previous page"
-msgstr "上一页"
-
-#: templates/eduhub/content_list.html:53 templates/eduhub/label_list.html:51
-#: templates/funhome/homesticker_list.html:51
-msgid "Page"
-msgstr "页"
-
-#: templates/eduhub/content_list.html:57 templates/eduhub/label_list.html:55
-#: templates/funhome/homesticker_list.html:55
-msgid "next page"
-msgstr "下一页"
-
-#: templates/eduhub/content_list.html:58 templates/eduhub/label_list.html:56
-#: templates/funhome/homesticker_list.html:56
-msgid "last page"
-msgstr "最后页"
-
 #: templates/eduhub/content_update.html:14
 #: templates/eduhub/label_update.html:12
 msgid "Update label"
@@ -764,10 +739,6 @@ msgstr ""
 #: templates/funhome/_footer.html:22
 msgid "Privacy"
 msgstr "隐私"
-
-#: templates/funhome/_footer.html:31
-msgid "Asia/Shanghai"
-msgstr "亚洲•中国•上海"
 
 #: templates/funhome/_footer_language.html:22
 msgid "language"
@@ -893,6 +864,26 @@ msgstr "退出"
 msgid "Log In"
 msgstr "登录"
 
+#: templates/funhome/common_pagination.html:13
+msgid "first page"
+msgstr "第一页"
+
+#: templates/funhome/common_pagination.html:15
+msgid "previous page"
+msgstr "上一页"
+
+#: templates/funhome/common_pagination.html:19
+msgid "Page"
+msgstr "页"
+
+#: templates/funhome/common_pagination.html:23
+msgid "next page"
+msgstr "下一页"
+
+#: templates/funhome/common_pagination.html:25
+msgid "last page"
+msgstr "最后页"
+
 #: templates/funhome/home.html:64
 msgid "View more"
 msgstr "更多"
@@ -997,6 +988,9 @@ msgstr ""
 "      你将使用 %(provider_name)s 账号登录\n"
 "      %(site_name)s. :\n"
 "    "
+
+#~ msgid "Asia/Shanghai"
+#~ msgstr "亚洲•中国•上海"
 
 #~ msgid "Home content"
 #~ msgstr "内容"
