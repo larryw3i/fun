@@ -6,6 +6,11 @@ from django import template
 from django.utils.translation import gettext_lazy as _
 
 from fun import settings
+import pytz
+from django.utils import timezone
+from datetime import datetime
+
+
 
 register = template.Library()
 bootswatch_css_url =lambda theme: f'/static/libs/bootswatch/dist/{theme}/bootstrap.min.css'
@@ -17,7 +22,6 @@ def get_cookies(context, name, unquote_result=False):
     return unquote(request.COOKIES.get(name, '')) if unquote_result else request.COOKIES.get(name, '')
 
 
-
 @register.simple_tag(takes_context=True)
 def get_current_theme_url(context):
     theme = context['request'].COOKIES.get('theme', 'default') 
@@ -27,3 +31,4 @@ def get_current_theme_url(context):
 @register.simple_tag(takes_context=True)
 def get_current_theme_name(context):
     return _(context['request'].COOKIES.get('theme', 'default') )
+

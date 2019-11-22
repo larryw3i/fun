@@ -70,7 +70,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware'
+    'django.middleware.locale.LocaleMiddleware',
+    'funmiddleware.funmiddleware.TimezoneMiddleware',
 ]
 
 ROOT_URLCONF = 'fun.urls'
@@ -184,7 +185,7 @@ LANGUAGE_CODE ='zh-hans'
 
 USE_TZ = True
 
-TIME_ZONE = 'Asia/Shanghai' # 'UTC'
+TIME_ZONE =  'UTC' # 'Asia/Shanghai' 
 
 USE_I18N = True
 

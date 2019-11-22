@@ -1,6 +1,6 @@
 (function(){
     $(document).ready(()=>{
-        
+        setTimeZone();
     });
 
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
@@ -37,6 +37,19 @@
         window.location = event.currentTarget.dataset.url;
     });
 
+    function setTimeZone()
+    {
+        if ( ! Cookies.get('timezone') ){
+
+            Cookies.set( 
+                'timezone' , 
+                Intl.DateTimeFormat().resolvedOptions().timeZone ,
+                { expires: 365 });
+    
+            $.get('/set_timezone');
+            location.reload();
+        }
+    }
 
     /**
      * 
@@ -85,8 +98,7 @@
         Cookies.set(
             'theme', 
             event.target.dataset.theme,
-            { expires: 365 } );
-        location.reload();
+            { expires: 365 } ); 
     }
 
     /**

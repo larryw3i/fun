@@ -30,7 +30,7 @@
                             <a href="{% url 'eduhub:content_update'  pk=content.id %}" class="card-link small">{% trans 'Edit' %}</a>
                             <a href="{% url 'eduhub:content_delete'  pk=content.id %}" class="card-link small">{% trans 'Delete' %}</a>
                         {% endif %}
-                        <p class="text-right border-left" style="font-size: xx-small;">{{ content.uploading_date|localtime }}</p>
+                        <p class="text-right border-left" style="font-size: xx-small;">{{ content.uploading_date }}</p>
 
                         </div>
                     </div>

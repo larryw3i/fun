@@ -8,7 +8,7 @@ from django.core.files import File
 from django.http import (FileResponse, Http404, HttpResponse,
                          HttpResponseBadRequest, HttpResponseForbidden,
                          JsonResponse)
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.urls import reverse_lazy
 from django.utils import translation
 from django.utils.translation import gettext_lazy as _
@@ -23,6 +23,7 @@ from funfile.models import Checkup
 from .apps import FunhomeConfig
 from .modelforms import HomestickerModelForm
 from .models import Homesticker, homesticker_name
+import pytz
 
 home_template =  FunhomeConfig.name + '/home.html'
 homesticker_create_template = f'{FunhomeConfig.name}/{homesticker_name}{funvalue.create_html}'
