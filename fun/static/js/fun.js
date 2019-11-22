@@ -47,7 +47,7 @@
                 { expires: 365 });
     
             $.get('/set_timezone');
-            location.reload();
+            //  location.reload();
         }
     }
 
