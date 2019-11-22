@@ -74,6 +74,7 @@ img.preview
  {
   background-color: rgba(113, 25, 255, 0.37);
   border-radius: 5px;
+  cursor: pointer;
  }
   
  .homesticker-list-card-text
