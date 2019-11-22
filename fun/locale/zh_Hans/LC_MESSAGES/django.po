@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-22 01:20+0800\n"
-"PO-Revision-Date: 2019-11-22 01:36+0800\n"
+"POT-Creation-Date: 2019-11-22 13:10+0800\n"
+"PO-Revision-Date: 2019-11-22 13:12+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -81,7 +81,7 @@ msgstr "合法"
 msgid "Eduhub content"
 msgstr "教资 内容"
 
-#: eduhub/models.py:37 templates/eduhub/content_list.html:13
+#: eduhub/models.py:37 templates/eduhub/content_list.html:15
 msgid "Eduhub contents"
 msgstr "内容"
 
@@ -129,11 +129,11 @@ msgstr "视频文件应该小于"
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
-#: fun/settings.py:194
+#: fun/settings.py:195
 msgid "English"
 msgstr "English"
 
-#: fun/settings.py:195
+#: fun/settings.py:196
 msgid "中文简体"
 msgstr "中文简体"
 
@@ -661,68 +661,97 @@ msgstr "你也可以"
 msgid "change your e-mail address"
 msgstr "更改邮箱地址"
 
-#: templates/eduhub/content_create.html:16
-#: templates/eduhub/content_update.html:25
+#: templates/eduhub/content_create.html:18
+#: templates/eduhub/content_update.html:27
 #: templates/eduhub/label_create.html:16 templates/eduhub/label_update.html:21
 msgid "Preview"
 msgstr "预览"
 
-#: templates/eduhub/content_create.html:27
+#: templates/eduhub/content_create.html:29
 #: templates/eduhub/label_create.html:26 templates/eduhub/label_update.html:31
 msgid "Upload"
 msgstr "上传"
 
-#: templates/eduhub/content_delete.html:11
-#: templates/eduhub/content_detail.html:11
-#: templates/eduhub/label_delete.html:11 templates/eduhub/label_detail.html:11
+#: templates/eduhub/content_delete.html:14
+#: templates/eduhub/content_detail.html:14
+#: templates/eduhub/label_delete.html:14 templates/eduhub/label_detail.html:11
 msgid "Delete label"
 msgstr "删除标签"
 
-#: templates/eduhub/content_delete.html:18
-#: templates/eduhub/label_delete.html:46
+#: templates/eduhub/content_delete.html:21
+#: templates/eduhub/label_delete.html:49
 msgid "Are you sure you want to delete"
 msgstr "确定要删除"
 
-#: templates/eduhub/content_delete.html:19
-#: templates/eduhub/content_list.html:29 templates/eduhub/label_delete.html:49
-#: templates/eduhub/label_list.html:28
+#: templates/eduhub/content_delete.html:22
+#: templates/eduhub/content_list.html:31 templates/eduhub/label_delete.html:52
+#: templates/eduhub/label_list.html:31
 msgid "Delete"
 msgstr "删除"
 
-#: templates/eduhub/content_list.html:14 templates/eduhub/label_list.html:14
+#: templates/eduhub/content_list.html:16 templates/eduhub/label_list.html:17
 msgid "Add"
 msgstr "添加"
 
-#: templates/eduhub/content_list.html:25 templates/eduhub/label_list.html:25
+#: templates/eduhub/content_list.html:27 templates/eduhub/label_list.html:28
 msgid "View"
 msgstr "查看"
 
-#: templates/eduhub/content_list.html:28 templates/eduhub/label_list.html:27
+#: templates/eduhub/content_list.html:30 templates/eduhub/label_list.html:30
 msgid "Edit"
 msgstr "编辑"
 
-#: templates/eduhub/content_update.html:12
+#: templates/eduhub/content_list.html:48 templates/eduhub/label_list.html:46
+#: templates/funhome/homesticker_list.html:46
+msgid "first page"
+msgstr "第一页"
+
+#: templates/eduhub/content_list.html:49 templates/eduhub/label_list.html:47
+#: templates/funhome/homesticker_list.html:47
+msgid "previous page"
+msgstr "上一页"
+
+#: templates/eduhub/content_list.html:53 templates/eduhub/label_list.html:51
+#: templates/funhome/homesticker_list.html:51
+msgid "Page"
+msgstr "页"
+
+#: templates/eduhub/content_list.html:57 templates/eduhub/label_list.html:55
+#: templates/funhome/homesticker_list.html:55
+msgid "next page"
+msgstr "下一页"
+
+#: templates/eduhub/content_list.html:58 templates/eduhub/label_list.html:56
+#: templates/funhome/homesticker_list.html:56
+msgid "last page"
+msgstr "最后页"
+
+#: templates/eduhub/content_update.html:14
 #: templates/eduhub/label_update.html:12
 msgid "Update label"
 msgstr "更新标签"
 
-#: templates/eduhub/content_update.html:48
+#: templates/eduhub/content_update.html:50
 msgid "Update"
 msgstr "更新"
 
-#: templates/eduhub/label_delete.html:34
+#: templates/eduhub/label_delete.html:37
 msgid "Name"
 msgstr "标题名"
 
-#: templates/eduhub/label_delete.html:38
+#: templates/eduhub/label_delete.html:41
 msgid "Creating date"
 msgstr "创建时间"
 
-#: templates/eduhub/label_list.html:13
+#: templates/eduhub/label_list.html:16
 msgid "Eduhub labels"
 msgstr "Eduhub标签"
 
-#: templates/funhome/_footer.html:15
+#: templates/eduhub/label_update.html:22
+msgid "cover"
+msgstr "封面"
+
+#: templates/funhome/_footer.html:16
 msgid ""
 "\n"
 "                        x-dove\n"
@@ -732,9 +761,13 @@ msgstr ""
 "                        x-dove\n"
 "                    "
 
-#: templates/funhome/_footer.html:21
+#: templates/funhome/_footer.html:22
 msgid "Privacy"
 msgstr "隐私"
+
+#: templates/funhome/_footer.html:31
+msgid "Asia/Shanghai"
+msgstr "亚洲•中国•上海"
 
 #: templates/funhome/_footer_language.html:22
 msgid "language"
@@ -864,34 +897,14 @@ msgstr "登录"
 msgid "View more"
 msgstr "更多"
 
-#: templates/funhome/homesticker_detail.html:11
+#: templates/funhome/homesticker_detail.html:13
 msgid "Sticker detail"
 msgstr "贴纸详细"
 
-#: templates/funhome/homesticker_list.html:11
-#: templates/funhome/homesticker_list.html:16
+#: templates/funhome/homesticker_list.html:13
+#: templates/funhome/homesticker_list.html:18
 msgid "Sticker list"
 msgstr "所有贴纸"
-
-#: templates/funhome/homesticker_list.html:44
-msgid "first page"
-msgstr "第一页"
-
-#: templates/funhome/homesticker_list.html:45
-msgid "previous page"
-msgstr "上一页"
-
-#: templates/funhome/homesticker_list.html:49
-msgid "Page"
-msgstr "页"
-
-#: templates/funhome/homesticker_list.html:53
-msgid "next page"
-msgstr "下一页"
-
-#: templates/funhome/homesticker_list.html:54
-msgid "last page"
-msgstr "最后页"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
