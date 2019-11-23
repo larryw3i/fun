@@ -46,8 +46,8 @@
                 'timezone' , 
                 Intl.DateTimeFormat().resolvedOptions().timeZone ,
                 { expires: 365 }); 
-             
-            location.reload(); 
+            if( Cookies.get('timezone') ) location.reload();  
+            
         }
     }
 
