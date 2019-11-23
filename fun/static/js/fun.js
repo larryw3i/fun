@@ -39,12 +39,15 @@
 
     function setTimeZone()
     {
-        if ( ! Cookies.get('timezone') ){
+        if ( ( ! Cookies.get('timezone')) && navigator.cookieEnabled )
+        {
 
             Cookies.set( 
                 'timezone' , 
                 Intl.DateTimeFormat().resolvedOptions().timeZone ,
                 { expires: 365 }); 
+             
+            location.reload(); 
         }
     }
 
