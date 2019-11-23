@@ -24,7 +24,7 @@
                         <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" class="card-img-top" alt="">
                         <div class="card-body">
                             <p class="card-title small">{{ label.name }}</p>
-                            <p class="card-text d-none d-md-block ">{{ label.comment }}</p>
+                            <p class="card-text small d-none d-md-block ">{{ label.comment }}</p>
                             <a href="{% url 'eduhub:content_list' label=label.id %}" class="small view_content_list">{% trans 'View' %}</a>
                             {% if request.user == label.author %}
                                 <a href="{% url 'eduhub:label_update' pk=label.id %}" class="small" >{% trans 'Edit' %}</a>
