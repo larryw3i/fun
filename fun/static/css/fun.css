@@ -75,6 +75,12 @@ img.preview
   background-color: rgba(113, 25, 255, 0.37);
   border-radius: 5px;
   cursor: pointer;
+  animation: homesticker_carousel_caption 5s  infinite alternate;
+ }
+
+ .homesticker-carousel-caption *
+ {
+   color: rgb(255, 60, 190);
  }
   
  .homesticker-list-card-text
@@ -83,4 +89,9 @@ img.preview
    border-radius: 6px;
    padding: 2px;
    font-size: small;
+}
+
+.carousel-item-img
+{
+  animation: carousel_item_img_animation 5s infinite alternate;
 }

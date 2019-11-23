@@ -46,6 +46,8 @@
                 'timezone' , 
                 Intl.DateTimeFormat().resolvedOptions().timeZone ,
                 { expires: 365 }); 
+            
+            // Some browser isn't able to save cookies or the process is wrong
             if( Cookies.get('timezone') ) location.reload();  
             
         }
@@ -99,6 +101,7 @@
             'theme', 
             event.target.dataset.theme,
             { expires: 365 } ); 
+        location.reload();
     }
 
     /**

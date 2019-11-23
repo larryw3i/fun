@@ -23,7 +23,7 @@
 
                 {% for homesticker in homestickers|slice:':3' %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                        <img src="{% if is_homestickers_null %}{% static 'images/default_carousel_image.webp' %}{% else %} {% url 'funfile:get_file' file_id=homesticker.cover.name %} {% endif %}" class="d-block w-100" alt="">
+                        <img src="{% if is_homestickers_null %}{% static 'images/default_carousel_image.webp' %}{% else %} {% url 'funfile:get_file' file_id=homesticker.cover.name %} {% endif %}" class="d-block w-100 carousel-item-img" alt="">
                         <div class="carousel-caption homesticker-carousel-caption click-to-url" data-url="{% url 'homesticker_detail' pk=homesticker.id %}">
                             <h5>{{ homesticker.title }}</h5>
                             <p>  {{  homesticker.subtitle }}  </p> 
