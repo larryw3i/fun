@@ -3,7 +3,6 @@
 {% load i18n %}
 {% user_display user as user_display %}
 
-{% current_site.domain as site_domain %}
 
 
 {% autoescape off %}
@@ -23,7 +22,7 @@
             Thank you from x-dove!
         {% endblocktrans %} 
         <br/>
-        {{ site_domain }}
+        {{ current_site.domain  }}
     </div> 
 
 {% endautoescape %}
