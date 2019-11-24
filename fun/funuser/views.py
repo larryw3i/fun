@@ -22,6 +22,7 @@ from .models import Funuser, funuser_mame
 from .modelforms import FunuserModelForm
 from .apps import FunuserConfig
 
+from django.core.files import File
 
 
 funuser_create_template   = f'{FunuserConfig.name}/{funuser_mame}{funvalue.create_html}'
@@ -36,6 +37,11 @@ class FunuserUpdateView( LoginRequiredMixin, UpdateView ):
     model = Funuser
     form_class = FunuserModelForm
     template_name = funuser_update_template
+
+    def get_object(self, queryset=None):    
+        default_avatar_file_path = os.path.join(  settings.STATIC_ROOT, 'images', 'x_dove.webp' )  
+        is_funuser_created =  Funuser.objects.filter( user = self.request.user )
+        return Funuser.objects.get( user = self.kwargs['user'] ) if is_funuser_created  else Funuser(  )  # super().get_object(queryset=queryset)
     
     
 class FunuserDetailView( LoginRequiredMixin, DetailView ):
