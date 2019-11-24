@@ -142,7 +142,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend', 
 )
 
-# EMAIL_BACKEND = 'allauth.account.auth_backends.AuthenticationBackend' #'django.core.mail.backends.console.EmailBackend' 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # 'allauth.account.auth_backends.AuthenticationBackend' #'django.core.mail.backends.console.EmailBackend' 
 
 # ACCUNT_AND_EMAIL
 
