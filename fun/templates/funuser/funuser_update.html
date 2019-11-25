@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col col-auto ">
                 <div class="row  col-12 justify-content-center ">
-                    <img  click-to='#id_avatar' preview-for='#id_avatar' src="{% if form.instance.avatar.name %}{%  url 'funfile:get_file' file_id=form.instance.avatar.name  %}{% else %} {% static 'images/x_dove.webp' %}{% endif %}" alt="avatar" class="rounded-circle  "   style="width: 150px;height:150px;object-fit: cover"/>
+                    <img  click-to='#id_avatar' preview-for='#id_avatar' src="{% if form.instance.avatar.name %}{%  url 'funfile:get_file' file_id=form.instance.avatar.name  %}{% else %} {% static 'images/x_dove.webp' %}{% endif %}" alt="avatar" class="rounded-circle  "  width="160px" height="160px" style="object-fit: cover"/>
                 </div>
                 <div hidden>
                     {{ form.avatar }} 
