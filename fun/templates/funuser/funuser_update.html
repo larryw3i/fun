@@ -17,7 +17,7 @@
 
         {{ form.non_field_errors }} 
         <div class="row">
-            <div class="col col-5 ">
+            <div class="col col-auto ">
                 <div class="row  col-12 justify-content-center ">
                     <img  click-to='#id_avatar' preview-for='#id_avatar' src="{% if form.instance.avatar.name %}{%  url 'funfile:get_file' file_id=form.instance.avatar.name  %}{% else %} {% static 'images/x_dove.webp' %}{% endif %}" alt="avatar" class="rounded-circle  "   style="width: 150px;height:150px;object-fit: cover"/>
                 </div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="col col-7">
+            <div class="col col-auto">
 
                 <div class="form-group">
                         {{ form.birth_date.errors }}

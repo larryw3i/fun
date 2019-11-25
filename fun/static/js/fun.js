@@ -44,7 +44,7 @@
     function setDateValueFormat()
     {
         document.querySelectorAll(`input[type='date']`).forEach( ( value, key, parent )=>{
-            value.setAttribute(  'value',   value.getAttribute('value').replace(/\//g , '-') );
+            if(value.hasAttribute('value')) value.setAttribute(  'value',   value.getAttribute('value').replace(/\//g , '-') );
         } );
     }
 
