@@ -17,21 +17,21 @@ class FunuserModelForm(ModelForm):
         exclude = ['user', ]
 
         widgets = {
-            'avatar': forms.FileInput( attrs={ 'class': 'form-control-file' } ) , 
-            'birth_date': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'address': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'hometown': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'college': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'occupation': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'hobby': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'motto': forms.FileInput( attrs={ 'class': 'form-control' } ) , 
-            'is_birth_date_outward': forms.FileInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' ,} ) , 
-            'is_address_outward': forms.FileInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
-            'is_hometown_outward': forms.FileInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
-            'is_college_outward': forms.FileInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
-            'is_occupation_outward': forms.FileInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
-            'is_hobby_outward': forms.FileInput( attrs={ 'class': 'custom-control-input' , 'type': 'checkbox' ,} ) , 
-            'is_motto_outward': forms.FileInput( attrs={ 'class': 'custom-control-input' , 'type': 'checkbox' ,} ) , 
+            'avatar': forms.FileInput( attrs={ 'class': 'custom-file-input' , 'aria-describedby':"avatarInputGroupFileAddon" } ) , 
+            'birth_date': forms.DateInput( attrs={ 'class': 'form-control' , 'type':'date' } ) , 
+            'address': forms.TextInput( attrs={ 'class': 'form-control' } ) , 
+            'hometown': forms.TextInput( attrs={ 'class': 'form-control' } ) , 
+            'college': forms.TextInput( attrs={ 'class': 'form-control' } ) , 
+            'occupation': forms.TextInput( attrs={ 'class': 'form-control' } ) , 
+            'hobby': forms.TextInput( attrs={ 'class': 'form-control' } ) , 
+            'motto': forms.TextInput( attrs={ 'class': 'form-control' } ) , 
+            'is_birth_date_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' ,} ) , 
+            'is_address_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
+            'is_hometown_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
+            'is_college_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
+            'is_occupation_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input', 'type': 'checkbox' , } ) , 
+            'is_hobby_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input' , 'type': 'checkbox' ,} ) , 
+            'is_motto_outward': forms.CheckboxInput( attrs={ 'class': 'custom-control-input' , 'type': 'checkbox' ,} ) , 
         }
 
 '''

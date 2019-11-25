@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-22 17:56+0800\n"
-"PO-Revision-Date: 2019-11-22 13:12+0800\n"
+"POT-Creation-Date: 2019-11-25 04:55+0000\n"
+"PO-Revision-Date: 2019-11-25 12:58+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -197,6 +197,73 @@ msgstr "Larry 的分享"
 msgid "larry"
 msgstr "larry"
 
+#: funuser/admin.py:17
+msgid "avatar"
+msgstr "头像"
+
+#: funuser/admin.py:18 templates/funuser/funuser_update.html:29
+msgid "Birth date"
+msgstr "出生年月"
+
+#: funuser/admin.py:19 funuser/models.py:27
+#: templates/funuser/funuser_update.html:42
+msgid "Address"
+msgstr "地址"
+
+#: funuser/admin.py:20 funuser/models.py:30
+#: templates/funuser/funuser_update.html:55
+msgid "Hometown"
+msgstr "家乡"
+
+#: funuser/admin.py:21 funuser/models.py:33
+#: templates/funuser/funuser_update.html:67
+msgid "College"
+msgstr "大学"
+
+#: funuser/admin.py:22 funuser/models.py:36
+#: templates/funuser/funuser_update.html:79
+msgid "Occupation"
+msgstr "工作"
+
+#: funuser/admin.py:23 funuser/models.py:39
+msgid "Hobby"
+msgstr "兴趣"
+
+#: funuser/admin.py:24 funuser/models.py:42
+#: templates/funuser/funuser_update.html:91
+msgid "Motto"
+msgstr "座右铭"
+
+#: funuser/models.py:16
+msgid "User information"
+msgstr "用户信息"
+
+#: funuser/models.py:17
+msgid "User informations"
+msgstr "用户信息"
+
+#: funuser/models.py:20
+msgid "User"
+msgstr "用户"
+
+#: funuser/models.py:22 templates/funuser/funuser_update.html:22
+msgid "Avatar"
+msgstr "头像"
+
+#: funuser/models.py:24
+msgid "Brith date"
+msgstr "出生年月"
+
+#: funuser/models.py:25 funuser/models.py:28 funuser/models.py:31
+#: funuser/models.py:34 funuser/models.py:37 funuser/models.py:40
+#: funuser/models.py:43
+msgid "Is outward"
+msgstr "公开"
+
+#: funuser/models.py:45
+msgid "Funuser creating date"
+msgstr "创建时间"
+
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:8
 msgid "Account Inactive"
@@ -264,15 +331,15 @@ msgstr "添加邮箱"
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr "确定要移除吗?"
 
-#: templates/account/email/email_confirmation_message.html:11
+#: templates/account/email/email_confirmation_message.html:10
 msgid "Hello from x-dove"
 msgstr "来自 x-dove 的问候"
 
-#: templates/account/email/email_confirmation_message.html:17
+#: templates/account/email/email_confirmation_message.html:16
 msgid "CONFIRM EMAIL"
 msgstr "确认邮箱"
 
-#: templates/account/email/email_confirmation_message.html:22
+#: templates/account/email/email_confirmation_message.html:21
 msgid ""
 " \n"
 "            Thank you from x-dove!\n"
@@ -286,11 +353,11 @@ msgstr ""
 msgid "Please Confirm Your E-mail Address"
 msgstr "请验证你的邮箱地址"
 
-#: templates/account/email/password_reset_key_message.html:9
+#: templates/account/email/password_reset_key_message.html:7
 msgid "Hello from"
 msgstr "问候来自"
 
-#: templates/account/email/password_reset_key_message.html:11
+#: templates/account/email/password_reset_key_message.html:9
 msgid ""
 "\n"
 "        You're receiving this e-mail because you or someone else has "
@@ -304,22 +371,22 @@ msgstr ""
 "        (亲没有重置密码请忽略).\n"
 "    "
 
-#: templates/account/email/password_reset_key_message.html:16
+#: templates/account/email/password_reset_key_message.html:14
 msgid "RESET PASSWORD"
 msgstr "重置密码"
 
-#: templates/account/email/password_reset_key_message.html:19
+#: templates/account/email/password_reset_key_message.html:17
 #, python-format
 msgid ""
 "\n"
-"                In case you forgot, your username is %(username)s.\n"
+"            In case you forgot, your username is %(username)s.\n"
 "        "
 msgstr ""
 "\n"
 "                提前和亲说, 亲的用户名是: %(username)s.\n"
 "        "
 
-#: templates/account/email/password_reset_key_message.html:26
+#: templates/account/email/password_reset_key_message.html:24
 msgid "Thank you for using"
 msgstr "很高兴为您服务"
 
@@ -669,6 +736,7 @@ msgstr "预览"
 
 #: templates/eduhub/content_create.html:29
 #: templates/eduhub/label_create.html:26 templates/eduhub/label_update.html:31
+#: templates/funuser/funuser_update.html:101
 msgid "Upload"
 msgstr "上传"
 
@@ -684,7 +752,7 @@ msgid "Are you sure you want to delete"
 msgstr "确定要删除"
 
 #: templates/eduhub/content_delete.html:22
-#: templates/eduhub/content_list.html:31 templates/eduhub/label_delete.html:52
+#: templates/eduhub/content_list.html:33 templates/eduhub/label_delete.html:52
 #: templates/eduhub/label_list.html:31
 msgid "Delete"
 msgstr "删除"
@@ -693,11 +761,11 @@ msgstr "删除"
 msgid "Add"
 msgstr "添加"
 
-#: templates/eduhub/content_list.html:27 templates/eduhub/label_list.html:28
+#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:28
 msgid "View"
 msgstr "查看"
 
-#: templates/eduhub/content_list.html:30 templates/eduhub/label_list.html:30
+#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:30
 msgid "Edit"
 msgstr "编辑"
 
@@ -896,6 +964,15 @@ msgstr "贴纸详细"
 #: templates/funhome/homesticker_list.html:18
 msgid "Sticker list"
 msgstr "所有贴纸"
+
+#: templates/funuser/funuser_update.html:32
+#: templates/funuser/funuser_update.html:46
+#: templates/funuser/funuser_update.html:58
+#: templates/funuser/funuser_update.html:70
+#: templates/funuser/funuser_update.html:82
+#: templates/funuser/funuser_update.html:94
+msgid "is outward"
+msgstr "公开"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"

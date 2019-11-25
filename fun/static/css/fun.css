@@ -105,3 +105,8 @@ img.preview
 {
   line-height:12px;
 }
+
+.custom-control-label
+{
+  cursor: pointer;
+}

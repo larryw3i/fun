@@ -11,79 +11,106 @@
 
 {% block content %} 
 
-    <form method="post"  enctype="multipart/form-data" style="line-height: 10px;">
+    <form method="post"  enctype="multipart/form-data" >
             
         {% csrf_token %}
 
         {{ form.non_field_errors }}
-
-        <div class="form-group">
-            {{ form.avatar.errors }}
-            <label for="{{ form.avatar.id_for_label }}"></label>
-            {{ form.avatar }}
-        </div>
-
-        <div class="form-group">
-            {{ form.birth_date.errors }}
-            <div class="custom-control custom-switch">
-                {{ form.is_birth_date_outward }}
-                <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
-            </div>
-            <label for="{{ form.birth_date.id_for_label }}"></label>
-            {{ form.birth_date }}
-        </div>
-        
-
-        <div class="form-group">
-                {{ form.birth_date.errors }}
-                <div class="custom-control custom-switch">
-                    {{ form.is_birth_date_outward }}
-                    <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
-                </div>
-                <label for="{{ form.birth_date.id_for_label }}"></label>
-                {{ form.birth_date }}
-            </div>
-        
-            <div class="form-group">
-                    {{ form.birth_date.errors }}
-                    <div class="custom-control custom-switch">
-                        {{ form.is_birth_date_outward }}
-                        <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+        <div class="row">
+            <div class="col col-5 ">
+                <img src="{% static 'images/x_dove.webp' %}" alt="avatar" class="rounded-circle text-center" style="width: 100px ;height:100px;"/>
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="avatarInputGroupFileAddon">{% trans 'Avatar' %}</span>
                     </div>
-                    <label for="{{ form.birth_date.id_for_label }}"></label>
-                    {{ form.birth_date }}
-                </div>
-        
+                    <div class="custom-file">
+                        {{ form.avatar }}
+                        <label class="custom-file-label" for="avatarInputGroupFileAddon">{% trans  'Choose avatar' %}</label>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="col col-7">
+
                 <div class="form-group">
                         {{ form.birth_date.errors }}
-                        <div class="custom-control custom-switch">
-                            {{ form.is_birth_date_outward }}
-                            <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
-                        </div>
-                        <label for="{{ form.birth_date.id_for_label }}"></label>
+                        <label  >
+                            {% trans 'Birth date' %}
+                            <span class="custom-control custom-switch"  style="display: inline;">
+                                {{ form.is_birth_date_outward }}
+                                <span class="custom-control-label" for="id_is_birth_date_outward">{% trans 'is outward' %}?</span>
+                            </s>
+                        </label>
                         {{ form.birth_date }}
                     </div>
-        
+                    
+            
                     <div class="form-group">
-                            {{ form.birth_date.errors }}
-                            <div class="custom-control custom-switch">
-                                {{ form.is_birth_date_outward }}
-                                <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+                        {{ form.address.errors }}
+                        <label >
+                            {% trans 'Address' %}
+            
+                            <div class="custom-control custom-switch"   style="display: inline;">
+                                {{ form.is_address_outward }}
+                                <label class="custom-control-label" for="id_is_address_outward">{% trans 'is outward' %}?</label>
                             </div>
-                            <label for="{{ form.birth_date.id_for_label }}"></label>
-                            {{ form.birth_date }}
-                        </div>
-        
-                        <div class="form-group">
-                                {{ form.birth_date.errors }}
-                                <div class="custom-control custom-switch">
-                                    {{ form.is_birth_date_outward }}
-                                    <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
-                                </div>
-                                <label for="{{ form.birth_date.id_for_label }}"></label>
-                                {{ form.birth_date }}
+                        </label>
+                        {{ form.address }}
+                    </div>
+                
+                    <div class="form-group">
+                        {{ form.hometown.errors }}
+                        <label >
+                            {% trans 'Hometown' %}
+                            <div class="custom-control custom-switch " style="display: inline;">
+                                {{ form.is_hometown_outward }}
+                                <label class="custom-control-label" for="id_is_hometown_outward">{% trans 'is outward' %}?</label>
                             </div>
-                                                                    
+                        </label>
+                        {{ form.hometown }}
+                    </div>
+            
+                    <div class="form-group">
+                        {{ form.college.errors }}
+                        <label >
+                            {% trans 'College' %}
+                            <div class="custom-control custom-switch" style="display: inline;">
+                                {{ form.is_college_outward }}
+                                <label class="custom-control-label" for="id_is_college_outward">{% trans 'is outward' %}?</label>
+                            </div>
+                        </label>
+                        {{ form.college }}
+                    </div>
+            
+                    <div class="form-group">
+                        {{ form.occupation.errors }}
+                        <label >
+                            {% trans 'Occupation' %}
+                            <div class="custom-control custom-switch" style="display: inline;">
+                                {{ form.is_occupation_outward }}
+                                <label class="custom-control-label" for="id_is_occupation_outward">{% trans 'is outward' %}?</label>
+                            </div>
+                        </label>
+                        {{ form.occupation }}
+                    </div>
+            
+                    <div class="form-group">
+                        {{ form.motto.errors }}
+                        <label >
+                            {% trans 'Motto' %}
+                            <div class="custom-control custom-switch" style="display: inline;">
+                                {{ form.is_motto_outward }}
+                                <label class="custom-control-label" for="id_is_motto_outward">{% trans 'is outward' %}?</label>
+                            </div>
+                        </label>
+                        {{ form.motto }}
+                    </div>
+                                
+            </div>
+        </div>
+
+
+                                                            
         <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
 
     </form>    
