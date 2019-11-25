@@ -27,7 +27,7 @@ class Funuser(models.Model):
 
     full_name = models.CharField( blank = True, max_length = 64 ,  verbose_name = _('Full name') )
     
-    birth_date  = models.DateField( blank = True ,   verbose_name = _('Brith date'))
+    birth_date  = models.DateField( blank = True ,  null=True,  verbose_name = _('Brith date'))
     is_birth_date_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?' )
     
     address  = models.CharField( blank = True, max_length = 64 ,  verbose_name = _('Address')  )
