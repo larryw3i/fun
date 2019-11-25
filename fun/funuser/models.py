@@ -5,6 +5,10 @@ from funfile.storage import upload_to
 
 from django.utils.translation import gettext_lazy as _
 
+from imagekit.models import ImageSpecField
+import os
+from fun import settings
+
 # Create your models here.
 
 
@@ -19,9 +23,11 @@ class Funuser(models.Model):
     id = models.UUIDField( primary_key=True, default=uuid.uuid4, editable=False, unique=True )
     user = models.ForeignKey( to= User,  on_delete=models.CASCADE,  verbose_name = _('User') )
 
-    avatar = models.ImageField( upload_to = upload_to ,  verbose_name = _('Avatar') )
+    avatar = models.ImageField( upload_to = upload_to , blank = True,  verbose_name = _('Avatar'), )
+
+    full_name = models.CharField( blank = True, max_length = 64 ,  verbose_name = _('Full name') )
     
-    birth_date  = models.DateField( blank = True ,  verbose_name = _('Brith date'))
+    birth_date  = models.DateField( blank = True ,   verbose_name = _('Brith date'))
     is_birth_date_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?' )
     
     address  = models.CharField( blank = True, max_length = 64 ,  verbose_name = _('Address')  )

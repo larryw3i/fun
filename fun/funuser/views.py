@@ -33,15 +33,21 @@ funuser_list_template     = f'{FunuserConfig.name}/{funuser_mame}{funvalue.list_
 
 
 class FunuserUpdateView( LoginRequiredMixin, UpdateView ):
-
+ 
     model = Funuser
     form_class = FunuserModelForm
     template_name = funuser_update_template
+    success_url = reverse_lazy('funuser:funuser_update' )
+    
 
     def get_object(self, queryset=None):    
         default_avatar_file_path = os.path.join(  settings.STATIC_ROOT, 'images', 'x_dove.webp' )  
-        is_funuser_created =  Funuser.objects.filter( user = self.request.user )
-        return Funuser.objects.get( user = self.kwargs['user'] ) if is_funuser_created  else Funuser(  )  # super().get_object(queryset=queryset)
+        is_funuser_created =  Funuser.objects.filter( user = self.request.user ).exists()
+        return Funuser.objects.get( user = self.request.user  ) if is_funuser_created  else Funuser(  )  # super().get_object(queryset=queryset)
+     
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
     
     
 class FunuserDetailView( LoginRequiredMixin, DetailView ):

@@ -1,6 +1,7 @@
 (function(){
     $(document).ready(()=>{
         setTimeZone();
+        setDateValueFormat();
     });
 
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
@@ -23,6 +24,9 @@
         $(`#language_form input[name='language']`).val(event.target.dataset.language);
         $(`#language_form`).submit();
     });
+    $(document).on('click', `[click-to]` , (event) =>{
+        $(`${$(event.currentTarget).attr('click-to')}`).click();
+    });
     
 
     $(document).on('click', `.eduhub-label-card` , (event) =>{
@@ -36,6 +40,13 @@
     $(document).on('click', `.click-to-url` , (event) =>{
         window.location = event.currentTarget.dataset.url;
     });
+
+    function setDateValueFormat()
+    {
+        document.querySelectorAll(`input[type='date']`).forEach( ( value, key, parent )=>{
+            value.setAttribute(  'value',   value.getAttribute('value').replace(/\//g , '-') );
+        } );
+    }
 
     function setTimeZone()
     {
