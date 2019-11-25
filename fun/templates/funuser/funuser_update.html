@@ -11,21 +11,113 @@
 
 {% block content %} 
 
-    <div class="row"> 
-        <div class="col col-auto">
-            <form method="post"  enctype="multipart/form-data" style="line-height: 10px;">
-        
-                {% csrf_token %}
-                
-                {{ form|crispy }}
-        
-                <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
-        
-            </form>    
+    <form method="post"  enctype="multipart/form-data" style="line-height: 10px;">
+            
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+
+        <div class="form-group">
+            {{ form.avatar.errors }}
+            <label for="{{ form.avatar.id_for_label }}"></label>
+            {{ form.avatar }}
+        </div>
+
+        <div class="form-group">
+            {{ form.birth_date.errors }}
+            <div class="custom-control custom-switch">
+                {{ form.is_birth_date_outward }}
+                <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+            </div>
+            <label for="{{ form.birth_date.id_for_label }}"></label>
+            {{ form.birth_date }}
         </div>
         
-    
-    </div>
+
+        <div class="form-group">
+                {{ form.birth_date.errors }}
+                <div class="custom-control custom-switch">
+                    {{ form.is_birth_date_outward }}
+                    <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+                </div>
+                <label for="{{ form.birth_date.id_for_label }}"></label>
+                {{ form.birth_date }}
+            </div>
+        
+            <div class="form-group">
+                    {{ form.birth_date.errors }}
+                    <div class="custom-control custom-switch">
+                        {{ form.is_birth_date_outward }}
+                        <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+                    </div>
+                    <label for="{{ form.birth_date.id_for_label }}"></label>
+                    {{ form.birth_date }}
+                </div>
+        
+                <div class="form-group">
+                        {{ form.birth_date.errors }}
+                        <div class="custom-control custom-switch">
+                            {{ form.is_birth_date_outward }}
+                            <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+                        </div>
+                        <label for="{{ form.birth_date.id_for_label }}"></label>
+                        {{ form.birth_date }}
+                    </div>
+        
+                    <div class="form-group">
+                            {{ form.birth_date.errors }}
+                            <div class="custom-control custom-switch">
+                                {{ form.is_birth_date_outward }}
+                                <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+                            </div>
+                            <label for="{{ form.birth_date.id_for_label }}"></label>
+                            {{ form.birth_date }}
+                        </div>
+        
+                        <div class="form-group">
+                                {{ form.birth_date.errors }}
+                                <div class="custom-control custom-switch">
+                                    {{ form.is_birth_date_outward }}
+                                    <label class="custom-control-label" for="customSwitch1">{% trans 'is outward' %}?</label>
+                                </div>
+                                <label for="{{ form.birth_date.id_for_label }}"></label>
+                                {{ form.birth_date }}
+                            </div>
+                                                                    
+        <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
+
+    </form>    
 
 
 {% endblock %}
+
+{% comment %}
+
+    user = models.ForeignKey( to= User,  on_delete=models.CASCADE,  verbose_name = _('User') )
+
+    avatar = models.ImageField( upload_to = upload_to ,  verbose_name = _('Avatar') )
+
+    birth_date  = models.DateField( blank = True ,  verbose_name = _('Brith date'))
+    is_birth_date_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?' )
+
+    address  = models.CharField( blank = True, max_length = 64 ,  verbose_name = _('Address')  )
+    is_address_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?')
+
+    hometown  = models.CharField( blank = True , max_length = 64 ,  verbose_name = _('Hometown') )
+    is_hometown_date_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?')
+
+    college  = models.CharField( blank = True , max_length = 64 ,  verbose_name = _('College') )
+    is_college_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?')
+
+    occupation  = models.CharField( blank = True , max_length = 64,  verbose_name = _('Occupation')  )
+    is_occupation_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?')
+
+    hobby  = models.CharField( blank = True , max_length = 64 ,  verbose_name = _('Hobby') )
+    is_hobby_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?' )
+
+    motto  = models.CharField( blank = True , max_length = 64 ,  verbose_name = _('Motto') )
+    is_motto_outward = models.BooleanField( default = False ,  verbose_name = _('Is outward')+' ?' )
+
+    creating_date =  models.DateTimeField(   auto_now_add = True,  verbose_name =_('Funuser creating date') )
+
+{% endcomment %}
