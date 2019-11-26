@@ -155,5 +155,7 @@ funfile/files/
 # uwsgi.ini 
 uwsgi.ini
 
+static/CACHE/
+
 
 # End of https://www.gitignore.io/api/django
