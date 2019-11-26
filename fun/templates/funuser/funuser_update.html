@@ -10,8 +10,9 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %} 
-
-    <form method="post"  enctype="multipart/form-data" >
+    {% include 'funuser/_funuser_url.html' %}
+    
+    <form method="post"  enctype="multipart/form-data" class="mt-2" >
             
         {% csrf_token %}
 

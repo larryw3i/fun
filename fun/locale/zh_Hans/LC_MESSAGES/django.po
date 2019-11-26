@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-25 04:55+0000\n"
-"PO-Revision-Date: 2019-11-25 12:58+0800\n"
+"POT-Creation-Date: 2019-11-26 05:46+0000\n"
+"PO-Revision-Date: 2019-11-26 13:46+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -201,68 +201,76 @@ msgstr "larry"
 msgid "avatar"
 msgstr "头像"
 
-#: funuser/admin.py:18 templates/funuser/funuser_update.html:29
+#: funuser/admin.py:18 templates/funuser/funuser_update.html:40
 msgid "Birth date"
 msgstr "出生年月"
 
-#: funuser/admin.py:19 funuser/models.py:27
-#: templates/funuser/funuser_update.html:42
+#: funuser/admin.py:19 funuser/models.py:33
+#: templates/funuser/funuser_update.html:53
 msgid "Address"
 msgstr "地址"
 
-#: funuser/admin.py:20 funuser/models.py:30
-#: templates/funuser/funuser_update.html:55
+#: funuser/admin.py:20 funuser/models.py:36
+#: templates/funuser/funuser_update.html:66
 msgid "Hometown"
 msgstr "家乡"
 
-#: funuser/admin.py:21 funuser/models.py:33
-#: templates/funuser/funuser_update.html:67
+#: funuser/admin.py:21 funuser/models.py:39
+#: templates/funuser/funuser_update.html:78
 msgid "College"
 msgstr "大学"
 
-#: funuser/admin.py:22 funuser/models.py:36
-#: templates/funuser/funuser_update.html:79
+#: funuser/admin.py:22 funuser/models.py:42
+#: templates/funuser/funuser_update.html:90
 msgid "Occupation"
 msgstr "工作"
 
-#: funuser/admin.py:23 funuser/models.py:39
+#: funuser/admin.py:23 funuser/models.py:45
 msgid "Hobby"
 msgstr "兴趣"
 
-#: funuser/admin.py:24 funuser/models.py:42
-#: templates/funuser/funuser_update.html:91
+#: funuser/admin.py:24 funuser/models.py:48
+#: templates/funuser/funuser_update.html:102
 msgid "Motto"
 msgstr "座右铭"
 
-#: funuser/models.py:16
+#: funuser/modelforms.py:26 funuser/models.py:28
+msgid "Full name"
+msgstr "标签名"
+
+#: funuser/models.py:20
 msgid "User information"
 msgstr "用户信息"
 
-#: funuser/models.py:17
+#: funuser/models.py:21
 msgid "User informations"
 msgstr "用户信息"
 
-#: funuser/models.py:20
+#: funuser/models.py:24
 msgid "User"
 msgstr "用户"
 
-#: funuser/models.py:22 templates/funuser/funuser_update.html:22
+#: funuser/models.py:26
 msgid "Avatar"
 msgstr "头像"
 
-#: funuser/models.py:24
+#: funuser/models.py:30
 msgid "Brith date"
 msgstr "出生年月"
 
-#: funuser/models.py:25 funuser/models.py:28 funuser/models.py:31
-#: funuser/models.py:34 funuser/models.py:37 funuser/models.py:40
-#: funuser/models.py:43
+#: funuser/models.py:31 funuser/models.py:34 funuser/models.py:37
+#: funuser/models.py:40 funuser/models.py:43 funuser/models.py:46
+#: funuser/models.py:49
 msgid "Is outward"
 msgstr "公开"
 
-#: funuser/models.py:45
+#: funuser/models.py:51
 msgid "Funuser creating date"
 msgstr "创建时间"
+
+#: funuser/views.py:56
+msgid "Nice try"
+msgstr "干得不错哦"
 
 #: templates/account/account_inactive.html:5
 #: templates/account/account_inactive.html:8
@@ -736,7 +744,7 @@ msgstr "预览"
 
 #: templates/eduhub/content_create.html:29
 #: templates/eduhub/label_create.html:26 templates/eduhub/label_update.html:31
-#: templates/funuser/funuser_update.html:101
+#: templates/funuser/funuser_update.html:116
 msgid "Upload"
 msgstr "上传"
 
@@ -965,12 +973,20 @@ msgstr "贴纸详细"
 msgid "Sticker list"
 msgstr "所有贴纸"
 
-#: templates/funuser/funuser_update.html:32
-#: templates/funuser/funuser_update.html:46
-#: templates/funuser/funuser_update.html:58
-#: templates/funuser/funuser_update.html:70
-#: templates/funuser/funuser_update.html:82
-#: templates/funuser/funuser_update.html:94
+#: templates/funuser/_funuser_url.html:12
+msgid "Information"
+msgstr "用户信息"
+
+#: templates/funuser/_funuser_url.html:15
+msgid "Reset password"
+msgstr "重置密码"
+
+#: templates/funuser/funuser_update.html:43
+#: templates/funuser/funuser_update.html:57
+#: templates/funuser/funuser_update.html:69
+#: templates/funuser/funuser_update.html:81
+#: templates/funuser/funuser_update.html:93
+#: templates/funuser/funuser_update.html:105
 msgid "is outward"
 msgstr "公开"
 

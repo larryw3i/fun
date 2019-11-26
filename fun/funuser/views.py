@@ -46,10 +46,12 @@ class FunuserUpdateView( LoginRequiredMixin, UpdateView ):
         if not is_funuser_created:
             new_funuser =  Funuser( user = self.request.user )
             new_funuser.save()
+            
             return new_funuser
         return Funuser.objects.get( user = self.request.user  )   # super().get_object(queryset=queryset)
      
     def form_valid(self, form):
+        
         if not Funuser.objects.filter( user = self.request.user, id = form.instance.id ).exists():
             form.add_error('full_name',  _('Nice try'))
             return render(self.request, funuser_update_template, context={'form': form})
