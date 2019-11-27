@@ -10,7 +10,7 @@ from .models import Funuser
 @admin.register( Funuser )
 class HomestickerAdmin(admin.ModelAdmin):
     
-    list_display = ( 'user__name',  'birth_date', 'address', 'occupation' )
+    list_display = ( 'user',  'birth_date', 'address', 'occupation' )
     list_per_page = 10
     ordering = ('-creating_date',)
     fieldsets = (
@@ -23,10 +23,7 @@ class HomestickerAdmin(admin.ModelAdmin):
         ( _('Hobby'),       {'fields':['hobby',         'is_hobby_outward']}),
         ( _('Motto'),       {'fields':['motto',         'is_motto_outward']}), 
     )
-
-
-    def user__name(self, obj):
-        return obj.user.name
+ 
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user

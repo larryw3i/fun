@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 01:31+0000\n"
+"POT-Creation-Date: 2019-11-27 03:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,10 +40,6 @@ msgstr ""
 #: eduhub/modelforms.py:37
 msgid "Label"
 msgstr ""
-
-#: custom add
-msgid "E-mail"
-msgstr "邮箱地址"
 
 #: eduhub/modelforms.py:38 eduhub/models.py:42
 msgid "Content file"
@@ -205,26 +201,31 @@ msgstr ""
 msgid "avatar"
 msgstr ""
 
-#: funuser/admin.py:18 templates/funuser/funuser_update.html:40
+#: funuser/admin.py:18 templates/funuser/funuser_detail.html:45
+#: templates/funuser/funuser_update.html:40
 msgid "Birth date"
 msgstr ""
 
 #: funuser/admin.py:19 funuser/models.py:33
+#: templates/funuser/funuser_detail.html:52
 #: templates/funuser/funuser_update.html:53
 msgid "Address"
 msgstr ""
 
 #: funuser/admin.py:20 funuser/models.py:36
+#: templates/funuser/funuser_detail.html:59
 #: templates/funuser/funuser_update.html:66
 msgid "Hometown"
 msgstr ""
 
 #: funuser/admin.py:21 funuser/models.py:39
+#: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
 msgstr ""
 
 #: funuser/admin.py:22 funuser/models.py:42
+#: templates/funuser/funuser_detail.html:73
 #: templates/funuser/funuser_update.html:90
 msgid "Occupation"
 msgstr ""
@@ -234,6 +235,7 @@ msgid "Hobby"
 msgstr ""
 
 #: funuser/admin.py:24 funuser/models.py:48
+#: templates/funuser/funuser_detail.html:80
 #: templates/funuser/funuser_update.html:102
 msgid "Motto"
 msgstr ""
@@ -272,7 +274,7 @@ msgstr ""
 msgid "Funuser creating date"
 msgstr ""
 
-#: funuser/views.py:56
+#: funuser/views.py:57
 msgid "Nice try"
 msgstr ""
 
@@ -916,6 +918,14 @@ msgstr ""
 msgid "Reset password"
 msgstr ""
 
+#: templates/funuser/funuser_detail.html:16
+#, python-format
+msgid ""
+"\n"
+"                %(funuser.user)s left nothing here\n"
+"            "
+msgstr ""
+
 #: templates/funuser/funuser_update.html:43
 #: templates/funuser/funuser_update.html:57
 #: templates/funuser/funuser_update.html:69
@@ -1000,3 +1010,6 @@ msgid ""
 "      %(site_name)s. As a final step, please complete the following form:\n"
 "    "
 msgstr ""
+
+#~ msgid "E-mail"
+#~ msgstr "邮箱地址"
