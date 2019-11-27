@@ -1,8 +1,7 @@
-import magic
-import os
-from fun import settings
 import math
+import os
 
+import magic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core import paginator
 from django.core.exceptions import ValidationError
@@ -15,10 +14,12 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
 from hurry import filesize
 
+from fun import funvalue, settings
+
 from .apps import EduhubConfig
 from .modelforms import ContentModelForm, LabelModelForm
-from .models import Content, Label, label_name, content_name
-from fun import funvalue
+from .models import Content, Label, content_name, label_name
+from django.core.paginator import InvalidPage
 
 # Create your views here.
 
@@ -66,7 +67,7 @@ class LabelCreateView( LoginRequiredMixin, CreateView ):
         return super().form_valid(form)
 
 
-class LabelListView(ListView):
+class LabelListView( ListView ):
     model = Label
 
     form_class = LabelModelForm
@@ -76,8 +77,28 @@ class LabelListView(ListView):
     paginate_by = 5
     paginate_orphans = 1
 
+    def paginate_queryset(self, queryset, page_size):
+
+        paginator = self.get_paginator(
+            queryset, page_size, orphans=self.get_paginate_orphans(),
+            allow_empty_first_page=self.get_allow_empty())
+        page_kwarg = self.page_kwarg
+        page = self.kwargs.get(page_kwarg) or self.request.GET.get(page_kwarg) or 1
+        try:
+            page_number = int(page)
+        except ValueError:
+            if page == 'last':
+                page_number = paginator.num_pages
+            else:
+                raise Http404(_("Page is not 'last', nor can it be converted to an int."))
+        try:
+            page = paginator.page(page_number)
+            return (paginator, page, page.object_list, page.has_other_pages())
+        except InvalidPage as e:
+            page = paginator.page(1)
+            return (paginator, page, page.object_list, page.has_other_pages())
+
     def get_queryset(self):
-        print( self.request.COOKIES.get('is_label_list_mine', False) )
         if ( not self.request.user.is_authenticated )  or self.request.COOKIES.get('is_label_list_mine', False):
             return  Label.objects.filter( is_legal = True )
         else:
@@ -91,6 +112,7 @@ class LabelListView(ListView):
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs) 
         return context_data
+    
 
 
 class LabelDeleteView( LoginRequiredMixin, DeleteView ):
@@ -116,7 +138,7 @@ class LabelUpdateView( LoginRequiredMixin, UpdateView ):
     context_object_name = 'label'
 
     def get_success_url(self):
-        return '/eduhub/label_list?page='+self.request.COOKIES['page']
+        return '/eduhub/label_list?page='+self.request.COOKIES.get( 'page' , 1 )
 
     def post(self, request, *args, **kwargs):
         if not Label.objects.filter(pk=kwargs['pk'], author=request.user).exists():
@@ -125,7 +147,7 @@ class LabelUpdateView( LoginRequiredMixin, UpdateView ):
         return super().post(request, *args, **kwargs)
 
 
-class ContentListView(ListView):
+class ContentListView( ListView ):
 
     model = Content
 
@@ -147,6 +169,7 @@ class ContentListView(ListView):
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
         context_data['label'] = self.kwargs['label']
+        context_data['is_author'] = Label.objects.get( pk = self.kwargs['label'] ).author == self.request.user
         return context_data
 
 

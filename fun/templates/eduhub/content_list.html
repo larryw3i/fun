@@ -13,7 +13,9 @@
 
 {% block content %} 
     <h2 class="text-center">{% trans 'Eduhub contents' %}</h2>
-    <a href="{% url 'eduhub:content_create' label=label %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
+    {% if is_author %}
+        <a href="{% url 'eduhub:content_create' label=label %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
+    {% endif %}
     <hr/>
     <div class="row">
             {% for content in contents %} 
