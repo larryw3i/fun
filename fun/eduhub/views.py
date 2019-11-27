@@ -71,7 +71,7 @@ class LabelListView( ListView ):
     model = Label
 
     form_class = LabelModelForm
-    template_name = label_list_template
+    template_name = label_list_template+'/aa.html'
     context_object_name = 'labels'
     ordering = ['-creating_date', ]
     paginate_by = 5

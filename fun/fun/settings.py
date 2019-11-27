@@ -168,6 +168,7 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
 
 
+SERVER_EMAIL = os.environ.get('EMAIL_FROM')
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
@@ -241,4 +242,42 @@ COMPRESS_ENABLED = bool( os.environ.get('COMPRESS_ENABLED') )
 # END COMPRESS_ENABLED
 
 # LOGGING 
+
+ADMINS = [( os.environ.get('ADMINS_NAME'), os.environ.get('ADMINS_EMAIL')), ]
+
+MANAGERS = ADMINS
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join( BASE_DIR, 'funlog', 'django_fun.log' ),   
+            'maxBytes': 8*1024*1024,      
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins' ,'file', ],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    }
+} 
+
 # END_LOGGING

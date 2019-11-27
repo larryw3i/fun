@@ -157,5 +157,8 @@ uwsgi.ini
 
 static/CACHE/
 
+# LOG
+funlog/django_fun.log
+
 
 # End of https://www.gitignore.io/api/django
