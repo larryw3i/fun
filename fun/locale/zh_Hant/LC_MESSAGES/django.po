@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 06:17+0000\n"
+"POT-Creation-Date: 2019-11-27 15:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,35 +105,39 @@ msgstr ""
 msgid "Is content legal"
 msgstr ""
 
-#: eduhub/views.py:52
+#: eduhub/views.py:53
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:56
+#: eduhub/views.py:57
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:61
+#: eduhub/views.py:62
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:173
+#: eduhub/views.py:93
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: eduhub/views.py:196
 msgid "Content file is required"
 msgstr ""
 
-#: eduhub/views.py:178
+#: eduhub/views.py:201
 msgid "The length of video file should be less than"
 msgstr ""
 
-#: eduhub/views.py:183
+#: eduhub/views.py:206
 msgid "The length of pdf file should be less than"
 msgstr ""
 
-#: fun/settings.py:196
+#: fun/settings.py:197
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:197
+#: fun/settings.py:198
 msgid "中文简体"
 msgstr ""
 
@@ -299,49 +303,49 @@ msgstr ""
 msgid "The following e-mail addresses are associated with your account:"
 msgstr ""
 
-#: templates/account/email.html:27
+#: templates/account/email.html:28
 msgid "Verified"
 msgstr ""
 
-#: templates/account/email.html:29
+#: templates/account/email.html:30
 msgid "Unverified"
 msgstr ""
 
-#: templates/account/email.html:33
+#: templates/account/email.html:34
 msgid "Primary"
 msgstr ""
 
-#: templates/account/email.html:42
+#: templates/account/email.html:43
 msgid "Make Primary"
 msgstr ""
 
-#: templates/account/email.html:43
+#: templates/account/email.html:44
 msgid "Re-send Verification"
 msgstr ""
 
-#: templates/account/email.html:44 templates/socialaccount/connections.html:39
+#: templates/account/email.html:45 templates/socialaccount/connections.html:39
 msgid "Remove"
 msgstr ""
 
-#: templates/account/email.html:52
+#: templates/account/email.html:53
 msgid "Warning:"
 msgstr ""
 
-#: templates/account/email.html:53
+#: templates/account/email.html:54
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 
-#: templates/account/email.html:59
+#: templates/account/email.html:60
 msgid "Add E-mail Address"
 msgstr ""
 
-#: templates/account/email.html:64
+#: templates/account/email.html:65
 msgid "Add E-mail"
 msgstr ""
 
-#: templates/account/email.html:73
+#: templates/account/email.html:74
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
@@ -532,22 +536,26 @@ msgstr ""
 msgid "Password Reset"
 msgstr ""
 
-#: templates/account/password_reset.html:19
+#: templates/account/password_reset.html:20
+msgid "Please reset password by terminal"
+msgstr ""
+
+#: templates/account/password_reset.html:22
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
 
-#: templates/account/password_reset.html:24
+#: templates/account/password_reset.html:27
 msgid "Reset My Password"
 msgstr ""
 
-#: templates/account/password_reset.html:28
+#: templates/account/password_reset.html:31
 msgid ""
 "\n"
-"            Please contact us if you have any trouble resetting your "
+"                Please contact us if you have any trouble resetting your "
 "password.\n"
-"        "
+"            "
 msgstr ""
 
 #: templates/account/password_reset_done.html:16
@@ -593,7 +601,7 @@ msgid "Signup"
 msgstr ""
 
 #: templates/account/signup.html:11 templates/account/signup.html:28
-#: templates/funhome/_navbar.html:51 templates/socialaccount/signup.html:13
+#: templates/funhome/_navbar.html:48 templates/socialaccount/signup.html:13
 #: templates/socialaccount/signup.html:28
 msgid "Sign Up"
 msgstr ""
@@ -700,20 +708,20 @@ msgid "Are you sure you want to delete"
 msgstr ""
 
 #: templates/eduhub/content_delete.html:22
-#: templates/eduhub/content_list.html:33 templates/eduhub/label_delete.html:52
-#: templates/eduhub/label_list.html:38
+#: templates/eduhub/content_list.html:35 templates/eduhub/label_delete.html:52
+#: templates/eduhub/label_list.html:40
 msgid "Delete"
 msgstr ""
 
-#: templates/eduhub/content_list.html:16 templates/eduhub/label_list.html:17
+#: templates/eduhub/content_list.html:17 templates/eduhub/label_list.html:17
 msgid "Add"
 msgstr ""
 
-#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:35
+#: templates/eduhub/content_list.html:31 templates/eduhub/label_list.html:37
 msgid "View"
 msgstr ""
 
-#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:37
+#: templates/eduhub/content_list.html:34 templates/eduhub/label_list.html:39
 msgid "Edit"
 msgstr ""
 
@@ -738,11 +746,11 @@ msgstr ""
 msgid "Eduhub labels"
 msgstr ""
 
-#: templates/eduhub/label_list.html:20
+#: templates/eduhub/label_list.html:21
 msgid "Mine"
 msgstr ""
 
-#: templates/eduhub/label_list.html:22
+#: templates/eduhub/label_list.html:23
 msgid "All"
 msgstr ""
 
@@ -759,6 +767,10 @@ msgstr ""
 
 #: templates/funhome/_footer.html:22
 msgid "Privacy"
+msgstr ""
+
+#: templates/funhome/_footer.html:25
+msgid "Developer"
 msgstr ""
 
 #: templates/funhome/_footer_language.html:22
@@ -865,23 +877,19 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/funhome/_navbar.html:29
-msgid "Developer"
-msgstr ""
-
-#: templates/funhome/_navbar.html:33
+#: templates/funhome/_navbar.html:30
 msgid "Message"
 msgstr ""
 
-#: templates/funhome/_navbar.html:47
+#: templates/funhome/_navbar.html:44
 msgid "Hello"
 msgstr ""
 
-#: templates/funhome/_navbar.html:48
+#: templates/funhome/_navbar.html:45
 msgid "Log Out"
 msgstr ""
 
-#: templates/funhome/_navbar.html:50
+#: templates/funhome/_navbar.html:47
 msgid "Log In"
 msgstr ""
 

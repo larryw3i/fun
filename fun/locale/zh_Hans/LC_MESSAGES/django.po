@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 06:17+0000\n"
-"PO-Revision-Date: 2019-11-27 19:42+0800\n"
+"POT-Creation-Date: 2019-11-27 15:01+0000\n"
+"PO-Revision-Date: 2019-11-27 23:02+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -105,35 +105,39 @@ msgstr "备注"
 msgid "Is content legal"
 msgstr "合法"
 
-#: eduhub/views.py:52
+#: eduhub/views.py:53
 msgid "Cover image is required"
 msgstr "未选择封面图片"
 
-#: eduhub/views.py:56
+#: eduhub/views.py:57
 msgid "Image allowed only"
 msgstr "只能选择图片"
 
-#: eduhub/views.py:61
+#: eduhub/views.py:62
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:173
+#: eduhub/views.py:93
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr "页数不是最后一页也不是数字哦."
+
+#: eduhub/views.py:196
 msgid "Content file is required"
 msgstr "未选择内容文件"
 
-#: eduhub/views.py:178
+#: eduhub/views.py:201
 msgid "The length of video file should be less than"
 msgstr "视频文件应该小于"
 
-#: eduhub/views.py:183
+#: eduhub/views.py:206
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
-#: fun/settings.py:196
+#: fun/settings.py:197
 msgid "English"
 msgstr "English"
 
-#: fun/settings.py:197
+#: fun/settings.py:198
 msgid "中文简体"
 msgstr "中文简体"
 
@@ -299,49 +303,49 @@ msgstr "邮箱地址"
 msgid "The following e-mail addresses are associated with your account:"
 msgstr "以下邮箱地址关联你的账号:"
 
-#: templates/account/email.html:27
+#: templates/account/email.html:28
 msgid "Verified"
 msgstr "已验证"
 
-#: templates/account/email.html:29
+#: templates/account/email.html:30
 msgid "Unverified"
 msgstr "未验证"
 
-#: templates/account/email.html:33
+#: templates/account/email.html:34
 msgid "Primary"
 msgstr "常用"
 
-#: templates/account/email.html:42
+#: templates/account/email.html:43
 msgid "Make Primary"
 msgstr "改为常用"
 
-#: templates/account/email.html:43
+#: templates/account/email.html:44
 msgid "Re-send Verification"
 msgstr "重新发送"
 
-#: templates/account/email.html:44 templates/socialaccount/connections.html:39
+#: templates/account/email.html:45 templates/socialaccount/connections.html:39
 msgid "Remove"
 msgstr "移除"
 
-#: templates/account/email.html:52
+#: templates/account/email.html:53
 msgid "Warning:"
 msgstr "警告:"
 
-#: templates/account/email.html:53
+#: templates/account/email.html:54
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr "你还没有设置邮箱地址哦!  添加可用的邮箱地址然后重置密码吧."
 
-#: templates/account/email.html:59
+#: templates/account/email.html:60
 msgid "Add E-mail Address"
 msgstr "添加邮箱地址"
 
-#: templates/account/email.html:64
+#: templates/account/email.html:65
 msgid "Add E-mail"
 msgstr "添加邮箱"
 
-#: templates/account/email.html:73
+#: templates/account/email.html:74
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr "确定要移除吗?"
 
@@ -568,22 +572,26 @@ msgstr "更改密码"
 msgid "Password Reset"
 msgstr "重置密码"
 
-#: templates/account/password_reset.html:19
+#: templates/account/password_reset.html:20
+msgid "Please reset password by terminal"
+msgstr "请在终端修改密码"
+
+#: templates/account/password_reset.html:22
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr "忘记密码了? 填写电子邮箱然后发送重置密码邮件."
 
-#: templates/account/password_reset.html:24
+#: templates/account/password_reset.html:27
 msgid "Reset My Password"
 msgstr "重置密码"
 
-#: templates/account/password_reset.html:28
+#: templates/account/password_reset.html:31
 msgid ""
 "\n"
-"            Please contact us if you have any trouble resetting your "
+"                Please contact us if you have any trouble resetting your "
 "password.\n"
-"        "
+"            "
 msgstr ""
 "\n"
 "            如果重置密码失败请联系我们.\n"
@@ -638,7 +646,7 @@ msgid "Signup"
 msgstr "注册"
 
 #: templates/account/signup.html:11 templates/account/signup.html:28
-#: templates/funhome/_navbar.html:51 templates/socialaccount/signup.html:13
+#: templates/funhome/_navbar.html:48 templates/socialaccount/signup.html:13
 #: templates/socialaccount/signup.html:28
 msgid "Sign Up"
 msgstr "注册"
@@ -766,20 +774,20 @@ msgid "Are you sure you want to delete"
 msgstr "确定要删除"
 
 #: templates/eduhub/content_delete.html:22
-#: templates/eduhub/content_list.html:33 templates/eduhub/label_delete.html:52
-#: templates/eduhub/label_list.html:38
+#: templates/eduhub/content_list.html:35 templates/eduhub/label_delete.html:52
+#: templates/eduhub/label_list.html:40
 msgid "Delete"
 msgstr "删除"
 
-#: templates/eduhub/content_list.html:16 templates/eduhub/label_list.html:17
+#: templates/eduhub/content_list.html:17 templates/eduhub/label_list.html:17
 msgid "Add"
 msgstr "添加"
 
-#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:35
+#: templates/eduhub/content_list.html:31 templates/eduhub/label_list.html:37
 msgid "View"
 msgstr "查看"
 
-#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:37
+#: templates/eduhub/content_list.html:34 templates/eduhub/label_list.html:39
 msgid "Edit"
 msgstr "编辑"
 
@@ -804,11 +812,11 @@ msgstr "创建时间"
 msgid "Eduhub labels"
 msgstr "标签"
 
-#: templates/eduhub/label_list.html:20
+#: templates/eduhub/label_list.html:21
 msgid "Mine"
 msgstr "我的"
 
-#: templates/eduhub/label_list.html:22
+#: templates/eduhub/label_list.html:23
 msgid "All"
 msgstr "全部"
 
@@ -829,6 +837,10 @@ msgstr ""
 #: templates/funhome/_footer.html:22
 msgid "Privacy"
 msgstr "隐私"
+
+#: templates/funhome/_footer.html:25
+msgid "Developer"
+msgstr "开发者"
 
 #: templates/funhome/_footer_language.html:22
 msgid "language"
@@ -934,23 +946,19 @@ msgstr "默认"
 msgid "Home"
 msgstr "主页"
 
-#: templates/funhome/_navbar.html:29
-msgid "Developer"
-msgstr "开发者"
-
-#: templates/funhome/_navbar.html:33
+#: templates/funhome/_navbar.html:30
 msgid "Message"
 msgstr "消息"
 
-#: templates/funhome/_navbar.html:47
+#: templates/funhome/_navbar.html:44
 msgid "Hello"
 msgstr "你好"
 
-#: templates/funhome/_navbar.html:48
+#: templates/funhome/_navbar.html:45
 msgid "Log Out"
 msgstr "退出"
 
-#: templates/funhome/_navbar.html:50
+#: templates/funhome/_navbar.html:47
 msgid "Log In"
 msgstr "登录"
 
