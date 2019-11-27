@@ -78,7 +78,7 @@ class LabelListView(ListView):
 
     def get_queryset(self):
         print( self.request.COOKIES.get('is_label_list_mine', False) )
-        if self.request.COOKIES.get('is_label_list_mine', False):
+        if ( not self.request.user.is_authenticated )  or self.request.COOKIES.get('is_label_list_mine', False):
             return  Label.objects.filter( is_legal = True )
         else:
             return Label.objects.filter( is_legal = True,  author = self.request.user)  # super().get_queryset()
