@@ -183,7 +183,7 @@ class ContentCreateView( LoginRequiredMixin,  CreateView ):
         return super().form_valid(form)
 
 
-class ContentDetailView(DetailView):
+class ContentDetailView( DetailView ):
 
     model = Content
     form_class = ContentModelForm

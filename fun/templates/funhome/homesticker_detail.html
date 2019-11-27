@@ -25,7 +25,7 @@
     {% endif  %}
     
     <hr/>
-    <p class="text-right small">{{ homesticker.promulgator.author }}</p>
+    <p class="text-right " ><a href="{% url 'funuser:funuser_detail' user=homesticker.promulgator.id %}">{{ homesticker.promulgator }}</a> </p>
     <p class="text-right small">{{ homesticker.promulgating_date }}</p>
     <hr/>
     <p class="small">

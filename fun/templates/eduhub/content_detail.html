@@ -26,7 +26,8 @@
     {% endif  %}
     
     <hr/>
-    <p class="text-right small">{{ content.label.author }}</p>
+
+    <p class="text-right " ><a href="{% url 'funuser:funuser_detail' user=content.label.author.id %}">{{ content.label.author }}</a> </p> 
     <p class="text-right small">{{ content.uploading_date }}</p>
     <hr/>
     <p class="small">

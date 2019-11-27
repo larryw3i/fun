@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-26 05:46+0000\n"
+"POT-Creation-Date: 2019-11-27 01:31+0000\n"
 "PO-Revision-Date: 2019-11-22 17:57+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -45,6 +45,11 @@ msgstr ""
 #: eduhub/modelforms.py:38 eduhub/models.py:42
 msgid "Content file"
 msgstr ""
+
+
+#: custom add
+msgid "E-mail"
+msgstr "邮箱地址"
 
 #: eduhub/modelforms.py:43 funhome/modelforms.py:26
 msgid "content file, pdf and video file is allowed only"
@@ -521,23 +526,23 @@ msgid "Change Password"
 msgstr ""
 
 #: templates/account/password_reset.html:7
-#: templates/account/password_reset.html:12
+#: templates/account/password_reset.html:13
 #: templates/account/password_reset_done.html:6
 #: templates/account/password_reset_done.html:9
 msgid "Password Reset"
 msgstr ""
 
-#: templates/account/password_reset.html:18
+#: templates/account/password_reset.html:19
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
 
-#: templates/account/password_reset.html:23
+#: templates/account/password_reset.html:24
 msgid "Reset My Password"
 msgstr ""
 
-#: templates/account/password_reset.html:27
+#: templates/account/password_reset.html:28
 msgid ""
 "\n"
 "            Please contact us if you have any trouble resetting your "
