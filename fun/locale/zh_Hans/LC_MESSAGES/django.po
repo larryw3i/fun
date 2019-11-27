@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 03:02+0000\n"
-"PO-Revision-Date: 2019-11-27 11:08+0800\n"
+"POT-Creation-Date: 2019-11-27 06:17+0000\n"
+"PO-Revision-Date: 2019-11-27 14:17+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -117,15 +117,15 @@ msgstr "只能选择图片"
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:168
+#: eduhub/views.py:173
 msgid "Content file is required"
 msgstr "未选择内容文件"
 
-#: eduhub/views.py:173
+#: eduhub/views.py:178
 msgid "The length of video file should be less than"
 msgstr "视频文件应该小于"
 
-#: eduhub/views.py:178
+#: eduhub/views.py:183
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
@@ -767,7 +767,7 @@ msgstr "确定要删除"
 
 #: templates/eduhub/content_delete.html:22
 #: templates/eduhub/content_list.html:33 templates/eduhub/label_delete.html:52
-#: templates/eduhub/label_list.html:31
+#: templates/eduhub/label_list.html:38
 msgid "Delete"
 msgstr "删除"
 
@@ -775,11 +775,11 @@ msgstr "删除"
 msgid "Add"
 msgstr "添加"
 
-#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:28
+#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:35
 msgid "View"
 msgstr "查看"
 
-#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:30
+#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:37
 msgid "Edit"
 msgstr "编辑"
 
@@ -803,6 +803,14 @@ msgstr "创建时间"
 #: templates/eduhub/label_list.html:16
 msgid "Eduhub labels"
 msgstr "标签"
+
+#: templates/eduhub/label_list.html:20
+msgid "Mine"
+msgstr "我的"
+
+#: templates/eduhub/label_list.html:22
+msgid "All"
+msgstr "全部"
 
 #: templates/eduhub/label_update.html:22
 msgid "cover"

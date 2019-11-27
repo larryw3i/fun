@@ -19,10 +19,13 @@
     $(document).on('click', `.theme-dropdown-menu a` , (event) =>{
         changeTheme(event);
     });
+
+    $(document).on('click', `#id_label_list_view_mine_only` , (event) =>{
+        refreshLabelList(event);
+    });
     
     $(document).on('click', `.language-dropdown-menu .language-dropdown-item` , (event) =>{
-        $(`#language_form input[name='language']`).val(event.target.dataset.language);
-        $(`#language_form`).submit();
+        $(`#language_form input[name='language']`).val(event.target.dataset.language); $(`#language_form`).submit();
     });
     $(document).on('click', `[click-to]` , (event) =>{
         $(`${$(event.currentTarget).attr('click-to')}`).click();
@@ -46,6 +49,17 @@
         document.querySelectorAll(`input[type='date']`).forEach( ( value, key, parent )=>{
             if(value.hasAttribute('value')) value.setAttribute(  'value',   value.getAttribute('value').replace(/\//g , '-') );
         } );
+    }
+
+    /**
+     * 
+     * @param { JQuery.ChangeEvent<Document, undefined, any, any> } event 
+     */
+    function refreshLabelList( event )
+    {
+        is_label_list_mine = Boolean( Cookies.get('is_label_list_mine') );
+        Cookies.set( 'is_label_list_mine' , is_label_list_mine?'':'1' , { expires: 365 } );
+        location.reload();
     }
 
     function setTimeZone()

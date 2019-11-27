@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 03:02+0000\n"
+"POT-Creation-Date: 2019-11-27 06:17+0000\n"
 "PO-Revision-Date: 2019-11-22 17:57+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -118,15 +118,15 @@ msgstr ""
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:168
+#: eduhub/views.py:173
 msgid "Content file is required"
 msgstr ""
 
-#: eduhub/views.py:173
+#: eduhub/views.py:178
 msgid "The length of video file should be less than"
 msgstr ""
 
-#: eduhub/views.py:178
+#: eduhub/views.py:183
 msgid "The length of pdf file should be less than"
 msgstr ""
 
@@ -702,7 +702,7 @@ msgstr ""
 
 #: templates/eduhub/content_delete.html:22
 #: templates/eduhub/content_list.html:33 templates/eduhub/label_delete.html:52
-#: templates/eduhub/label_list.html:31
+#: templates/eduhub/label_list.html:38
 msgid "Delete"
 msgstr ""
 
@@ -710,11 +710,11 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:28
+#: templates/eduhub/content_list.html:29 templates/eduhub/label_list.html:35
 msgid "View"
 msgstr ""
 
-#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:30
+#: templates/eduhub/content_list.html:32 templates/eduhub/label_list.html:37
 msgid "Edit"
 msgstr ""
 
@@ -737,6 +737,14 @@ msgstr ""
 
 #: templates/eduhub/label_list.html:16
 msgid "Eduhub labels"
+msgstr ""
+
+#: templates/eduhub/label_list.html:20
+msgid "Mine"
+msgstr ""
+
+#: templates/eduhub/label_list.html:22
+msgid "All"
 msgstr ""
 
 #: templates/eduhub/label_update.html:22

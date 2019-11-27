@@ -96,15 +96,6 @@ img.preview
   animation: carousel_item_img_animation 5s infinite alternate;
 }
 
-.eduhub-label-card
-{
-  line-height: 5px;
-}
-
-.eduhub-content-card
-{
-  line-height:12px;
-}
 
 .custom-control-label
 {

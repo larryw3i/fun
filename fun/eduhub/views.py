@@ -76,14 +76,20 @@ class LabelListView(ListView):
     paginate_by = 5
     paginate_orphans = 1
 
+    def get_queryset(self):
+        print( self.request.COOKIES.get('is_label_list_mine', False) )
+        if self.request.COOKIES.get('is_label_list_mine', False):
+            return  Label.objects.filter( is_legal = True )
+        else:
+            return Label.objects.filter( is_legal = True,  author = self.request.user)  # super().get_queryset()
+
     def render_to_response(self, context, **response_kwargs):
         response = super().render_to_response(context, **response_kwargs)
         response.set_cookie('page', self.request.GET.get('page', 1))
         return response
 
     def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        context_data['max_left_item_count'] = 2
+        context_data = super().get_context_data(**kwargs) 
         return context_data
 
 
@@ -140,7 +146,6 @@ class ContentListView(ListView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['max_left_item_count'] = 2
         context_data['label'] = self.kwargs['label']
         return context_data
 
