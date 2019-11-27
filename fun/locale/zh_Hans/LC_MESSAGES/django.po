@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-27 03:02+0000\n"
-"PO-Revision-Date: 2019-11-27 11:03+0800\n"
+"PO-Revision-Date: 2019-11-27 11:08+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: eduhub/apps.py:9 templates/funhome/_navbar.html:26
 msgid "Eduhub"
-msgstr "资源"
+msgstr "教育"
 
 #: eduhub/modelforms.py:16 eduhub/models.py:25
 msgid "Label name"
@@ -51,11 +51,11 @@ msgstr "内容文件只能为pdf或视频哦"
 
 #: eduhub/models.py:21
 msgid "Eduhub label"
-msgstr "教资标签"
+msgstr "分类标签"
 
 #: eduhub/models.py:22
 msgid "Eduhub  labels"
-msgstr "教资标签"
+msgstr "分类标签"
 
 #: eduhub/models.py:26
 msgid "Label comment"
@@ -79,7 +79,7 @@ msgstr "合法"
 
 #: eduhub/models.py:36
 msgid "Eduhub content"
-msgstr "教资 内容"
+msgstr "内容"
 
 #: eduhub/models.py:37 templates/eduhub/content_list.html:15
 msgid "Eduhub contents"
@@ -802,7 +802,7 @@ msgstr "创建时间"
 
 #: templates/eduhub/label_list.html:16
 msgid "Eduhub labels"
-msgstr "Eduhub标签"
+msgstr "标签"
 
 #: templates/eduhub/label_update.html:22
 msgid "cover"
