@@ -138,6 +138,9 @@ static/libs/js-cookie/
 ## You should minify it maybe
 static/libs/pdfjs-2.2.228-dist/
 
+## STATIC_FILES
+staticfiles/
+
 # end static files
 
 # migrations
