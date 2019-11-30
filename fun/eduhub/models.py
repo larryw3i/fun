@@ -21,6 +21,9 @@ class Label(models.Model):
         verbose_name = _('Eduhub label') 
         verbose_name_plural = _('Eduhub  labels')
 
+    def __str__(self):
+        return self.name
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     name = models.CharField(  max_length = 64, blank = False,  verbose_name =_('Label name') )
     comment = models.CharField(   max_length  = 64,   verbose_name =_('Label comment') )
@@ -35,6 +38,9 @@ class Content(models.Model):
     class Meta:
         verbose_name = _('Eduhub content')
         verbose_name_plural = _('Eduhub contents')
+
+    def __str__(self):
+        return self.title
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     label = models.ForeignKey( to = Label, on_delete= models.CASCADE , null=True,  verbose_name =_('Content label')  )
