@@ -43,7 +43,7 @@
                             <span class="custom-control-label" for="id_is_birth_date_outward">{% trans 'is outward' %}?</span>
                         </s>
                     </label>
-                    {{ form.birth_date }}
+                    <input type="date" name="birth_date" value='{{ form.birth_date.value|date:"Y-m-d" }}' class="form-control" id="{{ form.birth_date.id_for_label }}">
                 </div>
                 
         

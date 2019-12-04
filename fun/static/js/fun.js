@@ -1,7 +1,6 @@
 (function(){
     $(document).ready(()=>{
-        setTimeZone();
-        setDateValueFormat();
+        setTimeZone(); 
     });
 
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
@@ -43,14 +42,7 @@
     $(document).on('click', `.click-to-url` , (event) =>{
         window.location = event.currentTarget.dataset.url;
     });
-
-    function setDateValueFormat()
-    {
-        document.querySelectorAll(`input[type='date']`).forEach( ( value, key, parent )=>{
-            if(value.hasAttribute('value')) value.setAttribute(  'value',   value.getAttribute('value').replace(/\//g , '-') );
-        } );
-    }
-
+ 
     /**
      * 
      * @param { JQuery.ChangeEvent<Document, undefined, any, any> } event 
