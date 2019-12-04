@@ -20,6 +20,8 @@ from .apps import EduhubConfig
 from .modelforms import ContentModelForm, LabelModelForm
 from .models import Content, Label, content_name, label_name
 from django.core.paginator import InvalidPage
+from datetime import datetime
+import pytz
 
 # Create your views here.
 
@@ -191,7 +193,19 @@ class ContentCreateView( LoginRequiredMixin,  CreateView ):
         return initial
 
     def form_valid(self, form):
+ 
+        headmost_five = Content.objects.filter( label__author = self.request.user ).order_by('-uploading_date')[:5]
+
+        if len( headmost_five ) > 4 and (  datetime.now(pytz.timezone('UTC'))   - headmost_five[4].uploading_date ).total_seconds()/3600 < 2.8  :
+            form.add_error('content_file',  _('Frequently request')+" !")
+            return render(self.request, content_create_template, context={'form': form})
+
+        if  not form.instance.content_file :
+            form.add_error('content_file',  _('Content file is required')+" !")
+            return render(self.request, content_create_template, context={'form': form})
+
         content_file = form.instance.content_file.file
+        
         if not content_file:
             form.add_error('content_file',  _('Content file is required'))
             return render(self.request, content_create_template, context={'form': form})
