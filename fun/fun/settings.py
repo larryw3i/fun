@@ -50,11 +50,12 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'imagekit',
+    'ckeditor',
     
     'allauth',
     'allauth.account',
 
-    'compressor',
+    # 'compressor',
 
     'funhome.apps.FunhomeConfig',
     'funfile.apps.FunfileConfig',

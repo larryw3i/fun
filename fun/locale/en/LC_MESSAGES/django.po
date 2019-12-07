@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 15:01+0000\n"
+"POT-Creation-Date: 2019-12-04 11:26+0000\n"
 "PO-Revision-Date: 2019-11-22 17:57+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Eduhub"
 msgstr ""
 
-#: eduhub/modelforms.py:16 eduhub/models.py:25
+#: eduhub/modelforms.py:16 eduhub/models.py:28
 msgid "Label name"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Label"
 msgstr ""
 
-#: eduhub/modelforms.py:38 eduhub/models.py:42
+#: eduhub/modelforms.py:38 eduhub/models.py:48
 msgid "Content file"
 msgstr ""
 
@@ -58,79 +58,83 @@ msgstr ""
 msgid "Eduhub  labels"
 msgstr ""
 
-#: eduhub/models.py:26
+#: eduhub/models.py:29
 msgid "Label comment"
 msgstr ""
 
-#: eduhub/models.py:27
+#: eduhub/models.py:30
 msgid "Label cover"
 msgstr ""
 
-#: eduhub/models.py:28
+#: eduhub/models.py:31
 msgid "Label creating date"
 msgstr ""
 
-#: eduhub/models.py:29
+#: eduhub/models.py:32
 msgid "Label author"
 msgstr ""
 
-#: eduhub/models.py:30
+#: eduhub/models.py:33
 msgid "Is label legal"
 msgstr ""
 
-#: eduhub/models.py:36
+#: eduhub/models.py:39
 msgid "Eduhub content"
 msgstr ""
 
-#: eduhub/models.py:37 templates/eduhub/content_list.html:15
+#: eduhub/models.py:40 templates/eduhub/content_list.html:15
 msgid "Eduhub contents"
 msgstr ""
 
-#: eduhub/models.py:40
+#: eduhub/models.py:46
 msgid "Content label"
 msgstr ""
 
-#: eduhub/models.py:41
+#: eduhub/models.py:47
 msgid "Content title"
 msgstr ""
 
-#: eduhub/models.py:43
+#: eduhub/models.py:49
 msgid "Content uploading date"
 msgstr ""
 
-#: eduhub/models.py:44
+#: eduhub/models.py:50
 msgid "Content comment"
 msgstr ""
 
-#: eduhub/models.py:45
+#: eduhub/models.py:51
 msgid "Is content legal"
 msgstr ""
 
-#: eduhub/views.py:53
+#: eduhub/views.py:55
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:57
+#: eduhub/views.py:59
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:62
+#: eduhub/views.py:64
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:93
+#: eduhub/views.py:95
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr ""
 
-#: eduhub/views.py:196
+#: eduhub/views.py:200
+msgid "Frequently request"
+msgstr ""
+
+#: eduhub/views.py:204 eduhub/views.py:210
 msgid "Content file is required"
 msgstr ""
 
-#: eduhub/views.py:201
+#: eduhub/views.py:215
 msgid "The length of video file should be less than"
 msgstr ""
 
-#: eduhub/views.py:206
+#: eduhub/views.py:220
 msgid "The length of pdf file should be less than"
 msgstr ""
 
@@ -915,7 +919,7 @@ msgid "last page"
 msgstr "last"
 
 #: templates/funhome/home.html:64
-msgid "View more"
+msgid "View more homestickers"
 msgstr ""
 
 #: templates/funhome/homesticker_detail.html:13

@@ -1,18 +1,14 @@
 
         
 {% load static %}
-
-{% load compress %}
+ 
 
 {% load funtag %}
+ 
 
-{% compress css %}
+<link rel="stylesheet" href="{% static 'css/fun.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/keyframes.css' %}"/>
 
-    <link rel="stylesheet" href="{% static 'css/fun.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/keyframes.css' %}"/>
-    
-    <link rel="stylesheet" href="{% get_current_theme_url %}"/>
+<link rel="stylesheet" href="{% get_current_theme_url %}"/>
 
-    <style>html{overflow-y:scroll;}</style>
-
-{% endcompress %}
+<style>html{overflow-y:scroll;}</style>

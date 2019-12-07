@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-27 15:01+0000\n"
-"PO-Revision-Date: 2019-11-27 23:02+0800\n"
+"POT-Creation-Date: 2019-12-04 11:26+0000\n"
+"PO-Revision-Date: 2019-12-04 19:27+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Eduhub"
 msgstr "教育"
 
-#: eduhub/modelforms.py:16 eduhub/models.py:25
+#: eduhub/modelforms.py:16 eduhub/models.py:28
 msgid "Label name"
 msgstr "标签名"
 
@@ -41,7 +41,7 @@ msgstr "标题名"
 msgid "Label"
 msgstr "标签"
 
-#: eduhub/modelforms.py:38 eduhub/models.py:42
+#: eduhub/modelforms.py:38 eduhub/models.py:48
 msgid "Content file"
 msgstr "内容文件"
 
@@ -57,79 +57,83 @@ msgstr "分类标签"
 msgid "Eduhub  labels"
 msgstr "分类标签"
 
-#: eduhub/models.py:26
+#: eduhub/models.py:29
 msgid "Label comment"
 msgstr "备注"
 
-#: eduhub/models.py:27
+#: eduhub/models.py:30
 msgid "Label cover"
 msgstr "封面"
 
-#: eduhub/models.py:28
+#: eduhub/models.py:31
 msgid "Label creating date"
 msgstr "创建时间"
 
-#: eduhub/models.py:29
+#: eduhub/models.py:32
 msgid "Label author"
 msgstr "作者"
 
-#: eduhub/models.py:30
+#: eduhub/models.py:33
 msgid "Is label legal"
 msgstr "合法"
 
-#: eduhub/models.py:36
+#: eduhub/models.py:39
 msgid "Eduhub content"
 msgstr "内容"
 
-#: eduhub/models.py:37 templates/eduhub/content_list.html:15
+#: eduhub/models.py:40 templates/eduhub/content_list.html:15
 msgid "Eduhub contents"
 msgstr "内容"
 
-#: eduhub/models.py:40
+#: eduhub/models.py:46
 msgid "Content label"
 msgstr "标签"
 
-#: eduhub/models.py:41
+#: eduhub/models.py:47
 msgid "Content title"
 msgstr "标题"
 
-#: eduhub/models.py:43
+#: eduhub/models.py:49
 msgid "Content uploading date"
 msgstr "上传时间"
 
-#: eduhub/models.py:44
+#: eduhub/models.py:50
 msgid "Content comment"
 msgstr "备注"
 
-#: eduhub/models.py:45
+#: eduhub/models.py:51
 msgid "Is content legal"
 msgstr "合法"
 
-#: eduhub/views.py:53
+#: eduhub/views.py:55
 msgid "Cover image is required"
 msgstr "未选择封面图片"
 
-#: eduhub/views.py:57
+#: eduhub/views.py:59
 msgid "Image allowed only"
 msgstr "只能选择图片"
 
-#: eduhub/views.py:62
+#: eduhub/views.py:64
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:93
+#: eduhub/views.py:95
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr "页数不是最后一页也不是数字哦."
 
-#: eduhub/views.py:196
+#: eduhub/views.py:200
+msgid "Frequently request"
+msgstr "频繁访问"
+
+#: eduhub/views.py:204 eduhub/views.py:210
 msgid "Content file is required"
 msgstr "未选择内容文件"
 
-#: eduhub/views.py:201
+#: eduhub/views.py:215
 msgid "The length of video file should be less than"
 msgstr "视频文件应该小于"
 
-#: eduhub/views.py:206
+#: eduhub/views.py:220
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
@@ -983,8 +987,8 @@ msgid "last page"
 msgstr "最后页"
 
 #: templates/funhome/home.html:64
-msgid "View more"
-msgstr "更多"
+msgid "View more homestickers"
+msgstr "更多贴纸"
 
 #: templates/funhome/homesticker_detail.html:13
 msgid "Sticker detail"
@@ -1114,6 +1118,9 @@ msgstr ""
 "      你将使用 %(provider_name)s 账号登录\n"
 "      %(site_name)s. :\n"
 "    "
+
+#~ msgid "View more"
+#~ msgstr "更多"
 
 #~ msgid "E-mail"
 #~ msgstr "邮箱地址"
