@@ -55,8 +55,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
 
-    # 'compressor',
-
     'funhome.apps.FunhomeConfig',
     'funfile.apps.FunfileConfig',
     'eduhub.apps.EduhubConfig',
