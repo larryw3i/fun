@@ -159,6 +159,8 @@ funfile/files/
 uwsgi.ini
 
 static/CACHE/
+# VIRTUAL_ENV
+venv/
 
 # LOG
 funlog/django_fun.log
