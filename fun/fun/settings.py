@@ -50,7 +50,9 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'imagekit',
+
     'ckeditor',
+    'ckeditor_uploader',
     
     'allauth',
     'allauth.account',
@@ -227,7 +229,22 @@ STATICFILES_FINDERS = [
 
 MEDIA_URL = '/funfile/get_file/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile','files') 
-
+CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
+            ['NumberedList', 'BulletedList', "Indent", "Outdent", 'JustifyLeft', 'JustifyCenter',
+                'JustifyRight', 'JustifyBlock'],
+            ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source"],
+            ["Maximize"]
+        ],
+        'height': 300,  
+        'width': '100%', 
+        'toolbarCanCollapse': True,
+    },
+}
+CKEDITOR_IMAGE_BACKEND = 'pillow'
 # END MEDIA_FILE
 
 # FILE_STORAGE
@@ -269,6 +286,7 @@ LOGGING = {
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
+            'filters': [ 'require_debug_false' if DEBUG else 'require_debug_true' ] ,
         }
     },
     'loggers': {
@@ -281,3 +299,10 @@ LOGGING = {
 } 
 
 # END_LOGGING
+
+
+# BLEACH
+BLEACH_TAGS = ['a','h1', 'h2', 'h3','h4', 'h5','h6','p','span','img',]
+BLEACH_ATTRIBUTES = ['class','style', 'alt', 'title','data-*', 'width','height','weight','src','href',]
+BLEACH_STYLES = ['font','font-size', 'align', 'width','height', 'weight','padding-*','margin-*','border','border-radius','background-color','color', 'text-align']
+# ENDBLEACH

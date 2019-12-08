@@ -33,6 +33,8 @@ urlpatterns = [
 
     path('funuser/', include('funuser.urls')),
 
+    path('ckeditor/', include('fun._ckeditor_uploader_url')),
+
     # path('django_bfm/', include('django_bfm.urls')),
     
 

@@ -15,4 +15,10 @@ urlpatterns = [
     path('content_detail/<uuid:pk>', views.ContentDetailView.as_view(), name = 'content_detail'),
     path('content_delete/<uuid:pk>', views.ContentDeleteView.as_view(), name = 'content_delete'),
     path('content_update/<uuid:pk>', views.ContentUpdateView.as_view(), name = 'content_update'),
+
+    path('funcontent_list/<uuid:label>', views.FuncontentListView.as_view(), name = 'funcontent_list'),
+    path('funcontent_create/<uuid:label>', views.FuncontentCreateView.as_view(), name = 'funcontent_create'),
+    path('funcontent_detail/<uuid:pk>', views.FuncontentDetailView.as_view(), name = 'funcontent_detail'),
+    path('funcontent_delete/<uuid:pk>', views.FuncontentDeleteView.as_view(), name = 'funcontent_delete'),
+    path('funcontent_update/<uuid:pk>', views.FuncontentUpdateView.as_view(), name = 'funcontent_update'),
 ]
