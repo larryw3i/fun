@@ -15,6 +15,7 @@ import sys
 from dotenv import find_dotenv,load_dotenv 
 from django.utils.translation import gettext_lazy as _
 
+
 load_dotenv( find_dotenv() )
 
 
@@ -181,8 +182,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE ='zh-hans'
-
 USE_TZ = True
 
 TIME_ZONE =  'UTC' # 'Asia/Shanghai' 
@@ -191,6 +190,10 @@ USE_I18N = True
 
 USE_L10N = True
 
+LANGUAGE_CODE ='zh-hans'
+
+LANGUAGE_COOKIE_AGE = sys.maxsize
+LANGUAGE_COOKIE_SECURE = bool( os.environ.get('LANGUAGE_COOKIE_SECURE' , True)  )
 
 LANGUAGES = (
     ('en', _('English')),

@@ -10,6 +10,8 @@ import pytz
 from django.utils import timezone
 from datetime import datetime
 
+from dotenv import find_dotenv,load_dotenv 
+load_dotenv( find_dotenv() )
 
 
 register = template.Library()
@@ -31,4 +33,13 @@ def get_current_theme_url(context):
 @register.simple_tag(takes_context=True)
 def get_current_theme_name(context):
     return _(context['request'].COOKIES.get('theme', 'default') )
+
+
+@register.simple_tag( )
+def get_beian_url():
+    return os.environ.get('BEIAN_URL','')
+
+@register.simple_tag( )
+def get_beian_text():
+    return os.environ.get('BEIAN_TEXT','')
 
