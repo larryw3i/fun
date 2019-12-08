@@ -59,8 +59,8 @@ class Content(models.Model):
 class Funcontent(models.Model):
 
     class Meta:
-        verbose_name = _('Eduhub content')
-        verbose_name_plural = _('Eduhub contents')
+        verbose_name = _('Eduhub content')+f"({_('NEW')})"
+        verbose_name_plural = _('Eduhub contents')+f"({_('NEW')})"
 
     def __str__(self):
         return self.title
