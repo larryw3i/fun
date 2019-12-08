@@ -24,6 +24,8 @@ from django.core.paginator import InvalidPage
 from datetime import datetime
 import pytz
 
+from fun.fundef import default_bleach_clean
+
 # Create your views here.
 
 max_cover_size = 500*1024
@@ -357,7 +359,9 @@ class FuncontentCreateView( LoginRequiredMixin,  CreateView ):
             form.add_error('content',  _('Frequently request')+" !")
             return render(self.request, content_create_template, context={'form': form})
 
-        form.instance.content = bleach.clean( form.instance.content , tags= settings.BLEACH_TAGS, attributes= settings.BLEACH_ATTRIBUTES, styles= settings.BLEACH_STYLES)
+
+        form.instance.content = default_bleach_clean( form.instance.content )
+        # form.instance.content = bleach.clean( form.instance.content , tags= settings.BLEACH_TAGS, attributes= settings.BLEACH_ATTRIBUTES, styles= settings.BLEACH_STYLES)
         self.label_id = form.instance.label.id
         form.instance.author = self.request.user
 
@@ -412,7 +416,7 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
         return super().post(request, *args, **kwargs)
 
     def form_valid(self, form):
-        form.instance.content = bleach.clean( form.instance.content , tags= settings.BLEACH_TAGS, attributes= settings.BLEACH_ATTRIBUTES, styles= settings.BLEACH_STYLES)
+        form.instance.content = default_bleach_clean( form.instance.content ) # bleach.clean( form.instance.content , tags= settings.BLEACH_TAGS, attributes= settings.BLEACH_ATTRIBUTES, styles= settings.BLEACH_STYLES)
         return super().form_valid(form)
 
 

@@ -1,12 +1,15 @@
 
 import math
 from hurry import filesize
-from .models import Homesticker
+from .models import Homesticker, Funhomesticker
 from django import forms
 from django.forms import ModelForm, ImageField
 from django.utils.translation import gettext_lazy as _
 from djangovalidators.validators import FileSizeValidator
 
+from ckeditor.fields import RichTextField
+
+from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadingField
 
 class HomestickerModelForm(ModelForm):
     
@@ -28,6 +31,28 @@ class HomestickerModelForm(ModelForm):
 
         widgets = {
             'content_file': forms.FileInput( attrs={ 'class': 'preview-pdf preview-video', 'accept':'video/*, .pdf' } ),
+            'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
+        }
+
+    
+ 
+
+class FunhomestickerModelForm(ModelForm):
+    
+    class Meta:
+        
+        model = Funhomesticker
+        fields = ['title', 'cover' ,'content', 'comment'] 
+        
+        labels = {
+            'title': _('Sticker title'),
+            'cover': _('Sticker Cover'),
+            'content': _('Sticker content'),
+            'comment': _('Sticker Comment'),
+        }
+
+
+        widgets = {
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
         }
 

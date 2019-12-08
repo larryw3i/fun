@@ -236,7 +236,7 @@ CKEDITOR_CONFIGS = {
             ["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
             ['NumberedList', 'BulletedList', "Indent", "Outdent", 'JustifyLeft', 'JustifyCenter',
                 'JustifyRight', 'JustifyBlock'],
-            ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source"],
+            ["Image",'Video', "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source"],
             ["Maximize"]
         ],
         'height': 300,  

@@ -9,6 +9,7 @@ from djangovalidators.validators import FileSizeValidator
 from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadingField
 
+
 class LabelModelForm(ModelForm):
     class Meta:
         model = Label
@@ -46,17 +47,13 @@ class ContentModelForm(ModelForm):
         }
 
         widgets = {
+            'title':forms.TextInput( attrs = { 'autocomplete':'off' }),
             #'content_file':RichTextUploadingFormField(), # forms.FileInput( attrs={ 'class': 'preview-pdf preview-video', 'accept':'video/*, .pdf' } ),
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
             'label': forms.HiddenInput()
         }
 
-    
 
-        
-        
-
-        
 
 class FuncontentModelForm(ModelForm):
     
@@ -74,7 +71,7 @@ class FuncontentModelForm(ModelForm):
 
 
         widgets = {
-            #'content_file':RichTextUploadingFormField(), # forms.FileInput( attrs={ 'class': 'preview-pdf preview-video', 'accept':'video/*, .pdf' } ),
+            'title':forms.TextInput( attrs = { 'autocomplete':'off' }),
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
             'label': forms.HiddenInput()
         }
