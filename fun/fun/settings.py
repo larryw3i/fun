@@ -15,7 +15,6 @@ import sys
 from dotenv import find_dotenv,load_dotenv 
 from django.utils.translation import gettext_lazy as _
 
-
 load_dotenv( find_dotenv() )
 
 
@@ -192,7 +191,7 @@ USE_L10N = True
 
 LANGUAGE_CODE ='zh-hans'
 
-LANGUAGE_COOKIE_AGE = sys.maxsize
+LANGUAGE_COOKIE_AGE = 10*365*24*60*60
 LANGUAGE_COOKIE_SECURE = bool( os.environ.get('LANGUAGE_COOKIE_SECURE' , True)  )
 
 LANGUAGES = (
