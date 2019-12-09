@@ -26,7 +26,7 @@
                 <div class="card bg-transparent text-white click-to-url homesticker-list-card" data-url="{% url 'funhomesticker_detail' pk=funhomesticker.id %}">
                     <img src="{% url 'funfile:get_file' file_id=funhomesticker.cover.name %}" class="card-img" alt="cover">
                     <div class="card-img-overlay">
-                        <div class="funhomesticker-list-card-text">
+                        <div class="homesticker-list-card-text">
 
                             <p class="card-title text-center">{{ funhomesticker.title }}</p>
                             <p class="card-subtitle text-center d-none d-md-block">{{ funhomesticker.subtitle }}</p>
