@@ -30,7 +30,10 @@
     </p> 
 
     {% ifequal funhomesticker.promulgator  request.user  %}
-        <a class="float-right btn btn-sm btn-info" href="/admin/funhome/funhomesticker/{{ funhomesticker.id }}">{% trans 'Edit' %}</a>
+
+        <div class="col col-12 text-right" >
+            <a class="float-right btn btn-sm btn-info" href="/admin/funhome/funhomesticker/{{ funhomesticker.id }}">{% trans 'Edit' %}</a>
+        </div>
     {% endifequal %}
  
 
