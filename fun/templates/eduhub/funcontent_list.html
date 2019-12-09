@@ -13,10 +13,12 @@
 
 {% block content %} 
     <h2 class="text-center">{% trans 'Eduhub contents' %}</h2>
-    {% if is_author %}
-        <a href="{% url 'eduhub:funcontent_create' label=label %}" class="btn btn-sm btn-outline-info float-right">{% trans 'Add' %}</a>
-    {% endif %}
     <hr/>
+    {% if is_author %}
+        <div class="col col-12 text-right" >
+            <a href="{% url 'eduhub:funcontent_create' label=label %}" class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
+        </div>
+    {% endif %}
     <div class="row">
             {% for funcontent in funcontents %} 
 

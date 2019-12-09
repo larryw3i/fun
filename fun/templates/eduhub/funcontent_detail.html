@@ -30,7 +30,7 @@
         {{ funcontent.comment }}
     </p>
     {% ifequal funcontent.label.author request.user %} 
-        <div class="float-right">
+        <div class="col col-12 text-center" >
             <a href="{% url 'eduhub:funcontent_update'  pk=funcontent.id %}" class="btn btn-sm btn-info">{% trans 'Edit' %}</a>
             <a href="{% url 'eduhub:funcontent_delete'  pk=funcontent.id %}" class="btn btn-sm btn-danger">{% trans 'Delete' %}</a>
         </div>

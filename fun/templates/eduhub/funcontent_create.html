@@ -14,7 +14,7 @@
 {% block content %} 
 
     <div class="row text-center ">
-        <div class="col col-auto ">
+        <div class="col   offset-xl-2  col-auto ">
             <form method="post"  enctype="multipart/form-data" class="">
         
                 {% csrf_token %}
@@ -23,7 +23,9 @@
                 
                 {{ form|crispy }}
         
-                <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
+                <div class="col col-12 text-center" >
+                    <input class="btn btn-outline-info " type="submit" value="{% trans 'Upload' %}" />
+                </div>
         
             </form>    
         </div>

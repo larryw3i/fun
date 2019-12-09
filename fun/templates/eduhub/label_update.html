@@ -27,8 +27,10 @@
                 {% csrf_token %}
                 
                 {{ form|crispy }}
-        
-                <input class="btn btn-outline-info float-right" type="submit" value="{% trans 'Upload' %}" />
+                
+                <div class="col col-12 text-right" >
+                    <input class="btn btn-outline-info " type="submit" value="{% trans 'Upload' %}" />
+                </div>
         
             </form>    
         </div>

@@ -236,11 +236,12 @@ CKEDITOR_CONFIGS = {
             ["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
             ['NumberedList', 'BulletedList', "Indent", "Outdent", 'JustifyLeft', 'JustifyCenter',
                 'JustifyRight', 'JustifyBlock'],
-            ["Image",'Video', "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source"],
+            ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source"],
             ["Maximize"]
         ],
         'height': 300,  
         'width': '100%', 
+        'tabSpaces': 4,
         'toolbarCanCollapse': True,
     },
 }
