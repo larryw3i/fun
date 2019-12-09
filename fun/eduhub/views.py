@@ -309,9 +309,7 @@ class ContentUpdateView( LoginRequiredMixin,  UpdateView ):
 
 
 class FuncontentListView( ListView ):
-
     model = Funcontent
-
     form_class = FuncontentModelForm
     template_name = funcontent_list_template
     context_object_name = 'funcontents'
