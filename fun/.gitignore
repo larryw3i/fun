@@ -123,23 +123,25 @@ dmypy.json
 
 # static files
 ## https://github.com/thomaspark/bootswatch/
-static/libs/bootswatch/
+staticfiles/libs/bootswatch/
 ## https://github.com/twbs/bootstrap
-static/libs/bootstrap-4.3.1-dist/
+staticfiles/libs/bootstrap-4.3.1-dist/
 ## https://github.com/jquery/jquery
-static/libs/jquery-3.4.1/
+staticfiles/libs/jquery-3.4.1/
 ## https://github.com/FezVrasta/popper.js
-static/libs/popper.js-1.16.0/
+staticfiles/libs/popper.js-1.16.0/
 ## https://github.com/jquery-validation/jquery-validation
-static/libs/jquery-validation-1.19.1/
+staticfiles/libs/jquery-validation-1.19.1/
 ## https://github.com/js-cookie/js-cookie
-static/libs/js-cookie/
+staticfiles/libs/js-cookie/
 ## https://github.com/mozilla/pdf.js
 ## You should minify it maybe
-static/libs/pdfjs-2.2.228-dist/
+staticfiles/libs/pdfjs-2.2.228-dist/
+# DJANGO-CKEDITOR
+staticfiles/ckeditor/
 
 ## STATIC_FILES
-staticfiles/
+# staticfiles/
 
 # end static files
 
@@ -164,6 +166,9 @@ venv/
 
 # LOG
 funlog/django_fun.log
+
+# SETTINGS.JSON
+.vscode/settings.json
 
 
 # End of https://www.gitignore.io/api/django

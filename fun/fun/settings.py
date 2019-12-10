@@ -212,16 +212,16 @@ LOCALE_PATHS=(
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ] 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-    'compressor.finders.CompressorFinder',
 ]
 
 
@@ -303,7 +303,7 @@ LOGGING = {
 
 
 # BLEACH
-BLEACH_TAGS = ['a','h1', 'h2', 'h3','h4', 'h5','h6','p','span','img',]
+BLEACH_TAGS = ['a','h1', 'h2', 'h3','h4', 'h5','h6','p','span','img','table','tr', 'td']
 BLEACH_ATTRIBUTES = ['class','style', 'alt', 'title','data-*', 'width','height','weight','src','href',]
-BLEACH_STYLES = ['font','font-size', 'align', 'width','height', 'weight','padding-*','margin-*','border','border-radius','background-color','color', 'text-align']
+BLEACH_STYLES = ['font','font-size', 'align', 'width','height', 'weight','padding-*','margin-*','border','border-color','border-radius','background-color','color', 'text-align']
 # ENDBLEACH
