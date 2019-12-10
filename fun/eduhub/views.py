@@ -1,11 +1,14 @@
 import math
 import os
-import bleach
+from datetime import datetime
 
+import bleach
 import magic
+import pytz
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core import paginator
 from django.core.exceptions import ValidationError
+from django.core.paginator import InvalidPage
 from django.http import Http404
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
@@ -16,15 +19,12 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from hurry import filesize
 
 from fun import funvalue, settings
+from fun.fundef import default_bleach_clean
 
 from .apps import EduhubConfig
-from .modelforms import ContentModelForm, LabelModelForm, FuncontentModelForm
-from .models import Content, Label, content_name, label_name, Funcontent, funcontent_name
-from django.core.paginator import InvalidPage
-from datetime import datetime
-import pytz
-
-from fun.fundef import default_bleach_clean
+from .modelforms import ContentModelForm, FuncontentModelForm, LabelModelForm
+from .models import (Content, Funcontent, Label, content_name, funcontent_name,
+                     label_name)
 
 # Create your views here.
 

@@ -39,7 +39,7 @@ body
 
 .carousel-control-next,.carousel-control-prev
 {
-  background-color: rgba(229, 92, 247, 0.404);
+  background-color: rgba(229, 92, 247, 0.068);
   border-radius: 10px;
 }
 
@@ -72,7 +72,6 @@ img.preview
 
  .homesticker-carousel-caption
  {
-  background-color: rgba(185, 37, 173, 0.37);
   border-radius: 5px;
   cursor: pointer;
   animation: homesticker_carousel_caption 5s  infinite alternate;
@@ -80,7 +79,8 @@ img.preview
 
  .homesticker-carousel-caption *
  {
-   color: rgb(255, 60, 190);
+   color: rgb(76, 0, 199);
+   font-weight: 800;
  }
   
  .homesticker-list-card-text

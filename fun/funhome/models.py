@@ -20,6 +20,9 @@ class Homesticker(models.Model):
         verbose_name = _('Home sticker')
         verbose_name_plural = _('Home sticker')
 
+    def __str__(self):
+        return self.title
+        
     id = models.UUIDField( primary_key=True, default= uuid.uuid4, editable=False,  )
     title = models.CharField( max_length = 32 ,  verbose_name = _('Sticker title'))
     subtitle = models.TextField( max_length = 64, verbose_name = _('Sticker subtitle') )
@@ -35,6 +38,9 @@ class Funhomesticker(models.Model):
     class Meta:
         verbose_name = _('Home sticker')+f'({_("NEW")})'
         verbose_name_plural = _('Home stickers')+f'({_("NEW")})'
+
+    def __str__(self):
+        return self.title
 
     id = models.UUIDField( primary_key=True, default= uuid.uuid4, editable=False,  )
     title = models.CharField( max_length = 32 ,  verbose_name = _('Sticker title'))

@@ -1,7 +1,7 @@
 
 import math
 from hurry import filesize
-from .models import Label, Content, Funcontent
+from .models import Label, Content, Funcontent, Funclassification
 from django import forms
 from django.forms import ModelForm, ImageField
 from django.utils.translation import gettext_lazy as _
@@ -77,6 +77,3 @@ class FuncontentModelForm(ModelForm):
         }
 
     
-
-        
-        
