@@ -14,6 +14,7 @@
         <title>{% block title %}x-dove{% endblock title %}</title>
         
         {% include 'funhome/_css.html' %}
+        {% block optionalcss %}{% endblock optionalcss %}
 
     </head>
 
@@ -32,5 +33,7 @@
     {% include 'funhome/_footer.html' %}
 
     {% include 'funhome/_js.html' %}
+
+    {% block optionaljs %}{% endblock optionaljs %}
         
 </html>

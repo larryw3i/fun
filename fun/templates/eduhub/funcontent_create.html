@@ -11,6 +11,10 @@
 
 {% block title %}Home{% endblock title %}
 
+{% block optionalcss %}
+    <link href="{% static 'node_modules/jquery-editable-select/dist/jquery-editable-select.min.css' %}" rel="stylesheet"/>
+{% endblock optionalcss %}
+
 {% block content %} 
 
     <div class="row text-center ">
@@ -32,9 +36,12 @@
         
     </div>
 
-    {% include 'eduhub/_pdf.js.html' %}
-
     {% include 'funhome/_ckeditor.html' %}
 
 
 {% endblock %}
+
+{% block optionaljs %}
+    <script src="{% static 'node_modules/jquery-editable-select/dist/jquery-editable-select.min.js' %}"></script>
+    <script src="{% static 'eduhub_funcontent.js' %}"></script>
+{% endblock optionaljs %}

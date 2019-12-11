@@ -140,6 +140,9 @@ staticfiles/libs/pdfjs-2.2.228-dist/
 # DJANGO-CKEDITOR
 staticfiles/ckeditor/
 
+# NODE_MODULES
+staticfiles/node_modules
+
 ## STATIC_FILES
 # staticfiles/
 

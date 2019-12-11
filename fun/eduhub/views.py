@@ -9,6 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core import paginator
 from django.core.exceptions import ValidationError
 from django.core.paginator import InvalidPage
+from django.db.models import F, Q
 from django.http import Http404
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
@@ -23,8 +24,8 @@ from fun.fundef import default_bleach_clean
 
 from .apps import EduhubConfig
 from .modelforms import ContentModelForm, FuncontentModelForm, LabelModelForm
-from .models import (Content, Funcontent, Label, content_name, funcontent_name,
-                     label_name)
+from .models import (Content, Funclassification, Funcontent, Label,
+                     content_name, funcontent_name, label_name)
 
 # Create your views here.
 
@@ -339,10 +340,8 @@ class FuncontentCreateView( LoginRequiredMixin,  CreateView ):
 
     def __init__(self):
         self.label_id = None
+        self.fields['classification'].queryset = Funclassification.objects.filter( level = 1 )
         super().__init__()
-
-    def get_success_url(self):
-        return reverse('eduhub:funcontent_list', kwargs={'label': self.label_id})
 
     def get_initial(self):
         initial = super().get_initial()
@@ -357,13 +356,14 @@ class FuncontentCreateView( LoginRequiredMixin,  CreateView ):
             form.add_error('content',  _('Frequently request')+" !")
             return render(self.request, content_create_template, context={'form': form})
 
-
         form.instance.content = default_bleach_clean( form.instance.content )
-        # form.instance.content = bleach.clean( form.instance.content , tags= settings.BLEACH_TAGS, attributes= settings.BLEACH_ATTRIBUTES, styles= settings.BLEACH_STYLES)
         self.label_id = form.instance.label.id
         form.instance.author = self.request.user
 
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('eduhub:funcontent_list', kwargs={'label': self.label_id})
 
 
 class FuncontentDetailView( DetailView ):
@@ -414,7 +414,7 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
         return super().post(request, *args, **kwargs)
 
     def form_valid(self, form):
-        form.instance.content = default_bleach_clean( form.instance.content ) # bleach.clean( form.instance.content , tags= settings.BLEACH_TAGS, attributes= settings.BLEACH_ATTRIBUTES, styles= settings.BLEACH_STYLES)
+        form.instance.content = default_bleach_clean( form.instance.content )
         return super().form_valid(form)
 
 

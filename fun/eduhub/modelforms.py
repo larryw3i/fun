@@ -8,6 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from djangovalidators.validators import FileSizeValidator
 from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadingField
+from django.contrib.admin.widgets import ForeignKeyRawIdWidget
 
 
 class LabelModelForm(ModelForm):
@@ -55,12 +56,14 @@ class ContentModelForm(ModelForm):
 
 
 
-class FuncontentModelForm(ModelForm):
+class FuncontentModelForm( ModelForm ):
+
     
     class Meta:
         
         model = Funcontent
-        fields = ['title', 'content' ,'comment', 'label'] 
+        fields = ['title', 'content' ,'comment', 'label' ,'classification'] 
+
         
         labels = {
             'title': _('Title name'),
