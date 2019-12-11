@@ -143,6 +143,8 @@ staticfiles/ckeditor/
 # NODE_MODULES
 staticfiles/node_modules
 
+!staticfiles/node_modules/pdfjs-dist/web/viewer.html
+
 ## STATIC_FILES
 # staticfiles/
 
