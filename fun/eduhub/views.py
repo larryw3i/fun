@@ -340,13 +340,17 @@ class FuncontentCreateView( LoginRequiredMixin,  CreateView ):
 
     def __init__(self):
         self.label_id = None
-        self.fields['classification'].queryset = Funclassification.objects.filter( level = 1 )
         super().__init__()
 
     def get_initial(self):
         initial = super().get_initial()
         initial['label'] = self.kwargs['label']
         return initial
+
+    def get_form(self, form_class=None):
+        form = super().get_form(form_class=form_class)
+        form.fields['classification'].queryset = Funclassification.objects.filter( level = 1 )
+        return form
 
     def form_valid(self, form):
  
@@ -371,6 +375,11 @@ class FuncontentDetailView( DetailView ):
     model = Funcontent
     form_class = FuncontentModelForm
     template_name = funcontent_detail_template
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['classification'] = get_content_classification( Funcontent.objects.get( id = self.kwargs['pk'] ).classification.id )
+        return context_data
 
  
 class FuncontentDeleteView( LoginRequiredMixin,  DeleteView ):
@@ -420,3 +429,18 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
 
     def get_success_url(self):
         return reverse('eduhub:funcontent_list', kwargs={'label': self.label_id})
+
+
+def get_content_classification( id ):
+    classification = Funclassification.objects.get( id = id )
+    if not classification.parent : return str( classification )
+    threshold = 0
+    all_classification = ''
+    while( classification.parent and threshold < 50 ):
+        all_classification =   classification.name if threshold == 0 else  classification.name +' / '+ all_classification
+        threshold = threshold + 1
+        classification = Funclassification.objects.get( id = classification.parent.id )
+        if not classification.parent:
+            all_classification =  classification.name +' / '+ all_classification
+
+    return all_classification
