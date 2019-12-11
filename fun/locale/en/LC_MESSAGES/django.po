@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-09 04:07+0000\n"
+"POT-Creation-Date: 2019-12-11 15:39+0000\n"
 "PO-Revision-Date: 2019-11-22 17:57+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,35 +22,35 @@ msgstr ""
 msgid "Eduhub"
 msgstr ""
 
-#: eduhub/modelforms.py:19 eduhub/models.py:32
+#: eduhub/modelforms.py:20 eduhub/models.py:32
 msgid "Label name"
 msgstr ""
 
-#: eduhub/modelforms.py:20
+#: eduhub/modelforms.py:21
 msgid "Cover image"
 msgstr ""
 
-#: eduhub/modelforms.py:21 eduhub/modelforms.py:42 eduhub/modelforms.py:69
+#: eduhub/modelforms.py:22 eduhub/modelforms.py:43 eduhub/modelforms.py:72
 msgid "Comment"
 msgstr ""
 
-#: eduhub/modelforms.py:39 eduhub/modelforms.py:66
+#: eduhub/modelforms.py:40 eduhub/modelforms.py:69
 msgid "Title name"
 msgstr ""
 
-#: eduhub/modelforms.py:40 eduhub/modelforms.py:67
+#: eduhub/modelforms.py:41 eduhub/modelforms.py:70
 msgid "Label"
 msgstr ""
 
-#: eduhub/modelforms.py:41 eduhub/models.py:52
+#: eduhub/modelforms.py:42 eduhub/models.py:52
 msgid "Content file"
 msgstr ""
 
-#: eduhub/modelforms.py:46 funhome/modelforms.py:29
+#: eduhub/modelforms.py:47 funhome/modelforms.py:29
 msgid "content file, pdf and video file is allowed only"
 msgstr ""
 
-#: eduhub/modelforms.py:68
+#: eduhub/modelforms.py:71
 msgid "Content"
 msgstr ""
 
@@ -82,65 +82,101 @@ msgstr ""
 msgid "Is label legal"
 msgstr ""
 
-#: eduhub/models.py:43 eduhub/models.py:62
+#: eduhub/models.py:43 eduhub/models.py:79
 msgid "Eduhub content"
 msgstr ""
 
-#: eduhub/models.py:44 eduhub/models.py:63
+#: eduhub/models.py:44 eduhub/models.py:80
 #: templates/eduhub/content_list.html:15
 #: templates/eduhub/funcontent_list.html:15
 msgid "Eduhub contents"
 msgstr ""
 
-#: eduhub/models.py:50 eduhub/models.py:69
+#: eduhub/models.py:50 eduhub/models.py:86
 msgid "Content label"
 msgstr ""
 
-#: eduhub/models.py:51 eduhub/models.py:70
+#: eduhub/models.py:51 eduhub/models.py:87
 msgid "Content title"
 msgstr ""
 
-#: eduhub/models.py:54 eduhub/models.py:73
+#: eduhub/models.py:54 eduhub/models.py:90
 msgid "Content uploading date"
 msgstr ""
 
-#: eduhub/models.py:55 eduhub/models.py:74
+#: eduhub/models.py:55 eduhub/models.py:91
 msgid "Content comment"
 msgstr ""
 
-#: eduhub/models.py:56 eduhub/models.py:75
+#: eduhub/models.py:56 eduhub/models.py:92
 msgid "Is content legal"
 msgstr ""
 
-#: eduhub/views.py:64
+#: eduhub/models.py:62
+msgid "Eduhub classification"
+msgstr ""
+
+#: eduhub/models.py:63
+msgid "Eduhub classifications"
+msgstr ""
+
+#: eduhub/models.py:69
+msgid "Parent classification"
+msgstr ""
+
+#: eduhub/models.py:70
+msgid "Classification name"
+msgstr ""
+
+#: eduhub/models.py:71
+msgid "Classification level"
+msgstr ""
+
+#: eduhub/models.py:72
+msgid "Classification creating date"
+msgstr ""
+
+#: eduhub/models.py:73
+msgid "Classification creating user"
+msgstr ""
+
+#: eduhub/models.py:74
+msgid "Is classification disabled"
+msgstr ""
+
+#: eduhub/models.py:89
+msgid "classification"
+msgstr ""
+
+#: eduhub/views.py:65
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:68
+#: eduhub/views.py:69
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:73
+#: eduhub/views.py:74
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:104
+#: eduhub/views.py:105
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr ""
 
-#: eduhub/views.py:209 eduhub/views.py:359
+#: eduhub/views.py:210 eduhub/views.py:360
 msgid "Frequently request"
 msgstr ""
 
-#: eduhub/views.py:213 eduhub/views.py:219
+#: eduhub/views.py:214 eduhub/views.py:220
 msgid "Content file is required"
 msgstr ""
 
-#: eduhub/views.py:224
+#: eduhub/views.py:225
 msgid "The length of video file should be less than"
 msgstr ""
 
-#: eduhub/views.py:229
+#: eduhub/views.py:230
 msgid "The length of pdf file should be less than"
 msgstr ""
 
@@ -156,8 +192,8 @@ msgstr ""
 msgid "Fun home"
 msgstr ""
 
-#: funhome/modelforms.py:22 funhome/modelforms.py:48 funhome/models.py:24
-#: funhome/models.py:40
+#: funhome/modelforms.py:22 funhome/modelforms.py:48 funhome/models.py:27
+#: funhome/models.py:46
 msgid "Sticker title"
 msgstr ""
 
@@ -165,7 +201,7 @@ msgstr ""
 msgid "Sticker Cover"
 msgstr ""
 
-#: funhome/modelforms.py:24 funhome/models.py:28
+#: funhome/modelforms.py:24 funhome/models.py:31
 msgid "Sticker content file"
 msgstr ""
 
@@ -177,35 +213,35 @@ msgstr ""
 msgid "Sticker content"
 msgstr ""
 
-#: funhome/models.py:20 funhome/models.py:21 funhome/models.py:36
+#: funhome/models.py:20 funhome/models.py:21 funhome/models.py:39
 msgid "Home sticker"
 msgstr ""
 
-#: funhome/models.py:25 funhome/models.py:41
+#: funhome/models.py:28 funhome/models.py:47
 msgid "Sticker subtitle"
 msgstr ""
 
-#: funhome/models.py:26 funhome/models.py:42
+#: funhome/models.py:29 funhome/models.py:48
 msgid "Sticker cover"
 msgstr ""
 
-#: funhome/models.py:27 funhome/models.py:43
+#: funhome/models.py:30 funhome/models.py:49
 msgid "Sticker promulgator"
 msgstr ""
 
-#: funhome/models.py:29 funhome/models.py:45
+#: funhome/models.py:32 funhome/models.py:51
 msgid "Sticker promulgating date"
 msgstr ""
 
-#: funhome/models.py:30 funhome/models.py:46
+#: funhome/models.py:33 funhome/models.py:52
 msgid "Sticker comment"
 msgstr ""
 
-#: funhome/models.py:31 funhome/models.py:47
+#: funhome/models.py:34 funhome/models.py:53
 msgid "Hidden"
 msgstr ""
 
-#: funhome/models.py:37
+#: funhome/models.py:40
 msgid "Home stickers"
 msgstr ""
 
@@ -705,7 +741,7 @@ msgid "change your e-mail address"
 msgstr ""
 
 #: templates/eduhub/content_create.html:35
-#: templates/eduhub/funcontent_create.html:27
+#: templates/eduhub/funcontent_create.html:31
 #: templates/eduhub/label_create.html:27 templates/eduhub/label_update.html:32
 #: templates/funuser/funuser_update.html:115
 msgid "Upload"
@@ -727,7 +763,7 @@ msgstr ""
 #: templates/eduhub/content_delete.html:22
 #: templates/eduhub/content_list.html:37
 #: templates/eduhub/funcontent_delete.html:22
-#: templates/eduhub/funcontent_detail.html:35
+#: templates/eduhub/funcontent_detail.html:39
 #: templates/eduhub/funcontent_list.html:37
 #: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:43
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
@@ -747,7 +783,7 @@ msgid "View"
 msgstr ""
 
 #: templates/eduhub/content_list.html:36
-#: templates/eduhub/funcontent_detail.html:34
+#: templates/eduhub/funcontent_detail.html:38
 #: templates/eduhub/funcontent_list.html:36 templates/eduhub/label_list.html:42
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
@@ -765,7 +801,7 @@ msgid "Preview"
 msgstr ""
 
 #: templates/eduhub/content_update.html:51
-#: templates/eduhub/funcontent_update.html:36
+#: templates/eduhub/funcontent_update.html:37
 msgid "Update"
 msgstr ""
 

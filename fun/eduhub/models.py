@@ -85,7 +85,6 @@ class Funcontent(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     label = models.ForeignKey( to = Label, on_delete= models.CASCADE , null=True,  verbose_name =_('Content label')  )
     title = models.CharField(  max_length = 64, blank = False ,  verbose_name =_('Content title') )
-    # content_file =  models.FileField(  upload_to = upload_to, blank = True,  verbose_name =_('Content file') )
     content = RichTextUploadingField()
     classification = models.ForeignKey( to= Funclassification, on_delete= models.SET_DEFAULT, default = None, null  = True, blank = True, verbose_name = _('classification') )
     uploading_date = models.DateTimeField(   auto_now_add = True,  verbose_name =_('Content uploading date') )

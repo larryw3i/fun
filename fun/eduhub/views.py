@@ -433,14 +433,11 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
 
 def get_content_classification( id ):
     classification = Funclassification.objects.get( id = id )
-    if not classification.parent : return str( classification )
     threshold = 0
-    all_classification = ''
-    while( classification.parent and threshold < 50 ):
-        all_classification =   classification.name if threshold == 0 else  classification.name +' / '+ all_classification
-        threshold = threshold + 1
+    classification_link = classification.name
+    while( classification.parent and threshold < 10 ):
         classification = Funclassification.objects.get( id = classification.parent.id )
-        if not classification.parent:
-            all_classification =  classification.name +' / '+ all_classification
+        classification_link = classification.name + ' / '+ classification_link
+        threshold = threshold + 1
 
-    return all_classification
+    return classification_link
