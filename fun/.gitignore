@@ -121,40 +121,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# static files
-## https://github.com/thomaspark/bootswatch/
-staticfiles/libs/bootswatch/
-## https://github.com/twbs/bootstrap
-staticfiles/libs/bootstrap-4.3.1-dist/
-## https://github.com/jquery/jquery
-staticfiles/libs/jquery-3.4.1/
-## https://github.com/FezVrasta/popper.js
-staticfiles/libs/popper.js-1.16.0/
-## https://github.com/jquery-validation/jquery-validation
-staticfiles/libs/jquery-validation-1.19.1/
-## https://github.com/js-cookie/js-cookie
-staticfiles/libs/js-cookie/
-## https://github.com/mozilla/pdf.js
-## You should minify it maybe
-staticfiles/libs/pdfjs-2.2.228-dist/
-# DJANGO-CKEDITOR
-staticfiles/ckeditor/
-
-# NODE_MODULES
-staticfiles/node_modules
-
-!staticfiles/node_modules/pdfjs-dist/web/viewer.html
-
-## STATIC_FILES
-# staticfiles/
-
-# end static files
-
-# migrations
-**/migrations/
-
-# js npm
-static/js/node_modules/
 
 # files
 funfile/files/
@@ -162,10 +128,13 @@ funfile/files/
 # idea
 .idea/
 
+#################################
+
 # uwsgi.ini 
 uwsgi.ini
 
 static/CACHE/
+
 # VIRTUAL_ENV
 venv/
 
@@ -174,6 +143,16 @@ funlog/django_fun.log
 
 # SETTINGS.JSON
 .vscode/settings.json
+
+# NODE_MODULES
+staticfiles/node_modules
+
+# migrations
+**/migrations/
+
+staticfiles/admin/
+staticfiles/ckeditor/
+staticfiles/node_modules/
 
 
 # End of https://www.gitignore.io/api/django
