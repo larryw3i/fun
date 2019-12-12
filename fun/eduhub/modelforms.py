@@ -49,7 +49,6 @@ class ContentModelForm(ModelForm):
 
         widgets = {
             'title':forms.TextInput( attrs = { 'autocomplete':'off' }),
-            #'content_file':RichTextUploadingFormField(), # forms.FileInput( attrs={ 'class': 'preview-pdf preview-video', 'accept':'video/*, .pdf' } ),
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
             'label': forms.HiddenInput()
         }
@@ -66,17 +65,19 @@ class FuncontentModelForm( ModelForm ):
 
         
         labels = {
-            'title': _('Title name'),
+            'title': '',
             'label': _('Label'),
             'content': _('Content'),
             'comment': _('Comment'),
+            'classification':_('Content classification'),
         }
 
 
         widgets = {
-            'title':forms.TextInput( attrs = { 'autocomplete':'off' }),
+            'title':forms.TextInput( attrs = { 'autocomplete':'off',  'placeholder': _('Content title') ,'class':'text-center' }),
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
-            'label': forms.HiddenInput()
+            'label':forms.HiddenInput(),
+            'classification': forms.TextInput( attrs= {  'placeholder': _('classification : college/grade/semester/course') , 'class':'text-center' } ),
         }
 
     

@@ -11,13 +11,10 @@
 
 {% block title %}Home{% endblock title %}
 
-{% block optionalcss %}
-    <link href="{% static 'node_modules/jquery-editable-select/dist/jquery-editable-select.min.css' %}" rel="stylesheet"/>
-{% endblock optionalcss %}
 
 {% block content %} 
 
-    <div class="row text-center ">
+    <div class="row text-center mt-5">
         <div class="col   offset-xl-2  col-auto ">
             <form method="post"  enctype="multipart/form-data" class="">
         
@@ -40,8 +37,3 @@
 
 
 {% endblock %}
-
-{% block optionaljs %}
-    <script src="{% static 'node_modules/jquery-editable-select/dist/jquery-editable-select.min.js' %}"></script>
-    <script src="{% static 'eduhub_funcontent.js' %}"></script>
-{% endblock optionaljs %}

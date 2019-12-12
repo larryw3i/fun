@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-11 15:39+0000\n"
-"PO-Revision-Date: 2019-12-11 23:41+0800\n"
+"POT-Creation-Date: 2019-12-12 08:19+0000\n"
+"PO-Revision-Date: 2019-12-12 16:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -30,15 +30,15 @@ msgstr "标签名"
 msgid "Cover image"
 msgstr "封面图片"
 
-#: eduhub/modelforms.py:22 eduhub/modelforms.py:43 eduhub/modelforms.py:72
+#: eduhub/modelforms.py:22 eduhub/modelforms.py:43 eduhub/modelforms.py:71
 msgid "Comment"
 msgstr "备注"
 
-#: eduhub/modelforms.py:40 eduhub/modelforms.py:69
+#: eduhub/modelforms.py:40
 msgid "Title name"
 msgstr "标题"
 
-#: eduhub/modelforms.py:41 eduhub/modelforms.py:70
+#: eduhub/modelforms.py:41 eduhub/modelforms.py:69
 msgid "Label"
 msgstr "标签"
 
@@ -50,9 +50,17 @@ msgstr "内容文件"
 msgid "content file, pdf and video file is allowed only"
 msgstr "内容文件只能为pdf或视频哦"
 
-#: eduhub/modelforms.py:71
+#: eduhub/modelforms.py:70
 msgid "Content"
 msgstr "内容"
+
+#: eduhub/modelforms.py:76 eduhub/models.py:51 eduhub/models.py:87
+msgid "Content title"
+msgstr "标题"
+
+#: eduhub/modelforms.py:79
+msgid "classification : college/grade/semester/course"
+msgstr "分类如: (大学/中学/小学)/年级/学期/课程"
 
 #: eduhub/models.py:25
 msgid "Eduhub label"
@@ -82,12 +90,11 @@ msgstr "作者"
 msgid "Is label legal"
 msgstr "合法"
 
-#: eduhub/models.py:43 eduhub/models.py:79
+#: eduhub/models.py:43
 msgid "Eduhub content"
 msgstr "内容"
 
-#: eduhub/models.py:44 eduhub/models.py:80
-#: templates/eduhub/content_list.html:15
+#: eduhub/models.py:44 templates/eduhub/content_list.html:15
 #: templates/eduhub/funcontent_list.html:15
 msgid "Eduhub contents"
 msgstr "内容"
@@ -95,10 +102,6 @@ msgstr "内容"
 #: eduhub/models.py:50 eduhub/models.py:86
 msgid "Content label"
 msgstr "标签"
-
-#: eduhub/models.py:51 eduhub/models.py:87
-msgid "Content title"
-msgstr "标题"
 
 #: eduhub/models.py:54 eduhub/models.py:90
 msgid "Content uploading date"
@@ -144,8 +147,16 @@ msgstr "创建分类的用户"
 msgid "Is classification disabled"
 msgstr "禁用"
 
+#: eduhub/models.py:79
+msgid "Eduhub content (NEW)"
+msgstr "内容(新)"
+
+#: eduhub/models.py:80
+msgid "Eduhub contents (NEW)"
+msgstr "内容(新)"
+
 #: eduhub/models.py:89
-msgid "classification"
+msgid "Content classification"
 msgstr "分类"
 
 #: eduhub/views.py:65
@@ -807,7 +818,7 @@ msgid "change your e-mail address"
 msgstr "更改邮箱地址"
 
 #: templates/eduhub/content_create.html:35
-#: templates/eduhub/funcontent_create.html:31
+#: templates/eduhub/funcontent_create.html:28
 #: templates/eduhub/label_create.html:27 templates/eduhub/label_update.html:32
 #: templates/funuser/funuser_update.html:115
 msgid "Upload"
@@ -867,7 +878,7 @@ msgid "Preview"
 msgstr "预览"
 
 #: templates/eduhub/content_update.html:51
-#: templates/eduhub/funcontent_update.html:37
+#: templates/eduhub/funcontent_update.html:32
 msgid "Update"
 msgstr "更新"
 
@@ -876,6 +887,7 @@ msgid "Content details"
 msgstr "标题"
 
 #: templates/eduhub/label_delete.html:37
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:22
 msgid "Name"
 msgstr "标题名"
 
@@ -1018,6 +1030,8 @@ msgid "default"
 msgstr "默认"
 
 #: templates/funhome/_navbar.html:23
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/uwsgi.html:14
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:11
 msgid "Home"
 msgstr "主页"
 
@@ -1082,6 +1096,8 @@ msgid "View all"
 msgstr "查看全部"
 
 #: templates/funuser/_funuser_url.html:12
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:25
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:37
 msgid "Information"
 msgstr "用户信息"
 
@@ -2411,10 +2427,14 @@ msgid "Basic file manager"
 msgstr "Basic file manager"
 
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:28
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:184
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:33
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:212
 msgid "Actions"
 msgstr "Actions"
 
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:29
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:26
 msgid "Filename"
 msgstr "文件名"
 
@@ -2595,6 +2615,378 @@ msgstr "Just kill this dialog"
 msgid "Root directory"
 msgstr "根目录"
 
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/admin.py:8
+msgid "Enable selected Emperor's Vassals"
+msgstr "Enable selected Emperor's Vassals"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/admin.py:13
+msgid "Disable selected Emperor's Vassals"
+msgstr "Enable selected Emperor's Vassals"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:9
+msgid "INI file"
+msgstr "INI 文件"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:10
+msgid "YAML file"
+msgstr "YAML文件"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:11
+msgid "XML file"
+msgstr "XML文件"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:12
+msgid "JSON file"
+msgstr "JSON文件"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:27
+msgid "Name of uwsgi config file"
+msgstr "Name of uwsgi config file"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:33
+msgid "Extension"
+msgstr "Extension"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:39
+msgid "Config"
+msgstr "Config"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:40
+msgid "Config file blob"
+msgstr "Config file blob"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:44
+msgid "Unix Timestamp"
+msgstr "Unix Timestamp"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:45
+msgid "A number representing the modification time of this row in UNIX format"
+msgstr "A number representing the modification time of this row in UNIX format"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:50
+msgid "The UID of the vassal instance"
+msgstr "The UID of the vassal instance"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:51
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:58
+msgid "Required in Tyrant mode (secure multi-user hosting) mode only."
+msgstr "Required in Tyrant mode (secure multi-user hosting) mode only."
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:57
+msgid "The GID of the vassal instance"
+msgstr "The GID of the vassal instance"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:64
+msgid "Created at"
+msgstr "创建于"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:68
+msgid "Updated"
+msgstr "已更新"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:74
+msgid "Enabled"
+msgstr "启用"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:90
+msgid "Emperor's Vassal"
+msgstr "Emperor's Vassal"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/emperor/models.py:91
+msgid "Emperor's Vassals"
+msgstr "Emperor's Vassal"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/panels.py:10
+#: venv/lib/python3.7/site-packages/django_uwsgi/panels.py:11
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:5
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:13
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:20
+#: venv/lib/python3.7/site-packages/django_uwsgi/wagtail_hooks.py:36
+msgid "uWSGI Status"
+msgstr "uWSGI Status"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/panels.py:17
+#, python-format
+msgid "Version %s, %d Workers"
+msgstr "Version %s, %d Workers"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/panels.py:20
+msgid "uWSGI is missing =("
+msgstr "uWSGI is missing =("
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/stats.py:36
+#: venv/lib/python3.7/site-packages/django_uwsgi/stats.py:37
+msgid "disabled"
+msgstr "disabled"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/stats.py:37
+msgid "enabled"
+msgstr "enabled"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:3
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:17
+msgid "ERROR: uWSGI is not available!"
+msgstr "ERROR: uWSGI is not available!"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:19
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/uwsgi.html:16
+msgid "Status"
+msgstr "Status"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:23
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:44
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:66
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:41
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:62
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:88
+msgid "Option"
+msgstr "选项"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:24
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:45
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:67
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:42
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:63
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:89
+msgid "Value"
+msgstr "值"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:40
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:26
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:57
+msgid "Options"
+msgstr "选项"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:62
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:83
+msgid "Magic table"
+msgstr "Magic table"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:83
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:28
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:108
+msgid "Workers"
+msgstr "Workers"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:87
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:113
+msgid "id"
+msgstr "id"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:88
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:114
+msgid "pid"
+msgstr "pid"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:89
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:115
+msgid "status"
+msgstr "状态"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:90
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:136
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:116
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:166
+msgid "requests"
+msgstr "请求"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:91
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:137
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:117
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:167
+msgid "exceptions"
+msgstr "异常"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:92
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:118
+msgid "signals"
+msgstr "信号"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:93
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:119
+msgid "running time(ms)"
+msgstr "运行时间(毫秒)"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:94
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:120
+msgid "avg response time(ms)"
+msgstr "平均响应时间(毫秒)"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:95
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:121
+msgid "load"
+msgstr "加载"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:96
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:122
+msgid "last spawn"
+msgstr "结果"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:97
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:123
+msgid "respawn count"
+msgstr "respawn count"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:98
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:125
+msgid "address space (vsz)"
+msgstr "address space (vsz)"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:99
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:126
+msgid "resident memory (rss)"
+msgstr "占用内存 (rss)"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:126
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:29
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:155
+msgid "Applications"
+msgstr "应用"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:130
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:160
+msgid "#"
+msgstr "#"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:131
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:161
+msgid "modifier1"
+msgstr "modifier1"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:132
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:162
+msgid "mountpoint"
+msgstr "挂载点"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:133
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:163
+msgid "interpreter"
+msgstr "解释器"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:134
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:164
+msgid "callable"
+msgstr "可调用"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:135
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:165
+msgid "chdir"
+msgstr "chdir"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:162
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:31
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:191
+msgid "Spooler"
+msgstr "Spooler"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:166
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:196
+msgid "job filename"
+msgstr "job filename"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:167
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:197
+msgid "environment"
+msgstr "环境"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:188
+msgid "Send uWSGI Signal"
+msgstr "Send uWSGI Signal"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:189
+msgid "Send uWSGI Log message"
+msgstr "Send uWSGI Log message"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:197
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:218
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:224
+msgid "Signal number"
+msgstr "信号数"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:199
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:207
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:229
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:249
+msgid "Send"
+msgstr "发送"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:205
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:238
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:244
+msgid "Log message"
+msgstr "日志信息"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:216
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:259
+msgid "Gracefully reload uWSGI"
+msgstr "Gracefully reload uWSGI"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/panel.html:217
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:262
+msgid "Clear uWSGI cache"
+msgstr "Clear uWSGI cache"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/uwsgi.html:4
+msgid "uWSGI Stats"
+msgstr "uWSGI Stats"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/uwsgi.html:15
+msgid "uWSGI"
+msgstr "uWSGI"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_dashboard_item.html:4
+#, python-format
+msgid ""
+"\n"
+"        <span>%(total)s</span> uWSGI Worker\n"
+"    "
+msgid_plural ""
+"\n"
+"        <span>%(total)s</span> uWSGI Workers\n"
+"    "
+msgstr[0] ""
+"\n"
+"        <span>%(total)s</span> uWSGI Workers\n"
+"    "
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:12
+msgid "Settings"
+msgstr "设置"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:27
+msgid "Magic Table"
+msgstr "Magic Table"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/templates/uwsgi/wagtail_uwsgi.html:267
+msgid "uWSGI version"
+msgstr "uWSGI version"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:52
+msgid "uWSGI Cache cleared!"
+msgstr "uWSGI Cache cleared!"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:55
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:72
+msgid "The uWSGI master process is not active"
+msgstr "The uWSGI master process is not active"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:69
+msgid "uWSGI reloaded!"
+msgstr "uWSGI reloaded!"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:86
+msgid "uWSGI Log message has been sent!"
+msgstr "uWSGI Log message has been sent!"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:89
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:106
+msgid "uWSGI is not available!"
+msgstr "uWSGI is not available!"
+
+#: venv/lib/python3.7/site-packages/django_uwsgi/views.py:103
+msgid "uWSGI signal has been sent!"
+msgstr "uWSGI signal has been sent!"
+
 #: venv/lib/python3.7/site-packages/djangovalidators/validators.py:17
 #, python-format
 msgid "%s is not an acceptable file type"
@@ -2613,6 +3005,9 @@ msgstr "Thumbnail"
 #, python-brace-format
 msgid "{something}"
 msgstr "{something}"
+
+#~ msgid "classification"
+#~ msgstr "分类"
 
 #~ msgid "View more homestickers"
 #~ msgstr "更多贴纸"

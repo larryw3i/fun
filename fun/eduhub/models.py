@@ -76,8 +76,8 @@ class Funclassification( models.Model ):
 class Funcontent(models.Model):
 
     class Meta:
-        verbose_name = _('Eduhub content')+f"({_('NEW')})"
-        verbose_name_plural = _('Eduhub contents')+f"({_('NEW')})"
+        verbose_name = _('Eduhub content (NEW)')
+        verbose_name_plural = _('Eduhub contents (NEW)')
 
     def __str__(self):
         return self.title
@@ -86,7 +86,7 @@ class Funcontent(models.Model):
     label = models.ForeignKey( to = Label, on_delete= models.CASCADE , null=True,  verbose_name =_('Content label')  )
     title = models.CharField(  max_length = 64, blank = False ,  verbose_name =_('Content title') )
     content = RichTextUploadingField()
-    classification = models.ForeignKey( to= Funclassification, on_delete= models.SET_DEFAULT, default = None, null  = True, blank = True, verbose_name = _('classification') )
+    classification = models.CharField( max_length = 64, blank = True , null = True,  verbose_name =_('Content classification') ) 
     uploading_date = models.DateTimeField(   auto_now_add = True,  verbose_name =_('Content uploading date') )
     comment = models.TextField(   max_length  = 64,  verbose_name =_('Content comment') )
     is_legal = models.BooleanField(   default = True,   verbose_name =_('Is content legal') )
