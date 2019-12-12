@@ -262,7 +262,12 @@ COMPRESS_ENABLED = bool( os.environ.get('COMPRESS_ENABLED') )
 
 # LOGGING 
 
-ADMINS = [( os.environ.get('ADMINS_NAME'), os.environ.get('ADMINS_EMAIL')), ]
+ADMINS = [ 
+    ( os.environ.get('ADMINS_NAME'), os.environ.get('ADMINS_EMAIL')), 
+]
+
+if len(os.environ.get('ADMINS_NAME_0' , '')) > 0: 
+    ADMINS.append( ( os.environ.get('ADMINS_NAME_0'), os.environ.get('ADMINS_EMAIL_0')) )
 
 MANAGERS = ADMINS
 
