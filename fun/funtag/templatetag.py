@@ -15,8 +15,8 @@ load_dotenv( find_dotenv() )
 
 
 register = template.Library()
-bootswatch_css_url =lambda theme: f'node_modules/bootswatch/dist/{theme}/bootstrap.min.css'
-bootstrap_css_url ='node_modules/bootstrap/dist/css/bootstrap.min.css'
+bootswatch_css_url = lambda theme: f'bootswatch/dist/{theme}/bootstrap.min.css'
+bootstrap_css_url = 'bootstrap/dist/css/bootstrap.min.css'
 
 @register.simple_tag(takes_context=True)
 def get_cookies(context, name, unquote_result=False):
@@ -27,7 +27,7 @@ def get_cookies(context, name, unquote_result=False):
 @register.simple_tag(takes_context=True)
 def get_current_theme_url(context):
     theme = context['request'].COOKIES.get('theme', 'default') 
-    return bootstrap_css_url if theme == 'default' else bootswatch_css_url( theme )
+    return '/static/node_modules/' + ( bootstrap_css_url if theme == 'default' else bootswatch_css_url( theme ) )
 
 
 @register.simple_tag(takes_context=True)
