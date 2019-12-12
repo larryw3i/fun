@@ -376,10 +376,6 @@ class FuncontentDetailView( DetailView ):
     form_class = FuncontentModelForm
     template_name = funcontent_detail_template
 
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        context_data['classification'] = get_content_classification( Funcontent.objects.get( id = self.kwargs['pk'] ).classification.id )
-        return context_data
 
  
 class FuncontentDeleteView( LoginRequiredMixin,  DeleteView ):
@@ -429,15 +425,3 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
 
     def get_success_url(self):
         return reverse('eduhub:funcontent_list', kwargs={'label': self.label_id})
-
-
-def get_content_classification( id ):
-    classification = Funclassification.objects.get( id = id )
-    threshold = 0
-    classification_link = classification.name
-    while( classification.parent and threshold < 10 ):
-        classification = Funclassification.objects.get( id = classification.parent.id )
-        classification_link = classification.name + ' / '+ classification_link
-        threshold = threshold + 1
-
-    return classification_link
