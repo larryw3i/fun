@@ -1,3 +1,6 @@
+
+////// COMMON
+
 (function(){
     $(document).ready(()=>{
         setTimeZone(); 

@@ -13,8 +13,10 @@
 
 
 {% block content %} 
-    <h2 class="text-center">{% trans 'Eduhub labels' %}</h2>
 
+    {% include 'eduhub/_search.html' %}
+
+    <h2 class="text-center">{% trans 'Eduhub labels' %}</h2>
     <hr/>
     <div class="col col-12 text-right" >
         <a href="{% url 'eduhub:label_create'  %}" class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
