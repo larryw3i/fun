@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-12 08:19+0000\n"
+"POT-Creation-Date: 2019-12-17 14:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,11 +53,15 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: eduhub/modelforms.py:76 eduhub/models.py:51 eduhub/models.py:87
+#: eduhub/modelforms.py:72 eduhub/models.py:89
+msgid "Content classification"
+msgstr ""
+
+#: eduhub/modelforms.py:77 eduhub/models.py:51 eduhub/models.py:87
 msgid "Content title"
 msgstr ""
 
-#: eduhub/modelforms.py:79
+#: eduhub/modelforms.py:80
 msgid "classification : college/grade/semester/course"
 msgstr ""
 
@@ -94,7 +98,7 @@ msgid "Eduhub content"
 msgstr ""
 
 #: eduhub/models.py:44 templates/eduhub/content_list.html:15
-#: templates/eduhub/funcontent_list.html:15
+#: templates/eduhub/funcontent_list.html:19
 msgid "Eduhub contents"
 msgstr ""
 
@@ -152,10 +156,6 @@ msgstr ""
 
 #: eduhub/models.py:80
 msgid "Eduhub contents (NEW)"
-msgstr ""
-
-#: eduhub/models.py:89
-msgid "Content classification"
 msgstr ""
 
 #: eduhub/views.py:65
@@ -667,7 +667,7 @@ msgid "Signup"
 msgstr ""
 
 #: templates/account/signup.html:11 templates/account/signup.html:28
-#: templates/funhome/_navbar.html:51 templates/socialaccount/signup.html:13
+#: templates/funhome/_navbar.html:50 templates/socialaccount/signup.html:13
 #: templates/socialaccount/signup.html:28
 msgid "Sign Up"
 msgstr ""
@@ -750,6 +750,66 @@ msgstr ""
 msgid "change your e-mail address"
 msgstr ""
 
+#: templates/eduhub/_search.html:12 templates/eduhub/_search.html:13
+msgid "What are you thinking about"
+msgstr ""
+
+#: templates/eduhub/_search.html:15
+msgid "search"
+msgstr ""
+
+#: templates/eduhub/_search.html:20
+msgid "filter"
+msgstr ""
+
+#: templates/eduhub/_search.html:30
+msgid "nursery"
+msgstr ""
+
+#: templates/eduhub/_search.html:31
+msgid "primary"
+msgstr ""
+
+#: templates/eduhub/_search.html:32 templates/eduhub/_search.html:40
+msgid "junior"
+msgstr ""
+
+#: templates/eduhub/_search.html:33 templates/eduhub/_search.html:42
+msgid "senior"
+msgstr ""
+
+#: templates/eduhub/_search.html:34
+msgid "collage"
+msgstr ""
+
+#: templates/eduhub/_search.html:41
+msgid "middle"
+msgstr ""
+
+#: templates/eduhub/_search.html:44
+msgid "first grade"
+msgstr ""
+
+#: templates/eduhub/_search.html:45
+msgid "second grade"
+msgstr ""
+
+#: templates/eduhub/_search.html:46
+msgid "third grade"
+msgstr ""
+
+#: templates/eduhub/_search.html:47
+msgid "fourth grade"
+msgstr ""
+
+#: templates/eduhub/_search.html:48
+msgid "fifth grade"
+msgstr ""
+
+#: templates/eduhub/_search.html:49
+msgid "sixth grade"
+msgstr ""
+
 #: templates/eduhub/content_create.html:35
 #: templates/eduhub/funcontent_create.html:28
 #: templates/eduhub/label_create.html:27 templates/eduhub/label_update.html:32
@@ -774,8 +834,8 @@ msgstr ""
 #: templates/eduhub/content_list.html:37
 #: templates/eduhub/funcontent_delete.html:22
 #: templates/eduhub/funcontent_detail.html:39
-#: templates/eduhub/funcontent_list.html:37
-#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:43
+#: templates/eduhub/funcontent_list.html:41
+#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:45
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:38
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:154
@@ -783,18 +843,18 @@ msgid "Delete"
 msgstr ""
 
 #: templates/eduhub/content_list.html:19
-#: templates/eduhub/funcontent_list.html:19 templates/eduhub/label_list.html:20
+#: templates/eduhub/funcontent_list.html:23 templates/eduhub/label_list.html:22
 msgid "Add"
 msgstr ""
 
 #: templates/eduhub/content_list.html:33
-#: templates/eduhub/funcontent_list.html:33 templates/eduhub/label_list.html:40
+#: templates/eduhub/funcontent_list.html:37 templates/eduhub/label_list.html:42
 msgid "View"
 msgstr ""
 
 #: templates/eduhub/content_list.html:36
 #: templates/eduhub/funcontent_detail.html:38
-#: templates/eduhub/funcontent_list.html:36 templates/eduhub/label_list.html:42
+#: templates/eduhub/funcontent_list.html:40 templates/eduhub/label_list.html:44
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
 msgstr ""
@@ -828,15 +888,15 @@ msgstr ""
 msgid "Creating date"
 msgstr ""
 
-#: templates/eduhub/label_list.html:16
+#: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr ""
 
-#: templates/eduhub/label_list.html:24
+#: templates/eduhub/label_list.html:26
 msgid "Mine"
 msgstr ""
 
-#: templates/eduhub/label_list.html:26
+#: templates/eduhub/label_list.html:28
 msgid "All"
 msgstr ""
 
@@ -966,22 +1026,22 @@ msgid "Home"
 msgstr ""
 
 #: templates/funhome/_navbar.html:29
-msgid "Diary"
+msgid "Author"
 msgstr ""
 
 #: templates/funhome/_navbar.html:33
 msgid "Message"
 msgstr ""
 
-#: templates/funhome/_navbar.html:47
+#: templates/funhome/_navbar.html:46
 msgid "Hello"
 msgstr ""
 
-#: templates/funhome/_navbar.html:48
+#: templates/funhome/_navbar.html:47
 msgid "Log Out"
 msgstr ""
 
-#: templates/funhome/_navbar.html:50
+#: templates/funhome/_navbar.html:49
 msgid "Log In"
 msgstr ""
 

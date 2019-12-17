@@ -14,53 +14,5 @@
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="button" id="eduhub_search">{% trans 'search' %}</button>
     </div>
-    <div class="input-group-append">
-      <a class="btn btn-primary" data-toggle="collapse" href="#eduhub_filter" role="button" aria-expanded="false"
-        aria-controls="eduhub_filter">
-        {% trans 'filter' %}
-      </a>
-    </div>
   </div>
 </div>
-
-<div class="container justify-content-end collapse" id="eduhub_filter">
-
-  <div class="row top-filter  justify-content-end">
-    <div class="col col-auto">
-      <button class="btn  eduhub-nursery" data-filter="nursery" >{% trans 'nursery' %}</button>
-      <button class="btn  eduhub-primary" data-filter="primary" >{% trans 'primary' %}</button>
-      <button class="btn  eduhub-junior" data-filter="junior" >{% trans 'junior' %}</button>
-      <button class="btn  eduhub-senior" data-filter="senior" >{% trans 'senior' %}</button>
-      <button class="btn  eduhub-collage"  data-filter="collage">{% trans 'collage' %}</button>
-      <hr/>
-    </div>
-  </div> 
-  <div class="row second-filter  justify-content-end" >
-    <div class="col col-auto">
-      <button class="btn  eduhub-nursery eduhub-junior"   data-filter="junior" >{% trans 'junior' %}</button>
-      <button class="btn  eduhub-nursery eduhub-middle"  data-filter="middle" >{% trans 'middle' %}</button>
-      <button class="btn  eduhub-nursery eduhub-senior"   data-filter="senior">{% trans 'senior' %}</button>
-
-      <button class="btn  eduhub-primary eduhub-collage eduhub-junior eduhub-senior eduhub-first" data-filter="first" >{% trans 'first grade' %}</button>
-      <button class="btn  eduhub-primary eduhub-collage eduhub-junior eduhub-senior eduhub-second"  data-filter="second" >{% trans 'second grade' %}</button>
-      <button class="btn  eduhub-primary eduhub-collage eduhub-junior eduhub-senior eduhub-third"  data-filter="third">{% trans 'third grade' %}</button>
-      <button class="btn  eduhub-primary eduhub-collage eduhub-fourth" data-filter="fourth" >{% trans 'fourth grade' %}</button>
-      <button class="btn  eduhub-primary eduhub-fifth"  data-filter="fifth">{% trans 'fifth grade' %}</button>
-      <button class="btn  eduhub-primary eduhub-sixth"   data-filter="sixth">{% trans 'sixth grade' %}</button>
-
-    </div>
-  </div> 
-  <div class="row third-filter  justify-content-end" >
-    <div class="col col-auto">
-      <hr/>
-      <button class="btn  ">{% trans 'Chinese' %}</button>
-      <button class="btn  ">{% trans 'Math' %}</button>
-      <button class="btn  ">{% trans 'English' %}</button>
-      <button class="btn  ">{% trans 'History' %}</button>
-      <button class="btn  ">{% trans 'Biology' %}</button>
-      <button class="btn ">{% trans 'Chemistry' %}</button>
-    </div>
-  </div>
-
-</div>
-<hr/>
