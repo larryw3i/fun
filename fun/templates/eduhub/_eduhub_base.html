@@ -9,7 +9,7 @@
 {% load tz %}
 
 {% block subnavbar %}
-    <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm  ">
+    <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm ">
         <div class="container">
             <a class="navbar-brand" href=""></a>
             <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#eduhubNavbarContent" aria-controls="eduhubNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,23 +17,23 @@
             </button>   
             <div class="collapse navbar-collapse" id="eduhubNavbarContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">{% trans 'Preschool education' %}</a>
+                    <li class="nav-item ">
+                        <a class="nav-link btn btn-sm" data-top-filter="0" href="#">{% trans 'Preschool education' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans 'Primary school' %}</a>
+                        <a class="nav-link btn btn-sm" data-top-filter="1" href="#">{% trans 'Primary school' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans 'Junior high school ' %}</a>
+                        <a class="nav-link btn btn-sm" data-top-filter="2" href="#">{% trans 'Junior high school ' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans 'Senior high school' %}</a>
+                        <a class="nav-link btn btn-sm" data-top-filter="3" href="#">{% trans 'Senior high school' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans 'College' %}</a>
+                        <a class="nav-link btn btn-sm" data-top-filter="4" href="#">{% trans 'College' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% trans 'Other' %}</a>
+                        <a class="nav-link btn btn-sm" data-top-filter="5" href="#">{% trans 'Other' %}</a>
                     </li>
                 </ul>              
             </div>   

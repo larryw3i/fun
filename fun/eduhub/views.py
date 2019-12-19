@@ -16,7 +16,7 @@ from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
-                                  UpdateView)
+                                  UpdateView , TemplateView)
 from hurry import filesize
 
 from fun import funvalue, settings
@@ -33,6 +33,8 @@ max_cover_size = 500*1024
 
 max_pdf_content_file_size = 5 * math.pow(1024, 2)
 max_video_content_file_size = 100 * math.pow(1024, 2)
+
+eduhub_home_template = f'{EduhubConfig.name}/_home.html'
 
 label_create_template   = f'{EduhubConfig.name}/{label_name}{funvalue.create_html}'
 label_detail_template   = f'{EduhubConfig.name}/{label_name}{funvalue.detail_html}'
@@ -425,3 +427,8 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
 
     def get_success_url(self):
         return reverse('eduhub:funcontent_list', kwargs={'label': self.label_id})
+
+
+class Homepage( TemplateView ):
+    template_name = eduhub_home_template
+    
