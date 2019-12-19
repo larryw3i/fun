@@ -1,0 +1,42 @@
+{% extends 'funhome/_base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+{% block subnavbar %}
+    <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm  ">
+        <div class="container">
+            <a class="navbar-brand" href=""></a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#eduhubNavbarContent" aria-controls="eduhubNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span >=</span>
+            </button>   
+            <div class="collapse navbar-collapse" id="eduhubNavbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">{% trans 'Preschool education' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% trans 'Primary school' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% trans 'Junior high school ' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% trans 'Senior high school' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% trans 'College' %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% trans 'Other' %}</a>
+                    </li>
+                </ul>              
+            </div>   
+        </div> 
+    </nav>    
+{% endblock subnavbar %}
