@@ -34,7 +34,7 @@ max_cover_size = 500*1024
 max_pdf_content_file_size = 5 * math.pow(1024, 2)
 max_video_content_file_size = 100 * math.pow(1024, 2)
 
-eduhub_home_template = f'{EduhubConfig.name}/_home.html'
+eduhub_home_template = f'{EduhubConfig.name}/eduhub_home.html'
 
 label_create_template   = f'{EduhubConfig.name}/{label_name}{funvalue.create_html}'
 label_detail_template   = f'{EduhubConfig.name}/{label_name}{funvalue.detail_html}'
