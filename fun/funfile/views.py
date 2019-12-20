@@ -19,5 +19,5 @@ def get_file(request, file_id):
         content_type = magic.from_file( file_path ,mime=True)
         return FileResponse(open(file_path, 'rb'),content_type = content_type)
     else:
-        return Http404()
+        raise Http404()
 

@@ -116,7 +116,7 @@ def get_favicon_ico( request ):
         content_type = magic.from_file( file_path ,mime=True)
         return FileResponse(open(file_path, 'rb'),content_type = content_type)
     else:
-        return Http404()
+        raise Http404()
 
 
 def get_default_homesticker():
