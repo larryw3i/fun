@@ -4,7 +4,10 @@ from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
 from django.core.exceptions import ValidationError
 # Register your models here.
-from .models import Content, Label, Funclassification
+from .models import Content, Label, Funclassification, Eduhubhomesticker
+
+from django import forms
+from fun.fundef import default_bleach_clean
 
 @admin.register( Content )
 class HomestickerAdmin(admin.ModelAdmin):
@@ -44,4 +47,19 @@ class FunclassificationAdmin( admin.ModelAdmin ):
 
     def save_model(self, request, obj, form, change):
         obj.creating_user = request.user
+        return super().save_model(request, obj, form, change)
+
+@admin.register( Eduhubhomesticker )
+class EduhubhomestickerAdmin(admin.ModelAdmin):
+    fields = ['title','subtitle', 'cover' ,'content', 'comment', 'is_hidden' ] 
+    list_display = ( 'title',  'promulgator', 'promulgating_date', 'is_hidden' )
+    list_per_page = 10
+    ordering = ('-promulgating_date',)
+    formfield_overrides = {
+        Eduhubhomesticker.title: { 'widget': forms.TextInput( attrs= { 'autocomplete': 'off' } ) },
+    }
+    
+    def save_model(self, request, obj, form, change):
+        obj.content = default_bleach_clean( obj.content )
+        obj.promulgator = request.user
         return super().save_model(request, obj, form, change)

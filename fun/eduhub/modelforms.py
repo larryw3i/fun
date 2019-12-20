@@ -1,7 +1,7 @@
 
 import math
 from hurry import filesize
-from .models import Label, Content, Funcontent, Funclassification
+from .models import Label, Content, Funcontent, Funclassification, Eduhubhomesticker
 from django import forms
 from django.forms import ModelForm, ImageField
 from django.utils.translation import gettext_lazy as _
@@ -81,3 +81,25 @@ class FuncontentModelForm( ModelForm ):
         }
 
     
+
+class EduhubhomestickerModelForm(ModelForm):
+    
+    class Meta:
+        
+        model = Eduhubhomesticker
+        fields = ['title', 'cover' ,'content', 'comment'] 
+        
+        labels = {
+            'title': _('Sticker title'),
+            'cover': _('Sticker Cover'),
+            'content': _('Sticker content'),
+            'comment': _('Sticker Comment'),
+        }
+
+
+        widgets = {
+            'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
+        }
+
+    
+ 

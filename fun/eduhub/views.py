@@ -16,16 +16,17 @@ from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
-                                  UpdateView , TemplateView)
+                                  TemplateView, UpdateView)
 from hurry import filesize
 
 from fun import funvalue, settings
 from fun.fundef import default_bleach_clean
 
 from .apps import EduhubConfig
-from .modelforms import ContentModelForm, FuncontentModelForm, LabelModelForm
-from .models import (Content, Funclassification, Funcontent, Label,
-                     content_name, funcontent_name, label_name)
+from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
+                         FuncontentModelForm, LabelModelForm)
+from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent, eduhubhomesticker_name,
+                     Label, content_name, funcontent_name, label_name)
 
 # Create your views here.
 
@@ -34,7 +35,6 @@ max_cover_size = 500*1024
 max_pdf_content_file_size = 5 * math.pow(1024, 2)
 max_video_content_file_size = 100 * math.pow(1024, 2)
 
-eduhub_home_template = f'{EduhubConfig.name}/eduhub_home.html'
 
 label_create_template   = f'{EduhubConfig.name}/{label_name}{funvalue.create_html}'
 label_detail_template   = f'{EduhubConfig.name}/{label_name}{funvalue.detail_html}'
@@ -54,6 +54,8 @@ funcontent_delete_template = f'{EduhubConfig.name}/{funcontent_name}{funvalue.de
 funcontent_update_template = f'{EduhubConfig.name}/{funcontent_name}{funvalue.update_html}'
 funcontent_list_template   = f'{EduhubConfig.name}/{funcontent_name}{funvalue.list_html}'
 
+eduhubhomesticker_list_template = f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.list_html}'
+eduhubhomesticker_detail_template = f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.detail_html}'
 
 class LabelCreateView( LoginRequiredMixin, CreateView ):
     model = Label
@@ -429,6 +431,18 @@ class FuncontentUpdateView( LoginRequiredMixin,  UpdateView ):
         return reverse('eduhub:funcontent_list', kwargs={'label': self.label_id})
 
 
-class Homepage( TemplateView ):
-    template_name = eduhub_home_template
-    
+class EduhubhomestickerListView( ListView ):
+    model = Eduhubhomesticker
+    template_name = eduhubhomesticker_list_template
+    form_class = EduhubhomestickerModelForm
+    context_object_name = 'eduhubhomestickers'
+    ordering = ['-promulgating_date', ]
+    paginate_by = 5
+    paginate_orphans = 1
+
+
+class EduhubhomestickerDetailView( DetailView ):
+
+    model = Eduhubhomesticker
+    template_name = eduhubhomesticker_detail_template
+    form_class = EduhubhomestickerModelForm

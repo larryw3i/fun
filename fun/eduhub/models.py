@@ -18,6 +18,7 @@ from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadi
 label_name = 'label'
 content_name = 'content'
 funcontent_name = 'funcontent'
+eduhubhomesticker_name = 'eduhubhomesticker'
 
 class Label(models.Model):
 
@@ -91,3 +92,20 @@ class Funcontent(models.Model):
     comment = models.TextField(   max_length  = 64,  verbose_name =_('Content comment') )
     is_legal = models.BooleanField(   default = True,   verbose_name =_('Is content legal') )
     
+class Eduhubhomesticker( models.Model ):
+    class Meta:
+        verbose_name = _('Eduhub homepage sticker')
+        verbose_name_plural = _('Eduhub homepage stickers')
+    
+    def __str__(self):
+        return self.title
+        
+    id = models.UUIDField( primary_key=True, default= uuid.uuid4, editable=False,  )
+    title = models.CharField( max_length = 32 ,  verbose_name = _('Eduhub homepage sticker title'))
+    subtitle = models.TextField( max_length = 64, verbose_name = _('Eduhub homepage sticker subtitle') )
+    cover = models.ImageField( upload_to = upload_to , verbose_name = _('Eduhub homepage sicker cover') )
+    promulgator = models.ForeignKey(  to = User, on_delete=models.CASCADE, verbose_name = _('Eduhub homepage sticker promulgator') )    
+    content = RichTextUploadingField( )
+    promulgating_date = models.DateTimeField(   auto_now_add = True,  verbose_name = _('Eduhub homepage sticker promulgating date'))
+    comment = models.TextField( max_length = 128 , verbose_name = _('Eduhub homepage sticker comment') )
+    is_hidden = models.BooleanField( default= False , verbose_name = _('Hidden')+" ?" )
