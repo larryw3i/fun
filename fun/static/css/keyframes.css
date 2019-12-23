@@ -26,10 +26,22 @@
 {
 
   0%{
-    background-color: rgba(255, 0, 255, 0.164);
+    background-color: rgba(89, 0, 255, 0.164);
   }
 
   100%{
-    background-color: rgba(180, 59, 150, 0.26);
+    background-color: rgba(196, 46, 255, 0.26);
+  }
+}
+
+@keyframes homesticker_carousel_caption_hover
+{
+
+  0%{
+    background-color: rgba(255, 0, 242, 0.24);
+  }
+
+  100%{
+    background-color: rgb(208, 58, 228);
   }
 }

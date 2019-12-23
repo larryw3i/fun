@@ -105,6 +105,7 @@ class Eduhubhomesticker( models.Model ):
     subtitle = models.TextField( max_length = 64, verbose_name = _('Eduhub homepage sticker subtitle') )
     cover = models.ImageField( upload_to = upload_to , verbose_name = _('Eduhub homepage sicker cover') )
     promulgator = models.ForeignKey(  to = User, on_delete=models.CASCADE, verbose_name = _('Eduhub homepage sticker promulgator') )    
+    description = RichTextUploadingField( )
     content = RichTextUploadingField( )
     promulgating_date = models.DateTimeField(   auto_now_add = True,  verbose_name = _('Eduhub homepage sticker promulgating date'))
     comment = models.TextField( max_length = 128 , verbose_name = _('Eduhub homepage sticker comment') )

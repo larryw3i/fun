@@ -15,9 +15,3 @@ subjects_top = {
     '4':'College',
     '5':'Others'
 }
-
-subjects_second = {
-    '0':{
-        '0':''
-    }
-}

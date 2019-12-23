@@ -9,6 +9,7 @@ from fun import settings
 import pytz
 from django.utils import timezone
 from datetime import datetime
+from fun.funvalue import subjects_top
 
 from dotenv import find_dotenv,load_dotenv 
 load_dotenv( find_dotenv() )
@@ -43,3 +44,9 @@ def get_beian_url():
 def get_beian_text():
     return os.environ.get('BEIAN_TEXT','')
 
+
+@register.simple_tag(takes_context=True)
+def get_current_eduhub_top_filter( context ):
+    request = context['request']
+    eduhub_top_filter = request.COOKIES.get('eduhub_top_filter', '')
+    return _( subjects_top[eduhub_top_filter] if len(eduhub_top_filter) > 0 else 'All' )

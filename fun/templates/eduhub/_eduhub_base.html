@@ -7,16 +7,48 @@
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
+{% load funtag %}
 
 {% block subnavbar %}
     <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm ">
         <div class="container">
-            <a class="navbar-brand" href=""></a>
+            <a class="navbar-brand" href="">{% trans 'Eduhub' %}</a>
             <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#eduhubNavbarContent" aria-controls="eduhubNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span >=</span>
-            </button>   
+                <span>=</span>
+            </button>
             <div class="collapse navbar-collapse" id="eduhubNavbarContent">
-            </div>   
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="eduhubTopFilterDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          {% get_current_eduhub_top_filter %}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="eduhubTopFilterDropdown" id="eduhubTopFilterDropdownMenu">
+                            <a class="dropdown-item" href="#" data-filter_label="0">{% trans 'Preschool education' %}</a>
+                            <a class="dropdown-item" href="#" data-filter_label="1">{% trans 'Primary school' %}</a>
+                            <a class="dropdown-item" href="#" data-filter_label="2">{% trans 'Junior high school' %}</a>
+                            <a class="dropdown-item" href="#" data-filter_label="3">{% trans 'Senior high school' %}</a>
+                            <a class="dropdown-item" href="#" data-filter_label="4">{% trans 'College' %}</a>
+                            <a class="dropdown-item" href="#" data-filter_label="5">{% trans 'Others' %}</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"  data-filter_label="">{% trans 'All' %}</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-sm"  href="#">{% trans 'Survey' %}</a>
+                    </li>
+                    {% comment %}
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-sm"  href="">{% trans 'Senior high school' %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-sm"  href="">{% trans 'College' %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-sm"  href="">{% trans 'Others' %}</a>
+                        </li>
+                    {% endcomment %}
+                </ul>
+            </div>
         </div> 
     </nav>
 {% endblock subnavbar %}

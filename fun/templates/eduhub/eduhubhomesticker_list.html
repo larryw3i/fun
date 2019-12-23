@@ -18,7 +18,6 @@
 {% block content %} 
 
     {% include 'eduhub/_search.html' %}
-    {% include 'eduhub/_filter.html' %}
 
     <div class="homeCarousel">
         <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
@@ -34,7 +33,7 @@
                 {% for eduhubhomesticker in eduhubhomestickers|slice:':3' %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
                         <img src="{% if  eduhubhomestickers|length_is:'0' %}{% static 'images/default_carousel_image.webp' %}{% else %}{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %} {% endif %}" class="d-block w-100 carousel-item-img" alt="">
-                        <div class="carousel-caption homesticker-carousel-caption click-to-url" data-url="{% if  eduhubhomestickers|length_is:'0' %}#{% else %}{% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id %}{% endif %}">
+                        <div class="carousel-caption homesticker-carousel-caption click-to-url" data-url="{% if  eduhubhomestickers|length_is:'0' %}#{% else %}{% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id %}{% endif %}" title="{% trans 'View' %}">
                             <h5>{{ eduhubhomesticker.title }}</h5>
                             <p>  {{  eduhubhomesticker.subtitle }}  </p> 
                         </div>

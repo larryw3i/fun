@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-17 14:50+0000\n"
+"POT-Creation-Date: 2019-12-23 03:35+0000\n"
 "PO-Revision-Date: 2019-12-12 16:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Eduhub"
 msgstr "教育"
 
-#: eduhub/modelforms.py:20 eduhub/models.py:32
+#: eduhub/modelforms.py:20 eduhub/models.py:33
 msgid "Label name"
 msgstr "标签名"
 
@@ -42,7 +42,7 @@ msgstr "标题"
 msgid "Label"
 msgstr "标签"
 
-#: eduhub/modelforms.py:42 eduhub/models.py:52
+#: eduhub/modelforms.py:42 eduhub/models.py:53
 msgid "Content file"
 msgstr "内容文件"
 
@@ -54,11 +54,11 @@ msgstr "内容文件只能为pdf或视频哦"
 msgid "Content"
 msgstr "内容"
 
-#: eduhub/modelforms.py:72 eduhub/models.py:89
+#: eduhub/modelforms.py:72 eduhub/models.py:90
 msgid "Content classification"
 msgstr "分类"
 
-#: eduhub/modelforms.py:77 eduhub/models.py:51 eduhub/models.py:87
+#: eduhub/modelforms.py:77 eduhub/models.py:52 eduhub/models.py:88
 msgid "Content title"
 msgstr "标题"
 
@@ -66,128 +66,193 @@ msgstr "标题"
 msgid "classification : college/grade/semester/course"
 msgstr "分类如: (大学/中学/小学)/年级/学期/课程"
 
-#: eduhub/models.py:25
+#: eduhub/modelforms.py:93 funhome/modelforms.py:22 funhome/modelforms.py:48
+#: funhome/models.py:27 funhome/models.py:46
+msgid "Sticker title"
+msgstr "贴纸标题"
+
+#: eduhub/modelforms.py:94 funhome/modelforms.py:23 funhome/modelforms.py:49
+msgid "Sticker Cover"
+msgstr "贴纸背景"
+
+#: eduhub/modelforms.py:95 funhome/modelforms.py:50
+msgid "Sticker content"
+msgstr "备注"
+
+#: eduhub/modelforms.py:96 funhome/modelforms.py:25 funhome/modelforms.py:51
+msgid "Sticker Comment"
+msgstr "备注"
+
+#: eduhub/models.py:26
 msgid "Eduhub label"
 msgstr "分类标签"
 
-#: eduhub/models.py:26
+#: eduhub/models.py:27
 msgid "Eduhub  labels"
 msgstr "分类标签"
 
-#: eduhub/models.py:33
+#: eduhub/models.py:34
 msgid "Label comment"
 msgstr "备注"
 
-#: eduhub/models.py:34
+#: eduhub/models.py:35
 msgid "Label cover"
 msgstr "封面"
 
-#: eduhub/models.py:35
+#: eduhub/models.py:36
 msgid "Label creating date"
 msgstr "创建时间"
 
-#: eduhub/models.py:36
+#: eduhub/models.py:37
 msgid "Label author"
 msgstr "作者"
 
-#: eduhub/models.py:37
+#: eduhub/models.py:38
 msgid "Is label legal"
 msgstr "合法"
 
-#: eduhub/models.py:43
+#: eduhub/models.py:44
 msgid "Eduhub content"
 msgstr "内容"
 
-#: eduhub/models.py:44 templates/eduhub/content_list.html:15
-#: templates/eduhub/funcontent_list.html:19
+#: eduhub/models.py:45 templates/eduhub/content_list.html:15
+#: templates/eduhub/funcontent_list.html:20
 msgid "Eduhub contents"
 msgstr "内容"
 
-#: eduhub/models.py:50 eduhub/models.py:86
+#: eduhub/models.py:51 eduhub/models.py:87
 msgid "Content label"
 msgstr "标签"
 
-#: eduhub/models.py:54 eduhub/models.py:90
+#: eduhub/models.py:55 eduhub/models.py:91
 msgid "Content uploading date"
 msgstr "上传时间"
 
-#: eduhub/models.py:55 eduhub/models.py:91
+#: eduhub/models.py:56 eduhub/models.py:92
 msgid "Content comment"
 msgstr "备注"
 
-#: eduhub/models.py:56 eduhub/models.py:92
+#: eduhub/models.py:57 eduhub/models.py:93
 msgid "Is content legal"
 msgstr "合法"
 
-#: eduhub/models.py:62
+#: eduhub/models.py:63
 msgid "Eduhub classification"
 msgstr "分类"
 
-#: eduhub/models.py:63
+#: eduhub/models.py:64
 msgid "Eduhub classifications"
 msgstr "分类"
 
-#: eduhub/models.py:69
+#: eduhub/models.py:70
 msgid "Parent classification"
 msgstr "父类"
 
-#: eduhub/models.py:70
+#: eduhub/models.py:71
 msgid "Classification name"
 msgstr "类名"
 
-#: eduhub/models.py:71
+#: eduhub/models.py:72
 msgid "Classification level"
 msgstr "级别"
 
-#: eduhub/models.py:72
+#: eduhub/models.py:73
 msgid "Classification creating date"
 msgstr "创建时间"
 
-#: eduhub/models.py:73
+#: eduhub/models.py:74
 msgid "Classification creating user"
 msgstr "创建分类的用户"
 
-#: eduhub/models.py:74
+#: eduhub/models.py:75
 msgid "Is classification disabled"
 msgstr "禁用"
 
-#: eduhub/models.py:79
+#: eduhub/models.py:80
 msgid "Eduhub content (NEW)"
 msgstr "内容(新)"
 
-#: eduhub/models.py:80
+#: eduhub/models.py:81
 msgid "Eduhub contents (NEW)"
 msgstr "内容(新)"
 
-#: eduhub/views.py:65
+#: eduhub/models.py:97
+#, fuzzy
+#| msgid "Home sticker"
+msgid "Eduhub homepage sticker"
+msgstr "主页贴纸"
+
+#: eduhub/models.py:98
+#, fuzzy
+#| msgid "Home stickers"
+msgid "Eduhub homepage stickers"
+msgstr "主页贴纸"
+
+#: eduhub/models.py:104
+msgid "Eduhub homepage sticker title"
+msgstr ""
+
+#: eduhub/models.py:105
+#, fuzzy
+#| msgid "Sticker subtitle"
+msgid "Eduhub homepage sticker subtitle"
+msgstr "贴纸子标题"
+
+#: eduhub/models.py:106
+msgid "Eduhub homepage sicker cover"
+msgstr ""
+
+#: eduhub/models.py:107
+#, fuzzy
+#| msgid "Sticker promulgator"
+msgid "Eduhub homepage sticker promulgator"
+msgstr "贴纸的管理员"
+
+#: eduhub/models.py:109
+#, fuzzy
+#| msgid "Sticker promulgating date"
+msgid "Eduhub homepage sticker promulgating date"
+msgstr "贴纸时间"
+
+#: eduhub/models.py:110
+#, fuzzy
+#| msgid "Sticker comment"
+msgid "Eduhub homepage sticker comment"
+msgstr "备注"
+
+#: eduhub/models.py:111 funhome/models.py:34 funhome/models.py:53
+msgid "Hidden"
+msgstr "隐藏(不贴)"
+
+#: eduhub/views.py:70
 msgid "Cover image is required"
 msgstr "未选择封面图片"
 
-#: eduhub/views.py:69
+#: eduhub/views.py:74
 msgid "Image allowed only"
 msgstr "只能选择图片"
 
-#: eduhub/views.py:74
+#: eduhub/views.py:79
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:105
+#: eduhub/views.py:110
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr "页数不是最后一页也不是数字哦."
 
-#: eduhub/views.py:210 eduhub/views.py:360
+#: eduhub/views.py:215 eduhub/views.py:365
 msgid "Frequently request"
 msgstr "频繁访问"
 
-#: eduhub/views.py:214 eduhub/views.py:220
+#: eduhub/views.py:219 eduhub/views.py:225
 msgid "Content file is required"
 msgstr "未选择内容文件"
 
-#: eduhub/views.py:225
+#: eduhub/views.py:230
 msgid "The length of video file should be less than"
 msgstr "视频文件应该小于"
 
-#: eduhub/views.py:230
+#: eduhub/views.py:235
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
@@ -203,26 +268,9 @@ msgstr "中文简体"
 msgid "Fun home"
 msgstr "主页"
 
-#: funhome/modelforms.py:22 funhome/modelforms.py:48 funhome/models.py:27
-#: funhome/models.py:46
-msgid "Sticker title"
-msgstr "贴纸标题"
-
-#: funhome/modelforms.py:23 funhome/modelforms.py:49
-msgid "Sticker Cover"
-msgstr "贴纸背景"
-
 #: funhome/modelforms.py:24 funhome/models.py:31
 msgid "Sticker content file"
 msgstr "贴纸文件"
-
-#: funhome/modelforms.py:25 funhome/modelforms.py:51
-msgid "Sticker Comment"
-msgstr "备注"
-
-#: funhome/modelforms.py:50
-msgid "Sticker content"
-msgstr "备注"
 
 #: funhome/models.py:20 funhome/models.py:21 funhome/models.py:39
 msgid "Home sticker"
@@ -247,10 +295,6 @@ msgstr "贴纸时间"
 #: funhome/models.py:33 funhome/models.py:52
 msgid "Sticker comment"
 msgstr "备注"
-
-#: funhome/models.py:34 funhome/models.py:53
-msgid "Hidden"
-msgstr "隐藏(不贴)"
 
 #: funhome/models.py:40
 msgid "Home stickers"
@@ -290,6 +334,7 @@ msgid "Hometown"
 msgstr "家乡"
 
 #: funuser/admin.py:21 funuser/models.py:39
+#: templates/eduhub/_eduhub_navbar_content.html:25
 #: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
@@ -817,73 +862,37 @@ msgstr "你也可以"
 msgid "change your e-mail address"
 msgstr "更改邮箱地址"
 
-#: templates/eduhub/_search.html:12 templates/eduhub/_search.html:13
+#: templates/eduhub/_eduhub_navbar_content.html:13
+msgid "Preschool education"
+msgstr ""
+
+#: templates/eduhub/_eduhub_navbar_content.html:16
+#, fuzzy
+#| msgid "Primary"
+msgid "Primary school"
+msgstr "常用"
+
+#: templates/eduhub/_eduhub_navbar_content.html:19
+msgid "Junior high school"
+msgstr ""
+
+#: templates/eduhub/_eduhub_navbar_content.html:22
+msgid "Senior high school"
+msgstr ""
+
+#: templates/eduhub/_eduhub_navbar_content.html:28
+msgid "Others"
+msgstr ""
+
+#: templates/eduhub/_search.html:12
 msgid "What are you thinking about"
 msgstr ""
 
-#: templates/eduhub/_search.html:15
+#: templates/eduhub/_search.html:14
 #, fuzzy
 #| msgid "March"
 msgid "search"
 msgstr "三月"
-
-#: templates/eduhub/_search.html:20
-#, fuzzy
-#| msgid "Resize filter"
-msgid "filter"
-msgstr "Resize filter"
-
-#: templates/eduhub/_search.html:30
-msgid "nursery"
-msgstr ""
-
-#: templates/eduhub/_search.html:31
-#, fuzzy
-#| msgid "Primary"
-msgid "primary"
-msgstr "常用"
-
-#: templates/eduhub/_search.html:32 templates/eduhub/_search.html:40
-msgid "junior"
-msgstr ""
-
-#: templates/eduhub/_search.html:33 templates/eduhub/_search.html:42
-msgid "senior"
-msgstr ""
-
-#: templates/eduhub/_search.html:34
-msgid "collage"
-msgstr ""
-
-#: templates/eduhub/_search.html:41
-msgid "middle"
-msgstr ""
-
-#: templates/eduhub/_search.html:44
-#, fuzzy
-#| msgid "first page"
-msgid "first grade"
-msgstr "第一页"
-
-#: templates/eduhub/_search.html:45
-msgid "second grade"
-msgstr ""
-
-#: templates/eduhub/_search.html:46
-msgid "third grade"
-msgstr ""
-
-#: templates/eduhub/_search.html:47
-msgid "fourth grade"
-msgstr ""
-
-#: templates/eduhub/_search.html:48
-msgid "fifth grade"
-msgstr ""
-
-#: templates/eduhub/_search.html:49
-msgid "sixth grade"
-msgstr ""
 
 #: templates/eduhub/content_create.html:35
 #: templates/eduhub/funcontent_create.html:28
@@ -909,8 +918,8 @@ msgstr "确定要删除"
 #: templates/eduhub/content_list.html:37
 #: templates/eduhub/funcontent_delete.html:22
 #: templates/eduhub/funcontent_detail.html:39
-#: templates/eduhub/funcontent_list.html:41
-#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:45
+#: templates/eduhub/funcontent_list.html:42
+#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:47
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:38
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:154
@@ -918,18 +927,19 @@ msgid "Delete"
 msgstr "删除"
 
 #: templates/eduhub/content_list.html:19
-#: templates/eduhub/funcontent_list.html:23 templates/eduhub/label_list.html:22
+#: templates/eduhub/funcontent_list.html:24 templates/eduhub/label_list.html:24
 msgid "Add"
 msgstr "添加"
 
 #: templates/eduhub/content_list.html:33
-#: templates/eduhub/funcontent_list.html:37 templates/eduhub/label_list.html:42
+#: templates/eduhub/funcontent_list.html:38 templates/eduhub/label_list.html:44
 msgid "View"
 msgstr "查看"
 
 #: templates/eduhub/content_list.html:36
+#: templates/eduhub/eduhubhomesticker_detail.html:40
 #: templates/eduhub/funcontent_detail.html:38
-#: templates/eduhub/funcontent_list.html:40 templates/eduhub/label_list.html:44
+#: templates/eduhub/funcontent_list.html:41 templates/eduhub/label_list.html:46
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
 msgstr "编辑"
@@ -950,6 +960,13 @@ msgstr "预览"
 msgid "Update"
 msgstr "更新"
 
+#: templates/eduhub/eduhubhomesticker_detail.html:15
+#: templates/eduhub/eduhubhomesticker_list.html:15
+#, fuzzy
+#| msgid "Eduhub content"
+msgid "Eduhub home"
+msgstr "内容"
+
 #: templates/eduhub/funcontent_detail.html:14
 msgid "Content details"
 msgstr "标题"
@@ -963,15 +980,15 @@ msgstr "标题名"
 msgid "Creating date"
 msgstr "创建时间"
 
-#: templates/eduhub/label_list.html:19
+#: templates/eduhub/label_list.html:21
 msgid "Eduhub labels"
 msgstr "标签"
 
-#: templates/eduhub/label_list.html:26
+#: templates/eduhub/label_list.html:28
 msgid "Mine"
 msgstr "我的"
 
-#: templates/eduhub/label_list.html:28
+#: templates/eduhub/label_list.html:30
 msgid "All"
 msgstr "全部"
 
@@ -3073,6 +3090,21 @@ msgstr "Thumbnail"
 #, python-brace-format
 msgid "{something}"
 msgstr "{something}"
+
+#, fuzzy
+#~| msgid "Resize filter"
+#~ msgid "filter"
+#~ msgstr "Resize filter"
+
+#, fuzzy
+#~| msgid "Primary"
+#~ msgid "primary"
+#~ msgstr "常用"
+
+#, fuzzy
+#~| msgid "first page"
+#~ msgid "first grade"
+#~ msgstr "第一页"
 
 #~ msgid "Diary"
 #~ msgstr "日志"

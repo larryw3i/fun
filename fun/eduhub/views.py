@@ -447,10 +447,3 @@ class EduhubhomestickerDetailView( DetailView ):
     model = Eduhubhomesticker
     template_name = eduhubhomesticker_detail_template
     form_class = EduhubhomestickerModelForm
-
-
-class EduhubSearch( TemplateView ):
-    template_name = 'eduhub/_search.html'
-
-class EduhubNavbarContent( TemplateView ):
-    template_name = 'eduhub/_eduhub_navbar_content.html'
