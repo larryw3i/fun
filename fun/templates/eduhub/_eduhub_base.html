@@ -16,27 +16,11 @@
                 <span >=</span>
             </button>   
             <div class="collapse navbar-collapse" id="eduhubNavbarContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link btn btn-sm" data-top-filter="0" href="#">{% trans 'Preschool education' %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-sm" data-top-filter="1" href="#">{% trans 'Primary school' %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-sm" data-top-filter="2" href="#">{% trans 'Junior high school ' %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-sm" data-top-filter="3" href="#">{% trans 'Senior high school' %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-sm" data-top-filter="4" href="#">{% trans 'College' %}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-sm" data-top-filter="5" href="#">{% trans 'Other' %}</a>
-                    </li>
-                </ul>              
             </div>   
         </div> 
-    </nav>    
+    </nav>
 {% endblock subnavbar %}
+
+{% block optionaljs %} 
+    <script src="{% static 'eduhub/eduhub.js' %}"></script>
+{% endblock optionaljs %}

@@ -1,0 +1,30 @@
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item ">
+        <a class="nav-link btn btn-sm" data-top-filter="0" href="#">{% trans 'Preschool education' %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-sm" data-top-filter="1" href="#">{% trans 'Primary school' %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-sm" data-top-filter="2" href="#">{% trans 'Junior high school' %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-sm" data-top-filter="3" href="#">{% trans 'Senior high school' %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-sm" data-top-filter="4" href="#">{% trans 'College' %}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link btn btn-sm" data-top-filter="5" href="#">{% trans 'Others' %}</a>
+    </li>
+</ul>

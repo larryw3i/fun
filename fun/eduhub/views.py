@@ -25,8 +25,9 @@ from fun.fundef import default_bleach_clean
 from .apps import EduhubConfig
 from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
                          FuncontentModelForm, LabelModelForm)
-from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent, eduhubhomesticker_name,
-                     Label, content_name, funcontent_name, label_name)
+from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
+                     Label, content_name, eduhubhomesticker_name,
+                     funcontent_name, label_name)
 
 # Create your views here.
 
@@ -446,3 +447,10 @@ class EduhubhomestickerDetailView( DetailView ):
     model = Eduhubhomesticker
     template_name = eduhubhomesticker_detail_template
     form_class = EduhubhomestickerModelForm
+
+
+class EduhubSearch( TemplateView ):
+    template_name = 'eduhub/_search.html'
+
+class EduhubNavbarContent( TemplateView ):
+    template_name = 'eduhub/_eduhub_navbar_content.html'
