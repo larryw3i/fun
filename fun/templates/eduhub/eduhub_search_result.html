@@ -17,6 +17,22 @@
 {% block content %} 
 
     {% include 'eduhub/_search.html' %}
-    
+
+    {% for label in labels %}
+        <div class="card"  style="width: 18rem;">
+            <div class="card-body">
+                {{ label.name }}
+            </div>
+        </div>
+    {% endfor %}
+    <hr/>    
+
+    {% for funcontent in funcontents %}
+        <div class="card"  style="width: 18rem;">
+            <div class="card-body">
+                {{ funcontent.title }}
+            </div>
+        </div>
+    {% endfor %}
 
 {% endblock %}

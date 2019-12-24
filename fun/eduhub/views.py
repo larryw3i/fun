@@ -455,14 +455,16 @@ class EduhubSearch( TemplateView ):
     template_name = eduhub_search_result_template
 
     def get_context_data(self, **kwargs):
+        eduhub_top_filter =   self.request.COOKIES.get('eduhub_top_filter', '6') 
+        eduhub_top_filter = _(subjects_top[ eduhub_top_filter] ) if len(eduhub_top_filter)>0 else ''
         context_data =  super().get_context_data(**kwargs)    
         context_data['labels'] = Label.objects.filter( 
-            (Q(  name__icontains = self.request.POST['q'] ) 
-            | Q(  comment__icontains = self.request.POST['q'] ))  )
+            (Q(  name__icontains = self.request.GET.get('q') ) 
+            | Q(  comment__icontains = self.request.GET.get('q') ))  )
         context_data['funcontents'] = Funcontent.objects.filter( 
-            (   Q(  title__icontains = self.request.POST['q'] ) 
-                | Q(  classification__icontains = self.request.POST['q'] ) )
-            & Q( classification__icontains = self.request.COOKIES.get('eduhub_top_filter', '') )) if len( self.request.COOKIES.get('eduhub_top_filter', '') ) > 0 else Funcontent.objects.filter( 
-               Q(  title__icontains = self.request.POST['q'] ) 
-                | Q(  classification__icontains = self.request.POST['q'] ) )
+            (   Q(  title__icontains = self.request.GET.get('q') ) 
+                | Q(  classification__icontains = self.request.GET.get('q') ) )
+            & Q( classification__icontains = eduhub_top_filter )) if len( eduhub_top_filter ) > 0 else Funcontent.objects.filter( 
+               Q(  title__icontains = self.request.GET.get('q') ) 
+                | Q(  classification__icontains = self.request.GET.get('q') ) )
         return context_data
