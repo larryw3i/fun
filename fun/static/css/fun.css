@@ -69,6 +69,11 @@ img.preview
  {
    cursor: pointer;
  }
+ 
+ .homesticker-card:hover
+ {
+  animation: homesticker_card_hover_animation 0.25s 1 forwards;
+ }
 
  .homesticker-carousel-caption
  {

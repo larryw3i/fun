@@ -32,7 +32,7 @@
 
                 {% for eduhubhomesticker in eduhubhomestickers|slice:':3' %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                        <img src="{% if  eduhubhomestickers|length_is:'0' %}{% static 'images/default_carousel_image.webp' %}{% else %}{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %} {% endif %}" class="d-block w-100 carousel-item-img" alt="">
+                        <img src="{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %}" class="d-block w-100 carousel-item-img" alt="">
                         <div class="carousel-caption homesticker-carousel-caption click-to-url" data-url="{% if  eduhubhomestickers|length_is:'0' %}#{% else %}{% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id %}{% endif %}" title="{% trans 'View' %}">
                             <h5>{{ eduhubhomesticker.title }}</h5>
                             <p>{{ eduhubhomesticker.subtitle }}</p> 
@@ -54,15 +54,15 @@
         </div>
     </div>
     <div class="row mt-2">
-
         {% for eduhubhomesticker in eduhubhomestickers|slice:'3:' %}
-            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-3 col-6 mt-2">
-                <div class="card  click-to-url" data-url="{% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id %}">
+            <div class="col col-auto mt-2">                
+                <div class="card homesticker-card" style="width: 18rem;">
+                    <img src="{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %}" class="card-img-top" alt="{% trans 'cover' %}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ eduhubhomesticker.title }}</h5>
-                        <p class="card-text"> 
-                            {{ eduhubhomesticker.subtitle }} 
-                            <span class="border-right small float-right " >{{ eduhubhomesticker.promulgating_date }}</span>
+                        <p class="card-text">
+                            {% autoescape off %}
+                                {{ eduhubhomesticker.description }}
+                            {% endautoescape %}
                         </p>
                     </div>
                 </div>

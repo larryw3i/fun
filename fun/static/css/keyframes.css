@@ -42,6 +42,22 @@
   }
 
   100%{
-    background-color: rgb(208, 58, 228);
+    background-color: rgba(208, 58, 228, 0.644);
   }
+}
+
+@keyframes homesticker_card_hover_animation
+{
+  0%{
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(0.9);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+
 }

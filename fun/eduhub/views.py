@@ -28,7 +28,7 @@ from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
 from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
                      Label, content_name, eduhubhomesticker_name,
                      funcontent_name, label_name)
-
+from fun.funvalue import subjects_top
 # Create your views here.
 
 max_cover_size = 500*1024
@@ -57,6 +57,8 @@ funcontent_list_template   = f'{EduhubConfig.name}/{funcontent_name}{funvalue.li
 
 eduhubhomesticker_list_template = f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.list_html}'
 eduhubhomesticker_detail_template = f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.detail_html}'
+
+eduhub_search_result_template = f'{EduhubConfig.name}/eduhub_search_result.html'
 
 class LabelCreateView( LoginRequiredMixin, CreateView ):
     model = Label
@@ -447,3 +449,20 @@ class EduhubhomestickerDetailView( DetailView ):
     model = Eduhubhomesticker
     template_name = eduhubhomesticker_detail_template
     form_class = EduhubhomestickerModelForm
+
+class EduhubSearch( TemplateView ):
+    model = Eduhubhomesticker
+    template_name = eduhub_search_result_template
+
+    def get_context_data(self, **kwargs):
+        context_data =  super().get_context_data(**kwargs)    
+        context_data['labels'] = Label.objects.filter( 
+            (Q(  name__icontains = self.request.POST['q'] ) 
+            | Q(  comment__icontains = self.request.POST['q'] ))  )
+        context_data['funcontents'] = Funcontent.objects.filter( 
+            (   Q(  title__icontains = self.request.POST['q'] ) 
+                | Q(  classification__icontains = self.request.POST['q'] ) )
+            & Q( classification__icontains = self.request.COOKIES.get('eduhub_top_filter', '') )) if len( self.request.COOKIES.get('eduhub_top_filter', '') ) > 0 else Funcontent.objects.filter( 
+               Q(  title__icontains = self.request.POST['q'] ) 
+                | Q(  classification__icontains = self.request.POST['q'] ) )
+        return context_data

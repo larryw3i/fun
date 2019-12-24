@@ -12,6 +12,7 @@ urlpatterns = [
 
     path('home', views.EduhubhomestickerListView.as_view(), name = 'home'),
     path('eduhubhomesticker_detail/<uuid:pk>', views.EduhubhomestickerDetailView.as_view(), name = 'eduhubhomesticker_detail'),
+    path('eduhub_search', views.EduhubSearch.as_view(), name = 'eduhub_search'),
 
     path('content_list/<uuid:label>', views.ContentListView.as_view(), name = 'content_list'),
     path('content_create/<uuid:label>', views.ContentCreateView.as_view(), name = 'content_create'),

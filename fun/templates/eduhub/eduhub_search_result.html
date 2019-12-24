@@ -1,0 +1,22 @@
+{% extends 'eduhub/_eduhub_base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load l10n %}
+
+{% load tz %}
+
+
+{% block title %}
+    {% trans 'Eduhub search' %}
+{% endblock title %}
+
+{% block content %} 
+
+    {% include 'eduhub/_search.html' %}
+    
+
+{% endblock %}
