@@ -47,7 +47,7 @@
     <div class="row mt-2">
 
         {% for funhomesticker in funhomestickers|slice:'3:' %}
-            <div class="col col-sm-6 col-md-4 col-lg-3 col-xl-3 col-6 mt-2">
+            <div class="col col-12 col-md-6 col-lg-6 col-xl-6 mt-2">
                 <div class="card homesticker-card click-to-url" data-url="{% url 'funhomesticker_detail' pk=funhomesticker.id %}">
                     <div class="card-body">
                         <h5 class="card-title">{{ funhomesticker.title }}</h5>

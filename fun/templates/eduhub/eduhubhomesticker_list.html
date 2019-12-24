@@ -35,7 +35,7 @@
                         <img src="{% if  eduhubhomestickers|length_is:'0' %}{% static 'images/default_carousel_image.webp' %}{% else %}{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %} {% endif %}" class="d-block w-100 carousel-item-img" alt="">
                         <div class="carousel-caption homesticker-carousel-caption click-to-url" data-url="{% if  eduhubhomestickers|length_is:'0' %}#{% else %}{% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id %}{% endif %}" title="{% trans 'View' %}">
                             <h5>{{ eduhubhomesticker.title }}</h5>
-                            <p>  {{  eduhubhomesticker.subtitle }}  </p> 
+                            <p>{{ eduhubhomesticker.subtitle }}</p> 
                         </div>
                     </div>
                 {% endfor %}

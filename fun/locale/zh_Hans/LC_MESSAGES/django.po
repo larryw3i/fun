@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-23 03:35+0000\n"
-"PO-Revision-Date: 2019-12-12 16:20+0800\n"
+"POT-Creation-Date: 2019-12-24 03:17+0000\n"
+"PO-Revision-Date: 2019-12-24 11:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -18,7 +18,8 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: eduhub/apps.py:9 templates/funhome/_navbar.html:26
+#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:15
+#: templates/funhome/_navbar.html:26
 msgid "Eduhub"
 msgstr "教育"
 
@@ -116,7 +117,7 @@ msgid "Eduhub content"
 msgstr "内容"
 
 #: eduhub/models.py:45 templates/eduhub/content_list.html:15
-#: templates/eduhub/funcontent_list.html:20
+#: templates/eduhub/funcontent_list.html:19
 msgid "Eduhub contents"
 msgstr "内容"
 
@@ -177,50 +178,38 @@ msgid "Eduhub contents (NEW)"
 msgstr "内容(新)"
 
 #: eduhub/models.py:97
-#, fuzzy
-#| msgid "Home sticker"
 msgid "Eduhub homepage sticker"
 msgstr "主页贴纸"
 
 #: eduhub/models.py:98
-#, fuzzy
-#| msgid "Home stickers"
 msgid "Eduhub homepage stickers"
 msgstr "主页贴纸"
 
 #: eduhub/models.py:104
 msgid "Eduhub homepage sticker title"
-msgstr ""
+msgstr "贴纸标题"
 
 #: eduhub/models.py:105
-#, fuzzy
-#| msgid "Sticker subtitle"
 msgid "Eduhub homepage sticker subtitle"
 msgstr "贴纸子标题"
 
 #: eduhub/models.py:106
 msgid "Eduhub homepage sicker cover"
-msgstr ""
+msgstr "贴纸背景"
 
 #: eduhub/models.py:107
-#, fuzzy
-#| msgid "Sticker promulgator"
 msgid "Eduhub homepage sticker promulgator"
 msgstr "贴纸的管理员"
 
-#: eduhub/models.py:109
-#, fuzzy
-#| msgid "Sticker promulgating date"
+#: eduhub/models.py:110
 msgid "Eduhub homepage sticker promulgating date"
 msgstr "贴纸时间"
 
-#: eduhub/models.py:110
-#, fuzzy
-#| msgid "Sticker comment"
+#: eduhub/models.py:111
 msgid "Eduhub homepage sticker comment"
 msgstr "备注"
 
-#: eduhub/models.py:111 funhome/models.py:34 funhome/models.py:53
+#: eduhub/models.py:112 funhome/models.py:34 funhome/models.py:53
 msgid "Hidden"
 msgstr "隐藏(不贴)"
 
@@ -312,6 +301,11 @@ msgstr "Larry 的分享"
 msgid "larry"
 msgstr "larry"
 
+#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:33
+#: templates/eduhub/label_list.html:29
+msgid "All"
+msgstr "全部"
+
 #: funuser/admin.py:17
 msgid "avatar"
 msgstr "头像"
@@ -334,7 +328,7 @@ msgid "Hometown"
 msgstr "家乡"
 
 #: funuser/admin.py:21 funuser/models.py:39
-#: templates/eduhub/_eduhub_navbar_content.html:25
+#: templates/eduhub/_eduhub_base.html:30
 #: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
@@ -862,37 +856,37 @@ msgstr "你也可以"
 msgid "change your e-mail address"
 msgstr "更改邮箱地址"
 
-#: templates/eduhub/_eduhub_navbar_content.html:13
+#: templates/eduhub/_eduhub_base.html:26
 msgid "Preschool education"
-msgstr ""
+msgstr "学前教育"
 
-#: templates/eduhub/_eduhub_navbar_content.html:16
-#, fuzzy
-#| msgid "Primary"
+#: templates/eduhub/_eduhub_base.html:27
 msgid "Primary school"
-msgstr "常用"
+msgstr "小学"
 
-#: templates/eduhub/_eduhub_navbar_content.html:19
+#: templates/eduhub/_eduhub_base.html:28
 msgid "Junior high school"
-msgstr ""
+msgstr "初中"
 
-#: templates/eduhub/_eduhub_navbar_content.html:22
+#: templates/eduhub/_eduhub_base.html:29
 msgid "Senior high school"
-msgstr ""
+msgstr "高中"
 
-#: templates/eduhub/_eduhub_navbar_content.html:28
+#: templates/eduhub/_eduhub_base.html:31
 msgid "Others"
-msgstr ""
+msgstr "其它"
+
+#: templates/eduhub/_eduhub_base.html:37
+msgid "Survey"
+msgstr "问卷调查"
 
 #: templates/eduhub/_search.html:12
 msgid "What are you thinking about"
-msgstr ""
+msgstr "在想什么"
 
 #: templates/eduhub/_search.html:14
-#, fuzzy
-#| msgid "March"
 msgid "search"
-msgstr "三月"
+msgstr "搜索"
 
 #: templates/eduhub/content_create.html:35
 #: templates/eduhub/funcontent_create.html:28
@@ -918,8 +912,8 @@ msgstr "确定要删除"
 #: templates/eduhub/content_list.html:37
 #: templates/eduhub/funcontent_delete.html:22
 #: templates/eduhub/funcontent_detail.html:39
-#: templates/eduhub/funcontent_list.html:42
-#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:47
+#: templates/eduhub/funcontent_list.html:41
+#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:46
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:38
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:154
@@ -927,19 +921,20 @@ msgid "Delete"
 msgstr "删除"
 
 #: templates/eduhub/content_list.html:19
-#: templates/eduhub/funcontent_list.html:24 templates/eduhub/label_list.html:24
+#: templates/eduhub/funcontent_list.html:23 templates/eduhub/label_list.html:23
 msgid "Add"
 msgstr "添加"
 
 #: templates/eduhub/content_list.html:33
-#: templates/eduhub/funcontent_list.html:38 templates/eduhub/label_list.html:44
+#: templates/eduhub/eduhubhomesticker_list.html:36
+#: templates/eduhub/funcontent_list.html:37 templates/eduhub/label_list.html:43
 msgid "View"
 msgstr "查看"
 
 #: templates/eduhub/content_list.html:36
-#: templates/eduhub/eduhubhomesticker_detail.html:40
+#: templates/eduhub/eduhubhomesticker_detail.html:39
 #: templates/eduhub/funcontent_detail.html:38
-#: templates/eduhub/funcontent_list.html:41 templates/eduhub/label_list.html:46
+#: templates/eduhub/funcontent_list.html:40 templates/eduhub/label_list.html:45
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
 msgstr "编辑"
@@ -962,10 +957,8 @@ msgstr "更新"
 
 #: templates/eduhub/eduhubhomesticker_detail.html:15
 #: templates/eduhub/eduhubhomesticker_list.html:15
-#, fuzzy
-#| msgid "Eduhub content"
 msgid "Eduhub home"
-msgstr "内容"
+msgstr "教育"
 
 #: templates/eduhub/funcontent_detail.html:14
 msgid "Content details"
@@ -980,17 +973,13 @@ msgstr "标题名"
 msgid "Creating date"
 msgstr "创建时间"
 
-#: templates/eduhub/label_list.html:21
+#: templates/eduhub/label_list.html:20
 msgid "Eduhub labels"
 msgstr "标签"
 
-#: templates/eduhub/label_list.html:28
+#: templates/eduhub/label_list.html:27
 msgid "Mine"
 msgstr "我的"
-
-#: templates/eduhub/label_list.html:30
-msgid "All"
-msgstr "全部"
 
 #: templates/eduhub/label_update.html:22
 msgid "cover"
@@ -1122,7 +1111,7 @@ msgstr "主页"
 
 #: templates/funhome/_navbar.html:29
 msgid "Author"
-msgstr ""
+msgstr "作者"
 
 #: templates/funhome/_navbar.html:33
 msgid "Message"

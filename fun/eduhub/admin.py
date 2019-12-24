@@ -51,7 +51,7 @@ class FunclassificationAdmin( admin.ModelAdmin ):
 
 @admin.register( Eduhubhomesticker )
 class EduhubhomestickerAdmin(admin.ModelAdmin):
-    fields = ['title','subtitle', 'cover' ,'content', 'comment', 'is_hidden' ] 
+    fields = ['title','subtitle', 'cover' ,'content', 'description', 'comment', 'is_hidden' ] 
     list_display = ( 'title',  'promulgator', 'promulgating_date', 'is_hidden' )
     list_per_page = 10
     ordering = ('-promulgating_date',)

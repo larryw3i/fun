@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-23 03:35+0000\n"
+"POT-Creation-Date: 2019-12-24 03:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: eduhub/apps.py:9 templates/funhome/_navbar.html:26
+#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:15
+#: templates/funhome/_navbar.html:26
 msgid "Eduhub"
 msgstr ""
 
@@ -115,7 +116,7 @@ msgid "Eduhub content"
 msgstr ""
 
 #: eduhub/models.py:45 templates/eduhub/content_list.html:15
-#: templates/eduhub/funcontent_list.html:20
+#: templates/eduhub/funcontent_list.html:19
 msgid "Eduhub contents"
 msgstr ""
 
@@ -199,15 +200,15 @@ msgstr ""
 msgid "Eduhub homepage sticker promulgator"
 msgstr ""
 
-#: eduhub/models.py:109
+#: eduhub/models.py:110
 msgid "Eduhub homepage sticker promulgating date"
 msgstr ""
 
-#: eduhub/models.py:110
+#: eduhub/models.py:111
 msgid "Eduhub homepage sticker comment"
 msgstr ""
 
-#: eduhub/models.py:111 funhome/models.py:34 funhome/models.py:53
+#: eduhub/models.py:112 funhome/models.py:34 funhome/models.py:53
 msgid "Hidden"
 msgstr ""
 
@@ -299,6 +300,11 @@ msgstr ""
 msgid "larry"
 msgstr ""
 
+#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:33
+#: templates/eduhub/label_list.html:29
+msgid "All"
+msgstr ""
+
 #: funuser/admin.py:17
 msgid "avatar"
 msgstr ""
@@ -321,7 +327,7 @@ msgid "Hometown"
 msgstr ""
 
 #: funuser/admin.py:21 funuser/models.py:39
-#: templates/eduhub/_eduhub_navbar_content.html:25
+#: templates/eduhub/_eduhub_base.html:30
 #: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
@@ -783,24 +789,28 @@ msgstr ""
 msgid "change your e-mail address"
 msgstr ""
 
-#: templates/eduhub/_eduhub_navbar_content.html:13
+#: templates/eduhub/_eduhub_base.html:26
 msgid "Preschool education"
 msgstr ""
 
-#: templates/eduhub/_eduhub_navbar_content.html:16
+#: templates/eduhub/_eduhub_base.html:27
 msgid "Primary school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_navbar_content.html:19
+#: templates/eduhub/_eduhub_base.html:28
 msgid "Junior high school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_navbar_content.html:22
+#: templates/eduhub/_eduhub_base.html:29
 msgid "Senior high school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_navbar_content.html:28
+#: templates/eduhub/_eduhub_base.html:31
 msgid "Others"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base.html:37
+msgid "Survey"
 msgstr ""
 
 #: templates/eduhub/_search.html:12
@@ -835,8 +845,8 @@ msgstr ""
 #: templates/eduhub/content_list.html:37
 #: templates/eduhub/funcontent_delete.html:22
 #: templates/eduhub/funcontent_detail.html:39
-#: templates/eduhub/funcontent_list.html:42
-#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:47
+#: templates/eduhub/funcontent_list.html:41
+#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:46
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:38
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:154
@@ -844,19 +854,20 @@ msgid "Delete"
 msgstr ""
 
 #: templates/eduhub/content_list.html:19
-#: templates/eduhub/funcontent_list.html:24 templates/eduhub/label_list.html:24
+#: templates/eduhub/funcontent_list.html:23 templates/eduhub/label_list.html:23
 msgid "Add"
 msgstr ""
 
 #: templates/eduhub/content_list.html:33
-#: templates/eduhub/funcontent_list.html:38 templates/eduhub/label_list.html:44
+#: templates/eduhub/eduhubhomesticker_list.html:36
+#: templates/eduhub/funcontent_list.html:37 templates/eduhub/label_list.html:43
 msgid "View"
 msgstr ""
 
 #: templates/eduhub/content_list.html:36
-#: templates/eduhub/eduhubhomesticker_detail.html:40
+#: templates/eduhub/eduhubhomesticker_detail.html:39
 #: templates/eduhub/funcontent_detail.html:38
-#: templates/eduhub/funcontent_list.html:41 templates/eduhub/label_list.html:46
+#: templates/eduhub/funcontent_list.html:40 templates/eduhub/label_list.html:45
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
 msgstr ""
@@ -895,16 +906,12 @@ msgstr ""
 msgid "Creating date"
 msgstr ""
 
-#: templates/eduhub/label_list.html:21
+#: templates/eduhub/label_list.html:20
 msgid "Eduhub labels"
 msgstr ""
 
-#: templates/eduhub/label_list.html:28
+#: templates/eduhub/label_list.html:27
 msgid "Mine"
-msgstr ""
-
-#: templates/eduhub/label_list.html:30
-msgid "All"
 msgstr ""
 
 #: templates/eduhub/label_update.html:22

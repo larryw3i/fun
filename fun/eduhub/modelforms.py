@@ -87,15 +87,15 @@ class EduhubhomestickerModelForm(ModelForm):
     class Meta:
         
         model = Eduhubhomesticker
-        fields = ['title', 'cover' ,'content', 'comment'] 
+        fields = ['title', 'cover' ,'content', 'comment' , 'description' ]  
         
         labels = {
             'title': _('Sticker title'),
             'cover': _('Sticker Cover'),
             'content': _('Sticker content'),
             'comment': _('Sticker Comment'),
+            'description': _('description'),
         }
-
 
         widgets = {
             'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
