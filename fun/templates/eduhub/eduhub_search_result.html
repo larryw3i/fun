@@ -54,7 +54,7 @@
         {% endif %}
     </div>
 
-    {% if request.GET.filter == 'funcontent' %}
+    {% if request.GET.filter == 'funcontents' or funcontents.paginator.num_pages > labels.paginator.num_pages %}
         <div class="pagination justify-content-center  align-items-center mt-5" style="font-size: large;">
             <span class="step-links">
                 {% if funcontent.has_previous %}
