@@ -70,7 +70,7 @@ img.preview
    cursor: pointer;
  }
  
- .homesticker-card:hover
+ .homesticker-card:hover ,  .eduhub-label-card:hover
  {
   animation: homesticker_card_hover_animation 0.25s 1 forwards;
  }

@@ -50,6 +50,7 @@
 {
   0%{
     transform: scale(1);
+    background-color: rgba(210, 31, 255, 0.075);
   }
 
   50%{
@@ -58,6 +59,7 @@
 
   100%{
     transform: scale(1);
+    background-color: rgba(204, 30, 210, 0.329);
   }
 
 }

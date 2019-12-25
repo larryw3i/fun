@@ -8,7 +8,7 @@ import pytz
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core import paginator
 from django.core.exceptions import ValidationError
-from django.core.paginator import InvalidPage
+from django.core.paginator import InvalidPage, Paginator
 from django.db.models import F, Q
 from django.http import Http404
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
@@ -21,6 +21,7 @@ from hurry import filesize
 
 from fun import funvalue, settings
 from fun.fundef import default_bleach_clean
+from fun.funvalue import subjects_top
 
 from .apps import EduhubConfig
 from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
@@ -28,7 +29,7 @@ from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
 from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
                      Label, content_name, eduhubhomesticker_name,
                      funcontent_name, label_name)
-from fun.funvalue import subjects_top
+
 # Create your views here.
 
 max_cover_size = 500*1024
@@ -455,16 +456,30 @@ class EduhubSearch( TemplateView ):
     template_name = eduhub_search_result_template
 
     def get_context_data(self, **kwargs):
-        eduhub_top_filter =   self.request.COOKIES.get('eduhub_top_filter', '6') 
+        eduhub_top_filter =   self.request.COOKIES.get('eduhub_top_filter', '') 
         eduhub_top_filter = _(subjects_top[ eduhub_top_filter] ) if len(eduhub_top_filter)>0 else ''
+        search_filter = self.request.GET.get('filter','') 
         context_data =  super().get_context_data(**kwargs)    
-        context_data['labels'] = Label.objects.filter( 
-            (Q(  name__icontains = self.request.GET.get('q') ) 
-            | Q(  comment__icontains = self.request.GET.get('q') ))  )
-        context_data['funcontents'] = Funcontent.objects.filter( 
-            (   Q(  title__icontains = self.request.GET.get('q') ) 
-                | Q(  classification__icontains = self.request.GET.get('q') ) )
-            & Q( classification__icontains = eduhub_top_filter )) if len( eduhub_top_filter ) > 0 else Funcontent.objects.filter( 
-               Q(  title__icontains = self.request.GET.get('q') ) 
-                | Q(  classification__icontains = self.request.GET.get('q') ) )
+        if  search_filter == 'labels'  or search_filter == '' :
+            labels = Label.objects.filter( 
+                (Q(  name__icontains = self.request.GET.get('q') ) 
+                | Q(  comment__icontains = self.request.GET.get('q') ))  ).order_by('-creating_date')
+
+            paginator = Paginator(labels, 5 if search_filter == '' else 10) 
+            labels = paginator.get_page( self.request.GET.get('page') )
+            context_data['labels']  = labels
+
+        if  search_filter == 'funcontents'  or search_filter == '' :
+            funcontents = Funcontent.objects.filter( 
+                (   Q(  title__icontains = self.request.GET.get('q') ) 
+                    | Q(  classification__icontains = self.request.GET.get('q') ) )
+                & Q( classification__icontains = eduhub_top_filter )
+
+                ) if len( eduhub_top_filter ) > 0 else Funcontent.objects.filter( 
+                    Q(  title__icontains = self.request.GET.get('q') ) 
+                    | Q(  classification__icontains = self.request.GET.get('q') ) ).order_by('-uploading_date')
+
+            paginator = Paginator(funcontents, 5 if search_filter == '' else 10) 
+            funcontents = paginator.get_page( self.request.GET.get('page') )
+            context_data['funcontents'] = funcontents
         return context_data
