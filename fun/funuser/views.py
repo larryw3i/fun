@@ -77,10 +77,10 @@ class FunuserDetailView( LoginRequiredMixin, DetailView ):
 
     def get_object(self, queryset=None):
 
-        self.is_funuser_created =  Funuser.objects.filter( user = self.kwargs['user'] ).exists()
+        self.is_funuser_created =  Funuser.objects.filter( user__id = self.kwargs['user'] ).exists()
 
         if not (self.is_funuser_created):
-            return  Funuser( user =   self.kwargs['user']  )
+            return  Funuser( user =  self.request.user  )
         
-        return Funuser.objects.get( user =   self.kwargs['user']   )   # super().get_object(queryset=queryset)
+        return Funuser.objects.get( user__id =   self.kwargs['user']   )   # super().get_object(queryset=queryset)
     
