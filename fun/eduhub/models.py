@@ -110,3 +110,5 @@ class Eduhubhomesticker( models.Model ):
     promulgating_date = models.DateTimeField(   auto_now_add = True,  verbose_name = _('Eduhub homepage sticker promulgating date'))
     comment = models.TextField( max_length = 128 , verbose_name = _('Eduhub homepage sticker comment') )
     is_hidden = models.BooleanField( default= False , verbose_name = _('Hidden')+" ?" )
+
+

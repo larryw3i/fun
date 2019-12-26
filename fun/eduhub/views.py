@@ -327,7 +327,10 @@ class FuncontentListView( ListView ):
     paginate_orphans = 1
 
     def get_queryset(self):
-        return Funcontent.objects.filter(label=self.kwargs['label'], is_legal=True).order_by('-uploading_date')
+        return \
+            Funcontent.objects.filter(label=self.kwargs['label'], is_legal=True).order_by('-uploading_date') \
+                if len( str(self.kwargs.get('label', '')) ) > 0 \
+                    else Funcontent.objects.filter( is_legal=True).order_by('-uploading_date')
 
     def render_to_response(self, context, **response_kwargs):
         response = super().render_to_response(context, **response_kwargs)
@@ -336,8 +339,9 @@ class FuncontentListView( ListView ):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        context_data['label'] = self.kwargs['label']
-        context_data['is_author'] = Label.objects.get( pk = self.kwargs['label'] ).author == self.request.user
+        if len( str(self.kwargs.get('label', ''))  ) >0 : 
+            context_data['label'] = Label.objects.get( pk = self.kwargs['label'] )
+            context_data['is_author'] = Label.objects.get( pk = self.kwargs['label'] ).author == self.request.user
         return context_data
 
 

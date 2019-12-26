@@ -39,6 +39,9 @@
                     <li class="nav-item">
                         <a class="nav-link "  href="{% url 'eduhub:label_list' %}">{% trans 'Eduhub labels' %}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link "  href="{% url 'eduhub:funcontent_list_all' %}">{% trans 'Eduhub contents' %}</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" action="{% url 'eduhub:eduhub_search' %}" id="eduhub_search_form">
                     <input class="form-control mr-sm-2"  id="eduhub_search_q" name="q" placeholder="{% trans 'What are you thinking about' %}?" aria-label="{% trans 'What are you thinking about' %}?" aria-describedby="eduhub_search" autocomplete="off" value="{{ request.GET.q }}">

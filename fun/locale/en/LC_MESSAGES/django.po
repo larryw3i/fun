@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-24 03:17+0000\n"
-"PO-Revision-Date: 2019-11-22 17:57+0800\n"
+"PO-Revision-Date: 2019-12-26 21:02+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: eduhub/models.py:26
 msgid "Eduhub label"
-msgstr ""
+msgstr "Label"
 
 #: eduhub/models.py:27
 msgid "Eduhub  labels"
@@ -114,12 +114,12 @@ msgstr ""
 
 #: eduhub/models.py:44
 msgid "Eduhub content"
-msgstr ""
+msgstr "Content"
 
 #: eduhub/models.py:45 templates/eduhub/content_list.html:15
 #: templates/eduhub/funcontent_list.html:19
 msgid "Eduhub contents"
-msgstr ""
+msgstr "Contents"
 
 #: eduhub/models.py:51 eduhub/models.py:87
 msgid "Content label"
@@ -139,11 +139,11 @@ msgstr ""
 
 #: eduhub/models.py:63
 msgid "Eduhub classification"
-msgstr ""
+msgstr "Classification"
 
 #: eduhub/models.py:64
 msgid "Eduhub classifications"
-msgstr ""
+msgstr "Classifications"
 
 #: eduhub/models.py:70
 msgid "Parent classification"
@@ -171,15 +171,15 @@ msgstr ""
 
 #: eduhub/models.py:80
 msgid "Eduhub content (NEW)"
-msgstr ""
+msgstr "Content (NEW)"
 
 #: eduhub/models.py:81
 msgid "Eduhub contents (NEW)"
-msgstr ""
+msgstr "Contents (NEW)"
 
 #: eduhub/models.py:97
 msgid "Eduhub homepage sticker"
-msgstr ""
+msgstr "Eduhub homepage sticker"
 
 #: eduhub/models.py:98
 msgid "Eduhub homepage stickers"
@@ -909,7 +909,7 @@ msgstr ""
 
 #: templates/eduhub/label_list.html:20
 msgid "Eduhub labels"
-msgstr ""
+msgstr "Labels"
 
 #: templates/eduhub/label_list.html:27
 msgid "Mine"
@@ -2520,10 +2520,8 @@ msgid "Aborted"
 msgstr ""
 
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:137
-#, fuzzy
-#| msgid "first page"
 msgid "First page"
-msgstr "first"
+msgstr "First"
 
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:142
 #, fuzzy

@@ -15,10 +15,13 @@
 
 
     <h2 class="text-center">{% trans 'Eduhub contents' %}</h2>
+    {% if label %}
+        <h5>{{ label.name }}</h5>
+    {% endif %}
     <hr/>
-    {% if is_author %}
+    {% if label.author == request.user %}
         <div class="col col-12 text-right" >
-            <a href="{% url 'eduhub:funcontent_create' label=label %}" class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
+            <a href="{% url 'eduhub:funcontent_create' label=label.id %}" class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
         </div>
     {% endif %}
     <div class="row">
