@@ -35,8 +35,6 @@ SITE_ID = 1
 
 ALLOWED_HOSTS = ['*', ]
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -298,7 +296,7 @@ LOGGING = {
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins' ,'file', ],
+            'handlers': '' if DEBUG else ['mail_admins' ,'file', ] ,
             'level': 'ERROR',
             'propagate': True,
         },
