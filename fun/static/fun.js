@@ -3,9 +3,6 @@
 
 
 (function(){
-    $(document).ready(()=>{
-        setTimeZone(); 
-    });
 
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
         previewImage(event);
@@ -58,21 +55,6 @@
         location.reload();
     }
 
-    function setTimeZone()
-    {
-        if ( ( ! Cookies.get('timezone')) && navigator.cookieEnabled )
-        {
-
-            Cookies.set( 
-                'timezone' , 
-                Intl.DateTimeFormat().resolvedOptions().timeZone ,
-                { expires: 365 }); 
-            
-            // Some browser isn't able to save cookies or the process is wrong
-            if( Cookies.get('timezone') ) location.reload();  
-            
-        }
-    }
 
     /**
      * 

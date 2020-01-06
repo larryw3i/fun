@@ -183,7 +183,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 USE_TZ = True
 
-TIME_ZONE =  'UTC' # 'Asia/Shanghai' 
+TIME_ZONE = os.environ.get('TIME_ZONE' , 'UTC') # 'UTC' # 'Asia/Shanghai' 
 
 USE_I18N = True
 
