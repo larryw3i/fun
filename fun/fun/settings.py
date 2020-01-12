@@ -225,7 +225,6 @@ STATICFILES_FINDERS = [
 
 
 # MEDIA_FILE
-
 MEDIA_URL = '/funfile/get_file/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile','files') 
 CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
