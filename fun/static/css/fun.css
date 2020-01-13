@@ -117,3 +117,16 @@ img.preview
 {
   display: none;
 }
+
+.login-border,.signup-border
+{
+  border: solid;
+  border-color: #ff00ff79;
+  border-width: 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+#login_form #id_remember
+{
+  transform: scale(1.5);
+}

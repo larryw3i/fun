@@ -18,14 +18,13 @@
 
 {% block content %}
 
-  <div class="row justify-content-center text-center" >
-    <div class="col col-10 col-md-6 col-lg-4 col-xl-4 ">
+  <div class="row justify-content-center text-center mt-5" >
+    <div class="col col-10 col-md-6 col-lg-4 col-xl-4 signup-border">
       <h1>{% trans "Sign Up" %}</h1>
 
       <p>
-        {% blocktrans %}
-          Already have an account? Then please 
-        {% endblocktrans %}
+        
+        {% trans 'Already have an account? Then please' %}
         <a href="{{ login_url }}">{% trans 'sign in' %}</a>.
       </p>
 
@@ -37,7 +36,7 @@
         {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-info">{% trans "Sign Up" %} &raquo;</button>
+        <button type="submit" class="btn btn-info btn-lg w-75">{% trans "Sign Up" %} &raquo;</button>
       </form>
 
     </div>

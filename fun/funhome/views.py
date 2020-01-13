@@ -138,7 +138,7 @@ def get_default_funhomesticker():
         title = _('X-DOVE'),  
         subtitle = _('Larry`s sharing'), 
         cover = File( open( default_carousel_image_path ) ) ,
-        promulgator =  User.objects.get(is_superuser=True) ,
+        promulgator =  None ,# User.objects.get(is_superuser=True) ,
         content = '', # File( open( default_carousel_content_file_path )), 
         promulgating_date=  datetime(2005, 7, 14, 12, 30),
         comment = _('larry') )
