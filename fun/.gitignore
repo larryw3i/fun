@@ -161,4 +161,7 @@ static/node_modules/
 
 thesis.md
 
+uwsgi/uwsgi.status
+uwsgi/uwsgi.pid
+
 # End of https://www.gitignore.io/api/django
