@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 06:41+0000\n"
+"POT-Creation-Date: 2020-02-06 19:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -645,7 +645,7 @@ msgid "Password Reset"
 msgstr ""
 
 #: templates/account/password_reset.html:20
-msgid "Please reset password by terminal"
+msgid "Please reset password via terminal"
 msgstr ""
 
 #: templates/account/password_reset.html:22
@@ -865,7 +865,7 @@ msgid "Add"
 msgstr ""
 
 #: templates/eduhub/content_list.html:33
-#: templates/eduhub/eduhubhomesticker_list.html:35
+#: templates/eduhub/eduhubhomesticker_list.html:36
 #: templates/eduhub/funcontent_list.html:38 templates/eduhub/label_list.html:42
 msgid "View"
 msgstr ""
@@ -933,7 +933,7 @@ msgstr ""
 msgid "Eduhub home"
 msgstr ""
 
-#: templates/eduhub/eduhubhomesticker_list.html:59
+#: templates/eduhub/eduhubhomesticker_list.html:63
 #: templates/eduhub/label_update.html:22
 msgid "cover"
 msgstr ""
@@ -1109,7 +1109,7 @@ msgstr ""
 msgid "Older"
 msgstr ""
 
-#: templates/funhome/home.html:64
+#: templates/funhome/home.html:72
 msgid "View all"
 msgstr ""
 

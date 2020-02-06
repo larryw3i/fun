@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-13 06:41+0000\n"
-"PO-Revision-Date: 2020-01-13 14:42+0800\n"
+"POT-Creation-Date: 2020-02-06 19:41+0000\n"
+"PO-Revision-Date: 2020-02-07 03:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -85,10 +85,8 @@ msgid "Sticker Comment"
 msgstr "备注"
 
 #: eduhub/modelforms.py:97
-#, fuzzy
-#| msgid "exceptions"
 msgid "description"
-msgstr "异常"
+msgstr "描述"
 
 #: eduhub/models.py:26
 msgid "Eduhub label"
@@ -681,7 +679,7 @@ msgid "Password Reset"
 msgstr "重置密码"
 
 #: templates/account/password_reset.html:20
-msgid "Please reset password by terminal"
+msgid "Please reset password via terminal"
 msgstr "请在终端修改密码"
 
 #: templates/account/password_reset.html:22
@@ -761,7 +759,7 @@ msgstr "注册"
 
 #: templates/account/signup.html:27
 msgid "Already have an account? Then please"
-msgstr "已有账号吗? 请 "
+msgstr "已有账号吗? 请"
 
 #: templates/account/signup.html:28
 #: templates/socialaccount/login_cancelled.html:18
@@ -928,7 +926,7 @@ msgid "Add"
 msgstr "添加"
 
 #: templates/eduhub/content_list.html:33
-#: templates/eduhub/eduhubhomesticker_list.html:35
+#: templates/eduhub/eduhubhomesticker_list.html:36
 #: templates/eduhub/funcontent_list.html:38 templates/eduhub/label_list.html:42
 msgid "View"
 msgstr "查看"
@@ -958,8 +956,6 @@ msgid "Update"
 msgstr "更新"
 
 #: templates/eduhub/eduhub_search_result.html:14
-#, fuzzy
-#| msgid "Eduhub home"
 msgid "Eduhub search"
 msgstr "教育"
 
@@ -998,7 +994,7 @@ msgstr "最后页"
 msgid "Eduhub home"
 msgstr "教育"
 
-#: templates/eduhub/eduhubhomesticker_list.html:59
+#: templates/eduhub/eduhubhomesticker_list.html:63
 #: templates/eduhub/label_update.html:22
 msgid "cover"
 msgstr "封面"
@@ -1177,7 +1173,7 @@ msgstr "所有贴纸"
 msgid "Older"
 msgstr "旧的"
 
-#: templates/funhome/home.html:64
+#: templates/funhome/home.html:72
 msgid "View all"
 msgstr "查看全部"
 
