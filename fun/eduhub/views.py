@@ -60,6 +60,7 @@ eduhubhomesticker_list_template = f'{EduhubConfig.name}/{eduhubhomesticker_name}
 eduhubhomesticker_detail_template = f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.detail_html}'
 
 eduhub_search_result_template = f'{EduhubConfig.name}/eduhub_search_result.html'
+eduhub_how_to_classification_template = f'{EduhubConfig.name}/how_to_classification.html'
 
 class LabelCreateView( LoginRequiredMixin, CreateView ):
     model = Label
@@ -487,3 +488,8 @@ class EduhubSearch( TemplateView ):
             funcontents = paginator.get_page( self.request.GET.get('page') )
             context_data['funcontents'] = funcontents
         return context_data
+
+
+def how_to_classification( request ):
+    if request.method == 'GET':
+        return render( request, eduhub_how_to_classification_template )

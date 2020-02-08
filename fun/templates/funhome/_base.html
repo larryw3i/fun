@@ -14,6 +14,10 @@
         <title>{% block title %}x-dove{% endblock title %}</title>
         
         {% include 'funhome/_css.html' %}
+        
+        {% comment %}
+            optional css
+        {% endcomment %}
         {% block optionalcss %}{% endblock optionalcss %}
 
     </head>
@@ -34,7 +38,10 @@
     {% include 'funhome/_footer.html' %}
 
     {% include 'funhome/_js.html' %}
-
+    
+    {% comment %}
+        With jQuery, Bootsreap and so on . . .
+    {% endcomment %}
     {% block optionaljs %}{% endblock optionaljs %}
         
 </html>

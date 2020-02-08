@@ -11,6 +11,14 @@
 
 {% block title %}Home{% endblock title %}
 
+{% block optionalcss %}
+    <style>
+        #id_how_to_classification
+        {
+            font-size: small;
+        }
+    </style>
+{% endblock optionalcss %}
 
 {% block content %} 
 
@@ -23,7 +31,9 @@
                 {{ form.media }}
                 
                 {{ form|crispy }}
-        
+                
+                <a href="{% url 'eduhub:how_to_classification' %}" id="id_how_to_classification" > ({% trans 'How to classification'%}) </a>
+
                 <div class="col col-12 text-center" >
                     <input class="btn btn-outline-info " type="submit" value="{% trans 'Upload' %}" />
                 </div>
@@ -32,8 +42,14 @@
         </div>
         
     </div>
-
     {% include 'funhome/_ckeditor.html' %}
 
-
 {% endblock %}
+
+{% block optionaljs %}
+
+    <script>
+        $('#id_how_to_classification').insertAfter('[for="id_classification"]')
+    </script>
+
+{% endblock optionaljs %}

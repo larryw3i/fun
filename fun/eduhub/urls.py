@@ -28,4 +28,6 @@ urlpatterns = [
     path('funcontent_detail/<uuid:pk>', views.FuncontentDetailView.as_view(), name = 'funcontent_detail'),
     path('funcontent_delete/<uuid:pk>', views.FuncontentDeleteView.as_view(), name = 'funcontent_delete'),
     path('funcontent_update/<uuid:pk>', views.FuncontentUpdateView.as_view(), name = 'funcontent_update'),
+
+    path('how_to_classification', views.how_to_classification , name='how_to_classification' ),
 ]
