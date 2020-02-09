@@ -1,0 +1,32 @@
+#!/bin/bash
+
+read -p 'Type your commit message plase! >_' commit_message
+
+git add . && git commit  -m $commit_message 
+
+echo 'commit completed!'
+
+read -p 'push it now?(y/N) >_' push_it_now
+
+if [ '$push_it_now' = 'y' ] || [ '$push_it_now' = 'Y' ]; then
+
+    echo '\t1. push to  xxx@xxx.xxx:xxx/xxx.git'
+    echo '\t2. push to  xxx@xxx.xxx:xxx/xxx.git'
+    echo '\t3. all of them'
+    echo '\tType other key to do nothing'
+
+    read -p '\t>_ ' push_to
+    
+    if      [ '$push_to' = '1' ]; then
+        git push xxx@xxx.xxx:xxx/xxx.git
+    elif    [ '$push_to' = '2' ]; then
+        git push xxx@xxx.xxx:xxx/xxx.git
+    elif    [ '$push_to' = '3' ]; then
+        git push xxx@xxx.xxx:xxx/xxx.git  && xxx@xxx.xxx:xxx/xxx.git
+    else
+        echo 'push was canceled!'
+    fi
+else
+    echo 'without push!'
+
+git show
