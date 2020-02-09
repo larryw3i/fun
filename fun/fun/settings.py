@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import sys
+import json
 from dotenv import find_dotenv,load_dotenv 
 from django.utils.translation import gettext_lazy as _
 
@@ -259,12 +260,10 @@ COMPRESS_ENABLED = bool( os.environ.get('COMPRESS_ENABLED') )
 
 # LOGGING 
 
-ADMINS = [ 
-    ( os.environ.get('ADMINS_NAME'), os.environ.get('ADMINS_EMAIL')), 
-]
-
-if len(os.environ.get('ADMINS_NAME_0' , '')) > 0: 
-    ADMINS.append( ( os.environ.get('ADMINS_NAME_0'), os.environ.get('ADMINS_EMAIL_0')) )
+# configure it in ADMINS.json
+ADMINS = {}  
+with open( os.path.join( BASE_DIR, 'ADMINS.json'), 'r' ) as f:
+    ADMINS = json.load(f) 
 
 MANAGERS = ADMINS
 

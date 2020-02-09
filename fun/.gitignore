@@ -122,6 +122,9 @@ dmypy.json
 .pyre/
 
 
+# End of https://www.gitignore.io/api/django
+
+
 # files
 funfile/files/
 
@@ -164,4 +167,9 @@ thesis.md
 uwsgi/uwsgi.status
 uwsgi/uwsgi.pid
 
-# End of https://www.gitignore.io/api/django
+
+# ADMINS.json
+ADMINS.json
+
+# funtest
+funtest/
