@@ -15,7 +15,7 @@ if [ "$push_it_now" = 'y' ] || [ "$push_it_now" = 'Y' ]; then
     echo "\t3. all of them"
     echo "\tType other key to do nothing"
 
-    read -p "\t>_ " push_to
+    read -p " >_ " push_to
     
     if      [ "$push_to" = '1' ]; then
         git push your_repo

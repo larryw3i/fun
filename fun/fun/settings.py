@@ -248,9 +248,7 @@ CKEDITOR_IMAGE_BACKEND = 'pillow'
 # END MEDIA_FILE
 
 # FILE_STORAGE
-
 DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
-
 # END FILE_STORAGE
 
 
