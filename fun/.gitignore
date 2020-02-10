@@ -174,3 +174,7 @@ ADMINS.json
 # funtest
 funtest/
 git_commit.sh
+
+# data_privacy and legal information
+templates/funhome/data_privacy.html
+templates/funhome/legal_information.html

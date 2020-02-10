@@ -31,4 +31,7 @@ else
     echo 'without push!'
 fi
 
+# Maybe you're going to copy some files to your server.
+# scp xxx.xxx xxx.xxx xxx@xxx.xxx:xxx/xxx
+
 git show

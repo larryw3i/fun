@@ -39,10 +39,16 @@ funhomesticker_delete_template = f'{FunhomeConfig.name}/{funhomesticker_name}{fu
 funhomesticker_update_template = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.update_html}'
 funhomesticker_list_template   = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.list_html}'
 
+data_privacy_template = FunhomeConfig.name + '/data_privacy.html'
+legal_information_template = FunhomeConfig.name + '/legal_information.html'
 
+data_privacy_template_path = os.path.join( settings.BASE_DIR, 'template', 'funhome', 'data_privacy.html' )
+data_privacy_example_template_path = os.path.join( settings.BASE_DIR, 'template', 'funhome', 'data_privacy.html.example' )
 
+legal_information_template_path = os.path.join( settings.BASE_DIR, 'templates', 'funhome', 'legal_information.html' )
+legal_information_example_template_path = os.path.join( settings.BASE_DIR, 'templates', 'funhome', 'legal_information.html.example' )
 
-class HomestickerListView( ListView ):  
+class HomestickerListView( ListView ):
     model = Homesticker
     form_class = HomestickerModelForm
     template_name = homesticker_list_template
@@ -131,6 +137,18 @@ def get_default_homesticker():
         promulgating_date=  datetime(2005, 7, 14, 12, 30),
         comment = _('larry') )
 
+def data_privacy( request ):
+	if request.method == 'GET':
+        return render( \
+            data_privacy_template if os.path.exists( data_privacy_template ) \
+                else data_privacy_example_template_path )
+
+def legal_information( request ):
+	if request.method == 'GET':
+        return render( \
+            legal_information_template if os.path.exists( legal_information_template ) \
+                else legal_information_example_template_path )
+		
 def get_default_funhomesticker():
     default_carousel_image_path = os.path.join(  settings.STATIC_ROOT, 'images', 'default_carousel_image.webp' ) 
     default_carousel_content_file_path = os.path.join(  settings.STATIC_ROOT, 'media', 'default_carousel_content_file.pdf' ) 
