@@ -23,7 +23,6 @@
       <h1>{% trans "Sign Up" %}</h1>
 
       <p>
-        
         {% trans 'Already have an account? Then please' %}
         <a href="{{ login_url }}">{% trans 'sign in' %}</a>.
       </p>
@@ -36,7 +35,14 @@
         {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-info btn-lg w-75">{% trans "Sign Up" %} &raquo;</button>
+
+        <div class="text-center">
+            {% trans "X-DOVE's" %} 
+            <a href="{% url 'legal_information' %}">{% trans 'Legal information' %}</a>
+            <a href="{% url 'data_privacy' %}">{% trans ' Data privacy' %}</a>
+        </div>
+
+        <button type="submit" class="btn btn-info btn-lg w-75 mt-2">{% trans "Sign Up" %} &raquo;</button>
       </form>
 
     </div>
