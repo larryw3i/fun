@@ -9,11 +9,15 @@
 
     <h2>{% trans 'Hello from x-dove'%}!</h2>
     <p>
-        You're receiving this e-mail because user 
+        {% blocktrans %}
+            You're receiving this e-mail because user 
+        {% endblocktrans %}
         <h3>{{ user_display }}</h3> 
-        has given yours as an e-mail address to connect their account.
-
-        To confirm this is correct, go to <a href='{{ activate_url }}'>{% trans 'CONFIRM EMAIL' %}</a>
+        
+        {% blocktrans %}
+            has given yours as an e-mail address to connect their account.
+        {% endblocktrans %}
+        {% trans 'To confirm this is correct, go to' %} <a href='{{ activate_url }}'>{% trans 'CONFIRM EMAIL' %}</a>
     </p>
  
     <div style='width:100%;text-align:right'>

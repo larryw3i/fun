@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-06 19:41+0000\n"
-"PO-Revision-Date: 2020-02-07 03:42+0800\n"
+"POT-Creation-Date: 2020-02-11 17:46+0000\n"
+"PO-Revision-Date: 2020-02-12 01:48+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -219,43 +219,43 @@ msgstr "备注"
 msgid "Hidden"
 msgstr "隐藏(不贴)"
 
-#: eduhub/views.py:73
+#: eduhub/views.py:74
 msgid "Cover image is required"
 msgstr "未选择封面图片"
 
-#: eduhub/views.py:77
+#: eduhub/views.py:78
 msgid "Image allowed only"
 msgstr "只能选择图片"
 
-#: eduhub/views.py:82
+#: eduhub/views.py:83
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:113
+#: eduhub/views.py:114
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr "页数不是最后一页也不是数字哦."
 
-#: eduhub/views.py:218 eduhub/views.py:372
+#: eduhub/views.py:219 eduhub/views.py:373
 msgid "Frequently request"
 msgstr "频繁访问"
 
-#: eduhub/views.py:222 eduhub/views.py:228
+#: eduhub/views.py:223 eduhub/views.py:229
 msgid "Content file is required"
 msgstr "未选择内容文件"
 
-#: eduhub/views.py:233
+#: eduhub/views.py:234
 msgid "The length of video file should be less than"
 msgstr "视频文件应该小于"
 
-#: eduhub/views.py:238
+#: eduhub/views.py:239
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
-#: fun/settings.py:198
+#: fun/settings.py:199
 msgid "English"
 msgstr "English"
 
-#: fun/settings.py:199
+#: fun/settings.py:200
 msgid "中文简体"
 msgstr "中文简体"
 
@@ -295,15 +295,16 @@ msgstr "备注"
 msgid "Home stickers"
 msgstr "主页贴纸"
 
-#: funhome/views.py:126 funhome/views.py:138
+#: funhome/views.py:143 funhome/views.py:174
+#: templates/account/email/password_reset_key_message.html:7
 msgid "X-DOVE"
 msgstr "X-DOVE"
 
-#: funhome/views.py:127 funhome/views.py:139
+#: funhome/views.py:144 funhome/views.py:175
 msgid "Larry`s sharing"
 msgstr "Larry 的分享"
 
-#: funhome/views.py:132 funhome/views.py:144
+#: funhome/views.py:149 funhome/views.py:180
 msgid "larry"
 msgstr "larry"
 
@@ -465,11 +466,35 @@ msgstr "确定要移除吗?"
 msgid "Hello from x-dove"
 msgstr "来自 x-dove 的问候"
 
-#: templates/account/email/email_confirmation_message.html:16
+#: templates/account/email/email_confirmation_message.html:12
+msgid ""
+"\n"
+"            You're receiving this e-mail because user \n"
+"        "
+msgstr ""
+"\n"
+"            您收到这封邮件是因为用户\n"
+"        "
+
+#: templates/account/email/email_confirmation_message.html:17
+msgid ""
+"\n"
+"            has given yours as an e-mail address to connect their account.\n"
+"        "
+msgstr ""
+"\n"
+"            邮件已送出, 未收到请联系我们.\n"
+"        "
+
+#: templates/account/email/email_confirmation_message.html:20
+msgid "To confirm this is correct, go to"
+msgstr "确认邮件请 点击"
+
+#: templates/account/email/email_confirmation_message.html:20
 msgid "CONFIRM EMAIL"
 msgstr "确认邮箱"
 
-#: templates/account/email/email_confirmation_message.html:21
+#: templates/account/email/email_confirmation_message.html:25
 msgid ""
 " \n"
 "            Thank you from x-dove!\n"
@@ -751,20 +776,32 @@ msgstr "设置密码"
 msgid "Signup"
 msgstr "注册"
 
-#: templates/account/signup.html:23 templates/account/signup.html:39
+#: templates/account/signup.html:23 templates/account/signup.html:45
 #: templates/funhome/_navbar.html:50 templates/socialaccount/signup.html:13
 #: templates/socialaccount/signup.html:28
 msgid "Sign Up"
 msgstr "注册"
 
-#: templates/account/signup.html:27
+#: templates/account/signup.html:26
 msgid "Already have an account? Then please"
 msgstr "已有账号吗? 请"
 
-#: templates/account/signup.html:28
+#: templates/account/signup.html:27
 #: templates/socialaccount/login_cancelled.html:18
 msgid "sign in"
 msgstr "登录"
+
+#: templates/account/signup.html:40 templates/funhome/_footer.html:22
+msgid "Legal information"
+msgstr "法律信息"
+
+#: templates/account/signup.html:41
+msgid "and_sign"
+msgstr "和"
+
+#: templates/account/signup.html:42
+msgid "Data privacy"
+msgstr "数据隐私"
 
 #: templates/account/signup_closed.html:5
 #: templates/account/signup_closed.html:8
@@ -889,7 +926,7 @@ msgid "search"
 msgstr "搜索"
 
 #: templates/eduhub/content_create.html:35
-#: templates/eduhub/funcontent_create.html:28
+#: templates/eduhub/funcontent_create.html:38
 #: templates/eduhub/label_create.html:27 templates/eduhub/label_update.html:32
 #: templates/funuser/funuser_update.html:115
 msgid "Upload"
@@ -897,20 +934,20 @@ msgstr "上传"
 
 #: templates/eduhub/content_delete.html:14
 #: templates/eduhub/content_detail.html:14
-#: templates/eduhub/funcontent_delete.html:14
+#: templates/eduhub/funcontent_delete.html:15
 #: templates/eduhub/label_delete.html:14 templates/eduhub/label_detail.html:11
 msgid "Delete label"
 msgstr "删除标签"
 
 #: templates/eduhub/content_delete.html:21
-#: templates/eduhub/funcontent_delete.html:21
+#: templates/eduhub/funcontent_delete.html:22
 #: templates/eduhub/label_delete.html:49
 msgid "Are you sure you want to delete"
 msgstr "确定要删除"
 
 #: templates/eduhub/content_delete.html:22
 #: templates/eduhub/content_list.html:37
-#: templates/eduhub/funcontent_delete.html:22
+#: templates/eduhub/funcontent_delete.html:23
 #: templates/eduhub/funcontent_detail.html:39
 #: templates/eduhub/funcontent_list.html:42
 #: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:45
@@ -999,6 +1036,10 @@ msgstr "教育"
 msgid "cover"
 msgstr "封面"
 
+#: templates/eduhub/funcontent_create.html:35
+msgid "How to classification"
+msgstr "分类参考"
+
 #: templates/eduhub/funcontent_detail.html:14
 msgid "Content details"
 msgstr "标题"
@@ -1025,11 +1066,11 @@ msgstr ""
 "                        x-dove\n"
 "                    "
 
-#: templates/funhome/_footer.html:22
-msgid "Privacy"
-msgstr "隐私"
-
 #: templates/funhome/_footer.html:25
+msgid " Data privacy"
+msgstr " 隐私"
+
+#: templates/funhome/_footer.html:28
 msgid "Developer"
 msgstr "开发者"
 
@@ -1176,6 +1217,18 @@ msgstr "旧的"
 #: templates/funhome/home.html:72
 msgid "View all"
 msgstr "查看全部"
+
+#: templates/funhome/legal_information.html:20
+msgid "LEGAL INFORMATION"
+msgstr "法律信息"
+
+#: templates/funhome/legal_information.html:23
+msgid ""
+"\n"
+"        在您使用X-DOVE或\"X-DOE EDUHUB\"以及X-DOVE相关服务的时候, X-DOVE(以下"
+"简称我们)\n"
+"    "
+msgstr ""
 
 #: templates/funuser/_funuser_url.html:12
 msgid "Information"
@@ -1465,12 +1518,12 @@ msgstr ""
 msgid "Null characters are not allowed."
 msgstr "不允许为空."
 
-#: venv/lib/python3.7/site-packages/django/db/models/base.py:1180
+#: venv/lib/python3.7/site-packages/django/db/models/base.py:1181
 #: venv/lib/python3.7/site-packages/django/forms/models.py:759
 msgid "and"
 msgstr "并且"
 
-#: venv/lib/python3.7/site-packages/django/db/models/base.py:1182
+#: venv/lib/python3.7/site-packages/django/db/models/base.py:1183
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
 msgstr "%(model_name)s  %(field_labels)s 已经存在."
@@ -1506,49 +1559,49 @@ msgstr "%(field_label)s %(date_field_label)s %(lookup_type)s 必须唯一."
 msgid "Field of type: %(field_type)s"
 msgstr "类型: %(field_type)s"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:933
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:937
 #, python-format
 msgid "“%(value)s” value must be either True or False."
 msgstr "“%(value)s” 的值需为 True 或 False."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:934
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:938
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
 msgstr "“%(value)s” 需为 True,  False 或 None."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:936
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:940
 msgid "Boolean (Either True or False)"
 msgstr "布尔值( True 或 False )"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:977
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:981
 #, python-format
 msgid "String (up to %(max_length)s)"
 msgstr "字符串(最大长度 %(max_length)s)"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1041
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1045
 msgid "Comma-separated integers"
 msgstr "由逗号分割的整数"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1090
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1094
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr "“%(value)s” 是日期格式. 它应该像 YYYY-MM-DD ."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1092
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1235
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1096
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1239
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr "“%(value)s” 的格式应为 (YYYY-MM-DD) 但是它获取一个非法的值."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1095
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1099
 msgid "Date (without time)"
 msgstr "日期 ( 含有时间 )"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1233
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1237
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
@@ -1557,7 +1610,7 @@ msgstr ""
 "“%(value)s” 格式错误. 它应为 年年年年-月月-日日 时时:分分[:秒秒[.uuuuuu]][时"
 "区] ."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1237
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1241
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
@@ -1565,131 +1618,131 @@ msgid ""
 msgstr ""
 "“%(value)s” 格式正确: (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) 但是内容无效."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1241
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1245
 msgid "Date (with time)"
 msgstr "日期( 含有 时间 )"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1389
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1393
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
 msgstr "“%(value)s” 必须为 小数."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1391
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1395
 msgid "Decimal number"
 msgstr "小数"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1530
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1534
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
 "uuuuuu] format."
 msgstr "“%(value)s” 格式错误. 它的格式应为 [DD] [[HH:]MM:]ss[.uuuuuu] ."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1533
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1537
 msgid "Duration"
 msgstr "持续"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1583
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1587
 msgid "Email address"
 msgstr "邮箱地址"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1606
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1610
 msgid "File path"
 msgstr "文件路径"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1672
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1676
 #, python-format
 msgid "“%(value)s” value must be a float."
 msgstr "“%(value)s” 需为浮点值."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1674
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1678
 msgid "Floating point number"
 msgstr "浮点数"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1712
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1716
 #, python-format
 msgid "“%(value)s” value must be an integer."
 msgstr "“%(value)s” 需为整数."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1714
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1718
 msgid "Integer"
 msgstr "整数"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1797
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1801
 msgid "Big (8 byte) integer"
 msgstr "(8位)整数"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1813
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1817
 msgid "IPv4 address"
 msgstr "IPv4 地址"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1844
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1848
 msgid "IP address"
 msgstr "IP地址"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1924
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1925
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1928
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1929
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
 msgstr "“%(value)s” 需为 True, False 或 None."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1927
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1931
 msgid "Boolean (Either True, False or None)"
 msgstr "布尔( 含 True, False, None )"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1962
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1966
 msgid "Positive integer"
 msgstr "正整数"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1975
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1979
 msgid "Positive small integer"
 msgstr "正整数( 小于 8 位 )"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1989
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1993
 #, python-format
 msgid "Slug (up to %(max_length)s)"
 msgstr "Slug (最大长度 %(max_length)s)"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2021
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2025
 msgid "Small integer"
 msgstr "整数( 小于  8 位 )"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2028
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2032
 msgid "Text"
 msgstr "文本"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2056
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2060
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr "“%(value)s” 的格式需为 HH:MM[:ss[.uuuuuu]] ."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2058
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2062
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr "“%(value)s” 格式正确: (HH:MM[:ss[.uuuuuu]]) 但是内容无效."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2061
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2065
 msgid "Time"
 msgstr "时间"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2187
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2191
 msgid "URL"
 msgstr "URL"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2209
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2213
 msgid "Raw binary data"
 msgstr "二进制数据"
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2274
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2278
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
 msgstr "“%(value)s” 不是 UUID."
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2276
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2280
 msgid "Universally unique identifier"
 msgstr "通用唯一标识符"
 
@@ -1901,15 +1954,15 @@ msgstr "当前"
 msgid "Change"
 msgstr "更改"
 
-#: venv/lib/python3.7/site-packages/django/forms/widgets.py:711
+#: venv/lib/python3.7/site-packages/django/forms/widgets.py:709
 msgid "Unknown"
 msgstr "未知"
 
-#: venv/lib/python3.7/site-packages/django/forms/widgets.py:712
+#: venv/lib/python3.7/site-packages/django/forms/widgets.py:710
 msgid "Yes"
 msgstr "好的"
 
-#: venv/lib/python3.7/site-packages/django/forms/widgets.py:713
+#: venv/lib/python3.7/site-packages/django/forms/widgets.py:711
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:185
 msgid "No"
 msgstr "不"
@@ -2708,7 +2761,7 @@ msgstr "Thumbnail"
 #: venv/lib/python3.7/site-packages/pylint_django/tests/input/func_noerror_ugettext_lazy_format.py:7
 #, python-brace-format
 msgid "{something}"
-msgstr ""
+msgstr "{something}"
 
 #~ msgid "Enable selected Emperor's Vassals"
 #~ msgstr "Enable selected Emperor's Vassals"
@@ -2958,9 +3011,6 @@ msgstr ""
 
 #~ msgid "Diary"
 #~ msgstr "日志"
-
-#~ msgid "classification"
-#~ msgstr "分类"
 
 #~ msgid "View more homestickers"
 #~ msgstr "更多贴纸"

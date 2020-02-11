@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-06 19:41+0000\n"
+"POT-Creation-Date: 2020-02-11 17:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,43 +218,43 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: eduhub/views.py:73
+#: eduhub/views.py:74
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:77
+#: eduhub/views.py:78
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:82
+#: eduhub/views.py:83
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:113
+#: eduhub/views.py:114
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr ""
 
-#: eduhub/views.py:218 eduhub/views.py:372
+#: eduhub/views.py:219 eduhub/views.py:373
 msgid "Frequently request"
 msgstr ""
 
-#: eduhub/views.py:222 eduhub/views.py:228
+#: eduhub/views.py:223 eduhub/views.py:229
 msgid "Content file is required"
 msgstr ""
 
-#: eduhub/views.py:233
+#: eduhub/views.py:234
 msgid "The length of video file should be less than"
 msgstr ""
 
-#: eduhub/views.py:238
+#: eduhub/views.py:239
 msgid "The length of pdf file should be less than"
 msgstr ""
 
-#: fun/settings.py:198
+#: fun/settings.py:199
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:199
+#: fun/settings.py:200
 msgid "中文简体"
 msgstr ""
 
@@ -294,15 +294,16 @@ msgstr ""
 msgid "Home stickers"
 msgstr ""
 
-#: funhome/views.py:126 funhome/views.py:138
+#: funhome/views.py:143 funhome/views.py:174
+#: templates/account/email/password_reset_key_message.html:7
 msgid "X-DOVE"
 msgstr ""
 
-#: funhome/views.py:127 funhome/views.py:139
+#: funhome/views.py:144 funhome/views.py:175
 msgid "Larry`s sharing"
 msgstr ""
 
-#: funhome/views.py:132 funhome/views.py:144
+#: funhome/views.py:149 funhome/views.py:180
 msgid "larry"
 msgstr ""
 
@@ -464,11 +465,29 @@ msgstr ""
 msgid "Hello from x-dove"
 msgstr ""
 
-#: templates/account/email/email_confirmation_message.html:16
+#: templates/account/email/email_confirmation_message.html:12
+msgid ""
+"\n"
+"            You're receiving this e-mail because user \n"
+"        "
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.html:17
+msgid ""
+"\n"
+"            has given yours as an e-mail address to connect their account.\n"
+"        "
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.html:20
+msgid "To confirm this is correct, go to"
+msgstr ""
+
+#: templates/account/email/email_confirmation_message.html:20
 msgid "CONFIRM EMAIL"
 msgstr ""
 
-#: templates/account/email/email_confirmation_message.html:21
+#: templates/account/email/email_confirmation_message.html:25
 msgid ""
 " \n"
 "            Thank you from x-dove!\n"
@@ -708,19 +727,31 @@ msgstr ""
 msgid "Signup"
 msgstr ""
 
-#: templates/account/signup.html:23 templates/account/signup.html:39
+#: templates/account/signup.html:23 templates/account/signup.html:45
 #: templates/funhome/_navbar.html:50 templates/socialaccount/signup.html:13
 #: templates/socialaccount/signup.html:28
 msgid "Sign Up"
 msgstr ""
 
-#: templates/account/signup.html:27
+#: templates/account/signup.html:26
 msgid "Already have an account? Then please"
 msgstr ""
 
-#: templates/account/signup.html:28
+#: templates/account/signup.html:27
 #: templates/socialaccount/login_cancelled.html:18
 msgid "sign in"
+msgstr ""
+
+#: templates/account/signup.html:40 templates/funhome/_footer.html:22
+msgid "Legal information"
+msgstr ""
+
+#: templates/account/signup.html:41
+msgid "and_sign"
+msgstr ""
+
+#: templates/account/signup.html:42
+msgid "Data privacy"
 msgstr ""
 
 #: templates/account/signup_closed.html:5
@@ -828,7 +859,7 @@ msgid "search"
 msgstr ""
 
 #: templates/eduhub/content_create.html:35
-#: templates/eduhub/funcontent_create.html:28
+#: templates/eduhub/funcontent_create.html:38
 #: templates/eduhub/label_create.html:27 templates/eduhub/label_update.html:32
 #: templates/funuser/funuser_update.html:115
 msgid "Upload"
@@ -836,20 +867,20 @@ msgstr ""
 
 #: templates/eduhub/content_delete.html:14
 #: templates/eduhub/content_detail.html:14
-#: templates/eduhub/funcontent_delete.html:14
+#: templates/eduhub/funcontent_delete.html:15
 #: templates/eduhub/label_delete.html:14 templates/eduhub/label_detail.html:11
 msgid "Delete label"
 msgstr ""
 
 #: templates/eduhub/content_delete.html:21
-#: templates/eduhub/funcontent_delete.html:21
+#: templates/eduhub/funcontent_delete.html:22
 #: templates/eduhub/label_delete.html:49
 msgid "Are you sure you want to delete"
 msgstr ""
 
 #: templates/eduhub/content_delete.html:22
 #: templates/eduhub/content_list.html:37
-#: templates/eduhub/funcontent_delete.html:22
+#: templates/eduhub/funcontent_delete.html:23
 #: templates/eduhub/funcontent_detail.html:39
 #: templates/eduhub/funcontent_list.html:42
 #: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:45
@@ -938,6 +969,10 @@ msgstr ""
 msgid "cover"
 msgstr ""
 
+#: templates/eduhub/funcontent_create.html:35
+msgid "How to classification"
+msgstr ""
+
 #: templates/eduhub/funcontent_detail.html:14
 msgid "Content details"
 msgstr ""
@@ -961,11 +996,11 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/funhome/_footer.html:22
-msgid "Privacy"
+#: templates/funhome/_footer.html:25
+msgid " Data privacy"
 msgstr ""
 
-#: templates/funhome/_footer.html:25
+#: templates/funhome/_footer.html:28
 msgid "Developer"
 msgstr ""
 
@@ -1111,6 +1146,18 @@ msgstr ""
 
 #: templates/funhome/home.html:72
 msgid "View all"
+msgstr ""
+
+#: templates/funhome/legal_information.html:20
+msgid "LEGAL INFORMATION"
+msgstr ""
+
+#: templates/funhome/legal_information.html:23
+msgid ""
+"\n"
+"        在您使用X-DOVE或\"X-DOE EDUHUB\"以及X-DOVE相关服务的时候, X-DOVE(以下"
+"简称我们)\n"
+"    "
 msgstr ""
 
 #: templates/funuser/_funuser_url.html:12
@@ -1386,12 +1433,12 @@ msgstr ""
 msgid "Null characters are not allowed."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/base.py:1180
+#: venv/lib/python3.7/site-packages/django/db/models/base.py:1181
 #: venv/lib/python3.7/site-packages/django/forms/models.py:759
 msgid "and"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/base.py:1182
+#: venv/lib/python3.7/site-packages/django/db/models/base.py:1183
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
 msgstr ""
@@ -1427,187 +1474,187 @@ msgstr ""
 msgid "Field of type: %(field_type)s"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:933
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:937
 #, python-format
 msgid "“%(value)s” value must be either True or False."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:934
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:938
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:936
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:940
 msgid "Boolean (Either True or False)"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:977
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:981
 #, python-format
 msgid "String (up to %(max_length)s)"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1041
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1045
 msgid "Comma-separated integers"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1090
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1094
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1092
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1235
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1096
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1239
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1095
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1099
 msgid "Date (without time)"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1233
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1237
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
 "uuuuuu]][TZ] format."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1237
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1241
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
 "[TZ]) but it is an invalid date/time."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1241
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1245
 msgid "Date (with time)"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1389
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1393
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1391
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1395
 msgid "Decimal number"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1530
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1534
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
 "uuuuuu] format."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1533
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1537
 msgid "Duration"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1583
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1587
 msgid "Email address"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1606
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1610
 msgid "File path"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1672
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1676
 #, python-format
 msgid "“%(value)s” value must be a float."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1674
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1678
 msgid "Floating point number"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1712
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1716
 #, python-format
 msgid "“%(value)s” value must be an integer."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1714
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1718
 msgid "Integer"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1797
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1801
 msgid "Big (8 byte) integer"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1813
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1817
 msgid "IPv4 address"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1844
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1848
 msgid "IP address"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1924
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1925
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1928
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1929
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1927
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1931
 msgid "Boolean (Either True, False or None)"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1962
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1966
 msgid "Positive integer"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1975
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1979
 msgid "Positive small integer"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1989
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:1993
 #, python-format
 msgid "Slug (up to %(max_length)s)"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2021
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2025
 msgid "Small integer"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2028
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2032
 msgid "Text"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2056
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2060
 #, python-format
 msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2058
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2062
 #, python-format
 msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2061
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2065
 msgid "Time"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2187
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2191
 msgid "URL"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2209
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2213
 msgid "Raw binary data"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2274
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2278
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2276
+#: venv/lib/python3.7/site-packages/django/db/models/fields/__init__.py:2280
 msgid "Universally unique identifier"
 msgstr ""
 
@@ -1816,15 +1863,15 @@ msgstr ""
 msgid "Change"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/forms/widgets.py:711
+#: venv/lib/python3.7/site-packages/django/forms/widgets.py:709
 msgid "Unknown"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/forms/widgets.py:712
+#: venv/lib/python3.7/site-packages/django/forms/widgets.py:710
 msgid "Yes"
 msgstr ""
 
-#: venv/lib/python3.7/site-packages/django/forms/widgets.py:713
+#: venv/lib/python3.7/site-packages/django/forms/widgets.py:711
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:185
 msgid "No"
 msgstr ""

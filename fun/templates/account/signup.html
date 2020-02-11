@@ -37,9 +37,9 @@
         {% endif %}
 
         <div class="text-center">
-            {% trans "X-DOVE's" %} 
-            <a href="{% url 'legal_information' %}">{% trans 'Legal information' %}</a>
-            <a href="{% url 'data_privacy' %}">{% trans ' Data privacy' %}</a>
+            <a href="{% url 'legal_information' %}">{% trans 'Legal information' %}</a>  
+            {% trans 'and_sign'%}
+            <a href="{% url 'data_privacy' %}">{% trans 'Data privacy' %}</a>
         </div>
 
         <button type="submit" class="btn btn-info btn-lg w-75 mt-2">{% trans "Sign Up" %} &raquo;</button>
