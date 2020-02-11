@@ -119,4 +119,18 @@
         fileReader.readAsDataURL(event.target.files[0])
     }
 
+
 })();
+
+/**
+ * Make a global alert
+ * @param {String} message message
+ * @param {String} type Bootstrap alert, view it https://getbootstrap.com/docs/4.4/components/alerts/#examples 
+ */
+function makeGlobalAlert( message='Hello',timeout=2500, type='info' )
+{
+    $(`<div class="text-center rounded alert alert-${type}" role="alert">${message}</div>`).prependTo('body');
+    setTimeout(()=>{
+        $('.alert').remove();
+    }, timeout);
+}

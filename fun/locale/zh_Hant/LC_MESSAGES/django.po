@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-11 17:46+0000\n"
+"POT-Creation-Date: 2020-02-11 23:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:15
+#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:23
 #: templates/funhome/_navbar.html:26
 msgid "Eduhub"
 msgstr ""
@@ -119,7 +119,7 @@ msgstr ""
 msgid "Eduhub content"
 msgstr ""
 
-#: eduhub/models.py:45 templates/eduhub/_eduhub_base.html:43
+#: eduhub/models.py:45 templates/eduhub/_eduhub_base.html:51
 #: templates/eduhub/content_list.html:15
 #: templates/eduhub/eduhub_search_result.html:39
 #: templates/eduhub/funcontent_list.html:17
@@ -307,7 +307,7 @@ msgstr ""
 msgid "larry"
 msgstr ""
 
-#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:33
+#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:41
 #: templates/eduhub/label_list.html:28
 msgid "All"
 msgstr ""
@@ -334,7 +334,7 @@ msgid "Hometown"
 msgstr ""
 
 #: funuser/admin.py:21 funuser/models.py:39
-#: templates/eduhub/_eduhub_base.html:30
+#: templates/eduhub/_eduhub_base.html:38
 #: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
@@ -742,7 +742,7 @@ msgstr ""
 msgid "sign in"
 msgstr ""
 
-#: templates/account/signup.html:40 templates/funhome/_footer.html:22
+#: templates/account/signup.html:40 templates/funhome/_footer.html:23
 msgid "Legal information"
 msgstr ""
 
@@ -820,41 +820,41 @@ msgstr ""
 msgid "change your e-mail address"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:26
+#: templates/eduhub/_eduhub_base.html:34
 msgid "Preschool education"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:27
+#: templates/eduhub/_eduhub_base.html:35
 msgid "Primary school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:28
+#: templates/eduhub/_eduhub_base.html:36
 msgid "Junior high school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:29
+#: templates/eduhub/_eduhub_base.html:37
 msgid "Senior high school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:31
+#: templates/eduhub/_eduhub_base.html:39
 msgid "Others"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:37
+#: templates/eduhub/_eduhub_base.html:45
 msgid "Survey"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:40
+#: templates/eduhub/_eduhub_base.html:48
 #: templates/eduhub/eduhub_search_result.html:21
 #: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:47 templates/eduhub/_search.html:12
+#: templates/eduhub/_eduhub_base.html:55 templates/eduhub/_search.html:12
 msgid "What are you thinking about"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:48 templates/eduhub/_search.html:14
+#: templates/eduhub/_eduhub_base.html:56 templates/eduhub/_search.html:14
 msgid "search"
 msgstr ""
 
@@ -970,11 +970,116 @@ msgid "cover"
 msgstr ""
 
 #: templates/eduhub/funcontent_create.html:35
+#: templates/eduhub/how_to_classification.html:17
 msgid "How to classification"
 msgstr ""
 
 #: templates/eduhub/funcontent_detail.html:14
 msgid "Content details"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:34
+msgid "How to classify the eduhub content"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:39
+msgid ""
+"\n"
+"            I don't bother to make a catalog right now, and I don't want to "
+"classify them now, because I'm the only one who develop it, and I don't know "
+"when I have free time, so you should classify your content yourself so as "
+"not to make a mess of everything. \n"
+"        "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:47
+msgid ""
+"\n"
+"                    If you're writing about primary school (I don't know if "
+"anyone will write about kindergarten), \n"
+"                "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:51
+msgid ""
+"\n"
+"                    you should categorize(remove bracket!): \n"
+"                "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:55
+#: templates/eduhub/how_to_classification.html:70
+#: templates/eduhub/how_to_classification.html:85
+msgid "click to copy"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:55
+msgid "primary school/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:56
+msgid ""
+"\n"
+"                        primary school/(grade)/(semester)/(subjects)/"
+"(title)\n"
+"                    "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:63
+msgid ""
+"\n"
+"                    If you're writing about high school teaching,\n"
+"                "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:67
+#: templates/eduhub/how_to_classification.html:82
+msgid ""
+"\n"
+"                    you should categorize: \n"
+"                "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:70
+msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:71
+msgid ""
+"\n"
+"                        ('junior' or 'senior') high school/(grade)/"
+"(semester)/(subjects)/(title)\n"
+"                    "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:78
+msgid ""
+"\n"
+"                    If you're writing about the college' teaching,\n"
+"                "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:85
+msgid "college/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:86
+msgid "college/(major)/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:91
+msgid ""
+"\n"
+"                    Other stages should also have classification, you can "
+"change it \n"
+"                    <a href='https://github.com/larryw3i/fun/blob/master/fun/"
+"templates/eduhub/how_to_classification.html'>here</a>  \n"
+"                    and make a pull request, or you look at it yourself.\n"
+"                "
+msgstr ""
+
+#: templates/eduhub/how_to_classification.html:107
+msgid "classification copied"
 msgstr ""
 
 #: templates/eduhub/label_delete.html:37
@@ -996,12 +1101,16 @@ msgid ""
 "                    "
 msgstr ""
 
-#: templates/funhome/_footer.html:25
+#: templates/funhome/_footer.html:26
 msgid " Data privacy"
 msgstr ""
 
-#: templates/funhome/_footer.html:28
+#: templates/funhome/_footer.html:29
 msgid "Developer"
+msgstr ""
+
+#: templates/funhome/_footer.html:38
+msgid "this site"
 msgstr ""
 
 #: templates/funhome/_footer_language.html:22
@@ -1150,14 +1259,6 @@ msgstr ""
 
 #: templates/funhome/legal_information.html:20
 msgid "LEGAL INFORMATION"
-msgstr ""
-
-#: templates/funhome/legal_information.html:23
-msgid ""
-"\n"
-"        在您使用X-DOVE或\"X-DOE EDUHUB\"以及X-DOVE相关服务的时候, X-DOVE(以下"
-"简称我们)\n"
-"    "
 msgstr ""
 
 #: templates/funuser/_funuser_url.html:12

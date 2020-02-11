@@ -1,3 +1,4 @@
+
 {% extends 'funhome/_base.html' %}
 
 {% load static %}
@@ -7,7 +8,14 @@
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
+
 {% load funtag %}
+
+{% block title %} {% endblock title %}
+
+{% block optionalcss %}
+
+{% endblock optionalcss %}
 
 {% block subnavbar %}
     <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm ">
@@ -52,6 +60,15 @@
     </nav>
 {% endblock subnavbar %}
 
+{% block content %} 
+
+{% endblock content%}
+
 {% block optionaljs %} 
     <script src="{% static 'eduhub/eduhub.js' %}"></script>
+    
+    {% block eduhub_optionaljs %} 
+
+    {% endblock eduhub_optionaljs %}
+
 {% endblock optionaljs %}

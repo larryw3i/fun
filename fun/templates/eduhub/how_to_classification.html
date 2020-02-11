@@ -1,9 +1,12 @@
 
-{% extends 'funhome/_base.html' %}
+{% extends 'eduhub/_eduhub_base.html' %}
 
 {% comment %}
     simpleness is the best
     make perfection more perfect
+{% endcomment %}
+{% comment %}
+    My English is very poor, I'm trying to improve it.
 {% endcomment %}
 
 {% load static %}
@@ -14,16 +17,98 @@
 {% load l10n %}
 {% load tz %}
 
-{% block title %}  {% endblock title %}
+{% block title %} {% trans 'How to classification' %} {% endblock title %}
 
 {% block optionalcss %}
-
+    <style>
+        .eduhub-classification-tip
+        {
+            cursor: pointer;
+            font-size: x-large; 
+            font-weight: bolder; 
+            margin: 10px;
+        }
+    </style>
 {% endblock optionalcss %}
 
 {% block content %} 
 
+    <div class="text-center " style="font-size: xx-large; font-weight: bolder;">
+        {% trans 'How to classify the eduhub content' %}
+    </div>
+    <hr/>
+
+    <p>
+        {% blocktrans %}
+            I don't bother to make a catalog right now, and I don't want to classify them now, because I'm the only one who develop it, and I don't know when I have free time, so you should classify your content yourself so as not to make a mess of everything. 
+        {% endblocktrans %}
+    </p>
+
+    <p >
+        <ol>
+            <li>
+                {% blocktrans %}
+                    If you're writing about primary school (I don't know if anyone will write about kindergarten), 
+                {% endblocktrans %}
+                <br/>
+                {% blocktrans %}
+                    you should categorize(remove bracket!): 
+                {% endblocktrans %}
+                
+                <div class="text-center eduhub-classification-tip" title="{% trans 'click to copy' %}" data-clipboard-text="{% trans 'primary school/(grade)/(semester)/(subjects)/(title)' %}">
+                    {% blocktrans %}
+                        primary school/(grade)/(semester)/(subjects)/(title)
+                    {% endblocktrans %}
+                </div>
+
+            </li>
+            <li>
+                {% blocktrans %}
+                    If you're writing about high school teaching,
+                {% endblocktrans %}
+                <br/>
+                {% blocktrans %}
+                    you should categorize: 
+                {% endblocktrans %}
+                <div class="text-center eduhub-classification-tip" title="{% trans 'click to copy' %}" data-clipboard-text="{% trans 'junior senior high school/(grade)/(semester)/(subjects)/(title)' %}" >
+                    {% blocktrans %}
+                        ('junior' or 'senior') high school/(grade)/(semester)/(subjects)/(title)
+                    {% endblocktrans %}
+                </div>
+
+            </li>
+            <li>
+                {% blocktrans %}
+                    If you're writing about the college' teaching,
+                {% endblocktrans %}
+                <br/>
+                {% blocktrans %}
+                    you should categorize: 
+                {% endblocktrans %}
+                <div class="text-center eduhub-classification-tip" title="{% trans 'click to copy' %}" data-clipboard-text="{% trans 'college/(grade)/(semester)/(subjects)/(title)' %}" >
+                        {% trans 'college/(major)/(grade)/(semester)/(subjects)/(title)' %}
+                </div>
+
+            </li>
+            <li>
+                {% blocktrans %}
+                    Other stages should also have classification, you can change it 
+                    <a href='https://github.com/larryw3i/fun/blob/master/fun/templates/eduhub/how_to_classification.html'>here</a>  
+                    and make a pull request, or you look at it yourself.
+                {% endblocktrans %}
+            </li>
+        </ol>
+    </p>
+
 {% endblock content%}
 
-{% block optionaljs %}
+{% block eduhub_optionaljs %}
+    <script src="{% static 'node_modules/clipboard/dist/clipboard.min.js' %}"></script>
+    <script>
+        var eduhub_classification_clipboard = new ClipboardJS('.eduhub-classification-tip');
+        eduhub_classification_clipboard.on('success', function(e) {
+            makeGlobalAlert( "{% trans 'classification copied' %}" );
+        });
+    </script>
+{% endblock eduhub_optionaljs %}
 
-{% endblock optionaljs %}

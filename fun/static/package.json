@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "bootswatch": "^4.4.1",
+    "clipboard": "^2.0.4",
     "glob": "^7.1.6",
     "http-proxy-agent": "^3.0.0",
     "jquery": "^3.4.1",

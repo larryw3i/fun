@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-11 17:46+0000\n"
-"PO-Revision-Date: 2020-02-12 01:48+0800\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2020-02-11 23:15+0000\n"
+"PO-Revision-Date: 2020-02-12 07:20+0800\n"
+"Last-Translator: larry <larryw3i@163.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:15
+#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:23
 #: templates/funhome/_navbar.html:26
 msgid "Eduhub"
 msgstr "教育"
@@ -120,7 +120,7 @@ msgstr "合法"
 msgid "Eduhub content"
 msgstr "内容"
 
-#: eduhub/models.py:45 templates/eduhub/_eduhub_base.html:43
+#: eduhub/models.py:45 templates/eduhub/_eduhub_base.html:51
 #: templates/eduhub/content_list.html:15
 #: templates/eduhub/eduhub_search_result.html:39
 #: templates/eduhub/funcontent_list.html:17
@@ -308,7 +308,7 @@ msgstr "Larry 的分享"
 msgid "larry"
 msgstr "larry"
 
-#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:33
+#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:41
 #: templates/eduhub/label_list.html:28
 msgid "All"
 msgstr "全部"
@@ -335,7 +335,7 @@ msgid "Hometown"
 msgstr "家乡"
 
 #: funuser/admin.py:21 funuser/models.py:39
-#: templates/eduhub/_eduhub_base.html:30
+#: templates/eduhub/_eduhub_base.html:38
 #: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
@@ -791,7 +791,7 @@ msgstr "已有账号吗? 请"
 msgid "sign in"
 msgstr "登录"
 
-#: templates/account/signup.html:40 templates/funhome/_footer.html:22
+#: templates/account/signup.html:40 templates/funhome/_footer.html:23
 msgid "Legal information"
 msgstr "法律信息"
 
@@ -887,41 +887,41 @@ msgstr "你也可以"
 msgid "change your e-mail address"
 msgstr "更改邮箱地址"
 
-#: templates/eduhub/_eduhub_base.html:26
+#: templates/eduhub/_eduhub_base.html:34
 msgid "Preschool education"
 msgstr "学前教育"
 
-#: templates/eduhub/_eduhub_base.html:27
+#: templates/eduhub/_eduhub_base.html:35
 msgid "Primary school"
 msgstr "小学"
 
-#: templates/eduhub/_eduhub_base.html:28
+#: templates/eduhub/_eduhub_base.html:36
 msgid "Junior high school"
 msgstr "初中"
 
-#: templates/eduhub/_eduhub_base.html:29
+#: templates/eduhub/_eduhub_base.html:37
 msgid "Senior high school"
 msgstr "高中"
 
-#: templates/eduhub/_eduhub_base.html:31
+#: templates/eduhub/_eduhub_base.html:39
 msgid "Others"
 msgstr "其它"
 
-#: templates/eduhub/_eduhub_base.html:37
+#: templates/eduhub/_eduhub_base.html:45
 msgid "Survey"
 msgstr "问卷调查"
 
-#: templates/eduhub/_eduhub_base.html:40
+#: templates/eduhub/_eduhub_base.html:48
 #: templates/eduhub/eduhub_search_result.html:21
 #: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr "标签"
 
-#: templates/eduhub/_eduhub_base.html:47 templates/eduhub/_search.html:12
+#: templates/eduhub/_eduhub_base.html:55 templates/eduhub/_search.html:12
 msgid "What are you thinking about"
 msgstr "在想什么"
 
-#: templates/eduhub/_eduhub_base.html:48 templates/eduhub/_search.html:14
+#: templates/eduhub/_eduhub_base.html:56 templates/eduhub/_search.html:14
 msgid "search"
 msgstr "搜索"
 
@@ -1037,12 +1037,150 @@ msgid "cover"
 msgstr "封面"
 
 #: templates/eduhub/funcontent_create.html:35
+#: templates/eduhub/how_to_classification.html:17
 msgid "How to classification"
 msgstr "分类参考"
 
 #: templates/eduhub/funcontent_detail.html:14
 msgid "Content details"
 msgstr "标题"
+
+#: templates/eduhub/how_to_classification.html:34
+msgid "How to classify the eduhub content"
+msgstr "分类参考"
+
+#: templates/eduhub/how_to_classification.html:39
+msgid ""
+"\n"
+"            I don't bother to make a catalog right now, and I don't want to "
+"classify them now, because I'm the only one who develop it, and I don't know "
+"when I have free time, so you should classify your content yourself so as "
+"not to make a mess of everything. \n"
+"        "
+msgstr ""
+"\n"
+"            我已经不想去做一个分类了, 或者说我现在还不想做, 因为我一个人做这"
+"个repo, 也不知道我什么时候有时间, 所以你应该自己给你的内容分类好, 以免大家的"
+"内容杂乱无章。\n"
+"        "
+
+#: templates/eduhub/how_to_classification.html:47
+msgid ""
+"\n"
+"                    If you're writing about primary school (I don't know if "
+"anyone will write about kindergarten), \n"
+"                "
+msgstr ""
+"\n"
+"                    如果你写的是小学的教学内容( 我不确定有没有人写幼儿园"
+"的 ), \n"
+"                "
+
+#: templates/eduhub/how_to_classification.html:51
+msgid ""
+"\n"
+"                    you should categorize(remove bracket!): \n"
+"                "
+msgstr ""
+"\n"
+"                    你可以这样分类( 把括号去掉! ): \n"
+"                "
+
+#: templates/eduhub/how_to_classification.html:55
+#: templates/eduhub/how_to_classification.html:70
+#: templates/eduhub/how_to_classification.html:85
+msgid "click to copy"
+msgstr "点击复制"
+
+#: templates/eduhub/how_to_classification.html:55
+msgid "primary school/(grade)/(semester)/(subjects)/(title)"
+msgstr "小学/(年级)/(学期)/(科目)/(标题)"
+
+#: templates/eduhub/how_to_classification.html:56
+msgid ""
+"\n"
+"                        primary school/(grade)/(semester)/(subjects)/"
+"(title)\n"
+"                    "
+msgstr ""
+"\n"
+"                       小学/(年级)/(学期)/(科目)/(标题)\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:63
+msgid ""
+"\n"
+"                    If you're writing about high school teaching,\n"
+"                "
+msgstr ""
+"\n"
+"                        如果你在写高中的教学内容,\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:67
+#: templates/eduhub/how_to_classification.html:82
+msgid ""
+"\n"
+"                    you should categorize: \n"
+"                "
+msgstr ""
+"\n"
+"                        你可以这样分类:\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:70
+msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
+msgstr "初或高中/(年级)/(学期)/(科目)/(标题)"
+
+#: templates/eduhub/how_to_classification.html:71
+msgid ""
+"\n"
+"                        ('junior' or 'senior') high school/(grade)/"
+"(semester)/(subjects)/(title)\n"
+"                    "
+msgstr ""
+"\n"
+"                        初或高中/(年级)/(学期)/(科目)/(标题)\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:78
+msgid ""
+"\n"
+"                    If you're writing about the college' teaching,\n"
+"                "
+msgstr ""
+"\n"
+"                        如果你在写大学的教学内容,\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:85
+msgid "college/(grade)/(semester)/(subjects)/(title)"
+msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
+
+#: templates/eduhub/how_to_classification.html:86
+msgid "college/(major)/(grade)/(semester)/(subjects)/(title)"
+msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
+
+#: templates/eduhub/how_to_classification.html:91
+msgid ""
+"\n"
+"                    Other stages should also have classification, you can "
+"change it \n"
+"                    <a href='https://github.com/larryw3i/fun/blob/master/fun/"
+"templates/eduhub/how_to_classification.html'>here</a>  \n"
+"                    and make a pull request, or you look at it yourself.\n"
+"                "
+msgstr ""
+"\n"
+"                    其它阶段的还有很多分类目录, 你可以  \n"
+"                    <a href='https://github.com/larryw3i/fun/blob/master/fun/"
+"templates/eduhub/how_to_classification.html'>在这里</a>  更改它 \n"
+"                    然后让我合并, 或者你自己看着办。\n"
+"                "
+
+#: templates/eduhub/how_to_classification.html:107
+msgid "classification copied"
+msgstr "分类已复制"
 
 #: templates/eduhub/label_delete.html:37
 msgid "Name"
@@ -1066,13 +1204,17 @@ msgstr ""
 "                        x-dove\n"
 "                    "
 
-#: templates/funhome/_footer.html:25
+#: templates/funhome/_footer.html:26
 msgid " Data privacy"
 msgstr " 隐私"
 
-#: templates/funhome/_footer.html:28
+#: templates/funhome/_footer.html:29
 msgid "Developer"
 msgstr "开发者"
+
+#: templates/funhome/_footer.html:38
+msgid "this site"
+msgstr "本站源码"
 
 #: templates/funhome/_footer_language.html:22
 msgid "language"
@@ -1221,14 +1363,6 @@ msgstr "查看全部"
 #: templates/funhome/legal_information.html:20
 msgid "LEGAL INFORMATION"
 msgstr "法律信息"
-
-#: templates/funhome/legal_information.html:23
-msgid ""
-"\n"
-"        在您使用X-DOVE或\"X-DOE EDUHUB\"以及X-DOVE相关服务的时候, X-DOVE(以下"
-"简称我们)\n"
-"    "
-msgstr ""
 
 #: templates/funuser/_funuser_url.html:12
 msgid "Information"
