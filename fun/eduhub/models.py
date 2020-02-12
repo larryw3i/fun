@@ -51,28 +51,10 @@ class Content(models.Model):
     label = models.ForeignKey( to = Label, on_delete= models.CASCADE , null=True,  verbose_name =_('Content label')  )
     title = models.CharField(  max_length = 64, blank = False ,  verbose_name =_('Content title') )
     content_file =  models.FileField(  upload_to = upload_to, blank = True,  verbose_name =_('Content file') )
-    # content = RichTextUploadingField()
     uploading_date = models.DateTimeField(   auto_now_add = True,  verbose_name =_('Content uploading date') )
     comment = models.TextField(   max_length  = 64,  verbose_name =_('Content comment') )
     is_legal = models.BooleanField(   default = True,   verbose_name =_('Is content legal') )
     
-
-class Funclassification( models.Model ):
-
-    class Meta:
-        verbose_name = _('Eduhub classification')
-        verbose_name_plural = _('Eduhub classifications')
-
-    def __str__(self):
-        return self.name
-
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    parent = models.ForeignKey( 'self' , on_delete = models.SET_DEFAULT, default = None, null = True, blank = True , verbose_name = _('Parent classification') )
-    name = models.CharField(  max_length = 64, blank = False ,  verbose_name =_('Classification name') )
-    level = models.IntegerField( validators = [ validators.MinValueValidator(1), validators.MaxValueValidator(10) ], default = 1,  verbose_name =_('Classification level') )
-    creating_date = models.DateTimeField(   auto_now_add = True,  verbose_name =_('Classification creating date') )
-    creating_user = models.ForeignKey( to = User, on_delete=models.CASCADE,   verbose_name =_('Classification creating user') )
-    is_disabled = models.BooleanField(   default = False,   verbose_name =_('Is classification disabled') )
 
 class Funcontent(models.Model):
 
@@ -112,3 +94,22 @@ class Eduhubhomesticker( models.Model ):
     is_hidden = models.BooleanField( default= False , verbose_name = _('Hidden')+" ?" )
 
 
+
+
+#  deprecated
+class Funclassification( models.Model ):
+
+    class Meta:
+        verbose_name = _('Eduhub classification')
+        verbose_name_plural = _('Eduhub classifications')
+
+    def __str__(self):
+        return self.name
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    parent = models.ForeignKey( 'self' , on_delete = models.SET_DEFAULT, default = None, null = True, blank = True , verbose_name = _('Parent classification') )
+    name = models.CharField(  max_length = 64, blank = False ,  verbose_name =_('Classification name') )
+    level = models.IntegerField( validators = [ validators.MinValueValidator(1), validators.MaxValueValidator(10) ], default = 1,  verbose_name =_('Classification level') )
+    creating_date = models.DateTimeField(   auto_now_add = True,  verbose_name =_('Classification creating date') )
+    creating_user = models.ForeignKey( to = User, on_delete=models.CASCADE,   verbose_name =_('Classification creating user') )
+    is_disabled = models.BooleanField(   default = False,   verbose_name =_('Is classification disabled') )

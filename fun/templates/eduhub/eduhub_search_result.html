@@ -17,6 +17,7 @@
 {% block content %} 
 
     <div class="container">
+
         {% if labels %}
             <a  class="eduhub_search_filter labels" href="#">{% trans 'Eduhub labels' %}</a>
             <div class="row">
@@ -26,6 +27,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ label.name }}</h5>
                                 <p class="card-text"> 
+                                    <span class="small  " >{{ label.comment }}</span>
                                     <span class="border-right small float-right " >{{ label.author }} {{ label.creating_date }}</span>
                                 </p>
                             </div>
@@ -35,6 +37,7 @@
             </div>
             <hr/>
         {% endif %}
+
         {% if  funcontents %}
             <a class="eduhub_search_filter funcontents" href="#">{% trans 'Eduhub contents' %}</a>
             <div class="row">
@@ -44,6 +47,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ funcontent.title }}</h5>
                                 <p class="card-text"> 
+                                    <span class="small  " >{{ funcontent.classification }}</span>
                                     <span class="border-right small float-right " >{{ funcontent.label.author }} {{ funcontent.uploading_date }}</span>
                                 </p>
                             </div>
@@ -52,6 +56,7 @@
                 {% endfor %}
             </div>
         {% endif %}
+
     </div>
 
     {% if request.GET.filter == 'funcontents' or funcontents.paginator.num_pages > labels.paginator.num_pages %}
