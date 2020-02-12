@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-11 23:15+0000\n"
+"POT-Creation-Date: 2020-02-12 23:49+0000\n"
 "PO-Revision-Date: 2020-02-12 01:40+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -55,11 +55,11 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: eduhub/modelforms.py:72 eduhub/models.py:90
+#: eduhub/modelforms.py:72 eduhub/models.py:72
 msgid "Content classification"
 msgstr ""
 
-#: eduhub/modelforms.py:77 eduhub/models.py:52 eduhub/models.py:88
+#: eduhub/modelforms.py:77 eduhub/models.py:52 eduhub/models.py:70
 msgid "Content title"
 msgstr ""
 
@@ -122,101 +122,101 @@ msgstr "Content"
 
 #: eduhub/models.py:45 templates/eduhub/_eduhub_base.html:51
 #: templates/eduhub/content_list.html:15
-#: templates/eduhub/eduhub_search_result.html:39
+#: templates/eduhub/eduhub_search_result.html:42
 #: templates/eduhub/funcontent_list.html:17
 msgid "Eduhub contents"
 msgstr "Contents"
 
-#: eduhub/models.py:51 eduhub/models.py:87
+#: eduhub/models.py:51 eduhub/models.py:69
 msgid "Content label"
 msgstr ""
 
-#: eduhub/models.py:55 eduhub/models.py:91
+#: eduhub/models.py:54 eduhub/models.py:73
 msgid "Content uploading date"
 msgstr ""
 
-#: eduhub/models.py:56 eduhub/models.py:92
+#: eduhub/models.py:55 eduhub/models.py:74
 msgid "Content comment"
 msgstr ""
 
-#: eduhub/models.py:57 eduhub/models.py:93
+#: eduhub/models.py:56 eduhub/models.py:75
 msgid "Is content legal"
 msgstr ""
 
-#: eduhub/models.py:63
-msgid "Eduhub classification"
-msgstr "Classification"
-
-#: eduhub/models.py:64
-msgid "Eduhub classifications"
-msgstr "Classifications"
-
-#: eduhub/models.py:70
-msgid "Parent classification"
-msgstr ""
-
-#: eduhub/models.py:71
-msgid "Classification name"
-msgstr ""
-
-#: eduhub/models.py:72
-msgid "Classification level"
-msgstr ""
-
-#: eduhub/models.py:73
-msgid "Classification creating date"
-msgstr ""
-
-#: eduhub/models.py:74
-msgid "Classification creating user"
-msgstr ""
-
-#: eduhub/models.py:75
-msgid "Is classification disabled"
-msgstr ""
-
-#: eduhub/models.py:80
+#: eduhub/models.py:62
 msgid "Eduhub content (NEW)"
 msgstr "Content (NEW)"
 
-#: eduhub/models.py:81
+#: eduhub/models.py:63
 msgid "Eduhub contents (NEW)"
 msgstr "Contents (NEW)"
 
-#: eduhub/models.py:97
+#: eduhub/models.py:79
 msgid "Eduhub homepage sticker"
 msgstr "Eduhub homepage sticker"
 
-#: eduhub/models.py:98
+#: eduhub/models.py:80
 msgid "Eduhub homepage stickers"
 msgstr ""
 
-#: eduhub/models.py:104
+#: eduhub/models.py:86
 msgid "Eduhub homepage sticker title"
 msgstr ""
 
-#: eduhub/models.py:105
+#: eduhub/models.py:87
 msgid "Eduhub homepage sticker subtitle"
 msgstr ""
 
-#: eduhub/models.py:106
+#: eduhub/models.py:88
 msgid "Eduhub homepage sicker cover"
 msgstr ""
 
-#: eduhub/models.py:107
+#: eduhub/models.py:89
 msgid "Eduhub homepage sticker promulgator"
 msgstr ""
 
-#: eduhub/models.py:110
+#: eduhub/models.py:92
 msgid "Eduhub homepage sticker promulgating date"
 msgstr ""
 
-#: eduhub/models.py:111
+#: eduhub/models.py:93
 msgid "Eduhub homepage sticker comment"
 msgstr ""
 
-#: eduhub/models.py:112 funhome/models.py:34 funhome/models.py:53
+#: eduhub/models.py:94 funhome/models.py:34 funhome/models.py:53
 msgid "Hidden"
+msgstr ""
+
+#: eduhub/models.py:103
+msgid "Eduhub classification"
+msgstr "Classification"
+
+#: eduhub/models.py:104
+msgid "Eduhub classifications"
+msgstr "Classifications"
+
+#: eduhub/models.py:110
+msgid "Parent classification"
+msgstr ""
+
+#: eduhub/models.py:111
+msgid "Classification name"
+msgstr ""
+
+#: eduhub/models.py:112
+msgid "Classification level"
+msgstr ""
+
+#: eduhub/models.py:113
+msgid "Classification creating date"
+msgstr ""
+
+#: eduhub/models.py:114
+msgid "Classification creating user"
+msgstr ""
+
+#: eduhub/models.py:115
+msgid "Is classification disabled"
 msgstr ""
 
 #: eduhub/views.py:74
@@ -846,7 +846,7 @@ msgid "Survey"
 msgstr ""
 
 #: templates/eduhub/_eduhub_base.html:48
-#: templates/eduhub/eduhub_search_result.html:21
+#: templates/eduhub/eduhub_search_result.html:22
 #: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr "Labels"
@@ -932,32 +932,32 @@ msgstr ""
 msgid "Eduhub search"
 msgstr "Label"
 
-#: templates/eduhub/eduhub_search_result.html:63
-#: templates/eduhub/eduhub_search_result.html:86
+#: templates/eduhub/eduhub_search_result.html:68
+#: templates/eduhub/eduhub_search_result.html:91
 #: templates/funhome/common_pagination.html:13
 msgid "first page"
 msgstr "first"
 
-#: templates/eduhub/eduhub_search_result.html:65
-#: templates/eduhub/eduhub_search_result.html:88
+#: templates/eduhub/eduhub_search_result.html:70
+#: templates/eduhub/eduhub_search_result.html:93
 #: templates/funhome/common_pagination.html:15
 msgid "previous page"
 msgstr "prev"
 
-#: templates/eduhub/eduhub_search_result.html:69
-#: templates/eduhub/eduhub_search_result.html:92
+#: templates/eduhub/eduhub_search_result.html:74
+#: templates/eduhub/eduhub_search_result.html:97
 #: templates/funhome/common_pagination.html:19
 msgid "Page"
 msgstr ""
 
-#: templates/eduhub/eduhub_search_result.html:73
-#: templates/eduhub/eduhub_search_result.html:96
+#: templates/eduhub/eduhub_search_result.html:78
+#: templates/eduhub/eduhub_search_result.html:101
 #: templates/funhome/common_pagination.html:23
 msgid "next page"
 msgstr "next"
 
-#: templates/eduhub/eduhub_search_result.html:75
-#: templates/eduhub/eduhub_search_result.html:98
+#: templates/eduhub/eduhub_search_result.html:80
+#: templates/eduhub/eduhub_search_result.html:103
 #: templates/funhome/common_pagination.html:25
 msgid "last page"
 msgstr "last"
@@ -973,7 +973,7 @@ msgid "cover"
 msgstr ""
 
 #: templates/eduhub/funcontent_create.html:35
-#: templates/eduhub/how_to_classification.html:17
+#: templates/eduhub/how_to_classification.html:20
 #, fuzzy
 #| msgid "Eduhub classification"
 msgid "How to classification"
@@ -983,13 +983,13 @@ msgstr "Classification"
 msgid "Content details"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:34
+#: templates/eduhub/how_to_classification.html:37
 #, fuzzy
 #| msgid "Eduhub classification"
 msgid "How to classify the eduhub content"
 msgstr "Classification"
 
-#: templates/eduhub/how_to_classification.html:39
+#: templates/eduhub/how_to_classification.html:42
 msgid ""
 "\n"
 "            I don't bother to make a catalog right now, and I don't want to "
@@ -999,7 +999,7 @@ msgid ""
 "        "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:47
+#: templates/eduhub/how_to_classification.html:50
 msgid ""
 "\n"
 "                    If you're writing about primary school (I don't know if "
@@ -1007,74 +1007,74 @@ msgid ""
 "                "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:51
+#: templates/eduhub/how_to_classification.html:54
 msgid ""
 "\n"
 "                    you should categorize(remove bracket!): \n"
 "                "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:55
-#: templates/eduhub/how_to_classification.html:70
-#: templates/eduhub/how_to_classification.html:85
+#: templates/eduhub/how_to_classification.html:58
+#: templates/eduhub/how_to_classification.html:73
+#: templates/eduhub/how_to_classification.html:88
 msgid "click to copy"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:55
+#: templates/eduhub/how_to_classification.html:58
 msgid "primary school/(grade)/(semester)/(subjects)/(title)"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:56
+#: templates/eduhub/how_to_classification.html:59
 msgid ""
 "\n"
-"                        primary school/(grade)/(semester)/(subjects)/"
+"                        primary school / (grade) / (semester) / (subjects) / "
 "(title)\n"
 "                    "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:63
+#: templates/eduhub/how_to_classification.html:66
 msgid ""
 "\n"
 "                    If you're writing about high school teaching,\n"
 "                "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:67
-#: templates/eduhub/how_to_classification.html:82
+#: templates/eduhub/how_to_classification.html:70
+#: templates/eduhub/how_to_classification.html:85
 msgid ""
 "\n"
 "                    you should categorize: \n"
 "                "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:70
+#: templates/eduhub/how_to_classification.html:73
 msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:71
+#: templates/eduhub/how_to_classification.html:74
 msgid ""
 "\n"
-"                        ('junior' or 'senior') high school/(grade)/"
-"(semester)/(subjects)/(title)\n"
+"                        ('junior' or 'senior') high school / (grade) / "
+"(semester) / (subjects) / (title)\n"
 "                    "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:78
+#: templates/eduhub/how_to_classification.html:81
 msgid ""
 "\n"
 "                    If you're writing about the college' teaching,\n"
 "                "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:85
+#: templates/eduhub/how_to_classification.html:88
 msgid "college/(grade)/(semester)/(subjects)/(title)"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:86
-msgid "college/(major)/(grade)/(semester)/(subjects)/(title)"
+#: templates/eduhub/how_to_classification.html:89
+msgid "college/(major) / (grade) / (semester) / (subjects) / (title)"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:91
+#: templates/eduhub/how_to_classification.html:94
 msgid ""
 "\n"
 "                    Other stages should also have classification, you can "
@@ -1085,7 +1085,7 @@ msgid ""
 "                "
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:107
+#: templates/eduhub/how_to_classification.html:110
 #, fuzzy
 #| msgid "Eduhub classification"
 msgid "classification copied"
