@@ -22,33 +22,57 @@ from funfile.models import Checkup
 
 from .apps import FunhomeConfig
 from .modelforms import HomestickerModelForm, FunhomestickerModelForm
-from .models import Homesticker, homesticker_name, funhomesticker_name, Funhomesticker
+from .models import Homesticker, homesticker_name, \
+    funhomesticker_name, Funhomesticker
 import pytz
 
 home_template = FunhomeConfig.name + '/home.html'
-homesticker_create_template = f'{FunhomeConfig.name}/{homesticker_name}{funvalue.create_html}'
-homesticker_detail_template = f'{FunhomeConfig.name}/{homesticker_name}{funvalue.detail_html}'
-homesticker_delete_template = f'{FunhomeConfig.name}/{homesticker_name}{funvalue.delete_html}'
-homesticker_update_template = f'{FunhomeConfig.name}/{homesticker_name}{funvalue.update_html}'
-homesticker_list_template = f'{FunhomeConfig.name}/{homesticker_name}{funvalue.list_html}'
 
+homesticker_create_template = f'{FunhomeConfig.name}/{homesticker_name}\
+    {funvalue.create_html}'
 
-funhomesticker_create_template = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.create_html}'
-funhomesticker_detail_template = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.detail_html}'
-funhomesticker_delete_template = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.delete_html}'
-funhomesticker_update_template = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.update_html}'
-funhomesticker_list_template = f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.list_html}'
+homesticker_detail_template = f'{FunhomeConfig.name}/{homesticker_name}\
+    {funvalue.detail_html}'
+
+homesticker_delete_template = f'{FunhomeConfig.name}/{homesticker_name}\
+    {funvalue.delete_html}'
+
+homesticker_update_template = f'{FunhomeConfig.name}/{homesticker_name}\
+    {funvalue.update_html}'
+
+homesticker_list_template = f'{FunhomeConfig.name}/{homesticker_name}\
+    {funvalue.list_html}'
+
+funhomesticker_create_template = f'{FunhomeConfig.name}/{funhomesticker_name}\
+    {funvalue.create_html}'
+
+funhomesticker_detail_template = f'{FunhomeConfig.name}/{funhomesticker_name}\
+    {funvalue.detail_html}'
+
+funhomesticker_delete_template = f'{FunhomeConfig.name}/{funhomesticker_name}\
+    {funvalue.delete_html}'
+
+funhomesticker_update_template = f'{FunhomeConfig.name}/{funhomesticker_name}\
+    {funvalue.update_html}'
+
+funhomesticker_list_template = f'{FunhomeConfig.name}/{funhomesticker_name}\
+    {funvalue.list_html}'
 
 data_privacy_template = FunhomeConfig.name + '/data_privacy.html'
 legal_information_template = FunhomeConfig.name + '/legal_information.html'
-data_privacy_example_template = FunhomeConfig.name + '/data_privacy.html.example'
-legal_information_example_template = FunhomeConfig.name + '/legal_information.html.example'
+
+data_privacy_example_template = FunhomeConfig.name + \
+    '/data_privacy.html.example'
+
+legal_information_example_template = FunhomeConfig.name + \
+    '/legal_information.html.example'
 
 data_privacy_template_path = os.path.join(
     settings.BASE_DIR, 'templates', 'funhome', 'data_privacy.html')
 
 legal_information_template_path = os.path.join(
     settings.BASE_DIR, 'templates', 'funhome', 'legal_information.html')
+
 
 class HomestickerListView(ListView):
     model = Homesticker
@@ -120,7 +144,9 @@ class HomeView(TemplateView):
 
 def get_all_bootswatch_themes(request):
     if request.method == 'GET':
-        return JsonResponse(os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs', 'bootswatch', 'dist')), safe=False)
+        return JsonResponse(
+            os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs',
+                                    'bootswatch', 'dist')), safe=False)
 
 
 def get_favicon_ico(request):
@@ -160,8 +186,9 @@ def data_privacy(request):
 def legal_information(request):
     if request.method == 'GET':
         return render(
-            request, 
-            legal_information_template if os.path.exists(legal_information_template_path)
+            request,
+            legal_information_template if
+            os.path.exists(legal_information_template_path)
             else legal_information_example_template)
 
 

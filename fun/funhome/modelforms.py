@@ -9,15 +9,17 @@ from djangovalidators.validators import FileSizeValidator
 
 from ckeditor.fields import RichTextField
 
-from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadingField
+from ckeditor_uploader.fields import RichTextUploadingFormField, \
+    RichTextUploadingField
+
 
 class HomestickerModelForm(ModelForm):
-    
+
     class Meta:
-        
+
         model = Homesticker
-        fields = ['title', 'cover' ,'content_file', 'comment'] 
-        
+        fields = ['title', 'cover', 'content_file', 'comment']
+
         labels = {
             'title': _('Sticker title'),
             'cover': _('Sticker Cover'),
@@ -26,24 +28,24 @@ class HomestickerModelForm(ModelForm):
         }
 
         help_texts = {
-            'content_file': _('content file, pdf and video file is allowed only')
+            'content_file': 
+            _('content file, pdf and video file is allowed only')
         }
 
         widgets = {
-            'content_file': forms.FileInput( attrs={ 'class': 'preview-pdf preview-video', 'accept':'video/*, .pdf' } ),
-            'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
+            'content_file': forms.FileInput(attrs={'class': 
+            'preview-pdf preview-video', 'accept': 'video/*, .pdf'}),
+            'comment': forms.Textarea(attrs={'rows': '5'}),
         }
 
-    
- 
 
 class FunhomestickerModelForm(ModelForm):
-    
+
     class Meta:
-        
+
         model = Funhomesticker
-        fields = ['title', 'cover' ,'content', 'comment'] 
-        
+        fields = ['title', 'cover', 'content', 'comment']
+
         labels = {
             'title': _('Sticker title'),
             'cover': _('Sticker Cover'),
@@ -51,10 +53,6 @@ class FunhomestickerModelForm(ModelForm):
             'comment': _('Sticker Comment'),
         }
 
-
         widgets = {
-            'comment': forms.Textarea( attrs={ 'rows': '5' } ), 
+            'comment': forms.Textarea(attrs={'rows': '5'}),
         }
-
-    
- 
