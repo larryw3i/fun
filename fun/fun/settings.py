@@ -125,7 +125,8 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation' +
+            '.UserAttributeSimilarityValidator',
     },
     {
         'NAME':
@@ -312,13 +313,16 @@ LOGGING = {
 
 
 # BLEACH
-BLEACH_TAGS = ['a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p',
+BLEACH_TAGS = [
+    'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p',
                'span', 'img', 'table', 'tbody', 'tr', 'td', 'thead', 'th']
-BLEACH_ATTRIBUTES = ['class', 'style', 'alt', 'title',
-                     'data-*', 'width', 'height', 'weight', 'src',
-                     'href', 'scope']
-BLEACH_STYLES = ['font', 'font-size', 'align', 'width', 'height', 'weight',
-                 'padding-*',
-                 'margin-*', 'border', 'border-color', 'border-radius',
-                 'background-color', 'color', 'text-align']
+BLEACH_ATTRIBUTES = [
+    'class', 'style', 'alt', 'title',
+    'data-*', 'width', 'height', 'weight', 'src',
+    'href', 'scope']
+BLEACH_STYLES = [
+    'font', 'font-size', 'align', 'width', 'height', 'weight',
+    'padding-*',
+    'margin-*', 'border', 'border-color', 'border-radius',
+    'background-color', 'color', 'text-align']
 # ENDBLEACH

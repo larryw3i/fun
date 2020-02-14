@@ -11,7 +11,8 @@ from hurry import filesize
 from django.utils.translation import gettext_lazy as _
 from ckeditor.fields import RichTextField
 
-from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadingField
+from ckeditor_uploader.fields import RichTextUploadingFormField, \
+    RichTextUploadingField
 
 # Create your models here.
 
@@ -32,8 +33,9 @@ class Label(models.Model):
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    name = models.CharField(max_length=64, blank=False,
-                            verbose_name=_('Label name'))
+    name = models.CharField(
+        max_length=64, blank=False,
+        verbose_name=_('Label name'))
     comment = models.CharField(
         max_length=64,   verbose_name=_('Label comment'))
     cover = models.ImageField(
@@ -58,9 +60,11 @@ class Content(models.Model):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     label = models.ForeignKey(
-        to=Label, on_delete=models.CASCADE, null=True,  verbose_name=_('Content label'))
-    title = models.CharField(max_length=64, blank=False,
-                             verbose_name=_('Content title'))
+        to=Label, on_delete=models.CASCADE, null=True,
+        verbose_name=_('Content label'))
+    title = models.CharField(
+        max_length=64, blank=False,
+        verbose_name=_('Content title'))
     content_file = models.FileField(
         upload_to=upload_to, blank=True,  verbose_name=_('Content file'))
     uploading_date = models.DateTimeField(
@@ -81,14 +85,20 @@ class Funcontent(models.Model):
         return self.title
 
     id = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+        primary_key=True,
+        default=uuid.uuid4,
+        editable=False,
+        unique=True)
+
     label = models.ForeignKey(
-        to=Label, on_delete=models.CASCADE, null=True,  verbose_name=_('Content label'))
+        to=Label, on_delete=models.CASCADE, null=True,
+        verbose_name=_('Content label'))
     title = models.CharField(max_length=64, blank=False,
                              verbose_name=_('Content title'))
     content = RichTextUploadingField()
     classification = models.CharField(
-        max_length=64, blank=True, null=True,  verbose_name=_('Content classification'))
+        max_length=64, blank=True, null=True,
+        verbose_name=_('Content classification'))
     uploading_date = models.DateTimeField(
         auto_now_add=True,  verbose_name=_('Content uploading date'))
     comment = models.TextField(
@@ -107,20 +117,33 @@ class Eduhubhomesticker(models.Model):
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False,)
-    title = models.CharField(max_length=32,  verbose_name=_(
-        'Eduhub homepage sticker title'))
-    subtitle = models.TextField(max_length=64, verbose_name=_(
-        'Eduhub homepage sticker subtitle'))
+    title = models.CharField(
+        max_length=32,
+        verbose_name=_('Eduhub homepage sticker title'))
+
+    subtitle = models.TextField(
+        max_length=64,
+        verbose_name=_('Eduhub homepage sticker subtitle'))
+
     cover = models.ImageField(
-        upload_to=upload_to, verbose_name=_('Eduhub homepage sicker cover'))
-    promulgator = models.ForeignKey(to=User, on_delete=models.CASCADE, verbose_name=_(
-        'Eduhub homepage sticker promulgator'))
+        upload_to=upload_to,
+        verbose_name=_('Eduhub homepage sicker cover'))
+
+    promulgator = models.ForeignKey(
+        to=User, on_delete=models.CASCADE,
+        verbose_name=_('Eduhub homepage sticker promulgator'))
+
     description = RichTextUploadingField()
+
     content = RichTextUploadingField()
+
     promulgating_date = models.DateTimeField(
-        auto_now_add=True,  verbose_name=_('Eduhub homepage sticker promulgating date'))
+        auto_now_add=True,
+        verbose_name=_('Eduhub homepage sticker promulgating date'))
+
     comment = models.TextField(max_length=128, verbose_name=_(
         'Eduhub homepage sticker comment'))
+
     is_hidden = models.BooleanField(
         default=False, verbose_name=_('Hidden')+" ?")
 
@@ -137,15 +160,25 @@ class Funclassification(models.Model):
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    parent = models.ForeignKey('self', on_delete=models.SET_DEFAULT, default=None,
-                               null=True, blank=True, verbose_name=_('Parent classification'))
-    name = models.CharField(max_length=64, blank=False,
-                            verbose_name=_('Classification name'))
+    parent = models.ForeignKey(
+        'self', on_delete=models.SET_DEFAULT,
+        default=None,
+        null=True, blank=True,
+        verbose_name=_('Parent classification'))
+    name = models.CharField(
+        max_length=64,
+        blank=False,
+        verbose_name=_('Classification name'))
     level = models.IntegerField(validators=[validators.MinValueValidator(
-        1), validators.MaxValueValidator(10)], default=1,  verbose_name=_('Classification level'))
+        1), validators.MaxValueValidator(10)],
+        default=1,
+        verbose_name=_('Classification level'))
     creating_date = models.DateTimeField(
-        auto_now_add=True,  verbose_name=_('Classification creating date'))
+        auto_now_add=True,
+        verbose_name=_('Classification creating date'))
     creating_user = models.ForeignKey(
-        to=User, on_delete=models.CASCADE,   verbose_name=_('Classification creating user'))
+        to=User, on_delete=models.CASCADE,
+        verbose_name=_('Classification creating user'))
     is_disabled = models.BooleanField(
-        default=False,   verbose_name=_('Is classification disabled'))
+        default=False,
+        verbose_name=_('Is classification disabled'))
