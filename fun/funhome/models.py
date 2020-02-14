@@ -6,7 +6,8 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 from ckeditor.fields import RichTextField
 
-from ckeditor_uploader.fields import RichTextUploadingFormField, RichTextUploadingField
+from ckeditor_uploader.fields import RichTextUploadingFormField, \
+    RichTextUploadingField
 
 # Create your models here.
 
