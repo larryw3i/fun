@@ -6,13 +6,11 @@
 *.log
 *.pot
 *.pyc
-.env
 __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
-!static/media/
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -121,17 +119,19 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
 # End of https://www.gitignore.io/api/django
 
+##############################################################################
 
-# files
+#DOTENV
+.env
+
+# MEDIA
+media
+!static/media/
+
+# APP_FILES
 funfile/files/
-
-# idea
-.idea/
-
-#################################
 
 # uwsgi.ini 
 uwsgi.ini
@@ -147,17 +147,11 @@ funlog/django_fun.log
 # SETTINGS.JSON
 .vscode/settings.json
 
-# NODE_MODULES
+# STATIC_FILES
 staticfiles/node_modules
-
-# migrations
-**/migrations/
-
 staticfiles/admin/
 staticfiles/ckeditor/
 staticfiles/node_modules/
-
-
 static/admin/
 static/ckeditor/
 static/node_modules/
@@ -178,5 +172,9 @@ git_commit.sh
 # data_privacy and legal information
 ## templates/funhome/data_privacy.html
 ## templates/funhome/legal_information.html
+
+# GIT_OUTGOING
 outgoing/
-.gitconfig
+
+# BACKUP
+fun.lwcp/

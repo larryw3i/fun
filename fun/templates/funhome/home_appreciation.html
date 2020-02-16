@@ -5,3 +5,20 @@
 
 {% load static %}
 
+
+<div class="col col-12">
+    <div class="row funhomesticker-row mt-2">
+        {% for appreciation in appreciations %}
+            <div class="col funhomesticker-col col-12 col-md-11 offset-md-{% cycle '0' '1' %} col-lg-11 offset-lg-{% cycle '0' '1' %} col-xl-10 offset-xl-{% cycle '0' '2' %} mt-2">
+                <div class="card homesticker-card click-to-url" data-url="{% url '#' %}">
+                    <div class="card-body">
+                        <p class="card-text align-content-center"> 
+                            <img src="{% url 'funfile:get_file' file_id=appreciation.illustration %}" class="rounded-circle " style="width: 88px;"/>
+                            <span class="border-left small  text-break" >{{ appreciation.home_comment }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %} 
+    </div>
+</div>

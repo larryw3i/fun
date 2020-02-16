@@ -1,3 +1,10 @@
 git rm -r --cached .
 git add .
-git commit -m 'update .gitignore'
+
+read -p "commit now?(y/N)" commit_now
+
+if [ "$commit_now" = 'y' ] || [ "$commit_now" = 'Y' ]; then
+    git commit -m 'update .gitignore'
+fi
+
+echo "gitignore updated!"

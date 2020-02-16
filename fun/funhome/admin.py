@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 from .modelforms import HomestickerModelForm, FunhomestickerModelForm
-from .models import Homesticker, Funhomesticker
+from .models import Homesticker, Funhomesticker, Appreciation
 from fun.fundef import default_bleach_clean
 
 from django import forms
@@ -38,4 +38,25 @@ class HomestickerAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.content = default_bleach_clean(obj.content)
         obj.promulgator = request.user
+        return super().save_model(request, obj, form, change)
+
+@admin.register(Appreciation)
+class AppreciationAdmin(admin.ModelAdmin):
+    fields = [
+        'brief_comment',
+        'illustration',
+        'home_comment',
+        'content',
+    ]
+
+    list_display = (
+        'brief_comment',  'home_comment',)
+
+    list_per_page = 5
+
+    ordering = ( '-submitting_date', )
+
+    def save_model(self, request, obj, form, change):
+        obj.content = default_bleach_clean(obj.content)
+        obj.submitter = request.user
         return super().save_model(request, obj, form, change)

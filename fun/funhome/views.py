@@ -140,7 +140,7 @@ class HomeView(TemplateView):
             context_data['is_funhomestickers_null'] = True
         context_data['funhomestickers'] = funhomestickers
         context_data['appreciations'] = Appreciation.objects.order_by(
-            'submitting_date')[4]
+            'submitting_date')[:4]
         return context_data
 
 
@@ -149,7 +149,6 @@ def get_all_bootswatch_themes(request):
         return JsonResponse(
             os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs',
                                     'bootswatch', 'dist')), safe=False)
-
 
 def get_favicon_ico(request):
 
@@ -160,7 +159,6 @@ def get_favicon_ico(request):
         return FileResponse(open(file_path, 'rb'), content_type=content_type)
     else:
         raise Http404()
-
 
 def get_default_homesticker():
     default_carousel_image_path = os.path.join(
@@ -176,14 +174,12 @@ def get_default_homesticker():
         promulgating_date=datetime(2005, 7, 14, 12, 30),
         comment=_('larry'))
 
-
 def data_privacy(request):
     if request.method == 'GET':
         return render(
             request,
             data_privacy_template if os.path.exists(data_privacy_template_path)
             else data_privacy_example_template)
-
 
 def legal_information(request):
     if request.method == 'GET':
@@ -192,7 +188,6 @@ def legal_information(request):
             legal_information_template if
             os.path.exists(legal_information_template_path)
             else legal_information_example_template)
-
 
 def get_default_funhomesticker():
     default_carousel_image_path = os.path.join(
@@ -203,7 +198,7 @@ def get_default_funhomesticker():
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
         cover=File(open(default_carousel_image_path)),
-        promulgator=None,  # User.objects.get(is_superuser=True) ,
-        content='',  # File( open( default_carousel_content_file_path )),
+        promulgator=None, 
+        content='',
         promulgating_date=datetime(2005, 7, 14, 12, 30),
         comment=_('larry'))
