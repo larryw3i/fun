@@ -67,3 +67,27 @@
   }
 
 }
+
+@keyframes funhomesticker_col_odd_animatioin
+{
+  0%{
+    opacity: 0.5;
+    transform: translateX(-88px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes funhomesticker_col_even_animatioin
+{
+
+  0%{
+    opacity: 0.5;
+    transform: translateX(88px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

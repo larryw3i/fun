@@ -23,7 +23,7 @@ from funfile.models import Checkup
 from .apps import FunhomeConfig
 from .modelforms import HomestickerModelForm, FunhomestickerModelForm
 from .models import Homesticker, homesticker_name, \
-    funhomesticker_name, Funhomesticker
+    funhomesticker_name, Funhomesticker, Appreciation
 import pytz
 
 home_template = FunhomeConfig.name + '/home.html'
@@ -139,6 +139,8 @@ class HomeView(TemplateView):
             funhomestickers = [get_default_funhomesticker()]
             context_data['is_funhomestickers_null'] = True
         context_data['funhomestickers'] = funhomestickers
+        context_data['appreciations'] = Appreciation.objects.order_by(
+            'submitting_date')[4]
         return context_data
 
 

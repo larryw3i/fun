@@ -84,7 +84,7 @@ img.preview
  }
  .homesticker-carousel-caption:hover
  {
-  animation: homesticker_carousel_caption_hover 0.5s 1 normal forwards;
+    animation: homesticker_carousel_caption_hover 0.5s 1 normal forwards;
  }
 
  .homesticker-carousel-caption *
@@ -129,4 +129,13 @@ img.preview
 #login_form #id_remember
 {
   transform: scale(1.5);
+}
+
+.funhomesticker-col:nth-child(odd)
+{
+  animation: funhomesticker_col_odd_animatioin 1s 1 normal forwards;
+}
+.funhomesticker-col:nth-child(even)
+{
+  animation: funhomesticker_col_even_animatioin 1s 1 normal forwards;
 }

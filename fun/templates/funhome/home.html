@@ -10,70 +10,8 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    <div class="container">
-        <div class="col col-12">
-            <div class="homeCarousel ">
-                <div id="homeCarouselCaptions" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-        
-                        {% for funhomesticker in funhomestickers|slice:':3' %} 
-                            <li data-target="#homeCarouselCaptions" data-slide-to="0" class="{% if forloop.first %} active {% endif %}"></li>
-                        {% endfor %} 
-        
-                    </ol>
-                    <div class="carousel-inner home-carousel-inner"> 
-        
-                        {% for funhomesticker in funhomestickers|slice:':3' %}
-                            <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                                
-                                <img src="{% if is_funhomestickers_null %}{% static 'images/default_carousel_image.webp' %}{% else %} {% url 'funfile:get_file' file_id=funhomesticker.cover.name %} {% endif %}" class="d-block w-100 carousel-item-img" alt=""/>
 
-                                <div class="carousel-caption homesticker-carousel-caption click-to-url" data-url="{% if is_funhomestickers_null %}#{% else %}{% url 'funhomesticker_detail' pk=funhomesticker.id %}{% endif %}">
-                                    <h5>{{ funhomesticker.title }}</h5>
-                                    <p>  {{  funhomesticker.subtitle }}  </p> 
-                                </div>
-                            </div>
-                        {% endfor %}
-                                
-                    </div>
-                    {% if not is_funhomestickers_null %}
-                        <a class="carousel-control-prev" href="#homeCarouselCaptions" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#homeCarouselCaptions" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    {% endif %}
-                </div>
-            </div>        
-        </div>
-        <div class="col col-12">
-
-            <div class="row mt-2">
-
-                {% for funhomesticker in funhomestickers|slice:'3:' %}
-                    <div class="col col-12 col-md-6 col-lg-6 col-xl-6 mt-2">
-                        <div class="card homesticker-card click-to-url" data-url="{% url 'funhomesticker_detail' pk=funhomesticker.id %}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ funhomesticker.title }}</h5>
-                                <p class="card-text"> 
-                                    {{ funhomesticker.subtitle }} 
-                                    <span class="border-right small float-right " >{{ funhomesticker.promulgating_date }}</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %} 
-            </div>
-        </div>
-    </div>
-    
-    <div class="col col-12 text-right mt-2">
-        <a class="btn btn-outline-primary btn-sm " href="{% url 'funhomesticker_list' %}">
-            {% trans 'View all' %} &raquo;
-        </a>  
-    </div>
-
-{% endblock %}
+    {% include 'funhome/home_funhomesticker.html' %}
+    <hr/>
+    {% include 'funhome/home_appreciation.html' %}
+{% endblock content %}

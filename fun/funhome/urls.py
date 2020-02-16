@@ -3,7 +3,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='#'),
 
     path('i18n/', include('django.conf.urls.i18n')),
     path('homesticker_detail/<uuid:pk>',
@@ -22,4 +21,7 @@ urlpatterns = [
          name='legal_information'),
 
     path('favicon.ico', views.get_favicon_ico,  name='favicon.ico'),
+    
+    path('#', views.HomeView.as_view(), name='##'),
+    path('', views.HomeView.as_view(), name='#'),
 ]
