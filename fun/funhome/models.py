@@ -116,6 +116,16 @@ class Appreciation(models.Model):
         editable=False,
     )
 
+    invitee = models.CharField(
+        max_length = 8,
+        verbose_name = _('invitee')
+    )
+    
+    invitee_title = models.CharField(
+        max_length = 8,
+        verbose_name = _('invitee title')
+    )
+
     brief_comment = models.CharField(
         max_length=16,
         verbose_name=_('brief comment')

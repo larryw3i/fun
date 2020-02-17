@@ -62,6 +62,8 @@ class AppreciationModelForm( ModelForm ):
     class Meta:
         model = Appreciation
         fields = [
+            'invitee',
+            'invitee_title',
             'brief_comment',
             'illustration',
             'home_comment',

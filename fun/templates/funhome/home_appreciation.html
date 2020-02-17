@@ -10,12 +10,32 @@
     <div class="row funhomesticker-row mt-2">
         {% for appreciation in appreciations %}
             <div class="col funhomesticker-col col-12 col-md-11 offset-md-{% cycle '0' '1' %} col-lg-11 offset-lg-{% cycle '0' '1' %} col-xl-10 offset-xl-{% cycle '0' '2' %} mt-2">
-                <div class="card homesticker-card click-to-url" data-url="{% url '#' %}">
-                    <div class="card-body">
-                        <p class="card-text align-content-center"> 
-                            <img src="{% url 'funfile:get_file' file_id=appreciation.illustration %}" class="rounded-circle " style="width: 88px;"/>
-                            <span class="border-left small  text-break" >{{ appreciation.home_comment }}</span>
-                        </p>
+                {% cycle 'start' 'end' as appreciation_items_content silent %}
+                <div class="card mb-3 homesticker-card  p-2 align-items-{{appreciation_items_content}}" >
+                    <div class="row no-gutters ">
+                      {% if appreciation_items_content == 'start' %}
+                        <div class="col-auto">
+                          <img src="{% url 'funfile:get_file' file_id=appreciation.illustration %}" class="rounded-circle " style="width: 88px;"/>
+                        </div>
+                        <div class="col-auto">
+                          <div class="card-body">
+                            <p class="card-title" style="font-size: medium;">{{ appreciation.invitee }}<br/>{{  appreciation.invitee_title }}</p>
+                            <p class="card-text">{{ appreciation.home_comment }}</p>
+                            <p class="card-text"><small class="text-muted">{{ appreciation.submitting_date }}</small></p>
+                          </div>
+                        </div>
+                      {% else %}
+                        <div class="col-auto">
+                          <div class="card-body " style="text-align: right;">
+                            <p class="card-title" style="font-size: medium;">{{ appreciation.invitee }}<br/>{{  appreciation.invitee_title }}</p>
+                            <p class="card-text">{{ appreciation.home_comment }}</p>
+                            <p class="card-text"><small class="text-muted">{{ appreciation.submitting_date }}</small></p>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <img src="{% url 'funfile:get_file' file_id=appreciation.illustration %}" class="rounded-circle " style="width: 88px;"/>
+                        </div>
+                      {% endif %}
                     </div>
                 </div>
             </div>

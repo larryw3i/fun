@@ -43,6 +43,8 @@ class HomestickerAdmin(admin.ModelAdmin):
 @admin.register(Appreciation)
 class AppreciationAdmin(admin.ModelAdmin):
     fields = [
+        'invitee',
+        'invitee_title',
         'brief_comment',
         'illustration',
         'home_comment',
@@ -50,7 +52,7 @@ class AppreciationAdmin(admin.ModelAdmin):
     ]
 
     list_display = (
-        'brief_comment',  'home_comment',)
+        'brief_comment', 'invitee',  'home_comment',)
 
     list_per_page = 5
 
