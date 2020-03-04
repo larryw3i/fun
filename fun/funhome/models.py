@@ -136,8 +136,8 @@ class Appreciation(models.Model):
         verbose_name=_('illustration')
     )
 
-    home_comment = models.CharField(
-        max_length=64,
+    home_comment = models.TextField(
+        max_length=128,
         verbose_name=_('comment'),
     )
     

@@ -131,11 +131,22 @@ img.preview
   transform: scale(1.5);
 }
 
-.funhomesticker-col:nth-child(odd)
+.funhomesticker-col:nth-child(odd), .appreciation-col:nth-child(odd)
 {
   animation: funhomesticker_col_odd_animatioin 1s 1 normal forwards;
 }
-.funhomesticker-col:nth-child(even)
+.funhomesticker-col:nth-child(even), .appreciation-col:nth-child(even)
 {
   animation: funhomesticker_col_even_animatioin 1s 1 normal forwards;
+}
+
+
+.appreciation-card
+{
+  cursor: pointer;
+}
+
+.appreciation-card:hover
+{
+ animation: appreciation_card_hover_animation 0.25s 1 forwards;
 }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 23:49+0000\n"
+"POT-Creation-Date: 2020-03-04 23:28+0800\n"
 "PO-Revision-Date: 2020-02-12 01:40+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -23,15 +23,15 @@ msgstr ""
 msgid "Eduhub"
 msgstr ""
 
-#: eduhub/modelforms.py:20 eduhub/models.py:33
+#: eduhub/modelforms.py:22 eduhub/models.py:38
 msgid "Label name"
 msgstr ""
 
-#: eduhub/modelforms.py:21
+#: eduhub/modelforms.py:23
 msgid "Cover image"
 msgstr ""
 
-#: eduhub/modelforms.py:22 eduhub/modelforms.py:43 eduhub/modelforms.py:71
+#: eduhub/modelforms.py:24 eduhub/modelforms.py:43 eduhub/modelforms.py:69
 msgid "Comment"
 msgstr ""
 
@@ -39,223 +39,223 @@ msgstr ""
 msgid "Title name"
 msgstr ""
 
-#: eduhub/modelforms.py:41 eduhub/modelforms.py:69
+#: eduhub/modelforms.py:41 eduhub/modelforms.py:67
 msgid "Label"
 msgstr ""
 
-#: eduhub/modelforms.py:42 eduhub/models.py:53
+#: eduhub/modelforms.py:42 eduhub/models.py:69
 msgid "Content file"
 msgstr ""
 
-#: eduhub/modelforms.py:47 funhome/modelforms.py:29
+#: eduhub/modelforms.py:48 funhome/modelforms.py:32
 msgid "content file, pdf and video file is allowed only"
 msgstr ""
 
-#: eduhub/modelforms.py:70
+#: eduhub/modelforms.py:68
 msgid "Content"
 msgstr ""
 
-#: eduhub/modelforms.py:72 eduhub/models.py:72
+#: eduhub/modelforms.py:70 eduhub/models.py:101
 msgid "Content classification"
 msgstr ""
 
-#: eduhub/modelforms.py:77 eduhub/models.py:52 eduhub/models.py:70
+#: eduhub/modelforms.py:76 eduhub/models.py:67 eduhub/models.py:97
 msgid "Content title"
 msgstr ""
 
-#: eduhub/modelforms.py:80
+#: eduhub/modelforms.py:82
 msgid "classification : college/grade/semester/course"
 msgstr ""
 
-#: eduhub/modelforms.py:93 funhome/modelforms.py:22 funhome/modelforms.py:48
-#: funhome/models.py:27 funhome/models.py:46
+#: eduhub/modelforms.py:95 funhome/modelforms.py:24 funhome/modelforms.py:50
+#: funhome/models.py:32 funhome/models.py:76
 msgid "Sticker title"
 msgstr ""
 
-#: eduhub/modelforms.py:94 funhome/modelforms.py:23 funhome/modelforms.py:49
+#: eduhub/modelforms.py:96 funhome/modelforms.py:25 funhome/modelforms.py:51
 msgid "Sticker Cover"
 msgstr ""
 
-#: eduhub/modelforms.py:95 funhome/modelforms.py:50
+#: eduhub/modelforms.py:97 funhome/modelforms.py:52
 msgid "Sticker content"
 msgstr ""
 
-#: eduhub/modelforms.py:96 funhome/modelforms.py:25 funhome/modelforms.py:51
+#: eduhub/modelforms.py:98 funhome/modelforms.py:27 funhome/modelforms.py:53
 msgid "Sticker Comment"
 msgstr ""
 
-#: eduhub/modelforms.py:97
+#: eduhub/modelforms.py:99
 msgid "description"
 msgstr ""
 
-#: eduhub/models.py:26
+#: eduhub/models.py:28
 msgid "Eduhub label"
 msgstr "Label"
 
-#: eduhub/models.py:27
+#: eduhub/models.py:29
 msgid "Eduhub  labels"
 msgstr "Labels"
 
-#: eduhub/models.py:34
+#: eduhub/models.py:40
 msgid "Label comment"
 msgstr ""
 
-#: eduhub/models.py:35
+#: eduhub/models.py:42
 msgid "Label cover"
 msgstr ""
 
-#: eduhub/models.py:36
+#: eduhub/models.py:44
 msgid "Label creating date"
 msgstr ""
 
-#: eduhub/models.py:37
+#: eduhub/models.py:46
 msgid "Label author"
 msgstr ""
 
-#: eduhub/models.py:38
+#: eduhub/models.py:48
 msgid "Is label legal"
 msgstr ""
 
-#: eduhub/models.py:44
+#: eduhub/models.py:54
 msgid "Eduhub content"
 msgstr "Content"
 
-#: eduhub/models.py:45 templates/eduhub/_eduhub_base.html:51
+#: eduhub/models.py:55 templates/eduhub/_eduhub_base.html:51
 #: templates/eduhub/content_list.html:15
 #: templates/eduhub/eduhub_search_result.html:42
 #: templates/eduhub/funcontent_list.html:17
 msgid "Eduhub contents"
 msgstr "Contents"
 
-#: eduhub/models.py:51 eduhub/models.py:69
+#: eduhub/models.py:64 eduhub/models.py:95
 msgid "Content label"
 msgstr ""
 
-#: eduhub/models.py:54 eduhub/models.py:73
+#: eduhub/models.py:71 eduhub/models.py:103
 msgid "Content uploading date"
 msgstr ""
 
-#: eduhub/models.py:55 eduhub/models.py:74
+#: eduhub/models.py:73 eduhub/models.py:105
 msgid "Content comment"
 msgstr ""
 
-#: eduhub/models.py:56 eduhub/models.py:75
+#: eduhub/models.py:75 eduhub/models.py:107
 msgid "Is content legal"
 msgstr ""
 
-#: eduhub/models.py:62
+#: eduhub/models.py:81
 msgid "Eduhub content (NEW)"
 msgstr "Content (NEW)"
 
-#: eduhub/models.py:63
+#: eduhub/models.py:82
 msgid "Eduhub contents (NEW)"
 msgstr "Contents (NEW)"
 
-#: eduhub/models.py:79
+#: eduhub/models.py:112
 msgid "Eduhub homepage sticker"
 msgstr "Eduhub homepage sticker"
 
-#: eduhub/models.py:80
+#: eduhub/models.py:113
 msgid "Eduhub homepage stickers"
 msgstr ""
 
-#: eduhub/models.py:86
+#: eduhub/models.py:122
 msgid "Eduhub homepage sticker title"
 msgstr ""
 
-#: eduhub/models.py:87
+#: eduhub/models.py:126
 msgid "Eduhub homepage sticker subtitle"
 msgstr ""
 
-#: eduhub/models.py:88
+#: eduhub/models.py:130
 msgid "Eduhub homepage sicker cover"
 msgstr ""
 
-#: eduhub/models.py:89
+#: eduhub/models.py:134
 msgid "Eduhub homepage sticker promulgator"
 msgstr ""
 
-#: eduhub/models.py:92
+#: eduhub/models.py:142
 msgid "Eduhub homepage sticker promulgating date"
 msgstr ""
 
-#: eduhub/models.py:93
+#: eduhub/models.py:145
 msgid "Eduhub homepage sticker comment"
 msgstr ""
 
-#: eduhub/models.py:94 funhome/models.py:34 funhome/models.py:53
+#: eduhub/models.py:148 funhome/models.py:57 funhome/models.py:101
 msgid "Hidden"
 msgstr ""
 
-#: eduhub/models.py:103
+#: eduhub/models.py:155
 msgid "Eduhub classification"
 msgstr "Classification"
 
-#: eduhub/models.py:104
+#: eduhub/models.py:156
 msgid "Eduhub classifications"
 msgstr "Classifications"
 
-#: eduhub/models.py:110
+#: eduhub/models.py:167
 msgid "Parent classification"
 msgstr ""
 
-#: eduhub/models.py:111
+#: eduhub/models.py:171
 msgid "Classification name"
 msgstr ""
 
-#: eduhub/models.py:112
+#: eduhub/models.py:175
 msgid "Classification level"
 msgstr ""
 
-#: eduhub/models.py:113
+#: eduhub/models.py:178
 msgid "Classification creating date"
 msgstr ""
 
-#: eduhub/models.py:114
+#: eduhub/models.py:181
 msgid "Classification creating user"
 msgstr ""
 
-#: eduhub/models.py:115
+#: eduhub/models.py:184
 msgid "Is classification disabled"
 msgstr ""
 
-#: eduhub/views.py:74
+#: eduhub/views.py:94
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:78
+#: eduhub/views.py:99
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:83
+#: eduhub/views.py:105
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:114
+#: eduhub/views.py:140
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr ""
 
-#: eduhub/views.py:219 eduhub/views.py:373
+#: eduhub/views.py:255 eduhub/views.py:433
 msgid "Frequently request"
 msgstr ""
 
-#: eduhub/views.py:223 eduhub/views.py:229
+#: eduhub/views.py:260 eduhub/views.py:267
 msgid "Content file is required"
 msgstr ""
 
-#: eduhub/views.py:234
+#: eduhub/views.py:274
 msgid "The length of video file should be less than"
 msgstr ""
 
-#: eduhub/views.py:239
+#: eduhub/views.py:282
 msgid "The length of pdf file should be less than"
 msgstr ""
 
-#: fun/settings.py:199
+#: fun/settings.py:205
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:200
+#: fun/settings.py:206
 msgid "中文简体"
 msgstr ""
 
@@ -263,52 +263,84 @@ msgstr ""
 msgid "Fun home"
 msgstr ""
 
-#: funhome/modelforms.py:24 funhome/models.py:31
+#: funhome/modelforms.py:26 funhome/models.py:45
 msgid "Sticker content file"
 msgstr ""
 
-#: funhome/models.py:20 funhome/models.py:21 funhome/models.py:39
+#: funhome/models.py:21 funhome/models.py:22 funhome/models.py:63
 msgid "Home sticker"
 msgstr ""
 
-#: funhome/models.py:28 funhome/models.py:47
+#: funhome/models.py:35 funhome/models.py:80
 msgid "Sticker subtitle"
 msgstr ""
 
-#: funhome/models.py:29 funhome/models.py:48
+#: funhome/models.py:38 funhome/models.py:84
 msgid "Sticker cover"
 msgstr ""
 
-#: funhome/models.py:30 funhome/models.py:49
+#: funhome/models.py:42 funhome/models.py:89
 msgid "Sticker promulgator"
 msgstr ""
 
-#: funhome/models.py:32 funhome/models.py:51
+#: funhome/models.py:49 funhome/models.py:95
 msgid "Sticker promulgating date"
 msgstr ""
 
-#: funhome/models.py:33 funhome/models.py:52
+#: funhome/models.py:53 funhome/models.py:98
 msgid "Sticker comment"
 msgstr ""
 
-#: funhome/models.py:40
+#: funhome/models.py:64
 msgid "Home stickers"
 msgstr ""
 
-#: funhome/views.py:143 funhome/views.py:174
+#: funhome/models.py:107 funhome/models.py:108
+msgid "Appreciation"
+msgstr ""
+
+#: funhome/models.py:121
+msgid "invitee"
+msgstr ""
+
+#: funhome/models.py:126
+msgid "invitee title"
+msgstr ""
+
+#: funhome/models.py:131
+msgid "brief comment"
+msgstr ""
+
+#: funhome/models.py:136
+msgid "illustration"
+msgstr ""
+
+#: funhome/models.py:141
+msgid "comment"
+msgstr ""
+
+#: funhome/models.py:149
+msgid "Submitter"
+msgstr ""
+
+#: funhome/models.py:154
+msgid "Submitting date"
+msgstr ""
+
+#: funhome/views.py:171 funhome/views.py:203
 #: templates/account/email/password_reset_key_message.html:7
 msgid "X-DOVE"
 msgstr ""
 
-#: funhome/views.py:144 funhome/views.py:175
+#: funhome/views.py:172 funhome/views.py:204
 msgid "Larry`s sharing"
 msgstr ""
 
-#: funhome/views.py:149 funhome/views.py:180
+#: funhome/views.py:177 funhome/views.py:209
 msgid "larry"
 msgstr ""
 
-#: funtag/templatetag.py:52 templates/eduhub/_eduhub_base.html:41
+#: funtag/templatetag.py:62 templates/eduhub/_eduhub_base.html:41
 #: templates/eduhub/label_list.html:28
 msgid "All"
 msgstr ""
@@ -322,76 +354,76 @@ msgstr ""
 msgid "Birth date"
 msgstr ""
 
-#: funuser/admin.py:19 funuser/models.py:33
+#: funuser/admin.py:20 funuser/models.py:41
 #: templates/funuser/funuser_detail.html:52
 #: templates/funuser/funuser_update.html:53
 msgid "Address"
 msgstr ""
 
-#: funuser/admin.py:20 funuser/models.py:36
+#: funuser/admin.py:22 funuser/models.py:46
 #: templates/funuser/funuser_detail.html:59
 #: templates/funuser/funuser_update.html:66
 msgid "Hometown"
 msgstr ""
 
-#: funuser/admin.py:21 funuser/models.py:39
+#: funuser/admin.py:24 funuser/models.py:51
 #: templates/eduhub/_eduhub_base.html:38
 #: templates/funuser/funuser_detail.html:66
 #: templates/funuser/funuser_update.html:78
 msgid "College"
 msgstr ""
 
-#: funuser/admin.py:22 funuser/models.py:42
+#: funuser/admin.py:26 funuser/models.py:56
 #: templates/funuser/funuser_detail.html:73
 #: templates/funuser/funuser_update.html:90
 msgid "Occupation"
 msgstr ""
 
-#: funuser/admin.py:23 funuser/models.py:45
+#: funuser/admin.py:28 funuser/models.py:61
 msgid "Hobby"
 msgstr ""
 
-#: funuser/admin.py:24 funuser/models.py:48
+#: funuser/admin.py:29 funuser/models.py:66
 #: templates/funuser/funuser_detail.html:80
 #: templates/funuser/funuser_update.html:102
 msgid "Motto"
 msgstr ""
 
-#: funuser/modelforms.py:26 funuser/models.py:28
+#: funuser/modelforms.py:33 funuser/models.py:33
 msgid "Full name"
 msgstr ""
 
-#: funuser/models.py:20
+#: funuser/models.py:21
 msgid "User information"
 msgstr ""
 
-#: funuser/models.py:21
+#: funuser/models.py:22
 msgid "User informations"
 msgstr ""
 
-#: funuser/models.py:24
+#: funuser/models.py:27
 msgid "User"
 msgstr ""
 
-#: funuser/models.py:26
+#: funuser/models.py:30
 msgid "Avatar"
 msgstr ""
 
-#: funuser/models.py:30
+#: funuser/models.py:36
 msgid "Brith date"
 msgstr ""
 
-#: funuser/models.py:31 funuser/models.py:34 funuser/models.py:37
-#: funuser/models.py:40 funuser/models.py:43 funuser/models.py:46
-#: funuser/models.py:49
+#: funuser/models.py:38 funuser/models.py:43 funuser/models.py:48
+#: funuser/models.py:53 funuser/models.py:58 funuser/models.py:63
+#: funuser/models.py:68
 msgid "Is outward"
 msgstr ""
 
-#: funuser/models.py:51
+#: funuser/models.py:71
 msgid "Funuser creating date"
 msgstr ""
 
-#: funuser/views.py:57
+#: funuser/views.py:65
 msgid "Nice try"
 msgstr ""
 
@@ -861,7 +893,7 @@ msgstr ""
 
 #: templates/eduhub/content_create.html:35
 #: templates/eduhub/funcontent_create.html:38
-#: templates/eduhub/label_create.html:27 templates/eduhub/label_update.html:32
+#: templates/eduhub/label_create.html:28 templates/eduhub/label_update.html:32
 #: templates/funuser/funuser_update.html:115
 msgid "Upload"
 msgstr ""
@@ -874,15 +906,15 @@ msgid "Delete label"
 msgstr ""
 
 #: templates/eduhub/content_delete.html:21
-#: templates/eduhub/funcontent_delete.html:22
+#: templates/eduhub/funcontent_delete.html:23
 #: templates/eduhub/label_delete.html:49
 msgid "Are you sure you want to delete"
 msgstr ""
 
 #: templates/eduhub/content_delete.html:22
 #: templates/eduhub/content_list.html:37
-#: templates/eduhub/funcontent_delete.html:23
-#: templates/eduhub/funcontent_detail.html:39
+#: templates/eduhub/funcontent_delete.html:27
+#: templates/eduhub/funcontent_detail.html:44
 #: templates/eduhub/funcontent_list.html:42
 #: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:45
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
@@ -904,7 +936,7 @@ msgstr ""
 
 #: templates/eduhub/content_list.html:36
 #: templates/eduhub/eduhubhomesticker_detail.html:38
-#: templates/eduhub/funcontent_detail.html:38
+#: templates/eduhub/funcontent_detail.html:41
 #: templates/eduhub/funcontent_list.html:41 templates/eduhub/label_list.html:44
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
@@ -1262,7 +1294,11 @@ msgstr ""
 msgid "Older"
 msgstr ""
 
-#: templates/funhome/home.html:72
+#: templates/funhome/home_appreciation.html:9
+msgid "Why choose us"
+msgstr ""
+
+#: templates/funhome/home_funhomesticker.html:68
 msgid "View all"
 msgstr ""
 

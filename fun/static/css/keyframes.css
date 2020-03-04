@@ -67,6 +67,23 @@
   }
 
 }
+@keyframes appreciation_card_hover_animation
+{
+  0%{
+    transform: scale(1);
+    background-color: rgba(245, 0, 123, 0.075);
+  }
+
+  50%{
+    transform: scale(0.9);
+  }
+
+  100%{
+    transform: scale(1);
+    background-color: rgba(247, 0, 255, 0.26);
+  }
+
+}
 
 @keyframes funhomesticker_col_odd_animatioin
 {
