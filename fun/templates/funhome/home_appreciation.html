@@ -28,6 +28,9 @@
                           </div>
                         </div>
                       {% else %}
+                        <div class="col col-4 offset-8 d-block d-md-none  ">
+                          <img src="{% url 'funfile:get_file' file_id=appreciation.illustration %}" class="rounded-circle " style="width: 88px;"/>
+                        </div>
                         <div class="col-md-10 col-lg-10 col-xl-10 col-12 ">
                           <div class="card-body " style="text-align: right;">
                             <p class="card-title" style="font-size: medium;">{{ appreciation.invitee }}<br/>{{  appreciation.invitee_title }}</p>
@@ -35,7 +38,7 @@
                             <p class="card-text text-left"><small class="text-muted">{{ appreciation.submitting_date }}</small></p>
                           </div>
                         </div>
-                        <div class="col-md-2 col-lg-2 col-xl-2 col-12 ">
+                        <div class="col-md-2 col-lg-2 col-xl-2 col-12 d-none d-md-block d-lg-block d-xl-block ">
                           <img src="{% url 'funfile:get_file' file_id=appreciation.illustration %}" class="rounded-circle " style="width: 88px;"/>
                         </div>
                       {% endif %}
