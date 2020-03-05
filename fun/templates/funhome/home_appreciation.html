@@ -12,7 +12,7 @@
 <div class="col col-12">
     <div class="row funhomesticker-row mt-2">
         {% for appreciation in appreciations %}
-            <div class="col appreciation-col col-12 col-md-11 offset-md-{% cycle '0' '1' %} col-lg-11 offset-lg-{% cycle '0' '1' %} col-xl-10 offset-xl-{% cycle '0' '2' %} mt-2">
+            <div class="col appreciation-col col-12 col-md-11 offset-md-{% cycle '0' '1' %} col-lg-11 offset-lg-{% cycle '0' '1' %} col-xl-10 offset-xl-{% cycle '0' '2' %} mt-2 click-to-url" data-url="{% url 'appreciation_detail' appreciation.id %}">
                 {% cycle 'start' 'end' as appreciation_items_content silent %}
                 <div class="card mb-3 appreciation-card  p-2 align-items-{{appreciation_items_content}}" >
                     <div class="row no-gutters ">

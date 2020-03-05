@@ -43,7 +43,7 @@
     $(document).on('click', `.click-to-url` , (event) =>{
         window.location = event.currentTarget.dataset.url;
     });
- 
+    
     /**
      * 
      * @param { JQuery.ChangeEvent<Document, undefined, any, any> } event 
@@ -54,7 +54,6 @@
         Cookies.set( 'is_label_list_mine' , is_label_list_mine?'':'1' , { expires: 365 } );
         location.reload();
     }
-
 
     /**
      * 
@@ -118,7 +117,6 @@
         }
         fileReader.readAsDataURL(event.target.files[0])
     }
-
 
 })();
 

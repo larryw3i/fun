@@ -13,6 +13,7 @@ from ckeditor_uploader import fields
 
 homesticker_name = 'homesticker'
 funhomesticker_name = 'funhomesticker'
+appreciation_name = 'appreciation'
 
 
 class Homesticker(models.Model):

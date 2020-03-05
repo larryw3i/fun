@@ -23,7 +23,7 @@ from funfile.models import Checkup
 from .apps import FunhomeConfig
 from .modelforms import HomestickerModelForm, FunhomestickerModelForm
 from .models import Homesticker, homesticker_name, \
-    funhomesticker_name, Funhomesticker, Appreciation
+    funhomesticker_name, Funhomesticker, Appreciation , appreciation_name
 import pytz
 
 home_template = FunhomeConfig.name + '/home.html'
@@ -57,6 +57,9 @@ funhomesticker_update_template = \
 
 funhomesticker_list_template = \
     f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.list_html}'
+
+appreciation_detail_template = \
+    f'{FunhomeConfig.name}/{appreciation_name}{funvalue.detail_html}'
 
 data_privacy_template = FunhomeConfig.name + '/data_privacy.html'
 legal_information_template = FunhomeConfig.name + '/legal_information.html'
@@ -142,6 +145,10 @@ class HomeView(TemplateView):
         context_data['appreciations'] = Appreciation.objects.order_by(
             'submitting_date')[:4]
         return context_data
+
+class AppreciationDetailView(DetailView):
+    model = Appreciation
+    template_name = appreciation_detail_template
 
 
 def get_all_bootswatch_themes(request):
