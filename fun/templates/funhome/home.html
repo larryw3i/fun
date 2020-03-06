@@ -11,9 +11,14 @@
 
 {% block content %}
 
-    {% include 'funhome/home_funhomesticker.html' %}
-    <hr/>
-    {% include 'funhome/home_appreciation.html' %}
-    <hr/>
-    {% include 'funhome/home_join_us.html' %}
+    {% if user.is_authenticated %}
+
+    {% else %}
+        {% include 'funhome/home_funhomesticker.html' %}
+        <hr/>
+        {% include 'funhome/home_appreciation.html' %}
+        <hr/>
+        {% include 'funhome/home_join_us.html' %}
+    {% endif %}
+
 {% endblock content %}

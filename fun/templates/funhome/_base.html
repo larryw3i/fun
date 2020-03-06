@@ -35,14 +35,13 @@
         
         {% include 'funhome/_footer.html' %}
         
+        {% include 'funhome/_js.html' %}
+        
+        {% comment %}
+            With jQuery, Bootsreap and so on . . .
+        {% endcomment %}
+        {% block optionaljs %}{% endblock optionaljs %}
+        
     </body>
-
-
-    {% include 'funhome/_js.html' %}
-    
-    {% comment %}
-        With jQuery, Bootsreap and so on . . .
-    {% endcomment %}
-    {% block optionaljs %}{% endblock optionaljs %}
         
 </html>

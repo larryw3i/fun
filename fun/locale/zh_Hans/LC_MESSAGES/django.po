@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-04 23:28+0800\n"
-"PO-Revision-Date: 2020-03-05 00:35+0800\n"
+"POT-Creation-Date: 2020-03-06 16:12+0800\n"
+"PO-Revision-Date: 2020-03-06 16:12+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -68,7 +68,7 @@ msgid "classification : college/grade/semester/course"
 msgstr "分类如: (大学/中学/小学)/年级/学期/课程"
 
 #: eduhub/modelforms.py:95 funhome/modelforms.py:24 funhome/modelforms.py:50
-#: funhome/models.py:32 funhome/models.py:76
+#: funhome/models.py:33 funhome/models.py:77
 msgid "Sticker title"
 msgstr "贴纸标题"
 
@@ -183,7 +183,7 @@ msgstr "贴纸时间"
 msgid "Eduhub homepage sticker comment"
 msgstr "备注"
 
-#: eduhub/models.py:148 funhome/models.py:57 funhome/models.py:101
+#: eduhub/models.py:148 funhome/models.py:58 funhome/models.py:102
 msgid "Hidden"
 msgstr "隐藏(不贴)"
 
@@ -263,80 +263,80 @@ msgstr "中文简体"
 msgid "Fun home"
 msgstr "主页"
 
-#: funhome/modelforms.py:26 funhome/models.py:45
+#: funhome/modelforms.py:26 funhome/models.py:46
 msgid "Sticker content file"
 msgstr "贴纸文件"
 
-#: funhome/models.py:21 funhome/models.py:22 funhome/models.py:63
+#: funhome/models.py:22 funhome/models.py:23 funhome/models.py:64
 msgid "Home sticker"
 msgstr "主页贴纸"
 
-#: funhome/models.py:35 funhome/models.py:80
+#: funhome/models.py:36 funhome/models.py:81
 msgid "Sticker subtitle"
 msgstr "贴纸子标题"
 
-#: funhome/models.py:38 funhome/models.py:84
+#: funhome/models.py:39 funhome/models.py:85
 msgid "Sticker cover"
 msgstr "贴纸背景"
 
-#: funhome/models.py:42 funhome/models.py:89
+#: funhome/models.py:43 funhome/models.py:90
 msgid "Sticker promulgator"
 msgstr "贴纸的管理员"
 
-#: funhome/models.py:49 funhome/models.py:95
+#: funhome/models.py:50 funhome/models.py:96
 msgid "Sticker promulgating date"
 msgstr "贴纸时间"
 
-#: funhome/models.py:53 funhome/models.py:98
+#: funhome/models.py:54 funhome/models.py:99
 msgid "Sticker comment"
 msgstr "备注"
 
-#: funhome/models.py:64
+#: funhome/models.py:65
 msgid "Home stickers"
 msgstr "主页贴纸"
 
-#: funhome/models.py:107 funhome/models.py:108
+#: funhome/models.py:108 funhome/models.py:109
 msgid "Appreciation"
 msgstr "评价"
 
-#: funhome/models.py:121
+#: funhome/models.py:122
 msgid "invitee"
 msgstr "受邀"
 
-#: funhome/models.py:126
+#: funhome/models.py:127
 msgid "invitee title"
 msgstr "标题"
 
-#: funhome/models.py:131
+#: funhome/models.py:132
 msgid "brief comment"
 msgstr "备注"
 
-#: funhome/models.py:136
+#: funhome/models.py:137
 msgid "illustration"
 msgstr "头贴"
 
-#: funhome/models.py:141
+#: funhome/models.py:142
 msgid "comment"
 msgstr "备注"
 
-#: funhome/models.py:149
+#: funhome/models.py:150
 msgid "Submitter"
 msgstr "编辑"
 
-#: funhome/models.py:154
+#: funhome/models.py:155
 msgid "Submitting date"
 msgstr "创建时间"
 
-#: funhome/views.py:171 funhome/views.py:203
+#: funhome/views.py:178 funhome/views.py:210
 #: templates/account/email/password_reset_key_message.html:7
 msgid "X-DOVE"
 msgstr "X-DOVE"
 
-#: funhome/views.py:172 funhome/views.py:204
+#: funhome/views.py:179 funhome/views.py:211
 msgid "Larry`s sharing"
 msgstr "Larry 的分享"
 
-#: funhome/views.py:177 funhome/views.py:209
+#: funhome/views.py:184 funhome/views.py:216
 msgid "larry"
 msgstr "larry"
 
@@ -818,7 +818,7 @@ msgstr "注册"
 msgid "Already have an account? Then please"
 msgstr "已有账号吗? 请"
 
-#: templates/account/signup.html:27
+#: templates/account/signup.html:27 templates/funhome/home_join_us.html:71
 #: templates/socialaccount/login_cancelled.html:18
 msgid "sign in"
 msgstr "登录"
@@ -1004,6 +1004,7 @@ msgstr "查看"
 #: templates/eduhub/eduhubhomesticker_detail.html:38
 #: templates/eduhub/funcontent_detail.html:41
 #: templates/eduhub/funcontent_list.html:41 templates/eduhub/label_list.html:44
+#: templates/funhome/appreciation_detail.html:42
 #: templates/funhome/funhomesticker_detail.html:35
 msgid "Edit"
 msgstr "编辑"
@@ -1353,8 +1354,8 @@ msgid "Home"
 msgstr "主页"
 
 #: templates/funhome/_navbar.html:29
-msgid "Author"
-msgstr "作者"
+msgid "Developers"
+msgstr "开发者"
 
 #: templates/funhome/_navbar.html:33
 msgid "Message"
@@ -1371,6 +1372,10 @@ msgstr "退出"
 #: templates/funhome/_navbar.html:49
 msgid "Log In"
 msgstr "登录"
+
+#: templates/funhome/appreciation_detail.html:13
+msgid "appreciation detail"
+msgstr "评价"
 
 #: templates/funhome/funhomesticker_detail.html:13
 #: templates/funhome/homesticker_detail.html:13
@@ -1395,6 +1400,34 @@ msgstr "我们的优势"
 #: templates/funhome/home_funhomesticker.html:68
 msgid "View all"
 msgstr "查看全部"
+
+#: templates/funhome/home_join_us.html:9
+msgid "Join us now"
+msgstr "现在加入X-DOVE"
+
+#: templates/funhome/home_join_us.html:19
+msgid "E-mail"
+msgstr "邮箱地址"
+
+#: templates/funhome/home_join_us.html:29
+msgid "Username"
+msgstr "用户名"
+
+#: templates/funhome/home_join_us.html:40
+msgid "Password"
+msgstr "设置密码"
+
+#: templates/funhome/home_join_us.html:51
+msgid "Password (again)"
+msgstr "确认密码"
+
+#: templates/funhome/home_join_us.html:61
+msgid "Join now"
+msgstr "现在加入"
+
+#: templates/funhome/home_join_us.html:70
+msgid "Already have an account"
+msgstr "已有账号吗"
 
 #: templates/funhome/legal_information.html:20
 msgid "LEGAL INFORMATION"
@@ -2933,6 +2966,9 @@ msgstr "Thumbnail"
 msgid "{something}"
 msgstr "{something}"
 
+#~ msgid "Author"
+#~ msgstr "作者"
+
 #~ msgid "Enable selected Emperor's Vassals"
 #~ msgstr "Enable selected Emperor's Vassals"
 
@@ -3184,9 +3220,6 @@ msgstr "{something}"
 
 #~ msgid "View more"
 #~ msgstr "更多"
-
-#~ msgid "E-mail"
-#~ msgstr "邮箱地址"
 
 #~ msgid "Asia/Shanghai"
 #~ msgstr "亚洲•中国•上海"
