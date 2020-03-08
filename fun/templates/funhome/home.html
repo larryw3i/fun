@@ -12,8 +12,11 @@
 {% block content %}
 
     {% if user.is_authenticated %}
+        {# workspace #}
+        {{ csrf_token.value }}
 
     {% else %}
+        {# welcome #}
         {% include 'funhome/home_funhomesticker.html' %}
         <hr/>
         {% include 'funhome/home_appreciation.html' %}

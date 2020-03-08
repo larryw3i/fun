@@ -6,14 +6,12 @@
 {% load i18n %}
 {% load l10n %}
 
-{% block content %} 
-    <ul class="nav nav-pills nav-item text-right">
-        <li class="nav-item">
-            <a class="btn btn-outline-info btn-sm" href="{% url 'funuser:funuser_update' %}">{% trans 'Information' %}</a>
-        </li>
-        <li class="nav-item">
-            <a class="btn btn-outline-info btn-sm" href="/accounts/password/reset">{% trans 'Reset password' %}</a>
-        </li>
-    </ul>
-    <hr/>
-{% endblock %} 
+<ul class="nav nav-pills nav-item text-right user-info-nav-pills">
+    <li class="nav-item">
+        <a class="btn btn-sm" href="{% url 'funuser:funuser_update' %}">{% trans 'Information' %}</a>
+    </li>
+    <li class="nav-item ml-2">
+        <a class="btn btn-sm" href="/accounts/password/reset/">{% trans 'Reset password' %}</a>
+    </li>
+</ul>
+<hr/>

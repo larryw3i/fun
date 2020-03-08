@@ -12,6 +12,10 @@ from datetime import datetime
 from fun.funvalue import subjects_top
 
 from dotenv import find_dotenv, load_dotenv
+
+from funuser.models import Funuser
+from django.shortcuts import get_object_or_404
+
 load_dotenv(find_dotenv())
 
 
@@ -60,3 +64,10 @@ def get_current_eduhub_top_filter(context):
     eduhub_top_filter = request.COOKIES.get('eduhub_top_filter', '')
     return _(subjects_top[eduhub_top_filter] if len(eduhub_top_filter) > 0
              else 'All')
+
+
+@register.simple_tag(takes_context=True)
+def get_funuser_name(context, user):
+    funuser = Funuser.objects.filter(user=user).first()
+    return funuser.full_name if (funuser and len(funuser.full_name) > 0) \
+        else user.username

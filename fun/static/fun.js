@@ -43,6 +43,18 @@
     $(document).on('click', `.click-to-url` , (event) =>{
         window.location = event.currentTarget.dataset.url;
     });
+
+    $(document).on('click', '#nav_bar_account_logout', (event)=>{
+        bootbox.alert({
+            size: "small",
+            title: "Your Title",
+            message: "Your message here…",
+            closeButton: false,
+            onEscape: true,
+            callback: function(){ /* your callback code */ }
+        });
+    });
+
     
     /**
      * 
