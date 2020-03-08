@@ -19,7 +19,15 @@
         {{ form.non_field_errors }} 
         <div class="row">
             <div class="col col-auto text-center" >
-                <img  click-to='#id_avatar' preview-for='#id_avatar' src="{% if form.instance.avatar.name %}{%  url 'funfile:get_file' file_id=form.instance.avatar.name  %}{% else %} {% static 'images/x_dove.webp' %}{% endif %}" alt="avatar" class="rounded-circle "   style="width: 150px;height:150px;object-fit: cover"/>
+                <img  click-to='#id_avatar' preview-for='#id_avatar' 
+                    src="
+        {% if form.instance.avatar.name %}
+            {%  url 'funfile:get_file' file_id=form.instance.avatar.name  %}
+        {% else %} 
+            {% static 'images/x_dove.webp' %}
+        {% endif %}" alt="avatar" class="rounded-circle "   
+                    style="width: 150px;height:150px;object-fit: cover"/>
+
                 <div hidden>
                     {{ form.avatar }} 
                 </div>
@@ -36,12 +44,19 @@
                         {{ form.birth_date.errors }}
                     <label  >
                         {% trans 'Birth date' %}
-                        <span class="custom-control custom-switch"  style="display: inline;">
+                        <span class="custom-control custom-switch"  
+                            style="display: inline;">
                             {{ form.is_birth_date_outward }}
-                            <span class="custom-control-label" for="id_is_birth_date_outward">{% trans 'is outward' %}?</span>
+                            <span class="custom-control-label" 
+                                for="id_is_birth_date_outward">
+                                {% trans 'is outward' %}?
+                            </span>
                         </s>
                     </label>
-                    <input type="date" name="birth_date" value='{{ form.birth_date.value|date:"Y-m-d" }}' class="form-control" id="{{ form.birth_date.id_for_label }}">
+                    <input type="date" name="birth_date" 
+                        value='{{ form.birth_date.value|date:"Y-m-d" }}' 
+                        class="form-control" 
+                        id="{{ form.birth_date.id_for_label }}"/>
                 </div>
                 
         
@@ -50,9 +65,15 @@
                     <label >
                         {% trans 'Address' %}
         
-                        <div class="custom-control custom-switch"   style="display: inline;">
+                        <div class="custom-control custom-switch"
+                            style="display: inline;">
                             {{ form.is_address_outward }}
-                            <label class="custom-control-label" for="id_is_address_outward">{% trans 'is outward' %}?</label>
+                            
+                            <label class="custom-control-label" 
+                                for="id_is_address_outward">
+                                {% trans 'is outward' %}?
+                            </label>
+
                         </div>
                     </label>
                     {{ form.address }}
@@ -62,9 +83,14 @@
                     {{ form.hometown.errors }}
                     <label >
                         {% trans 'Hometown' %}
-                        <div class="custom-control custom-switch " style="display: inline;">
+                        <div class="custom-control custom-switch " 
+                            style="display: inline;">
                             {{ form.is_hometown_outward }}
-                            <label class="custom-control-label" for="id_is_hometown_outward">{% trans 'is outward' %}?</label>
+                            <label class="custom-control-label" 
+                                for="id_is_hometown_outward">
+                                {% trans 'is outward' %}?
+                            </label>
+
                         </div>
                     </label>
                     {{ form.hometown }}
@@ -74,9 +100,13 @@
                     {{ form.college.errors }}
                     <label >
                         {% trans 'College' %}
-                        <div class="custom-control custom-switch" style="display: inline;">
+                        <div class="custom-control custom-switch" 
+                            style="display: inline;">
                             {{ form.is_college_outward }}
-                            <label class="custom-control-label" for="id_is_college_outward">{% trans 'is outward' %}?</label>
+                            <label class="custom-control-label" 
+                                for="id_is_college_outward">
+                                {% trans 'is outward' %}?
+                            </label>
                         </div>
                     </label>
                     {{ form.college }}
@@ -86,9 +116,13 @@
                     {{ form.occupation.errors }}
                     <label >
                         {% trans 'Occupation' %}
-                        <div class="custom-control custom-switch" style="display: inline;">
+                        <div class="custom-control custom-switch" 
+                            style="display: inline;">
                             {{ form.is_occupation_outward }}
-                            <label class="custom-control-label" for="id_is_occupation_outward">{% trans 'is outward' %}?</label>
+                            <label class="custom-control-label" 
+                                for="id_is_occupation_outward">
+                                {% trans 'is outward' %}?
+                            </label>
                         </div>
                     </label>
                     {{ form.occupation }}
@@ -98,9 +132,13 @@
                     {{ form.motto.errors }}
                     <label >
                         {% trans 'Motto' %}
-                        <div class="custom-control custom-switch" style="display: inline;">
+                        <div class="custom-control custom-switch" 
+                            style="display: inline;">
                             {{ form.is_motto_outward }}
-                            <label class="custom-control-label" for="id_is_motto_outward">{% trans 'is outward' %}?</label>
+                            <label class="custom-control-label" 
+                                for="id_is_motto_outward">
+                                {% trans 'is outward' %}?
+                            </label>
                         </div>
                     </label>
                     {{ form.motto }}
@@ -110,7 +148,8 @@
         </div>
                                
         <div class="col col-12 text-right" >                             
-            <input class="btn btn-outline-info " type="submit" value="{% trans 'Upload' %}" />
+            <input class="btn btn-outline-info " type="submit" 
+                value="{% trans 'Upload' %}" />
         </div>
     </form>    
 

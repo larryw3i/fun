@@ -21,39 +21,55 @@
     <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm">
         <div class="container ">
             <a class="navbar-brand" href="">{% trans 'Eduhub' %}</a>
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#eduhubNavbarContent" aria-controls="eduhubNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" 
+                data-target="#eduhubNavbarContent" 
+                aria-controls="eduhubNavbarContent" aria-expanded="false" 
+                aria-label="Toggle navigation">
                 <span>=</span>
             </button>
             <div class="collapse navbar-collapse" id="eduhubNavbarContent">
                 <ul class="navbar-nav mr-auto align-middle align-items-center">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="eduhubTopFilterDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          {% get_current_eduhub_top_filter %}
+                        <a class="nav-link dropdown-toggle" href="#" 
+                            id="eduhubTopFilterDropdown" role="button" 
+                            data-toggle="dropdown" aria-haspopup="true" 
+                            aria-expanded="false">
+                            {% get_current_eduhub_top_filter %}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="eduhubTopFilterDropdown" id="eduhubTopFilterDropdownMenu">
-                            <a class="dropdown-item" href="#" data-filter_label="0">{% trans 'Preschool education' %}</a>
-                            <a class="dropdown-item" href="#" data-filter_label="1">{% trans 'Primary school' %}</a>
-                            <a class="dropdown-item" href="#" data-filter_label="2">{% trans 'Junior high school' %}</a>
-                            <a class="dropdown-item" href="#" data-filter_label="3">{% trans 'Senior high school' %}</a>
-                            <a class="dropdown-item" href="#" data-filter_label="4">{% trans 'College' %}</a>
-                            <a class="dropdown-item" href="#" data-filter_label="5">{% trans 'Others' %}</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"  data-filter_label="">{% trans 'All' %}</a>
-                        </div>
+                        {% include 'eduhub/_eduhub_base_top_filter.html' %}
                     </li>
                     <li class="nav-item">
                         <a class="nav-link "  href="#">{% trans 'Survey' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link "  href="{% url 'eduhub:label_list' %}">{% trans 'Eduhub labels' %}</a>
+                        <a class="nav-link "  
+                            href="{% url 'eduhub:label_list' %}">
+                            {% trans 'Eduhub labels' %}
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link "  href="{% url 'eduhub:funcontent_list_all' %}">{% trans 'Eduhub contents' %}</a>
+                        <a class="nav-link "  
+                            href="{% url 'eduhub:funcontent_list_all' %}">
+                            {% trans 'Eduhub contents' %}
+                        </a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" action="{% url 'eduhub:eduhub_search' %}" id="eduhub_search_form">
-                    <input class="form-control mr-sm-2"  id="eduhub_search_q" name="q" placeholder="{% trans 'What are you thinking about' %}?" aria-label="{% trans 'What are you thinking about' %}?" aria-describedby="eduhub_search" autocomplete="off" value="{{ request.GET.q }}">
-                    <button class="btn btn-outline-success my-2 my-sm-0"  type="button" id="eduhub_search_submit">{% trans 'search' %} &#128269;</button>
+                <form class="form-inline my-2 my-lg-0" 
+                    action="{% url 'eduhub:eduhub_search' %}" 
+                    id="eduhub_search_form">
+                    
+                    <input class="form-control mr-sm-2"  id="eduhub_search_q" 
+                        name="q" 
+                        placeholder="{% trans 'What are you thinking about' %}?" 
+                        aria-label="{% trans 'What are you thinking about' %}?" 
+                        aria-describedby="eduhub_search" autocomplete="off" 
+                        value="{{ request.GET.q }}"/>
+
+                    <button class="btn btn-outline-success my-2 my-sm-0"  
+                        type="button" id="eduhub_search_submit">
+                        {% trans 'search' %} &#128269;
+                    </button>
+
                 </form>
             </div>
         </div> 

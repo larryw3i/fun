@@ -22,9 +22,17 @@
         {{ funhomesticker.content }}
     {% endautoescape %}
     <hr/>
-    <p class="text-right " ><a href="{% url 'funuser:funuser_detail' user=funhomesticker.promulgator.id %}">{{ funhomesticker.promulgator }}</a> </p>
+
+    <p class="text-right " >
+        <a href=
+    "{% url 'funuser:funuser_detail' user=funhomesticker.promulgator.id %}">
+            {{ funhomesticker.promulgator }}
+        </a> 
+    </p>
+
     <p class="text-right small">{{ funhomesticker.promulgating_date }}</p>
     <hr/>
+    
     <p class="small">
         {{ funhomesticker.comment }}
     </p> 
@@ -32,8 +40,12 @@
     {% ifequal funhomesticker.promulgator  request.user  %}
 
         <div class="col col-12 text-right" >
-            <a class=" btn btn-sm btn-info" href="/admin/funhome/funhomesticker/{{ funhomesticker.id }}">{% trans 'Edit' %}</a>
+            <a class=" btn btn-sm btn-info" 
+                href="/admin/funhome/funhomesticker/{{ funhomesticker.id }}">
+                {% trans 'Edit' %}
+            </a>
         </div>
+
     {% endifequal %}
  
 

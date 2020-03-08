@@ -19,7 +19,9 @@
     <div class="row">
         <div class="col col-sm-4 col-md-4 col-lg-3 text-center">
             <p>{% trans 'Preview' %}</p>
-            <img src="{% url 'funfile:get_file' file_id=form.instance.cover.name %}" class="preview" preview-for='#id_cover' alt="{% trans 'cover'%}"/>
+            <img src="{% url 'funfile:get_file' file_id=form.instance.cover.name %}" 
+                class="preview" preview-for='#id_cover' 
+                alt="{% trans 'cover'%}"/>
         </div>
         <div class="col offset-1 col-sm-7 col-md-7 col-lg-8">
             <form method="post"  enctype="multipart/form-data">
@@ -29,7 +31,8 @@
                 {{ form|crispy }}
                 
                 <div class="col col-12 text-right" >
-                    <input class="btn btn-outline-info " type="submit" value="{% trans 'Upload' %}" />
+                    <input class="btn btn-outline-info " type="submit" 
+                        value="{% trans 'Upload' %}" />
                 </div>
         
             </form>    

@@ -16,7 +16,8 @@
 {% endblock optionalcss %}
 
 {% block content %} 
-    <div class="text-center " style="font-size: xx-large; font-weight: bolder;">
+    <div class="text-center " 
+        style="font-size: xx-large; font-weight: bolder;">
         {% trans 'DATA PRIVACY' %}
     </div>
     <hr/>

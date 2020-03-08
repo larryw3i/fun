@@ -1,0 +1,48 @@
+
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+{% load funtag %}
+
+
+<div class="dropdown-menu" 
+    aria-labelledby="eduhubTopFilterDropdown" 
+    id="eduhubTopFilterDropdownMenu">
+
+    <a class="dropdown-item" href="#" 
+        data-filter_label="0">
+        {% trans 'Preschool education' %}
+    </a>
+    <a class="dropdown-item" href="#" 
+        data-filter_label="1">
+        {% trans 'Primary school' %}
+    </a>
+    <a class="dropdown-item" href="#" 
+        data-filter_label="2">
+        {% trans 'Junior high school' %}
+    </a>
+    <a class="dropdown-item" href="#" 
+        data-filter_label="3">
+        {% trans 'Senior high school' %}
+    </a>
+    <a class="dropdown-item" href="#" 
+        data-filter_label="4">
+        {% trans 'College' %}
+    </a>
+    <a class="dropdown-item" href="#" 
+        data-filter_label="5">
+        {% trans 'Others' %}
+    </a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#"  
+        data-filter_label="">
+        {% trans 'All' %}
+    </a>
+
+</div>

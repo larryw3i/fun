@@ -25,7 +25,11 @@
         {{ eduhubhomesticker.content }}
     {% endautoescape %}
     <hr/>
-    <p class="text-right " ><a href="{% url 'funuser:funuser_detail' user=eduhubhomesticker.promulgator.id %}">{{ eduhubhomesticker.promulgator }}</a> </p>
+    <p class="text-right " >
+        <a href="{% url 'funuser:funuser_detail' user=eduhubhomesticker.promulgator.id %}">
+            {{ eduhubhomesticker.promulgator }}
+        </a> 
+    </p>
     <p class="text-right small">{{ eduhubhomesticker.promulgating_date }}</p>
     <hr/>
     <p class="small">
@@ -35,11 +39,13 @@
     {% ifequal eduhubhomesticker.promulgator  request.user  %}
 
         <div class="col col-12 text-right" >
-            <a class=" btn btn-sm btn-info" href="/admin/eduhub/eduhubhomesticker/{{ eduhubhomesticker.id }}">{% trans 'Edit' %}</a>
+            <a class=" btn btn-sm btn-info" 
+                href="/admin/eduhub/eduhubhomesticker/{{ eduhubhomesticker.id }}">
+                {% trans 'Edit' %}
+            </a>
         </div>
     {% endifequal %}
  
-
 {% endblock %}
 
 {% block optionaljs %} 

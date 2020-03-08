@@ -86,4 +86,10 @@ def get_funuser_avatar_url(context, user):
             kwargs={"file_id": funuser.avatar.name}
         ) \
         if (funuser and len(funuser.avatar.name) > 0) \
-        else ( STATIC_URL + 'images/x_dove.webp' )
+        else (STATIC_URL + 'images/x_dove.webp')
+
+
+@register.simple_tag()
+def get_pdf_view_url():
+    return STATIC_URL + "libs/pdfjs-2.2.228-dist/web/viewer.min.html" +\
+        "?file=funfile/get_file/" # combine a funfile name

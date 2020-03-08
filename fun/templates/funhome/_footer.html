@@ -20,10 +20,14 @@
             </div>
             
             <div class="col col-auto">
-                <a href="{% url 'legal_information' %}">{% trans 'Legal information' %}</a>
+                <a href="{% url 'legal_information' %}">
+                    {% trans 'Legal information' %}
+                </a>
             </div>
             <div class="col col-auto">
-                <a href="{% url 'data_privacy' %}">{% trans ' Data privacy' %}</a>
+                <a href="{% url 'data_privacy' %}">
+                    {% trans ' Data privacy' %}
+                </a>
             </div>
             <div class="col col-auto">
                 <a href="#">{% trans 'Developer' %}</a>
@@ -35,11 +39,15 @@
                 {% include 'funhome/_footer_theme.html' %}
             </div>
             <div class="col col-auto">
-                <a href="https://github.com/larryw3i/fun">{% trans 'this site' %}</a>
+                <a href="https://github.com/larryw3i/fun">
+                    {% trans 'this site' %}
+                </a>
             </div>
 
             <div class="col col-12 text-center ">
-                <a href="{% get_beian_url %}" class="small">{% get_beian_text %}</a>
+                <a href="{% get_beian_url %}" class="small">
+                    {% get_beian_text %}
+                </a>
             </div>
         </div>
 

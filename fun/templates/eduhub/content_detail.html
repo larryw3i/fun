@@ -20,17 +20,27 @@
     <hr/> 
 
     {% if  is_video %}
-        <video class="eduhub-content-video"  src="{% url 'funfile:get_file' file_id=content.content_file.name %}" width="100%" controls></video>
+        <video class="eduhub-content-video"  
+            src="{% url 'funfile:get_file' file_id=content.content_file.name %}" 
+            width="100%" controls>
+        </video>
     {% else %}
-        <object data="{% static 'node_modules/pdfjs-dist/web/viewer.html' %}?file={% url 'funfile:get_file' file_id=content.content_file.name %}" width="100%" height="567rem">
+        <object data="{% static 'node_modules/pdfjs-dist/web/viewer.html' %}?file={% url 'funfile:get_file' file_id=content.content_file.name %}" 
+            width="100%" height="567rem">
         </object>
     {% endif  %}
     
     <hr/>
 
-    <p class="text-right " ><a href="{% url 'funuser:funuser_detail' user=content.label.author.id %}">{{ content.label.author }}</a> </p> 
+    <p class="text-right " >
+        <a href="{% url 'funuser:funuser_detail' user=content.label.author.id %}">
+            {{ content.label.author }}
+        </a> 
+    </p> 
+
     <p class="text-right small">{{ content.uploading_date }}</p>
     <hr/>
+
     <p class="small">
         {{ content.comment }}
     </p> 

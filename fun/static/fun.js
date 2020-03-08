@@ -24,8 +24,10 @@
         refreshLabelList(event);
     });
     
-    $(document).on('click', `.language-dropdown-menu .language-dropdown-item` , (event) =>{
-        $(`#language_form input[name='language']`).val(event.target.dataset.language); $(`#language_form`).submit();
+    $(document).on('click', `.language-dropdown-menu .language-dropdown-item` , 
+        (event) =>{
+        $(`#language_form input[name='language']`)
+            .val(event.target.dataset.language); $(`#language_form`).submit();
     });
     $(document).on('click', `[click-to]` , (event) =>{
         $(`${$(event.currentTarget).attr('click-to')}`).click();
@@ -63,7 +65,9 @@
     function refreshLabelList( event )
     {
         is_label_list_mine = Boolean( Cookies.get('is_label_list_mine') );
-        Cookies.set( 'is_label_list_mine' , is_label_list_mine?'':'1' , { expires: 365 } );
+        Cookies.set( 
+            'is_label_list_mine' , 
+            is_label_list_mine?'':'1' , { expires: 365 } );
         location.reload();
     }
 
@@ -99,7 +103,8 @@
         }
         preview_for.show();
         preview_for.attr( {
-            'data':'/static/libs/pdfjs-2.2.228-dist/web/viewer.min.html?file='+ URL.createObjectURL( event.target.files[0] ) 
+            'data':'/static/libs/pdfjs-2.2.228-dist/web/viewer.min.html?file='
+                + URL.createObjectURL( event.target.files[0] ) 
         });
  
     }
@@ -125,7 +130,8 @@
     function previewImage(event){
         var fileReader = new FileReader();
         fileReader.onload = function(){
-            $(`img[preview-for='#${event.target.id}']`).attr( {'src': this.result });
+            $(`img[preview-for='#${event.target.id}']`)
+                .attr( {'src': this.result });
         }
         fileReader.readAsDataURL(event.target.files[0])
     }
@@ -135,11 +141,15 @@
 /**
  * Make a global alert
  * @param {String} message message
- * @param {String} type Bootstrap alert, view it https://getbootstrap.com/docs/4.4/components/alerts/#examples 
+ * @param {String} type Bootstrap alert, 
+ * view it https://getbootstrap.com/docs/4.4/components/alerts/#examples 
  */
 function makeGlobalAlert( message='Hello',timeout=2500, type='info' )
 {
-    $(`<div class="text-center rounded alert alert-${type}" role="alert">${message}</div>`).prependTo('body');
+    $(`<div class="text-center rounded alert alert-${type}" role="alert">
+        ${message}</div>`)
+        .prependTo('body');
+        
     setTimeout(()=>{
         $('.alert').remove();
     }, timeout);
