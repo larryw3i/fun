@@ -150,3 +150,8 @@ img.preview
 {
  animation: appreciation_card_hover_animation 0.25s 1 forwards;
 }
+
+#sign_out_avatar
+{
+ animation: sign_out_avatar_animation 1.26s  infinite alternate;
+}

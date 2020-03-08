@@ -108,3 +108,13 @@
     transform: translateX(0);
   }
 }
+
+@keyframes sign_out_avatar_animation
+{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.92);
+  }
+}

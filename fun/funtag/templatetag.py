@@ -15,6 +15,10 @@ from dotenv import find_dotenv, load_dotenv
 
 from funuser.models import Funuser
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
+
+from fun.settings import STATIC_URL
+
 
 load_dotenv(find_dotenv())
 
@@ -71,3 +75,15 @@ def get_funuser_name(context, user):
     funuser = Funuser.objects.filter(user=user).first()
     return funuser.full_name if (funuser and len(funuser.full_name) > 0) \
         else user.username
+
+
+@register.simple_tag(takes_context=True)
+def get_funuser_avatar_url(context, user):
+    funuser = Funuser.objects.filter(user=user).first()
+    return \
+        reverse(
+            'funfile:get_file',
+            kwargs={"file_id": funuser.avatar.name}
+        ) \
+        if (funuser and len(funuser.avatar.name) > 0) \
+        else ( STATIC_URL + 'images/x_dove.webp' )
