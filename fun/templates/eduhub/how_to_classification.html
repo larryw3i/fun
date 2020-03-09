@@ -16,6 +16,7 @@
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
+{% load funtag %}
 
 {% block title %} {% trans 'How to classification' %} {% endblock title %}
 
@@ -33,7 +34,8 @@
 
 {% block content %} 
 
-    <div class="text-center " style="font-size: xx-large; font-weight: bolder;">
+    <div class="text-center " 
+        style="font-size: xx-large; font-weight: bolder;">
         {% trans 'How to classify the eduhub content' %}
     </div>
     <hr/>
@@ -61,9 +63,10 @@
                 
                 <div class="text-center eduhub-classification-tip" 
                 title="{% trans 'click to copy' %}" 
-                data-clipboard-text="{% trans 'primary school/(grade)/(semester)/(subjects)/(title)' %}">
+                data-clipboard-text=
+        "{% trans 'primary school/(grade)/(semester)/(subjects)/(title)' %}">
                     {% blocktrans %}
-                        primary school / (grade) / (semester) / (subjects) / (title)
+                primary school / (grade) / (semester) / (subjects) / (title)
                     {% endblocktrans %}
                 </div>
 
@@ -77,8 +80,10 @@
                     you should categorize: 
                 {% endblocktrans %}
                 <div class="text-center eduhub-classification-tip" 
-                title="{% trans 'click to copy' %}" 
-                data-clipboard-text="{% trans 'junior senior high school/(grade)/(semester)/(subjects)/(title)' %}" >
+                    title="{% trans 'click to copy' %}" 
+                    data-clipboard-text=
+"{% trans 'junior senior high school/(grade)/(semester)/(subjects)/(title)' %}"
+                    >
                     {% blocktrans %}
                         ('junior' or 'senior') high school / (grade) / 
                         (semester) / (subjects) / (title)
@@ -96,7 +101,8 @@
                 {% endblocktrans %}
                 <div class="text-center eduhub-classification-tip" 
                     title="{% trans 'click to copy' %}" 
-                    data-clipboard-text="{% trans 'college/(grade)/(semester)/(subjects)/(title)' %}" >
+                    data-clipboard-text=
+            "{% trans 'college/(grade)/(semester)/(subjects)/(title)' %}" >
 
                     {% blocktrans %}
                         college/(major) / (grade) / (semester) / (subjects) / 
@@ -109,11 +115,15 @@
                 {% blocktrans %}
                     Other stages should also have classification, you can 
                     change it 
-                    <a href='https://github.com/larryw3i/fun/blob/master/fun/templates/eduhub/how_to_classification.html'>
-                        here
-                    </a>  
-                    and make a pull request, or you look at it yourself.
+
                 {% endblocktrans %}
+                <a href='{% get_classification_issue_url %}'>
+                    {% trans 'here' %}
+                </a>  
+                
+                {% blocktrans %}
+                    and make a pull request, or you look at it yourself
+                {% endblocktrans %}.
             </li>
         </ol>
     </p>

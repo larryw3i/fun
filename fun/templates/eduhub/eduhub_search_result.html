@@ -26,15 +26,18 @@
                 {% for label in labels %}
                     <div class="col col-12 col-md-6 col-lg-6 col-xl-6 mt-2">
                         <div class="card homesticker-card click-to-url" 
-                            data-url="{% url 'eduhub:funcontent_list' label=label.id %}">
+                            data-url=
+                        "{% url 'eduhub:funcontent_list' label=label.id %}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ label.name }}</h5>
                                 <p class="card-text"> 
                                     <span class="small  " >
                                         {{ label.comment }}
                                     </span>
-                                    <span class="border-right small float-right">
-                                        {{ label.author }} {{ label.creating_date }}
+                                    <span class="
+                                        border-right small float-right">
+                                        {{ label.author }} 
+                                        {{ label.creating_date }}
                                     </span>
                                 </p>
                             </div>
@@ -54,7 +57,8 @@
                 {% for funcontent in funcontents %}
                     <div class="col col-12 col-md-6 col-lg-6 col-xl-6 mt-2">
                         <div class="card homesticker-card click-to-url" 
-                            data-url="{% url 'eduhub:funcontent_detail' pk=funcontent.id %}">
+                            data-url=
+                    "{% url 'eduhub:funcontent_detail' pk=funcontent.id %}">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     {{ funcontent.title }}
@@ -80,7 +84,9 @@
 
     </div>
 
-    {% if request.GET.filter == 'funcontents' or funcontents.paginator.num_pages > labels.paginator.num_pages %}
+{% with f_np=funcontents.paginator.num_pages l_np=labels.paginator.num_pages %}
+
+    {% if request.GET.filter == 'funcontents' or f_np > l_np %}
         <div class="pagination justify-content-center  align-items-center mt-5" 
             style="font-size: large;">
             <span class="step-links">
@@ -109,13 +115,15 @@
                         class="btn btn-primary btn-sm">
                         {% trans 'next page' %}
                     </a>
-                    {% ifnotequal funcontent.number|add:'1' funcontent.paginator.num_pages %}
+    {% ifnotequal funcontent.number|add:'1' funcontent.paginator.num_pages %}
                         <a href="?page={{ funcontent.paginator.num_pages }}"  
                             class="btn btn-primary btn-sm">
                             {% trans 'last page' %} &raquo;
                         </a>
-                    {% endifnotequal %}
+    {% endifnotequal %}
+
                 {% endif %}
+
             </span>
         </div>
     {% else %}
@@ -148,16 +156,18 @@
                         {% trans 'next page' %}
                     </a>
 
-                    {% ifnotequal label.number|add:'1' label.paginator.num_pages %}
+                {% ifnotequal label.number|add:'1' label.paginator.num_pages %}
                         <a href="?page={{ label.paginator.num_pages }}" 
                             class="btn btn-primary btn-sm">
                             {% trans 'last page' %} &raquo;
                         </a>
-                    {% endifnotequal %}
+                {% endifnotequal %}
                 {% endif %}
             </span>
         </div>
     {% endif %}
+
+{% endwith %}
 
 
 {% endblock %}

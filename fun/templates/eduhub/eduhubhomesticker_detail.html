@@ -26,7 +26,8 @@
     {% endautoescape %}
     <hr/>
     <p class="text-right " >
-        <a href="{% url 'funuser:funuser_detail' user=eduhubhomesticker.promulgator.id %}">
+        <a href=
+    "{% url 'funuser:funuser_detail' user=eduhubhomesticker.promulgator.id %}">
             {{ eduhubhomesticker.promulgator }}
         </a> 
     </p>
@@ -40,7 +41,8 @@
 
         <div class="col col-12 text-right" >
             <a class=" btn btn-sm btn-info" 
-                href="/admin/eduhub/eduhubhomesticker/{{ eduhubhomesticker.id }}">
+                href=
+                "/admin/eduhub/eduhubhomesticker/{{ eduhubhomesticker.id }}">
                 {% trans 'Edit' %}
             </a>
         </div>

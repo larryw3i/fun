@@ -93,3 +93,10 @@ def get_funuser_avatar_url(context, user):
 def get_pdf_view_url():
     return STATIC_URL + "libs/pdfjs-2.2.228-dist/web/viewer.min.html" +\
         "?file=funfile/get_file/" # combine a funfile name
+
+@register.simple_tag()
+def get_classification_issue_url():
+    return 'https://github.com/larryw3i/fun/blob/master/fun/templates/eduhub/'\
+        +'how_to_classification.html'
+
+

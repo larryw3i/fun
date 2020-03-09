@@ -23,8 +23,11 @@
     {% endautoescape %}
     <hr/>
 
-    <p class="text-right " ><a href="{% url 'funuser:funuser_detail' 
-        user=funcontent.label.author.id %}">{{ funcontent.label.author }}</a> 
+    <p class="text-right " >
+        <a href="
+        {% url 'funuser:funuser_detail' user=funcontent.label.author.id %}">
+            {{ funcontent.label.author }}
+        </a> 
     </p> 
     <p class="text-right small">
         {{ funcontent.uploading_date }}

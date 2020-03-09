@@ -15,8 +15,13 @@
 {% endblock title %}
 
 
-<object class="preview" preview-for='#id_content_file' type="application/pdf" width="100%" height="567px"></object>
-<video  preview-for='#id_content_file' width="100%" height="auto" controls style="display: none;" ></video>
+<object class="preview" preview-for='#id_content_file' type="application/pdf" 
+    width="100%" height="567px">
+</object>
+
+<video  preview-for='#id_content_file' width="100%" height="auto" controls 
+    style="display: none;" >
+</video>
 
 
 {% block content %} 
@@ -27,15 +32,29 @@
             <p>{% trans 'Preview' %}</p>     
             {% if is_video %}       
 
-                <object class="preview" preview-for='#id_content_file' type="application/pdf" width="100%" height="567px" style="display: none;"></object>
-                <video  preview-for='#id_content_file' width="100%" height="auto" controls src="{%  url 'funfile:get_file' file_id=content.content_file.name  %}" ></video>
+                <object class="preview" preview-for='#id_content_file' 
+                    type="application/pdf" width="100%" height="567px" 
+                    style="display: none;">
+                </object>
+
+                <video  preview-for='#id_content_file' width="100%" 
+                    height="auto" controls 
+                    src=
+            "{%  url 'funfile:get_file' file_id=content.content_file.name  %}">
+                </video>
  
             {% else %}     
 
-                <object class="preview" data="{% static '/libs/pdfjs-2.2.228-dist/web/viewer.min.html' %}?file={% url 'funfile:get_file' file_id=content.content_file.name %}" 
-                        preview-for='#id_content_file' type="application/pdf" width="100%" height="567px" ></object>
+                <object class="preview" 
+                    data=
+                    "{% get_pdf_view_url %}{{ content.content_file.name }}" 
+                    preview-for='#id_content_file' type="application/pdf" 
+                    width="100%" height="567px" >
+                </object>
                         
-                <video  preview-for='#id_content_file' width="100%" height="auto" style="display: none;" controls  ></video>
+                <video  preview-for='#id_content_file' width="100%" 
+                    height="auto" style="display: none;" controls  >
+                </video>
 
             {% endif %}
             
@@ -48,7 +67,8 @@
                 {{ form|crispy }}
         
                 <div class="col col-12 text-right" >
-                    <input class="btn btn-outline-info " type="submit" value="{% trans 'Update' %}" />
+                    <input class="btn btn-outline-info " type="submit" 
+                    value="{% trans 'Update' %}" />
                 </div>  
         
             </form>    

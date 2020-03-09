@@ -149,10 +149,12 @@ class LabelListView(ListView):
     def get_queryset(self):
         if (not self.request.user.is_authenticated) or \
                 self.request.COOKIES.get('is_label_list_mine', False):
-            return Label.objects.filter(is_legal=True)
+            return Label.objects.filter(is_legal=True)\
+                .order_by('-creating_date')
         else:
             return Label.objects.filter(is_legal=True,
-                                        author=self.request.user)
+                                        author=self.request.user) \
+                .order_by('-creating_date')
 
     def render_to_response(self, context, **response_kwargs):
         response = super().render_to_response(context, **response_kwargs)
@@ -528,8 +530,11 @@ class EduhubSearch(TemplateView):
         eduhub_top_filter = self.request.COOKIES.get('eduhub_top_filter', '')
         eduhub_top_filter = _(subjects_top[eduhub_top_filter]) if len(
             eduhub_top_filter) > 0 else ''
+
         search_filter = self.request.GET.get('filter', '')
         context_data = super().get_context_data(**kwargs)
+        
+
         if search_filter == 'labels' or search_filter == '':
             labels = Label.objects.filter(
                 (Q(name__icontains=self.request.GET.get('q'))
@@ -546,7 +551,9 @@ class EduhubSearch(TemplateView):
                     | Q(classification__icontains=self.request.GET.get('q')))
                 & Q(classification__icontains=eduhub_top_filter)
 
-            ) if len(eduhub_top_filter) > 0 else Funcontent.objects.filter(
+            ).order_by('-uploading_date') \
+                if len(eduhub_top_filter) > 0 else\
+                Funcontent.objects.filter(
                 Q(title__icontains=self.request.GET.get('q'))
                 | Q(classification__icontains=self.request.GET.get('q'))
             ).order_by('-uploading_date')
@@ -555,6 +562,7 @@ class EduhubSearch(TemplateView):
                 funcontents, 5 if search_filter == '' else 10)
             funcontents = paginator.get_page(self.request.GET.get('page'))
             context_data['funcontents'] = funcontents
+        
         return context_data
 
 
