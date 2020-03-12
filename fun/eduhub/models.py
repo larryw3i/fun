@@ -17,6 +17,7 @@ from ckeditor_uploader.fields import RichTextUploadingFormField, \
 # Create your models here.
 
 label_name = 'label'
+funtest_name = 'funtest'
 content_name = 'content'
 funcontent_name = 'funcontent'
 eduhubhomesticker_name = 'eduhubhomesticker'
@@ -93,12 +94,15 @@ class Funcontent(models.Model):
     label = models.ForeignKey(
         to=Label, on_delete=models.CASCADE, null=True,
         verbose_name=_('Content label'))
+
     title = models.CharField(max_length=64, blank=False,
                              verbose_name=_('Content title'))
     content = RichTextUploadingField()
+
     classification = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Content classification'))
+
     uploading_date = models.DateTimeField(
         auto_now_add=True,  verbose_name=_('Content uploading date'))
     comment = models.TextField(
@@ -160,25 +164,61 @@ class Funclassification(models.Model):
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+
     parent = models.ForeignKey(
         'self', on_delete=models.SET_DEFAULT,
         default=None,
         null=True, blank=True,
         verbose_name=_('Parent classification'))
+
     name = models.CharField(
         max_length=64,
         blank=False,
         verbose_name=_('Classification name'))
-    level = models.IntegerField(validators=[validators.MinValueValidator(
+
+    level = models.IntegerField(
+        validators=[validators.MinValueValidator(
         1), validators.MaxValueValidator(10)],
+        
         default=1,
         verbose_name=_('Classification level'))
+
     creating_date = models.DateTimeField(
         auto_now_add=True,
         verbose_name=_('Classification creating date'))
+
     creating_user = models.ForeignKey(
         to=User, on_delete=models.CASCADE,
         verbose_name=_('Classification creating user'))
+
     is_disabled = models.BooleanField(
         default=False,
         verbose_name=_('Is classification disabled'))
+
+class Funtest( models.Model ):
+
+    class Meta:
+        verbose_name = _('Eduhub Test')
+        verbose_name_plural = _('Eduhub Tests')
+
+    def __str__(self):
+        return self.name
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, 
+        editable=False, unique=True)
+
+    test_owner = models.ForeignKey(
+        to=User, on_delete=models.CASCADE,
+        verbose_name=_('Test owner'))
+
+    test_text = models.TextField( max_length=12288, 
+        verbose_name= _('Template text') )
+        
+    submitting_date = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('Test submitting date') )
+
+    last_modifying_date = models.DateTimeField(
+        blank=True,  null=True,  
+        verbose_name=_('Last modifying date') )

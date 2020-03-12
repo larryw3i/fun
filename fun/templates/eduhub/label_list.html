@@ -37,26 +37,36 @@
     </div>
     <div class="row">
             {% for label in labels %}
-                <div class="col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 mt-2">
+                <div class=
+                    "col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 mt-2">
                     <div class="card eduhub-label-card" 
-                        data-url="{% url 'eduhub:funcontent_list' label=label.id %}">
-                        <img src="{% url 'funfile:get_file' file_id=label.cover.name %}" 
-                            class="card-img-top" alt="">
+                        data-url=
+                        "{% url 'eduhub:funcontent_list' label=label.id %}">
+
+                        <img src=
+                        "{% url 'funfile:get_file' file_id=label.cover.name %}" 
+                            class="card-img-top" alt=""/>
+
                         <div class="card-body">
                             <p class="card-title small">{{ label.name }}</p>
                             <p class="card-text small d-none d-md-block ">
                                 {{ label.comment }}
                             </p>
 
-                            <a href="{% url 'eduhub:funcontent_list' label=label.id %}" 
+                            <a href=
+                            "{% url 'eduhub:funcontent_list' label=label.id %}" 
                                 class="small view_content_list">
                                 {% trans 'View' %}
                             </a>
 
                             {% if request.user == label.author %}
-                                <a href="{% url 'eduhub:label_update' pk=label.id %}" 
+                                
+                                <a href=
+                                "{% url 'eduhub:label_update' pk=label.id %}" 
                                     class="small" >{% trans 'Edit' %}</a>
-                                <a href="{% url 'eduhub:label_delete' pk=label.id %}" 
+
+                                <a href=
+                                "{% url 'eduhub:label_delete' pk=label.id %}" 
                                     class="small">{% trans 'Delete' %}</a>
                             {% endif %}
                         </div>

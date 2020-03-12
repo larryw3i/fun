@@ -21,7 +21,8 @@
     <nav class="navbar navbar-inverse navbar-fixed-top  navbar-expand-sm">
         <div class="container ">
             <a class="navbar-brand" href="">{% trans 'Eduhub' %}</a>
-            <button class="navbar-toggler " type="button" data-toggle="collapse" 
+            <button class="navbar-toggler " type="button" 
+                data-toggle="collapse" 
                 data-target="#eduhubNavbarContent" 
                 aria-controls="eduhubNavbarContent" aria-expanded="false" 
                 aria-label="Toggle navigation">
@@ -53,15 +54,25 @@
                             {% trans 'Eduhub contents' %}
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link "  
+                            href="{% url 'eduhub:funcontent_list_all' %}">
+                            {% trans 'Eduhub tests' %}
+                        </a>
+                    </li>
                 </ul>
+
                 <form class="form-inline my-2 my-lg-0" 
                     action="{% url 'eduhub:eduhub_search' %}" 
                     id="eduhub_search_form">
                     
-                    <input class="form-control mr-sm-2"  id="eduhub_search_q" 
+                    <input class="form-control mr-sm-2"  
+                        id="eduhub_search_q" 
                         name="q" 
-                        placeholder="{% trans 'What are you thinking about' %}?" 
-                        aria-label="{% trans 'What are you thinking about' %}?" 
+                        placeholder=
+                        "{% trans 'What are you thinking about' %}?" 
+                        aria-label=
+                        "{% trans 'What are you thinking about' %}?" 
                         aria-describedby="eduhub_search" autocomplete="off" 
                         value="{{ request.GET.q }}"/>
 
@@ -74,6 +85,7 @@
             </div>
         </div> 
     </nav>
+
 {% endblock subnavbar %}
 
 {% block content %} 
@@ -81,6 +93,7 @@
 {% endblock content%}
 
 {% block optionaljs %} 
+    
     <script src="{% static 'eduhub/eduhub.js' %}"></script>
     
     {% block eduhub_optionaljs %} 

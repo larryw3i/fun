@@ -87,8 +87,13 @@
             <div class="row mt-2">
                 {% for eduhubhomesticker in eduhubhomestickers|slice:'3:' %}
                     <div class="col col-auto mt-2">                
-                        <div class="card homesticker-card" style="width: 18rem;">
-                            <img src="{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %}" class="card-img-top" alt="{% trans 'cover' %}">
+                        <div class="card homesticker-card" 
+                            style="width: 18rem;">
+                            
+                            <img src=
+            "{% url 'funfile:get_file' file_id=eduhubhomesticker.cover.name %}" 
+                            class="card-img-top" alt="{% trans 'cover' %}">
+                            
                             <div class="card-body">
                                 <p class="card-text">
                                     {% autoescape off %}
@@ -96,6 +101,7 @@
                                     {% endautoescape %}
                                 </p>
                             </div>
+                            
                         </div>
                     </div>
                 {% endfor %} 

@@ -159,4 +159,9 @@
 
 {% block optionaljs %}
     <script src="{% static 'funuser/funuser.js' %}"></script>
+    <script>
+        if( $('#id_full_name').val().length = 0 ) {
+            $('#id_full_name').val( '{{ request.user.username }}' );
+        }
+    </script>
 {% endblock optionaljs %}

@@ -28,10 +28,12 @@
     <div class="row">
             {% for funcontent in funcontents %} 
 
-                <div class="col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 mt-2">
+                <div class=
+                    "col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 mt-2">
                     <div class="card eduhub-content-card click-to-url" 
                         style="max-width: 100%;" 
-                        data-url="{% url 'eduhub:funcontent_detail' pk=funcontent.id %}">
+                        data-url=
+                    "{% url 'eduhub:funcontent_detail' pk=funcontent.id %}">
 
                         <div class="card-body">
                             <p class="card-title small">
@@ -47,18 +49,21 @@
                                 {{ funcontent.uploading_date }}
                             </p>
 
-                            <a href="{% url 'eduhub:funcontent_detail' pk=funcontent.id %}" 
+                            <a href=
+                        "{% url 'eduhub:funcontent_detail' pk=funcontent.id %}" 
                                 class="card-link small">
                                 {% trans 'View' %}
                             </a>
 
                             {% if funcontent.label.author == request.user %}    
-                                <a href="{% url 'eduhub:funcontent_update'  pk=funcontent.id %}" 
+                                <a href=
+                    "{% url 'eduhub:funcontent_update'  pk=funcontent.id %}" 
                                     class="card-link small">
                                     {% trans 'Edit' %}
                                 </a>
 
-                                <a href="{% url 'eduhub:funcontent_delete'  pk=funcontent.id %}" 
+                                <a href=
+                    "{% url 'eduhub:funcontent_delete'  pk=funcontent.id %}" 
                                     class="card-link small">
                                     {% trans 'Delete' %}
                                 </a>
