@@ -25,10 +25,11 @@ from fun.funvalue import subjects_top
 
 from .apps import EduhubConfig
 from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
-                         FuncontentModelForm, LabelModelForm)
+                         FuncontentModelForm, LabelModelForm , \
+                             FuntestModelForm)
 from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
                      Label, content_name, eduhubhomesticker_name,
-                     funcontent_name, label_name)
+                     funcontent_name, label_name, funtest_name , Funtest)
 
 # Create your views here.
 
@@ -564,6 +565,25 @@ class EduhubSearch(TemplateView):
             context_data['funcontents'] = funcontents
         
         return context_data
+
+
+funtest_create_template = \
+    f'{EduhubConfig.name}/{funtest_name}{funvalue.create_html}'
+
+class FuntestCreateView( CreateView ):
+    model = Funtest
+    template_name = funtest_create_template
+    form_class = FuntestModelForm
+
+    def form_valid(self, form):
+        form.instance.test_owner = self.request.user
+        return super().form_valid(form)
+
+funtest_content_preview = \
+    f'{EduhubConfig.name}/funtest_content_preview.html'
+class FuntestContentPreview( TemplateView ):
+    template_name = funtest_content_preview
+
 
 
 def how_to_classification(request):

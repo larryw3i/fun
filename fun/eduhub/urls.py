@@ -47,6 +47,12 @@ urlpatterns = [
     path('funcontent_update/<uuid:pk>',
          views.FuncontentUpdateView.as_view(), name='funcontent_update'),
 
+    path('funtest_create/', views.FuntestCreateView.as_view() ,
+         name='funtest_create'),
+
+    path('funtest_content_preview/', views.FuntestContentPreview.as_view() ,
+         name='funtest_content_preview'),
+
     path('how_to_classification', views.how_to_classification,
          name='how_to_classification'),
 ]

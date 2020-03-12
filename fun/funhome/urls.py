@@ -16,16 +16,16 @@ urlpatterns = [
     path('funhomesticker_list', views.FunhomestickerListView.as_view(),
          name='funhomesticker_list'),
 
-     path('appreciation_detail/<uuid:pk>', 
-          views.AppreciationDetailView.as_view(), 
-          name = 'appreciation_detail' ),
+    path('appreciation_detail/<uuid:pk>',
+         views.AppreciationDetailView.as_view(),
+         name='appreciation_detail'),
 
     path('data_privacy', views.data_privacy, name='data_privacy'),
     path('legal_information', views.legal_information,
          name='legal_information'),
 
     path('favicon.ico', views.get_favicon_ico,  name='favicon.ico'),
-    
+
     path('#', views.HomeView.as_view(), name='##'),
     path('', views.HomeView.as_view(), name='#'),
 ]

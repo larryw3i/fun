@@ -2,7 +2,7 @@
 import math
 from hurry import filesize
 from .models import Label, Content, Funcontent, Funclassification, \
-    Eduhubhomesticker
+    Eduhubhomesticker, Funtest
 from django import forms
 from django.forms import ModelForm, ImageField
 from django.utils.translation import gettext_lazy as _
@@ -101,4 +101,14 @@ class EduhubhomestickerModelForm(ModelForm):
 
         widgets = {
             'comment': forms.Textarea(attrs={'rows': '5'}),
+        }
+
+
+class FuntestModelForm(ModelForm):
+    class Meta:
+        model = Funtest
+        fields = ['test_title', 'test_text', 'test_commit']
+
+        widgets = {
+            'test_text': forms.Textarea(attrs={'rows': '25'}),
         }

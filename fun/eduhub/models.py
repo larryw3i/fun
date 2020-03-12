@@ -208,6 +208,10 @@ class Funtest( models.Model ):
         primary_key=True, default=uuid.uuid4, 
         editable=False, unique=True)
 
+    test_title = models.CharField( 
+        max_length=64, blank=True, null=True,
+        verbose_name=_('Test commit'))
+
     test_owner = models.ForeignKey(
         to=User, on_delete=models.CASCADE,
         verbose_name=_('Test owner'))
@@ -222,3 +226,11 @@ class Funtest( models.Model ):
     last_modifying_date = models.DateTimeField(
         blank=True,  null=True,  
         verbose_name=_('Last modifying date') )
+
+
+    test_commit = models.CharField( 
+        max_length=64, blank=True, null=True,
+        verbose_name=_('Test commit'))
+
+
+
