@@ -133,7 +133,7 @@ dmypy.json
 
 # MEDIA
 media
-!static/media/
+!funstatic/media/
 
 # APP_FILES
 funfile/files/
@@ -141,7 +141,7 @@ funfile/files/
 # uwsgi.ini 
 uwsgi.ini
 
-static/CACHE/
+funstatic/CACHE/
 
 # VIRTUAL_ENV
 venv/
@@ -157,9 +157,9 @@ staticfiles/node_modules
 staticfiles/admin/
 staticfiles/ckeditor/
 staticfiles/node_modules/
-static/admin/
-static/ckeditor/
-static/node_modules/
+funstatic/admin/
+funstatic/ckeditor/
+funstatic/node_modules/
 
 thesis.md
 

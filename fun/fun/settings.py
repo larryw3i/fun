@@ -221,7 +221,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,   'staticfiles')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'funstatic'),
 ]
 
 
@@ -310,7 +310,6 @@ LOGGING = {
 }
 
 # END_LOGGING
-
 
 # BLEACH
 BLEACH_TAGS = [
