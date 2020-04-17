@@ -182,3 +182,5 @@ outgoing/
 
 # BACKUP
 fun.lwcp/
+
+appconf.json

@@ -1,4 +1,6 @@
-[
-    ["ADMINS_NAME", "ADMINS_EMAIL"], 
-    ["ADMINS_NAME", "ADMINS_EMAIL"]
-]
+{
+    "admins_email":{ 
+        "xxxxx": "xxxx@xxxx.xxxx" ,  
+        "larry": "xxxx@xxxx.xxxx"
+    }
+}
