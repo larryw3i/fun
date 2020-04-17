@@ -269,10 +269,10 @@ COMPRESS_ENABLED = bool(os.environ.get('COMPRESS_ENABLED'))
 
 # configure it in ADMINS.json
 ADMINS = {}
-with open(os.path.join(BASE_DIR, 'ADMINS.json'), 'r') as f:
+with open(os.path.join(BASE_DIR, 'appconf.json'), 'r') as f:
     ADMINS = json.load(f)
 
-MANAGERS = ADMINS
+MANAGERS = ADMINS["admins_email"]
 
 LOGGING = {
     'version': 1,

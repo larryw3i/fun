@@ -2,28 +2,29 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# larry <larryw3i@163.com>, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-06 16:12+0800\n"
-"PO-Revision-Date: 2020-03-06 16:12+0800\n"
+"POT-Creation-Date: 2020-04-17 10:06+0000\n"
+"PO-Revision-Date: 2020-04-17 18:08+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
-"Language-Team: \n"
-"Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) <larryw3i@163.com>\n"
+"Language: zh_CHS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 3.34.0\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:23
-#: templates/funhome/_navbar.html:26
+#: templates/funhome/_navbar.html:32
 msgid "Eduhub"
 msgstr "教育"
 
-#: eduhub/modelforms.py:22 eduhub/models.py:38
+#: eduhub/modelforms.py:22 eduhub/models.py:39
 msgid "Label name"
 msgstr "标签名"
 
@@ -43,7 +44,7 @@ msgstr "标题"
 msgid "Label"
 msgstr "标签"
 
-#: eduhub/modelforms.py:42 eduhub/models.py:69
+#: eduhub/modelforms.py:42 eduhub/models.py:70
 msgid "Content file"
 msgstr "内容文件"
 
@@ -55,11 +56,11 @@ msgstr "内容文件只能为pdf或视频哦"
 msgid "Content"
 msgstr "内容"
 
-#: eduhub/modelforms.py:70 eduhub/models.py:101
+#: eduhub/modelforms.py:70 eduhub/models.py:104
 msgid "Content classification"
 msgstr "分类"
 
-#: eduhub/modelforms.py:76 eduhub/models.py:67 eduhub/models.py:97
+#: eduhub/modelforms.py:76 eduhub/models.py:68 eduhub/models.py:99
 msgid "Content title"
 msgstr "标题"
 
@@ -88,166 +89,199 @@ msgstr "备注"
 msgid "description"
 msgstr "描述"
 
-#: eduhub/models.py:28
+#: eduhub/models.py:29
 msgid "Eduhub label"
 msgstr "分类标签"
 
-#: eduhub/models.py:29
+#: eduhub/models.py:30
 msgid "Eduhub  labels"
 msgstr "分类标签"
 
-#: eduhub/models.py:40
+#: eduhub/models.py:41
 msgid "Label comment"
 msgstr "备注"
 
-#: eduhub/models.py:42
+#: eduhub/models.py:43
 msgid "Label cover"
 msgstr "封面"
 
-#: eduhub/models.py:44
+#: eduhub/models.py:45
 msgid "Label creating date"
 msgstr "创建时间"
 
-#: eduhub/models.py:46
+#: eduhub/models.py:47
 msgid "Label author"
 msgstr "作者"
 
-#: eduhub/models.py:48
+#: eduhub/models.py:49
 msgid "Is label legal"
 msgstr "合法"
 
-#: eduhub/models.py:54
+#: eduhub/models.py:55
 msgid "Eduhub content"
 msgstr "内容"
 
-#: eduhub/models.py:55 templates/eduhub/_eduhub_base.html:51
+#: eduhub/models.py:56 templates/eduhub/_eduhub_base.html:54
 #: templates/eduhub/content_list.html:15
-#: templates/eduhub/eduhub_search_result.html:42
+#: templates/eduhub/eduhub_search_result.html:53
 #: templates/eduhub/funcontent_list.html:17
 msgid "Eduhub contents"
 msgstr "内容"
 
-#: eduhub/models.py:64 eduhub/models.py:95
+#: eduhub/models.py:65 eduhub/models.py:96
 msgid "Content label"
 msgstr "标签"
 
-#: eduhub/models.py:71 eduhub/models.py:103
+#: eduhub/models.py:72 eduhub/models.py:107
 msgid "Content uploading date"
 msgstr "上传时间"
 
-#: eduhub/models.py:73 eduhub/models.py:105
+#: eduhub/models.py:74 eduhub/models.py:109
 msgid "Content comment"
 msgstr "备注"
 
-#: eduhub/models.py:75 eduhub/models.py:107
+#: eduhub/models.py:76 eduhub/models.py:111
 msgid "Is content legal"
 msgstr "合法"
 
-#: eduhub/models.py:81
+#: eduhub/models.py:82
 msgid "Eduhub content (NEW)"
 msgstr "内容(新)"
 
-#: eduhub/models.py:82
+#: eduhub/models.py:83
 msgid "Eduhub contents (NEW)"
 msgstr "内容(新)"
 
-#: eduhub/models.py:112
+#: eduhub/models.py:116
 msgid "Eduhub homepage sticker"
 msgstr "主页贴纸"
 
-#: eduhub/models.py:113
+#: eduhub/models.py:117
 msgid "Eduhub homepage stickers"
 msgstr "主页贴纸"
 
-#: eduhub/models.py:122
+#: eduhub/models.py:126
 msgid "Eduhub homepage sticker title"
 msgstr "贴纸标题"
 
-#: eduhub/models.py:126
+#: eduhub/models.py:130
 msgid "Eduhub homepage sticker subtitle"
 msgstr "贴纸子标题"
 
-#: eduhub/models.py:130
+#: eduhub/models.py:134
 msgid "Eduhub homepage sicker cover"
 msgstr "贴纸背景"
 
-#: eduhub/models.py:134
+#: eduhub/models.py:138
 msgid "Eduhub homepage sticker promulgator"
 msgstr "贴纸的管理员"
 
-#: eduhub/models.py:142
+#: eduhub/models.py:146
 msgid "Eduhub homepage sticker promulgating date"
 msgstr "贴纸时间"
 
-#: eduhub/models.py:145
+#: eduhub/models.py:149
 msgid "Eduhub homepage sticker comment"
 msgstr "备注"
 
-#: eduhub/models.py:148 funhome/models.py:58 funhome/models.py:102
+#: eduhub/models.py:152 funhome/models.py:58 funhome/models.py:102
 msgid "Hidden"
 msgstr "隐藏(不贴)"
 
-#: eduhub/models.py:155
+#: eduhub/models.py:159
 msgid "Eduhub classification"
 msgstr "分类"
 
-#: eduhub/models.py:156
+#: eduhub/models.py:160
 msgid "Eduhub classifications"
 msgstr "分类"
 
-#: eduhub/models.py:167
+#: eduhub/models.py:172
 msgid "Parent classification"
 msgstr "父类"
 
-#: eduhub/models.py:171
+#: eduhub/models.py:177
 msgid "Classification name"
 msgstr "类名"
 
-#: eduhub/models.py:175
+#: eduhub/models.py:184
 msgid "Classification level"
 msgstr "级别"
 
-#: eduhub/models.py:178
+#: eduhub/models.py:188
 msgid "Classification creating date"
 msgstr "创建时间"
 
-#: eduhub/models.py:181
+#: eduhub/models.py:192
 msgid "Classification creating user"
 msgstr "创建分类的用户"
 
-#: eduhub/models.py:184
+#: eduhub/models.py:196
 msgid "Is classification disabled"
 msgstr "禁用"
 
-#: eduhub/views.py:94
+#: eduhub/models.py:201
+#| msgid "Eduhub labels"
+msgid "Eduhub Test"
+msgstr "标签"
+
+#: eduhub/models.py:202
+#| msgid "Eduhub contents"
+msgid "Eduhub Tests"
+msgstr "内容"
+
+#: eduhub/models.py:213 eduhub/models.py:233
+#| msgid "Content comment"
+msgid "Test commit"
+msgstr "备注"
+
+#: eduhub/models.py:217
+msgid "Test owner"
+msgstr "测试属于"
+
+#: eduhub/models.py:220
+msgid "Template text"
+msgstr "模板文本"
+
+#: eduhub/models.py:224
+#| msgid "Submitting date"
+msgid "Test submitting date"
+msgstr "创建时间"
+
+#: eduhub/models.py:228
+#| msgid "Creating date"
+msgid "Last modifying date"
+msgstr "创建时间"
+
+#: eduhub/views.py:95
 msgid "Cover image is required"
 msgstr "未选择封面图片"
 
-#: eduhub/views.py:99
+#: eduhub/views.py:100
 msgid "Image allowed only"
 msgstr "只能选择图片"
 
-#: eduhub/views.py:105
+#: eduhub/views.py:106
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:140
+#: eduhub/views.py:141
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr "页数不是最后一页也不是数字哦."
 
-#: eduhub/views.py:255 eduhub/views.py:433
+#: eduhub/views.py:258 eduhub/views.py:436
 msgid "Frequently request"
 msgstr "频繁访问"
 
-#: eduhub/views.py:260 eduhub/views.py:267
+#: eduhub/views.py:263 eduhub/views.py:270
 msgid "Content file is required"
 msgstr "未选择内容文件"
 
-#: eduhub/views.py:274
+#: eduhub/views.py:277
 msgid "The length of video file should be less than"
 msgstr "视频文件应该小于"
 
-#: eduhub/views.py:282
+#: eduhub/views.py:285
 msgid "The length of pdf file should be less than"
 msgstr "Pdf文件应该小于"
 
@@ -340,8 +374,8 @@ msgstr "Larry 的分享"
 msgid "larry"
 msgstr "larry"
 
-#: funtag/templatetag.py:62 templates/eduhub/_eduhub_base.html:41
-#: templates/eduhub/label_list.html:28
+#: funtag/templatetag.py:70 templates/eduhub/_eduhub_base_top_filter.html:45
+#: templates/eduhub/label_list.html:33
 msgid "All"
 msgstr "全部"
 
@@ -349,33 +383,33 @@ msgstr "全部"
 msgid "avatar"
 msgstr "头像"
 
-#: funuser/admin.py:18 templates/funuser/funuser_detail.html:45
-#: templates/funuser/funuser_update.html:40
+#: funuser/admin.py:18 templates/funuser/funuser_detail.html:50
+#: templates/funuser/funuser_update.html:46
 msgid "Birth date"
 msgstr "出生年月"
 
 #: funuser/admin.py:20 funuser/models.py:41
-#: templates/funuser/funuser_detail.html:52
-#: templates/funuser/funuser_update.html:53
+#: templates/funuser/funuser_detail.html:57
+#: templates/funuser/funuser_update.html:66
 msgid "Address"
 msgstr "地址"
 
 #: funuser/admin.py:22 funuser/models.py:46
-#: templates/funuser/funuser_detail.html:59
-#: templates/funuser/funuser_update.html:66
+#: templates/funuser/funuser_detail.html:64
+#: templates/funuser/funuser_update.html:85
 msgid "Hometown"
 msgstr "家乡"
 
 #: funuser/admin.py:24 funuser/models.py:51
-#: templates/eduhub/_eduhub_base.html:38
-#: templates/funuser/funuser_detail.html:66
-#: templates/funuser/funuser_update.html:78
+#: templates/eduhub/_eduhub_base_top_filter.html:36
+#: templates/funuser/funuser_detail.html:71
+#: templates/funuser/funuser_update.html:102
 msgid "College"
 msgstr "大学"
 
 #: funuser/admin.py:26 funuser/models.py:56
-#: templates/funuser/funuser_detail.html:73
-#: templates/funuser/funuser_update.html:90
+#: templates/funuser/funuser_detail.html:78
+#: templates/funuser/funuser_update.html:118
 msgid "Occupation"
 msgstr "工作"
 
@@ -384,8 +418,8 @@ msgid "Hobby"
 msgstr "兴趣"
 
 #: funuser/admin.py:29 funuser/models.py:66
-#: templates/funuser/funuser_detail.html:80
-#: templates/funuser/funuser_update.html:102
+#: templates/funuser/funuser_detail.html:85
+#: templates/funuser/funuser_update.html:134
 msgid "Motto"
 msgstr "座右铭"
 
@@ -444,53 +478,67 @@ msgstr "账号"
 msgid "E-mail Addresses"
 msgstr "邮箱地址"
 
-#: templates/account/email.html:13
-msgid "The following e-mail addresses are associated with your account:"
-msgstr "以下邮箱地址关联你的账号:"
+#: templates/account/email.html:15
+msgid ""
+"\n"
+"        The following e-mail addresses are associated with your account\n"
+"      "
+msgstr ""
+"\n"
+"  以下邮箱地址关联你的账号\n"
+"    "
 
-#: templates/account/email.html:28
+#: templates/account/email.html:41
 msgid "Verified"
 msgstr "已验证"
 
-#: templates/account/email.html:30
+#: templates/account/email.html:43
 msgid "Unverified"
 msgstr "未验证"
 
-#: templates/account/email.html:34
+#: templates/account/email.html:47
 msgid "Primary"
 msgstr "常用"
 
-#: templates/account/email.html:43
+#: templates/account/email.html:57
 msgid "Make Primary"
 msgstr "改为常用"
 
-#: templates/account/email.html:44
+#: templates/account/email.html:61
 msgid "Re-send Verification"
 msgstr "重新发送"
 
-#: templates/account/email.html:45 templates/socialaccount/connections.html:39
+#: templates/account/email.html:65 templates/socialaccount/connections.html:39
 msgid "Remove"
 msgstr "移除"
 
-#: templates/account/email.html:53
-msgid "Warning:"
-msgstr "警告:"
+#: templates/account/email.html:74
+msgid "Warning"
+msgstr "警告"
 
-#: templates/account/email.html:54
+#: templates/account/email.html:76
 msgid ""
-"You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, etc."
-msgstr "你还没有设置邮箱地址哦!  添加可用的邮箱地址然后重置密码吧."
+"\n"
+"        You currently do not have any e-mail address set up. You should "
+"really \n"
+"        add an e-mail address so you can receive notifications, reset your \n"
+"        password, etc\n"
+"      "
+msgstr ""
+"\n"
+"   你还没有设置邮箱地址哦!  添加可用的邮箱地址然后重置密码\n"
+"\n"
+"    "
 
-#: templates/account/email.html:60
+#: templates/account/email.html:86
 msgid "Add E-mail Address"
 msgstr "添加邮箱地址"
 
-#: templates/account/email.html:65
+#: templates/account/email.html:92
 msgid "Add E-mail"
 msgstr "添加邮箱"
 
-#: templates/account/email.html:74
+#: templates/account/email.html:104
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr "确定要移除吗?"
 
@@ -522,11 +570,11 @@ msgstr ""
 msgid "To confirm this is correct, go to"
 msgstr "确认邮件请 点击"
 
-#: templates/account/email/email_confirmation_message.html:20
+#: templates/account/email/email_confirmation_message.html:21
 msgid "CONFIRM EMAIL"
 msgstr "确认邮箱"
 
-#: templates/account/email/email_confirmation_message.html:25
+#: templates/account/email/email_confirmation_message.html:26
 msgid ""
 " \n"
 "            Thank you from x-dove!\n"
@@ -545,12 +593,20 @@ msgid "Hello from"
 msgstr "问候来自"
 
 #: templates/account/email/password_reset_key_message.html:9
+#| msgid ""
+#| "\n"
+#| "        You're receiving this e-mail because you or someone else has "
+#| "requested a password for your user account.\n"
+#| "        It can be safely ignored if you did not request a password reset. "
+#| "Click the link below to reset your password.\n"
+#| "    "
 msgid ""
 "\n"
 "        You're receiving this e-mail because you or someone else has "
-"requested a password for your user account.\n"
-"        It can be safely ignored if you did not request a password reset. "
-"Click the link below to reset your password.\n"
+"requested \n"
+"        a password for your user account.\n"
+"        It can be safely ignored if you did not request a password reset. \n"
+"        Click the link below to reset your password.\n"
 "    "
 msgstr ""
 "\n"
@@ -558,11 +614,11 @@ msgstr ""
 "        (亲没有重置密码请忽略).\n"
 "    "
 
-#: templates/account/email/password_reset_key_message.html:14
+#: templates/account/email/password_reset_key_message.html:16
 msgid "RESET PASSWORD"
 msgstr "重置密码"
 
-#: templates/account/email/password_reset_key_message.html:17
+#: templates/account/email/password_reset_key_message.html:19
 #, python-format
 msgid ""
 "\n"
@@ -573,7 +629,7 @@ msgstr ""
 "                提前和亲说, 亲的用户名是: %(username)s.\n"
 "        "
 
-#: templates/account/email/password_reset_key_message.html:24
+#: templates/account/email/password_reset_key_message.html:26
 msgid "Thank you for using"
 msgstr "很高兴为您服务"
 
@@ -594,20 +650,30 @@ msgstr "确认电子邮件"
 msgid "Please confirm that"
 msgstr "请确认"
 
-#: templates/account/email_confirm.html:26
+#: templates/account/email_confirm.html:24
+msgid "is an e-mail address for user {{ user_display }}"
+msgstr "用户 {{ user_display }} 的邮箱地址"
+
+#: templates/account/email_confirm.html:31
 msgid "Confirm"
 msgstr "确认"
 
-#: templates/account/email_confirm.html:35
-msgid "This e-mail confirmation link expired or is invalid. Please"
-msgstr "邮件链接非法或已失效哦! 请"
+#: templates/account/email_confirm.html:41
+msgid ""
+"\n"
+"                This e-mail confirmation link expired or is invalid. Please\n"
+"            "
+msgstr ""
+"\n"
+"   邮件链接非法或已失效。请\n"
+"     "
 
-#: templates/account/email_confirm.html:36
+#: templates/account/email_confirm.html:46
 msgid "issue a new e-mail confirmation request"
 msgstr "重新发送吧"
 
 #: templates/account/login.html:11 templates/account/login.html:22
-#: templates/account/login.html:39
+#: templates/account/login.html:43
 msgid "Sign In"
 msgstr "登录"
 
@@ -619,18 +685,22 @@ msgstr "没有账号吗?  请"
 msgid "sign up"
 msgstr "注册"
 
-#: templates/account/login.html:41
+#: templates/account/login.html:50
 msgid "Forgot Password?"
 msgstr "忘记密码?"
 
-#: templates/account/logout.html:7 templates/account/logout.html:11
-#: templates/account/logout.html:23
+#: templates/account/logout.html:11 templates/account/logout.html:23
 msgid "Sign Out"
 msgstr "退出"
 
-#: templates/account/logout.html:13
+#: templates/account/logout.html:29
 msgid "Are you sure you want to sign out?"
 msgstr "亲要确认退出吗?"
+
+#: templates/account/logout.html:41
+#| msgid "Sign Out"
+msgid "Sign out now"
+msgstr "退出"
 
 #: templates/account/messages/cannot_delete_primary_email.html:2
 #, python-format
@@ -720,7 +790,7 @@ msgstr ""
 
 #: templates/account/password_change.html:5
 #: templates/account/password_change.html:8
-#: templates/account/password_change.html:13
+#: templates/account/password_change.html:15
 #: templates/account/password_reset_from_key.html:4
 #: templates/account/password_reset_from_key.html:11
 #: templates/account/password_reset_from_key_done.html:6
@@ -728,32 +798,48 @@ msgstr ""
 msgid "Change Password"
 msgstr "更改密码"
 
-#: templates/account/password_reset.html:7
-#: templates/account/password_reset.html:13
+#: templates/account/password_reset.html:8
+#: templates/account/password_reset.html:15
 #: templates/account/password_reset_done.html:6
 #: templates/account/password_reset_done.html:9
 msgid "Password Reset"
 msgstr "重置密码"
 
-#: templates/account/password_reset.html:20
-msgid "Please reset password via terminal"
-msgstr "请在终端修改密码"
-
-#: templates/account/password_reset.html:22
+#: templates/account/password_reset.html:24
+#| msgid ""
+#| "\n"
+#| "                Please contact us if you have any trouble resetting your "
+#| "password.\n"
+#| "            "
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you "
-"an e-mail allowing you to reset it."
-msgstr "忘记密码了? 填写电子邮箱然后发送重置密码邮件."
+"\n"
+"                You are administrator, please reset password via terminal\n"
+"            "
+msgstr ""
+"\n"
+"            如果重置密码失败请联系我们.\n"
+"        "
 
-#: templates/account/password_reset.html:27
+#: templates/account/password_reset.html:32
+msgid ""
+"\n"
+"                Forgotten your password? Enter your e-mail address below, \n"
+"                and we'll send you an e-mail allowing you to reset it\n"
+"            "
+msgstr ""
+"\n"
+"    忘记密码了? 填写电子邮箱然后发送重置密码邮件\n"
+"      "
+
+#: templates/account/password_reset.html:41
 msgid "Reset My Password"
 msgstr "重置密码"
 
-#: templates/account/password_reset.html:31
+#: templates/account/password_reset.html:46
 msgid ""
 "\n"
-"                Please contact us if you have any trouble resetting your "
-"password.\n"
+"                Please contact us if you have any trouble resetting \n"
+"                your password.\n"
 "            "
 msgstr ""
 "\n"
@@ -761,10 +847,16 @@ msgstr ""
 "        "
 
 #: templates/account/password_reset_done.html:16
+#| msgid ""
+#| "\n"
+#| "            We have sent you an e-mail. Please contact us if you do not "
+#| "receive it within a few minutes.\n"
+#| "        "
 msgid ""
 "\n"
 "            We have sent you an e-mail. Please contact us if you do not "
-"receive it within a few minutes.\n"
+"receive \n"
+"            it within a few minutes.\n"
 "        "
 msgstr ""
 "\n"
@@ -776,31 +868,37 @@ msgid "Bad Token"
 msgstr "令牌无效"
 
 #: templates/account/password_reset_from_key.html:18
+#| msgid ""
+#| "\n"
+#| "                The password reset link was invalid, possibly because it "
+#| "has already been used.  Please request a \n"
+#| "            "
 msgid ""
 "\n"
-"                The password reset link was invalid, possibly because it has "
-"already been used.  Please request a \n"
+"                The password reset link was invalid, possibly because it "
+"has \n"
+"                already been used.  Please request a \n"
 "            "
 msgstr ""
 "\n"
 "                链接非法, 可能链接已被使用.  请  \n"
 "            "
 
-#: templates/account/password_reset_from_key.html:21
+#: templates/account/password_reset_from_key.html:23
 msgid "new password reset"
 msgstr "新密码已重置"
 
-#: templates/account/password_reset_from_key.html:29
+#: templates/account/password_reset_from_key.html:33
 msgid "change password"
 msgstr "更改密码"
 
-#: templates/account/password_reset_from_key.html:32
+#: templates/account/password_reset_from_key.html:37
 #: templates/account/password_reset_from_key_done.html:10
 msgid "Your password is now changed."
 msgstr "密码已更改."
 
 #: templates/account/password_set.html:5 templates/account/password_set.html:8
-#: templates/account/password_set.html:13
+#: templates/account/password_set.html:15
 msgid "Set Password"
 msgstr "设置密码"
 
@@ -808,8 +906,8 @@ msgstr "设置密码"
 msgid "Signup"
 msgstr "注册"
 
-#: templates/account/signup.html:23 templates/account/signup.html:45
-#: templates/funhome/_navbar.html:50 templates/socialaccount/signup.html:13
+#: templates/account/signup.html:23 templates/account/signup.html:51
+#: templates/funhome/_navbar.html:71 templates/socialaccount/signup.html:13
 #: templates/socialaccount/signup.html:28
 msgid "Sign Up"
 msgstr "注册"
@@ -818,20 +916,20 @@ msgstr "注册"
 msgid "Already have an account? Then please"
 msgstr "已有账号吗? 请"
 
-#: templates/account/signup.html:27 templates/funhome/home_join_us.html:71
+#: templates/account/signup.html:27 templates/funhome/home_join_us.html:91
 #: templates/socialaccount/login_cancelled.html:18
 msgid "sign in"
 msgstr "登录"
 
-#: templates/account/signup.html:40 templates/funhome/_footer.html:23
+#: templates/account/signup.html:43 templates/funhome/_footer.html:24
 msgid "Legal information"
 msgstr "法律信息"
 
-#: templates/account/signup.html:41
+#: templates/account/signup.html:46
 msgid "and_sign"
 msgstr "和"
 
-#: templates/account/signup.html:42
+#: templates/account/signup.html:47
 msgid "Data privacy"
 msgstr "数据隐私"
 
@@ -844,21 +942,9 @@ msgstr "注册已关闭"
 msgid "We are sorry, but the sign up is currently closed."
 msgstr "非常抱歉, 注册暂时关闭了."
 
-#: templates/account/snippets/already_logged_in.html:6
-#: templates/account/verified_email_required.html:31
-msgid "Note"
-msgstr "留心一下"
-
 #: templates/account/snippets/already_logged_in.html:7
-#, python-format
-msgid ""
-"\n"
-"        you are already logged in as %(user_display)s.\n"
-"    "
-msgstr ""
-"\n"
-"        已登录, %(user_display)s.\n"
-"    "
+msgid "You are already logged in as"
+msgstr "已登录, %(user_display)s"
 
 #: templates/account/verification_sent.html:6
 #: templates/account/verification_sent.html:10
@@ -868,11 +954,19 @@ msgid "Verify Your E-mail Address"
 msgstr "验证你的电子邮件"
 
 #: templates/account/verification_sent.html:13
+#| msgid ""
+#| "\n"
+#| "            We have sent an e-mail to you for verification. Follow the "
+#| "link provided to finalize the signup process. Please contact us if you do "
+#| "not receive it within a few minutes.\n"
+#| "        "
 msgid ""
 "\n"
-"            We have sent an e-mail to you for verification. Follow the link "
-"provided to finalize the signup process. Please contact us if you do not "
-"receive it within a few minutes.\n"
+"            We have sent an e-mail to you for verification. Follow the "
+"link \n"
+"            provided to finalize the signup process. Please contact us if "
+"you \n"
+"            do not receive it within a few minutes.\n"
 "        "
 msgstr ""
 "\n"
@@ -912,55 +1006,66 @@ msgstr ""
 "        "
 
 #: templates/account/verified_email_required.html:31
+msgid "Note"
+msgstr "留心一下"
+
+#: templates/account/verified_email_required.html:31
 msgid "you can still"
 msgstr "你也可以"
 
-#: templates/account/verified_email_required.html:32
+#: templates/account/verified_email_required.html:33
 msgid "change your e-mail address"
 msgstr "更改邮箱地址"
 
-#: templates/eduhub/_eduhub_base.html:34
-msgid "Preschool education"
-msgstr "学前教育"
-
-#: templates/eduhub/_eduhub_base.html:35
-msgid "Primary school"
-msgstr "小学"
-
-#: templates/eduhub/_eduhub_base.html:36
-msgid "Junior high school"
-msgstr "初中"
-
-#: templates/eduhub/_eduhub_base.html:37
-msgid "Senior high school"
-msgstr "高中"
-
-#: templates/eduhub/_eduhub_base.html:39
-msgid "Others"
-msgstr "其它"
-
-#: templates/eduhub/_eduhub_base.html:45
+#: templates/eduhub/_eduhub_base.html:43
 msgid "Survey"
 msgstr "问卷调查"
 
 #: templates/eduhub/_eduhub_base.html:48
-#: templates/eduhub/eduhub_search_result.html:22
+#: templates/eduhub/eduhub_search_result.html:23
 #: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr "标签"
 
-#: templates/eduhub/_eduhub_base.html:55 templates/eduhub/_search.html:12
+#: templates/eduhub/_eduhub_base.html:60
+#| msgid "Eduhub contents"
+msgid "Eduhub tests"
+msgstr "内容"
+
+#: templates/eduhub/_eduhub_base.html:73 templates/eduhub/_eduhub_base.html:75
+#: templates/eduhub/_search.html:15 templates/eduhub/_search.html:16
 msgid "What are you thinking about"
 msgstr "在想什么"
 
-#: templates/eduhub/_eduhub_base.html:56 templates/eduhub/_search.html:14
+#: templates/eduhub/_eduhub_base.html:81 templates/eduhub/_search.html:22
 msgid "search"
 msgstr "搜索"
 
-#: templates/eduhub/content_create.html:35
-#: templates/eduhub/funcontent_create.html:38
-#: templates/eduhub/label_create.html:28 templates/eduhub/label_update.html:32
-#: templates/funuser/funuser_update.html:115
+#: templates/eduhub/_eduhub_base_top_filter.html:20
+msgid "Preschool education"
+msgstr "学前教育"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:24
+msgid "Primary school"
+msgstr "小学"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:28
+msgid "Junior high school"
+msgstr "初中"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:32
+msgid "Senior high school"
+msgstr "高中"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:40
+msgid "Others"
+msgstr "其它"
+
+#: templates/eduhub/content_create.html:42
+#: templates/eduhub/funcontent_create.html:43
+#: templates/eduhub/funtest_create.html:39
+#: templates/eduhub/label_create.html:28 templates/eduhub/label_update.html:36
+#: templates/funuser/funuser_update.html:152
 msgid "Upload"
 msgstr "上传"
 
@@ -971,41 +1076,41 @@ msgstr "上传"
 msgid "Delete label"
 msgstr "删除标签"
 
-#: templates/eduhub/content_delete.html:21
+#: templates/eduhub/content_delete.html:22
 #: templates/eduhub/funcontent_delete.html:23
-#: templates/eduhub/label_delete.html:49
+#: templates/eduhub/label_delete.html:50
 msgid "Are you sure you want to delete"
 msgstr "确定要删除"
 
-#: templates/eduhub/content_delete.html:22
-#: templates/eduhub/content_list.html:37
+#: templates/eduhub/content_delete.html:26
+#: templates/eduhub/content_list.html:59
 #: templates/eduhub/funcontent_delete.html:27
-#: templates/eduhub/funcontent_detail.html:44
-#: templates/eduhub/funcontent_list.html:42
-#: templates/eduhub/label_delete.html:52 templates/eduhub/label_list.html:45
+#: templates/eduhub/funcontent_detail.html:47
+#: templates/eduhub/funcontent_list.html:68
+#: templates/eduhub/label_delete.html:53 templates/eduhub/label_list.html:70
 #: venv/lib/python3.7/site-packages/django/forms/formsets.py:391
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:38
 #: venv/lib/python3.7/site-packages/django_bfm/templates/django_bfm/base.html:154
 msgid "Delete"
 msgstr "删除"
 
-#: templates/eduhub/content_list.html:19
-#: templates/eduhub/funcontent_list.html:24 templates/eduhub/label_list.html:22
+#: templates/eduhub/content_list.html:20
+#: templates/eduhub/funcontent_list.html:25 templates/eduhub/label_list.html:24
 msgid "Add"
 msgstr "添加"
 
-#: templates/eduhub/content_list.html:33
-#: templates/eduhub/eduhubhomesticker_list.html:36
-#: templates/eduhub/funcontent_list.html:38 templates/eduhub/label_list.html:42
+#: templates/eduhub/content_list.html:46
+#: templates/eduhub/eduhubhomesticker_list.html:53
+#: templates/eduhub/funcontent_list.html:55 templates/eduhub/label_list.html:59
 msgid "View"
 msgstr "查看"
 
-#: templates/eduhub/content_list.html:36
-#: templates/eduhub/eduhubhomesticker_detail.html:38
-#: templates/eduhub/funcontent_detail.html:41
-#: templates/eduhub/funcontent_list.html:41 templates/eduhub/label_list.html:44
-#: templates/funhome/appreciation_detail.html:42
-#: templates/funhome/funhomesticker_detail.html:35
+#: templates/eduhub/content_list.html:53
+#: templates/eduhub/eduhubhomesticker_detail.html:46
+#: templates/eduhub/funcontent_detail.html:44
+#: templates/eduhub/funcontent_list.html:62 templates/eduhub/label_list.html:66
+#: templates/funhome/appreciation_detail.html:46
+#: templates/funhome/funhomesticker_detail.html:45
 msgid "Edit"
 msgstr "编辑"
 
@@ -1015,13 +1120,13 @@ msgstr "编辑"
 msgid "Update label"
 msgstr "更新标签"
 
-#: templates/eduhub/content_update.html:27
+#: templates/eduhub/content_update.html:32
 #: templates/eduhub/label_create.html:16 templates/eduhub/label_update.html:21
 msgid "Preview"
 msgstr "预览"
 
-#: templates/eduhub/content_update.html:51
-#: templates/eduhub/funcontent_update.html:32
+#: templates/eduhub/content_update.html:71
+#: templates/eduhub/funcontent_update.html:33
 msgid "Update"
 msgstr "更新"
 
@@ -1029,33 +1134,33 @@ msgstr "更新"
 msgid "Eduhub search"
 msgstr "教育"
 
-#: templates/eduhub/eduhub_search_result.html:68
-#: templates/eduhub/eduhub_search_result.html:91
-#: templates/funhome/common_pagination.html:13
+#: templates/eduhub/eduhub_search_result.html:97
+#: templates/eduhub/eduhub_search_result.html:137
+#: templates/funhome/common_pagination.html:15
 msgid "first page"
 msgstr "第一页"
 
-#: templates/eduhub/eduhub_search_result.html:70
-#: templates/eduhub/eduhub_search_result.html:93
-#: templates/funhome/common_pagination.html:15
+#: templates/eduhub/eduhub_search_result.html:103
+#: templates/eduhub/eduhub_search_result.html:143
+#: templates/funhome/common_pagination.html:21
 msgid "previous page"
 msgstr "上一页"
 
-#: templates/eduhub/eduhub_search_result.html:74
-#: templates/eduhub/eduhub_search_result.html:97
-#: templates/funhome/common_pagination.html:19
+#: templates/eduhub/eduhub_search_result.html:110
+#: templates/eduhub/eduhub_search_result.html:150
+#: templates/funhome/common_pagination.html:28
 msgid "Page"
 msgstr "页"
 
-#: templates/eduhub/eduhub_search_result.html:78
-#: templates/eduhub/eduhub_search_result.html:101
-#: templates/funhome/common_pagination.html:23
+#: templates/eduhub/eduhub_search_result.html:116
+#: templates/eduhub/eduhub_search_result.html:156
+#: templates/funhome/common_pagination.html:33
 msgid "next page"
 msgstr "下一页"
 
-#: templates/eduhub/eduhub_search_result.html:80
-#: templates/eduhub/eduhub_search_result.html:103
-#: templates/funhome/common_pagination.html:25
+#: templates/eduhub/eduhub_search_result.html:121
+#: templates/eduhub/eduhub_search_result.html:162
+#: templates/funhome/common_pagination.html:38
 msgid "last page"
 msgstr "最后页"
 
@@ -1064,13 +1169,13 @@ msgstr "最后页"
 msgid "Eduhub home"
 msgstr "教育"
 
-#: templates/eduhub/eduhubhomesticker_list.html:63
-#: templates/eduhub/label_update.html:22
+#: templates/eduhub/eduhubhomesticker_list.html:95
+#: templates/eduhub/label_update.html:25
 msgid "cover"
 msgstr "封面"
 
-#: templates/eduhub/funcontent_create.html:35
-#: templates/eduhub/how_to_classification.html:20
+#: templates/eduhub/funcontent_create.html:38
+#: templates/eduhub/how_to_classification.html:21
 msgid "How to classification"
 msgstr "分类参考"
 
@@ -1078,17 +1183,41 @@ msgstr "分类参考"
 msgid "Content details"
 msgstr "标题"
 
-#: templates/eduhub/how_to_classification.html:37
+#: templates/eduhub/funtest_content_preview.html:20
+#| msgid "Sticker content file"
+msgid "Funtest content preview"
+msgstr "贴纸文件"
+
+#: templates/eduhub/funtest_create.html:13
+#| msgid "Created at"
+msgid "Create a test"
+msgstr "创建于"
+
+#: templates/eduhub/funtest_create.html:33
+#| msgid "Home content"
+msgid "Live content"
+msgstr "内容"
+
+#: templates/eduhub/how_to_classification.html:39
 msgid "How to classify the eduhub content"
 msgstr "分类参考"
 
-#: templates/eduhub/how_to_classification.html:42
+#: templates/eduhub/how_to_classification.html:44
+#| msgid ""
+#| "\n"
+#| "            I don't bother to make a catalog right now, and I don't want "
+#| "to classify them now, because I'm the only one who develop it, and I "
+#| "don't know when I have free time, so you should classify your content "
+#| "yourself so as not to make a mess of everything. \n"
+#| "        "
 msgid ""
 "\n"
-"            I don't bother to make a catalog right now, and I don't want to "
-"classify them now, because I'm the only one who develop it, and I don't know "
-"when I have free time, so you should classify your content yourself so as "
-"not to make a mess of everything. \n"
+"            I don't bother to make a catalog right now, and I don't want "
+"to \n"
+"            classify them now, because I'm the only one who develop it, and "
+"I \n"
+"            don't know when I have free time, so you should classify your \n"
+"            content yourself so as not to make a mess of everything. \n"
 "        "
 msgstr ""
 "\n"
@@ -1097,11 +1226,17 @@ msgstr ""
 "内容杂乱无章。\n"
 "        "
 
-#: templates/eduhub/how_to_classification.html:50
+#: templates/eduhub/how_to_classification.html:55
+#| msgid ""
+#| "\n"
+#| "                    If you're writing about primary school (I don't know "
+#| "if anyone will write about kindergarten), \n"
+#| "                "
 msgid ""
 "\n"
-"                    If you're writing about primary school (I don't know if "
-"anyone will write about kindergarten), \n"
+"                    If you're writing about primary school (I don't know "
+"if \n"
+"                    anyone will write about kindergarten), \n"
 "                "
 msgstr ""
 "\n"
@@ -1109,7 +1244,7 @@ msgstr ""
 "的 ), \n"
 "                "
 
-#: templates/eduhub/how_to_classification.html:54
+#: templates/eduhub/how_to_classification.html:60
 msgid ""
 "\n"
 "                    you should categorize(remove bracket!): \n"
@@ -1119,20 +1254,25 @@ msgstr ""
 "                    你可以这样分类( 把括号去掉! ): \n"
 "                "
 
-#: templates/eduhub/how_to_classification.html:58
-#: templates/eduhub/how_to_classification.html:73
-#: templates/eduhub/how_to_classification.html:88
+#: templates/eduhub/how_to_classification.html:65
+#: templates/eduhub/how_to_classification.html:83
+#: templates/eduhub/how_to_classification.html:103
 msgid "click to copy"
 msgstr "点击复制"
 
-#: templates/eduhub/how_to_classification.html:58
+#: templates/eduhub/how_to_classification.html:67
 msgid "primary school/(grade)/(semester)/(subjects)/(title)"
 msgstr "小学/(年级)/(学期)/(科目)/(标题)"
 
-#: templates/eduhub/how_to_classification.html:59
+#: templates/eduhub/how_to_classification.html:68
+#| msgid ""
+#| "\n"
+#| "                        primary school / (grade) / (semester) / "
+#| "(subjects) / (title)\n"
+#| "                    "
 msgid ""
 "\n"
-"                        primary school / (grade) / (semester) / (subjects) / "
+"                primary school / (grade) / (semester) / (subjects) / "
 "(title)\n"
 "                    "
 msgstr ""
@@ -1140,7 +1280,7 @@ msgstr ""
 "                       小学/(年级)/(学期)/(科目)/(标题)\n"
 "                    "
 
-#: templates/eduhub/how_to_classification.html:66
+#: templates/eduhub/how_to_classification.html:75
 msgid ""
 "\n"
 "                    If you're writing about high school teaching,\n"
@@ -1150,8 +1290,8 @@ msgstr ""
 "                        如果你在写高中的教学内容,\n"
 "                    "
 
-#: templates/eduhub/how_to_classification.html:70
-#: templates/eduhub/how_to_classification.html:85
+#: templates/eduhub/how_to_classification.html:79
+#: templates/eduhub/how_to_classification.html:99
 msgid ""
 "\n"
 "                    you should categorize: \n"
@@ -1161,22 +1301,27 @@ msgstr ""
 "                        你可以这样分类:\n"
 "                    "
 
-#: templates/eduhub/how_to_classification.html:73
+#: templates/eduhub/how_to_classification.html:85
 msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
 msgstr "初或高中/(年级)/(学期)/(科目)/(标题)"
 
-#: templates/eduhub/how_to_classification.html:74
+#: templates/eduhub/how_to_classification.html:87
+#| msgid ""
+#| "\n"
+#| "                        ('junior' or 'senior') high school / (grade) / "
+#| "(semester) / (subjects) / (title)\n"
+#| "                    "
 msgid ""
 "\n"
-"                        ('junior' or 'senior') high school / (grade) / "
-"(semester) / (subjects) / (title)\n"
+"                        ('junior' or 'senior') high school / (grade) / \n"
+"                        (semester) / (subjects) / (title)\n"
 "                    "
 msgstr ""
 "\n"
 "                        初或高中/(年级)/(学期)/(科目)/(标题)\n"
 "                    "
 
-#: templates/eduhub/how_to_classification.html:81
+#: templates/eduhub/how_to_classification.html:95
 msgid ""
 "\n"
 "                    If you're writing about the college' teaching,\n"
@@ -1186,44 +1331,72 @@ msgstr ""
 "                        如果你在写大学的教学内容,\n"
 "                    "
 
-#: templates/eduhub/how_to_classification.html:88
+#: templates/eduhub/how_to_classification.html:105
 msgid "college/(grade)/(semester)/(subjects)/(title)"
 msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
 
-#: templates/eduhub/how_to_classification.html:89
-msgid "college/(major) / (grade) / (semester) / (subjects) / (title)"
-msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
-
-#: templates/eduhub/how_to_classification.html:94
+#: templates/eduhub/how_to_classification.html:107
+#| msgid ""
+#| "\n"
+#| "                        primary school / (grade) / (semester) / "
+#| "(subjects) / (title)\n"
+#| "                    "
 msgid ""
 "\n"
-"                    Other stages should also have classification, you can "
-"change it \n"
-"                    <a href='https://github.com/larryw3i/fun/blob/master/fun/"
-"templates/eduhub/how_to_classification.html'>here</a>  \n"
-"                    and make a pull request, or you look at it yourself.\n"
+"                        college/(major) / (grade) / (semester) / "
+"(subjects) / \n"
+"                        (title)\n"
+"                    "
+msgstr ""
+"\n"
+"                       小学/(年级)/(学期)/(科目)/(标题)\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:115
+msgid ""
+"\n"
+"                    Other stages should also have classification, you can \n"
+"                    change it \n"
+"\n"
 "                "
 msgstr ""
 "\n"
-"                    其它阶段的还有很多分类目录, 你可以  \n"
-"                    <a href='https://github.com/larryw3i/fun/blob/master/fun/"
-"templates/eduhub/how_to_classification.html'>在这里</a>  更改它 \n"
-"                    然后让我合并, 或者你自己看着办。\n"
+"                    还有很多其它分类, 你可以 \n"
+"                    更改它 \n"
+"\n"
 "                "
 
-#: templates/eduhub/how_to_classification.html:110
+#: templates/eduhub/how_to_classification.html:121
+msgid "here"
+msgstr "在这里"
+
+#: templates/eduhub/how_to_classification.html:124
+#| msgid ""
+#| "\n"
+#| "                    you should categorize: \n"
+#| "                "
+msgid ""
+"\n"
+"                    and make a pull request, or you look at it yourself\n"
+"                "
+msgstr ""
+"\n"
+"                        你可以这样分类:\n"
+"                    "
+
+#: templates/eduhub/how_to_classification.html:141
 msgid "classification copied"
 msgstr "分类已复制"
 
-#: templates/eduhub/label_delete.html:37
+#: templates/eduhub/label_delete.html:38
 msgid "Name"
 msgstr "标题名"
 
-#: templates/eduhub/label_delete.html:41
+#: templates/eduhub/label_delete.html:42
 msgid "Creating date"
 msgstr "创建时间"
 
-#: templates/eduhub/label_list.html:26
+#: templates/eduhub/label_list.html:31
 msgid "Mine"
 msgstr "我的"
 
@@ -1237,139 +1410,140 @@ msgstr ""
 "                        x-dove\n"
 "                    "
 
-#: templates/funhome/_footer.html:26
+#: templates/funhome/_footer.html:29
 msgid " Data privacy"
 msgstr " 隐私"
 
-#: templates/funhome/_footer.html:29
+#: templates/funhome/_footer.html:33
 msgid "Developer"
 msgstr "开发者"
 
-#: templates/funhome/_footer.html:38
+#: templates/funhome/_footer.html:43
 msgid "this site"
 msgstr "本站源码"
 
-#: templates/funhome/_footer_language.html:22
+#: templates/funhome/_footer_language.html:26
 msgid "language"
 msgstr "语言"
 
-#: templates/funhome/_footer_theme.html:11
+#: templates/funhome/_footer_theme.html:12
 msgid "Theme"
 msgstr "主题"
 
-#: templates/funhome/_footer_theme.html:14
+#: templates/funhome/_footer_theme.html:17
 msgid "Select theme"
 msgstr "选择主题"
 
-#: templates/funhome/_footer_theme.html:17
+#: templates/funhome/_footer_theme.html:22
 msgid "cerulean"
 msgstr "天蓝色"
 
-#: templates/funhome/_footer_theme.html:18
+#: templates/funhome/_footer_theme.html:25
 msgid "cyborg"
 msgstr "科技"
 
-#: templates/funhome/_footer_theme.html:19
+#: templates/funhome/_footer_theme.html:28
 msgid "flatly"
 msgstr "干净利落"
 
-#: templates/funhome/_footer_theme.html:20
+#: templates/funhome/_footer_theme.html:31
 msgid "litera"
 msgstr "文青"
 
-#: templates/funhome/_footer_theme.html:21
+#: templates/funhome/_footer_theme.html:34
 msgid "lux"
 msgstr "照明"
 
-#: templates/funhome/_footer_theme.html:22
+#: templates/funhome/_footer_theme.html:37
 msgid "minty"
 msgstr "薄荷"
 
-#: templates/funhome/_footer_theme.html:23
+#: templates/funhome/_footer_theme.html:40
 msgid "sandstone"
 msgstr "岩石"
 
-#: templates/funhome/_footer_theme.html:24
+#: templates/funhome/_footer_theme.html:43
 msgid "sketchy"
 msgstr "素描"
 
-#: templates/funhome/_footer_theme.html:25
+#: templates/funhome/_footer_theme.html:46
 msgid "solar"
 msgstr "阳光"
 
-#: templates/funhome/_footer_theme.html:26
+#: templates/funhome/_footer_theme.html:49
 msgid "superhero"
 msgstr "锐气"
 
-#: templates/funhome/_footer_theme.html:27
+#: templates/funhome/_footer_theme.html:52
 msgid "yeti"
 msgstr "雪人"
 
-#: templates/funhome/_footer_theme.html:28
+#: templates/funhome/_footer_theme.html:55
 msgid "cosmo"
 msgstr "都市"
 
-#: templates/funhome/_footer_theme.html:29
+#: templates/funhome/_footer_theme.html:58
 msgid "darkly"
 msgstr "熬夜"
 
-#: templates/funhome/_footer_theme.html:30
+#: templates/funhome/_footer_theme.html:61
 msgid "journal"
 msgstr "报纸"
 
-#: templates/funhome/_footer_theme.html:31
+#: templates/funhome/_footer_theme.html:64
 msgid "lumen"
 msgstr "流光"
 
-#: templates/funhome/_footer_theme.html:32
+#: templates/funhome/_footer_theme.html:67
 msgid "pulse"
 msgstr "电子"
 
-#: templates/funhome/_footer_theme.html:33
+#: templates/funhome/_footer_theme.html:70
 msgid "simplex"
 msgstr "d调"
 
-#: templates/funhome/_footer_theme.html:34
+#: templates/funhome/_footer_theme.html:73
 msgid "slate"
 msgstr "石片"
 
-#: templates/funhome/_footer_theme.html:35
+#: templates/funhome/_footer_theme.html:76
 msgid "spacelab"
 msgstr "太空"
 
-#: templates/funhome/_footer_theme.html:36
+#: templates/funhome/_footer_theme.html:79
 msgid "united"
 msgstr "一体"
 
-#: templates/funhome/_footer_theme.html:37
+#: templates/funhome/_footer_theme.html:82
 msgid "materia"
 msgstr "材质"
 
-#: templates/funhome/_footer_theme.html:38
+#: templates/funhome/_footer_theme.html:85
 msgid "default"
 msgstr "默认"
 
-#: templates/funhome/_navbar.html:23
+#: templates/funhome/_navbar.html:27
+#: templates/funhome/legal_information.html:30
 msgid "Home"
 msgstr "主页"
 
-#: templates/funhome/_navbar.html:29
+#: templates/funhome/_navbar.html:36
 msgid "Developers"
 msgstr "开发者"
 
-#: templates/funhome/_navbar.html:33
+#: templates/funhome/_navbar.html:42
 msgid "Message"
 msgstr "消息"
 
-#: templates/funhome/_navbar.html:46
+#: templates/funhome/_navbar.html:58
 msgid "Hello"
 msgstr "你好"
 
-#: templates/funhome/_navbar.html:47
+#: templates/funhome/_navbar.html:62
 msgid "Log Out"
 msgstr "退出"
 
-#: templates/funhome/_navbar.html:49
+#: templates/funhome/_navbar.html:67
 msgid "Log In"
 msgstr "登录"
 
@@ -1389,7 +1563,7 @@ msgstr "贴纸详细"
 msgid "Sticker list"
 msgstr "所有贴纸"
 
-#: templates/funhome/funhomesticker_list.html:20
+#: templates/funhome/funhomesticker_list.html:21
 msgid "Older"
 msgstr "旧的"
 
@@ -1397,7 +1571,7 @@ msgstr "旧的"
 msgid "Why choose us"
 msgstr "我们的优势"
 
-#: templates/funhome/home_funhomesticker.html:68
+#: templates/funhome/home_funhomesticker.html:102
 msgid "View all"
 msgstr "查看全部"
 
@@ -1405,31 +1579,31 @@ msgstr "查看全部"
 msgid "Join us now"
 msgstr "现在加入X-DOVE"
 
-#: templates/funhome/home_join_us.html:19
+#: templates/funhome/home_join_us.html:24
 msgid "E-mail"
 msgstr "邮箱地址"
 
-#: templates/funhome/home_join_us.html:29
+#: templates/funhome/home_join_us.html:39
 msgid "Username"
 msgstr "用户名"
 
-#: templates/funhome/home_join_us.html:40
+#: templates/funhome/home_join_us.html:55
 msgid "Password"
 msgstr "设置密码"
 
-#: templates/funhome/home_join_us.html:51
+#: templates/funhome/home_join_us.html:67
 msgid "Password (again)"
 msgstr "确认密码"
 
-#: templates/funhome/home_join_us.html:61
+#: templates/funhome/home_join_us.html:80
 msgid "Join now"
 msgstr "现在加入"
 
-#: templates/funhome/home_join_us.html:70
+#: templates/funhome/home_join_us.html:90
 msgid "Already have an account"
 msgstr "已有账号吗"
 
-#: templates/funhome/legal_information.html:20
+#: templates/funhome/legal_information.html:21
 msgid "LEGAL INFORMATION"
 msgstr "法律信息"
 
@@ -1437,7 +1611,7 @@ msgstr "法律信息"
 msgid "Information"
 msgstr "用户信息"
 
-#: templates/funuser/_funuser_url.html:15
+#: templates/funuser/_funuser_url.html:16
 msgid "Reset password"
 msgstr "重置密码"
 
@@ -1452,12 +1626,12 @@ msgstr ""
 "                %(funuser.user)s 什么都没有留下\n"
 "            "
 
-#: templates/funuser/funuser_update.html:43
-#: templates/funuser/funuser_update.html:57
-#: templates/funuser/funuser_update.html:69
-#: templates/funuser/funuser_update.html:81
-#: templates/funuser/funuser_update.html:93
-#: templates/funuser/funuser_update.html:105
+#: templates/funuser/funuser_update.html:52
+#: templates/funuser/funuser_update.html:74
+#: templates/funuser/funuser_update.html:91
+#: templates/funuser/funuser_update.html:108
+#: templates/funuser/funuser_update.html:124
+#: templates/funuser/funuser_update.html:140
 msgid "is outward"
 msgstr "公开"
 
@@ -2966,6 +3140,28 @@ msgstr "Thumbnail"
 msgid "{something}"
 msgstr "{something}"
 
+#~ msgid "Please reset password via terminal"
+#~ msgstr "请在终端修改密码"
+
+#~ msgid "college/(major) / (grade) / (semester) / (subjects) / (title)"
+#~ msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
+
+#~ msgid ""
+#~ "\n"
+#~ "                    Other stages should also have classification, you can "
+#~ "change it \n"
+#~ "                    <a href='https://github.com/larryw3i/fun/blob/master/"
+#~ "fun/templates/eduhub/how_to_classification.html'>here</a>  \n"
+#~ "                    and make a pull request, or you look at it yourself.\n"
+#~ "                "
+#~ msgstr ""
+#~ "\n"
+#~ "                    其它阶段的还有很多分类目录, 你可以  \n"
+#~ "                    <a href='https://github.com/larryw3i/fun/blob/master/"
+#~ "fun/templates/eduhub/how_to_classification.html'>在这里</a>  更改它 \n"
+#~ "                    然后让我合并, 或者你自己看着办。\n"
+#~ "                "
+
 #~ msgid "Author"
 #~ msgstr "作者"
 
@@ -3015,9 +3211,6 @@ msgstr "{something}"
 
 #~ msgid "The GID of the vassal instance"
 #~ msgstr "The GID of the vassal instance"
-
-#~ msgid "Created at"
-#~ msgstr "创建于"
 
 #~ msgid "Updated"
 #~ msgstr "已更新"
@@ -3223,9 +3416,6 @@ msgstr "{something}"
 
 #~ msgid "Asia/Shanghai"
 #~ msgstr "亚洲•中国•上海"
-
-#~ msgid "Home content"
-#~ msgstr "内容"
 
 #, fuzzy
 #~| msgid "Eduhub contents"
