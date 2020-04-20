@@ -13,7 +13,7 @@
 
     {% if user.is_authenticated %}
         {# workspace #}
-        {{ csrf_token.value }}
+        <script> location.href = `{% url 'eduhub:label_list' %}`; </script>
 
     {% else %}
         {# welcome #}

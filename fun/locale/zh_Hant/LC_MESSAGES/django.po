@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-17 10:06+0000\n"
+"POT-Creation-Date: 2020-04-20 03:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -343,14 +343,18 @@ msgid "illustration"
 msgstr ""
 
 #: funhome/models.py:142
-msgid "comment"
+msgid "home comment"
 msgstr ""
 
-#: funhome/models.py:150
+#: funhome/models.py:147
+msgid "appreciation content"
+msgstr ""
+
+#: funhome/models.py:153
 msgid "Submitter"
 msgstr ""
 
-#: funhome/models.py:155
+#: funhome/models.py:158
 msgid "Submitting date"
 msgstr ""
 

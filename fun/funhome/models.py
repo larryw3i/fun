@@ -139,10 +139,13 @@ class Appreciation(models.Model):
 
     home_comment = models.TextField(
         max_length=128,
-        verbose_name=_('comment'),
+        verbose_name=_('home comment'),
     )
     
-    content = fields.RichTextUploadingField()
+    content = fields.RichTextUploadingField(
+        max_length=4096,
+        verbose_name=_('appreciation content')
+    )
 
     submitter = models.ForeignKey(
         to=User,

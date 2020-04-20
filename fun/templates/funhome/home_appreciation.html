@@ -30,15 +30,15 @@
                           <img 
                             src=
           "{% url 'funfile:get_file' file_id=appreciation.illustration %}" 
-                            class="rounded-circle " style="width: 88px;"/>
+                            class="rounded-circle " style="width: inherit;"/>
                         </div>
 
                         <div class="col-md-10 col-lg-11  col-xl-11">
                           <div class="card-body">
                             <p class="card-title" style="font-size: medium;">
                               {{ appreciation.invitee }}<br/>
-                              {{  appreciation.invitee_title }
-                            }</p>
+                              {{  appreciation.invitee_title }}
+                            </p>
 
                             <p class="card-text">
                               {{ appreciation.home_comment }}

@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-17 10:06+0000\n"
-"PO-Revision-Date: 2020-04-17 18:08+0800\n"
+"POT-Creation-Date: 2020-04-20 03:38+0000\n"
+"PO-Revision-Date: 2020-04-20 11:43+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
 "Language-Team: Chinese (Simplified) <larryw3i@163.com>\n"
-"Language: zh_CHS\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.34.0\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Poedit 2.2.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:23
 #: templates/funhome/_navbar.html:32
@@ -221,17 +221,14 @@ msgid "Is classification disabled"
 msgstr "禁用"
 
 #: eduhub/models.py:201
-#| msgid "Eduhub labels"
 msgid "Eduhub Test"
 msgstr "标签"
 
 #: eduhub/models.py:202
-#| msgid "Eduhub contents"
 msgid "Eduhub Tests"
 msgstr "内容"
 
 #: eduhub/models.py:213 eduhub/models.py:233
-#| msgid "Content comment"
 msgid "Test commit"
 msgstr "备注"
 
@@ -244,12 +241,10 @@ msgid "Template text"
 msgstr "模板文本"
 
 #: eduhub/models.py:224
-#| msgid "Submitting date"
 msgid "Test submitting date"
 msgstr "创建时间"
 
 #: eduhub/models.py:228
-#| msgid "Creating date"
 msgid "Last modifying date"
 msgstr "创建时间"
 
@@ -335,29 +330,33 @@ msgstr "评价"
 
 #: funhome/models.py:122
 msgid "invitee"
-msgstr "受邀"
+msgstr "受邀人"
 
 #: funhome/models.py:127
 msgid "invitee title"
-msgstr "标题"
+msgstr "头衔"
 
 #: funhome/models.py:132
 msgid "brief comment"
-msgstr "备注"
+msgstr "主页短评"
 
 #: funhome/models.py:137
 msgid "illustration"
 msgstr "头贴"
 
 #: funhome/models.py:142
-msgid "comment"
-msgstr "备注"
+msgid "home comment"
+msgstr "主页评价"
 
-#: funhome/models.py:150
+#: funhome/models.py:147
+msgid "appreciation content"
+msgstr "评价内容"
+
+#: funhome/models.py:153
 msgid "Submitter"
-msgstr "编辑"
+msgstr "提交者"
 
-#: funhome/models.py:155
+#: funhome/models.py:158
 msgid "Submitting date"
 msgstr "创建时间"
 
@@ -593,13 +592,6 @@ msgid "Hello from"
 msgstr "问候来自"
 
 #: templates/account/email/password_reset_key_message.html:9
-#| msgid ""
-#| "\n"
-#| "        You're receiving this e-mail because you or someone else has "
-#| "requested a password for your user account.\n"
-#| "        It can be safely ignored if you did not request a password reset. "
-#| "Click the link below to reset your password.\n"
-#| "    "
 msgid ""
 "\n"
 "        You're receiving this e-mail because you or someone else has "
@@ -698,7 +690,6 @@ msgid "Are you sure you want to sign out?"
 msgstr "亲要确认退出吗?"
 
 #: templates/account/logout.html:41
-#| msgid "Sign Out"
 msgid "Sign out now"
 msgstr "退出"
 
@@ -806,11 +797,6 @@ msgid "Password Reset"
 msgstr "重置密码"
 
 #: templates/account/password_reset.html:24
-#| msgid ""
-#| "\n"
-#| "                Please contact us if you have any trouble resetting your "
-#| "password.\n"
-#| "            "
 msgid ""
 "\n"
 "                You are administrator, please reset password via terminal\n"
@@ -847,11 +833,6 @@ msgstr ""
 "        "
 
 #: templates/account/password_reset_done.html:16
-#| msgid ""
-#| "\n"
-#| "            We have sent you an e-mail. Please contact us if you do not "
-#| "receive it within a few minutes.\n"
-#| "        "
 msgid ""
 "\n"
 "            We have sent you an e-mail. Please contact us if you do not "
@@ -868,11 +849,6 @@ msgid "Bad Token"
 msgstr "令牌无效"
 
 #: templates/account/password_reset_from_key.html:18
-#| msgid ""
-#| "\n"
-#| "                The password reset link was invalid, possibly because it "
-#| "has already been used.  Please request a \n"
-#| "            "
 msgid ""
 "\n"
 "                The password reset link was invalid, possibly because it "
@@ -954,12 +930,6 @@ msgid "Verify Your E-mail Address"
 msgstr "验证你的电子邮件"
 
 #: templates/account/verification_sent.html:13
-#| msgid ""
-#| "\n"
-#| "            We have sent an e-mail to you for verification. Follow the "
-#| "link provided to finalize the signup process. Please contact us if you do "
-#| "not receive it within a few minutes.\n"
-#| "        "
 msgid ""
 "\n"
 "            We have sent an e-mail to you for verification. Follow the "
@@ -1028,7 +998,6 @@ msgid "Eduhub labels"
 msgstr "标签"
 
 #: templates/eduhub/_eduhub_base.html:60
-#| msgid "Eduhub contents"
 msgid "Eduhub tests"
 msgstr "内容"
 
@@ -1184,17 +1153,14 @@ msgid "Content details"
 msgstr "标题"
 
 #: templates/eduhub/funtest_content_preview.html:20
-#| msgid "Sticker content file"
 msgid "Funtest content preview"
 msgstr "贴纸文件"
 
 #: templates/eduhub/funtest_create.html:13
-#| msgid "Created at"
 msgid "Create a test"
 msgstr "创建于"
 
 #: templates/eduhub/funtest_create.html:33
-#| msgid "Home content"
 msgid "Live content"
 msgstr "内容"
 
@@ -1203,13 +1169,6 @@ msgid "How to classify the eduhub content"
 msgstr "分类参考"
 
 #: templates/eduhub/how_to_classification.html:44
-#| msgid ""
-#| "\n"
-#| "            I don't bother to make a catalog right now, and I don't want "
-#| "to classify them now, because I'm the only one who develop it, and I "
-#| "don't know when I have free time, so you should classify your content "
-#| "yourself so as not to make a mess of everything. \n"
-#| "        "
 msgid ""
 "\n"
 "            I don't bother to make a catalog right now, and I don't want "
@@ -1227,11 +1186,6 @@ msgstr ""
 "        "
 
 #: templates/eduhub/how_to_classification.html:55
-#| msgid ""
-#| "\n"
-#| "                    If you're writing about primary school (I don't know "
-#| "if anyone will write about kindergarten), \n"
-#| "                "
 msgid ""
 "\n"
 "                    If you're writing about primary school (I don't know "
@@ -1265,11 +1219,6 @@ msgid "primary school/(grade)/(semester)/(subjects)/(title)"
 msgstr "小学/(年级)/(学期)/(科目)/(标题)"
 
 #: templates/eduhub/how_to_classification.html:68
-#| msgid ""
-#| "\n"
-#| "                        primary school / (grade) / (semester) / "
-#| "(subjects) / (title)\n"
-#| "                    "
 msgid ""
 "\n"
 "                primary school / (grade) / (semester) / (subjects) / "
@@ -1306,11 +1255,6 @@ msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
 msgstr "初或高中/(年级)/(学期)/(科目)/(标题)"
 
 #: templates/eduhub/how_to_classification.html:87
-#| msgid ""
-#| "\n"
-#| "                        ('junior' or 'senior') high school / (grade) / "
-#| "(semester) / (subjects) / (title)\n"
-#| "                    "
 msgid ""
 "\n"
 "                        ('junior' or 'senior') high school / (grade) / \n"
@@ -1336,11 +1280,6 @@ msgid "college/(grade)/(semester)/(subjects)/(title)"
 msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
 
 #: templates/eduhub/how_to_classification.html:107
-#| msgid ""
-#| "\n"
-#| "                        primary school / (grade) / (semester) / "
-#| "(subjects) / (title)\n"
-#| "                    "
 msgid ""
 "\n"
 "                        college/(major) / (grade) / (semester) / "
@@ -1371,10 +1310,6 @@ msgid "here"
 msgstr "在这里"
 
 #: templates/eduhub/how_to_classification.html:124
-#| msgid ""
-#| "\n"
-#| "                    you should categorize: \n"
-#| "                "
 msgid ""
 "\n"
 "                    and make a pull request, or you look at it yourself\n"
@@ -3139,6 +3074,9 @@ msgstr "Thumbnail"
 #, python-brace-format
 msgid "{something}"
 msgstr "{something}"
+
+#~ msgid "comment"
+#~ msgstr "备注"
 
 #~ msgid "Please reset password via terminal"
 #~ msgstr "请在终端修改密码"

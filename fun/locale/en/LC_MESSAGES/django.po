@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-17 10:06+0000\n"
-"PO-Revision-Date: 2020-02-12 01:40+0800\n"
+"POT-Creation-Date: 2020-04-20 03:38+0000\n"
+"PO-Revision-Date: 2020-04-20 10:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -348,14 +348,18 @@ msgid "illustration"
 msgstr ""
 
 #: funhome/models.py:142
-msgid "comment"
+msgid "home comment"
 msgstr ""
 
-#: funhome/models.py:150
+#: funhome/models.py:147
+msgid "appreciation content"
+msgstr ""
+
+#: funhome/models.py:153
 msgid "Submitter"
 msgstr ""
 
-#: funhome/models.py:155
+#: funhome/models.py:158
 msgid "Submitting date"
 msgstr ""
 
@@ -838,7 +842,7 @@ msgstr ""
 
 #: templates/account/signup.html:46
 msgid "and_sign"
-msgstr "&"
+msgstr "& "
 
 #: templates/account/signup.html:47
 msgid "Data privacy"
@@ -1212,10 +1216,8 @@ msgid ""
 msgstr ""
 
 #: templates/eduhub/how_to_classification.html:141
-#, fuzzy
-#| msgid "Eduhub classification"
 msgid "classification copied"
-msgstr "Classification"
+msgstr "classification"
 
 #: templates/eduhub/label_delete.html:38
 msgid "Name"
@@ -1407,7 +1409,7 @@ msgstr ""
 
 #: templates/funhome/home_join_us.html:24
 msgid "E-mail"
-msgstr "邮箱地址"
+msgstr "E-mail"
 
 #: templates/funhome/home_join_us.html:39
 msgid "Username"
