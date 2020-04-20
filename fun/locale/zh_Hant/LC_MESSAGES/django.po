@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 03:38+0000\n"
+"POT-Creation-Date: 2020-04-20 08:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -906,6 +906,130 @@ msgstr ""
 msgid "change your e-mail address"
 msgstr ""
 
+#: templates/eduhub/_classification_nav.html:17
+msgid "subject"
+msgstr ""
+
+#: templates/eduhub/_classification_nav.html:21
+msgid "food"
+msgstr ""
+
+#: templates/eduhub/_classification_nav.html:25
+msgid "live"
+msgstr ""
+
+#: templates/eduhub/_classification_nav.html:29
+msgid "develop"
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:13
+msgid ""
+"\n"
+"        I don't bother to make a catalog right now, and I don't want to \n"
+"        classify them now, because I'm the only one who develop it, and I \n"
+"        don't know when I have free time, so you should classify your \n"
+"        content yourself so as not to make a mess of everything. \n"
+"    "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:24
+msgid ""
+"\n"
+"                If you're writing about primary school (I don't know if \n"
+"                anyone will write about kindergarten), \n"
+"            "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:29
+msgid ""
+"\n"
+"                you should categorize(remove bracket!): \n"
+"            "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:34
+#: templates/eduhub/_classification_subject.html:52
+#: templates/eduhub/_classification_subject.html:72
+msgid "click to copy"
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:36
+msgid "primary school/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:37
+msgid ""
+"\n"
+"            primary school / (grade) / (semester) / (subjects) / (title)\n"
+"                "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:44
+msgid ""
+"\n"
+"                If you're writing about high school teaching,\n"
+"            "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:48
+#: templates/eduhub/_classification_subject.html:68
+msgid ""
+"\n"
+"                you should categorize: \n"
+"            "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:54
+msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:56
+msgid ""
+"\n"
+"                    ('junior' or 'senior') high school / (grade) / \n"
+"                    (semester) / (subjects) / (title)\n"
+"                "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:64
+msgid ""
+"\n"
+"                If you're writing about the college' teaching,\n"
+"            "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:74
+msgid "college/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:76
+msgid ""
+"\n"
+"                    college/(major) / (grade) / (semester) / (subjects) / \n"
+"                    (title)\n"
+"                "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:84
+msgid ""
+"\n"
+"                Other stages should also have classification, you can \n"
+"                change it \n"
+"\n"
+"            "
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:90
+msgid "here"
+msgstr ""
+
+#: templates/eduhub/_classification_subject.html:93
+msgid ""
+"\n"
+"                and make a pull request, or you look at it yourself\n"
+"            "
+msgstr ""
+
 #: templates/eduhub/_eduhub_base.html:43
 msgid "Survey"
 msgstr ""
@@ -1024,31 +1148,31 @@ msgstr ""
 
 #: templates/eduhub/eduhub_search_result.html:97
 #: templates/eduhub/eduhub_search_result.html:137
-#: templates/funhome/common_pagination.html:15
+#: templates/funhome/_common_pagination.html:15
 msgid "first page"
 msgstr ""
 
 #: templates/eduhub/eduhub_search_result.html:103
 #: templates/eduhub/eduhub_search_result.html:143
-#: templates/funhome/common_pagination.html:21
+#: templates/funhome/_common_pagination.html:21
 msgid "previous page"
 msgstr ""
 
 #: templates/eduhub/eduhub_search_result.html:110
 #: templates/eduhub/eduhub_search_result.html:150
-#: templates/funhome/common_pagination.html:28
+#: templates/funhome/_common_pagination.html:28
 msgid "Page"
 msgstr ""
 
 #: templates/eduhub/eduhub_search_result.html:116
 #: templates/eduhub/eduhub_search_result.html:156
-#: templates/funhome/common_pagination.html:33
+#: templates/funhome/_common_pagination.html:33
 msgid "next page"
 msgstr ""
 
 #: templates/eduhub/eduhub_search_result.html:121
 #: templates/eduhub/eduhub_search_result.html:162
-#: templates/funhome/common_pagination.html:38
+#: templates/funhome/_common_pagination.html:38
 msgid "last page"
 msgstr ""
 
@@ -1063,7 +1187,7 @@ msgid "cover"
 msgstr ""
 
 #: templates/eduhub/funcontent_create.html:38
-#: templates/eduhub/how_to_classification.html:21
+#: templates/eduhub/how_to_classification.html:22
 msgid "How to classification"
 msgstr ""
 
@@ -1083,124 +1207,11 @@ msgstr ""
 msgid "Live content"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:39
+#: templates/eduhub/how_to_classification.html:40
 msgid "How to classify the eduhub content"
 msgstr ""
 
-#: templates/eduhub/how_to_classification.html:44
-msgid ""
-"\n"
-"            I don't bother to make a catalog right now, and I don't want "
-"to \n"
-"            classify them now, because I'm the only one who develop it, and "
-"I \n"
-"            don't know when I have free time, so you should classify your \n"
-"            content yourself so as not to make a mess of everything. \n"
-"        "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:55
-msgid ""
-"\n"
-"                    If you're writing about primary school (I don't know "
-"if \n"
-"                    anyone will write about kindergarten), \n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:60
-msgid ""
-"\n"
-"                    you should categorize(remove bracket!): \n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:65
-#: templates/eduhub/how_to_classification.html:83
-#: templates/eduhub/how_to_classification.html:103
-msgid "click to copy"
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:67
-msgid "primary school/(grade)/(semester)/(subjects)/(title)"
-msgstr ""
-
 #: templates/eduhub/how_to_classification.html:68
-msgid ""
-"\n"
-"                primary school / (grade) / (semester) / (subjects) / "
-"(title)\n"
-"                    "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:75
-msgid ""
-"\n"
-"                    If you're writing about high school teaching,\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:79
-#: templates/eduhub/how_to_classification.html:99
-msgid ""
-"\n"
-"                    you should categorize: \n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:85
-msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:87
-msgid ""
-"\n"
-"                        ('junior' or 'senior') high school / (grade) / \n"
-"                        (semester) / (subjects) / (title)\n"
-"                    "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:95
-msgid ""
-"\n"
-"                    If you're writing about the college' teaching,\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:105
-msgid "college/(grade)/(semester)/(subjects)/(title)"
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:107
-msgid ""
-"\n"
-"                        college/(major) / (grade) / (semester) / "
-"(subjects) / \n"
-"                        (title)\n"
-"                    "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:115
-msgid ""
-"\n"
-"                    Other stages should also have classification, you can \n"
-"                    change it \n"
-"\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:121
-msgid "here"
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:124
-msgid ""
-"\n"
-"                    and make a pull request, or you look at it yourself\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:141
 msgid "classification copied"
 msgstr ""
 
