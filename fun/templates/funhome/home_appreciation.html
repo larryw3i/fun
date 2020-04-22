@@ -5,6 +5,8 @@
 
 {% load static %}
 
+{% load funtag %}
+
 <div class="text-center border-bottom border-info">
   <p style="font-size: x-large;">{% trans 'Why choose us' %}?</p>
 </div>
@@ -26,14 +28,14 @@
                     <div class="row no-gutters ">
                       {% if appreciation_items_content == 'start' %}
 
-                        <div class="col-md-2 col-lg-1 col-xl-1 col-12">
+                        <div class="col col-sm-1 col-md-1 col-lg-1 
+                          col-xl-1 col-12">
                           <img 
-                            src=
-          "{% url 'funfile:get_file' file_id=appreciation.illustration %}" 
-                            class="rounded-circle " style="width: inherit;"/>
+                            src="{% get_file_url appreciation.illustration %}" 
+                            class="rounded-circle " style="width: 88px;"/>
                         </div>
 
-                        <div class="col-md-10 col-lg-11  col-xl-11">
+                        <div class="col offset-1 col-md-10 col-lg-10  col-xl-10">
                           <div class="card-body">
                             <p class="card-title" style="font-size: medium;">
                               {{ appreciation.invitee }}<br/>
@@ -57,12 +59,11 @@
 
                         <div class="col col-4 offset-8 d-block d-md-none  ">
                           <img 
-                            src=
-          "{% url 'funfile:get_file' file_id=appreciation.illustration %}" 
+                            src="{% get_file_url appreciation.illustration %}" 
                             class="rounded-circle " style="width: 88px;"/>
 
                         </div>
-                        <div class="col-md-10 col-lg-10 col-xl-10 col-12 ">
+                        <div class="col col-md-10 col-lg-10 col-xl-10 col-12 ">
                           <div class="card-body " style="text-align: right;">
 
                             <p class="card-title" style="font-size: medium;">
@@ -86,8 +87,7 @@
                           d-md-block d-lg-block d-xl-block ">
 
                           <img 
-                            src=
-          "{% url 'funfile:get_file' file_id=appreciation.illustration %}" 
+                            src="{% get_file_url appreciation.illustration %}" 
                             class="rounded-circle " style="width: 88px;"/>
                             
                         </div>

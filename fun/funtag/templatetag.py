@@ -92,11 +92,19 @@ def get_funuser_avatar_url(context, user):
 @register.simple_tag()
 def get_pdf_view_url():
     return STATIC_URL + "libs/pdfjs-2.2.228-dist/web/viewer.min.html" +\
-        "?file=funfile/get_file/" # combine a funfile name
+        "?file=funfile/get_file/"  # combine a funfile name
+
 
 @register.simple_tag()
 def get_classification_issue_url():
-    return 'https://github.com/larryw3i/fun/blob/master/fun/templates/eduhub/'\
-        +'how_to_classification.html'
+    return 'https://github.com/larryw3i/fun/blob/master/fun/templates/'\
+        + 'eduhub/how_to_classification.html'
 
 
+@register.simple_tag(takes_context=True)
+def get_file_url(context, file_id):
+    return \
+        reverse(
+            'funfile:get_file',
+            kwargs={"file_id": file_id}
+        )
