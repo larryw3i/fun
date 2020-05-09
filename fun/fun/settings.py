@@ -27,21 +27,21 @@ from os import path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-app_env_path = path.join( BASE_DIR, '.env.yaml' )
 funlog_dir =  os.path.join(BASE_DIR, 'funlog')
 funlog_path =  os.path.join( funlog_dir,  'django_fun.log')
-
 
 if not path.exists( funlog_path ):
     os.makedirs( funlog_dir )
     open(funlog_path, 'a' ).close()
 
 
+app_env_path = path.join( BASE_DIR, '.env.yaml' )
+
 if not path.exists( app_env_path ):
     raise Exception(
         'You should custon your .env.yaml file to keep app run normally')
-
-
+        
+app_env = None
 with open( app_env_path, 'r' ) as f:
     app_env = yaml.safe_load( f )
 

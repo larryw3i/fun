@@ -11,16 +11,15 @@ from django.utils import timezone
 from datetime import datetime
 from fun.funvalue import subjects_top
 
-from dotenv import find_dotenv, load_dotenv
-
 from funuser.models import Funuser
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 
-from fun.settings import STATIC_URL
+from fun.settings import STATIC_URL, app_env
+
+import yaml
 
 
-load_dotenv(find_dotenv())
 
 
 register = template.Library()
@@ -54,12 +53,12 @@ def get_current_theme_name(context):
 
 @register.simple_tag()
 def get_beian_url():
-    return os.environ.get('BEIAN_URL', '')
+    return app_env['beian']['url']
 
 
 @register.simple_tag()
 def get_beian_text():
-    return os.environ.get('BEIAN_TEXT', '')
+    return app_env['beian']['text']
 
 
 @register.simple_tag(takes_context=True)
