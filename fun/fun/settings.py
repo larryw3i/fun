@@ -10,27 +10,50 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+"""
+051020200027
+.env and appconf.json was deprecated, yaml is been used.
+"""
+
 import os
 import sys
 import json
-from dotenv import find_dotenv, load_dotenv
+import yaml
 from django.utils.translation import gettext_lazy as _
-
-load_dotenv(find_dotenv())
+from os import path
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+app_env_path = path.join( BASE_DIR, '.env.yaml' )
+funlog_dir =  os.path.join(BASE_DIR, 'funlog')
+funlog_path =  os.path.join( funlog_dir,  'django_fun.log')
+
+
+if not path.exists( funlog_path ):
+    os.makedirs( funlog_dir )
+    open(funlog_path, 'a' ).close()
+
+
+if not path.exists( app_env_path ):
+    raise Exception(
+        'You should custon your .env.yaml file to keep app run normally')
+
+
+with open( app_env_path, 'r' ) as f:
+    app_env = yaml.safe_load( f )
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = app_env['env']['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DEBUG'))
+DEBUG = app_env['debug']
 
 SITE_ID = 1
 
@@ -96,6 +119,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'fun.wsgi.application'
 
 
@@ -105,12 +129,12 @@ WSGI_APPLICATION = 'fun.wsgi.application'
 DATABASES = {
     # psql
     'default': {
-        'ENGINE': os.environ.get('DATABASE_ENGINE'),
-        'NAME': os.environ.get('DATABASE_NAME'),
-        'USER': os.environ.get('DATABASE_USER'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-        'HOST': os.environ.get('DATABASE_HOST'),
-        'PORT': int(os.environ.get('DATABASE_PORT'))
+        'ENGINE': app_env['database']['engine'],
+        'NAME': app_env['database']['name'],
+        'USER': app_env['database']['user'],
+        'PASSWORD': app_env['database']['password'],
+        'HOST': app_env['database']['host'],
+        'PORT': app_env['database']['port']
     },
     'sqlite3': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -155,14 +179,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-# EMAIL_USE_TLS = bool( os.environ.get('EMAIL_USE_TLS') )
-EMAIL_USE_SSL = bool(os.environ.get('EMAIL_USE_SSL'))
-EMAIL_FROM = os.environ.get('EMAIL_FROM')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+EMAIL_HOST = app_env['email']['host']
+EMAIL_HOST_USER =  app_env['email']['user']
+EMAIL_HOST_PASSWORD =  app_env['email']['password']
+EMAIL_PORT =  app_env['email']['port']
+EMAIL_USE_SSL =  app_env['email']['use_ssl']
+EMAIL_FROM =  app_env['email']['from']
+DEFAULT_FROM_EMAIL =  app_env['email']['from']
 
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = True
@@ -174,7 +197,7 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
 
 
-SERVER_EMAIL = os.environ.get('EMAIL_FROM')
+SERVER_EMAIL = app_env['email']['from']
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
@@ -199,7 +222,7 @@ USE_L10N = True
 LANGUAGE_CODE = 'zh-hans'
 
 LANGUAGE_COOKIE_AGE = 10*365*24*60*60
-LANGUAGE_COOKIE_SECURE = bool(os.environ.get('LANGUAGE_COOKIE_SECURE', True))
+LANGUAGE_COOKIE_SECURE = app_env['language_cookie_secure']
 
 LANGUAGES = (
     ('en', _('English')),
@@ -261,18 +284,9 @@ DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
 # END FILE_STORAGE
 
 
-# COMPRESS_ENABLED
-COMPRESS_ENABLED = bool(os.environ.get('COMPRESS_ENABLED'))
-# END COMPRESS_ENABLED
-
 # LOGGING
 
-# configure it in ADMINS.json
-ADMINS = {}
-with open(os.path.join(BASE_DIR, 'appconf.json'), 'r') as f:
-    ADMINS = json.load(f)
-
-MANAGERS = ADMINS["admins_email"]
+MANAGERS = app_env['developers']
 
 LOGGING = {
     'version': 1,
@@ -290,7 +304,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR, 'funlog', 'django_fun.log'),
+            'filename': funlog_path,
             'maxBytes': 8*1024*1024,
         },
         'mail_admins': {

@@ -183,4 +183,11 @@ outgoing/
 # BACKUP
 fun.lwcp/
 
+# appconf
 appconf.json
+
+# readme.md
+readme.md
+
+# .env.yaml
+.env.yaml
