@@ -4,6 +4,9 @@
 
 (function(){
 
+
+    // deprecated
+    /////////
     $(document).on('change', `input[type='file'].preview-image`, (event)=> {
         previewImage(event);
     });
@@ -15,6 +18,7 @@
     $(document).on('change', `input[type='file'].preview-video`, (event)=> {
         previewVideo(event);
     });
+    /////////
 
     $(document).on('click', `.theme-dropdown-menu a` , (event) =>{
         changeTheme(event);
@@ -29,6 +33,7 @@
         $(`#language_form input[name='language']`)
             .val(event.target.dataset.language); $(`#language_form`).submit();
     });
+
     $(document).on('click', `[click-to]` , (event) =>{
         $(`${$(event.currentTarget).attr('click-to')}`).click();
     });
@@ -46,16 +51,7 @@
         window.location = event.currentTarget.dataset.url;
     });
 
-    $(document).on('click', '#nav_bar_account_logout', (event)=>{
-        bootbox.alert({
-            size: "small",
-            title: "Your Title",
-            message: "Your message here…",
-            closeButton: false,
-            onEscape: true,
-            callback: function(){ /* your callback code */ }
-        });
-    });
+    if( $('.beian_text').text().trim().length < 1 ) $('.beian_text').hide();
 
     
     /**

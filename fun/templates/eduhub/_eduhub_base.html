@@ -39,9 +39,13 @@
                         </a>
                         {% include 'eduhub/_eduhub_base_top_filter.html' %}
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link "  href="#">{% trans 'Survey' %}</a>
-                    </li>
+                    
+                    {% comment %}
+                        <li class="nav-item">
+                            <a class="nav-link "  href="#">{% trans 'Survey' %}</a>
+                        </li>
+                    {% endcomment %}
+
                     <li class="nav-item">
                         <a class="nav-link "  
                             href="{% url 'eduhub:label_list' %}">
@@ -54,12 +58,16 @@
                             {% trans 'Eduhub contents' %}
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link "  
-                            href="{% url 'eduhub:funcontent_list_all' %}">
-                            {% trans 'Eduhub tests' %}
-                        </a>
-                    </li>
+
+                    {% comment %}
+                        <li class="nav-item">
+                            <a class="nav-link "  
+                                href="{% url 'eduhub:funcontent_list_all' %}">
+                                {% trans 'Eduhub tests' %}
+                            </a>
+                        </li>
+                    {% endcomment %}
+
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0" 

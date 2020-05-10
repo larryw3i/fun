@@ -19,8 +19,10 @@ appreciation_name = 'appreciation'
 class Homesticker(models.Model):
 
     class Meta:
-        verbose_name = _('Home sticker')
-        verbose_name_plural = _('Home sticker')
+        verbose_name = _(
+            'Home sticker(deprecation)')
+        verbose_name_plural = _(
+            'Home sticker(deprecation)')
 
     def __str__(self):
         return self.title
