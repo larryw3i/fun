@@ -20,8 +20,6 @@ from fun.settings import STATIC_URL, app_env
 import yaml
 
 
-
-
 register = template.Library()
 
 

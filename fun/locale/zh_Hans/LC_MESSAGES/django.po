@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 08:39+0000\n"
-"PO-Revision-Date: 2020-04-20 16:39+0800\n"
+"PO-Revision-Date: 2020-05-16 09:47+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
 "Language-Team: Chinese (Simplified) <larryw3i@163.com>\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:23
@@ -920,7 +920,7 @@ msgstr "非常抱歉, 注册暂时关闭了."
 
 #: templates/account/snippets/already_logged_in.html:7
 msgid "You are already logged in as"
-msgstr "已登录, %(user_display)s"
+msgstr "已登录, 用户名"
 
 #: templates/account/verification_sent.html:6
 #: templates/account/verification_sent.html:10

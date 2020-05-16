@@ -97,7 +97,9 @@ class Funcontent(models.Model):
 
     title = models.CharField(max_length=64, blank=False,
                              verbose_name=_('Content title'))
-    content = RichTextUploadingField()
+                             
+    content = RichTextUploadingField(max_length= 2048,
+                             verbose_name=_('Content'))
 
     classification = models.CharField(
         max_length=64, blank=True, null=True,

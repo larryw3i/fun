@@ -9,9 +9,7 @@ defusedxml
 Django
 django-allauth
 django-appconf
-django-bfm
 django-ckeditor
-django-compressor
 django-crispy-forms
 django-extensions
 django-imagekit
@@ -52,9 +50,6 @@ pylint-celery
 pylint-django
 pylint-flask
 pylint-plugin-utils
-pymssql
-PyMySQL
-python-dotenv
 python-magic
 python3-openid
 pytz

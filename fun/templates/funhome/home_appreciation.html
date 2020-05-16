@@ -28,14 +28,14 @@
                     <div class="row no-gutters ">
                       {% if appreciation_items_content == 'start' %}
 
-                        <div class="col col-sm-1 col-md-1 col-lg-1 
-                          col-xl-1 col-12">
+                        <div class="col col-sm-2 col-md-2 col-lg-2
+                          col-xl-2 col-12">
                           <img 
                             src="{% get_file_url appreciation.illustration %}" 
-                            class="rounded-circle " style="width: 88px;"/>
+                            class="rounded-circle " style="width: 100%;"/>
                         </div>
 
-                        <div class="col offset-1 col-md-10 col-lg-10  col-xl-10">
+                        <div class="col col-md-9 col-lg-9  col-xl-9">
                           <div class="card-body ">
                             <p class="card-title" style="font-size: medium;">
                               {{ appreciation.invitee }}<br/>
@@ -57,10 +57,10 @@
 
                       {% else %}
 
-                        <div class="col col-4 offset-8 d-block d-md-none  ">
+                        <div class="col col-2 offset-10 d-block d-md-none  ">
                           <img 
                             src="{% get_file_url appreciation.illustration %}" 
-                            class="rounded-circle " style="width: 88px;"/>
+                            class="rounded-circle " style="width: 100%;" />
 
                         </div>
                         <div class="col col-md-10 col-lg-10 col-xl-10 col-12 ">
@@ -88,7 +88,7 @@
 
                           <img 
                             src="{% get_file_url appreciation.illustration %}" 
-                            class="rounded-circle " style="width: 88px;"/>
+                            class="rounded-circle " style="width: 100%;"/>
                             
                         </div>
                       {% endif %}

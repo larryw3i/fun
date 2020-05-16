@@ -95,7 +95,6 @@ class EduhubhomestickerAdmin(admin.ModelAdmin):
         return super().save_model(request, obj, form, change)
 
 
-
 @admin.register( Funcontent )
 class FuncontentAdmin( admin.ModelAdmin ):
     readonly_fields = [\
@@ -130,4 +129,3 @@ class FuncontentAdmin( admin.ModelAdmin ):
 
     def label__name(self, obj):
         return obj.label.name
-
