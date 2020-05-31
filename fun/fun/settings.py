@@ -286,7 +286,7 @@ DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
 
 # LOGGING
 
-MANAGERS = app_env['developers']
+ADMINS = MANAGERS = app_env['developers']
 
 LOGGING = {
     'version': 1,
