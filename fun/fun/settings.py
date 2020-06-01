@@ -330,7 +330,7 @@ BLEACH_TAGS = [
     'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p',\
     'span', 'img', 'table', 'tbody', 'tr', 'td', \
     'strong', 'u', 'ul', 'li', \
-    'thead', 'th' ]
+    'thead', 'th' , 'div' ]
 BLEACH_ATTRIBUTES = [
     'class', 'style', 'alt', 'title',
     'data-*', 'width', 'height', 'weight', 'src',
