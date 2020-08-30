@@ -17,6 +17,8 @@ from django.urls import reverse
 
 from fun.settings import STATIC_URL, app_env
 
+import urllib
+
 import yaml
 
 
@@ -60,11 +62,10 @@ def get_beian_text():
 
 
 @register.simple_tag(takes_context=True)
-def get_current_eduhub_top_filter(context):
+def get_current_eduhub_filter(context):
     request = context['request']
-    eduhub_top_filter = request.COOKIES.get('eduhub_top_filter', '')
-    return _(subjects_top[eduhub_top_filter] if len(eduhub_top_filter) > 0
-             else 'All')
+    return urllib.parse.unquote( 
+        request.COOKIES.get('eduhub_filter', _('ALL')) )
 
 
 @register.simple_tag(takes_context=True)

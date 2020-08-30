@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-30 15:53+0000\n"
+"POT-Creation-Date: 2020-08-30 18:44+0000\n"
 "PO-Revision-Date: 2020-04-20 10:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Eduhub content"
 msgstr "Content"
 
-#: eduhub/models.py:56 templates/eduhub/_eduhub_base.html:54
+#: eduhub/models.py:56 templates/eduhub/_eduhub_base.html:55
 #: templates/eduhub/content_list.html:15
 #: templates/eduhub/eduhub_search_result.html:53
 #: templates/eduhub/funcontent_list.html:17
@@ -380,9 +380,8 @@ msgstr ""
 msgid "larry"
 msgstr ""
 
-#: funtag/templatetag.py:67 templates/eduhub/_eduhub_base_top_filter.html:178
-#: templates/eduhub/label_list.html:33
-msgid "All"
+#: funtag/templatetag.py:68
+msgid "ALL"
 msgstr ""
 
 #: funuser/admin.py:17
@@ -407,7 +406,7 @@ msgid "Hometown"
 msgstr ""
 
 #: funuser/admin.py:24 funuser/models.py:51
-#: templates/eduhub/_eduhub_base_top_filter.html:128
+#: templates/eduhub/_eduhub_base_top_filter.html:160
 #: templates/funuser/funuser_detail.html:71
 #: templates/funuser/funuser_update.html:102
 msgid "College"
@@ -1039,153 +1038,155 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:47
+#: templates/eduhub/_eduhub_base.html:48
 #: templates/eduhub/eduhub_search_result.html:23
 #: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr "Labels"
 
-#: templates/eduhub/_eduhub_base.html:69 templates/eduhub/_eduhub_base.html:71
+#: templates/eduhub/_eduhub_base.html:70 templates/eduhub/_eduhub_base.html:72
 #: templates/eduhub/_search.html:15 templates/eduhub/_search.html:16
 msgid "What are you thinking about"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base.html:77 templates/eduhub/_search.html:22
+#: templates/eduhub/_eduhub_base.html:78 templates/eduhub/_search.html:22
 msgid "search"
 msgstr ""
 
 #: templates/eduhub/_eduhub_base_top_filter.html:16
-msgid "Preschool education"
+msgid "Preschool"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:20
-#: templates/eduhub/_eduhub_base_top_filter.html:39
-#: templates/eduhub/_eduhub_base_top_filter.html:66
-#: templates/eduhub/_eduhub_base_top_filter.html:99
+#: templates/eduhub/_eduhub_base_top_filter.html:21
+#: templates/eduhub/_eduhub_base_top_filter.html:44
+#: templates/eduhub/_eduhub_base_top_filter.html:81
+#: templates/eduhub/_eduhub_base_top_filter.html:123
 msgid "Math"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:23
-#: templates/eduhub/_eduhub_base_top_filter.html:42
-#: templates/eduhub/_eduhub_base_top_filter.html:69
-#: templates/eduhub/_eduhub_base_top_filter.html:102
+#: templates/eduhub/_eduhub_base_top_filter.html:25
+#: templates/eduhub/_eduhub_base_top_filter.html:48
+#: templates/eduhub/_eduhub_base_top_filter.html:85
+#: templates/eduhub/_eduhub_base_top_filter.html:127
 msgid "Yuwen"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:26
-#: templates/eduhub/_eduhub_base_top_filter.html:45
-#: templates/eduhub/_eduhub_base_top_filter.html:72
-#: templates/eduhub/_eduhub_base_top_filter.html:105
+#: templates/eduhub/_eduhub_base_top_filter.html:29
+#: templates/eduhub/_eduhub_base_top_filter.html:52
+#: templates/eduhub/_eduhub_base_top_filter.html:89
+#: templates/eduhub/_eduhub_base_top_filter.html:131
 msgid "Yingyu"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:29
-#: templates/eduhub/_eduhub_base_top_filter.html:48
+#: templates/eduhub/_eduhub_base_top_filter.html:33
+#: templates/eduhub/_eduhub_base_top_filter.html:56
 msgid "Science"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:34
+#: templates/eduhub/_eduhub_base_top_filter.html:38
 msgid "Primary school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:51
+#: templates/eduhub/_eduhub_base_top_filter.html:61
 msgid "Morality and Society"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:54
-msgid "Information Technology "
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:57
-#: templates/eduhub/_eduhub_base_top_filter.html:90
-#: templates/eduhub/_eduhub_base_top_filter.html:123
-#: templates/eduhub/_eduhub_base_top_filter.html:171
-msgid "Art"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:62
-msgid "Junior high school"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:75
-#: templates/eduhub/_eduhub_base_top_filter.html:108
-msgid "Geography"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:78
-#: templates/eduhub/_eduhub_base_top_filter.html:111
-msgid "Physics"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:81
-#: templates/eduhub/_eduhub_base_top_filter.html:114
-msgid "Biology"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:84
-#: templates/eduhub/_eduhub_base_top_filter.html:117
-msgid "Politics"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base_top_filter.html:87
-#: templates/eduhub/_eduhub_base_top_filter.html:120
+#: templates/eduhub/_eduhub_base_top_filter.html:66
+#: templates/eduhub/_eduhub_base_top_filter.html:109
+#: templates/eduhub/_eduhub_base_top_filter.html:151
 msgid "Information Technology"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:95
+#: templates/eduhub/_eduhub_base_top_filter.html:71
+#: templates/eduhub/_eduhub_base_top_filter.html:113
+#: templates/eduhub/_eduhub_base_top_filter.html:155
+#: templates/eduhub/_eduhub_base_top_filter.html:217
+msgid "Art"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:76
+msgid "Junior high school"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:93
+#: templates/eduhub/_eduhub_base_top_filter.html:135
+msgid "Geography"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:97
+#: templates/eduhub/_eduhub_base_top_filter.html:139
+msgid "Physics"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:101
+#: templates/eduhub/_eduhub_base_top_filter.html:143
+msgid "Biology"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:105
+#: templates/eduhub/_eduhub_base_top_filter.html:147
+msgid "Politics"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:118
 msgid "Senior high school"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:132
+#: templates/eduhub/_eduhub_base_top_filter.html:165
 msgid "Philosophy"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:135
+#: templates/eduhub/_eduhub_base_top_filter.html:169
 msgid "Economics"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:138
+#: templates/eduhub/_eduhub_base_top_filter.html:173
 msgid "Law"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:141
+#: templates/eduhub/_eduhub_base_top_filter.html:177
 msgid "Pedagogy"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:144
+#: templates/eduhub/_eduhub_base_top_filter.html:181
 msgid "Jurisprudence"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:147
+#: templates/eduhub/_eduhub_base_top_filter.html:185
 msgid "Literature"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:150
+#: templates/eduhub/_eduhub_base_top_filter.html:189
 msgid "History"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:153
+#: templates/eduhub/_eduhub_base_top_filter.html:193
 msgid "Sciences"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:156
+#: templates/eduhub/_eduhub_base_top_filter.html:197
 msgid "Engineering"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:159
+#: templates/eduhub/_eduhub_base_top_filter.html:201
 msgid "Agriculture"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:162
+#: templates/eduhub/_eduhub_base_top_filter.html:205
 msgid "Medicine"
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:165
+#: templates/eduhub/_eduhub_base_top_filter.html:209
 msgid "Military "
 msgstr ""
 
-#: templates/eduhub/_eduhub_base_top_filter.html:168
+#: templates/eduhub/_eduhub_base_top_filter.html:213
 msgid "Management"
+msgstr ""
+
+#: templates/eduhub/_eduhub_base_top_filter.html:223
+#: templates/eduhub/label_list.html:33
+msgid "All"
 msgstr ""
 
 #: templates/eduhub/content_create.html:42

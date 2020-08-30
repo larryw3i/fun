@@ -26,4 +26,26 @@
         }
         location.href = location.pathname +"?"+urlsearch.toString();
     });
+
+    $(document).on('click', '.second_filter', (event)=>{
+        let second_filter = $(event.currentTarget).text().trim();
+        let first_filter = $( event.currentTarget ).data('first_filter');
+        first_filter = $(`.${first_filter}`).text().trim();
+        
+        Cookies.set(
+            'eduhub_filter',
+            `${first_filter}/${second_filter}`, 
+            { expires: 365 });
+        
+        location.reload();
+
+    } );
+
+    $(document).on('click', '.first_fliter_all', (event)=>{
+        
+        Cookies.remove('eduhub_filter');
+
+        location.reload();
+
+    } );
 }());

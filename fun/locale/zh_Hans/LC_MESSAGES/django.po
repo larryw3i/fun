@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-30 15:53+0000\n"
-"PO-Revision-Date: 2020-08-31 00:09+0800\n"
+"POT-Creation-Date: 2020-08-30 18:44+0000\n"
+"PO-Revision-Date: 2020-08-31 02:45+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
 "Language-Team: Chinese (Simplified) <larryw3i@163.com>\n"
 "Language: zh\n"
@@ -121,7 +121,7 @@ msgstr "合法"
 msgid "Eduhub content"
 msgstr "内容"
 
-#: eduhub/models.py:56 templates/eduhub/_eduhub_base.html:54
+#: eduhub/models.py:56 templates/eduhub/_eduhub_base.html:55
 #: templates/eduhub/content_list.html:15
 #: templates/eduhub/eduhub_search_result.html:53
 #: templates/eduhub/funcontent_list.html:17
@@ -377,9 +377,8 @@ msgstr "Larry 的分享"
 msgid "larry"
 msgstr "larry"
 
-#: funtag/templatetag.py:67 templates/eduhub/_eduhub_base_top_filter.html:178
-#: templates/eduhub/label_list.html:33
-msgid "All"
+#: funtag/templatetag.py:68
+msgid "ALL"
 msgstr "全部"
 
 #: funuser/admin.py:17
@@ -404,7 +403,7 @@ msgid "Hometown"
 msgstr "家乡"
 
 #: funuser/admin.py:24 funuser/models.py:51
-#: templates/eduhub/_eduhub_base_top_filter.html:128
+#: templates/eduhub/_eduhub_base_top_filter.html:160
 #: templates/funuser/funuser_detail.html:71
 #: templates/funuser/funuser_update.html:102
 msgid "College"
@@ -1153,154 +1152,156 @@ msgstr ""
 "                        你可以这样分类:\n"
 "                    "
 
-#: templates/eduhub/_eduhub_base.html:47
+#: templates/eduhub/_eduhub_base.html:48
 #: templates/eduhub/eduhub_search_result.html:23
 #: templates/eduhub/label_list.html:19
 msgid "Eduhub labels"
 msgstr "标签"
 
-#: templates/eduhub/_eduhub_base.html:69 templates/eduhub/_eduhub_base.html:71
+#: templates/eduhub/_eduhub_base.html:70 templates/eduhub/_eduhub_base.html:72
 #: templates/eduhub/_search.html:15 templates/eduhub/_search.html:16
 msgid "What are you thinking about"
 msgstr "在想什么"
 
-#: templates/eduhub/_eduhub_base.html:77 templates/eduhub/_search.html:22
+#: templates/eduhub/_eduhub_base.html:78 templates/eduhub/_search.html:22
 msgid "search"
 msgstr "搜索"
 
 #: templates/eduhub/_eduhub_base_top_filter.html:16
-msgid "Preschool education"
+msgid "Preschool"
 msgstr "学前教育"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:20
-#: templates/eduhub/_eduhub_base_top_filter.html:39
-#: templates/eduhub/_eduhub_base_top_filter.html:66
-#: templates/eduhub/_eduhub_base_top_filter.html:99
+#: templates/eduhub/_eduhub_base_top_filter.html:21
+#: templates/eduhub/_eduhub_base_top_filter.html:44
+#: templates/eduhub/_eduhub_base_top_filter.html:81
+#: templates/eduhub/_eduhub_base_top_filter.html:123
 msgid "Math"
 msgstr "数学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:23
-#: templates/eduhub/_eduhub_base_top_filter.html:42
-#: templates/eduhub/_eduhub_base_top_filter.html:69
-#: templates/eduhub/_eduhub_base_top_filter.html:102
+#: templates/eduhub/_eduhub_base_top_filter.html:25
+#: templates/eduhub/_eduhub_base_top_filter.html:48
+#: templates/eduhub/_eduhub_base_top_filter.html:85
+#: templates/eduhub/_eduhub_base_top_filter.html:127
 msgid "Yuwen"
 msgstr "语文"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:26
-#: templates/eduhub/_eduhub_base_top_filter.html:45
-#: templates/eduhub/_eduhub_base_top_filter.html:72
-#: templates/eduhub/_eduhub_base_top_filter.html:105
+#: templates/eduhub/_eduhub_base_top_filter.html:29
+#: templates/eduhub/_eduhub_base_top_filter.html:52
+#: templates/eduhub/_eduhub_base_top_filter.html:89
+#: templates/eduhub/_eduhub_base_top_filter.html:131
 msgid "Yingyu"
 msgstr "英语"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:29
-#: templates/eduhub/_eduhub_base_top_filter.html:48
+#: templates/eduhub/_eduhub_base_top_filter.html:33
+#: templates/eduhub/_eduhub_base_top_filter.html:56
 msgid "Science"
 msgstr "科学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:34
+#: templates/eduhub/_eduhub_base_top_filter.html:38
 msgid "Primary school"
 msgstr "小学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:51
+#: templates/eduhub/_eduhub_base_top_filter.html:61
 msgid "Morality and Society"
 msgstr "品德于政治"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:54
-msgid "Information Technology "
-msgstr "信息技术 "
-
-#: templates/eduhub/_eduhub_base_top_filter.html:57
-#: templates/eduhub/_eduhub_base_top_filter.html:90
-#: templates/eduhub/_eduhub_base_top_filter.html:123
-#: templates/eduhub/_eduhub_base_top_filter.html:171
-msgid "Art"
-msgstr "艺术"
-
-#: templates/eduhub/_eduhub_base_top_filter.html:62
-msgid "Junior high school"
-msgstr "初中"
-
-#: templates/eduhub/_eduhub_base_top_filter.html:75
-#: templates/eduhub/_eduhub_base_top_filter.html:108
-msgid "Geography"
-msgstr "地理"
-
-#: templates/eduhub/_eduhub_base_top_filter.html:78
-#: templates/eduhub/_eduhub_base_top_filter.html:111
-msgid "Physics"
-msgstr "物理"
-
-#: templates/eduhub/_eduhub_base_top_filter.html:81
-#: templates/eduhub/_eduhub_base_top_filter.html:114
-msgid "Biology"
-msgstr "生物"
-
-#: templates/eduhub/_eduhub_base_top_filter.html:84
-#: templates/eduhub/_eduhub_base_top_filter.html:117
-msgid "Politics"
-msgstr "政治"
-
-#: templates/eduhub/_eduhub_base_top_filter.html:87
-#: templates/eduhub/_eduhub_base_top_filter.html:120
+#: templates/eduhub/_eduhub_base_top_filter.html:66
+#: templates/eduhub/_eduhub_base_top_filter.html:109
+#: templates/eduhub/_eduhub_base_top_filter.html:151
 msgid "Information Technology"
 msgstr "信息技术"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:95
+#: templates/eduhub/_eduhub_base_top_filter.html:71
+#: templates/eduhub/_eduhub_base_top_filter.html:113
+#: templates/eduhub/_eduhub_base_top_filter.html:155
+#: templates/eduhub/_eduhub_base_top_filter.html:217
+msgid "Art"
+msgstr "艺术"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:76
+msgid "Junior high school"
+msgstr "初中"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:93
+#: templates/eduhub/_eduhub_base_top_filter.html:135
+msgid "Geography"
+msgstr "地理"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:97
+#: templates/eduhub/_eduhub_base_top_filter.html:139
+msgid "Physics"
+msgstr "物理"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:101
+#: templates/eduhub/_eduhub_base_top_filter.html:143
+msgid "Biology"
+msgstr "生物"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:105
+#: templates/eduhub/_eduhub_base_top_filter.html:147
+msgid "Politics"
+msgstr "政治"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:118
 msgid "Senior high school"
 msgstr "高中"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:132
+#: templates/eduhub/_eduhub_base_top_filter.html:165
 msgid "Philosophy"
 msgstr "哲学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:135
+#: templates/eduhub/_eduhub_base_top_filter.html:169
 msgid "Economics"
 msgstr "经济学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:138
+#: templates/eduhub/_eduhub_base_top_filter.html:173
 msgid "Law"
 msgstr "法学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:141
+#: templates/eduhub/_eduhub_base_top_filter.html:177
 msgid "Pedagogy"
 msgstr "教育学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:144
+#: templates/eduhub/_eduhub_base_top_filter.html:181
 msgid "Jurisprudence"
 msgstr "法学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:147
+#: templates/eduhub/_eduhub_base_top_filter.html:185
 msgid "Literature"
 msgstr "文学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:150
+#: templates/eduhub/_eduhub_base_top_filter.html:189
 msgid "History"
 msgstr "历史学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:153
+#: templates/eduhub/_eduhub_base_top_filter.html:193
 msgid "Sciences"
 msgstr "理学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:156
+#: templates/eduhub/_eduhub_base_top_filter.html:197
 msgid "Engineering"
 msgstr "工学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:159
+#: templates/eduhub/_eduhub_base_top_filter.html:201
 msgid "Agriculture"
 msgstr "农学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:162
+#: templates/eduhub/_eduhub_base_top_filter.html:205
 msgid "Medicine"
 msgstr "医学"
 
-#: templates/eduhub/_eduhub_base_top_filter.html:165
+#: templates/eduhub/_eduhub_base_top_filter.html:209
 msgid "Military "
 msgstr "军事学 "
 
-#: templates/eduhub/_eduhub_base_top_filter.html:168
+#: templates/eduhub/_eduhub_base_top_filter.html:213
 msgid "Management"
 msgstr "管理学"
+
+#: templates/eduhub/_eduhub_base_top_filter.html:223
+#: templates/eduhub/label_list.html:33
+msgid "All"
+msgstr "全部"
 
 #: templates/eduhub/content_create.html:42
 #: templates/eduhub/funcontent_create.html:43
@@ -3570,6 +3571,12 @@ msgstr "下翻 &rsaquo;"
 #: venv/lib/python3.8/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
 msgid "&lsaquo; Prev"
 msgstr "&lsaquo; 上翻"
+
+#~ msgid "Preschool education"
+#~ msgstr "学前教育"
+
+#~ msgid "Information Technology "
+#~ msgstr "信息技术 "
 
 #~ msgid "Survey"
 #~ msgstr "问卷调查"
