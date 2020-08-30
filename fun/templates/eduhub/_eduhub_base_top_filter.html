@@ -11,38 +11,171 @@
 {% load funtag %}
 
 
-<div class="dropdown-menu" 
-    aria-labelledby="eduhubTopFilterDropdown" 
-    id="eduhubTopFilterDropdownMenu">
+<div class="collapse" id="top_filter_collapse">
+    <div class="card card-body">
+        <h5>{% trans 'Preschool' %}</h5>
+        <hr/>
+        <p>
+            <button type="button" class="btn btn-link">
+                {% trans 'Math' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yuwen' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yingyu' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Science' %}
+            </button>
+    
+        </p>
 
-    <a class="dropdown-item" href="#" 
-        data-filter_label="0">
-        {% trans 'Preschool education' %}
-    </a>
-    <a class="dropdown-item" href="#" 
-        data-filter_label="1">
-        {% trans 'Primary school' %}
-    </a>
-    <a class="dropdown-item" href="#" 
-        data-filter_label="2">
-        {% trans 'Junior high school' %}
-    </a>
-    <a class="dropdown-item" href="#" 
-        data-filter_label="3">
-        {% trans 'Senior high school' %}
-    </a>
-    <a class="dropdown-item" href="#" 
-        data-filter_label="4">
-        {% trans 'College' %}
-    </a>
-    <a class="dropdown-item" href="#" 
-        data-filter_label="5">
-        {% trans 'Others' %}
-    </a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#"  
-        data-filter_label="">
-        {% trans 'All' %}
-    </a>
+        <h5>{% trans 'Primary school' %}</h5>
+        <hr/>
 
+        <p>
+            <button type="button" class="btn btn-link">
+                {% trans 'Math' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yuwen' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yingyu' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Science' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Morality and Society' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Information Technology ' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Art' %}
+            </button>
+    
+        </p>
+
+        <h5>{% trans 'Junior high school' %}</h5>
+        <hr/>
+        <p>
+            <button type="button" class="btn btn-link">
+                {% trans 'Math' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yuwen' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yingyu' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Geography' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Physics' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Biology' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Politics' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Information Technology' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Art' %}
+            </button>
+    
+        </p>
+
+        <h5>{% trans 'Senior high school' %}</h5>
+        <hr/>
+        <p>
+            <button type="button" class="btn btn-link">
+                {% trans 'Math' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yuwen' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Yingyu' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Geography' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Physics' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Biology' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Politics' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Information Technology' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Art' %}
+            </button>
+    
+        </p>
+
+        <h5>{% trans 'College' %}</h5>
+        <hr/>
+        <p>
+            <button type="button" class="btn btn-link">
+                {% trans 'Philosophy' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Economics' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Law' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Pedagogy' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Jurisprudence' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Literature' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'History' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Sciences' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Engineering' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Agriculture' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Medicine' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Military ' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Management' %}
+            </button>
+            <button type="button" class="btn btn-link">
+                {% trans 'Art' %}
+            </button>
+            
+        </p>
+        
+        <h5 style="cursor: pointer;" class="text-primary">
+            {% trans 'All' %}
+        </h5>    
+
+    </div>
 </div>

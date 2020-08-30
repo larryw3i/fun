@@ -150,7 +150,7 @@ venv/
 funlog/django_fun.log
 
 # SETTINGS.JSON
-.vscode/settings.json
+.vscode/
 
 # STATIC_FILES
 staticfiles/node_modules

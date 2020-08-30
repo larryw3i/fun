@@ -29,22 +29,17 @@
                 <span>=</span>
             </button>
             <div class="collapse navbar-collapse" id="eduhubNavbarContent">
-                <ul class="navbar-nav mr-auto align-middle align-items-center">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" 
-                            id="eduhubTopFilterDropdown" role="button" 
-                            data-toggle="dropdown" aria-haspopup="true" 
-                            aria-expanded="false">
+                <ul class="navbar-nav mr-auto align-middle 
+                    align-items-center">
+
+                    <li class="nav-item">  
+                        <a class="text text-primary" 
+                            data-toggle="collapse" 
+                            href="#top_filter_collapse" 
+                            aria-expanded="false" aria-controls="top_filter_collapse">
                             {% get_current_eduhub_top_filter %}
                         </a>
-                        {% include 'eduhub/_eduhub_base_top_filter.html' %}
                     </li>
-                    
-                    {% comment %}
-                        <li class="nav-item">
-                            <a class="nav-link "  href="#">{% trans 'Survey' %}</a>
-                        </li>
-                    {% endcomment %}
 
                     <li class="nav-item">
                         <a class="nav-link "  
@@ -52,6 +47,7 @@
                             {% trans 'Eduhub labels' %}
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link "  
                             href="{% url 'eduhub:funcontent_list_all' %}">
@@ -59,14 +55,6 @@
                         </a>
                     </li>
 
-                    {% comment %}
-                        <li class="nav-item">
-                            <a class="nav-link "  
-                                href="{% url 'eduhub:funcontent_list_all' %}">
-                                {% trans 'Eduhub tests' %}
-                            </a>
-                        </li>
-                    {% endcomment %}
 
                 </ul>
 
@@ -90,9 +78,18 @@
                     </button>
 
                 </form>
+
             </div>
         </div> 
     </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12">
+                {% include 'eduhub/_eduhub_base_top_filter.html' %}
+            </div>
+        </div>
+    </div>
 
 {% endblock subnavbar %}
 
