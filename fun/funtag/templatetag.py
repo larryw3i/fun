@@ -106,3 +106,14 @@ def get_file_url(context, file_id):
             'funfile:get_file',
             kwargs={"file_id": file_id}
         )
+
+@register.simple_tag(takes_context=True)
+def get_top_filter_path( context ):
+    language_code = context['request'].LANGUAGE_CODE
+    top_filter_html = 'eduhub/_top_filters/_eduhub_base_top_filter.' \
+        +f'{ language_code }.html'
+    if os.path.exists( settings.BASE_DIR + '/templates' + top_filter_html ):
+
+        return top_filter_html
+
+    return 'eduhub/_top_filters/_eduhub_base_top_filter.html'
