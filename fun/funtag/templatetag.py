@@ -64,8 +64,13 @@ def get_beian_text():
 @register.simple_tag(takes_context=True)
 def get_current_eduhub_filter(context):
     request = context['request']
-    return urllib.parse.unquote( 
+    eduhub_filter = urllib.parse.unquote( 
         request.COOKIES.get('eduhub_filter', _('ALL')) )
+
+    if '/' not in eduhub_filter:
+        return eduhub_filter
+    eduhub_filter_split = eduhub_filter.split('/')
+    return f'{_(eduhub_filter_split[0])}/{_(eduhub_filter_split[1] )}'
 
 
 @register.simple_tag(takes_context=True)

@@ -28,9 +28,9 @@
     });
 
     $(document).on('click', '.second_filter', (event)=>{
-        let second_filter = $(event.currentTarget).text().trim();
+        let second_filter = $(event.currentTarget).data('label');
         let first_filter = $( event.currentTarget ).data('first_filter');
-        first_filter = $(`.${first_filter}`).text().trim();
+        first_filter = $(`.${first_filter}`).data('label');
         
         Cookies.set(
             'eduhub_filter',
