@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-03 12:24+0000\n"
+"POT-Creation-Date: 2020-10-03 15:41+0000\n"
 "PO-Revision-Date: 2020-04-20 10:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -620,25 +620,31 @@ msgid "Confirm E-mail Address"
 msgstr ""
 
 #: templates/account/email_confirm.html:19
-msgid "Please confirm that"
+#, python-format
+msgid ""
+"\n"
+"                Please confirm that \n"
+"                <a href=\"mailto:%(email)s\"\n"
+"                    style=\"font-size: larger;\">\n"
+"                    %(email)s\n"
+"                </a> is an e-mail address for user \n"
+"                <span style=\"font-weight: bolder;\">%(user_display)s</"
+"span>. \n"
+"            "
 msgstr ""
 
-#: templates/account/email_confirm.html:24
-msgid "is an e-mail address for user {{ user_display }}"
-msgstr ""
-
-#: templates/account/email_confirm.html:31
+#: templates/account/email_confirm.html:34
 msgid "Confirm"
 msgstr ""
 
-#: templates/account/email_confirm.html:41
+#: templates/account/email_confirm.html:44
 msgid ""
 "\n"
 "                This e-mail confirmation link expired or is invalid. Please\n"
 "            "
 msgstr ""
 
-#: templates/account/email_confirm.html:46
+#: templates/account/email_confirm.html:49
 msgid "issue a new e-mail confirmation request"
 msgstr ""
 
