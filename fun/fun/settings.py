@@ -128,7 +128,7 @@ WSGI_APPLICATION = 'fun.wsgi.application'
 
 DATABASES = {
     # psql
-    'default': {
+    'psql': {
         'ENGINE': app_env['database']['engine'],
         'NAME': app_env['database']['name'],
         'USER': app_env['database']['user'],
@@ -136,7 +136,7 @@ DATABASES = {
         'HOST': app_env['database']['host'],
         'PORT': app_env['database']['port']
     },
-    'sqlite3': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
