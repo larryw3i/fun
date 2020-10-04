@@ -53,7 +53,9 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
             user=self.request.user).exists()
 
         if not is_funuser_created:
-            new_funuser = Funuser(user=self.request.user)
+            new_funuser = Funuser(\
+                user=self.request.user, 
+                full_name = self.request.user.username)
             new_funuser.save()
 
             return new_funuser

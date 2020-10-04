@@ -15,7 +15,7 @@ from fun import settings
 funuser_mame = 'funuser'
 
 
-class Funuser(models.Model):
+class Funuser( models.Model ):
 
     class Meta:
         verbose_name = _('User information')

@@ -158,9 +158,4 @@
 
 {% block optionaljs %}
     <script src="{% static 'funuser/funuser.js' %}"></script>
-    <script>
-        if( $('#id_full_name').val().trim().length < 1  ) {
-            $('#id_full_name').val( '{{ request.user.username }}' );
-        }
-    </script>
 {% endblock optionaljs %}
