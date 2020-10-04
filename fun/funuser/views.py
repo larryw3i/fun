@@ -60,7 +60,9 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
 
             return new_funuser
         # super().get_object(queryset=queryset)
-        return Funuser.objects.get(user=self.request.user)
+        funuser = Funuser.objects.get(user=self.request.user)
+        funuser.full_name = self.request.user.username
+        return funuser
 
     def form_valid(self, form):
 
