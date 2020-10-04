@@ -33,8 +33,10 @@
         first_filter = $(`.${first_filter}`).data('label');
         
         Cookies.set(
-            'eduhub_filter',
-            `${first_filter}/${second_filter}`, 
+            'eduhub_first_filter', first_filter, 
+            { expires: 365 });
+        Cookies.set(
+            'eduhub_second_filter', second_filter, 
             { expires: 365 });
         
         location.reload();
@@ -43,7 +45,8 @@
 
     $(document).on('click', '.first_fliter_all', (event)=>{
         
-        Cookies.remove('eduhub_filter');
+        Cookies.remove('eduhub_first_filter');
+        Cookies.remove('eduhub_second_filter');
 
         location.reload();
 

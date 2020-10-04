@@ -62,15 +62,30 @@ def get_beian_text():
 
 
 @register.simple_tag(takes_context=True)
-def get_current_eduhub_filter(context):
+def get_first_filter(context):
     request = context['request']
-    eduhub_filter = urllib.parse.unquote( 
-        request.COOKIES.get('eduhub_filter', _('ALL')) )
+    eduhub_first_filter = urllib.parse.unquote( \
+        request.COOKIES.get('eduhub_first_filter', '' ) )
+    return _( eduhub_first_filter ) if len( eduhub_first_filter ) > 0 else ''
 
-    if '/' not in eduhub_filter:
-        return eduhub_filter
-    eduhub_filter_split = eduhub_filter.split('/')
-    return f'{_(eduhub_filter_split[0])}/{_(eduhub_filter_split[1] )}'
+@register.simple_tag(takes_context=True)
+def get_filter_split(context):
+    request = context['request']
+    eduhub_first_filter = urllib.parse.unquote( \
+        request.COOKIES.get('eduhub_first_filter', '' ) )
+    return '/' if len( eduhub_first_filter ) > 0 else ''
+
+@register.simple_tag(takes_context=True)
+def get_second_filter(context):
+    request = context['request']
+    eduhub_second_filter = urllib.parse.unquote( 
+        request.COOKIES.get('eduhub_second_filter', _('ALL')) )
+    return _( eduhub_second_filter ) 
+
+    # if '/' not in eduhub_filter:
+    #     return eduhub_filter
+    # eduhub_filter_split = eduhub_filter.split('/')
+    # return f'{_(eduhub_filter_split[0])}/{_(eduhub_filter_split[1] )}'
 
 
 @register.simple_tag(takes_context=True)

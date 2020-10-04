@@ -38,12 +38,20 @@
 
                     <li class="nav-item">  
                         <a class="text text-primary"
-                            style="font-weight: 700;" 
+                            style="font-weight: 700;
+                                border: solid violet;
+                                padding: 2px;
+                                border-radius: 20px;" 
                             data-toggle="collapse" 
                             href="#top_filter_collapse" 
                             aria-expanded="false" 
                             aria-controls="top_filter_collapse">
-                            {% get_current_eduhub_filter %}
+                            <span style="font-weight:bolder">
+                                {% get_first_filter %}</span>
+                            <span style="font-weight: bolder;">
+                                {% get_filter_split %}</span>
+                            <span style="font-weight: bold;">
+                                {% get_second_filter %}</span>
                         </a>
                     </li>
 
