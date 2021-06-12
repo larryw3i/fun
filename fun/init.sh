@@ -14,6 +14,10 @@ source venv/bin/activate
 pip3 install -r requirements.txt.example
 
 python3 manage.py makemigrations
+python3 manage.py makemigrations funhome
+python3 manage.py makemigrations eduhub
+python3 manage.py makemigrations funuser
+python3 manage.py makemigrations funfile
 
 python3 manage.py migrate
 
@@ -23,6 +27,8 @@ python3 manage.py compilemessages
 
 echo "create superuser. . ."
 python3 manage.py createsuperuser
+
+echo "copy .env.yaml.example to .env.yaml. . ."
 
 echo "try runserver. . ."
 python3 manage.py runserver

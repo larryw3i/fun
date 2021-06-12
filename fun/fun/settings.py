@@ -57,8 +57,11 @@ DEBUG = app_env['debug']
 
 SITE_ID = 1
 
-ALLOWED_HOSTS = ['*', ]
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+ALLOWED_HOSTS = app_env['ALLOWED_HOSTS']['DEBUG'] if DEBUG \
+    else app_env['ALLOWED_HOSTS']['NOT_DEBUG']
+    
 # Application definition
 
 INSTALLED_APPS = [
