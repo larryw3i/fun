@@ -128,14 +128,14 @@ WSGI_APPLICATION = 'fun.wsgi.application'
 
 DATABASES = {
     # psql
-    'psql': {
-        'ENGINE': app_env['database']['engine'],
-        'NAME': app_env['database']['name'],
-        'USER': app_env['database']['user'],
-        'PASSWORD': app_env['database']['password'],
-        'HOST': app_env['database']['host'],
-        'PORT': app_env['database']['port']
-    },
+    # 'psql': {
+    #     'ENGINE': app_env['database']['engine'],
+    #     'NAME': app_env['database']['name'],
+    #     'USER': app_env['database']['user'],
+    #     'PASSWORD': app_env['database']['password'],
+    #     'HOST': app_env['database']['host'],
+    #     'PORT': app_env['database']['port']
+    # },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
