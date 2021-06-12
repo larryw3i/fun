@@ -21,7 +21,7 @@
     "jquery": ">=3.5.0",
     "jquery-editable-select": "^2.2.5",
     "jquery-gotop": "^2.0.0",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.3",
     "js-cookie": "^2.2.1",
     "pdfjs-dist": "^2.2.228",
     "pdfjs-dist-work": "^2.1.266",
