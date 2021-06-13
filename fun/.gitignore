@@ -191,3 +191,6 @@ appconf.json
 
 # staticfiles
 staticfiles/
+
+# package-lock.json
+*/package-lock.json
