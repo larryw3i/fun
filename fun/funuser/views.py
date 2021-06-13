@@ -15,8 +15,6 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
-from hurry import filesize
-
 from fun import settings, funvalue
 from .models import Funuser, funuser_mame
 from .modelforms import FunuserModelForm

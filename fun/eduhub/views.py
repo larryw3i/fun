@@ -17,8 +17,8 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
-from hurry import filesize
-
+                                  
+from humanize import naturalsize
 from fun import funvalue, settings
 from fun.fundef import default_bleach_clean
 from fun.funvalue import subjects_top
@@ -104,7 +104,7 @@ class LabelCreateView(LoginRequiredMixin, CreateView):
         if form.instance.cover.file.size > max_cover_size:
             form.add_error('cover',  _(
                 'The length of cover should be less than')+' ' +
-                filesize.size(max_cover_size))
+                naturalsize(max_cover_size))
             return render(self.request, label_create_template,
                           context={'form': form})
 
@@ -275,7 +275,7 @@ class ContentCreateView(LoginRequiredMixin,  CreateView):
                 content_file.size > max_video_content_file_size:
             form.add_error('content_file',  _(
                 'The length of video file should be less than')+' ' +
-                filesize.size(max_video_content_file_size))
+                naturalsize(max_video_content_file_size))
             return render(self.request, content_create_template,
                           context={'form': form})
 
@@ -283,7 +283,7 @@ class ContentCreateView(LoginRequiredMixin,  CreateView):
                 content_file.size > max_pdf_content_file_size:
             form.add_error('content_file',  _(
                 'The length of pdf file should be less than')+' ' +
-                filesize.size(max_pdf_content_file_size))
+                naturalsize(max_pdf_content_file_size))
             return render(self.request, content_create_template,
                           context={'form': form})
         self.label_id = form.instance.label.id

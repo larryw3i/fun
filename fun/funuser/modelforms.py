@@ -5,9 +5,6 @@ import math
 from django import forms
 from django.forms import ImageField, ModelForm
 from django.utils.translation import gettext_lazy as _
-from djangovalidators.validators import FileSizeValidator
-from hurry import filesize
-
 from django.utils.formats import ISO_INPUT_FORMATS
 from .models import Funuser
 

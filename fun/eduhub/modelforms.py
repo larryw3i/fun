@@ -1,12 +1,10 @@
 
 import math
-from hurry import filesize
 from .models import Label, Content, Funcontent, Funclassification, \
     Eduhubhomesticker, Funtest
 from django import forms
 from django.forms import ModelForm, ImageField
 from django.utils.translation import gettext_lazy as _
-from djangovalidators.validators import FileSizeValidator
 from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.fields import RichTextUploadingFormField, \
     RichTextUploadingField
