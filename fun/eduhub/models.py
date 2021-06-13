@@ -40,7 +40,7 @@ class Label(models.Model):
     comment = models.CharField(
         max_length=64,   verbose_name=_('Label comment'))
     cover = models.ImageField(
-        upload_to=upload_to, blank=True,   verbose_name=_('Label cover'))
+        upload_to= upload_to, blank=True,   verbose_name=_('Label cover'))
     creating_date = models.DateTimeField(
         auto_now_add=True,   verbose_name=_('Label creating date'))
     author = models.ForeignKey(
@@ -48,7 +48,7 @@ class Label(models.Model):
     is_legal = models.BooleanField(
         default=True,    verbose_name=_('Is label legal')+" ?")
 
-
+# deprecated
 class Content(models.Model):
 
     class Meta:

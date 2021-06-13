@@ -6,11 +6,9 @@ from django.core.files.storage import FileSystemStorage
 
 from fun import settings
 
-
-def upload_to(
-    instance, 
-    filename):
-    return  os.path.join( settings.MEDIA_ROOT , filename )
+def upload_to( instance, filename):
+    _upload_to =  os.path.join( 'fun', 'funfile', 'files')
+    return _upload_to
 
 class FunFileStorage(FileSystemStorage):
     def _save(self, name, content):
