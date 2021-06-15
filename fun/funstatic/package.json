@@ -15,9 +15,5 @@
     "js-cookie": "^2.2.1",
     "bootstrap": "^4.6.0",
     "bootswatch": "^4.6.0"
-  },
-  "devDependencies": {
-    "@types/jquery": "^3.3.31",
-    "typings": "^2.1.1"
   }
 }
