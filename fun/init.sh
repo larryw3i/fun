@@ -42,6 +42,15 @@ mkdir funfile/files
 echo "python3 manage.py createsuperuser. . ."
 python3 manage.py createsuperuser
 
+echo "cd ./funstatic. . ."
+cd ./funstatic
+
+echo "npm i. . ."
+npm i
+
+echo "cd .."
+cd ..
+
 echo "python3 manage.py runserver. . ."
 python3 manage.py runserver
 
