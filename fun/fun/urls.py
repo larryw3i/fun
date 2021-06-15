@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from fun import settings
+from django.views.static import serve as serve_static  
 
 urlpatterns = [
 
@@ -36,6 +37,8 @@ urlpatterns = [
     path('ckeditor/', include('fun._ckeditor_uploader_url')),
 
     # path('django_bfm/', include('django_bfm.urls')),
-    
 
-]   + static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
+    path(r'static/<path:path>', serve_static, \
+        {'document_root': settings.STATIC_ROOT},),
+
+]   #+ static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
