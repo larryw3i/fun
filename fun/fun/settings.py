@@ -246,6 +246,9 @@ STATIC_URL = '/static/'
 # FOR NGINX
 STATIC_ROOT = os.path.join(BASE_DIR,   'staticfiles')
 
+# FOR SERVE_STATIC
+SERVE_STATIC_ROOT = os.path.join(BASE_DIR,   'funstatic')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'funstatic'),
 ]
