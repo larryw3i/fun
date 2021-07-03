@@ -39,6 +39,9 @@ python3 manage.py createsuperuser
 echo "cd ./funstatic. . ."
 cd ./funstatic
 
+echo "git clone https://github.com/mozilla/pdf.js.git. . ."
+git clone https://github.com/mozilla/pdf.js.git
+
 yarn_path=$(which yarn)
 if [ -x "$yarn_path" ]; then
     echo "yarn upgrade. . ."
