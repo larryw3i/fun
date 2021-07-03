@@ -1,6 +1,10 @@
+# init.sh
 
 echo "cd "$(dirname "$0")". . ."
 cd "$(dirname "$0")"
+
+echo "set pdfjs_version"
+pdfjs_version="2.8.335"
 
 echo "check virtualenv. . ."
 virtualenv_path=$(which virtualenv)
@@ -39,8 +43,17 @@ python3 manage.py createsuperuser
 echo "cd ./funstatic. . ."
 cd ./funstatic
 
-echo "git clone https://github.com/mozilla/pdf.js.git. . ."
-git clone https://github.com/mozilla/pdf.js.git
+wget https://github.com/mozilla/pdf.js/releases/download/v${pdfjs_version}/\
+pdfjs-${pdfjs_version}-dist.zip
+unzip_path=$(which unzip)
+if [ -x "$unzip_path" ]; then
+    echo "unzip pdfjs-${pdfjs_version}-dist.zip -d pdfjs-${pdfjs_version}-dist"
+    unzip pdfjs-${pdfjs_version}-dist.zip -d pdf.js
+    rm pdfjs-${pdfjs_version}-dist.zip
+else
+    echo "unzip doesn't exist, please install it"
+    exit 
+fi
 
 yarn_path=$(which yarn)
 if [ -x "$yarn_path" ]; then
