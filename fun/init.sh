@@ -18,12 +18,6 @@ source venv/bin/activate
 echo "pip3 install -r requirements.txt.example. . ."
 pip3 install -r requirements.txt.example
 
-# python3 manage.py makemigrations
-# python3 manage.py makemigrations funhome
-# python3 manage.py makemigrations eduhub
-# python3 manage.py makemigrations funuser
-# python3 manage.py makemigrations funfile
-
 echo "cp .env.yaml.example to .env.yaml. . ."
 cp .env.yaml.example .env.yaml
 
@@ -45,8 +39,14 @@ python3 manage.py createsuperuser
 echo "cd ./funstatic. . ."
 cd ./funstatic
 
-echo "npm i. . ."
-npm i
+yarn_path=$(which yarn)
+if [ -x "$yarn_path" ]; then
+    echo "yarn upgrade. . ."
+    yarn upgrade
+else
+    echo "yarn doesn't exist, please install it"
+    exit 
+fi
 
 echo "cd .."
 cd ..
