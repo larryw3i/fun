@@ -57,8 +57,8 @@ fi
 
 yarn_path=$(which yarn)
 if [ -x "$yarn_path" ]; then
-    echo "yarn upgrade. . ."
-    yarn upgrade
+    echo "yarn install. . ."
+    yarn install
 else
     echo "yarn doesn't exist, please install it"
     exit 
