@@ -227,6 +227,7 @@ LANGUAGE_CODE = 'zh-hans'
 LANGUAGE_COOKIE_AGE = 10*365*24*60*60
 LANGUAGE_COOKIE_SECURE = app_env['language_cookie_secure']
 
+
 LANGUAGES = (
     ('en', _('English')),
     ('zh-hans', _('中文简体')),
