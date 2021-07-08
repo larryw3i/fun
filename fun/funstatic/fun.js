@@ -51,8 +51,7 @@
         window.location = event.currentTarget.dataset.url;
     });
 
-    if( $('.beian_text').text().trim().length < 1 ) $('.beian_text').hide();
-
+    if( $('.beian_text').text().trim().length < 1 ) $('.beian_text').remove();
     
     /**
      * 

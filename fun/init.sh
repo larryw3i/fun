@@ -43,17 +43,30 @@ python3 manage.py createsuperuser
 echo "cd ./funstatic. . ."
 cd ./funstatic
 
-wget https://github.com/mozilla/pdf.js/releases/download/v${pdfjs_version}/\
-pdfjs-${pdfjs_version}-dist.zip
-unzip_path=$(which unzip)
-if [ -x "$unzip_path" ]; then
-    echo "unzip pdfjs-${pdfjs_version}-dist.zip -d pdfjs-${pdfjs_version}-dist"
-    unzip pdfjs-${pdfjs_version}-dist.zip -d pdf.js
-    rm pdfjs-${pdfjs_version}-dist.zip
+download_unzip_pdfjs(){
+    wget https://github.com/mozilla/pdf.js/releases/download/v${pdfjs_version}/\
+    pdfjs-${pdfjs_version}-dist.zip
+    unzip_path=$(which unzip)
+    if [ -x "$unzip_path" ]; then
+        echo "unzip pdfjs-${pdfjs_version}-dist.zip -d pdf.js"
+        unzip pdfjs-${pdfjs_version}-dist.zip -d pdf.js
+        rm pdfjs-${pdfjs_version}-dist.zip
+    else
+        echo "unzip doesn't exist, please install it"
+        exit 
+    fi
+}
+
+
+read -r -p "Download mozilla's pdf.js and unzip it? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+    download_unzip_pdfjs
 else
-    echo "unzip doesn't exist, please install it"
-    exit 
+    echo "You can download mozilla's pdf.js on the https://mozilla.github.io/\
+pdf.js/getting_started/ and unzip it to fun/funstatic/pdf.js/"
 fi
+
 
 yarn_path=$(which yarn)
 if [ -x "$yarn_path" ]; then
