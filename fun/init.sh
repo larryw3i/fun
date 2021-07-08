@@ -44,8 +44,8 @@ echo "cd ./funstatic. . ."
 cd ./funstatic
 
 download_unzip_pdfjs(){
-    wget https://github.com/mozilla/pdf.js/releases/download/v${pdfjs_version}/\
-    pdfjs-${pdfjs_version}-dist.zip
+    wget "https://github.com/mozilla/pdf.js/releases/download/\
+v${pdfjs_version}/pdfjs-${pdfjs_version}-dist.zip"
     unzip_path=$(which unzip)
     if [ -x "$unzip_path" ]; then
         echo "unzip pdfjs-${pdfjs_version}-dist.zip -d pdf.js"

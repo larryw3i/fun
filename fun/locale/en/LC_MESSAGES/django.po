@@ -1344,7 +1344,7 @@ msgstr "Classification"
 
 #: templates/eduhub/how_to_classification.html:68
 msgid "classification copied"
-msgstr "classification"
+msgstr "classification copied"
 
 #: templates/eduhub/label_delete.html:38
 msgid "Name"

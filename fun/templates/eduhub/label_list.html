@@ -27,7 +27,7 @@
         {% if user.is_authenticated %}
             <a class="btn btn-sm btn-outline-info " 
                 id="id_label_list_view_mine_only">
-                {% if request.COOKIES.is_label_list_mine %}
+                {% if request.COOKIES.is_my_label_list %}
                     {% trans 'Mine' %}
                 {% else %}
                     {% trans 'All' %}

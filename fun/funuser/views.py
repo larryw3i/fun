@@ -45,7 +45,7 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_object(self, queryset=None):
         default_avatar_file_path = os.path.join(
-            settings.STATIC_ROOT, 'images', 'x_dove.webp')
+            settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
             
         is_funuser_created = Funuser.objects.filter(
             user=self.request.user).exists()

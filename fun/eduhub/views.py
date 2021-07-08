@@ -149,7 +149,7 @@ class LabelListView(ListView):
 
     def get_queryset(self):
         if (not self.request.user.is_authenticated) or \
-                self.request.COOKIES.get('is_label_list_mine', False):
+                self.request.COOKIES.get('is_my_label_list', False):
             return Label.objects.filter(is_legal=True)\
                 .order_by('-creating_date')
         else:

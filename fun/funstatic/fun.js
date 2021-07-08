@@ -59,10 +59,10 @@
      */
     function refreshLabelList( event )
     {
-        is_label_list_mine = Boolean( Cookies.get('is_label_list_mine') );
+        is_my_label_list = Boolean( Cookies.get('is_my_label_list') );
         Cookies.set( 
-            'is_label_list_mine' , 
-            is_label_list_mine?'':'1' , { expires: 365 } );
+            'is_my_label_list' , 
+            is_my_label_list?'':'1' , { expires: 365 } );
         location.reload();
     }
 

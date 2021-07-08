@@ -160,7 +160,7 @@ def get_all_bootswatch_themes(request):
 
 def get_favicon_ico(request):
 
-    file_path = os.path.join(settings.STATIC_ROOT, 'images', 'x_dove.webp')
+    file_path = os.path.join(settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
 
     if os.path.exists(file_path):
         content_type = magic.from_file(file_path, mime=True)
@@ -171,9 +171,9 @@ def get_favicon_ico(request):
 
 def get_default_homesticker():
     default_carousel_image_path = os.path.join(
-        settings.STATIC_ROOT, 'images', 'default_carousel_image.webp')
+        settings.SERVE_STATIC_ROOT, 'images', 'default_carousel_image.webp')
     default_carousel_content_file_path = os.path.join(
-        settings.STATIC_ROOT, 'media', 'default_carousel_content_file.pdf')
+        settings.SERVE_STATIC_ROOT, 'media', 'default_carousel_content_file.pdf')
     return Homesticker(
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
@@ -203,9 +203,9 @@ def legal_information(request):
 
 def get_default_funhomesticker():
     default_carousel_image_path = os.path.join(
-        settings.STATIC_ROOT, 'images', 'default_carousel_image.webp')
+        settings.SERVE_STATIC_ROOT, 'images', 'default_carousel_image.webp')
     default_carousel_content_file_path = os.path.join(
-        settings.STATIC_ROOT, 'media', 'default_carousel_content_file.pdf')
+        settings.SERVE_STATIC_ROOT, 'media', 'default_carousel_content_file.pdf')
     return Funhomesticker(
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
