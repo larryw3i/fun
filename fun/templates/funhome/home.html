@@ -23,7 +23,7 @@
         {% include 'funhome/home_appreciation.html' %}
     {% endif %}
 
-    {% get_switch_allow_registration as allow_registration %}
+    {% get_allow_registration as allow_registration %}
     {% if allow_registration %}
         <hr/>
         {% include 'funhome/home_join_us.html' %}

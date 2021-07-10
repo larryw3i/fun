@@ -41,5 +41,5 @@ urlpatterns = [
 
 ]   #+ static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
 
-if settings.app_env["switch"]["allow_registration"]:
+if settings.allow_registration:
     urlpatterns += [ path('accounts/', include('allauth.urls')) ]

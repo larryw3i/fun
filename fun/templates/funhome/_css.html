@@ -6,8 +6,8 @@
 <style>
     html{
         overflow-y:scroll;
-        {% get_switch_site_gray as switch_site_gray %}
-        {% if switch_site_gray %}
+        {% get_site_gray as site_gray %}
+        {% if site_gray %}
             filter: grayscale(100%);
         {% endif %}
     }
