@@ -137,3 +137,7 @@ def get_top_filter_path( context ):
         return top_filter_html
 
     return 'eduhub/_top_filters/_eduhub_base_top_filter.html'
+
+@register.simple_tag
+def get_switch_site_gray():
+    return app_env["switch"]['site_gray']

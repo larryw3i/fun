@@ -1,12 +1,17 @@
 
-        
-{% load static %}
- 
-
+{% load static %} 
 {% load funtag %}
 
-
-<style>html{overflow-y:scroll;}</style>
+{# Try to be as simple and beautiful as possible here #}
+<style>
+    html{
+        overflow-y:scroll;
+        {% get_switch_site_gray as switch_site_gray %}
+        {% if switch_site_gray %}
+            filter: grayscale(100%);
+        {% endif %}
+    }
+</style>
 
 <link rel="stylesheet" href="{% static 'css/fun.css' %}"/>
 <link rel="stylesheet" href="{% static 'css/keyframes.css' %}"/>
