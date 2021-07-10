@@ -65,10 +65,10 @@
                         {% trans 'Log Out' %}
                     </a>
 
-                {% elif allow_registration %}
                     <a class="p-2 text-dark" href="{% url 'account_login' %}">
                         {% trans 'Log In' %}
                     </a>
+                {% elif allow_registration %}
                     <a class="btn btn-outline-primary" 
                         href="{% url 'account_signup' %}">
                         {% trans 'Sign Up' %}
