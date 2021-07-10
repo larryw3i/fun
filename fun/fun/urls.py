@@ -29,6 +29,8 @@ urlpatterns = [
     path('funfile/', include('funfile.urls')),
     
     path('eduhub/', include('eduhub.urls')),
+    
+    path('accounts/', include('allauth.urls')),
 
     path('funuser/', include('funuser.urls')),
 
@@ -41,5 +43,6 @@ urlpatterns = [
 
 ]   #+ static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
 
-if settings.allow_registration:
-    urlpatterns += [ path('accounts/', include('allauth.urls')) ]
+if not settings.allow_registration:
+    urlpatterns = [ path('accounts/signup/', include('funhome.urls')) ] +\
+    urlpatterns
