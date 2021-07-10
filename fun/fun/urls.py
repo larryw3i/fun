@@ -24,8 +24,6 @@ urlpatterns = [
 
     path('', include('funhome.urls')),
 
-    path('accounts/', include('allauth.urls')),
-
     path('admin/', admin.site.urls),
 
     path('funfile/', include('funfile.urls')),
@@ -42,3 +40,6 @@ urlpatterns = [
         {'document_root': settings.SERVE_STATIC_ROOT },),
 
 ]   #+ static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
+
+if settings.app_env["switch"]["allow_registration"]:
+    urlpatterns += [ path('accounts/', include('allauth.urls')) ]

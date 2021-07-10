@@ -141,3 +141,7 @@ def get_top_filter_path( context ):
 @register.simple_tag
 def get_switch_site_gray():
     return app_env["switch"]['site_gray']
+
+@register.simple_tag
+def get_switch_allow_registration():
+    return app_env["switch"]['allow_registration']

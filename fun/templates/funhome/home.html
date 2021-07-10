@@ -4,6 +4,7 @@
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
+{% load funtag %}
 
 {% load static %}
 
@@ -20,6 +21,10 @@
         {% include 'funhome/home_funhomesticker.html' %}
         <hr/>
         {% include 'funhome/home_appreciation.html' %}
+    {% endif %}
+
+    {% get_switch_allow_registration as allow_registration %}
+    {% if allow_registration %}
         <hr/>
         {% include 'funhome/home_join_us.html' %}
     {% endif %}
