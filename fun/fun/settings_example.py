@@ -35,32 +35,23 @@ if not path.exists( funlog_path ):
     open(funlog_path, 'a' ).close()
 
 
-app_env_path = path.join( BASE_DIR, '.env.yaml' )
-
-if not path.exists( app_env_path ):
-    raise Exception(
-        'You should custon your .env.yaml file to keep app run normally')
-        
-app_env = None
-with open( app_env_path, 'r' ) as f:
-    app_env = yaml.safe_load( f )
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = app_env['env']['secret_key']
+
+SECRET_KEY = '5cc9e212-cde3-11eb-8b35-23bbd16ecfc4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = app_env['debug']
+DEBUG = True
 
 SITE_ID = 1
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-ALLOWED_HOSTS = app_env['ALLOWED_HOSTS']['DEBUG'] if DEBUG \
-    else app_env['ALLOWED_HOSTS']['NOT_DEBUG']
+ALLOWED_HOSTS = ["127.0.0.1"] if DEBUG \
+    else [ "*" ]
     
 # Application definition
 
@@ -132,12 +123,12 @@ WSGI_APPLICATION = 'fun.wsgi.application'
 DATABASES = {
     # psql
     # 'psql': {
-    #     'ENGINE': app_env['database']['engine'],
-    #     'NAME': app_env['database']['name'],
-    #     'USER': app_env['database']['user'],
-    #     'PASSWORD': app_env['database']['password'],
-    #     'HOST': app_env['database']['host'],
-    #     'PORT': app_env['database']['port']
+    #     'ENGINE': "",
+    #     'NAME': "",
+    #     'USER': "",
+    #     'PASSWORD': "",
+    #     'HOST': "",
+    #     'PORT': ""
     # },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -182,13 +173,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 
-EMAIL_HOST = app_env['email']['host']
-EMAIL_HOST_USER =  app_env['email']['user']
-EMAIL_HOST_PASSWORD =  app_env['email']['password']
-EMAIL_PORT =  app_env['email']['port']
-EMAIL_USE_SSL =  app_env['email']['use_ssl']
-EMAIL_FROM =  app_env['email']['from']
-DEFAULT_FROM_EMAIL =  app_env['email']['from']
+EMAIL_HOST = ""
+EMAIL_HOST_USER =  ""
+EMAIL_HOST_PASSWORD =  ""
+EMAIL_PORT =  ""
+EMAIL_USE_SSL =  ""
+EMAIL_FROM =  ""
+DEFAULT_FROM_EMAIL = ""
 
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = True
@@ -200,7 +191,7 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
 
 
-SERVER_EMAIL = app_env['email']['from']
+SERVER_EMAIL = ""
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
@@ -225,7 +216,7 @@ USE_L10N = True
 LANGUAGE_CODE = 'zh-hans'
 
 LANGUAGE_COOKIE_AGE = 10*365*24*60*60
-LANGUAGE_COOKIE_SECURE = app_env['language_cookie_secure']
+# LANGUAGE_COOKIE_SECURE = True
 
 
 LANGUAGES = (
@@ -291,7 +282,9 @@ DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
 
 # LOGGING
 
-ADMINS = MANAGERS = app_env['developers']
+ADMINS = MANAGERS = [
+    ( "" , "" ),
+]
 
 LOGGING = {
     'version': 1,

@@ -5,7 +5,11 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fun.settings')
+    fun_settings_path = os.path.join("fun",'settings.py')
+    os.environ.setdefault(\
+        'DJANGO_SETTINGS_MODULE', \
+        'fun.settings' if os.path.isfile( fun_settings_path ) else \
+        "fun.settings_example")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
