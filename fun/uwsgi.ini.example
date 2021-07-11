@@ -1,6 +1,6 @@
 [uwsgi]
 py-autoreload   = 1
-socket          = :8899
+socket          = :8000
 chdir           = .
 module          = fun.wsgi
 master          = true
@@ -8,3 +8,4 @@ processes       = 4
 vacuum          = true
 stats           =%(chdir)/uwsgi/uwsgi.status
 pidfile         =%(chdir)/uwsgi/uwsgi.pid
+virtualenv      =%(chdir)/venv/

@@ -199,6 +199,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
+ACCOUNT_EMAIL_SUBJECT_PREFIX = app_env['email']['subject_prefix']
 
 
 SERVER_EMAIL = app_env['email']['from']
