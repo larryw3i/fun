@@ -146,6 +146,3 @@ def get_site_gray():
 def get_allow_registration():
     return settings.allow_registration
 
-@register.simple_tag
-def get_site_url():
-    return settings.SITE_URL
