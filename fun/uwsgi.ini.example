@@ -9,4 +9,4 @@ vacuum          = true
 stats           =%(chdir)/uwsgi/uwsgi.status
 pidfile         =%(chdir)/uwsgi/uwsgi.pid
 virtualenv      =%(chdir)/venv/
-logto           =%(chdir)/uwsgi.log
+logto           =%(chdir)/uwsgi/uwsgi.log

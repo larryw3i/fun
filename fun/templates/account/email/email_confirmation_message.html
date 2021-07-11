@@ -19,7 +19,7 @@
         {% endblocktrans %}
         {% trans 'To confirm this is correct, go to' %} 
         {% get_site_url as site_url %}
-        <a href='{{ activate_url | replace("http://127.0.0.1:8000/","")  }}'>{% trans 'CONFIRM EMAIL' %}</a>
+        <a href='{{ activate_url  }}'>{% trans 'CONFIRM EMAIL' %}</a>
     </p>
  
     <div style='width:100%;text-align:right'>
