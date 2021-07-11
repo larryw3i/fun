@@ -56,6 +56,7 @@ SECRET_KEY = app_env['env']['secret_key']
 DEBUG = app_env['debug']
 
 SITE_ID = 1
+SITE_URL = app_env["SITE_URL"]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
