@@ -83,4 +83,7 @@ cd ..
 echo "python3 manage.py runserver. . ."
 python3 manage.py runserver
 
+echo "mkdir uwsgi. . ."
+mkdir uwsgi
+
 echo "Done."
