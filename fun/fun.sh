@@ -24,6 +24,10 @@ uwsgi_restart(){
     uwsgi_stop; uwsgi_start
 }
 
+nohup(){
+    nohup bash fun.sh uwsgi_start > nohup.out
+}
+
 init(){
 
     echo "cd "$(dirname "$0")". . ."
