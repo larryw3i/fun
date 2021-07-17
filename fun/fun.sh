@@ -25,7 +25,7 @@ uwsgi_restart(){
 }
 
 nohup(){
-    nohup bash fun.sh uwsgi_start > nohup.out
+    nohup uwsgi_start > nohup.out
 }
 
 init(){
@@ -94,7 +94,6 @@ fun/funstatic/pdf.js/"
     python3 manage.py runserver
     echo "mkdir uwsgi. . ."; mkdir uwsgi
     echo "Done."
-
 }
 
 update_gitignore(){
