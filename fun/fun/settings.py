@@ -236,9 +236,9 @@ LANGUAGES = (
     # ('zh-hant', _('中文繁體')),
 )
 
-LOCALE_PATHS = (
+LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
-)
+]
 
 
 # Static files (CSS, JavaScript, Images)
