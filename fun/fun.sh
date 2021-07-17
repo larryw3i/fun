@@ -50,9 +50,16 @@ init(){
     echo "cp .env.yaml.example to .env.yaml. . ."
     cp .env.yaml.example .env.yaml
     echo "python3 manage.py migrate. . ."
-    python3 manage.py migrate
+    manage.py migrate
+
+    echo "mkdir locale. . ."; mkdir locale
+    echo "python3 manage.py makemessages -a. . ."
+    python3 manage.py makemessages -a
+    echo "python3 manage.py makemessages -d djangojs -a. . ."
+    python3 manage.py makemessages -d djangojs -a
     echo "python3 manage.py compilemessages. . ."
     python3 manage.py compilemessages
+
     echo "mkdir funfile/files. . ."
     mkdir funfile/files
     echo "python3 manage.py createsuperuser. . ."
@@ -95,6 +102,16 @@ fun/funstatic/pdf.js/"
     echo "mkdir uwsgi. . ."; mkdir uwsgi
     echo "Done."
 
+}
+
+update_gitignore(){
+    git rm -r --cached .
+    git add .
+    read -p "commit now?(y/N)" commit_now
+    if [ "$commit_now" = 'y' ] || [ "$commit_now" = 'Y' ]; then
+        git commit -m 'update .gitignore'
+    fi
+    echo "gitignore updated!"
 }
 
 $1
