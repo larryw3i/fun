@@ -21,12 +21,12 @@ function checkCookies(){
  */
 function makeGlobalAlert( message='Hello',timeout=2.5, type='info' )
 {
-    $(`<div class="text-center rounded alert alert-${type}" role="alert">
+    $(`<div class="text-center rounded global-alert alert-${type}" role="alert">
         ${message}</div>`)
         .prependTo('body');
 
     setTimeout(()=>{
-        $('.alert').remove();
+        $('.global-alert').remove();
     }, timeout*1000);
 }
 
@@ -142,7 +142,9 @@ function previewImage(event){
 
     $(document).on('click', `[add-privacy-cookies]` , (event) =>{
         Cookies.set('read_privacy','1');
-        window.location = event.currentTarget.dataset.url;
+        privacy_url = event.currentTarget.dataset.url;
+        $('.global-alert').remove();
+        window.location = privacy_url;
     });
 
     $(document).on('click', `[click-to]` , (event) =>{
