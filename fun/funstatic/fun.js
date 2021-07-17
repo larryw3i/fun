@@ -112,15 +112,15 @@ function previewImage(event){
 
     // deprecated
     /////////
-    $(document).on('change', `input[type='file'].preview-image`, (event)=> {
+    $(document).on('change', `input.preview-image`, (event)=> {
         previewImage(event);
     });
 
-    $(document).on('change', `input[type='file'].preview-pdf`, (event)=> {
+    $(document).on('change', `input.preview-pdf`, (event)=> {
         previewPdf(event);
     });
 
-    $(document).on('change', `input[type='file'].preview-video`, (event)=> {
+    $(document).on('change', `input.preview-video`, (event)=> {
         previewVideo(event);
     });
     /////////
@@ -148,9 +148,8 @@ function previewImage(event){
     });
 
     $(document).on('click', `[click-to]` , (event) =>{
-        $(`${$(event.currentTarget).attr('click-to')}`).trigger('focus');
-    });
-    
+        $(`${$(event.currentTarget).attr('click-to')}`).trigger('click');
+    });   
 
     $(document).on('click', `.eduhub-label-card` , (event) =>{
         window.location = event.currentTarget.dataset.url;
