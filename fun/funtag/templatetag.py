@@ -53,12 +53,12 @@ def get_current_theme_name(context):
 
 @register.simple_tag()
 def get_beian_url():
-    return app_env['beian']['url']
+    return settings.BEIAN_URL
 
 
 @register.simple_tag()
 def get_beian_text():
-    return app_env['beian']['text']
+    return settings.BEIAN_TEXT
 
 
 @register.simple_tag(takes_context=True)
@@ -104,13 +104,13 @@ def get_funuser_avatar_url(context, user):
             kwargs={"file_id": funuser.avatar.name}
         ) \
         if (funuser and len(funuser.avatar.name) > 0) \
-        else (STATIC_URL + 'images/x_dove.webp')
+        else (settings.STATIC_URL + 'images/x_dove.webp')
 
 
 @register.simple_tag()
 def get_pdf_view_url():
-    return STATIC_URL + "libs/pdfjs-2.2.228-dist/web/viewer.min.html" +\
-        "?file=funfile/get_file/"  # combine a funfile name
+    return settings.STATIC_URL + "libs/pdfjs-2.2.228-dist/web/"+\
+    "viewer.min.html?file=funfile/get_file/"  # combine a funfile name
 
 
 @register.simple_tag()
@@ -140,9 +140,14 @@ def get_top_filter_path( context ):
 
 @register.simple_tag
 def get_site_gray():
-    return settings.site_gray
+    return settings.SITE_GRAY
 
 @register.simple_tag
 def get_allow_registration():
-    return settings.allow_registration
+    return settings.ALLOWED_REGISTRATION
+
+
+@register.simple_tag
+def get_site_name():
+    return settings.SITE_NAME
 

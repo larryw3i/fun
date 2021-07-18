@@ -43,6 +43,6 @@ urlpatterns = [
 
 ]   #+ static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
 
-if not settings.allow_registration:
+if not settings.ALLOWED_REGISTRATION:
     urlpatterns = [ path('accounts/signup/', include('funhome.urls')) ] +\
     urlpatterns

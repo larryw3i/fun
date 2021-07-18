@@ -50,18 +50,21 @@ with open( app_env_path, 'r' ) as f:
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = app_env['env']['secret_key']
+SECRET_KEY = app_env.get('env',{})\
+.get('secret_key','5c4e3560-e790-11eb-a933-afb3f3dc4f93')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = app_env['debug']
+DEBUG = app_env.get('debug')
 
 SITE_ID = 1
-SITE_DOMAIN = app_env["SITE_DOMAIN"]
+SITE_DOMAIN = app_env.get("site",{}).get("domain",'')
+SITE_NAME = app_env.get("site",{}).get("name",'')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-ALLOWED_HOSTS = app_env['ALLOWED_HOSTS']['DEBUG'] if DEBUG \
-    else app_env['ALLOWED_HOSTS']['NOT_DEBUG']
+ALLOWED_HOSTS = \
+app_env.get('allowed_hosts',{}).get('debug','127.0.0.1') if DEBUG \
+else app_env.get('allowed_hosts',{}).get('not_debug','*')
     
 # Application definition
 
@@ -134,12 +137,12 @@ WSGI_APPLICATION = 'fun.wsgi.application'
 DATABASES = {
     # psql
     # 'psql': {
-    #     'ENGINE': app_env['database']['engine'],
-    #     'NAME': app_env['database']['name'],
-    #     'USER': app_env['database']['user'],
-    #     'PASSWORD': app_env['database']['password'],
-    #     'HOST': app_env['database']['host'],
-    #     'PORT': app_env['database']['port']
+    #     'ENGINE': app_env.get('database',{}).get('engine',''),
+    #     'NAME': app_env.get('database',{}).get('name',''),
+    #     'USER': app_env.get('database',{}).get('user',''),
+    #     'PASSWORD': app_env.get('database',{}).get('password', ''),
+    #     'HOST': app_env.get('database',{}).get('host', ''),
+    #     'PORT': app_env.get('database',{}).get('port', '')
     # },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -184,13 +187,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 
-EMAIL_HOST = app_env['email']['host']
-EMAIL_HOST_USER =  app_env['email']['user']
-EMAIL_HOST_PASSWORD =  app_env['email']['password']
-EMAIL_PORT =  app_env['email']['port']
-EMAIL_USE_SSL =  app_env['email']['use_ssl']
-EMAIL_FROM =  app_env['email']['from']
-DEFAULT_FROM_EMAIL =  app_env['email']['from']
+EMAIL_HOST = app_env.get('email',{}).get('host', '')
+EMAIL_HOST_USER =  app_env.get('email',{}).get('user', '')
+EMAIL_HOST_PASSWORD =  app_env.get('email',{}).get('password', '')
+EMAIL_PORT =  app_env.get('email',{}).get('port', 465)
+EMAIL_USE_SSL =  app_env.get('email',{}).get('use_ssl', True)
+EMAIL_FROM =  app_env.get('email',{}).get('from', '')
+DEFAULT_FROM_EMAIL =  app_env.get('email',{}).get('from', '')
 
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = True
@@ -200,10 +203,10 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
-ACCOUNT_EMAIL_SUBJECT_PREFIX = app_env['email']['subject_prefix']
+ACCOUNT_EMAIL_SUBJECT_PREFIX = app_env.get('email',{}).get('subject_prefix', '')
 
 
-SERVER_EMAIL = app_env['email']['from']
+SERVER_EMAIL = app_env.get('email',{}).get('from', '')
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
@@ -228,7 +231,7 @@ USE_L10N = True
 LANGUAGE_CODE = 'zh-hans'
 
 LANGUAGE_COOKIE_AGE = 10*365*24*60*60
-LANGUAGE_COOKIE_SECURE = app_env['language_cookie_secure']
+LANGUAGE_COOKIE_SECURE = app_env.get('language_cookie_secure', True)
 
 
 LANGUAGES = (
@@ -294,7 +297,7 @@ DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
 
 # LOGGING
 
-ADMINS = MANAGERS = app_env['developers']
+ADMINS = MANAGERS = app_env.get('developers', '')
 
 LOGGING = {
     'version': 1,
@@ -351,9 +354,15 @@ BLEACH_STYLES = [
 # ENDBLEACH
 
 # SWITCH
-site_gray = app_env['switch']['site_gray']
-allow_registration = app_env['switch']['allow_registration']
+SITE_GRAY = app_env.get('switch',{}).get('site_gray', False)
+ALLOWED_REGISTRATION = app_env.get('switch',{}).get('allow_registration',False)
 # ENDSWITCH
+
+
+# BEIAN
+BEIAN_TEXT = app_env.get('beian',{}).get('text', '')
+BEIAN_URL = app_env.get('beian',{}).get('url', '')
+# ENDBEIAN
 
 #
 
