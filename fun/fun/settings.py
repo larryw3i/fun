@@ -51,7 +51,7 @@ with open( app_env_path, 'r' ) as f:
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = app_env.get('env',{})\
-.get('secret_key','5c4e3560-e790-11eb-a933-afb3f3dc4f93')
+.get('secret_key','')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = app_env.get('debug')
