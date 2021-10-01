@@ -36,7 +36,7 @@
         
                 {% for eduhubhomesticker in eduhubhomestickers|slice:':3' %}
 
-    {% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id as e_h_url %}        
+    {% url 'eduhub:eduhubhomesticker_detail' eduhubhomesticker.id as e_h_url %}
                 
                         <div class=
                     "carousel-item {% if forloop.first %} active {% endif %}">

@@ -29,6 +29,7 @@ update_gitignore(){
 }
 
 _start(){
+    cd ./fun
     python3 manage.py runserver
 }
 

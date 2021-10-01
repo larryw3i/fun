@@ -15,7 +15,6 @@
     {% if user.is_authenticated %}
         {# workspace #}
         <script> location.href = `{% url 'eduhub:label_list' %}`; </script>
-
     {% else %}
         {# welcome #}
         {% include 'funhome/home_funhomesticker.html' %}

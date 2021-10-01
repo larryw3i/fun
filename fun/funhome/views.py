@@ -177,9 +177,11 @@ def get_default_homesticker():
     return Homesticker(
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
-        cover=File(open(default_carousel_image_path)),
+        cover=os.path.exists(default_carousel_image_path) and \
+        File(open(default_carousel_image_path)) or None,
         promulgator=User.objects.get(is_superuser=True),
-        content_file=File(open(default_carousel_content_file_path)),
+        content_file=os.path.exists(default_carousel_content_file_path) and \
+        File(open(default_carousel_content_file_path)) or None,
         promulgating_date=datetime(2005, 7, 14, 12, 30),
         comment=_('larry'))
 
@@ -204,12 +206,11 @@ def legal_information(request):
 def get_default_funhomesticker():
     default_carousel_image_path = os.path.join(
         settings.SERVE_STATIC_ROOT, 'images', 'default_carousel_image.webp')
-    default_carousel_content_file_path = os.path.join(
-        settings.SERVE_STATIC_ROOT, 'media', 'default_carousel_content_file.pdf')
     return Funhomesticker(
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
-        cover=File(open(default_carousel_image_path)),
+        cover= os.path.exists(default_carousel_image_path) and \
+        File(open(default_carousel_image_path)) or None,
         promulgator=None,
         content='',
         promulgating_date=datetime(2005, 7, 14, 12, 30),
