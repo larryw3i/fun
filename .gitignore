@@ -128,81 +128,80 @@ dmypy.json
 ##############################################################################
 ##############################################################################
 
-#DOTENV
-.env
+# DOTENV
+fun/.env
 
 # MEDIA
 media
-!funstatic/media/
+!fun/funstatic/media/
 
 # APP_FILES
-funfile/files/
+fun/funfile/files/
 
 # uwsgi.ini 
-uwsgi.ini
+fun/uwsgi.ini
 
-funstatic/CACHE/
+fun/funstatic/CACHE/
 
 # VIRTUAL_ENV
 venv/
 
 # LOG
-funlog/django_fun.log
+fun/funlog/django_fun.log
 
 # SETTINGS.JSON
 .vscode/
 
 # STATIC_FILES
-staticfiles/node_modules
-staticfiles/admin/
-staticfiles/ckeditor/
-staticfiles/node_modules/
-funstatic/admin/
-funstatic/ckeditor/
-funstatic/node_modules/
+fun/staticfiles/node_modules
+fun/staticfiles/admin/
+fun/staticfiles/ckeditor/
+fun/staticfiles/node_modules/
+fun/funstatic/admin/
+fun/funstatic/ckeditor/
+fun/funstatic/node_modules/
 
-thesis.md
+fun/thesis.md
 
-uwsgi/uwsgi.status
-uwsgi/uwsgi.pid
+fun/uwsgi/uwsgi.status
+fun/uwsgi/uwsgi.pid
 
 # ADMINS.json
-ADMINS.json
+fun/ADMINS.json
 
 # funtest
-funtest/
-git_commit.sh
+fun/funtest/
 
 # data_privacy and legal information
 ## templates/funhome/data_privacy.html
 ## templates/funhome/legal_information.html
 
 # GIT_OUTGOING
-outgoing/
+fun/outgoing/
 
 # BACKUP
 fun.lwcp/
 
 # appconf
-appconf.json
+fun/appconf.json
 
 # .env.yaml
-.env.yaml
+fun/.env.yaml
 
 # staticfiles
-staticfiles/
+fun/staticfiles/
 
 # package-lock.json
 */package-lock.json
 
 # yarn.lock
-*/yarn.lock
+*.lock
 
 # pdf.js
-funstatic/pdf.js/
+fun/funstatic/pdf.js/
 
 # fun/nohup.out
-nohup.out
+fun/nohup.out
 
 ##############################################################################
 ##############################################################################

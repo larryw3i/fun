@@ -39,7 +39,7 @@ app_env_path = path.join( BASE_DIR, '.env.yaml' )
 
 if not path.exists( app_env_path ):
     raise Exception(
-        'You should custon your .env.yaml file to keep app run normally')
+        'You should custom your .env.yaml file to keep app run normally')
         
 app_env = None
 with open( app_env_path, 'r' ) as f:
