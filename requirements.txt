@@ -1,5 +1,4 @@
 django
-pyyaml
 django-crispy-forms
 django-imagekit
 pillow

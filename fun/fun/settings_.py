@@ -16,7 +16,6 @@ import os
 import sys
 from os import path
 
-import yaml
 from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
