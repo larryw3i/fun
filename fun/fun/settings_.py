@@ -90,7 +90,6 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',
             ],
             'libraries':{
-                'funtag': 'funtag.templatetag',
             }
         },
     },
@@ -173,13 +172,13 @@ USE_I18N = True
 
 USE_L10N = True
 
-LANGUAGES = [ ('en', _('English')) ]
+LANGUAGES = [('en', _('English'))]
 LANGUAGE_CODE = 'en-US'
 
 LANGUAGE_COOKIE_AGE = 10 * 365 * 24 * 60 * 60
 LANGUAGE_COOKIE_SECURE = True
 
-LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale'), ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -244,7 +243,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join( BASE_DIR, 'funlog','django_fun.log'),
+            'filename': os.path.join(BASE_DIR, 'funlog', 'django_fun.log'),
             'maxBytes': 8 * 1024 * 1024,
         },
         'mail_admins': {
@@ -284,4 +283,3 @@ ALLOWED_REGISTRATION = True
 
 BEIAN_TEXT = ''
 BEIAN_URL = ''
-

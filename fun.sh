@@ -7,13 +7,18 @@ p8(){
     autopep8 -i -a -a -r -v ./fun/
 }
 
-init(){
+activate_source(){
     if [[ -x "$(which virtualenv)" ]]; then
         [[ -f "./venv/bin/activate" ]] || virtualenv venv
         source venv/bin/activate
     else
         echo "virtualenv doesn't exist, please install it" && exit 
+        exit
     fi
+}
+
+init(){
+    activate_source
     pip3 install -r requirements.txt.example
     [[ -f "$(which yarn)" ]] && yarn installn --cwd ./fun/funstatic
 
@@ -43,11 +48,12 @@ update_gitignore(){
 }
 
 _start(){
+    activate_source
     python3 ./fun/manage.py runserver
 }
 
 ug(){   update_gitignore;   }
 _s(){   _start;             }
-gita(){ p8 && git add .     }
+gita(){ p8; git add . ;     }
 
 ${_args[0]}

@@ -2,6 +2,7 @@ from django import template
 
 register = template.Library()
 
+
 @register.simple_tag(takes_context=True)
 def get_first_filter(context):
     request = context['request']
@@ -25,6 +26,7 @@ def get_second_filter(context):
         request.COOKIES.get('eduhub_second_filter', _('ALL')))
     return _(eduhub_second_filter)
 
+
 @register.simple_tag()
 def get_classification_issue_url():
     return 'https://github.com/larryw3i/fun/blob/master/fun/templates/'\
@@ -39,4 +41,3 @@ def get_top_filter_path(context):
     if os.path.exists(settings.BASE_DIR + '/templates/' + top_filter_html):
         return top_filter_html
     return 'eduhub/_top_filters/_eduhub_base_top_filter.html'
-
