@@ -48,5 +48,6 @@ _start(){
 
 ug(){   update_gitignore;   }
 _s(){   _start;             }
+gita(){ p8 && git add .     }
 
 ${_args[0]}
