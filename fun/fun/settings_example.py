@@ -10,12 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-"""
-051020200027
-.env and appconf.json was deprecated, yaml is been used.
-"""
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import sys
@@ -43,7 +37,6 @@ if not path.exists(app_env_path):
 app_env = None
 with open(app_env_path, 'r') as f:
     app_env = yaml.safe_load(f)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -134,15 +127,6 @@ WSGI_APPLICATION = 'fun.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # psql
-    # 'psql': {
-    #     'ENGINE': app_env.get('database',{}).get('engine',''),
-    #     'NAME': app_env.get('database',{}).get('name',''),
-    #     'USER': app_env.get('database',{}).get('user',''),
-    #     'PASSWORD': app_env.get('database',{}).get('password', ''),
-    #     'HOST': app_env.get('database',{}).get('host', ''),
-    #     'PORT': app_env.get('database',{}).get('port', '')
-    # },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -237,8 +221,7 @@ LANGUAGE_COOKIE_SECURE = app_env.get('language_cookie_secure', True)
 
 LANGUAGES = (
     ('en', _('English')),
-    ('zh-hans', _('中文简体')),
-    # ('zh-hant', _('中文繁體')),
+    ('zh-hans', _('中文简体'))
 )
 
 LOCALE_PATHS = [
