@@ -96,20 +96,17 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'fun.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -133,19 +130,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
-
-# 'allauth.account.auth_backends.AuthenticationBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# ACCUNT_AND_EMAIL
 
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-
 
 EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
@@ -159,18 +151,13 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
 ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
-
 SERVER_EMAIL = ''
-
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
 
-
-# END ACCUNT_AND_EMAIL
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
@@ -186,31 +173,22 @@ USE_I18N = True
 
 USE_L10N = True
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'en'
 
 LANGUAGE_COOKIE_AGE = 10 * 365 * 24 * 60 * 60
 LANGUAGE_COOKIE_SECURE = True
 
+LANGUAGES = ( ('en', _('English')) )
 
-LANGUAGES = (
-    ('en', _('English')),
-    ('zh-hans', _('中文简体'))
-)
-
-LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale'),
-]
-
+LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
-# FOR NGINX
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# FOR SERVE_STATIC
 SERVE_STATIC_ROOT = os.path.join(BASE_DIR, 'funstatic')
 
 STATICFILES_DIRS = [
@@ -222,7 +200,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
-# MEDIA_FILE
+
 MEDIA_URL = '/funfile/get_file/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'funfile', 'files')
 CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
@@ -245,14 +223,9 @@ CKEDITOR_CONFIGS = {
     },
 }
 CKEDITOR_IMAGE_BACKEND = 'pillow'
-# END MEDIA_FILE
 
-# FILE_STORAGE
 DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
-# END FILE_STORAGE
 
-
-# LOGGING
 
 ADMINS = MANAGERS = ()
 
@@ -291,9 +264,7 @@ LOGGING = {
     }
 }
 
-# END_LOGGING
 
-# BLEACH
 BLEACH_TAGS = [
     'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p',
     'span', 'img', 'table', 'tbody', 'tr', 'td',
@@ -308,17 +279,10 @@ BLEACH_STYLES = [
     'padding-*',
     'margin-*', 'border', 'border-color', 'border-radius',
     'background-color', 'color', 'text-align']
-# ENDBLEACH
 
-# SWITCH
 SITE_GRAY = False
 ALLOWED_REGISTRATION = True
-# ENDSWITCH
 
-
-# BEIAN
 BEIAN_TEXT = ''
 BEIAN_URL = ''
-# ENDBEIAN
 
-#
