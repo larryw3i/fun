@@ -5,11 +5,7 @@ import sys
 
 
 def main():
-    settings_py_path = os.path.join('fun', 'settings.py')
-
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                          'fun.settings' if os.path.exists(settings_py_path)
-                          else 'fun.settings_')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fun.settings' )
 
     try:
         from django.core.management import execute_from_command_line

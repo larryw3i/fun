@@ -33,7 +33,7 @@ SITE_DOMAIN = ''
 SITE_NAME = ''
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-ALLOWED_HOSTS = '127.0.0.1' if DEBUG else '*'
+ALLOWED_HOSTS = ['127.0.0.1'] if DEBUG else ['*']
 
 # Application definition
 
@@ -173,12 +173,11 @@ USE_I18N = True
 
 USE_L10N = True
 
-LANGUAGE_CODE = 'en'
+LANGUAGES = [ ('en', _('English')) ]
+LANGUAGE_CODE = 'en-US'
 
 LANGUAGE_COOKIE_AGE = 10 * 365 * 24 * 60 * 60
 LANGUAGE_COOKIE_SECURE = True
-
-LANGUAGES = ( ('en', _('English')) )
 
 LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
 
@@ -245,7 +244,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': funlog_path,
+            'filename': os.path.join( BASE_DIR, 'funlog','django_fun.log'),
             'maxBytes': 8 * 1024 * 1024,
         },
         'mail_admins': {

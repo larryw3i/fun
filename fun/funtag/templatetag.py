@@ -15,7 +15,7 @@ from funuser.models import Funuser
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 
-from fun.settings import STATIC_URL, app_env
+from fun.settings import STATIC_URL
 
 import urllib
 
