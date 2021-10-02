@@ -36,7 +36,7 @@ init(){
     python3 ./fun/manage.py compilemessages
 
     read -p "Create superuser?(y/N)" _createsuperuser
-    [[ *"${_createsuperuser}"* == 'Yy' ]] && \
+    [[  "Yy" == *"${_createsuperuser}"* ]] && \
     python3 ./fun/manage.py createsuperuser
 
     python3 ./fun/manage.py runserver
@@ -46,7 +46,7 @@ init(){
 update_gitignore(){
     git rm -r --cached . && git add .
     read -p "commit now?(y/N)" commit_now
-    [[ *"$commit_now"* = 'Yy' ]] && git commit -m 'update .gitignore'
+    [[ "Yy" == *"$commit_now"* ]] && git commit -m 'update .gitignore'
     echo "gitignore updated!"
 }
 
