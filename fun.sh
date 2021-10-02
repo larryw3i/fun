@@ -17,11 +17,17 @@ init(){
     pip3 install -r requirements.txt.example
     [[ -f "$(which yarn)" ]] && yarn installn --cwd ./fun/funstatic
 
-    cp ./fun/.env.example.yaml ./fun/.env.yaml
+    [[ -d "./fun" ]] && mkdir ./fun
+    [[ -f "./fun/funlog" ]] && touch ./fun/funlog
+
     python3 ./fun/manage.py migrate
     python3 ./fun/manage.py compilemessages
     [[ -d "./funfile/files" ]] || mkdir ./fun/funfile/files
+    
+    read -p "Create superuser?(y/N)" _createsuperuser
+    [[ *"${_createsuperuser}"* = 'Yy' ]] && \
     python3 ./fun/manage.py createsuperuser
+    
     python3 ./fun/manage.py runserver
     echo "Done."
 }
