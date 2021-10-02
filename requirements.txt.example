@@ -8,3 +8,7 @@ django-allauth
 bleach
 humanize
 python-magic
+
+# dev
+autopep8
+isort

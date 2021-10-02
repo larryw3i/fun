@@ -15,14 +15,14 @@ init(){
         echo "virtualenv doesn't exist, please install it" && exit 
     fi
     pip3 install -r requirements.txt.example
-    [[ -f "$(which yarn)" ]] && cd fun/funstatic && yarn install
-    cd ..
-    cp ./.env.example.yaml ./.env.yaml
-    python3 manage.py migrate
-    python3 manage.py compilemessages
-    [[ -d "./funfile/files" ]] || mkdir ./funfile/files
-    python3 manage.py createsuperuser
-    python3 manage.py runserver
+    [[ -f "$(which yarn)" ]] && yarn installn --cwd ./fun/funstatic
+
+    cp ./fun/.env.example.yaml ./fun/.env.yaml
+    python3 ./fun/manage.py migrate
+    python3 ./fun/manage.py compilemessages
+    [[ -d "./funfile/files" ]] || mkdir ./fun/funfile/files
+    python3 ./fun/manage.py createsuperuser
+    python3 ./fun/manage.py runserver
     echo "Done."
 }
 
@@ -34,7 +34,6 @@ update_gitignore(){
 }
 
 _start(){
-    cd ./fun
     python3 ./fun/manage.py runserver
 }
 
