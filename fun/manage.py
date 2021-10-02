@@ -9,7 +9,7 @@ def main():
 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                           'fun.settings' if os.path.exists(settings_py_path)
-                          else 'fun_settings_example')
+                          else 'fun.settings_')
 
     try:
         from django.core.management import execute_from_command_line

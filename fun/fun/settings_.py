@@ -33,7 +33,7 @@ SITE_DOMAIN = ''
 SITE_NAME = ''
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-ALLOWED_HOSTS =  '127.0.0.1' if DEBUG else '*'
+ALLOWED_HOSTS = '127.0.0.1' if DEBUG else '*'
 
 # Application definition
 
