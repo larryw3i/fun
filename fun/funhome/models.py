@@ -32,7 +32,7 @@ class Homesticker(models.Model):
         editable=False,)
 
     title = models.CharField(
-        max_length=32,  verbose_name=_('Sticker title'))
+        max_length=32, verbose_name=_('Sticker title'))
 
     subtitle = models.TextField(
         max_length=64, verbose_name=_('Sticker subtitle'))
@@ -57,14 +57,14 @@ class Homesticker(models.Model):
 
     is_hidden = models.BooleanField(
         default=False,
-        verbose_name=_('Hidden')+" ?")
+        verbose_name=_('Hidden') + " ?")
 
 
 class Funhomesticker(models.Model):
 
     class Meta:
-        verbose_name = _('Home sticker')+f'({_("NEW")})'
-        verbose_name_plural = _('Home stickers')+f'({_("NEW")})'
+        verbose_name = _('Home sticker') + f'({_("NEW")})'
+        verbose_name_plural = _('Home stickers') + f'({_("NEW")})'
 
     def __str__(self):
         return self.title
@@ -94,14 +94,14 @@ class Funhomesticker(models.Model):
     content = fields.RichTextUploadingField()
 
     promulgating_date = models.DateTimeField(
-        auto_now_add=True,  
+        auto_now_add=True,
         verbose_name=_('Sticker promulgating date'))
 
     comment = models.TextField(
         max_length=128, verbose_name=_('Sticker comment'))
 
     is_hidden = models.BooleanField(
-        default=False, verbose_name=_('Hidden')+" ?")
+        default=False, verbose_name=_('Hidden') + " ?")
 
 
 class Appreciation(models.Model):
@@ -120,13 +120,13 @@ class Appreciation(models.Model):
     )
 
     invitee = models.CharField(
-        max_length = 8,
-        verbose_name = _('invitee')
+        max_length=8,
+        verbose_name=_('invitee')
     )
-    
+
     invitee_title = models.CharField(
-        max_length = 8,
-        verbose_name = _('invitee title')
+        max_length=8,
+        verbose_name=_('invitee title')
     )
 
     brief_comment = models.CharField(
@@ -143,7 +143,7 @@ class Appreciation(models.Model):
         max_length=128,
         verbose_name=_('home comment'),
     )
-    
+
     content = fields.RichTextUploadingField(
         max_length=4096,
         verbose_name=_('appreciation content')
@@ -155,8 +155,7 @@ class Appreciation(models.Model):
         verbose_name=_('Submitter')
     )
 
-    submitting_date =  models.DateTimeField(
-        auto_now_add=True,  
+    submitting_date = models.DateTimeField(
+        auto_now_add=True,
         verbose_name=_('Submitting date')
     )
-

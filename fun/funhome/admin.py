@@ -13,7 +13,7 @@ from django import forms
 class HomestickerAdmin(admin.ModelAdmin):
     fields = ['title', 'subtitle', 'cover', 'content_file',
               'comment', 'is_hidden']
-    list_display = ('title',  'promulgator',
+    list_display = ('title', 'promulgator',
                     'promulgating_date', 'is_hidden')
     list_per_page = 10
     ordering = ('-promulgating_date',)
@@ -26,7 +26,7 @@ class HomestickerAdmin(admin.ModelAdmin):
 @admin.register(Funhomesticker)
 class HomestickerAdmin(admin.ModelAdmin):
     fields = ['title', 'subtitle', 'cover', 'content', 'comment', 'is_hidden']
-    list_display = ('title',  'promulgator',
+    list_display = ('title', 'promulgator',
                     'promulgating_date', 'is_hidden')
     list_per_page = 10
     ordering = ('-promulgating_date',)
@@ -40,6 +40,7 @@ class HomestickerAdmin(admin.ModelAdmin):
         obj.promulgator = request.user
         return super().save_model(request, obj, form, change)
 
+
 @admin.register(Appreciation)
 class AppreciationAdmin(admin.ModelAdmin):
     fields = [
@@ -52,11 +53,11 @@ class AppreciationAdmin(admin.ModelAdmin):
     ]
 
     list_display = (
-        'brief_comment', 'invitee',  'home_comment',)
+        'brief_comment', 'invitee', 'home_comment',)
 
     list_per_page = 5
 
-    ordering = ( '-submitting_date', )
+    ordering = ('-submitting_date', )
 
     def save_model(self, request, obj, form, change):
         obj.content = default_bleach_clean(obj.content)

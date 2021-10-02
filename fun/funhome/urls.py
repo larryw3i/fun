@@ -6,7 +6,7 @@ from django.views.i18n import JavaScriptCatalog
 urlpatterns = [
 
     path('i18n/', include('django.conf.urls.i18n')),
-    path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog' ),
+    path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
 
     path('homesticker_detail/<uuid:pk>',
          views.HomestickerDetailView.as_view(), name='homesticker_detail'),
@@ -27,7 +27,7 @@ urlpatterns = [
     path('legal_information', views.legal_information,
          name='legal_information'),
 
-    path('favicon.ico', views.get_favicon_ico,  name='favicon.ico'),
+    path('favicon.ico', views.get_favicon_ico, name='favicon.ico'),
 
     path('#', views.HomeView.as_view(), name='##'),
     path('', views.HomeView.as_view(), name='#'),

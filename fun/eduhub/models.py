@@ -37,17 +37,19 @@ class Label(models.Model):
         max_length=64, blank=False,
         verbose_name=_('Label name'))
     comment = models.CharField(
-        max_length=64,   verbose_name=_('Label comment'))
+        max_length=64, verbose_name=_('Label comment'))
     cover = models.ImageField(
-        upload_to= upload_to, blank=True,   verbose_name=_('Label cover'))
+        upload_to=upload_to, blank=True, verbose_name=_('Label cover'))
     creating_date = models.DateTimeField(
-        auto_now_add=True,   verbose_name=_('Label creating date'))
+        auto_now_add=True, verbose_name=_('Label creating date'))
     author = models.ForeignKey(
-        to=User, on_delete=models.CASCADE,   verbose_name=_('Label author'))
+        to=User, on_delete=models.CASCADE, verbose_name=_('Label author'))
     is_legal = models.BooleanField(
-        default=True,    verbose_name=_('Is label legal')+" ?")
+        default=True, verbose_name=_('Is label legal') + " ?")
 
 # deprecated
+
+
 class Content(models.Model):
 
     class Meta:
@@ -66,13 +68,13 @@ class Content(models.Model):
         max_length=64, blank=False,
         verbose_name=_('Content title'))
     content_file = models.FileField(
-        upload_to=upload_to, blank=True,  verbose_name=_('Content file'))
+        upload_to=upload_to, blank=True, verbose_name=_('Content file'))
     uploading_date = models.DateTimeField(
-        auto_now_add=True,  verbose_name=_('Content uploading date'))
+        auto_now_add=True, verbose_name=_('Content uploading date'))
     comment = models.TextField(
-        max_length=64,  verbose_name=_('Content comment'))
+        max_length=64, verbose_name=_('Content comment'))
     is_legal = models.BooleanField(
-        default=True,   verbose_name=_('Is content legal'))
+        default=True, verbose_name=_('Is content legal'))
 
 
 class Funcontent(models.Model):
@@ -96,20 +98,20 @@ class Funcontent(models.Model):
 
     title = models.CharField(max_length=64, blank=False,
                              verbose_name=_('Content title'))
-                             
-    content = RichTextUploadingField(max_length= 2048,
-                             verbose_name=_('Content'))
+
+    content = RichTextUploadingField(max_length=2048,
+                                     verbose_name=_('Content'))
 
     classification = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Content classification'))
 
     uploading_date = models.DateTimeField(
-        auto_now_add=True,  verbose_name=_('Content uploading date'))
+        auto_now_add=True, verbose_name=_('Content uploading date'))
     comment = models.TextField(
-        max_length=64,  verbose_name=_('Content comment'))
+        max_length=64, verbose_name=_('Content comment'))
     is_legal = models.BooleanField(
-        default=True,   verbose_name=_('Is content legal'))
+        default=True, verbose_name=_('Is content legal'))
 
 
 class Eduhubhomesticker(models.Model):
@@ -150,7 +152,7 @@ class Eduhubhomesticker(models.Model):
         'Eduhub homepage sticker comment'))
 
     is_hidden = models.BooleanField(
-        default=False, verbose_name=_('Hidden')+" ?")
+        default=False, verbose_name=_('Hidden') + " ?")
 
 
 #  deprecated
@@ -179,8 +181,8 @@ class Funclassification(models.Model):
 
     level = models.IntegerField(
         validators=[validators.MinValueValidator(
-        1), validators.MaxValueValidator(10)],
-        
+            1), validators.MaxValueValidator(10)],
+
         default=1,
         verbose_name=_('Classification level'))
 
@@ -196,7 +198,8 @@ class Funclassification(models.Model):
         default=False,
         verbose_name=_('Is classification disabled'))
 
-class Funtest( models.Model ):
+
+class Funtest(models.Model):
 
     class Meta:
         verbose_name = _('Eduhub Test')
@@ -206,10 +209,10 @@ class Funtest( models.Model ):
         return self.name
 
     id = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, 
+        primary_key=True, default=uuid.uuid4,
         editable=False, unique=True)
 
-    test_title = models.CharField( 
+    test_title = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Test commit'))
 
@@ -217,21 +220,17 @@ class Funtest( models.Model ):
         to=User, on_delete=models.CASCADE,
         verbose_name=_('Test owner'))
 
-    test_text = models.TextField( max_length=12288, 
-        verbose_name= _('Template text') )
-        
+    test_text = models.TextField(max_length=12288,
+                                 verbose_name=_('Template text'))
+
     submitting_date = models.DateTimeField(
         auto_now_add=True,
-        verbose_name=_('Test submitting date') )
+        verbose_name=_('Test submitting date'))
 
     last_modifying_date = models.DateTimeField(
-        blank=True,  null=True,  
-        verbose_name=_('Last modifying date') )
+        blank=True, null=True,
+        verbose_name=_('Last modifying date'))
 
-
-    test_commit = models.CharField( 
+    test_commit = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Test commit'))
-
-
-

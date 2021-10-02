@@ -2,6 +2,11 @@
 
 _args=("$@") # all parameters from terminal.
 
+p8(){
+    isort ./fun/
+    autopep8 -i -a -a -r -v ./fun/
+}
+
 init(){
     if [[ -x "$(which virtualenv)" ]]; then
         [[ -f "./venv/bin/activate" ]] || virtualenv venv
@@ -30,10 +35,10 @@ update_gitignore(){
 
 _start(){
     cd ./fun
-    python3 manage.py runserver
+    python3 ./fun/manage.py runserver
 }
 
 ug(){   update_gitignore;   }
 _s(){   _start;             }
 
-$1
+${_args[0]}

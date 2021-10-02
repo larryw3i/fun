@@ -24,7 +24,7 @@ urlpatterns = [
     path('content_list/', views.ContentListView.as_view(),
          name='content_list'),
     path('content_list/<uuid:label>',
-         views.ContentListView.as_view(),  name='content_list'),
+         views.ContentListView.as_view(), name='content_list'),
     path('content_create/<uuid:label>',
          views.ContentCreateView.as_view(), name='content_create'),
     path('content_detail/<uuid:pk>',
@@ -37,7 +37,7 @@ urlpatterns = [
     path('funcontent_list/', views.FuncontentListView.as_view(),
          name='funcontent_list_all'),
     path('funcontent_list/<uuid:label>',
-         views.FuncontentListView.as_view(),  name='funcontent_list'),
+         views.FuncontentListView.as_view(), name='funcontent_list'),
     path('funcontent_create/<uuid:label>',
          views.FuncontentCreateView.as_view(), name='funcontent_create'),
     path('funcontent_detail/<uuid:pk>',
@@ -47,10 +47,10 @@ urlpatterns = [
     path('funcontent_update/<uuid:pk>',
          views.FuncontentUpdateView.as_view(), name='funcontent_update'),
 
-    path('funtest_create/', views.FuntestCreateView.as_view() ,
+    path('funtest_create/', views.FuntestCreateView.as_view(),
          name='funtest_create'),
 
-    path('funtest_content_preview/', views.FuntestContentPreview.as_view() ,
+    path('funtest_content_preview/', views.FuntestContentPreview.as_view(),
          name='funtest_content_preview'),
 
     path('how_to_classification', views.how_to_classification,

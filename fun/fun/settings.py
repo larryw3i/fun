@@ -15,57 +15,56 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 .env and appconf.json was deprecated, yaml is been used.
 """
 
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import sys
 import json
 import yaml
 from django.utils.translation import gettext_lazy as _
 from os import path
-
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-funlog_dir =  os.path.join(BASE_DIR, 'funlog')
-funlog_path =  os.path.join( funlog_dir,  'django_fun.log')
+funlog_dir = os.path.join(BASE_DIR, 'funlog')
+funlog_path = os.path.join(funlog_dir, 'django_fun.log')
 
-if not path.exists( funlog_path ):
-    os.makedirs( funlog_dir )
-    open(funlog_path, 'a' ).close()
+if not path.exists(funlog_path):
+    os.makedirs(funlog_dir)
+    open(funlog_path, 'a').close()
 
 
-app_env_path = path.join( BASE_DIR, '.env.yaml' )
+app_env_path = path.join(BASE_DIR, '.env.yaml')
 
-if not path.exists( app_env_path ):
+if not path.exists(app_env_path):
     raise Exception(
         'You should custom your .env.yaml file to keep app run normally')
-        
+
 app_env = None
-with open( app_env_path, 'r' ) as f:
-    app_env = yaml.safe_load( f )
+with open(app_env_path, 'r') as f:
+    app_env = yaml.safe_load(f)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = app_env.get('env',{})\
-.get('secret_key','')
+SECRET_KEY = app_env.get('env', {})\
+    .get('secret_key', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = app_env.get('debug')
 
 SITE_ID = 1
-SITE_DOMAIN = app_env.get("site",{}).get("domain",'')
-SITE_NAME = app_env.get("site",{}).get("name",'')
+SITE_DOMAIN = app_env.get("site", {}).get("domain", '')
+SITE_NAME = app_env.get("site", {}).get("name", '')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 ALLOWED_HOSTS = \
-app_env.get('allowed_hosts',{}).get('debug','127.0.0.1') if DEBUG \
-else app_env.get('allowed_hosts',{}).get('not_debug','*')
-    
+    app_env.get('allowed_hosts', {}).get('debug', '127.0.0.1') if DEBUG \
+    else app_env.get('allowed_hosts', {}).get('not_debug', '*')
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -187,13 +186,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 
-EMAIL_HOST = app_env.get('email',{}).get('host', '')
-EMAIL_HOST_USER =  app_env.get('email',{}).get('user', '')
-EMAIL_HOST_PASSWORD =  app_env.get('email',{}).get('password', '')
-EMAIL_PORT =  app_env.get('email',{}).get('port', 465)
-EMAIL_USE_SSL =  app_env.get('email',{}).get('use_ssl', True)
-EMAIL_FROM =  app_env.get('email',{}).get('from', '')
-DEFAULT_FROM_EMAIL =  app_env.get('email',{}).get('from', '')
+EMAIL_HOST = app_env.get('email', {}).get('host', '')
+EMAIL_HOST_USER = app_env.get('email', {}).get('user', '')
+EMAIL_HOST_PASSWORD = app_env.get('email', {}).get('password', '')
+EMAIL_PORT = app_env.get('email', {}).get('port', 465)
+EMAIL_USE_SSL = app_env.get('email', {}).get('use_ssl', True)
+EMAIL_FROM = app_env.get('email', {}).get('from', '')
+DEFAULT_FROM_EMAIL = app_env.get('email', {}).get('from', '')
 
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = True
@@ -203,10 +202,12 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 2
-ACCOUNT_EMAIL_SUBJECT_PREFIX = app_env.get('email',{}).get('subject_prefix', '')
+ACCOUNT_EMAIL_SUBJECT_PREFIX = app_env.get(
+    'email', {}).get(
+        'subject_prefix', '')
 
 
-SERVER_EMAIL = app_env.get('email',{}).get('from', '')
+SERVER_EMAIL = app_env.get('email', {}).get('from', '')
 
 LOGIN_REDIRECT_URL = '#'
 LOGOUT_REDIRECT_URL = '#'
@@ -230,7 +231,7 @@ USE_L10N = True
 
 LANGUAGE_CODE = 'zh-hans'
 
-LANGUAGE_COOKIE_AGE = 10*365*24*60*60
+LANGUAGE_COOKIE_AGE = 10 * 365 * 24 * 60 * 60
 LANGUAGE_COOKIE_SECURE = app_env.get('language_cookie_secure', True)
 
 
@@ -251,10 +252,10 @@ LOCALE_PATHS = [
 STATIC_URL = '/static/'
 
 # FOR NGINX
-STATIC_ROOT = os.path.join(BASE_DIR,   'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # FOR SERVE_STATIC
-SERVE_STATIC_ROOT = os.path.join(BASE_DIR,   'funstatic')
+SERVE_STATIC_ROOT = os.path.join(BASE_DIR, 'funstatic')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'funstatic'),
@@ -316,7 +317,7 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': funlog_path,
-            'maxBytes': 8*1024*1024,
+            'maxBytes': 8 * 1024 * 1024,
         },
         'mail_admins': {
             'level': 'ERROR',
@@ -338,10 +339,10 @@ LOGGING = {
 
 # BLEACH
 BLEACH_TAGS = [
-    'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p',\
-    'span', 'img', 'table', 'tbody', 'tr', 'td', \
-    'strong', 'u', 'ul', 'li', \
-    'thead', 'th' , 'div' ]
+    'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p',
+    'span', 'img', 'table', 'tbody', 'tr', 'td',
+    'strong', 'u', 'ul', 'li',
+    'thead', 'th', 'div']
 BLEACH_ATTRIBUTES = [
     'class', 'style', 'alt', 'title',
     'data-*', 'width', 'height', 'weight', 'src',
@@ -354,15 +355,16 @@ BLEACH_STYLES = [
 # ENDBLEACH
 
 # SWITCH
-SITE_GRAY = app_env.get('switch',{}).get('site_gray', False)
-ALLOWED_REGISTRATION = app_env.get('switch',{}).get('allow_registration',False)
+SITE_GRAY = app_env.get('switch', {}).get('site_gray', False)
+ALLOWED_REGISTRATION = app_env.get(
+    'switch', {}).get(
+        'allow_registration', False)
 # ENDSWITCH
 
 
 # BEIAN
-BEIAN_TEXT = app_env.get('beian',{}).get('text', '')
-BEIAN_URL = app_env.get('beian',{}).get('url', '')
+BEIAN_TEXT = app_env.get('beian', {}).get('text', '')
+BEIAN_URL = app_env.get('beian', {}).get('url', '')
 # ENDBEIAN
 
 #
-

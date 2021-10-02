@@ -23,7 +23,7 @@ from funfile.models import Checkup
 from .apps import FunhomeConfig
 from .modelforms import HomestickerModelForm, FunhomestickerModelForm
 from .models import Homesticker, homesticker_name, \
-    funhomesticker_name, Funhomesticker, Appreciation , appreciation_name
+    funhomesticker_name, Funhomesticker, Appreciation, appreciation_name
 import pytz
 
 home_template = FunhomeConfig.name + '/home.html'
@@ -146,6 +146,7 @@ class HomeView(TemplateView):
             'submitting_date')[:4]
         return context_data
 
+
 class AppreciationDetailView(DetailView):
     model = Appreciation
     template_name = appreciation_detail_template
@@ -154,12 +155,16 @@ class AppreciationDetailView(DetailView):
 def get_all_bootswatch_themes(request):
     if request.method == 'GET':
         return JsonResponse(
-            os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs',
+            os.listdir(os.path.join(settings.BASE_DIR, 'static', 'libs',
                                     'bootswatch', 'dist')), safe=False)
+
 
 def get_favicon_ico(request):
 
-    file_path = os.path.join(settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
+    file_path = os.path.join(
+        settings.SERVE_STATIC_ROOT,
+        'images',
+        'x_dove.webp')
 
     if os.path.exists(file_path):
         content_type = magic.from_file(file_path, mime=True)
@@ -176,10 +181,10 @@ def get_default_homesticker():
     return Homesticker(
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
-        cover=os.path.exists(default_carousel_image_path) and \
+        cover=os.path.exists(default_carousel_image_path) and
         File(open(default_carousel_image_path)) or None,
         promulgator=User.objects.get(is_superuser=True),
-        content_file=os.path.exists(default_carousel_content_file_path) and \
+        content_file=os.path.exists(default_carousel_content_file_path) and
         File(open(default_carousel_content_file_path)) or None,
         promulgating_date=datetime(2005, 7, 14, 12, 30),
         comment=_('larry'))
@@ -208,7 +213,7 @@ def get_default_funhomesticker():
     return Funhomesticker(
         title=_('X-DOVE'),
         subtitle=_('Larry`s sharing'),
-        cover= os.path.exists(default_carousel_image_path) and \
+        cover=os.path.exists(default_carousel_image_path) and
         File(open(default_carousel_image_path)) or None,
         promulgator=None,
         content='',

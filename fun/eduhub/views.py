@@ -17,7 +17,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
-                                  
+
 from humanize import naturalsize
 from fun import funvalue, settings
 from fun.fundef import default_bleach_clean
@@ -25,15 +25,15 @@ from fun.funvalue import subjects_top
 
 from .apps import EduhubConfig
 from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
-                         FuncontentModelForm, LabelModelForm , \
-                             FuntestModelForm)
+                         FuncontentModelForm, LabelModelForm,
+                         FuntestModelForm)
 from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
                      Label, content_name, eduhubhomesticker_name,
-                     funcontent_name, label_name, funtest_name , Funtest)
+                     funcontent_name, label_name, funtest_name, Funtest)
 
 # Create your views here.
 
-max_cover_size = 500*1024
+max_cover_size = 500 * 1024
 
 max_pdf_content_file_size = 5 * math.pow(1024, 2)
 max_video_content_file_size = 100 * math.pow(1024, 2)
@@ -92,18 +92,18 @@ class LabelCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
 
         if not form.instance.cover.file:
-            form.add_error('cover',  _('Cover image is required'))
+            form.add_error('cover', _('Cover image is required'))
             return render(self.request, label_create_template,
                           context={'form': form})
 
         if not str(form.instance.cover.file.content_type).startswith('image/'):
-            form.add_error('cover',  _('Image allowed only'))
+            form.add_error('cover', _('Image allowed only'))
             return render(self.request, label_create_template,
                           context={'form': form})
 
         if form.instance.cover.file.size > max_cover_size:
-            form.add_error('cover',  _(
-                'The length of cover should be less than')+' ' +
+            form.add_error('cover', _(
+                'The length of cover should be less than') + ' ' +
                 naturalsize(max_cover_size))
             return render(self.request, label_create_template,
                           context={'form': form})
@@ -214,8 +214,9 @@ class ContentListView(ListView):
     paginate_orphans = 1
 
     def get_queryset(self):
-        return Content.objects.filter(label=self.kwargs['label'],
-                                      is_legal=True).order_by('-uploading_date')
+        return Content.objects.filter(
+            label=self.kwargs['label'],
+            is_legal=True).order_by('-uploading_date')
 
     def render_to_response(self, context, **response_kwargs):
         response = super().render_to_response(context, **response_kwargs)
@@ -230,7 +231,7 @@ class ContentListView(ListView):
         return context_data
 
 
-class ContentCreateView(LoginRequiredMixin,  CreateView):
+class ContentCreateView(LoginRequiredMixin, CreateView):
     model = Content
     form_class = ContentModelForm
     template_name = content_create_template
@@ -254,35 +255,36 @@ class ContentCreateView(LoginRequiredMixin,  CreateView):
 
         if len(headmost_five) > 4 and \
             (datetime.now(pytz.timezone('UTC'))
-             - headmost_five[4].uploading_date).total_seconds()/3600 < 2.8:
-            form.add_error('content_file',  _('Frequently request')+" !")
+             - headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
+            form.add_error('content_file', _('Frequently request') + " !")
             return render(self.request, content_create_template,
                           context={'form': form})
 
         if not form.instance.content_file:
-            form.add_error('content_file',  _('Content file is required')+" !")
+            form.add_error('content_file',
+                           _('Content file is required') + " !")
             return render(self.request, content_create_template,
                           context={'form': form})
 
         content_file = form.instance.content_file.file
 
         if not content_file:
-            form.add_error('content_file',  _('Content file is required'))
+            form.add_error('content_file', _('Content file is required'))
             return render(self.request, content_create_template,
                           context={'form': form})
 
         if str(content_file.content_type).startswith('video/') and \
                 content_file.size > max_video_content_file_size:
-            form.add_error('content_file',  _(
-                'The length of video file should be less than')+' ' +
+            form.add_error('content_file', _(
+                'The length of video file should be less than') + ' ' +
                 naturalsize(max_video_content_file_size))
             return render(self.request, content_create_template,
                           context={'form': form})
 
         if str(content_file.content_type).endswith('/pdf') and \
                 content_file.size > max_pdf_content_file_size:
-            form.add_error('content_file',  _(
-                'The length of pdf file should be less than')+' ' +
+            form.add_error('content_file', _(
+                'The length of pdf file should be less than') + ' ' +
                 naturalsize(max_pdf_content_file_size))
             return render(self.request, content_create_template,
                           context={'form': form})
@@ -307,7 +309,7 @@ class ContentDetailView(DetailView):
         return context_data
 
 
-class ContentDeleteView(LoginRequiredMixin,  DeleteView):
+class ContentDeleteView(LoginRequiredMixin, DeleteView):
 
     model = Content
     form_class = ContentModelForm
@@ -338,7 +340,7 @@ class ContentDeleteView(LoginRequiredMixin,  DeleteView):
         return reverse('eduhub:content_list', kwargs={'label': self.label_id})
 
 
-class ContentUpdateView(LoginRequiredMixin,  UpdateView):
+class ContentUpdateView(LoginRequiredMixin, UpdateView):
 
     model = Content
     form_class = ContentModelForm
@@ -404,7 +406,7 @@ class FuncontentListView(ListView):
         return context_data
 
 
-class FuncontentCreateView(LoginRequiredMixin,  CreateView):
+class FuncontentCreateView(LoginRequiredMixin, CreateView):
     model = Funcontent
     form_class = FuncontentModelForm
     template_name = funcontent_create_template
@@ -430,10 +432,9 @@ class FuncontentCreateView(LoginRequiredMixin,  CreateView):
         headmost_five = Content.objects.filter(
             label__author=self.request.user).order_by('-uploading_date')[:5]
 
-        if len(headmost_five) > 4 \
-            and (datetime.now(pytz.timezone('UTC'))
-                 - headmost_five[4].uploading_date).total_seconds()/3600 < 2.8:
-            form.add_error('content',  _('Frequently request')+" !")
+        if len(headmost_five) > 4 and (datetime.now(pytz.timezone('UTC')) - \
+               headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
+            form.add_error('content', _('Frequently request') + " !")
             return render(self.request, content_create_template,
                           context={'form': form})
 
@@ -455,7 +456,7 @@ class FuncontentDetailView(DetailView):
     template_name = funcontent_detail_template
 
 
-class FuncontentDeleteView(LoginRequiredMixin,  DeleteView):
+class FuncontentDeleteView(LoginRequiredMixin, DeleteView):
 
     model = Funcontent
     form_class = FuncontentModelForm
@@ -478,7 +479,7 @@ class FuncontentDeleteView(LoginRequiredMixin,  DeleteView):
         return reverse('eduhub:content_list', kwargs={'label': self.label_id})
 
 
-class FuncontentUpdateView(LoginRequiredMixin,  UpdateView):
+class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
 
     model = Funcontent
     form_class = FuncontentModelForm
@@ -534,7 +535,6 @@ class EduhubSearch(TemplateView):
 
         search_filter = self.request.GET.get('filter', '')
         context_data = super().get_context_data(**kwargs)
-        
 
         if search_filter == 'labels' or search_filter == '':
             labels = Label.objects.filter(
@@ -563,14 +563,15 @@ class EduhubSearch(TemplateView):
                 funcontents, 5 if search_filter == '' else 10)
             funcontents = paginator.get_page(self.request.GET.get('page'))
             context_data['funcontents'] = funcontents
-        
+
         return context_data
 
 
 funtest_create_template = \
     f'{EduhubConfig.name}/{funtest_name}{funvalue.create_html}'
 
-class FuntestCreateView( CreateView ):
+
+class FuntestCreateView(CreateView):
     model = Funtest
     template_name = funtest_create_template
     form_class = FuntestModelForm
@@ -579,11 +580,13 @@ class FuntestCreateView( CreateView ):
         form.instance.test_owner = self.request.user
         return super().form_valid(form)
 
+
 funtest_content_preview = \
     f'{EduhubConfig.name}/funtest_content_preview.html'
-class FuntestContentPreview( TemplateView ):
-    template_name = funtest_content_preview
 
+
+class FuntestContentPreview(TemplateView):
+    template_name = funtest_content_preview
 
 
 def how_to_classification(request):

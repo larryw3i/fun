@@ -25,14 +25,18 @@ class HomestickerModelForm(ModelForm):
         }
 
         help_texts = {
-            'content_file': 
+            'content_file':
             _('content file, pdf and video file is allowed only')
         }
 
         widgets = {
-            'content_file': forms.FileInput(attrs={'class': 
-            'preview-pdf preview-video', 'accept': 'video/*, .pdf'}),
-            'comment': forms.Textarea(attrs={'rows': '5'}),
+            'content_file': forms.FileInput(
+                attrs={
+                    'class': 'preview-pdf preview-video',
+                    'accept': 'video/*, .pdf'}),
+            'comment': forms.Textarea(
+                attrs={
+                    'rows': '5'}),
         }
 
 
@@ -55,7 +59,7 @@ class FunhomestickerModelForm(ModelForm):
         }
 
 
-class AppreciationModelForm( ModelForm ):
+class AppreciationModelForm(ModelForm):
     class Meta:
         model = Appreciation
         fields = [

@@ -46,14 +46,14 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
     def get_object(self, queryset=None):
         default_avatar_file_path = os.path.join(
             settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
-            
+
         is_funuser_created = Funuser.objects.filter(
             user=self.request.user).exists()
 
         if not is_funuser_created:
-            new_funuser = Funuser(\
-                user=self.request.user, 
-                full_name = self.request.user.username)
+            new_funuser = Funuser(
+                user=self.request.user,
+                full_name=self.request.user.username)
             new_funuser.save()
 
             return new_funuser
@@ -66,7 +66,7 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
 
         if not Funuser.objects.filter(
                 user=self.request.user, id=form.instance.id).exists():
-            form.add_error('full_name',  _('Nice try'))
+            form.add_error('full_name', _('Nice try'))
             return render(
                 self.request, funuser_update_template, context={'form': form})
         return super().form_valid(form)

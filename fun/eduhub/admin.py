@@ -14,20 +14,20 @@ from ckeditor.widgets import CKEditorWidget
 
 @admin.register(Label)
 class LabelAdmin(admin.ModelAdmin):
-    fields = [\
-        'name', \
-        'comment', \
+    fields = [
+        'name',
+        'comment',
         'is_legal']
 
-    readonly_fields = [\
-        'name', \
+    readonly_fields = [
+        'name',
         'comment', ]
 
-    list_display = (\
-        'name', \
-        'author', \
-        'comment',\
-        'creating_date', \
+    list_display = (
+        'name',
+        'author',
+        'comment',
+        'creating_date',
         'is_legal', )
 
     list_per_page = 10
@@ -37,17 +37,17 @@ class LabelAdmin(admin.ModelAdmin):
 
 @admin.register(Funclassification)
 class FunclassificationAdmin(admin.ModelAdmin):
-    fields = [\
-        'name', 
-        'level', 
-        'parent', 
+    fields = [
+        'name',
+        'level',
+        'parent',
         'is_disabled']
 
     list_display = (
-        'name', 
-        'level', 
+        'name',
+        'level',
         'creating_date',
-        'creating_user', 
+        'creating_user',
         'is_disabled', )
 
     list_per_page = 10
@@ -67,18 +67,18 @@ class FunclassificationAdmin(admin.ModelAdmin):
 @admin.register(Eduhubhomesticker)
 class EduhubhomestickerAdmin(admin.ModelAdmin):
     fields = [
-        'title', 
-        'subtitle', 
-        'cover', 
+        'title',
+        'subtitle',
+        'cover',
         'content',
-        'description', 
-        'comment', 
+        'description',
+        'comment',
         'is_hidden']
 
     list_display = (
-        'title',  
+        'title',
         'promulgator',
-        'promulgating_date', 
+        'promulgating_date',
         'is_hidden')
 
     list_per_page = 10
@@ -86,7 +86,7 @@ class EduhubhomestickerAdmin(admin.ModelAdmin):
     formfield_overrides = {
         Eduhubhomesticker.title: {
             'widget': forms.TextInput(
-                attrs={  'autocomplete': 'off'})},
+                attrs={'autocomplete': 'off'})},
     }
 
     def save_model(self, request, obj, form, change):
@@ -95,34 +95,34 @@ class EduhubhomestickerAdmin(admin.ModelAdmin):
         return super().save_model(request, obj, form, change)
 
 
-@admin.register( Funcontent )
-class FuncontentAdmin( admin.ModelAdmin ):
-    readonly_fields = [\
-        'title', \
-        'label__name', \
-        'content' , \
-        'classification', 
-        'comment', 
-        'uploading_date' ]
+@admin.register(Funcontent)
+class FuncontentAdmin(admin.ModelAdmin):
+    readonly_fields = [
+        'title',
+        'label__name',
+        'content',
+        'classification',
+        'comment',
+        'uploading_date']
 
     fields = [
-        'title', 
-        'label__name', 
-        'content' , \
-        'classification', 
-        'comment', 
-        'uploading_date', 
+        'title',
+        'label__name',
+        'content',
+        'classification',
+        'comment',
+        'uploading_date',
         'is_legal']
 
     list_display = (
-        'title', 
-        'label__name', 
-        'content',\
+        'title',
+        'label__name',
+        'content',
         'comment',
-        'uploading_date' ,\
-        'classification', 
+        'uploading_date',
+        'classification',
         'is_legal')
-        
+
     list_per_page = 10
 
     ordering = ('-uploading_date',)

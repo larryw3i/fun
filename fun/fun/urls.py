@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from fun import settings
-from django.views.static import serve as serve_static  
+from django.views.static import serve as serve_static
 
 urlpatterns = [
 
@@ -27,9 +27,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('funfile/', include('funfile.urls')),
-    
+
     path('eduhub/', include('eduhub.urls')),
-    
+
     path('accounts/', include('allauth.urls')),
 
     path('funuser/', include('funuser.urls')),
@@ -39,10 +39,10 @@ urlpatterns = [
     # path('django_bfm/', include('django_bfm.urls')),
 
     path(r'static/<path:path>', serve_static, \
-        {'document_root': settings.SERVE_STATIC_ROOT },),
+         {'document_root': settings.SERVE_STATIC_ROOT},),
 
-]   #+ static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
+]  # + static( settings.STATIC_URL, document_root =  settings.STATIC_ROOT  )
 
 if not settings.ALLOWED_REGISTRATION:
-    urlpatterns = [ path('accounts/signup/', include('funhome.urls')) ] +\
-    urlpatterns
+    urlpatterns = [path('accounts/signup/', include('funhome.urls'))] +\
+        urlpatterns
