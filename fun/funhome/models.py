@@ -1,12 +1,11 @@
-from django.db import models
 import uuid
-from funfile.storage import upload_to
-from django.contrib.auth.models import User
 
-from django.utils.translation import gettext_lazy as _
 from ckeditor.fields import RichTextField
-
 from ckeditor_uploader import fields
+from django.contrib.auth.models import User
+from django.db import models
+from django.utils.translation import gettext_lazy as _
+from funfile.storage import upload_to
 
 # Put the readability of your code first
 # Create your models here.

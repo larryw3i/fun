@@ -1,15 +1,15 @@
+from ckeditor.widgets import CKEditorWidget
+from django import forms
 from django.contrib import admin
-
+from django.core.exceptions import ValidationError
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
-from django.core.exceptions import ValidationError
-# Register your models here.
-from .models import Content, Label, Funclassification, Eduhubhomesticker,\
-    Funcontent
 
-from django import forms
 from fun.fundef import default_bleach_clean
-from ckeditor.widgets import CKEditorWidget
+
+# Register your models here.
+from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
+                     Label)
 
 
 @admin.register(Label)

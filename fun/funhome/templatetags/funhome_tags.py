@@ -1,7 +1,8 @@
 
-from fun import settings
 from django import template
 from django.utils.translation import gettext_lazy as _
+
+from fun import settings
 
 register = template.Library()
 

@@ -17,19 +17,18 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
-
 from humanize import naturalsize
+
 from fun import funvalue, settings
 from fun.fundef import default_bleach_clean
 from fun.funvalue import subjects_top
 
 from .apps import EduhubConfig
 from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
-                         FuncontentModelForm, LabelModelForm,
-                         FuntestModelForm)
+                         FuncontentModelForm, FuntestModelForm, LabelModelForm)
 from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
-                     Label, content_name, eduhubhomesticker_name,
-                     funcontent_name, label_name, funtest_name, Funtest)
+                     Funtest, Label, content_name, eduhubhomesticker_name,
+                     funcontent_name, funtest_name, label_name)
 
 # Create your views here.
 

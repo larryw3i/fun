@@ -1,8 +1,10 @@
 
 from django.urls import path
+
+from fun.funvalue import default_uuid
+
 from . import views
 from .apps import EduhubConfig
-from fun.funvalue import default_uuid
 
 app_name = EduhubConfig.name
 urlpatterns = [

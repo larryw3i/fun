@@ -6,8 +6,10 @@ import os
 
 import magic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 from django.core import paginator
 from django.core.exceptions import ValidationError
+from django.core.files import File
 from django.http import Http404
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
@@ -15,14 +17,12 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
-from fun import settings, funvalue
-from .models import Funuser, funuser_mame
-from .modelforms import FunuserModelForm
+
+from fun import funvalue, settings
+
 from .apps import FunuserConfig
-
-from django.core.files import File
-from django.contrib.auth.models import User
-
+from .modelforms import FunuserModelForm
+from .models import Funuser, funuser_mame
 
 funuser_create_template = \
     f'{FunuserConfig.name}/{funuser_mame}{funvalue.create_html}'

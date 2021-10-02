@@ -2,13 +2,14 @@ import os
 from datetime import datetime
 
 import magic
+import pytz
 from django.contrib.auth.models import User
 from django.core import serializers
 from django.core.files import File
 from django.http import (FileResponse, Http404, HttpResponse,
                          HttpResponseBadRequest, HttpResponseForbidden,
                          JsonResponse)
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.utils import translation
 from django.utils.translation import gettext_lazy as _
@@ -16,15 +17,14 @@ from django.utils.translation import gettext_lazy as _
 from django.views import View
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
-
-from fun import funvalue, settings
 from funfile.models import Checkup
 
+from fun import funvalue, settings
+
 from .apps import FunhomeConfig
-from .modelforms import HomestickerModelForm, FunhomestickerModelForm
-from .models import Homesticker, homesticker_name, \
-    funhomesticker_name, Funhomesticker, Appreciation, appreciation_name
-import pytz
+from .modelforms import FunhomestickerModelForm, HomestickerModelForm
+from .models import (Appreciation, Funhomesticker, Homesticker,
+                     appreciation_name, funhomesticker_name, homesticker_name)
 
 home_template = FunhomeConfig.name + '/home.html'
 

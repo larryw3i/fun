@@ -10,7 +10,7 @@ p8(){
 activate_source(){
     if [[ -x "$(which virtualenv)" ]]; then
         [[ -f "./venv/bin/activate" ]] || virtualenv venv
-        source venv/bin/activate
+        source ./venv/bin/activate
     else
         echo "virtualenv doesn't exist, please install it" && exit 
         exit
@@ -20,21 +20,24 @@ activate_source(){
 init(){
     activate_source
     pip3 install -r requirements.txt
-    [[ -f "$(which yarn)" ]] && yarn installn --cwd ./fun/funstatic
+    [[ -x "$(which yarn)" ]] && cd ./fun/funstatic && yarn install && cd ../..
 
-    [[ -d "./fun" ]] && mkdir ./fun
-    [[ -f "./fun/funlog" ]] && touch ./fun/funlog
+    [[ -d "./fun/funlog" ]] || mkdir ./fun/funlog
+    [[ -f "./fun/funlog/django_fun.log" ]] || touch ./fun/funlog/django_fun.log
 
-    python3 ./fun/manage.py migrate
-    python3 ./fun/manage.py compilemessages
-    [[ -d "./funfile/files" ]] || mkdir ./fun/funfile/files
+    [[ -d "./funfile/files" ]] || mkdir -p ./fun/funfile/files
     
+    python3 ./fun/manage.py makemigrations
+    python3 ./fun/manage.py migrate
+    
+    python3 ./fun/manage.py compilemessages
+
     read -p "Create superuser?(y/N)" _createsuperuser
     [[ *"${_createsuperuser}"* = 'Yy' ]] && \
     python3 ./fun/manage.py createsuperuser
 
-    [[ -f "fun/fun/settings.py" ]] || \
-    cp fun/fun/settings_.py fun/fun/settings.py
+    [[ -f "./fun/fun/settings.py" ]] || \
+    cp ./fun/fun/settings_.py ./fun/fun/settings.py
     
     python3 ./fun/manage.py runserver
     echo "Done."

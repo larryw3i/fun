@@ -1,17 +1,17 @@
+import hashlib
 import os
 import uuid
-import hashlib
+from functools import partial
+
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import (RichTextUploadingField,
+                                      RichTextUploadingFormField)
 from django import forms
+from django.contrib.auth.models import User
 from django.core import validators
 from django.db import models
-from functools import partial
-from funfile.storage import upload_to
-from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
-from ckeditor.fields import RichTextField
-
-from ckeditor_uploader.fields import RichTextUploadingFormField, \
-    RichTextUploadingField
+from funfile.storage import upload_to
 
 # Create your models here.
 

@@ -1,12 +1,12 @@
+from django import forms
 from django.contrib import admin
 
-# Register your models here.
-
-from .modelforms import HomestickerModelForm, FunhomestickerModelForm
-from .models import Homesticker, Funhomesticker, Appreciation
 from fun.fundef import default_bleach_clean
 
-from django import forms
+from .modelforms import FunhomestickerModelForm, HomestickerModelForm
+from .models import Appreciation, Funhomesticker, Homesticker
+
+# Register your models here.
 
 
 @admin.register(Homesticker)

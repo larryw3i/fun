@@ -1,13 +1,14 @@
 
 import math
-from .models import Homesticker, Funhomesticker, Appreciation
-from django import forms
-from django.forms import ModelForm, ImageField
-from django.utils.translation import gettext_lazy as _
-from ckeditor.fields import RichTextField
 
-from ckeditor_uploader.fields import RichTextUploadingFormField, \
-    RichTextUploadingField
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import (RichTextUploadingField,
+                                      RichTextUploadingFormField)
+from django import forms
+from django.forms import ImageField, ModelForm
+from django.utils.translation import gettext_lazy as _
+
+from .models import Appreciation, Funhomesticker, Homesticker
 
 
 class HomestickerModelForm(ModelForm):

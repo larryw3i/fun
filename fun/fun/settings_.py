@@ -10,13 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+import json
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import sys
-import json
+from os import path
+
 import yaml
 from django.utils.translation import gettext_lazy as _
-from os import path
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
