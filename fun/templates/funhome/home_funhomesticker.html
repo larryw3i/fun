@@ -25,21 +25,20 @@
                     {% for funhomesticker in funhomestickers|slice:':3' %}
                         <div class="carousel-item 
                             {% if forloop.first %} active {% endif %}">
+                            {% if not is_funhomestickers_null %}
+                                <img src="
+                {% url 'funfile:get_file' file_id=funhomesticker.cover.name %}
+                            "   class="d-block w-100 carousel-item-img" alt=""/>
+                            {% endif %}
                             
-                            <img src="{% if is_funhomestickers_null %}
-                            {% static 'images/default_carousel_image.webp' %}
-                            {% else %} 
-                {% url 'funfile:get_file' file_id=funhomesticker.cover.name %} 
-                            {% endif %}" 
-                            class="d-block w-100 carousel-item-img" alt=""/>
-
-
                             <div class="carousel-caption 
                                 homesticker-carousel-caption click-to-url" 
-                                data-url="{% if is_funhomestickers_null %}#
-                                    {% else %}
+                                data-url="
+                                {% if is_funhomestickers_null %}
+                                #
+                                {% else %}
                         {% url 'funhomesticker_detail' pk=funhomesticker.id %}
-                                    {% endif %}">
+                                {% endif %}">
                                 <h5>{{ funhomesticker.title }}</h5>
                                 <p>  {{  funhomesticker.subtitle }}  </p> 
                             </div>

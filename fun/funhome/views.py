@@ -157,7 +157,6 @@ def get_all_bootswatch_themes(request):
             os.listdir(os.path.join(settings.BASE_DIR,  'static', 'libs',
                                     'bootswatch', 'dist')), safe=False)
 
-
 def get_favicon_ico(request):
 
     file_path = os.path.join(settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
@@ -166,7 +165,7 @@ def get_favicon_ico(request):
         content_type = magic.from_file(file_path, mime=True)
         return FileResponse(open(file_path, 'rb'), content_type=content_type)
     else:
-        raise Http404()
+        return HttpResponse()
 
 
 def get_default_homesticker():
