@@ -24,8 +24,6 @@
                 <img  src="
             {% if funuser.avatar.name %}
                 {%  url 'funfile:get_file' file_id=funuser.avatar.name  %}
-            {% else %} 
-                {% static 'images/x_dove.webp' %}
             {% endif %}" 
                     alt="avatar" class="rounded-circle "   
                     style="width: 150px;height:150px;object-fit: cover"/>
