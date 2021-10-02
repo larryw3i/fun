@@ -7,6 +7,7 @@ register = template.Library()
 
 bootstrap_css_url = 'bootstrap/dist/css/bootstrap.min.css'
 
+
 @register.simple_tag(takes_context=True)
 def bootswatch_css_url(theme):
     return f'bootswatch/dist/{theme}/bootstrap.min.css'

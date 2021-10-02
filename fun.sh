@@ -19,7 +19,7 @@ activate_source(){
 
 init(){
     activate_source
-    pip3 install -r requirements.txt.example
+    pip3 install -r requirements.txt
     [[ -f "$(which yarn)" ]] && yarn installn --cwd ./fun/funstatic
 
     [[ -d "./fun" ]] && mkdir ./fun
