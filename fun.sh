@@ -33,7 +33,7 @@ init(){
     python3 ./fun/manage.py compilemessages
 
     read -p "Create superuser?(y/N)" _createsuperuser
-    [[ *"${_createsuperuser}"* = 'Yy' ]] && \
+    [[ *"${_createsuperuser}"* == 'Yy' ]] && \
     python3 ./fun/manage.py createsuperuser
 
     [[ -f "./fun/fun/settings.py" ]] || \
