@@ -48,8 +48,6 @@ class Label(models.Model):
         default=True, verbose_name=_('Is label legal') + " ?")
 
 # deprecated
-
-
 class Content(models.Model):
 
     class Meta:
@@ -234,3 +232,26 @@ class Funtest(models.Model):
     test_commit = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Test commit'))
+
+
+class Classification(models.Model):
+    class Meta:
+        verbose_name = _('Appraising Classification')
+        verbose_name_plural = _('Appraising Classifications')
+
+    def __str__(self):
+        return self.name
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+
+    parent_id = models.UUIDField(
+        null=True, 
+        verbose_name=_('Parent classification ID'))
+
+    name = models.CharField(
+        max_length=64, blank=False,
+        verbose_name=_('Classification name'))
+
+    comment = models.CharField(
+        max_length=64, verbose_name=_('Classification comment'))

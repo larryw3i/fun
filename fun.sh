@@ -55,8 +55,8 @@ _start(){
     python3 ./fun/manage.py runserver
 }
 
-ug(){   update_gitignore;   }
-_s(){   _start;             }
-gita(){ p8; git add . ;     }
+ug(){       update_gitignore;   }
+_s(){       _start;             }
+gita(){     p8; git add . ;     }
 
 ${_args[0]}
