@@ -8,36 +8,19 @@
 {% load l10n %}
 {% load tz %}
 
-
 {% block title %}Home{% endblock title %}
 
 {% block optionalcss %}
-    <style>
-        #id_how_to_classification
-        {
-            font-size: small;
-        }
-    </style>
 {% endblock optionalcss %}
 
 {% block content %} 
 
     <div class="row text-center mt-5">
-        <div class="col   offset-xl-2  col-auto ">
+        <div class="col offset-xl-2  col-auto ">
             <form method="post"  enctype="multipart/form-data" class="">
-        
                 {% csrf_token %}
-                
                 {{ form.media }}
-                
                 {{ form|crispy }}
-                
-                <a href="{% url 'eduhub:how_to_classification' %}" 
-                    id="id_how_to_classification" 
-                    target='how_to_classification'> 
-                    ({% trans 'How to classification'%}) 
-                </a>
-
                 <div class="col col-12 text-center" >
                     <input class="btn btn-outline-info " type="submit" 
                         value="{% trans 'Upload' %}" />
@@ -52,9 +35,4 @@
 {% endblock %}
 
 {% block optionaljs %}
-
-    <script>
-        $('#id_how_to_classification').insertAfter('[for="id_classification"]')
-    </script>
-
 {% endblock optionaljs %}

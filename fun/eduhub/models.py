@@ -24,6 +24,38 @@ eduhubhomesticker_name = 'eduhubhomesticker'
 classification_name = 'classification'
 
 
+class Classification(models.Model):
+    class Meta:
+        verbose_name = _('Classification')
+        verbose_name_plural = _('Classifications')
+
+    def __str__(self):
+        return (
+            '' if self.parent is None
+            else str(self.parent) + '/'
+        ) + _(self.name)
+
+    def clean(self):
+        if '/' in self.name:
+            raise ValidationError({
+                'name': _("name includes '/' is not allowed")})
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+
+    parent = models.ForeignKey(
+        to='self', null=True, blank=True, on_delete=models.CASCADE,
+        verbose_name=_('Parent classification'))
+
+    name = models.CharField(
+        max_length=64, blank=False,
+        verbose_name=_("Classification name('/' cannot be included)"))
+
+    comment = models.CharField(
+        null=True, blank=True,
+        max_length=64, verbose_name=_('Classification comment'))
+
+
 class Label(models.Model):
 
     class Meta:
@@ -66,18 +98,18 @@ class Funcontent(models.Model):
         unique=True)
 
     label = models.ForeignKey(
-        to=Label, on_delete=models.CASCADE, null=True,
+        to=Label, on_delete=models.SET_NULL, null=True,
         verbose_name=_('Content label'))
+
+    classification = models.ForeignKey(
+        to=Classification, blank=True, null=True, on_delete=models.SET_NULL,
+        verbose_name=_('Content classification'))
 
     title = models.CharField(max_length=64, blank=False,
                              verbose_name=_('Content title'))
 
     content = RichTextUploadingField(max_length=2048,
                                      verbose_name=_('Content'))
-
-    classification = models.CharField(
-        max_length=64, blank=True, null=True,
-        verbose_name=_('Content classification'))
 
     uploading_date = models.DateTimeField(
         auto_now_add=True, verbose_name=_('Content uploading date'))
@@ -164,35 +196,3 @@ class Funtest(models.Model):
     test_commit = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Test commit'))
-
-
-class Classification(models.Model):
-    class Meta:
-        verbose_name = _('Classification')
-        verbose_name_plural = _('Classifications')
-
-    def __str__(self):
-        return (
-            '' if self.parent is None
-            else str(self.parent) + '/'
-        ) + _(self.name)
-
-    def clean(self):
-        if '/' in self.name:
-            raise ValidationError({
-                'name': _("name includes '/' is not allowed")})
-
-    id = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-
-    parent = models.ForeignKey(
-        to='self', null=True, blank=True, on_delete=models.CASCADE,
-        verbose_name=_('Parent classification'))
-
-    name = models.CharField(
-        max_length=64, blank=False,
-        verbose_name=_("Classification name('/' cannot be included)"))
-
-    comment = models.CharField(
-        null=True, blank=True,
-        max_length=64, verbose_name=_('Classification comment'))

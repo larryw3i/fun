@@ -52,7 +52,7 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
             new_funuser.save()
 
             return new_funuser
-        # super().get_object(queryset=queryset)
+        # super(self).get_object(queryset=queryset)
         funuser = Funuser.objects.get(user=self.request.user)
         funuser.full_name = self.request.user.username
         return funuser

@@ -115,4 +115,4 @@ class FuncontentAdmin(admin.ModelAdmin):
     ordering = ('-uploading_date',)
 
     def label__name(self, obj):
-        return obj.label.name
+        return _('None') if obj.label is None else obj.label.name

@@ -1,5 +1,6 @@
 import math
 import os
+import uuid
 from datetime import datetime
 
 import bleach
@@ -24,9 +25,9 @@ from fun import bleach_clean, settings, subjects_top
 from .apps import EduhubConfig
 from .modelforms import (EduhubhomestickerModelForm, FuncontentModelForm,
                          FuntestModelForm, LabelModelForm)
-from .models import (Eduhubhomesticker, Funcontent, Funtest, Label,
-                     content_name, eduhubhomesticker_name, funcontent_name,
-                     funtest_name, label_name)
+from .models import (Classification, Eduhubhomesticker, Funcontent, Funtest,
+                     Label, content_name, eduhubhomesticker_name,
+                     funcontent_name, funtest_name, label_name)
 
 # Create your views here.
 
@@ -140,10 +141,6 @@ class LabelListView(ListView):
         response.set_cookie('page', self.request.GET.get('page', 1))
         return response
 
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        return context_data
-
 
 class LabelDeleteView(LoginRequiredMixin, DeleteView):
     model = Label
@@ -188,9 +185,9 @@ class FuncontentListView(ListView):
     def get_queryset(self):
         return \
             Funcontent.objects.filter(
-                label=self.kwargs['label'],
+                label__id=self.kwargs['label_id'],
                 is_legal=True).order_by('-uploading_date') \
-            if len(str(self.kwargs.get('label', ''))) > 0 \
+            if len(str(self.kwargs.get('label_id', ''))) > 0 \
             else Funcontent.objects.filter(is_legal=True).order_by(
                 '-uploading_date')
 
@@ -201,10 +198,11 @@ class FuncontentListView(ListView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        if len(str(self.kwargs.get('label', ''))) > 0:
-            context_data['label'] = Label.objects.get(pk=self.kwargs['label'])
+        if len(str(self.kwargs.get('label_id', ''))) > 0:
+            context_data['label'] = Label.objects.get(
+                id=self.kwargs['label_id'])
             context_data['is_author'] = Label.objects.get(
-                pk=self.kwargs['label']).author == self.request.user
+                id=self.kwargs['label_id']).author == self.request.user
         return context_data
 
 
@@ -213,91 +211,60 @@ class FuncontentCreateView(LoginRequiredMixin, CreateView):
     form_class = FuncontentModelForm
     template_name = funcontent_create_template
 
-    def __init__(self):
-        self.label_id = None
-        super().__init__()
-
     def get_initial(self):
         initial = super().get_initial()
-        initial['label'] = self.kwargs['label']
+        classification_id = self.request.COOKIES.get(
+            'classification', uuid.UUID(int=0))
+        initial['classification'] = Classification.objects.get(
+            pk=classification_id)
         return initial
 
-    def get_form(self, form_class=None):
-        form = super().get_form(form_class=form_class)
-        form.fields['classification'].queryset = \
-            Funclassification.objects.filter(
-            level=1)
-        return form
-
     def form_valid(self, form):
-
-        headmost_five = Content.objects.filter(
-            label__author=self.request.user).order_by('-uploading_date')[:5]
-
-        if len(headmost_five) > 4 and (datetime.now(pytz.timezone('UTC')) - \
-               headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
-            form.add_error('content', _('Frequently request') + " !")
-            return render(self.request, content_create_template,
-                          context={'form': form})
-
         form.instance.content = bleach_clean(form.instance.content)
-        self.label_id = form.instance.label.id
         form.instance.author = self.request.user
-
+        form.instance.label = Label.objects.get(pk=self.kwargs['label_id'])
         return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('eduhub:funcontent_list',
-                       kwargs={'label': self.label_id})
+                       kwargs={'label_id': self.kwargs['label_id']})
 
 
 class FuncontentDetailView(DetailView):
-
     model = Funcontent
     form_class = FuncontentModelForm
     template_name = funcontent_detail_template
 
 
 class FuncontentDeleteView(LoginRequiredMixin, DeleteView):
-
     model = Funcontent
     form_class = FuncontentModelForm
     template_name = funcontent_delete_template
 
-    def __init__(self):
-        self.label_id = None
-        super().__init__()
-
     def post(self, request, *args, **kwargs):
 
-        if not Funcontent.objects.filter(pk=kwargs['pk'],
+        if not Funcontent.objects.filter(pk=kwargs['label_id'],
                                          label__author=request.user).exists():
             raise Http404()
 
-        self.label_id = Funcontent.objects.get(pk=kwargs['pk']).label.id
+        self.label = Funcontent.objects.get(pk=kwargs['label_id'])
         return super().post(request, *args, **kwargs)
 
     def get_success_url(self):
-        return reverse('eduhub:content_list', kwargs={'label': self.label_id})
+        return reverse('eduhub:content_list',
+                       kwargs={'label': self.kwargs['label_id']})
 
 
 class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
-
     model = Funcontent
     form_class = FuncontentModelForm
     template_name = funcontent_update_template
 
-    def __init__(self):
-        self.label_id = None
-        super().__init__()
-
     def post(self, request, *args, **kwargs):
-
-        if not Funcontent.objects.filter(pk=kwargs['pk'],
-                                         label__author=request.user).exists():
+        if not Funcontent.objects.filter(
+                pk=kwargs['pk'], label__author=request.user).exists():
             raise Http404()
 
-        self.label_id = Funcontent.objects.get(pk=kwargs['pk']).label.id
         return super().post(request, *args, **kwargs)
 
     def form_valid(self, form):
@@ -305,8 +272,9 @@ class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('eduhub:funcontent_list',
-                       kwargs={'label': self.label_id})
+        return reverse(
+            'eduhub:funcontent_list',
+            kwargs={'label_id': self.object.label.id})
 
 
 class EduhubhomestickerListView(ListView):

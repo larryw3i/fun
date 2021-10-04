@@ -31,31 +31,21 @@ class LabelModelForm(ModelForm):
 
 
 class FuncontentModelForm(ModelForm):
-
     class Meta:
-
         model = Funcontent
-        fields = ['title', 'content', 'comment', 'label', 'classification']
-
+        fields = ['title', 'content', 'comment', 'classification']
         labels = {
             'title': '',
-            'label': _('Label'),
             'content': _('Content'),
             'comment': _('Comment'),
             'classification': _('Content classification'),
         }
-
         widgets = {
             'title': forms.TextInput(attrs={
                 'autocomplete': 'off',
                 'placeholder': _('Content title'),
                 'class': 'text-center'}),
-            'comment': forms.Textarea(attrs={'rows': '5'}),
-            'label': forms.HiddenInput(),
-            'classification': forms.TextInput(attrs={
-                'placeholder':
-                _('classification : college/grade/semester/course'),
-                'class': 'text-center'}),
+            'comment': forms.Textarea(attrs={'rows': '5'})
         }
 
 

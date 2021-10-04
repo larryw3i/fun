@@ -21,7 +21,7 @@
     <hr/>
     {% if label.author == request.user %}
         <div class="col col-12 text-right" >
-            <a href="{% url 'eduhub:funcontent_create' label=label.id %}" 
+            <a href="{% url 'eduhub:funcontent_create' label_id=label.id %}" 
                 class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
         </div>
     {% endif %}
@@ -63,7 +63,7 @@
                                 </a>
 
                                 <a href=
-                    "{% url 'eduhub:funcontent_delete'  pk=funcontent.id %}" 
+                    "{% url 'eduhub:funcontent_delete' pk=funcontent.id %}" 
                                     class="card-link small">
                                     {% trans 'Delete' %}
                                 </a>
