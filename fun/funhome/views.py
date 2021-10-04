@@ -27,39 +27,23 @@ from .models import (Appreciation, Funhomesticker, Homesticker,
                      appreciation_name, funhomesticker_name, homesticker_name)
 
 home_template = 'funhome/home.html'
-
 homesticker_create_template = f'funhome/homesticker_create.html'
-
 homesticker_detail_template = f'funhome/homesticker_detail.html'
-
 homesticker_delete_template = f'funhome/homesticker_delete.html'
-
 homesticker_update_template = f'funhome/homesticker_update.html'
-
 homesticker_list_template = f'funhome/homesticker_list.html'
-
 funhomesticker_create_template = f'funhome/funhomesticker_create.html'
-
 funhomesticker_detail_template = f'funhome/funhomesticker_detail.html'
-
 funhomesticker_delete_template = f'funhome/funhomesticker_delete.html'
-
 funhomesticker_update_template = f'funhome/funhomesticker_update.html'
-
 funhomesticker_list_template = f'funhome/funhomesticker_list.html'
-
 appreciation_detail_template = f'funhome/appreciation_detail.html'
-
 data_privacy_template = 'funhome/data_privacy.html'
 legal_information_template = 'funhome/legal_information.html'
-
 data_privacy_example_template = 'funhome/data_privacy.html.example'
-
 legal_information_example_template = 'funhome/legal_information.html.example'
-
 data_privacy_template_path = os.path.join(
     settings.BASE_DIR, 'templates', 'funhome', 'data_privacy.html')
-
 legal_information_template_path = os.path.join(
     settings.BASE_DIR, 'templates', 'funhome', 'legal_information.html')
 

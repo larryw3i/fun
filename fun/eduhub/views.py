@@ -24,9 +24,9 @@ from fun.fundef import default_bleach_clean
 from fun.funvalue import subjects_top
 
 from .apps import EduhubConfig
-from .modelforms import (ContentModelForm, EduhubhomestickerModelForm,
+from .modelforms import ( EduhubhomestickerModelForm,
                          FuncontentModelForm, FuntestModelForm, LabelModelForm)
-from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
+from .models import ( Eduhubhomesticker,  Funcontent,
                      Funtest, Label, content_name, eduhubhomesticker_name,
                      funcontent_name, funtest_name, label_name)
 
@@ -155,11 +155,9 @@ class LabelDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('eduhub:label_list')
 
     def post(self, request, *args, **kwargs):
-
-        if not Label.objects.filter(pk=kwargs['pk'],
-                                    author=request.user).exists():
+        if not Label.objects.filter(
+            pk=kwargs['pk'],author=request.user).exists():
             raise Http404()
-
         return super().post(request, *args, **kwargs)
 
 
@@ -171,187 +169,12 @@ class LabelUpdateView(LoginRequiredMixin, UpdateView):
     context_object_name = 'label'
 
     def get_success_url(self):
-        return '/eduhub/label_list?page=' +\
-            self.request.COOKIES.get('page', 1)
-
+        return '/eduhub/label_list?page=' + self.request.COOKIES.get('page', 1)
     def post(self, request, *args, **kwargs):
-        if not Label.objects.filter(pk=kwargs['pk'],
-                                    author=request.user).exists():
+        if not Label.objects.filter(
+            pk=kwargs['pk'], author=request.user).exists():
             raise Http404()
-
         return super().post(request, *args, **kwargs)
-
-
-class ContentListView(ListView):
-
-    model = Content
-
-    form_class = ContentModelForm
-    template_name = content_list_template
-    context_object_name = 'contents'
-    ordering = ['-uploading_date', ]
-    paginate_by = 5
-    paginate_orphans = 1
-
-    def get_queryset(self):
-        return Content.objects.filter(
-            label=self.kwargs['label'],
-            is_legal=True).order_by('-uploading_date')
-
-    def render_to_response(self, context, **response_kwargs):
-        response = super().render_to_response(context, **response_kwargs)
-        response.set_cookie('page', self.request.GET.get('page', 1))
-        return response
-
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        context_data['label'] = self.kwargs['label']
-        context_data['is_author'] = Label.objects.get(
-            pk=self.kwargs['label']).author == self.request.user
-        return context_data
-
-
-class ContentCreateView(LoginRequiredMixin, CreateView):
-    model = Content
-    form_class = ContentModelForm
-    template_name = content_create_template
-
-    def __init__(self):
-        self.label_id = None
-        super().__init__()
-
-    def get_success_url(self):
-        return reverse('eduhub:content_list', kwargs={'label': self.label_id})
-
-    def get_initial(self):
-        initial = super().get_initial()
-        initial['label'] = self.kwargs['label']
-        return initial
-
-    def form_valid(self, form):
-
-        headmost_five = Content.objects.filter(
-            label__author=self.request.user).order_by('-uploading_date')[:5]
-
-        if len(headmost_five) > 4 and \
-            (datetime.now(pytz.timezone('UTC'))
-             - headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
-            form.add_error('content_file', _('Frequently request') + " !")
-            return render(self.request, content_create_template,
-                          context={'form': form})
-
-        if not form.instance.content_file:
-            form.add_error('content_file',
-                           _('Content file is required') + " !")
-            return render(self.request, content_create_template,
-                          context={'form': form})
-
-        content_file = form.instance.content_file.file
-
-        if not content_file:
-            form.add_error('content_file', _('Content file is required'))
-            return render(self.request, content_create_template,
-                          context={'form': form})
-
-        if str(content_file.content_type).startswith('video/') and \
-                content_file.size > max_video_content_file_size:
-            form.add_error('content_file', _(
-                'The length of video file should be less than') + ' ' +
-                naturalsize(max_video_content_file_size))
-            return render(self.request, content_create_template,
-                          context={'form': form})
-
-        if str(content_file.content_type).endswith('/pdf') and \
-                content_file.size > max_pdf_content_file_size:
-            form.add_error('content_file', _(
-                'The length of pdf file should be less than') + ' ' +
-                naturalsize(max_pdf_content_file_size))
-            return render(self.request, content_create_template,
-                          context={'form': form})
-        self.label_id = form.instance.label.id
-        form.instance.author = self.request.user
-
-        return super().form_valid(form)
-
-
-class ContentDetailView(DetailView):
-
-    model = Content
-    form_class = ContentModelForm
-    template_name = content_detail_template
-
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        file_path = os.path.join(settings.MEDIA_ROOT, str(
-            context_data['object'].content_file.name))
-        context_data['is_video'] = str(magic.from_file(
-            file_path, mime=True)).startswith('video/')
-        return context_data
-
-
-class ContentDeleteView(LoginRequiredMixin, DeleteView):
-
-    model = Content
-    form_class = ContentModelForm
-    template_name = content_delete_template
-
-    def __init__(self):
-        self.label_id = None
-        super().__init__()
-
-    def post(self, request, *args, **kwargs):
-
-        if not Content.objects.filter(
-                pk=kwargs['pk'], label__author=request.user).exists():
-            raise Http404()
-
-        self.label_id = Content.objects.get(pk=kwargs['pk']).label.id
-        return super().post(request, *args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        file_path = os.path.join(settings.MEDIA_ROOT, str(
-            context_data['object'].content_file.name))
-        context_data['is_video'] = str(magic.from_file(
-            file_path, mime=True)).startswith('video/')
-        return context_data
-
-    def get_success_url(self):
-        return reverse('eduhub:content_list', kwargs={'label': self.label_id})
-
-
-class ContentUpdateView(LoginRequiredMixin, UpdateView):
-
-    model = Content
-    form_class = ContentModelForm
-    template_name = content_update_template
-
-    def __init__(self):
-        self.label_id = None
-        super().__init__()
-
-    def post(self, request, *args, **kwargs):
-
-        if not Content.objects.filter(pk=kwargs['pk'],
-                                      label__author=request.user).exists():
-            raise Http404()
-
-        self.label_id = Content.objects.get(pk=kwargs['pk']).label.id
-        return super().post(request, *args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        file_path = os.path.join(settings.MEDIA_ROOT, str(
-            context_data['object'].content_file.name))
-        context_data['is_video'] = str(magic.from_file(
-            file_path, mime=True)).startswith('video/')
-        return context_data
-
-    def get_success_url(self):
-        return reverse('eduhub:content_list', kwargs={'label': self.label_id})
-
-
-#############
 
 
 class FuncontentListView(ListView):

@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+
+###############################################################
+### WRITE the SIMPLEST and MOST READABLE CODE for ALL FILES ###
+###############################################################
+
 import os
 import sys
 

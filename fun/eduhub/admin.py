@@ -8,10 +8,23 @@ from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
 from fun.fundef import default_bleach_clean
 
 # Register your models here.
-from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
-                     Label)
+from .models import ( Eduhubhomesticker,  Funcontent,
+                     Label, Classification)
 
 
+@admin.register(Classification)
+class ClassificationAdmin(admin.ModelAdmin):
+    fields = [
+        'parent',
+        'name',
+        'comment']
+    list_display = (
+        '__str__',
+        'comment', )
+
+    list_per_page = 10
+
+    
 @admin.register(Label)
 class LabelAdmin(admin.ModelAdmin):
     fields = [
@@ -33,35 +46,6 @@ class LabelAdmin(admin.ModelAdmin):
     list_per_page = 10
 
     ordering = ('-creating_date',)
-
-
-@admin.register(Funclassification)
-class FunclassificationAdmin(admin.ModelAdmin):
-    fields = [
-        'name',
-        'level',
-        'parent',
-        'is_disabled']
-
-    list_display = (
-        'name',
-        'level',
-        'creating_date',
-        'creating_user',
-        'is_disabled', )
-
-    list_per_page = 10
-
-    ordering = ('-creating_date',)
-
-    search_fields = ['name', 'level']
-
-    list_filter = ['level']
-    raw_id_fields = ('parent', )
-
-    def save_model(self, request, obj, form, change):
-        obj.creating_user = request.user
-        return super().save_model(request, obj, form, change)
 
 
 @admin.register(Eduhubhomesticker)

@@ -9,8 +9,8 @@ from django.contrib.admin.widgets import ForeignKeyRawIdWidget
 from django.forms import ImageField, ModelForm
 from django.utils.translation import gettext_lazy as _
 
-from .models import (Content, Eduhubhomesticker, Funclassification, Funcontent,
-                     Funtest, Label)
+from .models import ( Eduhubhomesticker,  Funcontent,
+                     Funtest, Label )
 
 
 class LabelModelForm(ModelForm):
@@ -28,31 +28,6 @@ class LabelModelForm(ModelForm):
             'cover': forms.FileInput(attrs={'class': 'preview-image'})
         }
 
-
-class ContentModelForm(ModelForm):
-
-    class Meta:
-
-        model = Content
-        fields = ['title', 'content_file', 'comment', 'label']
-
-        labels = {
-            'title': _('Title name'),
-            'label': _('Label'),
-            'content_file': _('Content file'),
-            'comment': _('Comment'),
-        }
-
-        help_texts = {
-            'content_file':
-            _('content file, pdf and video file is allowed only')
-        }
-
-        widgets = {
-            'title': forms.TextInput(attrs={'autocomplete': 'off'}),
-            'comment': forms.Textarea(attrs={'rows': '5'}),
-            'label': forms.HiddenInput()
-        }
 
 
 class FuncontentModelForm(ModelForm):
