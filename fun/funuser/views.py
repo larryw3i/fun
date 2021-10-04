@@ -24,16 +24,11 @@ from .apps import FunuserConfig
 from .modelforms import FunuserModelForm
 from .models import Funuser, funuser_mame
 
-funuser_create_template = \
-    f'{FunuserConfig.name}/{funuser_mame}{funvalue.create_html}'
-funuser_detail_template = \
-    f'{FunuserConfig.name}/{funuser_mame}{funvalue.detail_html}'
-funuser_delete_template = \
-    f'{FunuserConfig.name}/{funuser_mame}{funvalue.delete_html}'
-funuser_update_template = \
-    f'{FunuserConfig.name}/{funuser_mame}{funvalue.update_html}'
-funuser_list_template = \
-    f'{FunuserConfig.name}/{funuser_mame}{funvalue.list_html}'
+funuser_create_template = f'funuser/funuser_create.html'
+funuser_detail_template = f'funuser/funuser_detail.html'
+funuser_delete_template = f'funuser/funuser_delete.html'
+funuser_update_template = f'funuser/funuser_update.html'
+funuser_list_template = f'funuser/funuser_list.html'
 
 
 class FunuserUpdateView(LoginRequiredMixin, UpdateView):

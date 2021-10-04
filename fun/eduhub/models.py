@@ -20,6 +20,7 @@ funtest_name = 'funtest'
 content_name = 'content'
 funcontent_name = 'funcontent'
 eduhubhomesticker_name = 'eduhubhomesticker'
+classification_name = 'classification'
 
 
 class Label(models.Model):
@@ -48,6 +49,8 @@ class Label(models.Model):
         default=True, verbose_name=_('Is label legal') + " ?")
 
 # deprecated
+
+
 class Content(models.Model):
 
     class Meta:
@@ -246,7 +249,7 @@ class Classification(models.Model):
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
 
     parent_id = models.UUIDField(
-        null=True, 
+        null=True,
         verbose_name=_('Parent classification ID'))
 
     name = models.CharField(

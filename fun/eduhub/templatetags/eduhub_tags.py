@@ -1,8 +1,10 @@
-from django import template
-import urllib
 import os
-from fun import settings
+import urllib
+
+from django import template
 from django.utils.translation import gettext_lazy as _
+
+from fun import settings
 
 register = template.Library()
 

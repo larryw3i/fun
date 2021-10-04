@@ -3,7 +3,7 @@
 _args=("$@") # all parameters from terminal.
 
 p8(){
-    isort ./fun/
+    isort -v ./fun/
     autopep8 -i -a -a -r -v ./fun/
 }
 

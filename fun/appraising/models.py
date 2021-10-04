@@ -1,14 +1,15 @@
+import uuid
+
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import (RichTextUploadingField,
                                       RichTextUploadingFormField)
 from django.core.validators import *
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-import uuid
 from eduhub.models import Classification
 
-
 # Create your models here.
+
 
 class Content(models.Model):
     class Meta:
@@ -29,7 +30,7 @@ class Content(models.Model):
                              verbose_name=_('Title'))
 
     classification = models.ForeignKey(
-        to=Classification, on_delete=models.SET_NULL,null=True,
+        to=Classification, on_delete=models.SET_NULL, null=True,
         verbose_name=_('Classification'))
 
     _content = RichTextUploadingField(

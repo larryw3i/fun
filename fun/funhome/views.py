@@ -26,49 +26,36 @@ from .modelforms import FunhomestickerModelForm, HomestickerModelForm
 from .models import (Appreciation, Funhomesticker, Homesticker,
                      appreciation_name, funhomesticker_name, homesticker_name)
 
-home_template = FunhomeConfig.name + '/home.html'
+home_template = 'funhome/home.html'
 
-homesticker_create_template = \
-    f'{FunhomeConfig.name}/{homesticker_name}{funvalue.create_html}'
+homesticker_create_template = f'funhome/homesticker_create.html'
 
-homesticker_detail_template = \
-    f'{FunhomeConfig.name}/{homesticker_name}{funvalue.detail_html}'
+homesticker_detail_template = f'funhome/homesticker_detail.html'
 
-homesticker_delete_template = \
-    f'{FunhomeConfig.name}/{homesticker_name}{funvalue.delete_html}'
+homesticker_delete_template = f'funhome/homesticker_delete.html'
 
-homesticker_update_template = \
-    f'{FunhomeConfig.name}/{homesticker_name}{funvalue.update_html}'
+homesticker_update_template = f'funhome/homesticker_update.html'
 
-homesticker_list_template = \
-    f'{FunhomeConfig.name}/{homesticker_name}{funvalue.list_html}'
+homesticker_list_template = f'funhome/homesticker_list.html'
 
-funhomesticker_create_template = \
-    f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.create_html}'
+funhomesticker_create_template = f'funhome/funhomesticker_create.html'
 
-funhomesticker_detail_template = \
-    f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.detail_html}'
+funhomesticker_detail_template = f'funhome/funhomesticker_detail.html'
 
-funhomesticker_delete_template = \
-    f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.delete_html}'
+funhomesticker_delete_template = f'funhome/funhomesticker_delete.html'
 
-funhomesticker_update_template = \
-    f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.update_html}'
+funhomesticker_update_template = f'funhome/funhomesticker_update.html'
 
-funhomesticker_list_template = \
-    f'{FunhomeConfig.name}/{funhomesticker_name}{funvalue.list_html}'
+funhomesticker_list_template = f'funhome/funhomesticker_list.html'
 
-appreciation_detail_template = \
-    f'{FunhomeConfig.name}/{appreciation_name}{funvalue.detail_html}'
+appreciation_detail_template = f'funhome/appreciation_detail.html'
 
-data_privacy_template = FunhomeConfig.name + '/data_privacy.html'
-legal_information_template = FunhomeConfig.name + '/legal_information.html'
+data_privacy_template = 'funhome/data_privacy.html'
+legal_information_template = 'funhome/legal_information.html'
 
-data_privacy_example_template = FunhomeConfig.name + \
-    '/data_privacy.html.example'
+data_privacy_example_template = 'funhome/data_privacy.html.example'
 
-legal_information_example_template = FunhomeConfig.name + \
-    '/legal_information.html.example'
+legal_information_example_template = 'funhome/legal_information.html.example'
 
 data_privacy_template_path = os.path.join(
     settings.BASE_DIR, 'templates', 'funhome', 'data_privacy.html')
@@ -194,17 +181,18 @@ def data_privacy(request):
     if request.method == 'GET':
         return render(
             request,
-            data_privacy_template if os.path.exists(data_privacy_template_path)
-            else data_privacy_example_template)
+            os.path.exists(data_privacy_template_path) and
+            data_privacy_template or
+            data_privacy_example_template)
 
 
 def legal_information(request):
     if request.method == 'GET':
         return render(
             request,
-            legal_information_template if
-            os.path.exists(legal_information_template_path)
-            else legal_information_example_template)
+            os.path.exists(legal_information_template_path) and
+            legal_information_template or
+            legal_information_example_template)
 
 
 def get_default_funhomesticker():

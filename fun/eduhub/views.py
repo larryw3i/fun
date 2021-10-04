@@ -38,48 +38,29 @@ max_pdf_content_file_size = 5 * math.pow(1024, 2)
 max_video_content_file_size = 100 * math.pow(1024, 2)
 
 
-label_create_template =\
-    f'{EduhubConfig.name}/{label_name}{funvalue.create_html}'
-label_detail_template =\
-    f'{EduhubConfig.name}/{label_name}{funvalue.detail_html}'
-label_delete_template =\
-    f'{EduhubConfig.name}/{label_name}{funvalue.delete_html}'
-label_update_template =\
-    f'{EduhubConfig.name}/{label_name}{funvalue.update_html}'
-label_list_template =\
-    f'{EduhubConfig.name}/{label_name}{funvalue.list_html}'
+label_create_template = f'eduhub/label_create.html'
+label_detail_template = f'eduhub/label_detail.html'
+label_delete_template = f'eduhub/label_delete.html'
+label_update_template = f'eduhub/label_update.html'
+label_list_template = f'eduhub/label_list.html'
 
-content_create_template =\
-    f'{EduhubConfig.name}/{content_name}{funvalue.create_html}'
-content_detail_template =\
-    f'{EduhubConfig.name}/{content_name}{funvalue.detail_html}'
-content_delete_template =\
-    f'{EduhubConfig.name}/{content_name}{funvalue.delete_html}'
-content_update_template =\
-    f'{EduhubConfig.name}/{content_name}{funvalue.update_html}'
-content_list_template =\
-    f'{EduhubConfig.name}/{content_name}{funvalue.list_html}'
+content_create_template = f'eduhub/content_create.html'
+content_detail_template = f'eduhub/content_detail.html'
+content_delete_template = f'eduhub/content_delete.html'
+content_update_template = f'eduhub/content_update.html'
+content_list_template = f'eduhub/content_list.html'
 
-funcontent_create_template =\
-    f'{EduhubConfig.name}/{funcontent_name}{funvalue.create_html}'
-funcontent_detail_template =\
-    f'{EduhubConfig.name}/{funcontent_name}{funvalue.detail_html}'
-funcontent_delete_template =\
-    f'{EduhubConfig.name}/{funcontent_name}{funvalue.delete_html}'
-funcontent_update_template =\
-    f'{EduhubConfig.name}/{funcontent_name}{funvalue.update_html}'
-funcontent_list_template =\
-    f'{EduhubConfig.name}/{funcontent_name}{funvalue.list_html}'
+funcontent_create_template = f'eduhub/funcontent_create.html'
+funcontent_detail_template = f'eduhub/funcontent_detail.html'
+funcontent_delete_template = f'eduhub/funcontent_delete.html'
+funcontent_update_template = f'eduhub/funcontent_update.html'
+funcontent_list_template = f'eduhub/funcontent_list.html'
 
-eduhubhomesticker_list_template =\
-    f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.list_html}'
-eduhubhomesticker_detail_template =\
-    f'{EduhubConfig.name}/{eduhubhomesticker_name}{funvalue.detail_html}'
+eduhubhomesticker_list_template = f'eduhub/eduhubhomesticker_list.html'
+eduhubhomesticker_detail_template = f'eduhub/eduhubhomesticker_detail.html'
 
-eduhub_search_result_template =\
-    f'{EduhubConfig.name}/eduhub_search_result.html'
-eduhub_how_to_classification_template = \
-    f'{EduhubConfig.name}/how_to_classification.html'
+eduhub_search_result_template = f'eduhub/eduhub_search_result.html'
+eduhub_how_to_classification_template = f'eduhub/how_to_classification.html'
 
 
 class LabelCreateView(LoginRequiredMixin, CreateView):
@@ -431,8 +412,8 @@ class FuncontentCreateView(LoginRequiredMixin, CreateView):
         headmost_five = Content.objects.filter(
             label__author=self.request.user).order_by('-uploading_date')[:5]
 
-        if len(headmost_five) > 4 and (datetime.now(pytz.timezone('UTC')) - \
-               headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
+        if len(headmost_five) > 4 and (datetime.now(pytz.timezone('UTC')) -
+                                       headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
             form.add_error('content', _('Frequently request') + " !")
             return render(self.request, content_create_template,
                           context={'form': form})
@@ -566,8 +547,7 @@ class EduhubSearch(TemplateView):
         return context_data
 
 
-funtest_create_template = \
-    f'{EduhubConfig.name}/{funtest_name}{funvalue.create_html}'
+funtest_create_template = f'eduhub/{funtest_name}_create.html'
 
 
 class FuntestCreateView(CreateView):
@@ -580,8 +560,7 @@ class FuntestCreateView(CreateView):
         return super().form_valid(form)
 
 
-funtest_content_preview = \
-    f'{EduhubConfig.name}/funtest_content_preview.html'
+funtest_content_preview = f'eduhub/funtest_content_preview.html'
 
 
 class FuntestContentPreview(TemplateView):
