@@ -1,6 +1,6 @@
 
 (function(){
-    
+
 	$(document).on( 'click', '#eduhub_search_submit', (event)=>{
         event.preventDefault();
         if( $(`#eduhub_search_q`).val().length >0 )
@@ -22,4 +22,8 @@
         location.href = location.pathname +"?"+urlsearch.toString();
     });
 
+    $(document).on('click','#top_classification_collapse a',(event)=>{
+        Cookies.set('classification',$(event.currentTarget).attr('id'))
+        window.location.reload()
+    });
 }());

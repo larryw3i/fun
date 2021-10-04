@@ -8,6 +8,7 @@
 {% load eduhub_tags %}
 {% block title %} {% endblock title %}
 {% block optionalcss %}
+    <link rel="stylesheet" href="{% static 'eduhub/eduhub.css' %}"/>
 {% endblock optionalcss %}
 {% block subnavbar %}
     <nav class="
@@ -84,9 +85,13 @@
             </div>
         </div> 
     </nav>
+
+    {# Classification #}
     <div class="collapse container" id="top_classification_collapse">
         <div class="card card-body col col-12">
-            {% include "eduhub/_classification.html" %}
+            {% autoescape off %}
+                {% get_classification %}
+            {% endautoescape %}
         </div>
     </div>
 
@@ -94,7 +99,7 @@
 {% block content %} 
 {% endblock content%}
 {% block optionaljs %}     
-    <script src="{% static 'eduhub/eduhub.js' %}"></script>    
+    <script src="{% static 'eduhub/eduhub.js' %}"></script>
     {% block eduhub_optionaljs %} 
     {% endblock eduhub_optionaljs %}
 {% endblock optionaljs %}

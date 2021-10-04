@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 
 from fun import settings
 import uuid
+import re
 
 from eduhub.models import Classification
 register = template.Library()
@@ -54,10 +55,13 @@ def get_top_filter_path(context):
 @register.simple_tag(takes_context=True)
 def curr_classification(context):
     request = context['request']
+    _id = request.COOKIES.get('classification', '')
+    if not re.match('[\w]{8}(-[\w]{4}){3}-[\w]{12}',_id):
+        _id = uuid.UUID(int=0)
     classification = Classification.objects\
-    .filter(id = request.COOKIES.get('classification', uuid.UUID(int=0)))\
+    .filter(id = _id)\
     .first()
-    return _('All') if classification is None else str(Classification)
+    return _('All') if classification is None else str(classification)
 
 
 @register.simple_tag(takes_context=True)
@@ -67,7 +71,6 @@ def get_classification(context):
     _html = ''
     _len = 0
     for c in classifications:
-        print(str(c))
         _len_ = str(c).count('/')
         if _len != _len_:
             _len = _len_
