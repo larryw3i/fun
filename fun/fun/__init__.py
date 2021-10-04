@@ -2,6 +2,7 @@
 import bleach
 
 from fun import settings
+
 # COMMON
 
 create_html = '_create.html'
@@ -20,6 +21,7 @@ subjects_top = {
     '4': 'College',
     '5': 'Others'
 }
+
 
 def bleach_clean(content):
     return bleach.clean(

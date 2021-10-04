@@ -13,11 +13,17 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='classification',
             name='comment',
-            field=models.CharField(blank=True, max_length=64, null=True, verbose_name='Classification comment'),
+            field=models.CharField(
+                blank=True,
+                max_length=64,
+                null=True,
+                verbose_name='Classification comment'),
         ),
         migrations.AlterField(
             model_name='classification',
             name='name',
-            field=models.CharField(max_length=64, verbose_name="Classification name('/' cannot be included)"),
+            field=models.CharField(
+                max_length=64,
+                verbose_name="Classification name('/' cannot be included)"),
         ),
     ]

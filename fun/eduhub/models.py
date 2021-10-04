@@ -9,10 +9,10 @@ from ckeditor_uploader.fields import (RichTextUploadingField,
 from django import forms
 from django.contrib.auth.models import User
 from django.core import validators
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
-from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -149,8 +149,9 @@ class Funtest(models.Model):
         to=User, on_delete=models.CASCADE,
         verbose_name=_('Test owner'))
 
-    test_text = models.TextField(max_length=12288,
-                                 verbose_name=_('Template text'))
+    test_text = models.TextField(
+        max_length=12288,
+        verbose_name=_('Template text'))
 
     submitting_date = models.DateTimeField(
         auto_now_add=True,
@@ -171,13 +172,15 @@ class Classification(models.Model):
         verbose_name_plural = _('Classifications')
 
     def __str__(self):
-        return (self.parent is None and '/' or f'{str(self.parent)}/') + \
-        self.name
+        return (
+            '' if self.parent is None
+            else str(self.parent) + '/'
+        ) + _(self.name)
 
     def clean(self):
         if '/' in self.name:
             raise ValidationError({
-                'name':_("name includes '/' is not allowed")})
+                'name': _("name includes '/' is not allowed")})
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)

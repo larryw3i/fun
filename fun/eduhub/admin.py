@@ -1,25 +1,21 @@
 from ckeditor.widgets import CKEditorWidget
 from django import forms
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.core.exceptions import ValidationError
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
-
-from fun import bleach_clean
 from django.utils.translation import gettext_lazy as _
 
-from django.contrib import messages
-
-# Register your models here.
-from .models import ( Eduhubhomesticker,  Funcontent,
-                     Label, Classification)
-from django.core.exceptions import ValidationError
+from fun import bleach_clean
 
 from .modelforms import ClassificationModelForm
+# Register your models here.
+from .models import Classification, Eduhubhomesticker, Funcontent, Label
+
 
 @admin.register(Classification)
 class ClassificationAdmin(admin.ModelAdmin):
-    
+
     list_display = (
         '__str__',
         'comment', )
@@ -30,7 +26,8 @@ class ClassificationAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.name = bleach_clean(obj.name)
         return super().save_model(request, obj, form, change)
-    
+
+
 @admin.register(Label)
 class LabelAdmin(admin.ModelAdmin):
     fields = [

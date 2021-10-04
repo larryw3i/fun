@@ -1,14 +1,14 @@
 import os
+import re
 import urllib
+import uuid
 
 from django import template
 from django.utils.translation import gettext_lazy as _
+from eduhub.models import Classification
 
 from fun import settings
-import uuid
-import re
 
-from eduhub.models import Classification
 register = template.Library()
 
 
@@ -56,18 +56,18 @@ def get_top_filter_path(context):
 def curr_classification(context):
     request = context['request']
     _id = request.COOKIES.get('classification', '')
-    if not re.match('[\w]{8}(-[\w]{4}){3}-[\w]{12}',_id):
+    if not re.match('[\\w]{8}(-[\\w]{4}){3}-[\\w]{12}', _id):
         _id = uuid.UUID(int=0)
     classification = Classification.objects\
-    .filter(id = _id)\
-    .first()
+        .filter(id=_id)\
+        .first()
     return _('All') if classification is None else str(classification)
 
 
 @register.simple_tag(takes_context=True)
 def get_classification(context):
     classifications = Classification.objects.all()
-    classifications = sorted( classifications, key=lambda x: str(x) )
+    classifications = sorted(classifications, key=lambda x: str(x))
     _html = ''
     _len = 0
     for c in classifications:

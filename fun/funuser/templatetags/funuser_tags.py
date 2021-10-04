@@ -18,4 +18,4 @@ def get_funuser_avatar_url(context, user):
     return reverse(
         'funfile:get_file', kwargs={"file_id": funuser.avatar.name}
     ) if (funuser and len(funuser.avatar.name) > 0) else \
-    (settings.STATIC_URL + 'images/x_dove.webp')
+        (settings.STATIC_URL + 'images/x_dove.webp')

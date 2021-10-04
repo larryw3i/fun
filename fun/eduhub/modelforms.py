@@ -6,13 +6,13 @@ from ckeditor_uploader.fields import (RichTextUploadingField,
                                       RichTextUploadingFormField)
 from django import forms
 from django.contrib.admin.widgets import ForeignKeyRawIdWidget
+from django.core.exceptions import ValidationError
 from django.forms import ImageField, ModelForm
 from django.utils.translation import gettext_lazy as _
 
-from .models import ( Eduhubhomesticker,  Funcontent,
-                     Funtest, Label,  Classification)
+from .models import (Classification, Eduhubhomesticker, Funcontent, Funtest,
+                     Label)
 
-from django.core.exceptions import ValidationError
 
 class LabelModelForm(ModelForm):
     class Meta:
@@ -28,7 +28,6 @@ class LabelModelForm(ModelForm):
         widgets = {
             'cover': forms.FileInput(attrs={'class': 'preview-image'})
         }
-
 
 
 class FuncontentModelForm(ModelForm):
@@ -89,14 +88,16 @@ class FuntestModelForm(ModelForm):
             'test_text': forms.Textarea(attrs={'rows': '25'}),
         }
 
+
 class ClassificationModelForm(ModelForm):
     class Meta:
         model = Classification
-        fields = ['parent','name','comment']
+        fields = ['parent', 'name', 'comment']
+
     def clean(self):
         if Classification.objects\
-        .filter(
-            name=self.cleaned_data['name'],\
-            parent = self.cleaned_data['parent'])\
-        .exists():
-            raise ValidationError({'name':_("name exists")})
+                .filter(
+                    name=self.cleaned_data['name'],
+                    parent=self.cleaned_data['parent'])\
+                .exists():
+            raise ValidationError({'name': _("name exists")})

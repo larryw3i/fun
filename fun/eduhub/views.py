@@ -19,16 +19,14 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
 from humanize import naturalsize
 
-from fun import  settings
-from fun import bleach_clean
-from fun import subjects_top
+from fun import bleach_clean, settings, subjects_top
 
 from .apps import EduhubConfig
-from .modelforms import ( EduhubhomestickerModelForm,
-                         FuncontentModelForm, FuntestModelForm, LabelModelForm)
-from .models import ( Eduhubhomesticker,  Funcontent,
-                     Funtest, Label, content_name, eduhubhomesticker_name,
-                     funcontent_name, funtest_name, label_name)
+from .modelforms import (EduhubhomestickerModelForm, FuncontentModelForm,
+                         FuntestModelForm, LabelModelForm)
+from .models import (Eduhubhomesticker, Funcontent, Funtest, Label,
+                     content_name, eduhubhomesticker_name, funcontent_name,
+                     funtest_name, label_name)
 
 # Create your views here.
 
@@ -156,7 +154,7 @@ class LabelDeleteView(LoginRequiredMixin, DeleteView):
 
     def post(self, request, *args, **kwargs):
         if not Label.objects.filter(
-            pk=kwargs['pk'],author=request.user).exists():
+                pk=kwargs['pk'], author=request.user).exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
 
@@ -170,9 +168,10 @@ class LabelUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return '/eduhub/label_list?page=' + self.request.COOKIES.get('page', 1)
+
     def post(self, request, *args, **kwargs):
         if not Label.objects.filter(
-            pk=kwargs['pk'], author=request.user).exists():
+                pk=kwargs['pk'], author=request.user).exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
 
@@ -235,8 +234,8 @@ class FuncontentCreateView(LoginRequiredMixin, CreateView):
         headmost_five = Content.objects.filter(
             label__author=self.request.user).order_by('-uploading_date')[:5]
 
-        if len(headmost_five) > 4 and (datetime.now(pytz.timezone('UTC')) -
-                                       headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
+        if len(headmost_five) > 4 and (datetime.now(pytz.timezone('UTC')) - \
+               headmost_five[4].uploading_date).total_seconds() / 3600 < 2.8:
             form.add_error('content', _('Frequently request') + " !")
             return render(self.request, content_create_template,
                           context={'form': form})
