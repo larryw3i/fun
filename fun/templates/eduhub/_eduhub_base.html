@@ -1,28 +1,20 @@
 
 {% extends 'funhome/_base.html' %}
-
 {% load static %}
-
 {% load crispy_forms_tags %}
-
 {% load i18n %}
 {% load l10n %}
 {% load tz %}
-
 {% load eduhub_tags %}
-
 {% block title %} {% endblock title %}
-
 {% block optionalcss %}
-
 {% endblock optionalcss %}
-
 {% block subnavbar %}
     <nav class="
             navbar navbar-inverse 
             navbar-fixed-top  navbar-expand-sm">
         <div class="container ">
-            <a class="navbar-brand" href="{% url 'eduhub:home' %}" 
+            <a class="navbar-brand" href="{% url 'eduhub:label_list' %}" 
                 style="font-weight: 700;" >
                 {% trans 'Eduhub' %}
             </a>
@@ -40,22 +32,15 @@
 
                     <li class="nav-item"
                         style=" 
-                            border: solid violet;
-                            padding: 2px;
-                            border-radius: 20px;
-                            text-align: center;">  
+                            border: solid violet; padding: 2px;
+                            border-radius: 20px; text-align: center;">
                         <a class="text text-primary"
                             style="font-weight: 700;"
                             data-toggle="collapse" 
-                            href="#top_filter_collapse" 
+                            href="#top_classification_collapse" 
                             aria-expanded="false" 
-                            aria-controls="top_filter_collapse">
-                            <span style="font-weight:bolder">
-                                {% get_first_filter %}</span>
-                            <span style="font-weight: bolder;">
-                                {% get_filter_split %}</span>
-                            <span style="font-weight: bold;">
-                                {% get_second_filter %}</span>
+                            aria-controls="top_classification_collapse">
+                            {% curr_classification %}
                         </a>
                     </li>
 
@@ -72,7 +57,6 @@
                             {% trans 'Eduhub contents' %}
                         </a>
                     </li>
-
 
                 </ul>
 
@@ -100,28 +84,17 @@
             </div>
         </div> 
     </nav>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col col-12">
-                {% get_top_filter_path as path %}
-                {% include path %}
-            </div>
+    <div class="collapse container" id="top_classification_collapse">
+        <div class="card card-body col col-12">
+            {% include "eduhub/_classification.html" %}
         </div>
     </div>
 
 {% endblock subnavbar %}
-
 {% block content %} 
-
 {% endblock content%}
-
-{% block optionaljs %} 
-    
-    <script src="{% static 'eduhub/eduhub.js' %}"></script>
-    
+{% block optionaljs %}     
+    <script src="{% static 'eduhub/eduhub.js' %}"></script>    
     {% block eduhub_optionaljs %} 
-
     {% endblock eduhub_optionaljs %}
-
 {% endblock optionaljs %}

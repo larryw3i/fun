@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib import admin
 
-from fun.fundef import default_bleach_clean
+from fun import bleach_clean
 
 from .modelforms import FunhomestickerModelForm, HomestickerModelForm
 from .models import Appreciation, Funhomesticker, Homesticker
@@ -36,7 +36,7 @@ class HomestickerAdmin(admin.ModelAdmin):
     }
 
     def save_model(self, request, obj, form, change):
-        obj.content = default_bleach_clean(obj.content)
+        obj.content = bleach_clean(obj.content)
         obj.promulgator = request.user
         return super().save_model(request, obj, form, change)
 
@@ -60,6 +60,6 @@ class AppreciationAdmin(admin.ModelAdmin):
     ordering = ('-submitting_date', )
 
     def save_model(self, request, obj, form, change):
-        obj.content = default_bleach_clean(obj.content)
+        obj.content = bleach_clean(obj.content)
         obj.submitter = request.user
         return super().save_model(request, obj, form, change)

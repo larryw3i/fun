@@ -12,6 +12,7 @@ from django.core import validators
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 
@@ -173,6 +174,11 @@ class Classification(models.Model):
         return (self.parent is None and '/' or f'{str(self.parent)}/') + \
         self.name
 
+    def clean(self):
+        if '/' in self.name:
+            raise ValidationError({
+                'name':_("name includes '/' is not allowed")})
+
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
 
@@ -182,7 +188,8 @@ class Classification(models.Model):
 
     name = models.CharField(
         max_length=64, blank=False,
-        verbose_name=_('Classification name'))
+        verbose_name=_("Classification name('/' cannot be included)"))
 
     comment = models.CharField(
+        null=True, blank=True,
         max_length=64, verbose_name=_('Classification comment'))

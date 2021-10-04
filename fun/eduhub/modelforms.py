@@ -10,8 +10,9 @@ from django.forms import ImageField, ModelForm
 from django.utils.translation import gettext_lazy as _
 
 from .models import ( Eduhubhomesticker,  Funcontent,
-                     Funtest, Label )
+                     Funtest, Label,  Classification)
 
+from django.core.exceptions import ValidationError
 
 class LabelModelForm(ModelForm):
     class Meta:
@@ -87,3 +88,15 @@ class FuntestModelForm(ModelForm):
         widgets = {
             'test_text': forms.Textarea(attrs={'rows': '25'}),
         }
+
+class ClassificationModelForm(ModelForm):
+    class Meta:
+        model = Classification
+        fields = ['parent','name','comment']
+    def clean(self):
+        if Classification.objects\
+        .filter(
+            name=self.cleaned_data['name'],\
+            parent = self.cleaned_data['parent'])\
+        .exists():
+            raise ValidationError({'name':_("name exists")})

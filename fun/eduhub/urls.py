@@ -1,14 +1,14 @@
 
 from django.urls import path
 
-from fun.funvalue import default_uuid
+from fun import default_uuid
 
 from . import views
 from .apps import EduhubConfig
 
 app_name = EduhubConfig.name
 urlpatterns = [
-    path('label_list/', views.LabelListView.as_view(), name='label_list'),
+    path('label_list', views.LabelListView.as_view(), name='label_list'),
     path('label_create/', views.LabelCreateView.as_view(),
          name='label_create'),
     path('label_delete/<uuid:pk>',
@@ -35,7 +35,7 @@ urlpatterns = [
          views.FuncontentDeleteView.as_view(), name='funcontent_delete'),
     path('funcontent_update/<uuid:pk>',
          views.FuncontentUpdateView.as_view(), name='funcontent_update'),
-         
+
 
     path('funtest_create/', views.FuntestCreateView.as_view(),
          name='funtest_create'),

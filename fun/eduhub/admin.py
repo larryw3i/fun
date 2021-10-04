@@ -5,25 +5,31 @@ from django.core.exceptions import ValidationError
 from django.shortcuts import (Http404, HttpResponseRedirect, redirect, render,
                               reverse)
 
-from fun.fundef import default_bleach_clean
+from fun import bleach_clean
+from django.utils.translation import gettext_lazy as _
+
+from django.contrib import messages
 
 # Register your models here.
 from .models import ( Eduhubhomesticker,  Funcontent,
                      Label, Classification)
+from django.core.exceptions import ValidationError
 
+from .modelforms import ClassificationModelForm
 
 @admin.register(Classification)
 class ClassificationAdmin(admin.ModelAdmin):
-    fields = [
-        'parent',
-        'name',
-        'comment']
+    
     list_display = (
         '__str__',
         'comment', )
+    form = ClassificationModelForm
 
     list_per_page = 10
 
+    def save_model(self, request, obj, form, change):
+        obj.name = bleach_clean(obj.name)
+        return super().save_model(request, obj, form, change)
     
 @admin.register(Label)
 class LabelAdmin(admin.ModelAdmin):
@@ -74,7 +80,7 @@ class EduhubhomestickerAdmin(admin.ModelAdmin):
     }
 
     def save_model(self, request, obj, form, change):
-        obj.content = default_bleach_clean(obj.content)
+        obj.content = bleach_clean(obj.content)
         obj.promulgator = request.user
         return super().save_model(request, obj, form, change)
 

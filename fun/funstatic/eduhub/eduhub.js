@@ -1,11 +1,6 @@
 
 (function(){
     
-	$(document).on( 'click', '#eduhubTopFilterDropdownMenu a', (event)=>{
-        var  filter_label = $(event.currentTarget).data('filter_label');
-        Cookies.set('eduhub_top_filter' , filter_label , {'expires': 365 });
-        location.reload();
-    } );
 	$(document).on( 'click', '#eduhub_search_submit', (event)=>{
         event.preventDefault();
         if( $(`#eduhub_search_q`).val().length >0 )
@@ -27,28 +22,4 @@
         location.href = location.pathname +"?"+urlsearch.toString();
     });
 
-    $(document).on('click', '.second_filter', (event)=>{
-        let second_filter = $(event.currentTarget).data('label');
-        let first_filter = $( event.currentTarget ).data('first_filter');
-        first_filter = $(`.${first_filter}`).data('label');
-        
-        Cookies.set(
-            'eduhub_first_filter', first_filter, 
-            { expires: 365 });
-        Cookies.set(
-            'eduhub_second_filter', second_filter, 
-            { expires: 365 });
-        
-        location.reload();
-
-    } );
-
-    $(document).on('click', '.first_fliter_all', (event)=>{
-        
-        Cookies.remove('eduhub_first_filter');
-        Cookies.remove('eduhub_second_filter');
-
-        location.reload();
-
-    } );
 }());

@@ -18,7 +18,7 @@ from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
 
-from fun import funvalue, settings
+from fun import  settings
 
 from .apps import FunuserConfig
 from .modelforms import FunuserModelForm

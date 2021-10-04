@@ -19,9 +19,9 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
 from humanize import naturalsize
 
-from fun import funvalue, settings
-from fun.fundef import default_bleach_clean
-from fun.funvalue import subjects_top
+from fun import  settings
+from fun import bleach_clean
+from fun import subjects_top
 
 from .apps import EduhubConfig
 from .modelforms import ( EduhubhomestickerModelForm,
@@ -241,7 +241,7 @@ class FuncontentCreateView(LoginRequiredMixin, CreateView):
             return render(self.request, content_create_template,
                           context={'form': form})
 
-        form.instance.content = default_bleach_clean(form.instance.content)
+        form.instance.content = bleach_clean(form.instance.content)
         self.label_id = form.instance.label.id
         form.instance.author = self.request.user
 
@@ -302,7 +302,7 @@ class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
         return super().post(request, *args, **kwargs)
 
     def form_valid(self, form):
-        form.instance.content = default_bleach_clean(form.instance.content)
+        form.instance.content = bleach_clean(form.instance.content)
         return super().form_valid(form)
 
     def get_success_url(self):

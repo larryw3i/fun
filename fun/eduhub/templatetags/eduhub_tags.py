@@ -5,7 +5,9 @@ from django import template
 from django.utils.translation import gettext_lazy as _
 
 from fun import settings
+import uuid
 
+from eduhub.models import Classification
 register = template.Library()
 
 
@@ -47,3 +49,28 @@ def get_top_filter_path(context):
     if os.path.exists(settings.BASE_DIR + '/templates/' + top_filter_html):
         return top_filter_html
     return 'eduhub/_top_filters/_eduhub_base_top_filter.html'
+
+
+@register.simple_tag(takes_context=True)
+def curr_classification(context):
+    request = context['request']
+    classification = Classification.objects\
+    .filter(id = request.COOKIES.get('classification', uuid.UUID(int=0)))\
+    .first()
+    return _('All') if classification is None else str(Classification)
+
+
+@register.simple_tag(takes_context=True)
+def get_classification(context):
+    classifications = Classification.objects.all()
+    classifications = sorted( classifications, key=lambda x: str(x) )
+    _html = ''
+    _len = 0
+    for c in classifications:
+        print(str(c))
+        _len_ = str(c).count('/')
+        if _len != _len_:
+            _len = _len_
+            _html += '<br/>'
+        _html += f'<a style="text-indent:{2*_len}em" id="{c.id}">{c.name}</a>'
+    return _html

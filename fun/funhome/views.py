@@ -19,7 +19,7 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
 from funfile.models import Checkup
 
-from fun import funvalue, settings
+from fun import settings
 
 from .apps import FunhomeConfig
 from .modelforms import FunhomestickerModelForm, HomestickerModelForm
