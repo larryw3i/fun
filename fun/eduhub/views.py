@@ -424,32 +424,62 @@ class AppraisingCListView(ListView):
     model = AppraisingContent
     template_name = appraising_c_list_template
     form_class = AppraisingModelForm
-    pass
+    context_object_name = 'appraisingcontents'
+    def get_queryset(self):
+        return AppraisingContent.objects\
+            .filter(is_legal=True)\
+            .order_by('-DOU')
 
 
 class AppraisingCCreateView(CreateView):
     model = AppraisingContent
     template_name = appraising_c_create_template
     form_class = AppraisingCModelForm
-    pass
-
+    context_object_name = 'appraisingcontent'
+    success_url = reverse_lazy('eduhub:appraising_c_list')
+    
+    def form_valid(self, form):
+        form.instance.acontent = bleach_clean(form.instance.acontent)
+        form.instance.cfrom = self.request.user
+        return super().form_valid(form)
+    
 
 class AppraisingCUpdateView(UpdateView):
     model = AppraisingContent
     template_name = appraising_c_update_template
     form_class = AppraisingCModelForm
-    pass
+    context_object_name = 'appraisingcontent'
+    
+    def post(self, request, *args, **kwargs):
+        if not AppraisingContent.objects\
+            .filter(pk=kwargs['pk'], cfrom=request.user)\
+                .exists():
+            raise Http404()
+        return super().post(request, *args, **kwargs)
+        
+    def form_valid(self, form):
+        form.instance.acontent = bleach_clean(form.instance.acontent)
+        form.instance.cfrom = self.request.user
+        return super().form_valid(form)
 
 
 class AppraisingCDeleteView(DeleteView):
     model = AppraisingContent
     template_name = appraising_c_delete_template
     form_class = AppraisingCModelForm
-    pass
+    context_object_name = 'appraisingcontent'
+
+    def post(self, request, *args, **kwargs):
+        if not AppraisingContent.objects\
+            .filter(pk=kwargs['pk'], cfrom=request.user)\
+                .exists():
+            raise Http404()
+        return super().post(request, *args, **kwargs)
 
 
 class AppraisingCDetailView(DetailView):
     model = AppraisingContent
     template_name = appraising_c_detail_template
     form_class = AppraisingCModelForm
+    context_object_name = 'appraisingcontent'
     pass

@@ -1,6 +1,7 @@
 
 from django import template
 from funuser.models import Funuser
+from fun import settings
 
 register = template.Library()
 
@@ -14,8 +15,8 @@ def get_funuser_name(context, user):
 
 @register.simple_tag(takes_context=True)
 def get_funuser_avatar_url(context, user):
-    funuser = Funuser.objects.filter(user=user).first()
+    request = context['request']
     return reverse(
-        'funfile:get_file', kwargs={"file_id": funuser.avatar.name}
-    ) if (funuser and len(funuser.avatar.name) > 0) else \
+        'funfile:get_file', kwargs={"file_id": request.user.avatar.name}
+    ) if (len(request.user.avatar.name) > 0) else \
         (settings.STATIC_URL + 'images/x_dove.webp')

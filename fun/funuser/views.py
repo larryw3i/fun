@@ -38,21 +38,7 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('funuser:funuser_update')
 
     def get_object(self, queryset=None):
-        default_avatar_file_path = os.path.join(
-            settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
-        is_funuser_created = Funuser.objects\
-            .filter(user=self.request.user).exists()
-
-        if not is_funuser_created:
-            new_funuser = Funuser(
-                user=self.request.user,
-                full_name=self.request.user.username)
-            new_funuser.save()
-            return new_funuser
-        # super(self).get_object(queryset=queryset)
-        funuser = Funuser.objects.get(user=self.request.user)
-        funuser.full_name = self.request.user.username
-        return funuser
+        return self.request.user
 
     def form_valid(self, form):
 

@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
+from funuser.models import Funuser
 
 # Put the readability of your code first
 # Create your models here.
@@ -40,7 +41,7 @@ class Homesticker(models.Model):
         upload_to=upload_to, verbose_name=_('Sticker cover'))
 
     promulgator = models.ForeignKey(
-        to=User, on_delete=models.CASCADE,
+        to=Funuser, on_delete=models.CASCADE,
         verbose_name=_('Sticker promulgator'))
 
     content_file = models.FileField(
@@ -86,7 +87,7 @@ class Funhomesticker(models.Model):
         verbose_name=_('Sticker cover'))
 
     promulgator = models.ForeignKey(
-        to=User,
+        to=Funuser,
         on_delete=models.CASCADE,
         verbose_name=_('Sticker promulgator'))
 
@@ -149,7 +150,7 @@ class Appreciation(models.Model):
     )
 
     submitter = models.ForeignKey(
-        to=User,
+        to=Funuser,
         on_delete=models.CASCADE,
         verbose_name=_('Submitter')
     )

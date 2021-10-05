@@ -39,9 +39,9 @@ urlpatterns = [
          views.FuncontentUpdateView.as_view(), name='funcontent_update'),
 
 
-    path('appraising_list/<uuid:label_id>',
+    path('appraising_list',
          views.AppraisingListView.as_view(), name='appraising_list'),
-    path('appraising_create/<uuid:label_id>',
+    path('appraising_create/<uuid:appraising_c_id>',
          views.AppraisingCreateView.as_view(), name='appraising_create'),
     path('appraising_detail/<uuid:pk>',
          views.AppraisingDetailView.as_view(), name='appraising_detail'),
@@ -49,6 +49,17 @@ urlpatterns = [
          views.AppraisingDeleteView.as_view(), name='appraising_delete'),
     path('appraising_update/<uuid:pk>',
          views.AppraisingUpdateView.as_view(), name='appraising_update'),
+
+    path('appraising_c_list',
+         views.AppraisingCListView.as_view(), name='appraising_c_list'),
+    path('appraising_c_create',
+         views.AppraisingCCreateView.as_view(), name='appraising_c_create'),
+    path('appraising_c_detail/<uuid:pk>',
+         views.AppraisingCDetailView.as_view(), name='appraising_c_detail'),
+    path('appraising_c_delete/<uuid:pk>',
+         views.AppraisingCDeleteView.as_view(), name='appraising_c_delete'),
+    path('appraising_c_update/<uuid:pk>',
+         views.AppraisingCUpdateView.as_view(), name='appraising_c_update'),
 
 
     path('funtest_create/', views.FuntestCreateView.as_view(),

@@ -1,7 +1,7 @@
 import os
 import uuid
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
@@ -15,22 +15,10 @@ from fun import settings
 funuser_mame = 'funuser'
 
 
-class Funuser(models.Model):
-
-    class Meta:
-        verbose_name = _('User information')
-        verbose_name_plural = _('User informations')
-
-    id = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    user = models.ForeignKey(
-        to=User, on_delete=models.CASCADE, verbose_name=_('User'))
+class Funuser(AbstractUser):
 
     avatar = models.ImageField(
         upload_to=upload_to, blank=True, verbose_name=_('Avatar'), )
-
-    full_name = models.CharField(
-        blank=True, max_length=64, verbose_name=_('Full name'))
 
     birth_date = models.DateField(
         blank=True, null=True, verbose_name=_('Brith date'))
@@ -67,5 +55,3 @@ class Funuser(models.Model):
     is_motto_outward = models.BooleanField(
         default=False, verbose_name=_('Is outward') + ' ?')
 
-    creating_date = models.DateTimeField(
-        auto_now_add=True, verbose_name=_('Funuser creating date'))

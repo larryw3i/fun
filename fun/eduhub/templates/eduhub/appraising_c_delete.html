@@ -1,0 +1,46 @@
+
+{% extends 'eduhub/_eduhub_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+
+{% block title %}
+    {% trans 'Delete label'  %}
+{% endblock title %}
+
+{% block content %} 
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            {% trans 'Are you sure you want to delete' %} 
+            "{{ appraising_content.title }}"?
+        </p>
+        <input class="btn btn-danger" type="submit" 
+            value="{% trans 'Delete' %}">
+    </form>
+
+    <h6 class="text-center">{{ appraising_content.title }}</h6>
+    <hr/> 
+    {% autoescape off %}
+        {{ appraising_content.content }}
+    {% endautoescape %}
+    <hr/>
+
+    <p class="text-right " >
+        <a 
+            href=
+        "{% url 'funuser:funuser_detail' user=appraising_content.cfrom.id %}">
+            {{ appraising_content.cfrom }}
+        </a> 
+    </p> 
+    <p class="text-right small">{{ appraising_content.DOC }}</p>
+    <hr/>
+    <p class="small">
+        {{ appraising_content.comment }}
+    </p> 
+    
+    {% include 'funhome/_ckeditor.html' %}
+
+{% endblock %}

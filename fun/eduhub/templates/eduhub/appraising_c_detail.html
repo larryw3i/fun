@@ -1,0 +1,51 @@
+
+{% extends 'eduhub/_eduhub_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load l10n %}
+{% load tz %}
+{% load eduhub_tags %}
+
+
+{% block title %}
+    {% trans 'Content details'  %}
+{% endblock title %}
+
+{% block content %} 
+    <h6 class="text-center">{{ appraising_content.title }}</h6>
+    <hr/> 
+    {% autoescape off %}
+        {{ appraising_content.content }}
+    {% endautoescape %}
+    <hr/>
+    <p class="text-right " >
+        <a href="
+        {% url 'funuser:funuser_detail' user=appraising_content.cfrom.id %}">
+            {{ appraising_content.cfrom }}
+        </a> 
+    </p> 
+    <p class="text-right small">
+        {{ appraising_content.DOC }}
+        <br/>
+        {{ appraising_content.classification }}
+    </p>
+    <hr/>
+    <p class="small">
+        {{ appraising_content.comment }}
+    </p>
+    {% ifequal appraising_content.cfrom request.user %} 
+        <div class="col col-12 text-center" >
+            <a href=
+            "{% url 'eduhub:appraising_c_update' pk=appraising_content.id %}" 
+                class="btn btn-sm btn-info">{% trans 'Edit' %}
+            </a>
+            <a href=
+            "{% url 'eduhub:appraising_c_delete' pk=appraising_content.id %}" 
+                class="btn btn-sm btn-danger">{% trans 'Delete' %}
+            </a>
+        </div>
+    {% endifequal %}
+ 
+
+{% endblock %}
