@@ -260,8 +260,8 @@ class FuncontentDeleteView(LoginRequiredMixin, DeleteView):
         return super().post(request, *args, **kwargs)
 
     def get_success_url(self):
-        return reverse('eduhub:funcontent_list',\
-        kwargs={'label_id': self.label_id})
+        return reverse('eduhub:funcontent_list',
+                       kwargs={'label_id': self.label_id})
 
 
 class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
@@ -440,7 +440,7 @@ class AppraisingCCreateView(LoginRequiredMixin, CreateView):
     form_class = AppraisingCModelForm
     context_object_name = 'appraisingcontent'
     success_url = reverse_lazy('eduhub:appraising_c_list')
-    
+
     def get_initial(self):
         initial = super().get_initial()
         classification_id = self.request.COOKIES.get(

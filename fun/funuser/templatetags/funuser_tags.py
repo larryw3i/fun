@@ -1,6 +1,7 @@
 
 from django import template
 from funuser.models import Funuser
+
 from fun import settings
 
 register = template.Library()
