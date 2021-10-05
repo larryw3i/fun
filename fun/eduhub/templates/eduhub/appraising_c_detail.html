@@ -13,35 +13,41 @@
 {% endblock title %}
 
 {% block content %} 
-    <h6 class="text-center">{{ appraising_content.title }}</h6>
+    <h6 class="text-center">{{ appraisingcontent.title }}</h6>
     <hr/> 
     {% autoescape off %}
-        {{ appraising_content.content }}
+        {{ appraisingcontent.content }}
     {% endautoescape %}
     <hr/>
-    <p class="text-right " >
-        <a href="
-        {% url 'funuser:funuser_detail' user=appraising_content.cfrom.id %}">
-            {{ appraising_content.cfrom }}
-        </a> 
-    </p> 
+    {% if appraisingcontent.cfrom %}
+        <p class="text-right " >
+            <a href="
+            {% url 'funuser:funuser_detail' user_id=appraisingcontent.cfrom.id %}">
+                {{ appraisingcontent.cfrom }}
+            </a> 
+        </p> 
+    {% else %}
+        <p class="text-right " >
+            {% trans 'Unknown user' %}
+        </p>
+    {% endif %}
     <p class="text-right small">
-        {{ appraising_content.DOC }}
+        {{ appraisingcontent.DOC }}
         <br/>
-        {{ appraising_content.classification }}
+        {{ appraisingcontent.classification }}
     </p>
     <hr/>
     <p class="small">
-        {{ appraising_content.comment }}
+        {{ appraisingcontent.comment }}
     </p>
-    {% ifequal appraising_content.cfrom request.user %} 
+    {% ifequal appraisingcontent.cfrom request.user %} 
         <div class="col col-12 text-center" >
             <a href=
-            "{% url 'eduhub:appraising_c_update' pk=appraising_content.id %}" 
+            "{% url 'eduhub:appraising_c_update' pk=appraisingcontent.id %}" 
                 class="btn btn-sm btn-info">{% trans 'Edit' %}
             </a>
             <a href=
-            "{% url 'eduhub:appraising_c_delete' pk=appraising_content.id %}" 
+            "{% url 'eduhub:appraising_c_delete' pk=appraisingcontent.id %}" 
                 class="btn btn-sm btn-danger">{% trans 'Delete' %}
             </a>
         </div>

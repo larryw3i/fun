@@ -154,7 +154,7 @@ class LabelDeleteView(LoginRequiredMixin, DeleteView):
 
     def post(self, request, *args, **kwargs):
         if not Label.objects\
-            .filter(pk=kwargs['pk'], author=request.user)\
+            .filter(pk=self.pk, author=request.user)\
                 .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
@@ -172,7 +172,7 @@ class LabelUpdateView(LoginRequiredMixin, UpdateView):
 
     def post(self, request, *args, **kwargs):
         if not Label.objects\
-            .filter(pk=kwargs['pk'], author=request.user)\
+            .filter(pk=self.pk, author=request.user)\
                 .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
@@ -186,6 +186,7 @@ class FuncontentListView(ListView):
     ordering = ['-uploading_date', ]
     paginate_by = 5
     paginate_orphans = 1
+    pk_url_kwarg = 'label_id'
 
     def get_queryset(self):
         return Funcontent.objects.filter(
@@ -216,6 +217,7 @@ class FuncontentCreateView(LoginRequiredMixin, CreateView):
     model = Funcontent
     form_class = FuncontentModelForm
     template_name = funcontent_create_template
+    pk_url_kwarg = 'label_id'
 
     def get_initial(self):
         initial = super().get_initial()
@@ -250,16 +252,16 @@ class FuncontentDeleteView(LoginRequiredMixin, DeleteView):
     def post(self, request, *args, **kwargs):
 
         if not Funcontent.objects\
-            .filter(pk=kwargs['label_id'], label__author=request.user)\
+            .filter(pk=self.pk, label__author=request.user)\
                 .exists():
             raise Http404()
 
-        self.label = Funcontent.objects.get(pk=kwargs['label_id'])
+        self.label_id = Funcontent.objects.get(pk=self.pk).label.id
         return super().post(request, *args, **kwargs)
 
     def get_success_url(self):
-        return reverse('eduhub:content_list',
-                       kwargs={'label': self.kwargs['label_id']})
+        return reverse('eduhub:funcontent_list',\
+        kwargs={'label_id': self.label_id})
 
 
 class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
@@ -269,7 +271,7 @@ class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
 
     def post(self, request, *args, **kwargs):
         if not Funcontent.objects\
-            .filter(pk=kwargs['pk'], label__author=request.user)\
+            .filter(pk=self.pk, label__author=request.user)\
                 .exists():
             raise Http404()
 
@@ -296,7 +298,6 @@ class EduhubhomestickerListView(ListView):
 
 
 class EduhubhomestickerDetailView(DetailView):
-
     model = Eduhubhomesticker
     template_name = eduhubhomesticker_detail_template
     form_class = EduhubhomestickerModelForm
@@ -385,21 +386,22 @@ class AppraisingListView(ListView):
     pass
 
 
-class AppraisingCreateView(CreateView):
+class AppraisingCreateView(LoginRequiredMixin, CreateView):
     model = Appraising
     template_name = appraising_create_template
     form_class = AppraisingModelForm
+    pk_url_kwarg = 'appraising_c_id'
     pass
 
 
-class AppraisingUpdateView(UpdateView):
+class AppraisingUpdateView(LoginRequiredMixin, UpdateView):
     model = Appraising
     template_name = appraising_update_template
     form_class = AppraisingModelForm
     pass
 
 
-class AppraisingDeleteView(DeleteView):
+class AppraisingDeleteView(LoginRequiredMixin, DeleteView):
     model = Appraising
     template_name = appraising_delete_template
     form_class = AppraisingModelForm
@@ -425,45 +427,54 @@ class AppraisingCListView(ListView):
     template_name = appraising_c_list_template
     form_class = AppraisingModelForm
     context_object_name = 'appraisingcontents'
+
     def get_queryset(self):
         return AppraisingContent.objects\
             .filter(is_legal=True)\
             .order_by('-DOU')
 
 
-class AppraisingCCreateView(CreateView):
+class AppraisingCCreateView(LoginRequiredMixin, CreateView):
     model = AppraisingContent
     template_name = appraising_c_create_template
     form_class = AppraisingCModelForm
     context_object_name = 'appraisingcontent'
     success_url = reverse_lazy('eduhub:appraising_c_list')
     
+    def get_initial(self):
+        initial = super().get_initial()
+        classification_id = self.request.COOKIES.get(
+            'classification', uuid.UUID(int=0))
+        initial['classification'] = Classification.objects.get(
+            pk=classification_id)
+        return initial
+
     def form_valid(self, form):
         form.instance.acontent = bleach_clean(form.instance.acontent)
         form.instance.cfrom = self.request.user
         return super().form_valid(form)
-    
 
-class AppraisingCUpdateView(UpdateView):
+
+class AppraisingCUpdateView(LoginRequiredMixin, UpdateView):
     model = AppraisingContent
     template_name = appraising_c_update_template
     form_class = AppraisingCModelForm
     context_object_name = 'appraisingcontent'
-    
+
     def post(self, request, *args, **kwargs):
         if not AppraisingContent.objects\
-            .filter(pk=kwargs['pk'], cfrom=request.user)\
+            .filter(pk=self.pk, cfrom=request.user)\
                 .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
-        
+
     def form_valid(self, form):
         form.instance.acontent = bleach_clean(form.instance.acontent)
         form.instance.cfrom = self.request.user
         return super().form_valid(form)
 
 
-class AppraisingCDeleteView(DeleteView):
+class AppraisingCDeleteView(LoginRequiredMixin, DeleteView):
     model = AppraisingContent
     template_name = appraising_c_delete_template
     form_class = AppraisingCModelForm
@@ -471,7 +482,7 @@ class AppraisingCDeleteView(DeleteView):
 
     def post(self, request, *args, **kwargs):
         if not AppraisingContent.objects\
-            .filter(pk=kwargs['pk'], cfrom=request.user)\
+            .filter(pk=self.pk, cfrom=request.user)\
                 .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)

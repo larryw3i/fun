@@ -24,7 +24,7 @@
             "{{ funcontent.title }}"?
         </p>
         <input class="btn btn-danger" type="submit" 
-            value="{% trans 'Delete' %}">
+            value="{% trans 'Delete' %}"/>
     </form>
 
     <h6 class="text-center">{{ funcontent.title }}</h6>
@@ -35,9 +35,8 @@
     <hr/>
 
     <p class="text-right " >
-        <a 
-            href=
-        "{% url 'funuser:funuser_detail' user=funcontent.label.author.id %}">
+        <a href=
+        "{% url 'funuser:funuser_detail' user_id=funcontent.label.author.id %}">
             {{ funcontent.label.author }}
         </a> 
     </p> 

@@ -51,27 +51,6 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
 
 
 class FunuserDetailView(LoginRequiredMixin, DetailView):
-
     model = Funuser
     template_name = funuser_detail_template
-
-    def __init__(self):
-        self.is_funuser_created = False
-        super().__init__()
-
-    def get_context_data(self, **kwargs):
-
-        context_data = super().get_context_data(**kwargs)
-        context_data['is_funuser_created'] = self.is_funuser_created
-        return context_data
-
-    def get_object(self, queryset=None):
-
-        self.is_funuser_created = Funuser.objects.filter(
-            user__id=self.kwargs['user']).exists()
-
-        if not (self.is_funuser_created):
-            return Funuser(user=self.request.user)
-
-        # super().get_object(queryset=queryset)
-        return Funuser.objects.get(user__id=self.kwargs['user'])
+    pk_url_kwarg = 'user_id'

@@ -53,11 +53,11 @@
                             {% if request.user == label.author %}
                                 
                                 <a href=
-                            "{% url 'eduhub:label_update' id=label.id %}" 
+                            "{% url 'eduhub:label_update' pk=label.id %}" 
                                     class="small" >{% trans 'Edit' %}</a>
 
                                 <a href=
-                            "{% url 'eduhub:label_delete' id=label.id %}" 
+                            "{% url 'eduhub:label_delete' pk=label.id %}" 
                                     class="small">{% trans 'Delete' %}</a>
                             {% endif %}
                         </div>

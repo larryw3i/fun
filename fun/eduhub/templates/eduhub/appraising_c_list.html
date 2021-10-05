@@ -9,6 +9,10 @@
 
 {% block content %} 
     <h2 class="text-center">{% trans 'Appraising contents' %}</h2>
+    <div class="col col-12 text-right" >
+        <a href="{% url 'eduhub:appraising_c_create' %}" 
+            class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
+    </div>
     <div class="row">
             {% for ac in appraisingcontents %} 
 

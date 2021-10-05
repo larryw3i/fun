@@ -26,4 +26,9 @@
         Cookies.set('classification',$(event.currentTarget).attr('id'))
         window.location.reload()
     });
+
+    $(document).on('change','#id_cover',(event)=>{
+        $('.preview-img').attr(
+            'src',URL.createObjectURL( event.target.files[0]) )
+    });
 }());

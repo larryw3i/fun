@@ -13,11 +13,15 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='appraisingcontent',
             name='DOU',
-            field=models.DateTimeField(auto_now=True, verbose_name='Date of appraising content updating'),
+            field=models.DateTimeField(
+                auto_now=True,
+                verbose_name='Date of appraising content updating'),
         ),
         migrations.AddField(
             model_name='appraisingcontent',
             name='is_legal',
-            field=models.BooleanField(default=True, verbose_name='Is content legal'),
+            field=models.BooleanField(
+                default=True,
+                verbose_name='Is content legal'),
         ),
     ]

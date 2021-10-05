@@ -224,7 +224,7 @@ class AppraisingContent(models.Model):
     DOC = models.DateTimeField(
         auto_now_add=True,
         verbose_name=_('Date of appraising content creating'))
-    
+
     DOU = models.DateTimeField(
         auto_now=True,
         verbose_name=_('Date of appraising content updating'))
@@ -232,12 +232,13 @@ class AppraisingContent(models.Model):
     classification = models.ForeignKey(
         to=Classification, on_delete=models.SET_NULL, null=True,
         verbose_name=_('Classification'))
-    
+
     comment = models.TextField(max_length=128, verbose_name=_(
         'Eduhub homepage sticker comment'))
 
     is_legal = models.BooleanField(
         default=True, verbose_name=_('Is content legal'))
+
 
 class Appraising(models.Model):
     class Meta:
@@ -250,7 +251,9 @@ class Appraising(models.Model):
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     afrom = models.ForeignKey(
-        to=Funuser, on_delete=models.CASCADE, verbose_name=_('Appraisings from'))
+        to=Funuser,
+        on_delete=models.CASCADE,
+        verbose_name=_('Appraisings from'))
     content = models.ForeignKey(
         to=AppraisingContent, on_delete=models.CASCADE,
         verbose_name=_('Content'))

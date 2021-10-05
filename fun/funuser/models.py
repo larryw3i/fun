@@ -54,4 +54,3 @@ class Funuser(AbstractUser):
                              verbose_name=_('Motto'))
     is_motto_outward = models.BooleanField(
         default=False, verbose_name=_('Is outward') + ' ?')
-
