@@ -10,6 +10,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.core import validators
 from django.core.exceptions import ValidationError
+from django.core.validators import *
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
@@ -196,3 +197,52 @@ class Funtest(models.Model):
     test_commit = models.CharField(
         max_length=64, blank=True, null=True,
         verbose_name=_('Test commit'))
+
+
+class AppraisingContent(models.Model):
+    class Meta:
+        verbose_name = _('Appraising content')
+        verbose_name_plural = _('Appraising contents')
+
+    def __str__(self):
+        return self.name
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+
+    cfrom = models.ForeignKey(
+        to=User, on_delete=models.CASCADE, verbose_name=_('Content from'))
+
+    title = models.CharField(max_length=64, blank=False,
+                             verbose_name=_('Title'))
+
+    acontent = RichTextUploadingField(
+        max_length=2048,
+        verbose_name=_('Content'))
+
+    classification = models.ForeignKey(
+        to=Classification, on_delete=models.SET_NULL, null=True,
+        verbose_name=_('Classification'))
+
+
+class Appraising(models.Model):
+    class Meta:
+        verbose_name = _('Appraising')
+        verbose_name_plural = _('Appraisings')
+
+    def __str__(self):
+        return self.name
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    afrom = models.ForeignKey(
+        to=User, on_delete=models.CASCADE, verbose_name=_('Appraisings from'))
+    content = models.ForeignKey(
+        to=AppraisingContent, on_delete=models.CASCADE,
+        verbose_name=_('Content'))
+    point = models.PositiveSmallIntegerField(
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(10)])
+    comment = models.CharField(
+        max_length=64, verbose_name=_('Comment'))

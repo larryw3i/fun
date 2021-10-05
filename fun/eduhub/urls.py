@@ -8,6 +8,7 @@ from .apps import EduhubConfig
 
 app_name = EduhubConfig.name
 urlpatterns = [
+
     path('label_list', views.LabelListView.as_view(), name='label_list'),
     path('label_create/', views.LabelCreateView.as_view(),
          name='label_create'),
@@ -23,6 +24,7 @@ urlpatterns = [
     path('eduhub_search/', views.EduhubSearch.as_view(),
          name='eduhub_search'),
 
+
     path('funcontent_list', views.FuncontentListView.as_view(),
          name='funcontent_list_all'),
     path('funcontent_list/<uuid:label_id>',
@@ -35,6 +37,18 @@ urlpatterns = [
          views.FuncontentDeleteView.as_view(), name='funcontent_delete'),
     path('funcontent_update/<uuid:pk>',
          views.FuncontentUpdateView.as_view(), name='funcontent_update'),
+
+
+    path('appraising_list/<uuid:label_id>',
+         views.AppraisingListView.as_view(), name='appraising_list'),
+    path('appraising_create/<uuid:label_id>',
+         views.AppraisingCreateView.as_view(), name='appraising_create'),
+    path('appraising_detail/<uuid:pk>',
+         views.AppraisingDetailView.as_view(), name='appraising_detail'),
+    path('appraising_delete/<uuid:pk>',
+         views.AppraisingDeleteView.as_view(), name='appraising_delete'),
+    path('appraising_update/<uuid:pk>',
+         views.AppraisingUpdateView.as_view(), name='appraising_update'),
 
 
     path('funtest_create/', views.FuntestCreateView.as_view(),

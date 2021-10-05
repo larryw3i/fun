@@ -32,7 +32,6 @@ funuser_list_template = f'funuser/funuser_list.html'
 
 
 class FunuserUpdateView(LoginRequiredMixin, UpdateView):
-
     model = Funuser
     form_class = FunuserModelForm
     template_name = funuser_update_template
@@ -41,16 +40,14 @@ class FunuserUpdateView(LoginRequiredMixin, UpdateView):
     def get_object(self, queryset=None):
         default_avatar_file_path = os.path.join(
             settings.SERVE_STATIC_ROOT, 'images', 'x_dove.webp')
-
-        is_funuser_created = Funuser.objects.filter(
-            user=self.request.user).exists()
+        is_funuser_created = Funuser.objects\
+            .filter(user=self.request.user).exists()
 
         if not is_funuser_created:
             new_funuser = Funuser(
                 user=self.request.user,
                 full_name=self.request.user.username)
             new_funuser.save()
-
             return new_funuser
         # super(self).get_object(queryset=queryset)
         funuser = Funuser.objects.get(user=self.request.user)

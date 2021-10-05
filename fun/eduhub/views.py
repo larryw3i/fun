@@ -23,19 +23,17 @@ from humanize import naturalsize
 from fun import bleach_clean, settings, subjects_top
 
 from .apps import EduhubConfig
-from .modelforms import (EduhubhomestickerModelForm, FuncontentModelForm,
+from .modelforms import (AppraisingCModelForm, AppraisingModelForm,
+                         EduhubhomestickerModelForm, FuncontentModelForm,
                          FuntestModelForm, LabelModelForm)
-from .models import (Classification, Eduhubhomesticker, Funcontent, Funtest,
-                     Label, content_name, eduhubhomesticker_name,
-                     funcontent_name, funtest_name, label_name)
+from .models import (Appraising, AppraisingContent, Classification,
+                     Eduhubhomesticker, Funcontent, Funtest, Label,
+                     content_name, eduhubhomesticker_name, funcontent_name,
+                     funtest_name, label_name)
 
 # Create your views here.
 
 max_cover_size = 500 * 1024
-
-max_pdf_content_file_size = 5 * math.pow(1024, 2)
-max_video_content_file_size = 100 * math.pow(1024, 2)
-
 
 label_create_template = f'eduhub/label_create.html'
 label_detail_template = f'eduhub/label_detail.html'
@@ -371,3 +369,87 @@ class FuntestContentPreview(TemplateView):
 def how_to_classification(request):
     if request.method == 'GET':
         return render(request, eduhub_how_to_classification_template)
+
+
+appraising_create_template = 'eduhub/appraising_create.html'
+appraising_list_template = 'eduhub/appraising_list.html'
+appraising_update_template = 'eduhub/appraising_update.html'
+appraising_detail_template = 'eduhub/appraising_detail.html'
+appraising_delete_template = 'eduhub/appraising_delete.html'
+
+
+class AppraisingListView(ListView):
+    model = Appraising
+    template_name = appraising_list_template
+    form_class = AppraisingModelForm
+    pass
+
+
+class AppraisingCreateView(CreateView):
+    model = Appraising
+    template_name = appraising_create_template
+    form_class = AppraisingModelForm
+    pass
+
+
+class AppraisingUpdateView(UpdateView):
+    model = Appraising
+    template_name = appraising_update_template
+    form_class = AppraisingModelForm
+    pass
+
+
+class AppraisingDeleteView(DeleteView):
+    model = Appraising
+    template_name = appraising_delete_template
+    form_class = AppraisingModelForm
+    pass
+
+
+class AppraisingDetailView(DetailView):
+    model = Appraising
+    template_name = appraising_detail_template
+    form_class = AppraisingModelForm
+    pass
+
+
+appraising_c_create_template = 'eduhub/appraising_c_create.html'
+appraising_c_list_template = 'eduhub/appraising_c_list.html'
+appraising_c_update_template = 'eduhub/appraising_c_update.html'
+appraising_c_detail_template = 'eduhub/appraising_c_detail.html'
+appraising_c_delete_template = 'eduhub/appraising_c_delete.html'
+
+
+class AppraisingCListView(ListView):
+    model = AppraisingContent
+    template_name = appraising_c_list_template
+    form_class = AppraisingModelForm
+    pass
+
+
+class AppraisingCCreateView(CreateView):
+    model = AppraisingContent
+    template_name = appraising_c_create_template
+    form_class = AppraisingCModelForm
+    pass
+
+
+class AppraisingCUpdateView(UpdateView):
+    model = AppraisingContent
+    template_name = appraising_c_update_template
+    form_class = AppraisingCModelForm
+    pass
+
+
+class AppraisingCDeleteView(DeleteView):
+    model = AppraisingContent
+    template_name = appraising_c_delete_template
+    form_class = AppraisingCModelForm
+    pass
+
+
+class AppraisingCDetailView(DetailView):
+    model = AppraisingContent
+    template_name = appraising_c_detail_template
+    form_class = AppraisingCModelForm
+    pass

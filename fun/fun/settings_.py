@@ -173,8 +173,9 @@ USE_I18N = True
 
 USE_L10N = True
 
-LANGUAGES = [('en', _('English'))]
-LANGUAGE_CODE = 'en-US'
+# values of LANGUAGES and LANGUAGE_CODE are lowercase
+LANGUAGES = [('en-us', _('English'))]
+LANGUAGE_CODE = 'en-us'
 
 LANGUAGE_COOKIE_AGE = 10 * 365 * 24 * 60 * 60
 LANGUAGE_COOKIE_SECURE = True
