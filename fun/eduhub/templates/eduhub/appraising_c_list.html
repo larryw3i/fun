@@ -11,10 +11,12 @@
     <h2 class="text-center">{% trans 'Appraising contents' %}</h2>
     <div class="col col-12 text-right" >
         <a href="{% url 'eduhub:appraising_c_create' %}" 
-            class="btn btn-sm btn-outline-info ">{% trans 'Add' %}</a>
+            class="btn btn-sm btn-outline-info ">
+            {% trans 'Add' %}
+        </a>
     </div>
     <div class="row">
-            {% for ac in appraisingcontents %} 
+            {% for ac in asharingcontents %} 
 
                 <div class=
                     "col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 mt-2">
@@ -27,37 +29,30 @@
                             <p class="card-title small">
                                 {{ ac.title }}
                             </p>
-
                             <p class="card-text small d-none d-md-block">
                                 {{ ac.comment }}
                             </p>
-
                             <p class="text-right border-right" 
                                 style="font-size: x-small;">
                                 {{ ac.DOU }}
                             </p>
-
                             <a href=
                         "{% url 'eduhub:appraising_c_detail' pk=ac.id %}" 
                                 class="card-link small">
                                 {% trans 'View' %}
                             </a>
-
                             {% if ac.cfrom == request.user %}    
                                 <a href=
                     "{% url 'eduhub:appraising_c_update'  pk=ac.id %}" 
                                     class="card-link small">
                                     {% trans 'Edit' %}
                                 </a>
-
                                 <a href=
                     "{% url 'eduhub:appraising_c_delete' pk=ac.id %}" 
                                     class="card-link small">
                                     {% trans 'Delete' %}
                                 </a>
-
                             {% endif %}
-
                         </div>
                     </div>
                 </div>
@@ -65,9 +60,7 @@
             {% endfor %}
     
     </div>
-
     {% include 'funhome/_common_pagination.html' %}
-
     {% include 'funhome/_ckeditor.html' %}
 
 {% endblock %}

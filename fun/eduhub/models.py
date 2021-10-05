@@ -200,13 +200,13 @@ class Funtest(models.Model):
         verbose_name=_('Test commit'))
 
 
-class AppraisingContent(models.Model):
+class ASharingContent(models.Model):
     class Meta:
         verbose_name = _('Appraising content')
         verbose_name_plural = _('Appraising contents')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)
@@ -255,7 +255,7 @@ class Appraising(models.Model):
         on_delete=models.CASCADE,
         verbose_name=_('Appraisings from'))
     content = models.ForeignKey(
-        to=AppraisingContent, on_delete=models.CASCADE,
+        to=ASharingContent, on_delete=models.CASCADE,
         verbose_name=_('Content'))
     point = models.PositiveSmallIntegerField(
         validators=[

@@ -10,7 +10,7 @@ from django.core.exceptions import ValidationError
 from django.forms import ImageField, ModelForm
 from django.utils.translation import gettext_lazy as _
 
-from .models import (Appraising, AppraisingContent, Classification,
+from .models import (Appraising, ASharingContent, Classification,
                      Eduhubhomesticker, Funcontent, Funtest, Label)
 
 
@@ -96,15 +96,15 @@ class ClassificationModelForm(ModelForm):
 class AppraisingModelForm(ModelForm):
     class Meta:
         model = Appraising
-        fields = ['point', 'comment']
+        fields = ['point', 'comment', 'content']
 
     def clean(self):
         pass
 
 
-class AppraisingCModelForm(ModelForm):
+class ASharingCModelForm(ModelForm):
     class Meta:
-        model = AppraisingContent
+        model = ASharingContent
         fields = ['title', 'acontent', 'classification']
         labels = {
             'content': _('Content'),

@@ -2,299 +2,1549 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# larry <larryw3i@163.com>, 2020.
+# larry <larryw3i@163.com>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-17 08:00+0000\n"
-"PO-Revision-Date: 2020-10-04 00:47+0800\n"
+"POT-Creation-Date: 2021-10-06 05:11+0800\n"
+"PO-Revision-Date: 2021-10-06 05:28+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
 "Language-Team: Chinese <larryw3i@163.com>\n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Gtranslator 40.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:27
-#: templates/funhome/_navbar.html:32
+#: auth/templates/account/account_inactive.html:5
+#: auth/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "账号未激活"
+
+#: auth/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "账号未激活."
+
+#: auth/templates/account/email.html:6
+msgid "Account"
+msgstr "账号"
+
+#: auth/templates/account/email.html:11
+msgid "E-mail Addresses"
+msgstr "邮箱地址"
+
+#: auth/templates/account/email.html:15
+msgid ""
+"\n"
+"        The following e-mail addresses are associated with your account\n"
+"      "
+msgstr ""
+"\n"
+"  以下邮箱地址关联你的账号\n"
+"    "
+
+#: auth/templates/account/email.html:41
+msgid "Verified"
+msgstr "已验证"
+
+#: auth/templates/account/email.html:43
+msgid "Unverified"
+msgstr "未验证"
+
+#: auth/templates/account/email.html:47
+msgid "Primary"
+msgstr "常用"
+
+#: auth/templates/account/email.html:57
+msgid "Make Primary"
+msgstr "改为常用"
+
+#: auth/templates/account/email.html:61
+msgid "Re-send Verification"
+msgstr "重新发送"
+
+#: auth/templates/account/email.html:65
+#: auth/templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr "移除"
+
+#: auth/templates/account/email.html:74
+msgid "Warning"
+msgstr "警告"
+
+#: auth/templates/account/email.html:76
+msgid ""
+"\n"
+"        You currently do not have any e-mail address set up. You should "
+"really \n"
+"        add an e-mail address so you can receive notifications, reset your \n"
+"        password, etc\n"
+"      "
+msgstr ""
+"\n"
+"   你还没有设置邮箱地址哦!  添加可用的邮箱地址然后重置密码\n"
+"\n"
+"    "
+
+#: auth/templates/account/email.html:86
+msgid "Add E-mail Address"
+msgstr "添加邮箱地址"
+
+#: auth/templates/account/email.html:92
+msgid "Add E-mail"
+msgstr "添加邮箱"
+
+#: auth/templates/account/email.html:104
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "确定要移除吗?"
+
+#: auth/templates/account/email/base_message.txt:1
+#, python-format
+msgid "Hello from %(site_name)s!"
+msgstr "来自 %(site_name)s 的问候!"
+
+#: auth/templates/account/email/base_message.txt:5
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+"谢谢你使用 %(site_name)s!\n"
+"%(site_domain)s"
+
+#: auth/templates/account/email/email_confirmation_message.html:8
+msgid "Hello from x-dove"
+msgstr "来自 x-dove 的问候"
+
+#: auth/templates/account/email/email_confirmation_message.html:10
+msgid ""
+"\n"
+"            You're receiving this e-mail because user \n"
+"        "
+msgstr ""
+"\n"
+"            您收到这封邮件是因为用户\n"
+"        "
+
+#: auth/templates/account/email/email_confirmation_message.html:15
+msgid ""
+"\n"
+"            has given yours as an e-mail address to connect their account.\n"
+"        "
+msgstr ""
+"\n"
+"            邮件已送出, 未收到请联系我们.\n"
+"        "
+
+#: auth/templates/account/email/email_confirmation_message.html:18
+msgid "To confirm this is correct, go to"
+msgstr "确认邮件请 点击"
+
+#: auth/templates/account/email/email_confirmation_message.html:20
+msgid "CONFIRM EMAIL"
+msgstr "确认邮箱"
+
+#: auth/templates/account/email/email_confirmation_message.html:25
+msgid ""
+" \n"
+"            Thank you from x-dove!\n"
+"        "
+msgstr ""
+" \n"
+"         谢谢亲, (来自 x-dove )! \n"
+"        "
+
+#: auth/templates/account/email/email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"You're receiving this e-mail because user %(user_display)s has given your e-"
+"mail address to register an account on %(site_domain)s.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s"
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_subject.html:3
+#: auth/templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr "请验证你的邮箱地址"
+
+#: auth/templates/account/email/password_reset_key_message.html:7
+msgid "Hello from"
+msgstr "问候来自"
+
+#: auth/templates/account/email/password_reset_key_message.html:7
+#: funhome/views.py:153 funhome/views.py:186
+msgid "X-DOVE"
+msgstr "X-DOVE"
+
+#: auth/templates/account/email/password_reset_key_message.html:9
+msgid ""
+"\n"
+"        You're receiving this e-mail because you or someone else has "
+"requested \n"
+"        a password for your user account.\n"
+"        It can be safely ignored if you did not request a password reset. \n"
+"        Click the link below to reset your password.\n"
+"    "
+msgstr ""
+"\n"
+"        亲! 您好, 重置密码邮件送达 \n"
+"        (亲没有重置密码请忽略).\n"
+"    "
+
+#: auth/templates/account/email/password_reset_key_message.html:16
+msgid "RESET PASSWORD"
+msgstr "重置密码"
+
+#: auth/templates/account/email/password_reset_key_message.html:19
+#, python-format
+msgid ""
+"\n"
+"            In case you forgot, your username is %(username)s.\n"
+"        "
+msgstr ""
+"\n"
+"                提前和亲说, 亲的用户名是: %(username)s.\n"
+"        "
+
+#: auth/templates/account/email/password_reset_key_message.html:26
+msgid "Thank you for using"
+msgstr "很高兴为您服务"
+
+#: auth/templates/account/email/password_reset_key_message.txt:4
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"您好, 重置密码邮件送达 \n"
+" (亲没有重置密码请忽略)."
+
+#: auth/templates/account/email/password_reset_key_message.txt:9
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr "您的用户名是: %(username)s."
+
+#: auth/templates/account/email/password_reset_key_subject.html:3
+msgid ""
+"\n"
+"    Password Reset E-mail\n"
+msgstr ""
+"\n"
+"    重置电子邮件\n"
+
+#: auth/templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr "置电子邮件"
+
+#: auth/templates/account/email_confirm.html:7
+#: auth/templates/account/email_confirm.html:12
+msgid "Confirm E-mail Address"
+msgstr "确认电子邮件"
+
+#: auth/templates/account/email_confirm.html:19
+#, python-format
+msgid ""
+"\n"
+"                Please confirm that \n"
+"                <a href=\"mailto:%(email)s\"\n"
+"                    style=\"font-size: larger;\">\n"
+"                    %(email)s\n"
+"                </a> is an e-mail address for user \n"
+"                <span style=\"font-weight: bolder;\">%(user_display)s</"
+"span>. \n"
+"            "
+msgstr ""
+"\n"
+"                请确认邮件📫 \n"
+"                <a href=\"mailto:%(email)s\"\n"
+"                    style=\"font-size: larger;\">\n"
+"                    %(email)s\n"
+"                </a> 是用户  \n"
+"                <span style=\"font-weight: bolder;\">%(user_display)s</span> "
+"的。 \n"
+"            "
+
+#: auth/templates/account/email_confirm.html:34
+msgid "Confirm"
+msgstr "确认"
+
+#: auth/templates/account/email_confirm.html:44
+msgid ""
+"\n"
+"                This e-mail confirmation link expired or is invalid. Please\n"
+"            "
+msgstr ""
+"\n"
+"   邮件链接非法或已失效。请\n"
+"     "
+
+#: auth/templates/account/email_confirm.html:49
+msgid "issue a new e-mail confirmation request"
+msgstr "重新发送吧"
+
+#: auth/templates/account/login.html:11 auth/templates/account/login.html:22
+#: auth/templates/account/login.html:43
+msgid "Sign In"
+msgstr "登录"
+
+#: auth/templates/account/login.html:26
+msgid "If you have not created an account yet, then please"
+msgstr "没有账号吗?  请"
+
+#: auth/templates/account/login.html:27
+msgid "sign up"
+msgstr "注册"
+
+#: auth/templates/account/login.html:50
+msgid "Forgot Password?"
+msgstr "忘记密码?"
+
+#: auth/templates/account/logout.html:11 auth/templates/account/logout.html:23
+msgid "Sign Out"
+msgstr "退出"
+
+#: auth/templates/account/logout.html:29
+msgid "Are you sure you want to sign out?"
+msgstr "亲要确认退出吗?"
+
+#: auth/templates/account/logout.html:41
+msgid "Sign out now"
+msgstr "退出"
+
+#: auth/templates/account/messages/cannot_delete_primary_email.html:2
+#, python-format
+msgid ""
+"\n"
+"    You cannot remove your primary e-mail address (%(email)s).\n"
+msgstr ""
+"\n"
+"    常用电子邮件不能移除哦! (%(email)s).\n"
+
+#: auth/templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr "常用电子邮件不能移除哦! (%(email)s)."
+
+#: auth/templates/account/messages/email_confirmation_sent.html:2
+#, python-format
+msgid ""
+"\n"
+"    Confirmation e-mail sent to %(email)s.\n"
+msgstr ""
+"\n"
+"    去 %(email)s 邮箱检查邮件吧\n"
+
+#: auth/templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr "去 %(email)s 邮箱检查邮件吧"
+
+#: auth/templates/account/messages/email_confirmed.html:2
+#, python-format
+msgid ""
+"\n"
+"    You have confirmed %(email)s.\n"
+msgstr ""
+"\n"
+"     %(email)s 邮件已确认\n"
+
+#: auth/templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr "%(email)s 邮件已确认"
+
+#: auth/templates/account/messages/email_deleted.html:2
+#, python-format
+msgid ""
+"\n"
+"    Removed e-mail address %(email)s.\n"
+msgstr ""
+"\n"
+"    移除邮件地址 %(email)s\n"
+
+#: auth/templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr "移除邮件地址 %(email)s"
+
+#: auth/templates/account/messages/logged_in.html:4
+#, python-format
+msgid ""
+"\n"
+"    Successfully signed in as %(name)s.\n"
+msgstr ""
+"\n"
+"    登录成功 !  %(name)s.\n"
+
+#: auth/templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr "登录成功 !  %(name)s."
+
+#: auth/templates/account/messages/logged_out.html:2
+msgid ""
+"\n"
+"    You have signed out.\n"
+msgstr ""
+"\n"
+"    已退出.\n"
+
+#: auth/templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr "已退出."
+
+#: auth/templates/account/messages/password_changed.html:2
+msgid ""
+"\n"
+"    Password successfully changed.\n"
+msgstr ""
+"\n"
+"更改密码成功.\n"
+
+#: auth/templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "更改密码成功."
+
+#: auth/templates/account/messages/password_set.html:2
+msgid ""
+"\n"
+"    Password successfully set.\n"
+msgstr ""
+"\n"
+"设置密码成功.\n"
+
+#: auth/templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "设置密码成功."
+
+#: auth/templates/account/messages/primary_email_set.html:2
+msgid ""
+"\n"
+"    Primary e-mail address set.\n"
+msgstr ""
+"\n"
+" \n"
+"已设为常用邮箱.\n"
+
+#: auth/templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr "已设为常用邮箱."
+
+#: auth/templates/account/messages/unverified_primary_email.html:2
+msgid ""
+"\n"
+"    Your primary e-mail address must be verified.\n"
+msgstr ""
+"\n"
+"    亲, 常用邮箱地址要被验证哦.\n"
+
+#: auth/templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr "亲, 常用邮箱地址要被验证哦."
+
+#: auth/templates/account/password_change.html:5
+#: auth/templates/account/password_change.html:8
+#: auth/templates/account/password_change.html:15
+#: auth/templates/account/password_reset_from_key.html:4
+#: auth/templates/account/password_reset_from_key.html:11
+#: auth/templates/account/password_reset_from_key_done.html:6
+#: auth/templates/account/password_reset_from_key_done.html:9
+msgid "Change Password"
+msgstr "更改密码"
+
+#: auth/templates/account/password_reset.html:8
+#: auth/templates/account/password_reset.html:15
+#: auth/templates/account/password_reset_done.html:6
+#: auth/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "重置密码"
+
+#: auth/templates/account/password_reset.html:24
+msgid ""
+"\n"
+"                You are administrator, please reset password via terminal\n"
+"            "
+msgstr ""
+"\n"
+"            如果重置密码失败请联系我们.\n"
+"        "
+
+#: auth/templates/account/password_reset.html:32
+msgid ""
+"\n"
+"                Forgotten your password? Enter your e-mail address below, \n"
+"                and we'll send you an e-mail allowing you to reset it\n"
+"            "
+msgstr ""
+"\n"
+"    忘记密码了? 填写电子邮箱然后发送重置密码邮件\n"
+"      "
+
+#: auth/templates/account/password_reset.html:41
+msgid "Reset My Password"
+msgstr "重置密码"
+
+#: auth/templates/account/password_reset.html:46
+msgid ""
+"\n"
+"                Please contact us if you have any trouble resetting \n"
+"                your password.\n"
+"            "
+msgstr ""
+"\n"
+"            如果重置密码失败请联系我们.\n"
+"        "
+
+#: auth/templates/account/password_reset_done.html:16
+msgid ""
+"\n"
+"            We have sent you an e-mail. Please contact us if you do not "
+"receive \n"
+"            it within a few minutes.\n"
+"        "
+msgstr ""
+"\n"
+"            邮件已送出, 未收到请联系我们.\n"
+"        "
+
+#: auth/templates/account/password_reset_from_key.html:9
+msgid "Bad Token"
+msgstr "令牌无效"
+
+#: auth/templates/account/password_reset_from_key.html:18
+msgid ""
+"\n"
+"                The password reset link was invalid, possibly because it "
+"has \n"
+"                already been used.  Please request a \n"
+"            "
+msgstr ""
+"\n"
+"                链接非法, 可能链接已被使用.  请  \n"
+"            "
+
+#: auth/templates/account/password_reset_from_key.html:23
+msgid "new password reset"
+msgstr "新密码已重置"
+
+#: auth/templates/account/password_reset_from_key.html:33
+msgid "change password"
+msgstr "更改密码"
+
+#: auth/templates/account/password_reset_from_key.html:37
+#: auth/templates/account/password_reset_from_key_done.html:10
+msgid "Your password is now changed."
+msgstr "密码已更改."
+
+#: auth/templates/account/password_set.html:5
+#: auth/templates/account/password_set.html:8
+#: auth/templates/account/password_set.html:15
+msgid "Set Password"
+msgstr "设置密码"
+
+#: auth/templates/account/signup.html:11
+#: auth/templates/socialaccount/signup.html:5
+msgid "Signup"
+msgstr "注册"
+
+#: auth/templates/account/signup.html:23 auth/templates/account/signup.html:51
+#: auth/templates/socialaccount/signup.html:8
+#: auth/templates/socialaccount/signup.html:19
+#: funhome/templates/funhome/_navbar.html:68
+msgid "Sign Up"
+msgstr "注册"
+
+#: auth/templates/account/signup.html:26
+msgid "Already have an account? Then please"
+msgstr "已有账号吗? 请"
+
+#: auth/templates/account/signup.html:27
+#: funhome/templates/funhome/home_join_us.html:91
+msgid "sign in"
+msgstr "登录"
+
+#: auth/templates/account/signup.html:43
+#: funhome/templates/funhome/_footer.html:24
+msgid "Legal information"
+msgstr "法律信息"
+
+#: auth/templates/account/signup.html:46
+msgid "and_sign"
+msgstr "和"
+
+#: auth/templates/account/signup.html:47
+msgid "Data privacy"
+msgstr "数据隐私"
+
+#: auth/templates/account/signup_closed.html:5
+#: auth/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr "注册已关闭"
+
+#: auth/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "非常抱歉, 注册暂时关闭了."
+
+#: auth/templates/account/snippets/already_logged_in.html:7
+msgid "You are already logged in as"
+msgstr "已登录, 用户名"
+
+#: auth/templates/account/verification_sent.html:6
+#: auth/templates/account/verification_sent.html:10
+#: auth/templates/account/verified_email_required.html:6
+#: auth/templates/account/verified_email_required.html:10
+msgid "Verify Your E-mail Address"
+msgstr "验证你的电子邮件"
+
+#: auth/templates/account/verification_sent.html:13
+msgid ""
+"\n"
+"            We have sent an e-mail to you for verification. Follow the "
+"link \n"
+"            provided to finalize the signup process. Please contact us if "
+"you \n"
+"            do not receive it within a few minutes.\n"
+"        "
+msgstr ""
+"\n"
+"            验证邮件已送出, 查看邮箱并按要求完成注册, (未收到邮件? 重新发送或"
+"联系我们).\n"
+"        "
+
+#: auth/templates/account/verified_email_required.html:15
+msgid ""
+"\n"
+"            This part of the site requires us to verify that\n"
+"            you are who you claim to be. For this purpose, we require that "
+"you\n"
+"            verify ownership of your e-mail address. \n"
+"        "
+msgstr ""
+"\n"
+"            This part of the site requires us to verify that\n"
+"            you are who you claim to be. For this purpose, we require that "
+"you\n"
+"            verify ownership of your e-mail address. \n"
+"        "
+
+#: auth/templates/account/verified_email_required.html:23
+msgid ""
+"\n"
+"            We have sent an e-mail to you for\n"
+"            verification. Please click on the link inside this e-mail. "
+"Please\n"
+"            contact us if you do not receive it within a few minutes.\n"
+"        "
+msgstr ""
+"\n"
+"            验证邮件已送出 \n"
+"            点击邮箱内链接完成验证哦! \n"
+"            未收到邮件? 联系我们.\n"
+"        "
+
+#: auth/templates/account/verified_email_required.html:31
+msgid "Note"
+msgstr "留心一下"
+
+#: auth/templates/account/verified_email_required.html:31
+msgid "you can still"
+msgstr "你也可以"
+
+#: auth/templates/account/verified_email_required.html:33
+msgid "change your e-mail address"
+msgstr "更改邮箱地址"
+
+#: auth/templates/openid/login.html:9
+msgid "OpenID Sign In"
+msgstr "OpenID 登录"
+
+#: auth/templates/socialaccount/authentication_error.html:5
+#: auth/templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr "登录失败"
+
+#: auth/templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr "登录账户时出现异常了."
+
+#: auth/templates/socialaccount/connections.html:5
+#: auth/templates/socialaccount/connections.html:8
+msgid "Account Connections"
+msgstr "账号连接"
+
+#: auth/templates/socialaccount/connections.html:11
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr "账号已登录 :"
+
+#: auth/templates/socialaccount/connections.html:43
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr "没有关联账号哦."
+
+#: auth/templates/socialaccount/connections.html:46
+msgid "Add a 3rd Party Account"
+msgstr "增加关联账号"
+
+#: auth/templates/socialaccount/login_cancelled.html:5
+#: auth/templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr "登录取消"
+
+#: auth/templates/socialaccount/login_cancelled.html:13
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr "确定取消吗?<a href=\"%(login_url)s\">登录</a>."
+
+#: auth/templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr "关联账号被连接."
+
+#: auth/templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr "亲! 这个第三方账号已被关联."
+
+#: auth/templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr "第三方账号已取消连接."
+
+#: auth/templates/socialaccount/signup.html:10
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to\n"
+"%(site_name)s. As a final step, please complete the following form:"
+msgstr ""
+"你将使用 %(provider_name)s 账号登录\n"
+"%(site_name)s. :"
+
+#: eduhub/admin.py:118
+msgid "None"
+msgstr "空"
+
+#: eduhub/apps.py:9 eduhub/templates/eduhub/_eduhub_base.html:20
+#: funhome/templates/funhome/_navbar.html:27
 msgid "Eduhub"
 msgstr "教育"
 
-#: eduhub/modelforms.py:20 eduhub/models.py:38
+#: eduhub/modelforms.py:23 eduhub/models.py:74
 msgid "Label name"
 msgstr "标签名"
 
-#: eduhub/modelforms.py:21
+#: eduhub/modelforms.py:24
 msgid "Cover image"
 msgstr "封面图片"
 
-#: eduhub/modelforms.py:22 eduhub/modelforms.py:41 eduhub/modelforms.py:67
+#: eduhub/modelforms.py:25 eduhub/modelforms.py:40 eduhub/models.py:268
 msgid "Comment"
 msgstr "备注"
 
-#: eduhub/modelforms.py:38
-msgid "Title name"
-msgstr "标题"
-
-#: eduhub/modelforms.py:39 eduhub/modelforms.py:65
-msgid "Label"
-msgstr "标签"
-
-#: eduhub/modelforms.py:40 eduhub/models.py:69
-msgid "Content file"
-msgstr "内容文件"
-
-#: eduhub/modelforms.py:46 funhome/modelforms.py:29
-msgid "content file, pdf and video file is allowed only"
-msgstr "内容文件只能为pdf或视频哦"
-
-#: eduhub/modelforms.py:66 eduhub/models.py:101
+#: eduhub/modelforms.py:39 eduhub/modelforms.py:110 eduhub/models.py:114
+#: eduhub/models.py:222 eduhub/models.py:259
 msgid "Content"
 msgstr "内容"
 
-#: eduhub/modelforms.py:68 eduhub/models.py:105
+#: eduhub/modelforms.py:41 eduhub/modelforms.py:111 eduhub/models.py:108
 msgid "Content classification"
 msgstr "分类"
 
-#: eduhub/modelforms.py:74 eduhub/models.py:67 eduhub/models.py:98
+#: eduhub/modelforms.py:46 eduhub/modelforms.py:116 eduhub/models.py:111
 msgid "Content title"
 msgstr "标题"
 
-#: eduhub/modelforms.py:80
-msgid "classification : college/grade/semester/course"
-msgstr "分类如: (大学/中学/小学)/年级/学期/课程"
-
-#: eduhub/modelforms.py:93 funhome/modelforms.py:21 funhome/modelforms.py:47
+#: eduhub/modelforms.py:60 funhome/modelforms.py:22 funhome/modelforms.py:52
 #: funhome/models.py:35 funhome/models.py:79
 msgid "Sticker title"
 msgstr "贴纸标题"
 
-#: eduhub/modelforms.py:94 funhome/modelforms.py:22 funhome/modelforms.py:48
+#: eduhub/modelforms.py:61 funhome/modelforms.py:23 funhome/modelforms.py:53
 msgid "Sticker Cover"
 msgstr "贴纸背景"
 
-#: eduhub/modelforms.py:95 funhome/modelforms.py:49
+#: eduhub/modelforms.py:62 funhome/modelforms.py:54
 msgid "Sticker content"
 msgstr "备注"
 
-#: eduhub/modelforms.py:96 funhome/modelforms.py:24 funhome/modelforms.py:50
+#: eduhub/modelforms.py:63 funhome/modelforms.py:25 funhome/modelforms.py:55
 msgid "Sticker Comment"
 msgstr "备注"
 
-#: eduhub/modelforms.py:97
+#: eduhub/modelforms.py:64
 msgid "description"
 msgstr "描述"
 
-#: eduhub/models.py:28
-msgid "Eduhub label"
-msgstr "分类标签"
+#: eduhub/modelforms.py:93
+msgid "name exists"
+msgstr "名称已存在"
 
-#: eduhub/models.py:29
-msgid "Eduhub  labels"
-msgstr "分类标签"
-
-#: eduhub/models.py:40
-msgid "Label comment"
-msgstr "备注"
-
-#: eduhub/models.py:42
-msgid "Label cover"
-msgstr "封面"
-
-#: eduhub/models.py:44
-msgid "Label creating date"
-msgstr "创建时间"
-
-#: eduhub/models.py:46
-msgid "Label author"
-msgstr "作者"
-
-#: eduhub/models.py:48
-msgid "Is label legal"
-msgstr "合法"
-
-#: eduhub/models.py:54
-msgid "Eduhub content"
-msgstr "内容"
-
-#: eduhub/models.py:55 templates/eduhub/_eduhub_base.html:72
-#: templates/eduhub/content_list.html:17
-#: templates/eduhub/eduhub_search_result.html:53
-#: templates/eduhub/funcontent_list.html:17
-msgid "Eduhub contents"
-msgstr "内容"
-
-#: eduhub/models.py:64 eduhub/models.py:95
-msgid "Content label"
-msgstr "标签"
-
-#: eduhub/models.py:71 eduhub/models.py:108
-msgid "Content uploading date"
-msgstr "上传时间"
-
-#: eduhub/models.py:73 eduhub/models.py:110
-msgid "Content comment"
-msgstr "备注"
-
-#: eduhub/models.py:75 eduhub/models.py:112
-msgid "Is content legal"
-msgstr "合法"
-
-#: eduhub/models.py:81
-msgid "Eduhub content (NEW)"
-msgstr "内容(新)"
-
-#: eduhub/models.py:82
-msgid "Eduhub contents (NEW)"
-msgstr "内容(新)"
-
-#: eduhub/models.py:117
-msgid "Eduhub homepage sticker"
-msgstr "主页贴纸"
-
-#: eduhub/models.py:118
-msgid "Eduhub homepage stickers"
-msgstr "主页贴纸"
-
-#: eduhub/models.py:127
-msgid "Eduhub homepage sticker title"
-msgstr "贴纸标题"
-
-#: eduhub/models.py:131
-msgid "Eduhub homepage sticker subtitle"
-msgstr "贴纸子标题"
-
-#: eduhub/models.py:135
-msgid "Eduhub homepage sicker cover"
-msgstr "贴纸背景"
-
-#: eduhub/models.py:139
-msgid "Eduhub homepage sticker promulgator"
-msgstr "贴纸的管理员"
-
-#: eduhub/models.py:147
-msgid "Eduhub homepage sticker promulgating date"
-msgstr "贴纸时间"
-
-#: eduhub/models.py:150
-msgid "Eduhub homepage sticker comment"
-msgstr "备注"
-
-#: eduhub/models.py:153 funhome/models.py:60 funhome/models.py:104
-msgid "Hidden"
-msgstr "隐藏(不贴)"
-
-#: eduhub/models.py:160
-msgid "Eduhub classification"
+#: eduhub/models.py:31 eduhub/models.py:234
+msgid "Classification"
 msgstr "分类"
 
-#: eduhub/models.py:161
-msgid "Eduhub classifications"
+#: eduhub/models.py:32
+msgid "Classifications"
 msgstr "分类"
 
-#: eduhub/models.py:173
+#: eduhub/models.py:43
+msgid "name includes '/' is not allowed"
+msgstr "不能包含('/')"
+
+#: eduhub/models.py:50
 msgid "Parent classification"
 msgstr "父类"
 
-#: eduhub/models.py:178
-msgid "Classification name"
-msgstr "类名"
-
-#: eduhub/models.py:185
-msgid "Classification level"
-msgstr "级别"
-
-#: eduhub/models.py:189
-msgid "Classification creating date"
+#: eduhub/models.py:54
+#, fuzzy
+#| msgid "Classification creating date"
+msgid "Classification name('/' cannot be included)"
 msgstr "创建时间"
 
-#: eduhub/models.py:193
-msgid "Classification creating user"
-msgstr "创建分类的用户"
+#: eduhub/models.py:58
+#, fuzzy
+#| msgid "Classification name"
+msgid "Classification comment"
+msgstr "类名"
 
-#: eduhub/models.py:197
-msgid "Is classification disabled"
-msgstr "禁用"
+#: eduhub/models.py:64
+msgid "Eduhub label"
+msgstr "分类标签"
 
-#: eduhub/models.py:202
+#: eduhub/models.py:65
+msgid "Eduhub  labels"
+msgstr "分类标签"
+
+#: eduhub/models.py:76
+msgid "Label comment"
+msgstr "备注"
+
+#: eduhub/models.py:78
+msgid "Label cover"
+msgstr "封面"
+
+#: eduhub/models.py:80
+msgid "Label creating date"
+msgstr "创建时间"
+
+#: eduhub/models.py:82
+msgid "Label author"
+msgstr "作者"
+
+#: eduhub/models.py:84
+msgid "Is label legal"
+msgstr "合法"
+
+#: eduhub/models.py:90
+msgid "Eduhub content (NEW)"
+msgstr "内容(新)"
+
+#: eduhub/models.py:91
+msgid "Eduhub contents (NEW)"
+msgstr "内容(新)"
+
+#: eduhub/models.py:104
+msgid "Content label"
+msgstr "标签"
+
+#: eduhub/models.py:117
+msgid "Content uploading date"
+msgstr "上传时间"
+
+#: eduhub/models.py:119
+msgid "Content comment"
+msgstr "备注"
+
+#: eduhub/models.py:121 eduhub/models.py:240
+msgid "Is content legal"
+msgstr "合法"
+
+#: eduhub/models.py:126
+msgid "Eduhub homepage sticker"
+msgstr "主页贴纸"
+
+#: eduhub/models.py:127
+msgid "Eduhub homepage stickers"
+msgstr "主页贴纸"
+
+#: eduhub/models.py:136
+msgid "Eduhub homepage sticker title"
+msgstr "贴纸标题"
+
+#: eduhub/models.py:140
+msgid "Eduhub homepage sticker subtitle"
+msgstr "贴纸子标题"
+
+#: eduhub/models.py:144
+msgid "Eduhub homepage sicker cover"
+msgstr "贴纸背景"
+
+#: eduhub/models.py:148
+msgid "Eduhub homepage sticker promulgator"
+msgstr "贴纸的管理员"
+
+#: eduhub/models.py:156
+msgid "Eduhub homepage sticker promulgating date"
+msgstr "贴纸时间"
+
+#: eduhub/models.py:159 eduhub/models.py:237
+msgid "Eduhub homepage sticker comment"
+msgstr "备注"
+
+#: eduhub/models.py:162 funhome/models.py:60 funhome/models.py:104
+msgid "Hidden"
+msgstr "隐藏(不贴)"
+
+#: eduhub/models.py:168
 msgid "Eduhub Test"
 msgstr "标签"
 
-#: eduhub/models.py:203
+#: eduhub/models.py:169
 msgid "Eduhub Tests"
 msgstr "内容"
 
-#: eduhub/models.py:214 eduhub/models.py:234
+#: eduhub/models.py:180 eduhub/models.py:200
 msgid "Test commit"
 msgstr "备注"
 
-#: eduhub/models.py:218
+#: eduhub/models.py:184
 msgid "Test owner"
 msgstr "测试属于"
 
-#: eduhub/models.py:221
+#: eduhub/models.py:188
 msgid "Template text"
 msgstr "模板文本"
 
-#: eduhub/models.py:225
+#: eduhub/models.py:192
 msgid "Test submitting date"
 msgstr "创建时间"
 
-#: eduhub/models.py:229
+#: eduhub/models.py:196
 msgid "Last modifying date"
 msgstr "创建时间"
 
-#: eduhub/views.py:95
+#: eduhub/models.py:205
+#, fuzzy
+#| msgid "appreciation content"
+msgid "Appraising content"
+msgstr "评价内容"
+
+#: eduhub/models.py:206 eduhub/templates/eduhub/appraising_c_list.html:11
+#, fuzzy
+#| msgid "appreciation content"
+msgid "Appraising contents"
+msgstr "评价内容"
+
+#: eduhub/models.py:215
+#, fuzzy
+#| msgid "Content file"
+msgid "Content from"
+msgstr "内容文件"
+
+#: eduhub/models.py:218
+#, fuzzy
+#| msgid "Title name"
+msgid "Title"
+msgstr "标题"
+
+#: eduhub/models.py:226
+msgid "Date of appraising content creating"
+msgstr ""
+
+#: eduhub/models.py:230
+msgid "Date of appraising content updating"
+msgstr ""
+
+#: eduhub/models.py:245
+#, fuzzy
+#| msgid "Appreciation"
+msgid "Appraising"
+msgstr "评价"
+
+#: eduhub/models.py:246
+#, fuzzy
+#| msgid "Appreciation"
+msgid "Appraisings"
+msgstr "评价"
+
+#: eduhub/models.py:256
+msgid "Appraisings from"
+msgstr ""
+
+#: eduhub/models.py:266
+#, fuzzy
+#| msgid "Date out of range"
+msgid "Date of Appraising"
+msgstr "日期超出范围"
+
+#: eduhub/templates/eduhub/_classification_nav.html:15
+msgid "subject"
+msgstr "学科"
+
+#: eduhub/templates/eduhub/_classification_nav.html:19
+msgid "food"
+msgstr "菜肴"
+
+#: eduhub/templates/eduhub/_classification_nav.html:23
+msgid "live"
+msgstr "生活"
+
+#: eduhub/templates/eduhub/_classification_nav.html:27
+msgid "develop"
+msgstr "开发"
+
+#: eduhub/templates/eduhub/_classification_subject.html:11
+msgid ""
+"\n"
+"        I don't bother to make a catalog right now, and I don't want to \n"
+"        classify them now, because I'm the only one who develop it, and I \n"
+"        don't know when I have free time, so you should classify your \n"
+"        content yourself so as not to make a mess of everything. \n"
+"    "
+msgstr ""
+"\n"
+"            我已经不想去做一个分类了, 或者说我现在还不想做, 因为我一个人做这"
+"个repo, 也不知道我什么时候有时间, 所以你应该自己给你的内容分类好, 以免大家的"
+"内容杂乱无章。\n"
+"        "
+
+#: eduhub/templates/eduhub/_classification_subject.html:22
+msgid ""
+"\n"
+"                If you're writing about primary school (I don't know if \n"
+"                anyone will write about kindergarten), \n"
+"            "
+msgstr ""
+"\n"
+"                    如果你写的是小学的教学内容( 我不确定有没有人写幼儿园"
+"的 ), \n"
+"                "
+
+#: eduhub/templates/eduhub/_classification_subject.html:27
+msgid ""
+"\n"
+"                you should categorize(remove bracket!): \n"
+"            "
+msgstr ""
+"\n"
+"                    你可以这样分类( 把括号去掉! ): \n"
+"                "
+
+#: eduhub/templates/eduhub/_classification_subject.html:32
+#: eduhub/templates/eduhub/_classification_subject.html:50
+#: eduhub/templates/eduhub/_classification_subject.html:70
+msgid "click to copy"
+msgstr "点击复制"
+
+#: eduhub/templates/eduhub/_classification_subject.html:34
+msgid "primary school/(grade)/(semester)/(subjects)/(title)"
+msgstr "小学/(年级)/(学期)/(科目)/(标题)"
+
+#: eduhub/templates/eduhub/_classification_subject.html:35
+msgid ""
+"\n"
+"            primary school / (grade) / (semester) / (subjects) / (title)\n"
+"                "
+msgstr ""
+"\n"
+"                       小学/(年级)/(学期)/(科目)/(标题)\n"
+"                    "
+
+#: eduhub/templates/eduhub/_classification_subject.html:42
+msgid ""
+"\n"
+"                If you're writing about high school teaching,\n"
+"            "
+msgstr ""
+"\n"
+"                        如果你在写高中的教学内容,\n"
+"                    "
+
+#: eduhub/templates/eduhub/_classification_subject.html:46
+#: eduhub/templates/eduhub/_classification_subject.html:66
+msgid ""
+"\n"
+"                you should categorize: \n"
+"            "
+msgstr ""
+"\n"
+"                        你可以这样分类:\n"
+"                    "
+
+#: eduhub/templates/eduhub/_classification_subject.html:52
+msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
+msgstr "初或高中/(年级)/(学期)/(科目)/(标题)"
+
+#: eduhub/templates/eduhub/_classification_subject.html:54
+msgid ""
+"\n"
+"                    ('junior' or 'senior') high school / (grade) / \n"
+"                    (semester) / (subjects) / (title)\n"
+"                "
+msgstr ""
+"\n"
+"                        初或高中/(年级)/(学期)/(科目)/(标题)\n"
+"                    "
+
+#: eduhub/templates/eduhub/_classification_subject.html:62
+msgid ""
+"\n"
+"                If you're writing about the college' teaching,\n"
+"            "
+msgstr ""
+"\n"
+"                        如果你在写大学的教学内容,\n"
+"                    "
+
+#: eduhub/templates/eduhub/_classification_subject.html:72
+msgid "college/(grade)/(semester)/(subjects)/(title)"
+msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
+
+#: eduhub/templates/eduhub/_classification_subject.html:74
+msgid ""
+"\n"
+"                    college/(major) / (grade) / (semester) / (subjects) / \n"
+"                    (title)\n"
+"                "
+msgstr ""
+"\n"
+"                       小学/(年级)/(学期)/(科目)/(标题)\n"
+"                    "
+
+#: eduhub/templates/eduhub/_classification_subject.html:82
+msgid ""
+"\n"
+"                Other stages should also have classification, you can \n"
+"                change it \n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"                    还有很多其它分类, 你可以 \n"
+"                    更改它 \n"
+"\n"
+"                "
+
+#: eduhub/templates/eduhub/_classification_subject.html:88
+msgid "here"
+msgstr "在这里"
+
+#: eduhub/templates/eduhub/_classification_subject.html:91
+msgid ""
+"\n"
+"                and make a pull request, or you look at it yourself\n"
+"            "
+msgstr ""
+"\n"
+"                        你可以这样分类:\n"
+"                    "
+
+#: eduhub/templates/eduhub/_eduhub_base.html:51
+#: eduhub/templates/eduhub/eduhub_search_result.html:23
+#: eduhub/templates/eduhub/label_list.html:10
+msgid "Eduhub labels"
+msgstr "标签"
+
+#: eduhub/templates/eduhub/_eduhub_base.html:58
+#: eduhub/templates/eduhub/appraising_list.html:17
+#: eduhub/templates/eduhub/eduhub_search_result.html:53
+#: eduhub/templates/eduhub/funcontent_list.html:17
+msgid "Eduhub contents"
+msgstr "内容"
+
+#: eduhub/templates/eduhub/_eduhub_base.html:65
+#, fuzzy
+#| msgid "Eduhub labels"
+msgid "Eduhub appraising"
+msgstr "打卡区"
+
+#: eduhub/templates/eduhub/_eduhub_base.html:79
+#: eduhub/templates/eduhub/_eduhub_base.html:81
+#: eduhub/templates/eduhub/_search.html:15
+#: eduhub/templates/eduhub/_search.html:16
+msgid "What are you thinking about"
+msgstr "在想什么"
+
+#: eduhub/templates/eduhub/_eduhub_base.html:87
+#: eduhub/templates/eduhub/_search.html:22
+msgid "search"
+msgstr "搜索"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:15
+msgid "Preschool"
+msgstr "学前教育"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:22
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:51
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:97
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:152
+msgid "Math"
+msgstr "数学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:27
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:56
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:102
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:157
+msgid "Yuwen"
+msgstr "语文"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:32
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:61
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:107
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:162
+msgid "Yingyu"
+msgstr "英语"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:37
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:66
+msgid "Science"
+msgstr "科学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:44
+msgid "Primary school"
+msgstr "小学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:72
+msgid "Morality and Society"
+msgstr "品德与政治"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:78
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:133
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:187
+msgid "Information Technology"
+msgstr "信息技术"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:84
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:138
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:192
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:269
+msgid "Art"
+msgstr "艺术"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:91
+msgid "Junior high school"
+msgstr "初中"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:112
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:167
+msgid "Geography"
+msgstr "地理"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:117
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:172
+msgid "Physics"
+msgstr "物理"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:123
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:177
+msgid "Biology"
+msgstr "生物"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:128
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:182
+msgid "Politics"
+msgstr "政治"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:145
+msgid "Senior high school"
+msgstr "高中"
+
+# Collage
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:198
+msgid "Collage"
+msgstr "大学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:204
+msgid "Philosophy"
+msgstr "哲学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:209
+msgid "Economics"
+msgstr "经济学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:214
+msgid "Law"
+msgstr "法学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:219
+msgid "Pedagogy"
+msgstr "教育学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:224
+msgid "Jurisprudence"
+msgstr "法学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:229
+msgid "Literature"
+msgstr "文学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:234
+msgid "History"
+msgstr "历史学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:239
+msgid "Sciences"
+msgstr "理学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:244
+msgid "Engineering"
+msgstr "工学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:249
+msgid "Agriculture"
+msgstr "农学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:254
+msgid "Medicine"
+msgstr "医学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:259
+msgid "Military"
+msgstr "军事学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:264
+msgid "Management"
+msgstr "管理学"
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:275
+#: eduhub/templates/eduhub/label_list.html:24
+#: eduhub/templatetags/eduhub_tags.py:64
+msgid "All"
+msgstr "全部"
+
+#: eduhub/templates/eduhub/appraising_c_create.html:26
+#: eduhub/templates/eduhub/appraising_create.html:26
+#: eduhub/templates/eduhub/funcontent_create.html:22
+#: eduhub/templates/eduhub/funtest_create.html:39
+#: eduhub/templates/eduhub/label_create.html:25
+#: eduhub/templates/eduhub/label_update.html:27
+#: funuser/templates/funuser/funuser_update.html:150
+msgid "Upload"
+msgstr "上传"
+
+#: eduhub/templates/eduhub/appraising_c_delete.html:10
+#: eduhub/templates/eduhub/appraising_delete.html:14
+#: eduhub/templates/eduhub/funcontent_delete.html:15
+#: eduhub/templates/eduhub/label_delete.html:14
+#: eduhub/templates/eduhub/label_detail.html:11
+msgid "Delete label"
+msgstr "删除标签"
+
+#: eduhub/templates/eduhub/appraising_c_delete.html:17
+#: eduhub/templates/eduhub/appraising_delete.html:22
+#: eduhub/templates/eduhub/funcontent_delete.html:23
+#: eduhub/templates/eduhub/label_delete.html:50
+msgid "Are you sure you want to delete"
+msgstr "确定要删除"
+
+#: eduhub/templates/eduhub/appraising_c_delete.html:21
+#: eduhub/templates/eduhub/appraising_c_detail.html:51
+#: eduhub/templates/eduhub/appraising_c_list.html:56
+#: eduhub/templates/eduhub/appraising_delete.html:26
+#: eduhub/templates/eduhub/appraising_detail.html:47
+#: eduhub/templates/eduhub/appraising_list.html:68
+#: eduhub/templates/eduhub/funcontent_delete.html:27
+#: eduhub/templates/eduhub/funcontent_detail.html:42
+#: eduhub/templates/eduhub/funcontent_list.html:68
+#: eduhub/templates/eduhub/label_delete.html:53
+#: eduhub/templates/eduhub/label_list.html:61
+msgid "Delete"
+msgstr "删除"
+
+#: eduhub/templates/eduhub/appraising_c_detail.html:12
+#: eduhub/templates/eduhub/appraising_detail.html:14
+#: eduhub/templates/eduhub/funcontent_detail.html:9
+msgid "Content details"
+msgstr "标题"
+
+#: eduhub/templates/eduhub/appraising_c_detail.html:31
+#, fuzzy
+#| msgid "Unknown"
+msgid "Unknown user"
+msgstr "未知用户"
+
+#: eduhub/templates/eduhub/appraising_c_detail.html:47
+#: eduhub/templates/eduhub/appraising_c_list.html:50
+#: eduhub/templates/eduhub/appraising_detail.html:44
+#: eduhub/templates/eduhub/appraising_list.html:62
+#: eduhub/templates/eduhub/eduhubhomesticker_detail.html:44
+#: eduhub/templates/eduhub/funcontent_detail.html:39
+#: eduhub/templates/eduhub/funcontent_list.html:62
+#: eduhub/templates/eduhub/label_list.html:57
+#: funhome/templates/funhome/appreciation_detail.html:46
+#: funhome/templates/funhome/funhomesticker_detail.html:45
+msgid "Edit"
+msgstr "编辑"
+
+#: eduhub/templates/eduhub/appraising_c_list.html:14
+#: eduhub/templates/eduhub/appraising_list.html:25
+#: eduhub/templates/eduhub/funcontent_list.html:25
+#: eduhub/templates/eduhub/label_list.html:15
+msgid "Add"
+msgstr "添加"
+
+#: eduhub/templates/eduhub/appraising_c_list.html:43
+#: eduhub/templates/eduhub/appraising_list.html:55
+#: eduhub/templates/eduhub/eduhubhomesticker_list.html:53
+#: eduhub/templates/eduhub/funcontent_list.html:55
+#: eduhub/templates/eduhub/label_list.html:50
+msgid "View"
+msgstr "查看"
+
+#: eduhub/templates/eduhub/appraising_c_update.html:11
+#: eduhub/templates/eduhub/appraising_update.html:13
+#: eduhub/templates/eduhub/funcontent_update.html:14
+#: eduhub/templates/eduhub/label_update.html:8
+msgid "Update label"
+msgstr "更新标签"
+
+#: eduhub/templates/eduhub/appraising_c_update.html:23
+#: eduhub/templates/eduhub/appraising_update.html:32
+#: eduhub/templates/eduhub/funcontent_update.html:33
+msgid "Update"
+msgstr "更新"
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:14
+msgid "Eduhub search"
+msgstr "教育"
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:97
+#: eduhub/templates/eduhub/eduhub_search_result.html:137
+#: funhome/templates/funhome/_common_pagination.html:15
+msgid "first page"
+msgstr "第一页"
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:103
+#: eduhub/templates/eduhub/eduhub_search_result.html:143
+#: funhome/templates/funhome/_common_pagination.html:21
+msgid "previous page"
+msgstr "上一页"
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:110
+#: eduhub/templates/eduhub/eduhub_search_result.html:150
+#: funhome/templates/funhome/_common_pagination.html:28
+msgid "Page"
+msgstr "页"
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:116
+#: eduhub/templates/eduhub/eduhub_search_result.html:156
+#: funhome/templates/funhome/_common_pagination.html:33
+msgid "next page"
+msgstr "下一页"
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:121
+#: eduhub/templates/eduhub/eduhub_search_result.html:162
+#: funhome/templates/funhome/_common_pagination.html:38
+msgid "last page"
+msgstr "最后页"
+
+#: eduhub/templates/eduhub/eduhubhomesticker_detail.html:15
+#: eduhub/templates/eduhub/eduhubhomesticker_list.html:15
+msgid "Eduhub home"
+msgstr "教育"
+
+#: eduhub/templates/eduhub/eduhubhomesticker_list.html:95
+#: eduhub/templates/eduhub/label_update.html:17
+msgid "cover"
+msgstr "封面"
+
+#: eduhub/templates/eduhub/funtest_content_preview.html:16
+msgid "Funtest content preview"
+msgstr "贴纸文件"
+
+#: eduhub/templates/eduhub/funtest_create.html:13
+msgid "Create a test"
+msgstr "创建于"
+
+#: eduhub/templates/eduhub/funtest_create.html:33
+msgid "Live content"
+msgstr "内容"
+
+#: eduhub/templates/eduhub/how_to_classification.html:20
+msgid "How to classification"
+msgstr "分类参考"
+
+#: eduhub/templates/eduhub/how_to_classification.html:38
+msgid "How to classify the eduhub content"
+msgstr "分类参考"
+
+#: eduhub/templates/eduhub/how_to_classification.html:66
+msgid "classification copied"
+msgstr "分类已复制"
+
+#: eduhub/templates/eduhub/label_create.html:16
+#: eduhub/templates/eduhub/label_update.html:13
+msgid "Preview"
+msgstr "预览"
+
+#: eduhub/templates/eduhub/label_delete.html:38
+msgid "Name"
+msgstr "标题名"
+
+#: eduhub/templates/eduhub/label_delete.html:42
+msgid "Creating date"
+msgstr "创建时间"
+
+#: eduhub/templates/eduhub/label_list.html:22
+msgid "Mine"
+msgstr "我的"
+
+#: eduhub/templatetags/eduhub_tags.py:35
+msgid "ALL"
+msgstr "全部"
+
+#: eduhub/views.py:72
 msgid "Cover image is required"
 msgstr "未选择封面图片"
 
-#: eduhub/views.py:100
+#: eduhub/views.py:77
 msgid "Image allowed only"
 msgstr "只能选择图片"
 
-#: eduhub/views.py:106
+#: eduhub/views.py:83
 msgid "The length of cover should be less than"
 msgstr "封面图片的大小应该小于"
 
-#: eduhub/views.py:141
+#: eduhub/views.py:121
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr "页数不是最后一页也不是数字哦."
 
-#: eduhub/views.py:258 eduhub/views.py:436
-msgid "Frequently request"
-msgstr "频繁访问"
+#: fun/apps.py:7
+#, fuzzy
+#| msgid "Sun"
+msgid "Fun"
+msgstr "周日"
 
-#: eduhub/views.py:263 eduhub/views.py:270
-msgid "Content file is required"
-msgstr "未选择内容文件"
-
-#: eduhub/views.py:277
-msgid "The length of video file should be less than"
-msgstr "视频文件应该小于"
-
-#: eduhub/views.py:285
-msgid "The length of pdf file should be less than"
-msgstr "Pdf文件应该小于"
-
-#: fun/settings.py:234
+#: fun/settings.py:183 fun/settings_.py:182
 msgid "English"
 msgstr "English"
 
-#: fun/settings.py:235
-msgid "中文简体"
-msgstr "中文简体"
+#: fun/settings.py:184
+msgid "Chinese Simplified"
+msgstr ""
 
-#: funhome/apps.py:8
+#: fun/settings.py:185
+msgid "Chinese(China)"
+msgstr ""
+
+#: funhome/apps.py:7
 msgid "Fun home"
 msgstr "主页"
 
-#: funhome/modelforms.py:23 funhome/models.py:48
+#: funhome/modelforms.py:24 funhome/models.py:48
 msgid "Sticker content file"
 msgstr "贴纸文件"
+
+#: funhome/modelforms.py:30
+msgid "content file, pdf and video file is allowed only"
+msgstr "内容文件只能为pdf或视频哦"
 
 #: funhome/models.py:23 funhome/models.py:25
 msgid "Home sticker(deprecation)"
@@ -364,1332 +1614,277 @@ msgstr "提交者"
 msgid "Submitting date"
 msgstr "创建时间"
 
-#: funhome/views.py:178 funhome/views.py:210
-#: templates/account/email/password_reset_key_message.html:7
-msgid "X-DOVE"
-msgstr "X-DOVE"
+#: funhome/templates/funhome/_footer.html:16
+msgid ""
+"\n"
+"                        x-dove\n"
+"                    "
+msgstr ""
+"\n"
+"                        x-dove\n"
+"                    "
 
-#: funhome/views.py:179 funhome/views.py:211
+#: funhome/templates/funhome/_footer.html:29
+msgid " Data privacy"
+msgstr " 隐私"
+
+#: funhome/templates/funhome/_footer.html:33
+msgid "Developer"
+msgstr "开发者"
+
+#: funhome/templates/funhome/_footer.html:43
+msgid "this site"
+msgstr "本站源码"
+
+#: funhome/templates/funhome/_footer_language.html:25
+msgid "language"
+msgstr "语言"
+
+#: funhome/templates/funhome/_footer_theme.html:10
+msgid "Theme"
+msgstr "主题"
+
+#: funhome/templates/funhome/_footer_theme.html:15
+msgid "Select theme"
+msgstr "选择主题"
+
+#: funhome/templates/funhome/_footer_theme.html:20
+msgid "cerulean"
+msgstr "天蓝色"
+
+#: funhome/templates/funhome/_footer_theme.html:23
+msgid "cyborg"
+msgstr "科技"
+
+#: funhome/templates/funhome/_footer_theme.html:26
+msgid "flatly"
+msgstr "干净利落"
+
+#: funhome/templates/funhome/_footer_theme.html:29
+msgid "litera"
+msgstr "文青"
+
+#: funhome/templates/funhome/_footer_theme.html:32
+msgid "lux"
+msgstr "照明"
+
+#: funhome/templates/funhome/_footer_theme.html:35
+msgid "minty"
+msgstr "薄荷"
+
+#: funhome/templates/funhome/_footer_theme.html:38
+msgid "sandstone"
+msgstr "岩石"
+
+#: funhome/templates/funhome/_footer_theme.html:41
+msgid "sketchy"
+msgstr "素描"
+
+#: funhome/templates/funhome/_footer_theme.html:44
+msgid "solar"
+msgstr "阳光"
+
+#: funhome/templates/funhome/_footer_theme.html:47
+msgid "superhero"
+msgstr "锐气"
+
+#: funhome/templates/funhome/_footer_theme.html:50
+msgid "yeti"
+msgstr "雪人"
+
+#: funhome/templates/funhome/_footer_theme.html:53
+msgid "cosmo"
+msgstr "都市"
+
+#: funhome/templates/funhome/_footer_theme.html:56
+msgid "darkly"
+msgstr "熬夜"
+
+#: funhome/templates/funhome/_footer_theme.html:59
+msgid "journal"
+msgstr "报纸"
+
+#: funhome/templates/funhome/_footer_theme.html:62
+msgid "lumen"
+msgstr "流光"
+
+#: funhome/templates/funhome/_footer_theme.html:65
+msgid "pulse"
+msgstr "电子"
+
+#: funhome/templates/funhome/_footer_theme.html:68
+msgid "simplex"
+msgstr "d调"
+
+#: funhome/templates/funhome/_footer_theme.html:71
+msgid "slate"
+msgstr "石片"
+
+#: funhome/templates/funhome/_footer_theme.html:74
+msgid "spacelab"
+msgstr "太空"
+
+#: funhome/templates/funhome/_footer_theme.html:77
+msgid "united"
+msgstr "一体"
+
+#: funhome/templates/funhome/_footer_theme.html:80
+msgid "materia"
+msgstr "材质"
+
+#: funhome/templates/funhome/_footer_theme.html:83
+msgid "default"
+msgstr "默认"
+
+#: funhome/templates/funhome/_navbar.html:22
+#: funhome/templates/funhome/legal_information.html:30
+msgid "Home"
+msgstr "主页"
+
+#: funhome/templates/funhome/_navbar.html:31
+msgid "Developers"
+msgstr "开发者"
+
+#: funhome/templates/funhome/_navbar.html:37
+msgid "Message"
+msgstr "消息"
+
+#: funhome/templates/funhome/_navbar.html:55
+msgid "Hello"
+msgstr "你好"
+
+#: funhome/templates/funhome/_navbar.html:59
+msgid "Log Out"
+msgstr "退出"
+
+#: funhome/templates/funhome/_navbar.html:63
+msgid "Log In"
+msgstr "登录"
+
+#: funhome/templates/funhome/appreciation_detail.html:13
+msgid "appreciation detail"
+msgstr "评价"
+
+#: funhome/templates/funhome/funhomesticker_detail.html:13
+#: funhome/templates/funhome/homesticker_detail.html:13
+msgid "Sticker detail"
+msgstr "贴纸详细"
+
+#: funhome/templates/funhome/funhomesticker_list.html:13
+#: funhome/templates/funhome/funhomesticker_list.html:18
+#: funhome/templates/funhome/homesticker_list.html:13
+#: funhome/templates/funhome/homesticker_list.html:18
+msgid "Sticker list"
+msgstr "所有贴纸"
+
+#: funhome/templates/funhome/funhomesticker_list.html:21
+msgid "Older"
+msgstr "旧的"
+
+#: funhome/templates/funhome/home_appreciation.html:11
+msgid "Why choose us"
+msgstr "我们的优势"
+
+#: funhome/templates/funhome/home_funhomesticker.html:101
+msgid "View all"
+msgstr "查看全部"
+
+#: funhome/templates/funhome/home_join_us.html:9
+msgid "Join us now"
+msgstr "现在加入X-DOVE"
+
+#: funhome/templates/funhome/home_join_us.html:24
+msgid "E-mail"
+msgstr "邮箱地址"
+
+#: funhome/templates/funhome/home_join_us.html:39
+msgid "Username"
+msgstr "用户名"
+
+#: funhome/templates/funhome/home_join_us.html:55
+msgid "Password"
+msgstr "设置密码"
+
+#: funhome/templates/funhome/home_join_us.html:67
+msgid "Password (again)"
+msgstr "确认密码"
+
+#: funhome/templates/funhome/home_join_us.html:80
+msgid "Join now"
+msgstr "现在加入"
+
+#: funhome/templates/funhome/home_join_us.html:90
+msgid "Already have an account"
+msgstr "已有账号吗"
+
+#: funhome/templates/funhome/legal_information.html:21
+msgid "LEGAL INFORMATION"
+msgstr "法律信息"
+
+#: funhome/views.py:154 funhome/views.py:187
 msgid "Larry`s sharing"
 msgstr "Larry 的分享"
 
-#: funhome/views.py:184 funhome/views.py:216
+#: funhome/views.py:161 funhome/views.py:193
 msgid "larry"
 msgstr "larry"
 
-#: funtag/templatetag.py:82
-msgid "ALL"
-msgstr "全部"
-
-#: funuser/admin.py:17
-msgid "avatar"
-msgstr "头像"
-
-#: funuser/admin.py:18 templates/funuser/funuser_detail.html:50
-#: templates/funuser/funuser_update.html:46
-msgid "Birth date"
-msgstr "出生年月"
-
-#: funuser/admin.py:20 funuser/models.py:41
-#: templates/funuser/funuser_detail.html:57
-#: templates/funuser/funuser_update.html:66
-msgid "Address"
-msgstr "地址"
-
-#: funuser/admin.py:22 funuser/models.py:46
-#: templates/funuser/funuser_detail.html:64
-#: templates/funuser/funuser_update.html:85
-msgid "Hometown"
-msgstr "家乡"
-
-#: funuser/admin.py:24 funuser/models.py:51
-#: templates/funuser/funuser_detail.html:71
-#: templates/funuser/funuser_update.html:102
-msgid "College"
-msgstr "大学"
-
-#: funuser/admin.py:26 funuser/models.py:56
-#: templates/funuser/funuser_detail.html:78
-#: templates/funuser/funuser_update.html:118
-msgid "Occupation"
-msgstr "工作"
-
-#: funuser/admin.py:28 funuser/models.py:61
-msgid "Hobby"
-msgstr "兴趣"
-
-#: funuser/admin.py:29 funuser/models.py:66
-#: templates/funuser/funuser_detail.html:85
-#: templates/funuser/funuser_update.html:134
-msgid "Motto"
-msgstr "座右铭"
-
-#: funuser/modelforms.py:30 funuser/models.py:33
+#: funuser/modelforms.py:31
 msgid "Full name"
 msgstr "姓名"
 
 #: funuser/models.py:21
-msgid "User information"
-msgstr "用户信息"
-
-#: funuser/models.py:22
-msgid "User informations"
-msgstr "用户信息"
-
-#: funuser/models.py:27
-msgid "User"
-msgstr "用户"
-
-#: funuser/models.py:30
 msgid "Avatar"
 msgstr "头像"
 
-#: funuser/models.py:36
+#: funuser/models.py:24
 msgid "Brith date"
 msgstr "出生年月"
 
-#: funuser/models.py:38 funuser/models.py:43 funuser/models.py:48
-#: funuser/models.py:53 funuser/models.py:58 funuser/models.py:63
-#: funuser/models.py:68
+#: funuser/models.py:26 funuser/models.py:31 funuser/models.py:36
+#: funuser/models.py:41 funuser/models.py:46 funuser/models.py:51
+#: funuser/models.py:56
 msgid "Is outward"
 msgstr "公开"
 
-#: funuser/models.py:71
-msgid "Funuser creating date"
-msgstr "创建时间"
-
-#: funuser/views.py:69
-msgid "Nice try"
-msgstr "干得不错哦"
-
-#: templates/account/account_inactive.html:5
-#: templates/account/account_inactive.html:8
-msgid "Account Inactive"
-msgstr "账号未激活"
-
-#: templates/account/account_inactive.html:10
-msgid "This account is inactive."
-msgstr "账号未激活."
-
-#: templates/account/email.html:6
-msgid "Account"
-msgstr "账号"
-
-#: templates/account/email.html:11
-msgid "E-mail Addresses"
-msgstr "邮箱地址"
-
-#: templates/account/email.html:15
-msgid ""
-"\n"
-"        The following e-mail addresses are associated with your account\n"
-"      "
-msgstr ""
-"\n"
-"  以下邮箱地址关联你的账号\n"
-"    "
-
-#: templates/account/email.html:41
-msgid "Verified"
-msgstr "已验证"
-
-#: templates/account/email.html:43
-msgid "Unverified"
-msgstr "未验证"
-
-#: templates/account/email.html:47
-msgid "Primary"
-msgstr "常用"
-
-#: templates/account/email.html:57
-msgid "Make Primary"
-msgstr "改为常用"
-
-#: templates/account/email.html:61
-msgid "Re-send Verification"
-msgstr "重新发送"
-
-#: templates/account/email.html:65 templates/socialaccount/connections.html:39
-msgid "Remove"
-msgstr "移除"
-
-#: templates/account/email.html:74
-msgid "Warning"
-msgstr "警告"
-
-#: templates/account/email.html:76
-msgid ""
-"\n"
-"        You currently do not have any e-mail address set up. You should "
-"really \n"
-"        add an e-mail address so you can receive notifications, reset your \n"
-"        password, etc\n"
-"      "
-msgstr ""
-"\n"
-"   你还没有设置邮箱地址哦!  添加可用的邮箱地址然后重置密码\n"
-"\n"
-"    "
-
-#: templates/account/email.html:86
-msgid "Add E-mail Address"
-msgstr "添加邮箱地址"
-
-#: templates/account/email.html:92
-msgid "Add E-mail"
-msgstr "添加邮箱"
-
-#: templates/account/email.html:104
-msgid "Do you really want to remove the selected e-mail address?"
-msgstr "确定要移除吗?"
-
-#: templates/account/email/email_confirmation_message.html:10
-msgid "Hello from x-dove"
-msgstr "来自 x-dove 的问候"
-
-#: templates/account/email/email_confirmation_message.html:12
-msgid ""
-"\n"
-"            You're receiving this e-mail because user \n"
-"        "
-msgstr ""
-"\n"
-"            您收到这封邮件是因为用户\n"
-"        "
-
-#: templates/account/email/email_confirmation_message.html:17
-msgid ""
-"\n"
-"            has given yours as an e-mail address to connect their account.\n"
-"        "
-msgstr ""
-"\n"
-"            邮件已送出, 未收到请联系我们.\n"
-"        "
-
-#: templates/account/email/email_confirmation_message.html:20
-msgid "To confirm this is correct, go to"
-msgstr "确认邮件请 点击"
-
-#: templates/account/email/email_confirmation_message.html:22
-msgid "CONFIRM EMAIL"
-msgstr "确认邮箱"
-
-#: templates/account/email/email_confirmation_message.html:27
-msgid ""
-" \n"
-"            Thank you from x-dove!\n"
-"        "
-msgstr ""
-" \n"
-"         谢谢亲, (来自 x-dove )! \n"
-"        "
-
-#: templates/account/email/email_confirmation_subject.html:3
-msgid "Please Confirm Your E-mail Address"
-msgstr "请验证你的邮箱地址"
-
-#: templates/account/email/password_reset_key_message.html:7
-msgid "Hello from"
-msgstr "问候来自"
-
-#: templates/account/email/password_reset_key_message.html:9
-msgid ""
-"\n"
-"        You're receiving this e-mail because you or someone else has "
-"requested \n"
-"        a password for your user account.\n"
-"        It can be safely ignored if you did not request a password reset. \n"
-"        Click the link below to reset your password.\n"
-"    "
-msgstr ""
-"\n"
-"        亲! 您好, 重置密码邮件送达 \n"
-"        (亲没有重置密码请忽略).\n"
-"    "
-
-#: templates/account/email/password_reset_key_message.html:16
-msgid "RESET PASSWORD"
-msgstr "重置密码"
-
-#: templates/account/email/password_reset_key_message.html:19
-#, python-format
-msgid ""
-"\n"
-"            In case you forgot, your username is %(username)s.\n"
-"        "
-msgstr ""
-"\n"
-"                提前和亲说, 亲的用户名是: %(username)s.\n"
-"        "
-
-#: templates/account/email/password_reset_key_message.html:26
-msgid "Thank you for using"
-msgstr "很高兴为您服务"
-
-#: templates/account/email/password_reset_key_subject.html:3
-msgid ""
-"\n"
-"    Password Reset E-mail\n"
-msgstr ""
-"\n"
-"    重置电子邮件\n"
-
-#: templates/account/email_confirm.html:7
-#: templates/account/email_confirm.html:12
-msgid "Confirm E-mail Address"
-msgstr "确认电子邮件"
-
-#: templates/account/email_confirm.html:19
-#, python-format
-msgid ""
-"\n"
-"                Please confirm that \n"
-"                <a href=\"mailto:%(email)s\"\n"
-"                    style=\"font-size: larger;\">\n"
-"                    %(email)s\n"
-"                </a> is an e-mail address for user \n"
-"                <span style=\"font-weight: bolder;\">%(user_display)s</"
-"span>. \n"
-"            "
-msgstr ""
-"\n"
-"                请确认邮件📫 \n"
-"                <a href=\"mailto:%(email)s\"\n"
-"                    style=\"font-size: larger;\">\n"
-"                    %(email)s\n"
-"                </a> 是用户  \n"
-"                <span style=\"font-weight: bolder;\">%(user_display)s</span> "
-"的。 \n"
-"            "
-
-#: templates/account/email_confirm.html:34
-msgid "Confirm"
-msgstr "确认"
-
-#: templates/account/email_confirm.html:44
-msgid ""
-"\n"
-"                This e-mail confirmation link expired or is invalid. Please\n"
-"            "
-msgstr ""
-"\n"
-"   邮件链接非法或已失效。请\n"
-"     "
-
-#: templates/account/email_confirm.html:49
-msgid "issue a new e-mail confirmation request"
-msgstr "重新发送吧"
-
-#: templates/account/login.html:11 templates/account/login.html:22
-#: templates/account/login.html:43
-msgid "Sign In"
-msgstr "登录"
-
-#: templates/account/login.html:26
-msgid "If you have not created an account yet, then please"
-msgstr "没有账号吗?  请"
-
-#: templates/account/login.html:27
-msgid "sign up"
-msgstr "注册"
-
-#: templates/account/login.html:50
-msgid "Forgot Password?"
-msgstr "忘记密码?"
-
-#: templates/account/logout.html:11 templates/account/logout.html:23
-msgid "Sign Out"
-msgstr "退出"
-
-#: templates/account/logout.html:29
-msgid "Are you sure you want to sign out?"
-msgstr "亲要确认退出吗?"
-
-#: templates/account/logout.html:41
-msgid "Sign out now"
-msgstr "退出"
-
-#: templates/account/messages/cannot_delete_primary_email.html:2
-#, python-format
-msgid ""
-"\n"
-"    You cannot remove your primary e-mail address (%(email)s).\n"
-msgstr ""
-"\n"
-"    常用电子邮件不能移除哦! (%(email)s).\n"
-
-#: templates/account/messages/email_confirmation_sent.html:2
-#, python-format
-msgid ""
-"\n"
-"    Confirmation e-mail sent to %(email)s.\n"
-msgstr ""
-"\n"
-"    去 %(email)s 邮箱检查邮件吧\n"
-
-#: templates/account/messages/email_confirmed.html:2
-#, python-format
-msgid ""
-"\n"
-"    You have confirmed %(email)s.\n"
-msgstr ""
-"\n"
-"     %(email)s 邮件已确认\n"
-
-#: templates/account/messages/email_deleted.html:2
-#, python-format
-msgid ""
-"\n"
-"    Removed e-mail address %(email)s.\n"
-msgstr ""
-"\n"
-"    移除邮件地址 %(email)s\n"
-
-#: templates/account/messages/logged_in.html:4
-#, python-format
-msgid ""
-"\n"
-"    Successfully signed in as %(name)s.\n"
-msgstr ""
-"\n"
-"    登录成功 !  %(name)s.\n"
-
-#: templates/account/messages/logged_out.html:2
-msgid ""
-"\n"
-"    You have signed out.\n"
-msgstr ""
-"\n"
-"    已退出.\n"
-
-#: templates/account/messages/password_changed.html:2
-msgid ""
-"\n"
-"    Password successfully changed.\n"
-msgstr ""
-"\n"
-"更改密码成功.\n"
-
-#: templates/account/messages/password_set.html:2
-msgid ""
-"\n"
-"    Password successfully set.\n"
-msgstr ""
-"\n"
-"设置密码成功.\n"
-
-#: templates/account/messages/primary_email_set.html:2
-msgid ""
-"\n"
-"    Primary e-mail address set.\n"
-msgstr ""
-"\n"
-" \n"
-"已设为常用邮箱.\n"
-
-#: templates/account/messages/unverified_primary_email.html:2
-msgid ""
-"\n"
-"    Your primary e-mail address must be verified.\n"
-msgstr ""
-"\n"
-"    亲, 常用邮箱地址要被验证哦.\n"
-
-#: templates/account/password_change.html:5
-#: templates/account/password_change.html:8
-#: templates/account/password_change.html:15
-#: templates/account/password_reset_from_key.html:4
-#: templates/account/password_reset_from_key.html:11
-#: templates/account/password_reset_from_key_done.html:6
-#: templates/account/password_reset_from_key_done.html:9
-msgid "Change Password"
-msgstr "更改密码"
-
-#: templates/account/password_reset.html:8
-#: templates/account/password_reset.html:15
-#: templates/account/password_reset_done.html:6
-#: templates/account/password_reset_done.html:9
-msgid "Password Reset"
-msgstr "重置密码"
-
-#: templates/account/password_reset.html:24
-msgid ""
-"\n"
-"                You are administrator, please reset password via terminal\n"
-"            "
-msgstr ""
-"\n"
-"            如果重置密码失败请联系我们.\n"
-"        "
-
-#: templates/account/password_reset.html:32
-msgid ""
-"\n"
-"                Forgotten your password? Enter your e-mail address below, \n"
-"                and we'll send you an e-mail allowing you to reset it\n"
-"            "
-msgstr ""
-"\n"
-"    忘记密码了? 填写电子邮箱然后发送重置密码邮件\n"
-"      "
-
-#: templates/account/password_reset.html:41
-msgid "Reset My Password"
-msgstr "重置密码"
-
-#: templates/account/password_reset.html:46
-msgid ""
-"\n"
-"                Please contact us if you have any trouble resetting \n"
-"                your password.\n"
-"            "
-msgstr ""
-"\n"
-"            如果重置密码失败请联系我们.\n"
-"        "
-
-#: templates/account/password_reset_done.html:16
-msgid ""
-"\n"
-"            We have sent you an e-mail. Please contact us if you do not "
-"receive \n"
-"            it within a few minutes.\n"
-"        "
-msgstr ""
-"\n"
-"            邮件已送出, 未收到请联系我们.\n"
-"        "
-
-#: templates/account/password_reset_from_key.html:9
-msgid "Bad Token"
-msgstr "令牌无效"
-
-#: templates/account/password_reset_from_key.html:18
-msgid ""
-"\n"
-"                The password reset link was invalid, possibly because it "
-"has \n"
-"                already been used.  Please request a \n"
-"            "
-msgstr ""
-"\n"
-"                链接非法, 可能链接已被使用.  请  \n"
-"            "
-
-#: templates/account/password_reset_from_key.html:23
-msgid "new password reset"
-msgstr "新密码已重置"
-
-#: templates/account/password_reset_from_key.html:33
-msgid "change password"
-msgstr "更改密码"
-
-#: templates/account/password_reset_from_key.html:37
-#: templates/account/password_reset_from_key_done.html:10
-msgid "Your password is now changed."
-msgstr "密码已更改."
-
-#: templates/account/password_set.html:5 templates/account/password_set.html:8
-#: templates/account/password_set.html:15
-msgid "Set Password"
-msgstr "设置密码"
-
-#: templates/account/signup.html:11 templates/socialaccount/signup.html:6
-msgid "Signup"
-msgstr "注册"
-
-#: templates/account/signup.html:23 templates/account/signup.html:51
-#: templates/funhome/_navbar.html:73 templates/socialaccount/signup.html:13
-#: templates/socialaccount/signup.html:28
-msgid "Sign Up"
-msgstr "注册"
-
-#: templates/account/signup.html:26
-msgid "Already have an account? Then please"
-msgstr "已有账号吗? 请"
-
-#: templates/account/signup.html:27 templates/funhome/home_join_us.html:91
-#: templates/socialaccount/login_cancelled.html:18
-msgid "sign in"
-msgstr "登录"
-
-#: templates/account/signup.html:43 templates/funhome/_footer.html:24
-msgid "Legal information"
-msgstr "法律信息"
-
-#: templates/account/signup.html:46
-msgid "and_sign"
-msgstr "和"
-
-#: templates/account/signup.html:47
-msgid "Data privacy"
-msgstr "数据隐私"
-
-#: templates/account/signup_closed.html:5
-#: templates/account/signup_closed.html:8
-msgid "Sign Up Closed"
-msgstr "注册已关闭"
-
-#: templates/account/signup_closed.html:10
-msgid "We are sorry, but the sign up is currently closed."
-msgstr "非常抱歉, 注册暂时关闭了."
-
-#: templates/account/snippets/already_logged_in.html:7
-msgid "You are already logged in as"
-msgstr "已登录, 用户名"
-
-#: templates/account/verification_sent.html:6
-#: templates/account/verification_sent.html:10
-#: templates/account/verified_email_required.html:6
-#: templates/account/verified_email_required.html:10
-msgid "Verify Your E-mail Address"
-msgstr "验证你的电子邮件"
-
-#: templates/account/verification_sent.html:13
-msgid ""
-"\n"
-"            We have sent an e-mail to you for verification. Follow the "
-"link \n"
-"            provided to finalize the signup process. Please contact us if "
-"you \n"
-"            do not receive it within a few minutes.\n"
-"        "
-msgstr ""
-"\n"
-"            验证邮件已送出, 查看邮箱并按要求完成注册, (未收到邮件? 重新发送或"
-"联系我们).\n"
-"        "
-
-#: templates/account/verified_email_required.html:15
-msgid ""
-"\n"
-"            This part of the site requires us to verify that\n"
-"            you are who you claim to be. For this purpose, we require that "
-"you\n"
-"            verify ownership of your e-mail address. \n"
-"        "
-msgstr ""
-"\n"
-"            This part of the site requires us to verify that\n"
-"            you are who you claim to be. For this purpose, we require that "
-"you\n"
-"            verify ownership of your e-mail address. \n"
-"        "
-
-#: templates/account/verified_email_required.html:23
-msgid ""
-"\n"
-"            We have sent an e-mail to you for\n"
-"            verification. Please click on the link inside this e-mail. "
-"Please\n"
-"            contact us if you do not receive it within a few minutes.\n"
-"        "
-msgstr ""
-"\n"
-"            验证邮件已送出 \n"
-"            点击邮箱内链接完成验证哦! \n"
-"            未收到邮件? 联系我们.\n"
-"        "
-
-#: templates/account/verified_email_required.html:31
-msgid "Note"
-msgstr "留心一下"
-
-#: templates/account/verified_email_required.html:31
-msgid "you can still"
-msgstr "你也可以"
-
-#: templates/account/verified_email_required.html:33
-msgid "change your e-mail address"
-msgstr "更改邮箱地址"
-
-#: templates/eduhub/_classification_nav.html:17
-msgid "subject"
-msgstr "学科"
-
-#: templates/eduhub/_classification_nav.html:21
-msgid "food"
-msgstr "菜肴"
-
-#: templates/eduhub/_classification_nav.html:25
-msgid "live"
-msgstr "生活"
-
-#: templates/eduhub/_classification_nav.html:29
-msgid "develop"
-msgstr "开发"
-
-#: templates/eduhub/_classification_subject.html:13
-msgid ""
-"\n"
-"        I don't bother to make a catalog right now, and I don't want to \n"
-"        classify them now, because I'm the only one who develop it, and I \n"
-"        don't know when I have free time, so you should classify your \n"
-"        content yourself so as not to make a mess of everything. \n"
-"    "
-msgstr ""
-"\n"
-"            我已经不想去做一个分类了, 或者说我现在还不想做, 因为我一个人做这"
-"个repo, 也不知道我什么时候有时间, 所以你应该自己给你的内容分类好, 以免大家的"
-"内容杂乱无章。\n"
-"        "
-
-#: templates/eduhub/_classification_subject.html:24
-msgid ""
-"\n"
-"                If you're writing about primary school (I don't know if \n"
-"                anyone will write about kindergarten), \n"
-"            "
-msgstr ""
-"\n"
-"                    如果你写的是小学的教学内容( 我不确定有没有人写幼儿园"
-"的 ), \n"
-"                "
-
-#: templates/eduhub/_classification_subject.html:29
-msgid ""
-"\n"
-"                you should categorize(remove bracket!): \n"
-"            "
-msgstr ""
-"\n"
-"                    你可以这样分类( 把括号去掉! ): \n"
-"                "
-
-#: templates/eduhub/_classification_subject.html:34
-#: templates/eduhub/_classification_subject.html:52
-#: templates/eduhub/_classification_subject.html:72
-msgid "click to copy"
-msgstr "点击复制"
-
-#: templates/eduhub/_classification_subject.html:36
-msgid "primary school/(grade)/(semester)/(subjects)/(title)"
-msgstr "小学/(年级)/(学期)/(科目)/(标题)"
-
-#: templates/eduhub/_classification_subject.html:37
-msgid ""
-"\n"
-"            primary school / (grade) / (semester) / (subjects) / (title)\n"
-"                "
-msgstr ""
-"\n"
-"                       小学/(年级)/(学期)/(科目)/(标题)\n"
-"                    "
-
-#: templates/eduhub/_classification_subject.html:44
-msgid ""
-"\n"
-"                If you're writing about high school teaching,\n"
-"            "
-msgstr ""
-"\n"
-"                        如果你在写高中的教学内容,\n"
-"                    "
-
-#: templates/eduhub/_classification_subject.html:48
-#: templates/eduhub/_classification_subject.html:68
-msgid ""
-"\n"
-"                you should categorize: \n"
-"            "
-msgstr ""
-"\n"
-"                        你可以这样分类:\n"
-"                    "
-
-#: templates/eduhub/_classification_subject.html:54
-msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
-msgstr "初或高中/(年级)/(学期)/(科目)/(标题)"
-
-#: templates/eduhub/_classification_subject.html:56
-msgid ""
-"\n"
-"                    ('junior' or 'senior') high school / (grade) / \n"
-"                    (semester) / (subjects) / (title)\n"
-"                "
-msgstr ""
-"\n"
-"                        初或高中/(年级)/(学期)/(科目)/(标题)\n"
-"                    "
-
-#: templates/eduhub/_classification_subject.html:64
-msgid ""
-"\n"
-"                If you're writing about the college' teaching,\n"
-"            "
-msgstr ""
-"\n"
-"                        如果你在写大学的教学内容,\n"
-"                    "
-
-#: templates/eduhub/_classification_subject.html:74
-msgid "college/(grade)/(semester)/(subjects)/(title)"
-msgstr "大学/(专业)/(年级)/(学期)/(科目)/(标题)"
-
-#: templates/eduhub/_classification_subject.html:76
-msgid ""
-"\n"
-"                    college/(major) / (grade) / (semester) / (subjects) / \n"
-"                    (title)\n"
-"                "
-msgstr ""
-"\n"
-"                       小学/(年级)/(学期)/(科目)/(标题)\n"
-"                    "
-
-#: templates/eduhub/_classification_subject.html:84
-msgid ""
-"\n"
-"                Other stages should also have classification, you can \n"
-"                change it \n"
-"\n"
-"            "
-msgstr ""
-"\n"
-"                    还有很多其它分类, 你可以 \n"
-"                    更改它 \n"
-"\n"
-"                "
-
-#: templates/eduhub/_classification_subject.html:90
-msgid "here"
-msgstr "在这里"
-
-#: templates/eduhub/_classification_subject.html:93
-msgid ""
-"\n"
-"                and make a pull request, or you look at it yourself\n"
-"            "
-msgstr ""
-"\n"
-"                        你可以这样分类:\n"
-"                    "
-
-#: templates/eduhub/_eduhub_base.html:65
-#: templates/eduhub/eduhub_search_result.html:23
-#: templates/eduhub/label_list.html:19
-msgid "Eduhub labels"
-msgstr "标签"
-
-#: templates/eduhub/_eduhub_base.html:87 templates/eduhub/_eduhub_base.html:89
-#: templates/eduhub/_search.html:15 templates/eduhub/_search.html:16
-msgid "What are you thinking about"
-msgstr "在想什么"
-
-#: templates/eduhub/_eduhub_base.html:95 templates/eduhub/_search.html:22
-msgid "search"
-msgstr "搜索"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:17
-msgid "Preschool"
-msgstr "学前教育"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:24
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:53
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:99
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:154
-msgid "Math"
-msgstr "数学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:29
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:58
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:104
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:159
-msgid "Yuwen"
-msgstr "语文"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:34
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:63
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:109
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:164
-msgid "Yingyu"
-msgstr "英语"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:39
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:68
-msgid "Science"
-msgstr "科学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:46
-msgid "Primary school"
-msgstr "小学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:74
-msgid "Morality and Society"
-msgstr "品德与政治"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:80
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:135
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:189
-msgid "Information Technology"
-msgstr "信息技术"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:86
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:140
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:194
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:271
-msgid "Art"
-msgstr "艺术"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:93
-msgid "Junior high school"
-msgstr "初中"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:114
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:169
-msgid "Geography"
-msgstr "地理"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:119
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:174
-msgid "Physics"
-msgstr "物理"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:125
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:179
-msgid "Biology"
-msgstr "生物"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:130
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:184
-msgid "Politics"
-msgstr "政治"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:147
-msgid "Senior high school"
-msgstr "高中"
-
-# Collage
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:200
-msgid "Collage"
+#: funuser/models.py:29 funuser/templates/funuser/funuser_detail.html:55
+#: funuser/templates/funuser/funuser_update.html:64
+msgid "Address"
+msgstr "地址"
+
+#: funuser/models.py:34 funuser/templates/funuser/funuser_detail.html:62
+#: funuser/templates/funuser/funuser_update.html:83
+msgid "Hometown"
+msgstr "家乡"
+
+#: funuser/models.py:39 funuser/templates/funuser/funuser_detail.html:69
+#: funuser/templates/funuser/funuser_update.html:100
+msgid "College"
 msgstr "大学"
 
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:206
-msgid "Philosophy"
-msgstr "哲学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:211
-msgid "Economics"
-msgstr "经济学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:216
-msgid "Law"
-msgstr "法学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:221
-msgid "Pedagogy"
-msgstr "教育学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:226
-msgid "Jurisprudence"
-msgstr "法学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:231
-msgid "Literature"
-msgstr "文学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:236
-msgid "History"
-msgstr "历史学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:241
-msgid "Sciences"
-msgstr "理学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:246
-msgid "Engineering"
-msgstr "工学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:251
-msgid "Agriculture"
-msgstr "农学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:256
-msgid "Medicine"
-msgstr "医学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:261
-msgid "Military"
-msgstr "军事学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:266
-msgid "Management"
-msgstr "管理学"
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:277
-#: templates/eduhub/label_list.html:33
-msgid "All"
-msgstr "全部"
-
-#: templates/eduhub/content_create.html:44
-#: templates/eduhub/funcontent_create.html:43
-#: templates/eduhub/funtest_create.html:39
-#: templates/eduhub/label_create.html:28 templates/eduhub/label_update.html:36
-#: templates/funuser/funuser_update.html:152
-msgid "Upload"
-msgstr "上传"
-
-#: templates/eduhub/content_delete.html:16
-#: templates/eduhub/content_detail.html:15
-#: templates/eduhub/funcontent_delete.html:15
-#: templates/eduhub/label_delete.html:14 templates/eduhub/label_detail.html:11
-msgid "Delete label"
-msgstr "删除标签"
-
-#: templates/eduhub/content_delete.html:24
-#: templates/eduhub/funcontent_delete.html:23
-#: templates/eduhub/label_delete.html:50
-msgid "Are you sure you want to delete"
-msgstr "确定要删除"
-
-#: templates/eduhub/content_delete.html:28
-#: templates/eduhub/content_list.html:61
-#: templates/eduhub/funcontent_delete.html:27
-#: templates/eduhub/funcontent_detail.html:47
-#: templates/eduhub/funcontent_list.html:68
-#: templates/eduhub/label_delete.html:53 templates/eduhub/label_list.html:70
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
-msgid "Delete"
-msgstr "删除"
-
-#: templates/eduhub/content_list.html:22
-#: templates/eduhub/funcontent_list.html:25 templates/eduhub/label_list.html:24
-msgid "Add"
-msgstr "添加"
-
-#: templates/eduhub/content_list.html:48
-#: templates/eduhub/eduhubhomesticker_list.html:53
-#: templates/eduhub/funcontent_list.html:55 templates/eduhub/label_list.html:59
-msgid "View"
-msgstr "查看"
-
-#: templates/eduhub/content_list.html:55
-#: templates/eduhub/eduhubhomesticker_detail.html:46
-#: templates/eduhub/funcontent_detail.html:44
-#: templates/eduhub/funcontent_list.html:62 templates/eduhub/label_list.html:66
-#: templates/funhome/appreciation_detail.html:46
-#: templates/funhome/funhomesticker_detail.html:45
-msgid "Edit"
-msgstr "编辑"
-
-#: templates/eduhub/content_update.html:15
-#: templates/eduhub/funcontent_update.html:14
-#: templates/eduhub/label_update.html:12
-msgid "Update label"
-msgstr "更新标签"
-
-#: templates/eduhub/content_update.html:33
-#: templates/eduhub/label_create.html:16 templates/eduhub/label_update.html:21
-msgid "Preview"
-msgstr "预览"
-
-#: templates/eduhub/content_update.html:72
-#: templates/eduhub/funcontent_update.html:33
-msgid "Update"
-msgstr "更新"
-
-#: templates/eduhub/eduhub_search_result.html:14
-msgid "Eduhub search"
-msgstr "教育"
-
-#: templates/eduhub/eduhub_search_result.html:97
-#: templates/eduhub/eduhub_search_result.html:137
-#: templates/funhome/_common_pagination.html:15
-msgid "first page"
-msgstr "第一页"
-
-#: templates/eduhub/eduhub_search_result.html:103
-#: templates/eduhub/eduhub_search_result.html:143
-#: templates/funhome/_common_pagination.html:21
-msgid "previous page"
-msgstr "上一页"
-
-#: templates/eduhub/eduhub_search_result.html:110
-#: templates/eduhub/eduhub_search_result.html:150
-#: templates/funhome/_common_pagination.html:28
-msgid "Page"
-msgstr "页"
-
-#: templates/eduhub/eduhub_search_result.html:116
-#: templates/eduhub/eduhub_search_result.html:156
-#: templates/funhome/_common_pagination.html:33
-msgid "next page"
-msgstr "下一页"
-
-#: templates/eduhub/eduhub_search_result.html:121
-#: templates/eduhub/eduhub_search_result.html:162
-#: templates/funhome/_common_pagination.html:38
-msgid "last page"
-msgstr "最后页"
-
-#: templates/eduhub/eduhubhomesticker_detail.html:15
-#: templates/eduhub/eduhubhomesticker_list.html:15
-msgid "Eduhub home"
-msgstr "教育"
-
-#: templates/eduhub/eduhubhomesticker_list.html:95
-#: templates/eduhub/label_update.html:25
-msgid "cover"
-msgstr "封面"
-
-#: templates/eduhub/funcontent_create.html:38
-#: templates/eduhub/how_to_classification.html:22
-msgid "How to classification"
-msgstr "分类参考"
-
-#: templates/eduhub/funcontent_detail.html:14
-msgid "Content details"
-msgstr "标题"
-
-#: templates/eduhub/funtest_content_preview.html:20
-msgid "Funtest content preview"
-msgstr "贴纸文件"
-
-#: templates/eduhub/funtest_create.html:13
-msgid "Create a test"
-msgstr "创建于"
-
-#: templates/eduhub/funtest_create.html:33
-msgid "Live content"
-msgstr "内容"
-
-#: templates/eduhub/how_to_classification.html:40
-msgid "How to classify the eduhub content"
-msgstr "分类参考"
-
-#: templates/eduhub/how_to_classification.html:68
-msgid "classification copied"
-msgstr "分类已复制"
-
-#: templates/eduhub/label_delete.html:38
-msgid "Name"
-msgstr "标题名"
-
-#: templates/eduhub/label_delete.html:42
-msgid "Creating date"
-msgstr "创建时间"
-
-#: templates/eduhub/label_list.html:31
-msgid "Mine"
-msgstr "我的"
-
-#: templates/funhome/_footer.html:16
-msgid ""
-"\n"
-"                        x-dove\n"
-"                    "
-msgstr ""
-"\n"
-"                        x-dove\n"
-"                    "
-
-#: templates/funhome/_footer.html:29
-msgid " Data privacy"
-msgstr " 隐私"
-
-#: templates/funhome/_footer.html:33
-msgid "Developer"
-msgstr "开发者"
-
-#: templates/funhome/_footer.html:43
-msgid "this site"
-msgstr "本站源码"
-
-#: templates/funhome/_footer_language.html:26
-msgid "language"
-msgstr "语言"
-
-#: templates/funhome/_footer_theme.html:12
-msgid "Theme"
-msgstr "主题"
-
-#: templates/funhome/_footer_theme.html:17
-msgid "Select theme"
-msgstr "选择主题"
-
-#: templates/funhome/_footer_theme.html:22
-msgid "cerulean"
-msgstr "天蓝色"
-
-#: templates/funhome/_footer_theme.html:25
-msgid "cyborg"
-msgstr "科技"
-
-#: templates/funhome/_footer_theme.html:28
-msgid "flatly"
-msgstr "干净利落"
-
-#: templates/funhome/_footer_theme.html:31
-msgid "litera"
-msgstr "文青"
-
-#: templates/funhome/_footer_theme.html:34
-msgid "lux"
-msgstr "照明"
-
-#: templates/funhome/_footer_theme.html:37
-msgid "minty"
-msgstr "薄荷"
-
-#: templates/funhome/_footer_theme.html:40
-msgid "sandstone"
-msgstr "岩石"
-
-#: templates/funhome/_footer_theme.html:43
-msgid "sketchy"
-msgstr "素描"
-
-#: templates/funhome/_footer_theme.html:46
-msgid "solar"
-msgstr "阳光"
-
-#: templates/funhome/_footer_theme.html:49
-msgid "superhero"
-msgstr "锐气"
-
-#: templates/funhome/_footer_theme.html:52
-msgid "yeti"
-msgstr "雪人"
-
-#: templates/funhome/_footer_theme.html:55
-msgid "cosmo"
-msgstr "都市"
-
-#: templates/funhome/_footer_theme.html:58
-msgid "darkly"
-msgstr "熬夜"
-
-#: templates/funhome/_footer_theme.html:61
-msgid "journal"
-msgstr "报纸"
-
-#: templates/funhome/_footer_theme.html:64
-msgid "lumen"
-msgstr "流光"
-
-#: templates/funhome/_footer_theme.html:67
-msgid "pulse"
-msgstr "电子"
-
-#: templates/funhome/_footer_theme.html:70
-msgid "simplex"
-msgstr "d调"
-
-#: templates/funhome/_footer_theme.html:73
-msgid "slate"
-msgstr "石片"
-
-#: templates/funhome/_footer_theme.html:76
-msgid "spacelab"
-msgstr "太空"
-
-#: templates/funhome/_footer_theme.html:79
-msgid "united"
-msgstr "一体"
-
-#: templates/funhome/_footer_theme.html:82
-msgid "materia"
-msgstr "材质"
-
-#: templates/funhome/_footer_theme.html:85
-msgid "default"
-msgstr "默认"
-
-#: templates/funhome/_navbar.html:27
-#: templates/funhome/legal_information.html:30
-msgid "Home"
-msgstr "主页"
-
-#: templates/funhome/_navbar.html:36
-msgid "Developers"
-msgstr "开发者"
-
-#: templates/funhome/_navbar.html:42
-msgid "Message"
-msgstr "消息"
-
-#: templates/funhome/_navbar.html:60
-msgid "Hello"
-msgstr "你好"
-
-#: templates/funhome/_navbar.html:64
-msgid "Log Out"
-msgstr "退出"
-
-#: templates/funhome/_navbar.html:68
-msgid "Log In"
-msgstr "登录"
-
-#: templates/funhome/appreciation_detail.html:13
-msgid "appreciation detail"
-msgstr "评价"
-
-#: templates/funhome/funhomesticker_detail.html:13
-#: templates/funhome/homesticker_detail.html:13
-msgid "Sticker detail"
-msgstr "贴纸详细"
-
-#: templates/funhome/funhomesticker_list.html:13
-#: templates/funhome/funhomesticker_list.html:18
-#: templates/funhome/homesticker_list.html:13
-#: templates/funhome/homesticker_list.html:18
-msgid "Sticker list"
-msgstr "所有贴纸"
-
-#: templates/funhome/funhomesticker_list.html:21
-msgid "Older"
-msgstr "旧的"
-
-#: templates/funhome/home_appreciation.html:11
-msgid "Why choose us"
-msgstr "我们的优势"
-
-#: templates/funhome/home_funhomesticker.html:102
-msgid "View all"
-msgstr "查看全部"
-
-#: templates/funhome/home_join_us.html:9
-msgid "Join us now"
-msgstr "现在加入X-DOVE"
-
-#: templates/funhome/home_join_us.html:24
-msgid "E-mail"
-msgstr "邮箱地址"
-
-#: templates/funhome/home_join_us.html:39
-msgid "Username"
-msgstr "用户名"
-
-#: templates/funhome/home_join_us.html:55
-msgid "Password"
-msgstr "设置密码"
-
-#: templates/funhome/home_join_us.html:67
-msgid "Password (again)"
-msgstr "确认密码"
-
-#: templates/funhome/home_join_us.html:80
-msgid "Join now"
-msgstr "现在加入"
-
-#: templates/funhome/home_join_us.html:90
-msgid "Already have an account"
-msgstr "已有账号吗"
-
-#: templates/funhome/legal_information.html:21
-msgid "LEGAL INFORMATION"
-msgstr "法律信息"
-
-#: templates/funuser/_funuser_url.html:12
+#: funuser/models.py:44 funuser/templates/funuser/funuser_detail.html:76
+#: funuser/templates/funuser/funuser_update.html:116
+msgid "Occupation"
+msgstr "工作"
+
+#: funuser/models.py:49
+msgid "Hobby"
+msgstr "兴趣"
+
+#: funuser/models.py:54 funuser/templates/funuser/funuser_detail.html:83
+#: funuser/templates/funuser/funuser_update.html:132
+msgid "Motto"
+msgstr "座右铭"
+
+#: funuser/templates/funuser/_funuser_url.html:12
 msgid "Information"
 msgstr "用户信息"
 
-#: templates/funuser/_funuser_url.html:16
+#: funuser/templates/funuser/_funuser_url.html:16
 msgid "Reset password"
 msgstr "重置密码"
 
-#: templates/funuser/funuser_detail.html:16
+#: funuser/templates/funuser/funuser_detail.html:16
 #, python-format
 msgid ""
 "\n"
@@ -1700,1388 +1895,1053 @@ msgstr ""
 "                %(funuser.user)s 什么都没有留下\n"
 "            "
 
-#: templates/funuser/funuser_update.html:52
-#: templates/funuser/funuser_update.html:74
-#: templates/funuser/funuser_update.html:91
-#: templates/funuser/funuser_update.html:108
-#: templates/funuser/funuser_update.html:124
-#: templates/funuser/funuser_update.html:140
+#: funuser/templates/funuser/funuser_detail.html:48
+#: funuser/templates/funuser/funuser_update.html:44
+msgid "Birth date"
+msgstr "出生年月"
+
+#: funuser/templates/funuser/funuser_update.html:50
+#: funuser/templates/funuser/funuser_update.html:72
+#: funuser/templates/funuser/funuser_update.html:89
+#: funuser/templates/funuser/funuser_update.html:106
+#: funuser/templates/funuser/funuser_update.html:122
+#: funuser/templates/funuser/funuser_update.html:138
 msgid "is outward"
 msgstr "公开"
 
-#: templates/openid/login.html:10
-msgid "OpenID Sign In"
-msgstr "OpenID 登录"
+#: funuser/views.py:47
+msgid "Nice try"
+msgstr "干得不错哦"
 
-#: templates/socialaccount/authentication_error.html:5
-#: templates/socialaccount/authentication_error.html:8
-msgid "Social Network Login Failure"
-msgstr "登录失败"
+#~ msgid "Label"
+#~ msgstr "标签"
 
-#: templates/socialaccount/authentication_error.html:10
-msgid ""
-"An error occurred while attempting to login via your social network account."
-msgstr "登录账户时出现异常了."
+#~ msgid "classification : college/grade/semester/course"
+#~ msgstr "分类如: (大学/中学/小学)/年级/学期/课程"
 
-#: templates/socialaccount/connections.html:5
-#: templates/socialaccount/connections.html:8
-msgid "Account Connections"
-msgstr "账号连接"
+#~ msgid "Eduhub content"
+#~ msgstr "内容"
 
-#: templates/socialaccount/connections.html:12
-msgid ""
-"\n"
-"            You can sign in to your account using any of the following third "
-"party accounts:\n"
-"        "
-msgstr ""
-"\n"
-"            账号已登录 :\n"
-"        "
+#~ msgid "Eduhub classification"
+#~ msgstr "分类"
 
-#: templates/socialaccount/connections.html:48
-msgid ""
-"You currently have no social network accounts connected to this account."
-msgstr "没有关联账号哦."
+#~ msgid "Eduhub classifications"
+#~ msgstr "分类"
 
-#: templates/socialaccount/connections.html:52
-msgid "Add a 3rd Party Account"
-msgstr "增加关联账号"
+#~ msgid "Classification level"
+#~ msgstr "级别"
 
-#: templates/socialaccount/login_cancelled.html:5
-#: templates/socialaccount/login_cancelled.html:9
-msgid "Login Cancelled"
-msgstr "登录取消"
+#~ msgid "Classification creating user"
+#~ msgstr "创建分类的用户"
 
-#: templates/socialaccount/login_cancelled.html:14
-msgid ""
-"\n"
-"            You decided to cancel logging in to our site using one of your "
-"existing accounts. If this was a mistake, please proceed to \n"
-"        "
-msgstr ""
-"\n"
-"            确定取消吗?  \n"
-"        "
+#~ msgid "Is classification disabled"
+#~ msgstr "禁用"
 
-#: templates/socialaccount/messages/account_connected.txt:2
-msgid ""
-"\n"
-"    The social account has been connected.\n"
-msgstr ""
-"\n"
-"关联账号被连接.\n"
+#~ msgid "Frequently request"
+#~ msgstr "频繁访问"
 
-#: templates/socialaccount/messages/account_connected_other.txt:2
-msgid ""
-"\n"
-"    The social account is already connected to a different account.\n"
-msgstr ""
-"\n"
-"亲! 这个第三方账号已被关联.\n"
+#~ msgid "Content file is required"
+#~ msgstr "未选择内容文件"
 
-#: templates/socialaccount/messages/account_disconnected.txt:2
-msgid ""
-"\n"
-"    The social account has been disconnected.\n"
-msgstr ""
-"\n"
-"第三方账号已取消连接.\n"
+#~ msgid "The length of video file should be less than"
+#~ msgstr "视频文件应该小于"
 
-#: templates/socialaccount/signup.html:16
+#~ msgid "The length of pdf file should be less than"
+#~ msgstr "Pdf文件应该小于"
+
+#~ msgid "中文简体"
+#~ msgstr "中文简体"
+
+#~ msgid "avatar"
+#~ msgstr "头像"
+
+#~ msgid "User information"
+#~ msgstr "用户信息"
+
+#~ msgid "User informations"
+#~ msgstr "用户信息"
+
+#~ msgid "User"
+#~ msgstr "用户"
+
+#~ msgid "Funuser creating date"
+#~ msgstr "创建时间"
+
+#~ msgid "Search files"
+#~ msgstr "搜索文件"
+
+#~ msgid "Select an image to embed"
+#~ msgstr "选择主题"
+
+#~ msgid ""
+#~ "Browse for the image you want, then click 'Embed Image' to continue..."
+#~ msgstr "浏览所需图像，然后单击“嵌入图像”以继续..."
+
+#~ msgid ""
+#~ "No images found. Upload images using the 'Image Button' dialog's 'Upload' "
+#~ "tab."
+#~ msgstr "找不到图像。使用“图像按钮”对话框的“上传”选项卡上传图像。"
+
+#~ msgid "Images in: "
+#~ msgstr "照片: "
+
+#~ msgid "Embed Image"
+#~ msgstr "嵌入照片"
+
+#~ msgid "Play Slideshow"
+#~ msgstr "播放幻灯片"
+
+#~ msgid "Pause Slideshow"
+#~ msgstr "暂停幻灯片"
+
+#~ msgid "&lsaquo; Previous Photo"
+#~ msgstr "&lsaquo; 上一张"
+
+#~ msgid "Next Photo &rsaquo;"
+#~ msgstr "下一张 &rsaquo;"
+
+#~ msgid "Next &rsaquo;"
+#~ msgstr "下翻 &rsaquo;"
+
+#~ msgid "&lsaquo; Prev"
+#~ msgstr "&lsaquo; 上翻"
+
+#~ msgid "This field is required."
+#~ msgstr "未选择内容文件."
+
+#~ msgid "i18n text"
+#~ msgstr "国际化文本"
+
+#~ msgid "i18n legend"
+#~ msgstr "国际化说明"
+
+#~ msgid "Enter a valid value."
+#~ msgstr "请输入一个合法的值."
+
+#~ msgid "Messages"
+#~ msgstr "消息"
+
+#~ msgid "Site Maps"
+#~ msgstr "网站地图"
+
+#~ msgid "Static Files"
+#~ msgstr "静态文件"
+
+#~ msgid "Syndication"
+#~ msgstr "组织"
+
+#~ msgid "That page number is not an integer"
+#~ msgstr "页数不是整数哦"
+
+#~ msgid "That page number is less than 1"
+#~ msgstr "页数小于1"
+
+#~ msgid "That page contains no results"
+#~ msgstr "没有这一页哦"
+
+#~ msgid "Enter a valid URL."
+#~ msgstr "请输入合法的URL."
+
+#~ msgid "Enter a valid integer."
+#~ msgstr "输入一个合法整数."
+
+#~ msgid "Enter a valid email address."
+#~ msgstr "更改邮箱地址."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#~ "hyphens."
+#~ msgstr "输入由字母、数字、下划线或连字符组成的有效slug."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, "
+#~ "or hyphens."
+#~ msgstr "输入由Unicode字母、数字、下划线或连字符组成的有效slug."
+
+#~ msgid "Enter a valid IPv4 address."
+#~ msgstr "输入合法的IPv4地址."
+
+#~ msgid "Enter a valid IPv6 address."
+#~ msgstr "输入合法的IPv6地址."
+
+#~ msgid "Enter a valid IPv4 or IPv6 address."
+#~ msgstr "输入合法的IP地址."
+
+#~ msgid "Enter only digits separated by commas."
+#~ msgstr "输入由逗号分割的数字."
+
 #, python-format
-msgid ""
-"\n"
-"      You are about to use your %(provider_name)s account to login to\n"
-"      %(site_name)s. As a final step, please complete the following form:\n"
-"    "
-msgstr ""
-"\n"
-"      你将使用 %(provider_name)s 账号登录\n"
-"      %(site_name)s. :\n"
-"    "
+#~ msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+#~ msgstr "确保值是 %(limit_value)s (它是 %(show_value)s)."
 
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/forms.py:6
-msgid "Search files"
-msgstr "搜索文件"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
-msgid "Select an image to embed"
-msgstr "选择主题"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:27
-msgid "Browse for the image you want, then click 'Embed Image' to continue..."
-msgstr "浏览所需图像，然后单击“嵌入图像”以继续..."
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:29
-msgid ""
-"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
-"tab."
-msgstr "找不到图像。使用“图像按钮”对话框的“上传”选项卡上传图像。"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:50
-msgid "Images in: "
-msgstr "照片: "
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:62
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:80
-msgid "Embed Image"
-msgstr "嵌入照片"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:146
-msgid "Play Slideshow"
-msgstr "播放幻灯片"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:147
-msgid "Pause Slideshow"
-msgstr "暂停幻灯片"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:148
-msgid "&lsaquo; Previous Photo"
-msgstr "&lsaquo; 上一张"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:149
-msgid "Next Photo &rsaquo;"
-msgstr "下一张 &rsaquo;"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:150
-msgid "Next &rsaquo;"
-msgstr "下翻 &rsaquo;"
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
-msgid "&lsaquo; Prev"
-msgstr "&lsaquo; 上翻"
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_form_helper.py:129
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_form_helper.py:139
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:54
-msgid "This field is required."
-msgstr "未选择内容文件."
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout.py:392
-msgid "i18n text"
-msgstr "国际化文本"
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout.py:394
-msgid "i18n legend"
-msgstr "国际化说明"
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout_objects.py:142
-#: venv/lib/python3.9/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
-msgstr "请输入一个合法的值."
-
-#: venv/lib/python3.9/site-packages/django/contrib/messages/apps.py:7
-msgid "Messages"
-msgstr "消息"
-
-#: venv/lib/python3.9/site-packages/django/contrib/sitemaps/apps.py:8
-msgid "Site Maps"
-msgstr "网站地图"
-
-#: venv/lib/python3.9/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr "静态文件"
-
-#: venv/lib/python3.9/site-packages/django/contrib/syndication/apps.py:7
-msgid "Syndication"
-msgstr "组织"
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:30
-msgid "…"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:51
-msgid "That page number is not an integer"
-msgstr "页数不是整数哦"
-
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:53
-msgid "That page number is less than 1"
-msgstr "页数小于1"
-
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:58
-msgid "That page contains no results"
-msgstr "没有这一页哦"
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:93
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:664
-msgid "Enter a valid URL."
-msgstr "请输入合法的URL."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:150
-msgid "Enter a valid integer."
-msgstr "输入一个合法整数."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:161
-msgid "Enter a valid email address."
-msgstr "更改邮箱地址."
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: venv/lib/python3.9/site-packages/django/core/validators.py:262
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr "输入由字母、数字、下划线或连字符组成的有效slug."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:269
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr "输入由Unicode字母、数字、下划线或连字符组成的有效slug."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:278
-#: venv/lib/python3.9/site-packages/django/core/validators.py:288
-#: venv/lib/python3.9/site-packages/django/core/validators.py:311
-msgid "Enter a valid IPv4 address."
-msgstr "输入合法的IPv4地址."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:296
-#: venv/lib/python3.9/site-packages/django/core/validators.py:312
-msgid "Enter a valid IPv6 address."
-msgstr "输入合法的IPv6地址."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:306
-#: venv/lib/python3.9/site-packages/django/core/validators.py:310
-msgid "Enter a valid IPv4 or IPv6 address."
-msgstr "输入合法的IP地址."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:340
-msgid "Enter only digits separated by commas."
-msgstr "输入由逗号分割的数字."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:346
 #, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr "确保值是 %(limit_value)s (它是 %(show_value)s)."
+#~ msgid "Ensure this value is less than or equal to %(limit_value)s."
+#~ msgstr "确保 值 小于 或 等于 %(limit_value)s."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:379
 #, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr "确保 值 小于 或 等于 %(limit_value)s."
+#~ msgid "Ensure this value is greater than or equal to %(limit_value)s."
+#~ msgstr "确保 值 大于 或 等于 %(limit_value)s."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:388
 #, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr "确保 值 大于 或 等于 %(limit_value)s."
+#~ msgid ""
+#~ "Ensure this value has at least %(limit_value)d character (it has "
+#~ "%(show_value)d)."
+#~ msgid_plural ""
+#~ "Ensure this value has at least %(limit_value)d characters (it has "
+#~ "%(show_value)d)."
+#~ msgstr[0] ""
+#~ "确保 值 少于 %(limit_value)d 个字符 (它已是 %(show_value)d) 个字符."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:398
 #, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] "确保 值 少于 %(limit_value)d 个字符 (它已是 %(show_value)d) 个字符."
+#~ msgid ""
+#~ "Ensure this value has at most %(limit_value)d character (it has "
+#~ "%(show_value)d)."
+#~ msgid_plural ""
+#~ "Ensure this value has at most %(limit_value)d characters (it has "
+#~ "%(show_value)d)."
+#~ msgstr[0] ""
+#~ "确保 值 大于 %(limit_value)d 个字符 (值已是 %(show_value)d) 个字符."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:413
+#~ msgid "Enter a number."
+#~ msgstr "输入一个数字."
+
 #, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] "确保 值 大于 %(limit_value)d 个字符 (值已是 %(show_value)d) 个字符."
+#~ msgid "Ensure that there are no more than %(max)s digit in total."
+#~ msgid_plural "Ensure that there are no more than %(max)s digits in total."
+#~ msgstr[0] "确保大于 %(max)s ."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:432
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:292
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:327
-msgid "Enter a number."
-msgstr "输入一个数字."
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:434
 #, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] "确保大于 %(max)s ."
+#~ msgid "Ensure that there are no more than %(max)s decimal place."
+#~ msgid_plural "Ensure that there are no more than %(max)s decimal places."
+#~ msgstr[0] "确保不大于 %(max)s."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:439
 #, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] "确保不大于 %(max)s."
+#~ msgid ""
+#~ "Ensure that there are no more than %(max)s digit before the decimal point."
+#~ msgid_plural ""
+#~ "Ensure that there are no more than %(max)s digits before the decimal "
+#~ "point."
+#~ msgstr[0] "确保小数点数位不大于 %(max)s ."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:444
 #, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] "确保小数点数位不大于 %(max)s ."
+#~ msgid ""
+#~ "File extension “%(extension)s” is not allowed. Allowed extensions are: "
+#~ "%(allowed_extensions)s."
+#~ msgstr ""
+#~ "文件扩展 “%(extension)s” 被拒绝了. 允许的扩展有: %(allowed_extensions)s."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:506
+#~ msgid "Null characters are not allowed."
+#~ msgstr "不允许为空."
+
+#~ msgid "and"
+#~ msgstr "并且"
+
 #, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-"文件扩展 “%(extension)s” 被拒绝了. 允许的扩展有: %(allowed_extensions)s."
+#~ msgid "%(model_name)s with this %(field_labels)s already exists."
+#~ msgstr "%(model_name)s  %(field_labels)s 已经存在."
 
-#: venv/lib/python3.9/site-packages/django/core/validators.py:559
-msgid "Null characters are not allowed."
-msgstr "不允许为空."
-
-#: venv/lib/python3.9/site-packages/django/db/models/base.py:1197
-#: venv/lib/python3.9/site-packages/django/forms/models.py:768
-msgid "and"
-msgstr "并且"
-
-#: venv/lib/python3.9/site-packages/django/db/models/base.py:1199
 #, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr "%(model_name)s  %(field_labels)s 已经存在."
+#~ msgid "Value %(value)r is not a valid choice."
+#~ msgstr "%(value)r 是一个非法选项."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:100
+#~ msgid "This field cannot be null."
+#~ msgstr "这里不能为空哦."
+
+#~ msgid "This field cannot be blank."
+#~ msgstr "这里不能为空."
+
 #, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr "%(value)r 是一个非法选项."
+#~ msgid "%(model_name)s with this %(field_label)s already exists."
+#~ msgstr "%(model_name)s  %(field_label)s 已经存在."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:101
-msgid "This field cannot be null."
-msgstr "这里不能为空哦."
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:102
-msgid "This field cannot be blank."
-msgstr "这里不能为空."
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:103
 #, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr "%(model_name)s  %(field_label)s 已经存在."
+#~ msgid ""
+#~ "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+#~ msgstr "%(field_label)s %(date_field_label)s %(lookup_type)s 必须唯一."
 
-#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
-#. Eg: "Title must be unique for pub_date year"
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:107
 #, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr "%(field_label)s %(date_field_label)s %(lookup_type)s 必须唯一."
+#~ msgid "Field of type: %(field_type)s"
+#~ msgstr "类型: %(field_type)s"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:126
 #, python-format
-msgid "Field of type: %(field_type)s"
-msgstr "类型: %(field_type)s"
+#~ msgid "“%(value)s” value must be either True or False."
+#~ msgstr "“%(value)s” 的值需为 True 或 False."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:958
 #, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr "“%(value)s” 的值需为 True 或 False."
+#~ msgid "“%(value)s” value must be either True, False, or None."
+#~ msgstr "“%(value)s” 需为 True,  False 或 None."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:959
+#~ msgid "Boolean (Either True or False)"
+#~ msgstr "布尔值( True 或 False )"
+
 #, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr "“%(value)s” 需为 True,  False 或 None."
+#~ msgid "String (up to %(max_length)s)"
+#~ msgstr "字符串(最大长度 %(max_length)s)"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:961
-msgid "Boolean (Either True or False)"
-msgstr "布尔值( True 或 False )"
+#~ msgid "Comma-separated integers"
+#~ msgstr "由逗号分割的整数"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1002
 #, python-format
-msgid "String (up to %(max_length)s)"
-msgstr "字符串(最大长度 %(max_length)s)"
+#~ msgid ""
+#~ "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+#~ "format."
+#~ msgstr "“%(value)s” 是日期格式. 它应该像 YYYY-MM-DD ."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1096
-msgid "Comma-separated integers"
-msgstr "由逗号分割的整数"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1145
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr "“%(value)s” 是日期格式. 它应该像 YYYY-MM-DD ."
+#~ msgid ""
+#~ "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an "
+#~ "invalid date."
+#~ msgstr "“%(value)s” 的格式应为 (YYYY-MM-DD) 但是它获取一个非法的值."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1147
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1290
+#~ msgid "Date (without time)"
+#~ msgstr "日期 ( 含有时间 )"
+
 #, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr "“%(value)s” 的格式应为 (YYYY-MM-DD) 但是它获取一个非法的值."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:"
+#~ "ss[.uuuuuu]][TZ] format."
+#~ msgstr ""
+#~ "“%(value)s” 格式错误. 它应为 年年年年-月月-日日 时时:分分[:秒秒[.uuuuuu]]"
+#~ "[时区] ."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1150
-msgid "Date (without time)"
-msgstr "日期 ( 含有时间 )"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1288
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
-msgstr ""
-"“%(value)s” 格式错误. 它应为 年年年年-月月-日日 时时:分分[:秒秒[.uuuuuu]][时"
-"区] ."
+#~ msgid ""
+#~ "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+#~ "[TZ]) but it is an invalid date/time."
+#~ msgstr ""
+#~ "“%(value)s” 格式正确: (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) 但是内容无效."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1292
+#~ msgid "Date (with time)"
+#~ msgstr "日期( 含有 时间 )"
+
 #, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-"“%(value)s” 格式正确: (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) 但是内容无效."
+#~ msgid "“%(value)s” value must be a decimal number."
+#~ msgstr "“%(value)s” 必须为 小数."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1296
-msgid "Date (with time)"
-msgstr "日期( 含有 时间 )"
+#~ msgid "Decimal number"
+#~ msgstr "小数"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1444
 #, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr "“%(value)s” 必须为 小数."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+#~ "uuuuuu] format."
+#~ msgstr "“%(value)s” 格式错误. 它的格式应为 [DD] [[HH:]MM:]ss[.uuuuuu] ."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1446
-msgid "Decimal number"
-msgstr "小数"
+#~ msgid "Duration"
+#~ msgstr "持续"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1585
+#~ msgid "Email address"
+#~ msgstr "邮箱地址"
+
+#~ msgid "File path"
+#~ msgstr "文件路径"
+
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
-msgstr "“%(value)s” 格式错误. 它的格式应为 [DD] [[HH:]MM:]ss[.uuuuuu] ."
+#~ msgid "“%(value)s” value must be a float."
+#~ msgstr "“%(value)s” 需为浮点值."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1588
-msgid "Duration"
-msgstr "持续"
+#~ msgid "Floating point number"
+#~ msgstr "浮点数"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1638
-msgid "Email address"
-msgstr "邮箱地址"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1661
-msgid "File path"
-msgstr "文件路径"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1727
 #, python-format
-msgid "“%(value)s” value must be a float."
-msgstr "“%(value)s” 需为浮点值."
+#~ msgid "“%(value)s” value must be an integer."
+#~ msgstr "“%(value)s” 需为整数."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1729
-msgid "Floating point number"
-msgstr "浮点数"
+#~ msgid "Integer"
+#~ msgstr "整数"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1767
+#~ msgid "Big (8 byte) integer"
+#~ msgstr "(8位)整数"
+
+#~ msgid "Small integer"
+#~ msgstr "整数( 小于  8 位 )"
+
+#~ msgid "IPv4 address"
+#~ msgstr "IPv4 地址"
+
+#~ msgid "IP address"
+#~ msgstr "IP地址"
+
 #, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr "“%(value)s” 需为整数."
+#~ msgid "“%(value)s” value must be either None, True or False."
+#~ msgstr "“%(value)s” 需为 True, False 或 None."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1769
-msgid "Integer"
-msgstr "整数"
+#~ msgid "Boolean (Either True, False or None)"
+#~ msgstr "布尔( 含 True, False, None )"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1852
-msgid "Big (8 byte) integer"
-msgstr "(8位)整数"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1867
-msgid "Small integer"
-msgstr "整数( 小于  8 位 )"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1875
-msgid "IPv4 address"
-msgstr "IPv4 地址"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1906
-msgid "IP address"
-msgstr "IP地址"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1986
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1987
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr "“%(value)s” 需为 True, False 或 None."
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1989
-msgid "Boolean (Either True, False or None)"
-msgstr "布尔( 含 True, False, None )"
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2043
 #, fuzzy
-#| msgid "Positive integer"
-msgid "Positive big integer"
-msgstr "正整数"
+#~| msgid "Positive integer"
+#~ msgid "Positive big integer"
+#~ msgstr "正整数"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2056
-msgid "Positive integer"
-msgstr "正整数"
+#~ msgid "Positive integer"
+#~ msgstr "正整数"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2069
-msgid "Positive small integer"
-msgstr "正整数( 小于 8 位 )"
+#~ msgid "Positive small integer"
+#~ msgstr "正整数( 小于 8 位 )"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2083
 #, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr "Slug (最大长度 %(max_length)s)"
+#~ msgid "Slug (up to %(max_length)s)"
+#~ msgstr "Slug (最大长度 %(max_length)s)"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2115
-msgid "Text"
-msgstr "文本"
+#~ msgid "Text"
+#~ msgstr "文本"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2181
 #, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr "“%(value)s” 的格式需为 HH:MM[:ss[.uuuuuu]] ."
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[."
+#~ "uuuuuu]] format."
+#~ msgstr "“%(value)s” 的格式需为 HH:MM[:ss[.uuuuuu]] ."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2183
 #, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr "“%(value)s” 格式正确: (HH:MM[:ss[.uuuuuu]]) 但是内容无效."
+#~ msgid ""
+#~ "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is "
+#~ "an invalid time."
+#~ msgstr "“%(value)s” 格式正确: (HH:MM[:ss[.uuuuuu]]) 但是内容无效."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2186
-msgid "Time"
-msgstr "时间"
+#~ msgid "Time"
+#~ msgstr "时间"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2312
-msgid "URL"
-msgstr "URL"
+#~ msgid "URL"
+#~ msgstr "URL"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2334
-msgid "Raw binary data"
-msgstr "二进制数据"
+#~ msgid "Raw binary data"
+#~ msgstr "二进制数据"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2399
 #, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr "“%(value)s” 不是 UUID."
+#~ msgid "“%(value)s” is not a valid UUID."
+#~ msgstr "“%(value)s” 不是 UUID."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2401
-msgid "Universally unique identifier"
-msgstr "通用唯一标识符"
+#~ msgid "Universally unique identifier"
+#~ msgstr "通用唯一标识符"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/files.py:226
-msgid "File"
-msgstr "文件"
+#~ msgid "File"
+#~ msgstr "文件"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/files.py:375
-msgid "Image"
-msgstr "照片"
+#~ msgid "Image"
+#~ msgstr "照片"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/json.py:18
-msgid "A JSON object"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/json.py:20
-msgid "Value must be valid JSON."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:790
 #, python-format
-msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr "%(model)s 实例的 %(field)s %(value)r 不存在."
+#~ msgid "%(model)s instance with %(field)s %(value)r does not exist."
+#~ msgstr "%(model)s 实例的 %(field)s %(value)r 不存在."
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:792
-msgid "Foreign Key (type determined by related field)"
-msgstr "Foreign Key (type determined by related field)"
+#~ msgid "Foreign Key (type determined by related field)"
+#~ msgstr "Foreign Key (type determined by related field)"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1045
-msgid "One-to-one relationship"
-msgstr "One-to-one relationship"
+#~ msgid "One-to-one relationship"
+#~ msgstr "One-to-one relationship"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1099
 #, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr "%(from)s-%(to)s relationship"
+#~ msgid "%(from)s-%(to)s relationship"
+#~ msgstr "%(from)s-%(to)s relationship"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1100
 #, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr "%(from)s-%(to)s relationships"
+#~ msgid "%(from)s-%(to)s relationships"
+#~ msgstr "%(from)s-%(to)s relationships"
 
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1142
-msgid "Many-to-many relationship"
-msgstr "Many-to-many relationship"
+#~ msgid "Many-to-many relationship"
+#~ msgstr "Many-to-many relationship"
 
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: venv/lib/python3.9/site-packages/django/forms/boundfield.py:150
-msgid ":?.!"
-msgstr ":?.!"
+#~ msgid ":?.!"
+#~ msgstr ":?.!"
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:247
-msgid "Enter a whole number."
-msgstr "输入一个整数."
+#~ msgid "Enter a whole number."
+#~ msgstr "输入一个整数."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:391
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1132
-msgid "Enter a valid date."
-msgstr "输入一个合法的日期."
+#~ msgid "Enter a valid date."
+#~ msgstr "输入一个合法的日期."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:415
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1133
-msgid "Enter a valid time."
-msgstr "输入一个合法的时间."
+#~ msgid "Enter a valid time."
+#~ msgstr "输入一个合法的时间."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:443
-msgid "Enter a valid date/time."
-msgstr "输入一个合法的日期或时间."
+#~ msgid "Enter a valid date/time."
+#~ msgstr "输入一个合法的日期或时间."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:477
-msgid "Enter a valid duration."
-msgstr "输入一个范围."
+#~ msgid "Enter a valid duration."
+#~ msgstr "输入一个范围."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:478
 #, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr "The number of days must be between {min_days} and {max_days}."
+#~ msgid "The number of days must be between {min_days} and {max_days}."
+#~ msgstr "The number of days must be between {min_days} and {max_days}."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:538
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr "没有文件被提交. 请检查表单."
+#~ msgid "No file was submitted. Check the encoding type on the form."
+#~ msgstr "没有文件被提交. 请检查表单."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:539
-msgid "No file was submitted."
-msgstr "没有文件被提交."
+#~ msgid "No file was submitted."
+#~ msgstr "没有文件被提交."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:540
-msgid "The submitted file is empty."
-msgstr "提交的文件为空."
+#~ msgid "The submitted file is empty."
+#~ msgstr "提交的文件为空."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:542
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-"Ensure this filename has at most %(max)d character (it has %(length)d)."
+#~ msgid ""
+#~ "Ensure this filename has at most %(max)d character (it has %(length)d)."
+#~ msgid_plural ""
+#~ "Ensure this filename has at most %(max)d characters (it has %(length)d)."
+#~ msgstr[0] ""
+#~ "Ensure this filename has at most %(max)d character (it has %(length)d)."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:545
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr "Please either submit a file or check the clear checkbox, not both."
+#~ msgid "Please either submit a file or check the clear checkbox, not both."
+#~ msgstr "Please either submit a file or check the clear checkbox, not both."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:606
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr "你上传的照片无效或内容有误. 请上传有效的照片 ."
+#~ msgid ""
+#~ "Upload a valid image. The file you uploaded was either not an image or a "
+#~ "corrupted image."
+#~ msgstr "你上传的照片无效或内容有误. 请上传有效的照片 ."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:768
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:858
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1309
 #, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr "请选择有效的选项. %(value)s 不是有效的选项."
+#~ msgid ""
+#~ "Select a valid choice. %(value)s is not one of the available choices."
+#~ msgstr "请选择有效的选项. %(value)s 不是有效的选项."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:859
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:974
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1308
-msgid "Enter a list of values."
-msgstr "输入一个列表."
+#~ msgid "Enter a list of values."
+#~ msgstr "输入一个列表."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:975
-msgid "Enter a complete value."
-msgstr "输入一个完整的值."
+#~ msgid "Enter a complete value."
+#~ msgstr "输入一个完整的值."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1191
-msgid "Enter a valid UUID."
-msgstr "输入一个有效的UUID."
+#~ msgid "Enter a valid UUID."
+#~ msgstr "输入一个有效的UUID."
 
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1221
 #, fuzzy
-#| msgid "Enter a valid URL."
-msgid "Enter a valid JSON."
-msgstr "请输入合法的URL."
+#~| msgid "Enter a valid URL."
+#~ msgid "Enter a valid JSON."
+#~ msgstr "请输入合法的URL."
 
-#. Translators: This is the default suffix added to form field labels
-#: venv/lib/python3.9/site-packages/django/forms/forms.py:76
-msgid ":"
-msgstr ":"
+#~ msgid ":"
+#~ msgstr ":"
 
-#: venv/lib/python3.9/site-packages/django/forms/forms.py:203
 #, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr "(Hidden field %(name)s) %(error)s"
+#~ msgid "(Hidden field %(name)s) %(error)s"
+#~ msgstr "(Hidden field %(name)s) %(error)s"
 
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:370
 #, fuzzy, python-format
-#| msgid "Please submit %d or more forms."
-#| msgid_plural "Please submit %d or more forms."
-msgid "Please submit at most %d form."
-msgid_plural "Please submit at most %d forms."
-msgstr[0] "Please submit %d or more forms."
+#~| msgid "Please submit %d or more forms."
+#~| msgid_plural "Please submit %d or more forms."
+#~ msgid "Please submit at most %d form."
+#~ msgid_plural "Please submit at most %d forms."
+#~ msgstr[0] "Please submit %d or more forms."
 
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:377
 #, fuzzy, python-format
-#| msgid "Please submit %d or more forms."
-#| msgid_plural "Please submit %d or more forms."
-msgid "Please submit at least %d form."
-msgid_plural "Please submit at least %d forms."
-msgstr[0] "Please submit %d or more forms."
+#~| msgid "Please submit %d or more forms."
+#~| msgid_plural "Please submit %d or more forms."
+#~ msgid "Please submit at least %d form."
+#~ msgid_plural "Please submit at least %d forms."
+#~ msgstr[0] "Please submit %d or more forms."
 
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:405
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:412
-msgid "Order"
-msgstr "旧的"
+#~ msgid "Order"
+#~ msgstr "旧的"
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:763
 #, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr "请更正重复的数据 %(field)s."
+#~ msgid "Please correct the duplicate data for %(field)s."
+#~ msgstr "请更正重复的数据 %(field)s."
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:767
 #, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr "Please correct the duplicate data for %(field)s, which must be unique."
+#~ msgid ""
+#~ "Please correct the duplicate data for %(field)s, which must be unique."
+#~ msgstr ""
+#~ "Please correct the duplicate data for %(field)s, which must be unique."
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:773
 #, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
+#~ msgid ""
+#~ "Please correct the duplicate data for %(field_name)s which must be unique "
+#~ "for the %(lookup)s in %(date_field)s."
+#~ msgstr ""
+#~ "Please correct the duplicate data for %(field_name)s which must be unique "
+#~ "for the %(lookup)s in %(date_field)s."
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:782
-msgid "Please correct the duplicate values below."
-msgstr "Please correct the duplicate values below."
+#~ msgid "Please correct the duplicate values below."
+#~ msgstr "Please correct the duplicate values below."
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1109
-msgid "The inline value did not match the parent instance."
-msgstr "The inline value did not match the parent instance."
+#~ msgid "The inline value did not match the parent instance."
+#~ msgstr "The inline value did not match the parent instance."
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1193
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-"Select a valid choice. That choice is not one of the available choices."
+#~ msgid ""
+#~ "Select a valid choice. That choice is not one of the available choices."
+#~ msgstr ""
+#~ "Select a valid choice. That choice is not one of the available choices."
 
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1311
 #, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr "“%(pk)s” is not a valid value."
+#~ msgid "“%(pk)s” is not a valid value."
+#~ msgstr "“%(pk)s” is not a valid value."
 
-#: venv/lib/python3.9/site-packages/django/forms/utils.py:172
 #, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
+#~ msgid ""
+#~ "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; "
+#~ "it may be ambiguous or it may not exist."
+#~ msgstr ""
+#~ "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; "
+#~ "it may be ambiguous or it may not exist."
 
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:403
-msgid "Clear"
-msgstr "清除"
+#~ msgid "Clear"
+#~ msgstr "清除"
 
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:404
-msgid "Currently"
-msgstr "当前"
+#~ msgid "Currently"
+#~ msgstr "当前"
 
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
-msgid "Change"
-msgstr "更改"
+#~ msgid "Change"
+#~ msgstr "更改"
 
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:714
-msgid "Unknown"
-msgstr "未知"
+#~ msgid "Yes"
+#~ msgstr "好的"
 
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:715
-msgid "Yes"
-msgstr "好的"
+#~ msgid "No"
+#~ msgstr "不"
 
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:716
-msgid "No"
-msgstr "不"
+#~ msgid "yes,no,maybe"
+#~ msgstr "yes,no,maybe"
 
-#. Translators: Please do not add spaces around commas.
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:805
-msgid "yes,no,maybe"
-msgstr "yes,no,maybe"
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:834
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:851
 #, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] "%(size)d byte"
+#~ msgid "%(size)d byte"
+#~ msgid_plural "%(size)d bytes"
+#~ msgstr[0] "%(size)d byte"
 
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:853
 #, python-format
-msgid "%s KB"
-msgstr "%s KB"
+#~ msgid "%s KB"
+#~ msgstr "%s KB"
 
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:855
 #, python-format
-msgid "%s MB"
-msgstr "%s MB"
+#~ msgid "%s MB"
+#~ msgstr "%s MB"
 
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:857
 #, python-format
-msgid "%s GB"
-msgstr "%s GB"
+#~ msgid "%s GB"
+#~ msgstr "%s GB"
 
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:859
 #, python-format
-msgid "%s TB"
-msgstr "%s TB"
+#~ msgid "%s TB"
+#~ msgstr "%s TB"
 
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:861
 #, python-format
-msgid "%s PB"
-msgstr "%s PB"
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:66
-msgid "p.m."
-msgstr "下午."
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:67
-msgid "a.m."
-msgstr "早上."
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:72
-msgid "PM"
-msgstr "下午"
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:73
-msgid "AM"
-msgstr "早上"
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:146
-msgid "midnight"
-msgstr "午夜"
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:148
-msgid "noon"
-msgstr "中午"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Monday"
-msgstr "周一"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Tuesday"
-msgstr "周二"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Wednesday"
-msgstr "周三"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Thursday"
-msgstr "周四"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Friday"
-msgstr "周五"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:7
-msgid "Saturday"
-msgstr "周六"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:7
-msgid "Sunday"
-msgstr "周日"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Mon"
-msgstr "周一"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Tue"
-msgstr "周二"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Wed"
-msgstr "周三"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Thu"
-msgstr "周四"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Fri"
-msgstr "周五"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:11
-msgid "Sat"
-msgstr "周六"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:11
-msgid "Sun"
-msgstr "周日"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "January"
-msgstr "一月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "February"
-msgstr "二月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "March"
-msgstr "三月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "April"
-msgstr "四月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "May"
-msgstr "五月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "June"
-msgstr "六月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "July"
-msgstr "七月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "August"
-msgstr "八月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "September"
-msgstr "九月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "October"
-msgstr "十月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "November"
-msgstr "十一月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:16
-msgid "December"
-msgstr "十二月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "jan"
-msgstr "一月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "feb"
-msgstr "二月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "mar"
-msgstr "三月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "apr"
-msgstr "四月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "may"
-msgstr "五月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "jun"
-msgstr "六月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "jul"
-msgstr "七月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "aug"
-msgstr "八月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "sep"
-msgstr "九月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "oct"
-msgstr "十月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "nov"
-msgstr "十一月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "dec"
-msgstr "十二月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:23
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr "一月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:24
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr "二月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:25
-msgctxt "abbrev. month"
-msgid "March"
-msgstr "三月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:26
-msgctxt "abbrev. month"
-msgid "April"
-msgstr "四月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:27
-msgctxt "abbrev. month"
-msgid "May"
-msgstr "五月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:28
-msgctxt "abbrev. month"
-msgid "June"
-msgstr "六月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:29
-msgctxt "abbrev. month"
-msgid "July"
-msgstr "七月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:30
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr "八月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:31
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr "九月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:32
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr "十月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:33
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr "十一月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:34
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr "十二月."
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:37
-msgctxt "alt. month"
-msgid "January"
-msgstr "一月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:38
-msgctxt "alt. month"
-msgid "February"
-msgstr "二月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:39
-msgctxt "alt. month"
-msgid "March"
-msgstr "三月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:40
-msgctxt "alt. month"
-msgid "April"
-msgstr "四月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:41
-msgctxt "alt. month"
-msgid "May"
-msgstr "五月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:42
-msgctxt "alt. month"
-msgid "June"
-msgstr "六月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:43
-msgctxt "alt. month"
-msgid "July"
-msgstr "七月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:44
-msgctxt "alt. month"
-msgid "August"
-msgstr "八月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:45
-msgctxt "alt. month"
-msgid "September"
-msgstr "九月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:46
-msgctxt "alt. month"
-msgid "October"
-msgstr "十月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:47
-msgctxt "alt. month"
-msgid "November"
-msgstr "十一月"
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:48
-msgctxt "alt. month"
-msgid "December"
-msgstr "十二月"
-
-#: venv/lib/python3.9/site-packages/django/utils/ipv6.py:8
-msgid "This is not a valid IPv6 address."
-msgstr "无效IPv6地址."
-
-#: venv/lib/python3.9/site-packages/django/utils/text.py:71
+#~ msgid "%s PB"
+#~ msgstr "%s PB"
+
+#~ msgid "p.m."
+#~ msgstr "下午."
+
+#~ msgid "a.m."
+#~ msgstr "早上."
+
+#~ msgid "PM"
+#~ msgstr "下午"
+
+#~ msgid "AM"
+#~ msgstr "早上"
+
+#~ msgid "midnight"
+#~ msgstr "午夜"
+
+#~ msgid "noon"
+#~ msgstr "中午"
+
+#~ msgid "Monday"
+#~ msgstr "周一"
+
+#~ msgid "Tuesday"
+#~ msgstr "周二"
+
+#~ msgid "Wednesday"
+#~ msgstr "周三"
+
+#~ msgid "Thursday"
+#~ msgstr "周四"
+
+#~ msgid "Friday"
+#~ msgstr "周五"
+
+#~ msgid "Saturday"
+#~ msgstr "周六"
+
+#~ msgid "Sunday"
+#~ msgstr "周日"
+
+#~ msgid "Mon"
+#~ msgstr "周一"
+
+#~ msgid "Tue"
+#~ msgstr "周二"
+
+#~ msgid "Wed"
+#~ msgstr "周三"
+
+#~ msgid "Thu"
+#~ msgstr "周四"
+
+#~ msgid "Fri"
+#~ msgstr "周五"
+
+#~ msgid "Sat"
+#~ msgstr "周六"
+
+#~ msgid "January"
+#~ msgstr "一月"
+
+#~ msgid "February"
+#~ msgstr "二月"
+
+#~ msgid "March"
+#~ msgstr "三月"
+
+#~ msgid "April"
+#~ msgstr "四月"
+
+#~ msgid "May"
+#~ msgstr "五月"
+
+#~ msgid "June"
+#~ msgstr "六月"
+
+#~ msgid "July"
+#~ msgstr "七月"
+
+#~ msgid "August"
+#~ msgstr "八月"
+
+#~ msgid "September"
+#~ msgstr "九月"
+
+#~ msgid "October"
+#~ msgstr "十月"
+
+#~ msgid "November"
+#~ msgstr "十一月"
+
+#~ msgid "December"
+#~ msgstr "十二月"
+
+#~ msgid "jan"
+#~ msgstr "一月"
+
+#~ msgid "feb"
+#~ msgstr "二月"
+
+#~ msgid "mar"
+#~ msgstr "三月"
+
+#~ msgid "apr"
+#~ msgstr "四月"
+
+#~ msgid "may"
+#~ msgstr "五月"
+
+#~ msgid "jun"
+#~ msgstr "六月"
+
+#~ msgid "jul"
+#~ msgstr "七月"
+
+#~ msgid "aug"
+#~ msgstr "八月"
+
+#~ msgid "sep"
+#~ msgstr "九月"
+
+#~ msgid "oct"
+#~ msgstr "十月"
+
+#~ msgid "nov"
+#~ msgstr "十一月"
+
+#~ msgid "dec"
+#~ msgstr "十二月"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Jan."
+#~ msgstr "一月."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Feb."
+#~ msgstr "二月."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "March"
+#~ msgstr "三月"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "April"
+#~ msgstr "四月"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "May"
+#~ msgstr "五月"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "June"
+#~ msgstr "六月"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "July"
+#~ msgstr "七月"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Aug."
+#~ msgstr "八月."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Sept."
+#~ msgstr "九月."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Oct."
+#~ msgstr "十月."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Nov."
+#~ msgstr "十一月."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Dec."
+#~ msgstr "十二月."
+
+#~ msgctxt "alt. month"
+#~ msgid "January"
+#~ msgstr "一月"
+
+#~ msgctxt "alt. month"
+#~ msgid "February"
+#~ msgstr "二月"
+
+#~ msgctxt "alt. month"
+#~ msgid "March"
+#~ msgstr "三月"
+
+#~ msgctxt "alt. month"
+#~ msgid "April"
+#~ msgstr "四月"
+
+#~ msgctxt "alt. month"
+#~ msgid "May"
+#~ msgstr "五月"
+
+#~ msgctxt "alt. month"
+#~ msgid "June"
+#~ msgstr "六月"
+
+#~ msgctxt "alt. month"
+#~ msgid "July"
+#~ msgstr "七月"
+
+#~ msgctxt "alt. month"
+#~ msgid "August"
+#~ msgstr "八月"
+
+#~ msgctxt "alt. month"
+#~ msgid "September"
+#~ msgstr "九月"
+
+#~ msgctxt "alt. month"
+#~ msgid "October"
+#~ msgstr "十月"
+
+#~ msgctxt "alt. month"
+#~ msgid "November"
+#~ msgstr "十一月"
+
+#~ msgctxt "alt. month"
+#~ msgid "December"
+#~ msgstr "十二月"
+
+#~ msgid "This is not a valid IPv6 address."
+#~ msgstr "无效IPv6地址."
+
 #, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr "%(truncated_text)s…"
+#~ msgctxt "String to return when truncating text"
+#~ msgid "%(truncated_text)s…"
+#~ msgstr "%(truncated_text)s…"
 
-#: venv/lib/python3.9/site-packages/django/utils/text.py:240
-msgid "or"
-msgstr "或"
+#~ msgid "or"
+#~ msgstr "或"
 
-#. Translators: This string is used as a separator between list elements
-#: venv/lib/python3.9/site-packages/django/utils/text.py:259
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:94
-msgid ", "
-msgstr ", "
+#~ msgid ", "
+#~ msgstr ", "
 
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:9
 #, python-format
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] "%d 年"
+#~ msgid "%d year"
+#~ msgid_plural "%d years"
+#~ msgstr[0] "%d 年"
 
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:10
 #, python-format
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] "%d 月"
+#~ msgid "%d month"
+#~ msgid_plural "%d months"
+#~ msgstr[0] "%d 月"
 
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:11
 #, python-format
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] "周 %d周"
+#~ msgid "%d week"
+#~ msgid_plural "%d weeks"
+#~ msgstr[0] "周 %d周"
 
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:12
 #, python-format
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] "%d 日"
+#~ msgid "%d day"
+#~ msgid_plural "%d days"
+#~ msgstr[0] "%d 日"
 
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:13
 #, python-format
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] "%d 时"
+#~ msgid "%d hour"
+#~ msgid_plural "%d hours"
+#~ msgstr[0] "%d 时"
 
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:14
 #, python-format
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] "%d 分"
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "%d 分"
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:110
-msgid "Forbidden"
-msgstr "禁止访问"
+#~ msgid "Forbidden"
+#~ msgstr "禁止访问"
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:111
-msgid "CSRF verification failed. Request aborted."
-msgstr "CSRF 验证失败. 请求被拒绝."
+#~ msgid "CSRF verification failed. Request aborted."
+#~ msgstr "CSRF 验证失败. 请求被拒绝."
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:115
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your Web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your Web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
+#~ msgid ""
+#~ "You are seeing this message because this HTTPS site requires a “Referer "
+#~ "header” to be sent by your Web browser, but none was sent. This header is "
+#~ "required for security reasons, to ensure that your browser is not being "
+#~ "hijacked by third parties."
+#~ msgstr ""
+#~ "You are seeing this message because this HTTPS site requires a “Referer "
+#~ "header” to be sent by your Web browser, but none was sent. This header is "
+#~ "required for security reasons, to ensure that your browser is not being "
+#~ "hijacked by third parties."
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:120
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
+#~ msgid ""
+#~ "If you have configured your browser to disable “Referer” headers, please "
+#~ "re-enable them, at least for this site, or for HTTPS connections, or for "
+#~ "“same-origin” requests."
+#~ msgstr ""
+#~ "If you have configured your browser to disable “Referer” headers, please "
+#~ "re-enable them, at least for this site, or for HTTPS connections, or for "
+#~ "“same-origin” requests."
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:124
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
-msgstr ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+#~ msgid ""
+#~ "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag "
+#~ "or including the “Referrer-Policy: no-referrer” header, please remove "
+#~ "them. The CSRF protection requires the “Referer” header to do strict "
+#~ "referer checking. If you’re concerned about privacy, use alternatives "
+#~ "like <a rel=\"noreferrer\" …> for links to third-party sites."
+#~ msgstr ""
+#~ "If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag "
+#~ "or including the “Referrer-Policy: no-referrer” header, please remove "
+#~ "them. The CSRF protection requires the “Referer” header to do strict "
+#~ "referer checking. If you’re concerned about privacy, use alternatives "
+#~ "like <a rel=\"noreferrer\" …> for links to third-party sites."
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:132
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
+#~ msgid ""
+#~ "You are seeing this message because this site requires a CSRF cookie when "
+#~ "submitting forms. This cookie is required for security reasons, to ensure "
+#~ "that your browser is not being hijacked by third parties."
+#~ msgstr ""
+#~ "You are seeing this message because this site requires a CSRF cookie when "
+#~ "submitting forms. This cookie is required for security reasons, to ensure "
+#~ "that your browser is not being hijacked by third parties."
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:137
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
+#~ msgid ""
+#~ "If you have configured your browser to disable cookies, please re-enable "
+#~ "them, at least for this site, or for “same-origin” requests."
+#~ msgstr ""
+#~ "If you have configured your browser to disable cookies, please re-enable "
+#~ "them, at least for this site, or for “same-origin” requests."
 
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:142
-msgid "More information is available with DEBUG=True."
-msgstr "More information is available with DEBUG=True."
+#~ msgid "More information is available with DEBUG=True."
+#~ msgstr "More information is available with DEBUG=True."
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:41
-msgid "No year specified"
-msgstr "年 没有被指定"
+#~ msgid "No year specified"
+#~ msgstr "年 没有被指定"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:61
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:111
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:208
-msgid "Date out of range"
-msgstr "日期超出范围"
+#~ msgid "No month specified"
+#~ msgstr "月 没有被指定"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:90
-msgid "No month specified"
-msgstr "月 没有被指定"
+#~ msgid "No day specified"
+#~ msgstr "日 没有被指定"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:142
-msgid "No day specified"
-msgstr "日 没有被指定"
+#~ msgid "No week specified"
+#~ msgstr "周 没有被指定"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:188
-msgid "No week specified"
-msgstr "周 没有被指定"
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:338
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:367
 #, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr "%(verbose_name_plural)s 不可用"
+#~ msgid "No %(verbose_name_plural)s available"
+#~ msgstr "%(verbose_name_plural)s 不可用"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:594
 #, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
-msgstr ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+#~ msgid ""
+#~ "Future %(verbose_name_plural)s not available because %(class_name)s."
+#~ "allow_future is False."
+#~ msgstr ""
+#~ "Future %(verbose_name_plural)s not available because %(class_name)s."
+#~ "allow_future is False."
 
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:628
 #, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr "Invalid date string “%(datestr)s” given format “%(format)s”"
+#~ msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+#~ msgstr "Invalid date string “%(datestr)s” given format “%(format)s”"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/detail.py:54
 #, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr "No %(verbose_name)s found matching the query"
+#~ msgid "No %(verbose_name)s found matching the query"
+#~ msgstr "No %(verbose_name)s found matching the query"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/list.py:67
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr "Page is not “last”, nor can it be converted to an int."
+#~ msgid "Page is not “last”, nor can it be converted to an int."
+#~ msgstr "Page is not “last”, nor can it be converted to an int."
 
-#: venv/lib/python3.9/site-packages/django/views/generic/list.py:72
 #, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr "Invalid page (%(page_number)s): %(message)s"
+#~ msgid "Invalid page (%(page_number)s): %(message)s"
+#~ msgstr "Invalid page (%(page_number)s): %(message)s"
 
-#: venv/lib/python3.9/site-packages/django/views/generic/list.py:154
 #, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr "Empty list and “%(class_name)s.allow_empty” is False."
+#~ msgid "Empty list and “%(class_name)s.allow_empty” is False."
+#~ msgstr "Empty list and “%(class_name)s.allow_empty” is False."
 
-#: venv/lib/python3.9/site-packages/django/views/static.py:40
-msgid "Directory indexes are not allowed here."
-msgstr "Directory indexes are not allowed here."
+#~ msgid "Directory indexes are not allowed here."
+#~ msgstr "Directory indexes are not allowed here."
 
-#: venv/lib/python3.9/site-packages/django/views/static.py:42
 #, python-format
-msgid "“%(path)s” does not exist"
-msgstr "路径 “%(path)s”  不存在"
+#~ msgid "“%(path)s” does not exist"
+#~ msgstr "路径 “%(path)s”  不存在"
 
-#: venv/lib/python3.9/site-packages/django/views/static.py:80
 #, python-format
-msgid "Index of %(directory)s"
-msgstr "目录: %(directory)s"
+#~ msgid "Index of %(directory)s"
+#~ msgstr "目录: %(directory)s"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:7
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:221
-msgid "The install worked successfully! Congratulations!"
-msgstr "The install worked successfully! Congratulations!"
+#~ msgid "The install worked successfully! Congratulations!"
+#~ msgstr "The install worked successfully! Congratulations!"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:207
 #, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+#~ msgid ""
+#~ "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+#~ "target=\"_blank\" rel=\"noopener\">release notes</a> for Django "
+#~ "%(version)s"
+#~ msgstr ""
+#~ "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+#~ "target=\"_blank\" rel=\"noopener\">release notes</a> for Django "
+#~ "%(version)s"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:222
 #, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
-msgstr ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+#~ msgid ""
+#~ "You are seeing this page because <a href=\"https://docs.djangoproject.com/"
+#~ "en/%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+#~ "\">DEBUG=True</a> is in your settings file and you have not configured "
+#~ "any URLs."
+#~ msgstr ""
+#~ "You are seeing this page because <a href=\"https://docs.djangoproject.com/"
+#~ "en/%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+#~ "\">DEBUG=True</a> is in your settings file and you have not configured "
+#~ "any URLs."
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:230
-msgid "Django Documentation"
-msgstr "Django Documentation"
+#~ msgid "Django Documentation"
+#~ msgstr "Django Documentation"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:231
-msgid "Topics, references, &amp; how-to’s"
-msgstr "Topics, references, &amp; how-to’s"
+#~ msgid "Topics, references, &amp; how-to’s"
+#~ msgstr "Topics, references, &amp; how-to’s"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:239
-msgid "Tutorial: A Polling App"
-msgstr "Tutorial: A Polling App"
+#~ msgid "Tutorial: A Polling App"
+#~ msgstr "Tutorial: A Polling App"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:240
-msgid "Get started with Django"
-msgstr "Get started with Django"
+#~ msgid "Get started with Django"
+#~ msgstr "Get started with Django"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:248
-msgid "Django Community"
-msgstr "Django Community"
+#~ msgid "Django Community"
+#~ msgstr "Django Community"
 
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
-msgid "Connect, get help, or contribute"
-msgstr "Connect, get help, or contribute"
+#~ msgid "Connect, get help, or contribute"
+#~ msgstr "Connect, get help, or contribute"
 
-#: venv/lib/python3.9/site-packages/imagekit/admin.py:10
-msgid "Thumbnail"
-msgstr "Thumbnail"
+#~ msgid "Thumbnail"
+#~ msgstr "Thumbnail"
 
 #~ msgid "ManagementForm data is missing or has been tampered with"
 #~ msgstr "ManagementForm数据丢失或被篡改"

@@ -50,15 +50,15 @@ urlpatterns = [
          views.AppraisingUpdateView.as_view(), name='appraising_update'),
 
     path('appraising_c_list',
-         views.AppraisingCListView.as_view(), name='appraising_c_list'),
+         views.ASharingCListView.as_view(), name='appraising_c_list'),
     path('appraising_c_create',
-         views.AppraisingCCreateView.as_view(), name='appraising_c_create'),
+         views.ASharingCCreateView.as_view(), name='appraising_c_create'),
     path('appraising_c_detail/<uuid:pk>',
-         views.AppraisingCDetailView.as_view(), name='appraising_c_detail'),
+         views.ASharingCDetailView.as_view(), name='appraising_c_detail'),
     path('appraising_c_delete/<uuid:pk>',
-         views.AppraisingCDeleteView.as_view(), name='appraising_c_delete'),
+         views.ASharingCDeleteView.as_view(), name='appraising_c_delete'),
     path('appraising_c_update/<uuid:pk>',
-         views.AppraisingCUpdateView.as_view(), name='appraising_c_update'),
+         views.ASharingCUpdateView.as_view(), name='appraising_c_update'),
 
 
     path('funtest_create/', views.FuntestCreateView.as_view(),

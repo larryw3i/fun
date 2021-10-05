@@ -8,9 +8,29 @@ from django.utils.translation import gettext_lazy as _
 
 from fun import bleach_clean
 
-from .modelforms import ClassificationModelForm
+from .modelforms import (AppraisingModelForm, ASharingCModelForm,
+                         ClassificationModelForm)
 # Register your models here.
-from .models import Classification, Eduhubhomesticker, Funcontent, Label
+from .models import (Appraising, ASharingContent, Classification,
+                     Eduhubhomesticker, Funcontent, Label)
+
+
+@admin.register(Appraising)
+class AppraisingAdmin(admin.ModelAdmin):
+    list_display = (
+        'afrom', 'content', 'point', 'DOA'
+    )
+    form = AppraisingModelForm
+    ordering = ('-DOA',)
+
+
+@admin.register(ASharingContent)
+class ASharingContentAdmin(admin.ModelAdmin):
+    list_display = (
+        'title', 'classification', 'cfrom'
+    )
+    form = ASharingCModelForm
+    ordering = ('-DOC',)
 
 
 @admin.register(Classification)

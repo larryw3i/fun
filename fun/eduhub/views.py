@@ -23,10 +23,10 @@ from humanize import naturalsize
 from fun import bleach_clean, settings, subjects_top
 
 from .apps import EduhubConfig
-from .modelforms import (AppraisingCModelForm, AppraisingModelForm,
+from .modelforms import (AppraisingModelForm, ASharingCModelForm,
                          EduhubhomestickerModelForm, FuncontentModelForm,
                          FuntestModelForm, LabelModelForm)
-from .models import (Appraising, AppraisingContent, Classification,
+from .models import (Appraising, ASharingContent, Classification,
                      Eduhubhomesticker, Funcontent, Funtest, Label,
                      content_name, eduhubhomesticker_name, funcontent_name,
                      funtest_name, label_name)
@@ -422,23 +422,23 @@ appraising_c_detail_template = 'eduhub/appraising_c_detail.html'
 appraising_c_delete_template = 'eduhub/appraising_c_delete.html'
 
 
-class AppraisingCListView(ListView):
-    model = AppraisingContent
+class ASharingCListView(ListView):
+    model = ASharingContent
     template_name = appraising_c_list_template
     form_class = AppraisingModelForm
-    context_object_name = 'appraisingcontents'
+    context_object_name = 'asharingcontents'
 
     def get_queryset(self):
-        return AppraisingContent.objects\
+        return ASharingContent.objects\
             .filter(is_legal=True)\
             .order_by('-DOU')
 
 
-class AppraisingCCreateView(LoginRequiredMixin, CreateView):
-    model = AppraisingContent
+class ASharingCCreateView(LoginRequiredMixin, CreateView):
+    model = ASharingContent
     template_name = appraising_c_create_template
-    form_class = AppraisingCModelForm
-    context_object_name = 'appraisingcontent'
+    form_class = ASharingCModelForm
+    context_object_name = 'asharingcontent'
     success_url = reverse_lazy('eduhub:appraising_c_list')
 
     def get_initial(self):
@@ -455,14 +455,14 @@ class AppraisingCCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class AppraisingCUpdateView(LoginRequiredMixin, UpdateView):
-    model = AppraisingContent
+class ASharingCUpdateView(LoginRequiredMixin, UpdateView):
+    model = ASharingContent
     template_name = appraising_c_update_template
-    form_class = AppraisingCModelForm
-    context_object_name = 'appraisingcontent'
+    form_class = ASharingCModelForm
+    context_object_name = 'asharingcontent'
 
     def post(self, request, *args, **kwargs):
-        if not AppraisingContent.objects\
+        if not ASharingContent.objects\
             .filter(pk=self.pk, cfrom=request.user)\
                 .exists():
             raise Http404()
@@ -474,23 +474,23 @@ class AppraisingCUpdateView(LoginRequiredMixin, UpdateView):
         return super().form_valid(form)
 
 
-class AppraisingCDeleteView(LoginRequiredMixin, DeleteView):
-    model = AppraisingContent
+class ASharingCDeleteView(LoginRequiredMixin, DeleteView):
+    model = ASharingContent
     template_name = appraising_c_delete_template
-    form_class = AppraisingCModelForm
-    context_object_name = 'appraisingcontent'
+    form_class = ASharingCModelForm
+    context_object_name = 'asharingcontent'
 
     def post(self, request, *args, **kwargs):
-        if not AppraisingContent.objects\
+        if not ASharingContent.objects\
             .filter(pk=self.pk, cfrom=request.user)\
                 .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
 
 
-class AppraisingCDetailView(DetailView):
-    model = AppraisingContent
+class ASharingCDetailView(DetailView):
+    model = ASharingContent
     template_name = appraising_c_detail_template
-    form_class = AppraisingCModelForm
-    context_object_name = 'appraisingcontent'
+    form_class = ASharingCModelForm
+    context_object_name = 'asharingcontent'
     pass

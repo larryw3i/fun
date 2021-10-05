@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-17 08:00+0000\n"
+"POT-Creation-Date: 2021-10-06 05:11+0800\n"
 "PO-Revision-Date: 2020-10-03 23:11+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,281 +18,1374 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.3\n"
 
-#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:27
-#: templates/funhome/_navbar.html:32
+#: auth/templates/account/account_inactive.html:5
+#: auth/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr ""
+
+#: auth/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr ""
+
+#: auth/templates/account/email.html:6
+msgid "Account"
+msgstr ""
+
+#: auth/templates/account/email.html:11
+msgid "E-mail Addresses"
+msgstr ""
+
+#: auth/templates/account/email.html:15
+msgid ""
+"\n"
+"        The following e-mail addresses are associated with your account\n"
+"      "
+msgstr ""
+
+#: auth/templates/account/email.html:41
+msgid "Verified"
+msgstr ""
+
+#: auth/templates/account/email.html:43
+msgid "Unverified"
+msgstr ""
+
+#: auth/templates/account/email.html:47
+msgid "Primary"
+msgstr ""
+
+#: auth/templates/account/email.html:57
+msgid "Make Primary"
+msgstr ""
+
+#: auth/templates/account/email.html:61
+msgid "Re-send Verification"
+msgstr ""
+
+#: auth/templates/account/email.html:65
+#: auth/templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr ""
+
+#: auth/templates/account/email.html:74
+msgid "Warning"
+msgstr ""
+
+#: auth/templates/account/email.html:76
+msgid ""
+"\n"
+"        You currently do not have any e-mail address set up. You should "
+"really \n"
+"        add an e-mail address so you can receive notifications, reset your \n"
+"        password, etc\n"
+"      "
+msgstr ""
+
+#: auth/templates/account/email.html:86
+msgid "Add E-mail Address"
+msgstr ""
+
+#: auth/templates/account/email.html:92
+msgid "Add E-mail"
+msgstr ""
+
+#: auth/templates/account/email.html:104
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: auth/templates/account/email/base_message.txt:1
+#, python-format
+msgid "Hello from %(site_name)s!"
+msgstr ""
+
+#: auth/templates/account/email/base_message.txt:5
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.html:8
+msgid "Hello from x-dove"
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.html:10
+msgid ""
+"\n"
+"            You're receiving this e-mail because user \n"
+"        "
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.html:15
+msgid ""
+"\n"
+"            has given yours as an e-mail address to connect their account.\n"
+"        "
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.html:18
+msgid "To confirm this is correct, go to"
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.html:20
+msgid "CONFIRM EMAIL"
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.html:25
+msgid ""
+" \n"
+"            Thank you from x-dove!\n"
+"        "
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"You're receiving this e-mail because user %(user_display)s has given your e-"
+"mail address to register an account on %(site_domain)s.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s"
+msgstr ""
+
+#: auth/templates/account/email/email_confirmation_subject.html:3
+#: auth/templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.html:7
+msgid "Hello from"
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.html:7
+#: funhome/views.py:153 funhome/views.py:186
+msgid "X-DOVE"
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.html:9
+msgid ""
+"\n"
+"        You're receiving this e-mail because you or someone else has "
+"requested \n"
+"        a password for your user account.\n"
+"        It can be safely ignored if you did not request a password reset. \n"
+"        Click the link below to reset your password.\n"
+"    "
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.html:16
+msgid "RESET PASSWORD"
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.html:19
+#, python-format
+msgid ""
+"\n"
+"            In case you forgot, your username is %(username)s.\n"
+"        "
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.html:26
+msgid "Thank you for using"
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.txt:4
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_message.txt:9
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_subject.html:3
+msgid ""
+"\n"
+"    Password Reset E-mail\n"
+msgstr ""
+
+#: auth/templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr ""
+
+#: auth/templates/account/email_confirm.html:7
+#: auth/templates/account/email_confirm.html:12
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: auth/templates/account/email_confirm.html:19
+#, python-format
+msgid ""
+"\n"
+"                Please confirm that \n"
+"                <a href=\"mailto:%(email)s\"\n"
+"                    style=\"font-size: larger;\">\n"
+"                    %(email)s\n"
+"                </a> is an e-mail address for user \n"
+"                <span style=\"font-weight: bolder;\">%(user_display)s</"
+"span>. \n"
+"            "
+msgstr ""
+
+#: auth/templates/account/email_confirm.html:34
+msgid "Confirm"
+msgstr ""
+
+#: auth/templates/account/email_confirm.html:44
+msgid ""
+"\n"
+"                This e-mail confirmation link expired or is invalid. Please\n"
+"            "
+msgstr ""
+
+#: auth/templates/account/email_confirm.html:49
+msgid "issue a new e-mail confirmation request"
+msgstr ""
+
+#: auth/templates/account/login.html:11 auth/templates/account/login.html:22
+#: auth/templates/account/login.html:43
+msgid "Sign In"
+msgstr ""
+
+#: auth/templates/account/login.html:26
+msgid "If you have not created an account yet, then please"
+msgstr ""
+
+#: auth/templates/account/login.html:27
+msgid "sign up"
+msgstr ""
+
+#: auth/templates/account/login.html:50
+msgid "Forgot Password?"
+msgstr ""
+
+#: auth/templates/account/logout.html:11 auth/templates/account/logout.html:23
+msgid "Sign Out"
+msgstr ""
+
+#: auth/templates/account/logout.html:29
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: auth/templates/account/logout.html:41
+msgid "Sign out now"
+msgstr ""
+
+#: auth/templates/account/messages/cannot_delete_primary_email.html:2
+#, python-format
+msgid ""
+"\n"
+"    You cannot remove your primary e-mail address (%(email)s).\n"
+msgstr ""
+
+#: auth/templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr ""
+
+#: auth/templates/account/messages/email_confirmation_sent.html:2
+#, python-format
+msgid ""
+"\n"
+"    Confirmation e-mail sent to %(email)s.\n"
+msgstr ""
+
+#: auth/templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr ""
+
+#: auth/templates/account/messages/email_confirmed.html:2
+#, python-format
+msgid ""
+"\n"
+"    You have confirmed %(email)s.\n"
+msgstr ""
+
+#: auth/templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr ""
+
+#: auth/templates/account/messages/email_deleted.html:2
+#, python-format
+msgid ""
+"\n"
+"    Removed e-mail address %(email)s.\n"
+msgstr ""
+
+#: auth/templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr ""
+
+#: auth/templates/account/messages/logged_in.html:4
+#, python-format
+msgid ""
+"\n"
+"    Successfully signed in as %(name)s.\n"
+msgstr ""
+
+#: auth/templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr ""
+
+#: auth/templates/account/messages/logged_out.html:2
+msgid ""
+"\n"
+"    You have signed out.\n"
+msgstr ""
+
+#: auth/templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr ""
+
+#: auth/templates/account/messages/password_changed.html:2
+msgid ""
+"\n"
+"    Password successfully changed.\n"
+msgstr ""
+
+#: auth/templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr ""
+
+#: auth/templates/account/messages/password_set.html:2
+msgid ""
+"\n"
+"    Password successfully set.\n"
+msgstr ""
+
+#: auth/templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr ""
+
+#: auth/templates/account/messages/primary_email_set.html:2
+msgid ""
+"\n"
+"    Primary e-mail address set.\n"
+msgstr ""
+
+#: auth/templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr ""
+
+#: auth/templates/account/messages/unverified_primary_email.html:2
+msgid ""
+"\n"
+"    Your primary e-mail address must be verified.\n"
+msgstr ""
+
+#: auth/templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr ""
+
+#: auth/templates/account/password_change.html:5
+#: auth/templates/account/password_change.html:8
+#: auth/templates/account/password_change.html:15
+#: auth/templates/account/password_reset_from_key.html:4
+#: auth/templates/account/password_reset_from_key.html:11
+#: auth/templates/account/password_reset_from_key_done.html:6
+#: auth/templates/account/password_reset_from_key_done.html:9
+msgid "Change Password"
+msgstr ""
+
+#: auth/templates/account/password_reset.html:8
+#: auth/templates/account/password_reset.html:15
+#: auth/templates/account/password_reset_done.html:6
+#: auth/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr ""
+
+#: auth/templates/account/password_reset.html:24
+msgid ""
+"\n"
+"                You are administrator, please reset password via terminal\n"
+"            "
+msgstr ""
+
+#: auth/templates/account/password_reset.html:32
+msgid ""
+"\n"
+"                Forgotten your password? Enter your e-mail address below, \n"
+"                and we'll send you an e-mail allowing you to reset it\n"
+"            "
+msgstr ""
+
+#: auth/templates/account/password_reset.html:41
+msgid "Reset My Password"
+msgstr ""
+
+#: auth/templates/account/password_reset.html:46
+msgid ""
+"\n"
+"                Please contact us if you have any trouble resetting \n"
+"                your password.\n"
+"            "
+msgstr ""
+
+#: auth/templates/account/password_reset_done.html:16
+msgid ""
+"\n"
+"            We have sent you an e-mail. Please contact us if you do not "
+"receive \n"
+"            it within a few minutes.\n"
+"        "
+msgstr ""
+
+#: auth/templates/account/password_reset_from_key.html:9
+msgid "Bad Token"
+msgstr ""
+
+#: auth/templates/account/password_reset_from_key.html:18
+msgid ""
+"\n"
+"                The password reset link was invalid, possibly because it "
+"has \n"
+"                already been used.  Please request a \n"
+"            "
+msgstr ""
+
+#: auth/templates/account/password_reset_from_key.html:23
+msgid "new password reset"
+msgstr ""
+
+#: auth/templates/account/password_reset_from_key.html:33
+msgid "change password"
+msgstr ""
+
+#: auth/templates/account/password_reset_from_key.html:37
+#: auth/templates/account/password_reset_from_key_done.html:10
+msgid "Your password is now changed."
+msgstr ""
+
+#: auth/templates/account/password_set.html:5
+#: auth/templates/account/password_set.html:8
+#: auth/templates/account/password_set.html:15
+msgid "Set Password"
+msgstr ""
+
+#: auth/templates/account/signup.html:11
+#: auth/templates/socialaccount/signup.html:5
+msgid "Signup"
+msgstr ""
+
+#: auth/templates/account/signup.html:23 auth/templates/account/signup.html:51
+#: auth/templates/socialaccount/signup.html:8
+#: auth/templates/socialaccount/signup.html:19
+#: funhome/templates/funhome/_navbar.html:68
+msgid "Sign Up"
+msgstr ""
+
+#: auth/templates/account/signup.html:26
+msgid "Already have an account? Then please"
+msgstr ""
+
+#: auth/templates/account/signup.html:27
+#: funhome/templates/funhome/home_join_us.html:91
+msgid "sign in"
+msgstr ""
+
+#: auth/templates/account/signup.html:43
+#: funhome/templates/funhome/_footer.html:24
+msgid "Legal information"
+msgstr ""
+
+#: auth/templates/account/signup.html:46
+msgid "and_sign"
+msgstr ""
+
+#: auth/templates/account/signup.html:47
+msgid "Data privacy"
+msgstr ""
+
+#: auth/templates/account/signup_closed.html:5
+#: auth/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr ""
+
+#: auth/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: auth/templates/account/snippets/already_logged_in.html:7
+msgid "You are already logged in as"
+msgstr ""
+
+#: auth/templates/account/verification_sent.html:6
+#: auth/templates/account/verification_sent.html:10
+#: auth/templates/account/verified_email_required.html:6
+#: auth/templates/account/verified_email_required.html:10
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: auth/templates/account/verification_sent.html:13
+msgid ""
+"\n"
+"            We have sent an e-mail to you for verification. Follow the "
+"link \n"
+"            provided to finalize the signup process. Please contact us if "
+"you \n"
+"            do not receive it within a few minutes.\n"
+"        "
+msgstr ""
+
+#: auth/templates/account/verified_email_required.html:15
+msgid ""
+"\n"
+"            This part of the site requires us to verify that\n"
+"            you are who you claim to be. For this purpose, we require that "
+"you\n"
+"            verify ownership of your e-mail address. \n"
+"        "
+msgstr ""
+
+#: auth/templates/account/verified_email_required.html:23
+msgid ""
+"\n"
+"            We have sent an e-mail to you for\n"
+"            verification. Please click on the link inside this e-mail. "
+"Please\n"
+"            contact us if you do not receive it within a few minutes.\n"
+"        "
+msgstr ""
+
+#: auth/templates/account/verified_email_required.html:31
+msgid "Note"
+msgstr ""
+
+#: auth/templates/account/verified_email_required.html:31
+msgid "you can still"
+msgstr ""
+
+#: auth/templates/account/verified_email_required.html:33
+msgid "change your e-mail address"
+msgstr ""
+
+#: auth/templates/openid/login.html:9
+msgid "OpenID Sign In"
+msgstr ""
+
+#: auth/templates/socialaccount/authentication_error.html:5
+#: auth/templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr ""
+
+#: auth/templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+
+#: auth/templates/socialaccount/connections.html:5
+#: auth/templates/socialaccount/connections.html:8
+msgid "Account Connections"
+msgstr ""
+
+#: auth/templates/socialaccount/connections.html:11
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr ""
+
+#: auth/templates/socialaccount/connections.html:43
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+
+#: auth/templates/socialaccount/connections.html:46
+msgid "Add a 3rd Party Account"
+msgstr ""
+
+#: auth/templates/socialaccount/login_cancelled.html:5
+#: auth/templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr ""
+
+#: auth/templates/socialaccount/login_cancelled.html:13
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+
+#: auth/templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr ""
+
+#: auth/templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr ""
+
+#: auth/templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr ""
+
+#: auth/templates/socialaccount/signup.html:10
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to\n"
+"%(site_name)s. As a final step, please complete the following form:"
+msgstr ""
+
+#: eduhub/admin.py:118
+msgid "None"
+msgstr ""
+
+#: eduhub/apps.py:9 eduhub/templates/eduhub/_eduhub_base.html:20
+#: funhome/templates/funhome/_navbar.html:27
 msgid "Eduhub"
 msgstr ""
 
-#: eduhub/modelforms.py:20 eduhub/models.py:38
+#: eduhub/modelforms.py:23 eduhub/models.py:74
 msgid "Label name"
 msgstr ""
 
-#: eduhub/modelforms.py:21
+#: eduhub/modelforms.py:24
 msgid "Cover image"
 msgstr ""
 
-#: eduhub/modelforms.py:22 eduhub/modelforms.py:41 eduhub/modelforms.py:67
+#: eduhub/modelforms.py:25 eduhub/modelforms.py:40 eduhub/models.py:268
 msgid "Comment"
 msgstr ""
 
-#: eduhub/modelforms.py:38
-msgid "Title name"
-msgstr ""
-
-#: eduhub/modelforms.py:39 eduhub/modelforms.py:65
-msgid "Label"
-msgstr ""
-
-#: eduhub/modelforms.py:40 eduhub/models.py:69
-msgid "Content file"
-msgstr ""
-
-#: eduhub/modelforms.py:46 funhome/modelforms.py:29
-msgid "content file, pdf and video file is allowed only"
-msgstr ""
-
-#: eduhub/modelforms.py:66 eduhub/models.py:101
+#: eduhub/modelforms.py:39 eduhub/modelforms.py:110 eduhub/models.py:114
+#: eduhub/models.py:222 eduhub/models.py:259
 msgid "Content"
 msgstr ""
 
-#: eduhub/modelforms.py:68 eduhub/models.py:105
+#: eduhub/modelforms.py:41 eduhub/modelforms.py:111 eduhub/models.py:108
 msgid "Content classification"
 msgstr ""
 
-#: eduhub/modelforms.py:74 eduhub/models.py:67 eduhub/models.py:98
+#: eduhub/modelforms.py:46 eduhub/modelforms.py:116 eduhub/models.py:111
 msgid "Content title"
 msgstr ""
 
-#: eduhub/modelforms.py:80
-msgid "classification : college/grade/semester/course"
-msgstr ""
-
-#: eduhub/modelforms.py:93 funhome/modelforms.py:21 funhome/modelforms.py:47
+#: eduhub/modelforms.py:60 funhome/modelforms.py:22 funhome/modelforms.py:52
 #: funhome/models.py:35 funhome/models.py:79
 msgid "Sticker title"
 msgstr ""
 
-#: eduhub/modelforms.py:94 funhome/modelforms.py:22 funhome/modelforms.py:48
+#: eduhub/modelforms.py:61 funhome/modelforms.py:23 funhome/modelforms.py:53
 msgid "Sticker Cover"
 msgstr ""
 
-#: eduhub/modelforms.py:95 funhome/modelforms.py:49
+#: eduhub/modelforms.py:62 funhome/modelforms.py:54
 msgid "Sticker content"
 msgstr ""
 
-#: eduhub/modelforms.py:96 funhome/modelforms.py:24 funhome/modelforms.py:50
+#: eduhub/modelforms.py:63 funhome/modelforms.py:25 funhome/modelforms.py:55
 msgid "Sticker Comment"
 msgstr ""
 
-#: eduhub/modelforms.py:97
+#: eduhub/modelforms.py:64
 msgid "description"
 msgstr ""
 
-#: eduhub/models.py:28
-msgid "Eduhub label"
+#: eduhub/modelforms.py:93
+msgid "name exists"
 msgstr ""
 
-#: eduhub/models.py:29
-msgid "Eduhub  labels"
+#: eduhub/models.py:31 eduhub/models.py:234
+msgid "Classification"
 msgstr ""
 
-#: eduhub/models.py:40
-msgid "Label comment"
+#: eduhub/models.py:32
+msgid "Classifications"
 msgstr ""
 
-#: eduhub/models.py:42
-msgid "Label cover"
+#: eduhub/models.py:43
+msgid "name includes '/' is not allowed"
 msgstr ""
 
-#: eduhub/models.py:44
-msgid "Label creating date"
-msgstr ""
-
-#: eduhub/models.py:46
-msgid "Label author"
-msgstr ""
-
-#: eduhub/models.py:48
-msgid "Is label legal"
-msgstr ""
-
-#: eduhub/models.py:54
-msgid "Eduhub content"
-msgstr ""
-
-#: eduhub/models.py:55 templates/eduhub/_eduhub_base.html:72
-#: templates/eduhub/content_list.html:17
-#: templates/eduhub/eduhub_search_result.html:53
-#: templates/eduhub/funcontent_list.html:17
-msgid "Eduhub contents"
-msgstr ""
-
-#: eduhub/models.py:64 eduhub/models.py:95
-msgid "Content label"
-msgstr ""
-
-#: eduhub/models.py:71 eduhub/models.py:108
-msgid "Content uploading date"
-msgstr ""
-
-#: eduhub/models.py:73 eduhub/models.py:110
-msgid "Content comment"
-msgstr ""
-
-#: eduhub/models.py:75 eduhub/models.py:112
-msgid "Is content legal"
-msgstr ""
-
-#: eduhub/models.py:81
-msgid "Eduhub content (NEW)"
-msgstr ""
-
-#: eduhub/models.py:82
-msgid "Eduhub contents (NEW)"
-msgstr ""
-
-#: eduhub/models.py:117
-msgid "Eduhub homepage sticker"
-msgstr ""
-
-#: eduhub/models.py:118
-msgid "Eduhub homepage stickers"
-msgstr ""
-
-#: eduhub/models.py:127
-msgid "Eduhub homepage sticker title"
-msgstr ""
-
-#: eduhub/models.py:131
-msgid "Eduhub homepage sticker subtitle"
-msgstr ""
-
-#: eduhub/models.py:135
-msgid "Eduhub homepage sicker cover"
-msgstr ""
-
-#: eduhub/models.py:139
-msgid "Eduhub homepage sticker promulgator"
-msgstr ""
-
-#: eduhub/models.py:147
-msgid "Eduhub homepage sticker promulgating date"
-msgstr ""
-
-#: eduhub/models.py:150
-msgid "Eduhub homepage sticker comment"
-msgstr ""
-
-#: eduhub/models.py:153 funhome/models.py:60 funhome/models.py:104
-msgid "Hidden"
-msgstr ""
-
-#: eduhub/models.py:160
-msgid "Eduhub classification"
-msgstr ""
-
-#: eduhub/models.py:161
-msgid "Eduhub classifications"
-msgstr ""
-
-#: eduhub/models.py:173
+#: eduhub/models.py:50
 msgid "Parent classification"
 msgstr ""
 
-#: eduhub/models.py:178
-msgid "Classification name"
+#: eduhub/models.py:54
+msgid "Classification name('/' cannot be included)"
 msgstr ""
 
-#: eduhub/models.py:185
-msgid "Classification level"
+#: eduhub/models.py:58
+msgid "Classification comment"
 msgstr ""
 
-#: eduhub/models.py:189
-msgid "Classification creating date"
+#: eduhub/models.py:64
+msgid "Eduhub label"
 msgstr ""
 
-#: eduhub/models.py:193
-msgid "Classification creating user"
+#: eduhub/models.py:65
+msgid "Eduhub  labels"
 msgstr ""
 
-#: eduhub/models.py:197
-msgid "Is classification disabled"
+#: eduhub/models.py:76
+msgid "Label comment"
 msgstr ""
 
-#: eduhub/models.py:202
+#: eduhub/models.py:78
+msgid "Label cover"
+msgstr ""
+
+#: eduhub/models.py:80
+msgid "Label creating date"
+msgstr ""
+
+#: eduhub/models.py:82
+msgid "Label author"
+msgstr ""
+
+#: eduhub/models.py:84
+msgid "Is label legal"
+msgstr ""
+
+#: eduhub/models.py:90
+msgid "Eduhub content (NEW)"
+msgstr ""
+
+#: eduhub/models.py:91
+msgid "Eduhub contents (NEW)"
+msgstr ""
+
+#: eduhub/models.py:104
+msgid "Content label"
+msgstr ""
+
+#: eduhub/models.py:117
+msgid "Content uploading date"
+msgstr ""
+
+#: eduhub/models.py:119
+msgid "Content comment"
+msgstr ""
+
+#: eduhub/models.py:121 eduhub/models.py:240
+msgid "Is content legal"
+msgstr ""
+
+#: eduhub/models.py:126
+msgid "Eduhub homepage sticker"
+msgstr ""
+
+#: eduhub/models.py:127
+msgid "Eduhub homepage stickers"
+msgstr ""
+
+#: eduhub/models.py:136
+msgid "Eduhub homepage sticker title"
+msgstr ""
+
+#: eduhub/models.py:140
+msgid "Eduhub homepage sticker subtitle"
+msgstr ""
+
+#: eduhub/models.py:144
+msgid "Eduhub homepage sicker cover"
+msgstr ""
+
+#: eduhub/models.py:148
+msgid "Eduhub homepage sticker promulgator"
+msgstr ""
+
+#: eduhub/models.py:156
+msgid "Eduhub homepage sticker promulgating date"
+msgstr ""
+
+#: eduhub/models.py:159 eduhub/models.py:237
+msgid "Eduhub homepage sticker comment"
+msgstr ""
+
+#: eduhub/models.py:162 funhome/models.py:60 funhome/models.py:104
+msgid "Hidden"
+msgstr ""
+
+#: eduhub/models.py:168
 msgid "Eduhub Test"
 msgstr ""
 
-#: eduhub/models.py:203
+#: eduhub/models.py:169
 msgid "Eduhub Tests"
 msgstr ""
 
-#: eduhub/models.py:214 eduhub/models.py:234
+#: eduhub/models.py:180 eduhub/models.py:200
 msgid "Test commit"
 msgstr ""
 
-#: eduhub/models.py:218
+#: eduhub/models.py:184
 msgid "Test owner"
 msgstr ""
 
-#: eduhub/models.py:221
+#: eduhub/models.py:188
 msgid "Template text"
 msgstr ""
 
-#: eduhub/models.py:225
+#: eduhub/models.py:192
 msgid "Test submitting date"
 msgstr ""
 
-#: eduhub/models.py:229
+#: eduhub/models.py:196
 msgid "Last modifying date"
 msgstr ""
 
-#: eduhub/views.py:95
+#: eduhub/models.py:205
+msgid "Appraising content"
+msgstr ""
+
+#: eduhub/models.py:206 eduhub/templates/eduhub/appraising_c_list.html:11
+msgid "Appraising contents"
+msgstr ""
+
+#: eduhub/models.py:215
+msgid "Content from"
+msgstr ""
+
+#: eduhub/models.py:218
+msgid "Title"
+msgstr ""
+
+#: eduhub/models.py:226
+msgid "Date of appraising content creating"
+msgstr ""
+
+#: eduhub/models.py:230
+msgid "Date of appraising content updating"
+msgstr ""
+
+#: eduhub/models.py:245
+msgid "Appraising"
+msgstr ""
+
+#: eduhub/models.py:246
+msgid "Appraisings"
+msgstr ""
+
+#: eduhub/models.py:256
+msgid "Appraisings from"
+msgstr ""
+
+#: eduhub/models.py:266
+msgid "Date of Appraising"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_nav.html:15
+msgid "subject"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_nav.html:19
+msgid "food"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_nav.html:23
+msgid "live"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_nav.html:27
+msgid "develop"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:11
+msgid ""
+"\n"
+"        I don't bother to make a catalog right now, and I don't want to \n"
+"        classify them now, because I'm the only one who develop it, and I \n"
+"        don't know when I have free time, so you should classify your \n"
+"        content yourself so as not to make a mess of everything. \n"
+"    "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:22
+msgid ""
+"\n"
+"                If you're writing about primary school (I don't know if \n"
+"                anyone will write about kindergarten), \n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:27
+msgid ""
+"\n"
+"                you should categorize(remove bracket!): \n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:32
+#: eduhub/templates/eduhub/_classification_subject.html:50
+#: eduhub/templates/eduhub/_classification_subject.html:70
+msgid "click to copy"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:34
+msgid "primary school/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:35
+msgid ""
+"\n"
+"            primary school / (grade) / (semester) / (subjects) / (title)\n"
+"                "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:42
+msgid ""
+"\n"
+"                If you're writing about high school teaching,\n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:46
+#: eduhub/templates/eduhub/_classification_subject.html:66
+msgid ""
+"\n"
+"                you should categorize: \n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:52
+msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:54
+msgid ""
+"\n"
+"                    ('junior' or 'senior') high school / (grade) / \n"
+"                    (semester) / (subjects) / (title)\n"
+"                "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:62
+msgid ""
+"\n"
+"                If you're writing about the college' teaching,\n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:72
+msgid "college/(grade)/(semester)/(subjects)/(title)"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:74
+msgid ""
+"\n"
+"                    college/(major) / (grade) / (semester) / (subjects) / \n"
+"                    (title)\n"
+"                "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:82
+msgid ""
+"\n"
+"                Other stages should also have classification, you can \n"
+"                change it \n"
+"\n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:88
+msgid "here"
+msgstr ""
+
+#: eduhub/templates/eduhub/_classification_subject.html:91
+msgid ""
+"\n"
+"                and make a pull request, or you look at it yourself\n"
+"            "
+msgstr ""
+
+#: eduhub/templates/eduhub/_eduhub_base.html:51
+#: eduhub/templates/eduhub/eduhub_search_result.html:23
+#: eduhub/templates/eduhub/label_list.html:10
+msgid "Eduhub labels"
+msgstr ""
+
+#: eduhub/templates/eduhub/_eduhub_base.html:58
+#: eduhub/templates/eduhub/appraising_list.html:17
+#: eduhub/templates/eduhub/eduhub_search_result.html:53
+#: eduhub/templates/eduhub/funcontent_list.html:17
+msgid "Eduhub contents"
+msgstr ""
+
+#: eduhub/templates/eduhub/_eduhub_base.html:65
+msgid "Eduhub appraising"
+msgstr ""
+
+#: eduhub/templates/eduhub/_eduhub_base.html:79
+#: eduhub/templates/eduhub/_eduhub_base.html:81
+#: eduhub/templates/eduhub/_search.html:15
+#: eduhub/templates/eduhub/_search.html:16
+msgid "What are you thinking about"
+msgstr ""
+
+#: eduhub/templates/eduhub/_eduhub_base.html:87
+#: eduhub/templates/eduhub/_search.html:22
+msgid "search"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:15
+msgid "Preschool"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:22
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:51
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:97
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:152
+msgid "Math"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:27
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:56
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:102
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:157
+msgid "Yuwen"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:32
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:61
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:107
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:162
+msgid "Yingyu"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:37
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:66
+msgid "Science"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:44
+msgid "Primary school"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:72
+msgid "Morality and Society"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:78
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:133
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:187
+msgid "Information Technology"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:84
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:138
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:192
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:269
+msgid "Art"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:91
+msgid "Junior high school"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:112
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:167
+msgid "Geography"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:117
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:172
+msgid "Physics"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:123
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:177
+msgid "Biology"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:128
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:182
+msgid "Politics"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:145
+msgid "Senior high school"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:198
+msgid "Collage"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:204
+msgid "Philosophy"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:209
+msgid "Economics"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:214
+msgid "Law"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:219
+msgid "Pedagogy"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:224
+msgid "Jurisprudence"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:229
+msgid "Literature"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:234
+msgid "History"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:239
+msgid "Sciences"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:244
+msgid "Engineering"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:249
+msgid "Agriculture"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:254
+msgid "Medicine"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:259
+msgid "Military"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:264
+msgid "Management"
+msgstr ""
+
+#: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:275
+#: eduhub/templates/eduhub/label_list.html:24
+#: eduhub/templatetags/eduhub_tags.py:64
+msgid "All"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_create.html:26
+#: eduhub/templates/eduhub/appraising_create.html:26
+#: eduhub/templates/eduhub/funcontent_create.html:22
+#: eduhub/templates/eduhub/funtest_create.html:39
+#: eduhub/templates/eduhub/label_create.html:25
+#: eduhub/templates/eduhub/label_update.html:27
+#: funuser/templates/funuser/funuser_update.html:150
+msgid "Upload"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_delete.html:10
+#: eduhub/templates/eduhub/appraising_delete.html:14
+#: eduhub/templates/eduhub/funcontent_delete.html:15
+#: eduhub/templates/eduhub/label_delete.html:14
+#: eduhub/templates/eduhub/label_detail.html:11
+msgid "Delete label"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_delete.html:17
+#: eduhub/templates/eduhub/appraising_delete.html:22
+#: eduhub/templates/eduhub/funcontent_delete.html:23
+#: eduhub/templates/eduhub/label_delete.html:50
+msgid "Are you sure you want to delete"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_delete.html:21
+#: eduhub/templates/eduhub/appraising_c_detail.html:51
+#: eduhub/templates/eduhub/appraising_c_list.html:56
+#: eduhub/templates/eduhub/appraising_delete.html:26
+#: eduhub/templates/eduhub/appraising_detail.html:47
+#: eduhub/templates/eduhub/appraising_list.html:68
+#: eduhub/templates/eduhub/funcontent_delete.html:27
+#: eduhub/templates/eduhub/funcontent_detail.html:42
+#: eduhub/templates/eduhub/funcontent_list.html:68
+#: eduhub/templates/eduhub/label_delete.html:53
+#: eduhub/templates/eduhub/label_list.html:61
+msgid "Delete"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_detail.html:12
+#: eduhub/templates/eduhub/appraising_detail.html:14
+#: eduhub/templates/eduhub/funcontent_detail.html:9
+msgid "Content details"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_detail.html:31
+msgid "Unknown user"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_detail.html:47
+#: eduhub/templates/eduhub/appraising_c_list.html:50
+#: eduhub/templates/eduhub/appraising_detail.html:44
+#: eduhub/templates/eduhub/appraising_list.html:62
+#: eduhub/templates/eduhub/eduhubhomesticker_detail.html:44
+#: eduhub/templates/eduhub/funcontent_detail.html:39
+#: eduhub/templates/eduhub/funcontent_list.html:62
+#: eduhub/templates/eduhub/label_list.html:57
+#: funhome/templates/funhome/appreciation_detail.html:46
+#: funhome/templates/funhome/funhomesticker_detail.html:45
+msgid "Edit"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_list.html:14
+#: eduhub/templates/eduhub/appraising_list.html:25
+#: eduhub/templates/eduhub/funcontent_list.html:25
+#: eduhub/templates/eduhub/label_list.html:15
+msgid "Add"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_list.html:43
+#: eduhub/templates/eduhub/appraising_list.html:55
+#: eduhub/templates/eduhub/eduhubhomesticker_list.html:53
+#: eduhub/templates/eduhub/funcontent_list.html:55
+#: eduhub/templates/eduhub/label_list.html:50
+msgid "View"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_update.html:11
+#: eduhub/templates/eduhub/appraising_update.html:13
+#: eduhub/templates/eduhub/funcontent_update.html:14
+#: eduhub/templates/eduhub/label_update.html:8
+msgid "Update label"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_c_update.html:23
+#: eduhub/templates/eduhub/appraising_update.html:32
+#: eduhub/templates/eduhub/funcontent_update.html:33
+msgid "Update"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:14
+msgid "Eduhub search"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:97
+#: eduhub/templates/eduhub/eduhub_search_result.html:137
+#: funhome/templates/funhome/_common_pagination.html:15
+msgid "first page"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:103
+#: eduhub/templates/eduhub/eduhub_search_result.html:143
+#: funhome/templates/funhome/_common_pagination.html:21
+msgid "previous page"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:110
+#: eduhub/templates/eduhub/eduhub_search_result.html:150
+#: funhome/templates/funhome/_common_pagination.html:28
+msgid "Page"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:116
+#: eduhub/templates/eduhub/eduhub_search_result.html:156
+#: funhome/templates/funhome/_common_pagination.html:33
+msgid "next page"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhub_search_result.html:121
+#: eduhub/templates/eduhub/eduhub_search_result.html:162
+#: funhome/templates/funhome/_common_pagination.html:38
+msgid "last page"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhubhomesticker_detail.html:15
+#: eduhub/templates/eduhub/eduhubhomesticker_list.html:15
+msgid "Eduhub home"
+msgstr ""
+
+#: eduhub/templates/eduhub/eduhubhomesticker_list.html:95
+#: eduhub/templates/eduhub/label_update.html:17
+msgid "cover"
+msgstr ""
+
+#: eduhub/templates/eduhub/funtest_content_preview.html:16
+msgid "Funtest content preview"
+msgstr ""
+
+#: eduhub/templates/eduhub/funtest_create.html:13
+msgid "Create a test"
+msgstr ""
+
+#: eduhub/templates/eduhub/funtest_create.html:33
+msgid "Live content"
+msgstr ""
+
+#: eduhub/templates/eduhub/how_to_classification.html:20
+msgid "How to classification"
+msgstr ""
+
+#: eduhub/templates/eduhub/how_to_classification.html:38
+msgid "How to classify the eduhub content"
+msgstr ""
+
+#: eduhub/templates/eduhub/how_to_classification.html:66
+msgid "classification copied"
+msgstr ""
+
+#: eduhub/templates/eduhub/label_create.html:16
+#: eduhub/templates/eduhub/label_update.html:13
+msgid "Preview"
+msgstr ""
+
+#: eduhub/templates/eduhub/label_delete.html:38
+msgid "Name"
+msgstr ""
+
+#: eduhub/templates/eduhub/label_delete.html:42
+msgid "Creating date"
+msgstr ""
+
+#: eduhub/templates/eduhub/label_list.html:22
+msgid "Mine"
+msgstr ""
+
+#: eduhub/templatetags/eduhub_tags.py:35
+msgid "ALL"
+msgstr ""
+
+#: eduhub/views.py:72
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:100
+#: eduhub/views.py:77
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:106
+#: eduhub/views.py:83
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:141
+#: eduhub/views.py:121
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr ""
 
-#: eduhub/views.py:258 eduhub/views.py:436
-msgid "Frequently request"
+#: fun/apps.py:7
+msgid "Fun"
 msgstr ""
 
-#: eduhub/views.py:263 eduhub/views.py:270
-msgid "Content file is required"
-msgstr ""
-
-#: eduhub/views.py:277
-msgid "The length of video file should be less than"
-msgstr ""
-
-#: eduhub/views.py:285
-msgid "The length of pdf file should be less than"
-msgstr ""
-
-#: fun/settings.py:234
+#: fun/settings.py:183 fun/settings_.py:182
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:235
-msgid "中文简体"
+#: fun/settings.py:184
+msgid "Chinese Simplified"
 msgstr ""
 
-#: funhome/apps.py:8
+#: fun/settings.py:185
+msgid "Chinese(China)"
+msgstr ""
+
+#: funhome/apps.py:7
 msgid "Fun home"
 msgstr ""
 
-#: funhome/modelforms.py:23 funhome/models.py:48
+#: funhome/modelforms.py:24 funhome/models.py:48
 msgid "Sticker content file"
+msgstr ""
+
+#: funhome/modelforms.py:30
+msgid "content file, pdf and video file is allowed only"
 msgstr ""
 
 #: funhome/models.py:23 funhome/models.py:25
@@ -363,1202 +1456,274 @@ msgstr ""
 msgid "Submitting date"
 msgstr ""
 
-#: funhome/views.py:178 funhome/views.py:210
-#: templates/account/email/password_reset_key_message.html:7
-msgid "X-DOVE"
-msgstr ""
-
-#: funhome/views.py:179 funhome/views.py:211
-msgid "Larry`s sharing"
-msgstr ""
-
-#: funhome/views.py:184 funhome/views.py:216
-msgid "larry"
-msgstr ""
-
-#: funtag/templatetag.py:82
-msgid "ALL"
-msgstr ""
-
-#: funuser/admin.py:17
-msgid "avatar"
-msgstr ""
-
-#: funuser/admin.py:18 templates/funuser/funuser_detail.html:50
-#: templates/funuser/funuser_update.html:46
-msgid "Birth date"
-msgstr ""
-
-#: funuser/admin.py:20 funuser/models.py:41
-#: templates/funuser/funuser_detail.html:57
-#: templates/funuser/funuser_update.html:66
-msgid "Address"
-msgstr ""
-
-#: funuser/admin.py:22 funuser/models.py:46
-#: templates/funuser/funuser_detail.html:64
-#: templates/funuser/funuser_update.html:85
-msgid "Hometown"
-msgstr ""
-
-#: funuser/admin.py:24 funuser/models.py:51
-#: templates/funuser/funuser_detail.html:71
-#: templates/funuser/funuser_update.html:102
-msgid "College"
-msgstr ""
-
-#: funuser/admin.py:26 funuser/models.py:56
-#: templates/funuser/funuser_detail.html:78
-#: templates/funuser/funuser_update.html:118
-msgid "Occupation"
-msgstr ""
-
-#: funuser/admin.py:28 funuser/models.py:61
-msgid "Hobby"
-msgstr ""
-
-#: funuser/admin.py:29 funuser/models.py:66
-#: templates/funuser/funuser_detail.html:85
-#: templates/funuser/funuser_update.html:134
-msgid "Motto"
-msgstr ""
-
-#: funuser/modelforms.py:30 funuser/models.py:33
-msgid "Full name"
-msgstr ""
-
-#: funuser/models.py:21
-msgid "User information"
-msgstr ""
-
-#: funuser/models.py:22
-msgid "User informations"
-msgstr ""
-
-#: funuser/models.py:27
-msgid "User"
-msgstr ""
-
-#: funuser/models.py:30
-msgid "Avatar"
-msgstr ""
-
-#: funuser/models.py:36
-msgid "Brith date"
-msgstr ""
-
-#: funuser/models.py:38 funuser/models.py:43 funuser/models.py:48
-#: funuser/models.py:53 funuser/models.py:58 funuser/models.py:63
-#: funuser/models.py:68
-msgid "Is outward"
-msgstr ""
-
-#: funuser/models.py:71
-msgid "Funuser creating date"
-msgstr ""
-
-#: funuser/views.py:69
-msgid "Nice try"
-msgstr ""
-
-#: templates/account/account_inactive.html:5
-#: templates/account/account_inactive.html:8
-msgid "Account Inactive"
-msgstr ""
-
-#: templates/account/account_inactive.html:10
-msgid "This account is inactive."
-msgstr ""
-
-#: templates/account/email.html:6
-msgid "Account"
-msgstr ""
-
-#: templates/account/email.html:11
-msgid "E-mail Addresses"
-msgstr ""
-
-#: templates/account/email.html:15
-msgid ""
-"\n"
-"        The following e-mail addresses are associated with your account\n"
-"      "
-msgstr ""
-
-#: templates/account/email.html:41
-msgid "Verified"
-msgstr ""
-
-#: templates/account/email.html:43
-msgid "Unverified"
-msgstr ""
-
-#: templates/account/email.html:47
-msgid "Primary"
-msgstr ""
-
-#: templates/account/email.html:57
-msgid "Make Primary"
-msgstr ""
-
-#: templates/account/email.html:61
-msgid "Re-send Verification"
-msgstr ""
-
-#: templates/account/email.html:65 templates/socialaccount/connections.html:39
-msgid "Remove"
-msgstr ""
-
-#: templates/account/email.html:74
-msgid "Warning"
-msgstr ""
-
-#: templates/account/email.html:76
-msgid ""
-"\n"
-"        You currently do not have any e-mail address set up. You should "
-"really \n"
-"        add an e-mail address so you can receive notifications, reset your \n"
-"        password, etc\n"
-"      "
-msgstr ""
-
-#: templates/account/email.html:86
-msgid "Add E-mail Address"
-msgstr ""
-
-#: templates/account/email.html:92
-msgid "Add E-mail"
-msgstr ""
-
-#: templates/account/email.html:104
-msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
-
-#: templates/account/email/email_confirmation_message.html:10
-msgid "Hello from x-dove"
-msgstr ""
-
-#: templates/account/email/email_confirmation_message.html:12
-msgid ""
-"\n"
-"            You're receiving this e-mail because user \n"
-"        "
-msgstr ""
-
-#: templates/account/email/email_confirmation_message.html:17
-msgid ""
-"\n"
-"            has given yours as an e-mail address to connect their account.\n"
-"        "
-msgstr ""
-
-#: templates/account/email/email_confirmation_message.html:20
-msgid "To confirm this is correct, go to"
-msgstr ""
-
-#: templates/account/email/email_confirmation_message.html:22
-msgid "CONFIRM EMAIL"
-msgstr ""
-
-#: templates/account/email/email_confirmation_message.html:27
-msgid ""
-" \n"
-"            Thank you from x-dove!\n"
-"        "
-msgstr ""
-
-#: templates/account/email/email_confirmation_subject.html:3
-msgid "Please Confirm Your E-mail Address"
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.html:7
-msgid "Hello from"
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.html:9
-msgid ""
-"\n"
-"        You're receiving this e-mail because you or someone else has "
-"requested \n"
-"        a password for your user account.\n"
-"        It can be safely ignored if you did not request a password reset. \n"
-"        Click the link below to reset your password.\n"
-"    "
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.html:16
-msgid "RESET PASSWORD"
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.html:19
-#, python-format
-msgid ""
-"\n"
-"            In case you forgot, your username is %(username)s.\n"
-"        "
-msgstr ""
-
-#: templates/account/email/password_reset_key_message.html:26
-msgid "Thank you for using"
-msgstr ""
-
-#: templates/account/email/password_reset_key_subject.html:3
-msgid ""
-"\n"
-"    Password Reset E-mail\n"
-msgstr ""
-
-#: templates/account/email_confirm.html:7
-#: templates/account/email_confirm.html:12
-msgid "Confirm E-mail Address"
-msgstr ""
-
-#: templates/account/email_confirm.html:19
-#, python-format
-msgid ""
-"\n"
-"                Please confirm that \n"
-"                <a href=\"mailto:%(email)s\"\n"
-"                    style=\"font-size: larger;\">\n"
-"                    %(email)s\n"
-"                </a> is an e-mail address for user \n"
-"                <span style=\"font-weight: bolder;\">%(user_display)s</"
-"span>. \n"
-"            "
-msgstr ""
-
-#: templates/account/email_confirm.html:34
-msgid "Confirm"
-msgstr ""
-
-#: templates/account/email_confirm.html:44
-msgid ""
-"\n"
-"                This e-mail confirmation link expired or is invalid. Please\n"
-"            "
-msgstr ""
-
-#: templates/account/email_confirm.html:49
-msgid "issue a new e-mail confirmation request"
-msgstr ""
-
-#: templates/account/login.html:11 templates/account/login.html:22
-#: templates/account/login.html:43
-msgid "Sign In"
-msgstr ""
-
-#: templates/account/login.html:26
-msgid "If you have not created an account yet, then please"
-msgstr ""
-
-#: templates/account/login.html:27
-msgid "sign up"
-msgstr ""
-
-#: templates/account/login.html:50
-msgid "Forgot Password?"
-msgstr ""
-
-#: templates/account/logout.html:11 templates/account/logout.html:23
-msgid "Sign Out"
-msgstr ""
-
-#: templates/account/logout.html:29
-msgid "Are you sure you want to sign out?"
-msgstr ""
-
-#: templates/account/logout.html:41
-msgid "Sign out now"
-msgstr ""
-
-#: templates/account/messages/cannot_delete_primary_email.html:2
-#, python-format
-msgid ""
-"\n"
-"    You cannot remove your primary e-mail address (%(email)s).\n"
-msgstr ""
-
-#: templates/account/messages/email_confirmation_sent.html:2
-#, python-format
-msgid ""
-"\n"
-"    Confirmation e-mail sent to %(email)s.\n"
-msgstr ""
-
-#: templates/account/messages/email_confirmed.html:2
-#, python-format
-msgid ""
-"\n"
-"    You have confirmed %(email)s.\n"
-msgstr ""
-
-#: templates/account/messages/email_deleted.html:2
-#, python-format
-msgid ""
-"\n"
-"    Removed e-mail address %(email)s.\n"
-msgstr ""
-
-#: templates/account/messages/logged_in.html:4
-#, python-format
-msgid ""
-"\n"
-"    Successfully signed in as %(name)s.\n"
-msgstr ""
-
-#: templates/account/messages/logged_out.html:2
-msgid ""
-"\n"
-"    You have signed out.\n"
-msgstr ""
-
-#: templates/account/messages/password_changed.html:2
-msgid ""
-"\n"
-"    Password successfully changed.\n"
-msgstr ""
-
-#: templates/account/messages/password_set.html:2
-msgid ""
-"\n"
-"    Password successfully set.\n"
-msgstr ""
-
-#: templates/account/messages/primary_email_set.html:2
-msgid ""
-"\n"
-"    Primary e-mail address set.\n"
-msgstr ""
-
-#: templates/account/messages/unverified_primary_email.html:2
-msgid ""
-"\n"
-"    Your primary e-mail address must be verified.\n"
-msgstr ""
-
-#: templates/account/password_change.html:5
-#: templates/account/password_change.html:8
-#: templates/account/password_change.html:15
-#: templates/account/password_reset_from_key.html:4
-#: templates/account/password_reset_from_key.html:11
-#: templates/account/password_reset_from_key_done.html:6
-#: templates/account/password_reset_from_key_done.html:9
-msgid "Change Password"
-msgstr ""
-
-#: templates/account/password_reset.html:8
-#: templates/account/password_reset.html:15
-#: templates/account/password_reset_done.html:6
-#: templates/account/password_reset_done.html:9
-msgid "Password Reset"
-msgstr ""
-
-#: templates/account/password_reset.html:24
-msgid ""
-"\n"
-"                You are administrator, please reset password via terminal\n"
-"            "
-msgstr ""
-
-#: templates/account/password_reset.html:32
-msgid ""
-"\n"
-"                Forgotten your password? Enter your e-mail address below, \n"
-"                and we'll send you an e-mail allowing you to reset it\n"
-"            "
-msgstr ""
-
-#: templates/account/password_reset.html:41
-msgid "Reset My Password"
-msgstr ""
-
-#: templates/account/password_reset.html:46
-msgid ""
-"\n"
-"                Please contact us if you have any trouble resetting \n"
-"                your password.\n"
-"            "
-msgstr ""
-
-#: templates/account/password_reset_done.html:16
-msgid ""
-"\n"
-"            We have sent you an e-mail. Please contact us if you do not "
-"receive \n"
-"            it within a few minutes.\n"
-"        "
-msgstr ""
-
-#: templates/account/password_reset_from_key.html:9
-msgid "Bad Token"
-msgstr ""
-
-#: templates/account/password_reset_from_key.html:18
-msgid ""
-"\n"
-"                The password reset link was invalid, possibly because it "
-"has \n"
-"                already been used.  Please request a \n"
-"            "
-msgstr ""
-
-#: templates/account/password_reset_from_key.html:23
-msgid "new password reset"
-msgstr ""
-
-#: templates/account/password_reset_from_key.html:33
-msgid "change password"
-msgstr ""
-
-#: templates/account/password_reset_from_key.html:37
-#: templates/account/password_reset_from_key_done.html:10
-msgid "Your password is now changed."
-msgstr ""
-
-#: templates/account/password_set.html:5 templates/account/password_set.html:8
-#: templates/account/password_set.html:15
-msgid "Set Password"
-msgstr ""
-
-#: templates/account/signup.html:11 templates/socialaccount/signup.html:6
-msgid "Signup"
-msgstr ""
-
-#: templates/account/signup.html:23 templates/account/signup.html:51
-#: templates/funhome/_navbar.html:73 templates/socialaccount/signup.html:13
-#: templates/socialaccount/signup.html:28
-msgid "Sign Up"
-msgstr ""
-
-#: templates/account/signup.html:26
-msgid "Already have an account? Then please"
-msgstr ""
-
-#: templates/account/signup.html:27 templates/funhome/home_join_us.html:91
-#: templates/socialaccount/login_cancelled.html:18
-msgid "sign in"
-msgstr ""
-
-#: templates/account/signup.html:43 templates/funhome/_footer.html:24
-msgid "Legal information"
-msgstr ""
-
-#: templates/account/signup.html:46
-msgid "and_sign"
-msgstr ""
-
-#: templates/account/signup.html:47
-msgid "Data privacy"
-msgstr ""
-
-#: templates/account/signup_closed.html:5
-#: templates/account/signup_closed.html:8
-msgid "Sign Up Closed"
-msgstr ""
-
-#: templates/account/signup_closed.html:10
-msgid "We are sorry, but the sign up is currently closed."
-msgstr ""
-
-#: templates/account/snippets/already_logged_in.html:7
-msgid "You are already logged in as"
-msgstr ""
-
-#: templates/account/verification_sent.html:6
-#: templates/account/verification_sent.html:10
-#: templates/account/verified_email_required.html:6
-#: templates/account/verified_email_required.html:10
-msgid "Verify Your E-mail Address"
-msgstr ""
-
-#: templates/account/verification_sent.html:13
-msgid ""
-"\n"
-"            We have sent an e-mail to you for verification. Follow the "
-"link \n"
-"            provided to finalize the signup process. Please contact us if "
-"you \n"
-"            do not receive it within a few minutes.\n"
-"        "
-msgstr ""
-
-#: templates/account/verified_email_required.html:15
-msgid ""
-"\n"
-"            This part of the site requires us to verify that\n"
-"            you are who you claim to be. For this purpose, we require that "
-"you\n"
-"            verify ownership of your e-mail address. \n"
-"        "
-msgstr ""
-
-#: templates/account/verified_email_required.html:23
-msgid ""
-"\n"
-"            We have sent an e-mail to you for\n"
-"            verification. Please click on the link inside this e-mail. "
-"Please\n"
-"            contact us if you do not receive it within a few minutes.\n"
-"        "
-msgstr ""
-
-#: templates/account/verified_email_required.html:31
-msgid "Note"
-msgstr ""
-
-#: templates/account/verified_email_required.html:31
-msgid "you can still"
-msgstr ""
-
-#: templates/account/verified_email_required.html:33
-msgid "change your e-mail address"
-msgstr ""
-
-#: templates/eduhub/_classification_nav.html:17
-msgid "subject"
-msgstr ""
-
-#: templates/eduhub/_classification_nav.html:21
-msgid "food"
-msgstr ""
-
-#: templates/eduhub/_classification_nav.html:25
-msgid "live"
-msgstr ""
-
-#: templates/eduhub/_classification_nav.html:29
-msgid "develop"
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:13
-msgid ""
-"\n"
-"        I don't bother to make a catalog right now, and I don't want to \n"
-"        classify them now, because I'm the only one who develop it, and I \n"
-"        don't know when I have free time, so you should classify your \n"
-"        content yourself so as not to make a mess of everything. \n"
-"    "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:24
-msgid ""
-"\n"
-"                If you're writing about primary school (I don't know if \n"
-"                anyone will write about kindergarten), \n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:29
-msgid ""
-"\n"
-"                you should categorize(remove bracket!): \n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:34
-#: templates/eduhub/_classification_subject.html:52
-#: templates/eduhub/_classification_subject.html:72
-msgid "click to copy"
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:36
-msgid "primary school/(grade)/(semester)/(subjects)/(title)"
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:37
-msgid ""
-"\n"
-"            primary school / (grade) / (semester) / (subjects) / (title)\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:44
-msgid ""
-"\n"
-"                If you're writing about high school teaching,\n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:48
-#: templates/eduhub/_classification_subject.html:68
-msgid ""
-"\n"
-"                you should categorize: \n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:54
-msgid "junior senior high school/(grade)/(semester)/(subjects)/(title)"
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:56
-msgid ""
-"\n"
-"                    ('junior' or 'senior') high school / (grade) / \n"
-"                    (semester) / (subjects) / (title)\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:64
-msgid ""
-"\n"
-"                If you're writing about the college' teaching,\n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:74
-msgid "college/(grade)/(semester)/(subjects)/(title)"
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:76
-msgid ""
-"\n"
-"                    college/(major) / (grade) / (semester) / (subjects) / \n"
-"                    (title)\n"
-"                "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:84
-msgid ""
-"\n"
-"                Other stages should also have classification, you can \n"
-"                change it \n"
-"\n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:90
-msgid "here"
-msgstr ""
-
-#: templates/eduhub/_classification_subject.html:93
-msgid ""
-"\n"
-"                and make a pull request, or you look at it yourself\n"
-"            "
-msgstr ""
-
-#: templates/eduhub/_eduhub_base.html:65
-#: templates/eduhub/eduhub_search_result.html:23
-#: templates/eduhub/label_list.html:19
-msgid "Eduhub labels"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base.html:87 templates/eduhub/_eduhub_base.html:89
-#: templates/eduhub/_search.html:15 templates/eduhub/_search.html:16
-msgid "What are you thinking about"
-msgstr ""
-
-#: templates/eduhub/_eduhub_base.html:95 templates/eduhub/_search.html:22
-msgid "search"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:17
-msgid "Preschool"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:24
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:53
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:99
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:154
-msgid "Math"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:29
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:58
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:104
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:159
-msgid "Yuwen"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:34
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:63
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:109
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:164
-msgid "Yingyu"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:39
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:68
-msgid "Science"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:46
-msgid "Primary school"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:74
-msgid "Morality and Society"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:80
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:135
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:189
-msgid "Information Technology"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:86
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:140
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:194
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:271
-msgid "Art"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:93
-msgid "Junior high school"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:114
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:169
-msgid "Geography"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:119
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:174
-msgid "Physics"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:125
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:179
-msgid "Biology"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:130
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:184
-msgid "Politics"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:147
-msgid "Senior high school"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:200
-msgid "Collage"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:206
-msgid "Philosophy"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:211
-msgid "Economics"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:216
-msgid "Law"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:221
-msgid "Pedagogy"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:226
-msgid "Jurisprudence"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:231
-msgid "Literature"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:236
-msgid "History"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:241
-msgid "Sciences"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:246
-msgid "Engineering"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:251
-msgid "Agriculture"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:256
-msgid "Medicine"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:261
-msgid "Military"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:266
-msgid "Management"
-msgstr ""
-
-#: templates/eduhub/_top_filters/_eduhub_base_top_filter.html:277
-#: templates/eduhub/label_list.html:33
-msgid "All"
-msgstr ""
-
-#: templates/eduhub/content_create.html:44
-#: templates/eduhub/funcontent_create.html:43
-#: templates/eduhub/funtest_create.html:39
-#: templates/eduhub/label_create.html:28 templates/eduhub/label_update.html:36
-#: templates/funuser/funuser_update.html:152
-msgid "Upload"
-msgstr ""
-
-#: templates/eduhub/content_delete.html:16
-#: templates/eduhub/content_detail.html:15
-#: templates/eduhub/funcontent_delete.html:15
-#: templates/eduhub/label_delete.html:14 templates/eduhub/label_detail.html:11
-msgid "Delete label"
-msgstr ""
-
-#: templates/eduhub/content_delete.html:24
-#: templates/eduhub/funcontent_delete.html:23
-#: templates/eduhub/label_delete.html:50
-msgid "Are you sure you want to delete"
-msgstr ""
-
-#: templates/eduhub/content_delete.html:28
-#: templates/eduhub/content_list.html:61
-#: templates/eduhub/funcontent_delete.html:27
-#: templates/eduhub/funcontent_detail.html:47
-#: templates/eduhub/funcontent_list.html:68
-#: templates/eduhub/label_delete.html:53 templates/eduhub/label_list.html:70
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
-msgid "Delete"
-msgstr ""
-
-#: templates/eduhub/content_list.html:22
-#: templates/eduhub/funcontent_list.html:25 templates/eduhub/label_list.html:24
-msgid "Add"
-msgstr ""
-
-#: templates/eduhub/content_list.html:48
-#: templates/eduhub/eduhubhomesticker_list.html:53
-#: templates/eduhub/funcontent_list.html:55 templates/eduhub/label_list.html:59
-msgid "View"
-msgstr ""
-
-#: templates/eduhub/content_list.html:55
-#: templates/eduhub/eduhubhomesticker_detail.html:46
-#: templates/eduhub/funcontent_detail.html:44
-#: templates/eduhub/funcontent_list.html:62 templates/eduhub/label_list.html:66
-#: templates/funhome/appreciation_detail.html:46
-#: templates/funhome/funhomesticker_detail.html:45
-msgid "Edit"
-msgstr ""
-
-#: templates/eduhub/content_update.html:15
-#: templates/eduhub/funcontent_update.html:14
-#: templates/eduhub/label_update.html:12
-msgid "Update label"
-msgstr ""
-
-#: templates/eduhub/content_update.html:33
-#: templates/eduhub/label_create.html:16 templates/eduhub/label_update.html:21
-msgid "Preview"
-msgstr ""
-
-#: templates/eduhub/content_update.html:72
-#: templates/eduhub/funcontent_update.html:33
-msgid "Update"
-msgstr ""
-
-#: templates/eduhub/eduhub_search_result.html:14
-msgid "Eduhub search"
-msgstr ""
-
-#: templates/eduhub/eduhub_search_result.html:97
-#: templates/eduhub/eduhub_search_result.html:137
-#: templates/funhome/_common_pagination.html:15
-msgid "first page"
-msgstr ""
-
-#: templates/eduhub/eduhub_search_result.html:103
-#: templates/eduhub/eduhub_search_result.html:143
-#: templates/funhome/_common_pagination.html:21
-msgid "previous page"
-msgstr ""
-
-#: templates/eduhub/eduhub_search_result.html:110
-#: templates/eduhub/eduhub_search_result.html:150
-#: templates/funhome/_common_pagination.html:28
-msgid "Page"
-msgstr ""
-
-#: templates/eduhub/eduhub_search_result.html:116
-#: templates/eduhub/eduhub_search_result.html:156
-#: templates/funhome/_common_pagination.html:33
-msgid "next page"
-msgstr ""
-
-#: templates/eduhub/eduhub_search_result.html:121
-#: templates/eduhub/eduhub_search_result.html:162
-#: templates/funhome/_common_pagination.html:38
-msgid "last page"
-msgstr ""
-
-#: templates/eduhub/eduhubhomesticker_detail.html:15
-#: templates/eduhub/eduhubhomesticker_list.html:15
-msgid "Eduhub home"
-msgstr ""
-
-#: templates/eduhub/eduhubhomesticker_list.html:95
-#: templates/eduhub/label_update.html:25
-msgid "cover"
-msgstr ""
-
-#: templates/eduhub/funcontent_create.html:38
-#: templates/eduhub/how_to_classification.html:22
-msgid "How to classification"
-msgstr ""
-
-#: templates/eduhub/funcontent_detail.html:14
-msgid "Content details"
-msgstr ""
-
-#: templates/eduhub/funtest_content_preview.html:20
-msgid "Funtest content preview"
-msgstr ""
-
-#: templates/eduhub/funtest_create.html:13
-msgid "Create a test"
-msgstr ""
-
-#: templates/eduhub/funtest_create.html:33
-msgid "Live content"
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:40
-msgid "How to classify the eduhub content"
-msgstr ""
-
-#: templates/eduhub/how_to_classification.html:68
-msgid "classification copied"
-msgstr ""
-
-#: templates/eduhub/label_delete.html:38
-msgid "Name"
-msgstr ""
-
-#: templates/eduhub/label_delete.html:42
-msgid "Creating date"
-msgstr ""
-
-#: templates/eduhub/label_list.html:31
-msgid "Mine"
-msgstr ""
-
-#: templates/funhome/_footer.html:16
+#: funhome/templates/funhome/_footer.html:16
 msgid ""
 "\n"
 "                        x-dove\n"
 "                    "
 msgstr ""
 
-#: templates/funhome/_footer.html:29
+#: funhome/templates/funhome/_footer.html:29
 msgid " Data privacy"
 msgstr ""
 
-#: templates/funhome/_footer.html:33
+#: funhome/templates/funhome/_footer.html:33
 msgid "Developer"
 msgstr ""
 
-#: templates/funhome/_footer.html:43
+#: funhome/templates/funhome/_footer.html:43
 msgid "this site"
 msgstr ""
 
-#: templates/funhome/_footer_language.html:26
+#: funhome/templates/funhome/_footer_language.html:25
 msgid "language"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:12
+#: funhome/templates/funhome/_footer_theme.html:10
 msgid "Theme"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:17
+#: funhome/templates/funhome/_footer_theme.html:15
 msgid "Select theme"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:22
+#: funhome/templates/funhome/_footer_theme.html:20
 msgid "cerulean"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:25
+#: funhome/templates/funhome/_footer_theme.html:23
 msgid "cyborg"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:28
+#: funhome/templates/funhome/_footer_theme.html:26
 msgid "flatly"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:31
+#: funhome/templates/funhome/_footer_theme.html:29
 msgid "litera"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:34
+#: funhome/templates/funhome/_footer_theme.html:32
 msgid "lux"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:37
+#: funhome/templates/funhome/_footer_theme.html:35
 msgid "minty"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:40
+#: funhome/templates/funhome/_footer_theme.html:38
 msgid "sandstone"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:43
+#: funhome/templates/funhome/_footer_theme.html:41
 msgid "sketchy"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:46
+#: funhome/templates/funhome/_footer_theme.html:44
 msgid "solar"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:49
+#: funhome/templates/funhome/_footer_theme.html:47
 msgid "superhero"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:52
+#: funhome/templates/funhome/_footer_theme.html:50
 msgid "yeti"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:55
+#: funhome/templates/funhome/_footer_theme.html:53
 msgid "cosmo"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:58
+#: funhome/templates/funhome/_footer_theme.html:56
 msgid "darkly"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:61
+#: funhome/templates/funhome/_footer_theme.html:59
 msgid "journal"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:64
+#: funhome/templates/funhome/_footer_theme.html:62
 msgid "lumen"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:67
+#: funhome/templates/funhome/_footer_theme.html:65
 msgid "pulse"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:70
+#: funhome/templates/funhome/_footer_theme.html:68
 msgid "simplex"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:73
+#: funhome/templates/funhome/_footer_theme.html:71
 msgid "slate"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:76
+#: funhome/templates/funhome/_footer_theme.html:74
 msgid "spacelab"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:79
+#: funhome/templates/funhome/_footer_theme.html:77
 msgid "united"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:82
+#: funhome/templates/funhome/_footer_theme.html:80
 msgid "materia"
 msgstr ""
 
-#: templates/funhome/_footer_theme.html:85
+#: funhome/templates/funhome/_footer_theme.html:83
 msgid "default"
 msgstr ""
 
-#: templates/funhome/_navbar.html:27
-#: templates/funhome/legal_information.html:30
+#: funhome/templates/funhome/_navbar.html:22
+#: funhome/templates/funhome/legal_information.html:30
 msgid "Home"
 msgstr ""
 
-#: templates/funhome/_navbar.html:36
+#: funhome/templates/funhome/_navbar.html:31
 msgid "Developers"
 msgstr ""
 
-#: templates/funhome/_navbar.html:42
+#: funhome/templates/funhome/_navbar.html:37
 msgid "Message"
 msgstr ""
 
-#: templates/funhome/_navbar.html:60
+#: funhome/templates/funhome/_navbar.html:55
 msgid "Hello"
 msgstr ""
 
-#: templates/funhome/_navbar.html:64
+#: funhome/templates/funhome/_navbar.html:59
 msgid "Log Out"
 msgstr ""
 
-#: templates/funhome/_navbar.html:68
+#: funhome/templates/funhome/_navbar.html:63
 msgid "Log In"
 msgstr ""
 
-#: templates/funhome/appreciation_detail.html:13
+#: funhome/templates/funhome/appreciation_detail.html:13
 msgid "appreciation detail"
 msgstr ""
 
-#: templates/funhome/funhomesticker_detail.html:13
-#: templates/funhome/homesticker_detail.html:13
+#: funhome/templates/funhome/funhomesticker_detail.html:13
+#: funhome/templates/funhome/homesticker_detail.html:13
 msgid "Sticker detail"
 msgstr ""
 
-#: templates/funhome/funhomesticker_list.html:13
-#: templates/funhome/funhomesticker_list.html:18
-#: templates/funhome/homesticker_list.html:13
-#: templates/funhome/homesticker_list.html:18
+#: funhome/templates/funhome/funhomesticker_list.html:13
+#: funhome/templates/funhome/funhomesticker_list.html:18
+#: funhome/templates/funhome/homesticker_list.html:13
+#: funhome/templates/funhome/homesticker_list.html:18
 msgid "Sticker list"
 msgstr ""
 
-#: templates/funhome/funhomesticker_list.html:21
+#: funhome/templates/funhome/funhomesticker_list.html:21
 msgid "Older"
 msgstr ""
 
-#: templates/funhome/home_appreciation.html:11
+#: funhome/templates/funhome/home_appreciation.html:11
 msgid "Why choose us"
 msgstr ""
 
-#: templates/funhome/home_funhomesticker.html:102
+#: funhome/templates/funhome/home_funhomesticker.html:101
 msgid "View all"
 msgstr ""
 
-#: templates/funhome/home_join_us.html:9
+#: funhome/templates/funhome/home_join_us.html:9
 msgid "Join us now"
 msgstr ""
 
-#: templates/funhome/home_join_us.html:24
+#: funhome/templates/funhome/home_join_us.html:24
 msgid "E-mail"
 msgstr "邮箱地址"
 
-#: templates/funhome/home_join_us.html:39
+#: funhome/templates/funhome/home_join_us.html:39
 msgid "Username"
 msgstr ""
 
-#: templates/funhome/home_join_us.html:55
+#: funhome/templates/funhome/home_join_us.html:55
 msgid "Password"
 msgstr ""
 
-#: templates/funhome/home_join_us.html:67
+#: funhome/templates/funhome/home_join_us.html:67
 msgid "Password (again)"
 msgstr ""
 
-#: templates/funhome/home_join_us.html:80
+#: funhome/templates/funhome/home_join_us.html:80
 msgid "Join now"
 msgstr ""
 
-#: templates/funhome/home_join_us.html:90
+#: funhome/templates/funhome/home_join_us.html:90
 msgid "Already have an account"
 msgstr ""
 
-#: templates/funhome/legal_information.html:21
+#: funhome/templates/funhome/legal_information.html:21
 msgid "LEGAL INFORMATION"
 msgstr ""
 
-#: templates/funuser/_funuser_url.html:12
+#: funhome/views.py:154 funhome/views.py:187
+msgid "Larry`s sharing"
+msgstr ""
+
+#: funhome/views.py:161 funhome/views.py:193
+msgid "larry"
+msgstr ""
+
+#: funuser/modelforms.py:31
+msgid "Full name"
+msgstr ""
+
+#: funuser/models.py:21
+msgid "Avatar"
+msgstr ""
+
+#: funuser/models.py:24
+msgid "Brith date"
+msgstr ""
+
+#: funuser/models.py:26 funuser/models.py:31 funuser/models.py:36
+#: funuser/models.py:41 funuser/models.py:46 funuser/models.py:51
+#: funuser/models.py:56
+msgid "Is outward"
+msgstr ""
+
+#: funuser/models.py:29 funuser/templates/funuser/funuser_detail.html:55
+#: funuser/templates/funuser/funuser_update.html:64
+msgid "Address"
+msgstr ""
+
+#: funuser/models.py:34 funuser/templates/funuser/funuser_detail.html:62
+#: funuser/templates/funuser/funuser_update.html:83
+msgid "Hometown"
+msgstr ""
+
+#: funuser/models.py:39 funuser/templates/funuser/funuser_detail.html:69
+#: funuser/templates/funuser/funuser_update.html:100
+msgid "College"
+msgstr ""
+
+#: funuser/models.py:44 funuser/templates/funuser/funuser_detail.html:76
+#: funuser/templates/funuser/funuser_update.html:116
+msgid "Occupation"
+msgstr ""
+
+#: funuser/models.py:49
+msgid "Hobby"
+msgstr ""
+
+#: funuser/models.py:54 funuser/templates/funuser/funuser_detail.html:83
+#: funuser/templates/funuser/funuser_update.html:132
+msgid "Motto"
+msgstr ""
+
+#: funuser/templates/funuser/_funuser_url.html:12
 msgid "Information"
 msgstr ""
 
-#: templates/funuser/_funuser_url.html:16
+#: funuser/templates/funuser/_funuser_url.html:16
 msgid "Reset password"
 msgstr ""
 
-#: templates/funuser/funuser_detail.html:16
+#: funuser/templates/funuser/funuser_detail.html:16
 #, python-format
 msgid ""
 "\n"
@@ -1566,1326 +1731,20 @@ msgid ""
 "            "
 msgstr ""
 
-#: templates/funuser/funuser_update.html:52
-#: templates/funuser/funuser_update.html:74
-#: templates/funuser/funuser_update.html:91
-#: templates/funuser/funuser_update.html:108
-#: templates/funuser/funuser_update.html:124
-#: templates/funuser/funuser_update.html:140
+#: funuser/templates/funuser/funuser_detail.html:48
+#: funuser/templates/funuser/funuser_update.html:44
+msgid "Birth date"
+msgstr ""
+
+#: funuser/templates/funuser/funuser_update.html:50
+#: funuser/templates/funuser/funuser_update.html:72
+#: funuser/templates/funuser/funuser_update.html:89
+#: funuser/templates/funuser/funuser_update.html:106
+#: funuser/templates/funuser/funuser_update.html:122
+#: funuser/templates/funuser/funuser_update.html:138
 msgid "is outward"
 msgstr ""
 
-#: templates/openid/login.html:10
-msgid "OpenID Sign In"
-msgstr ""
-
-#: templates/socialaccount/authentication_error.html:5
-#: templates/socialaccount/authentication_error.html:8
-msgid "Social Network Login Failure"
-msgstr ""
-
-#: templates/socialaccount/authentication_error.html:10
-msgid ""
-"An error occurred while attempting to login via your social network account."
-msgstr ""
-
-#: templates/socialaccount/connections.html:5
-#: templates/socialaccount/connections.html:8
-msgid "Account Connections"
-msgstr ""
-
-#: templates/socialaccount/connections.html:12
-msgid ""
-"\n"
-"            You can sign in to your account using any of the following third "
-"party accounts:\n"
-"        "
-msgstr ""
-
-#: templates/socialaccount/connections.html:48
-msgid ""
-"You currently have no social network accounts connected to this account."
-msgstr ""
-
-#: templates/socialaccount/connections.html:52
-msgid "Add a 3rd Party Account"
-msgstr ""
-
-#: templates/socialaccount/login_cancelled.html:5
-#: templates/socialaccount/login_cancelled.html:9
-msgid "Login Cancelled"
-msgstr ""
-
-#: templates/socialaccount/login_cancelled.html:14
-msgid ""
-"\n"
-"            You decided to cancel logging in to our site using one of your "
-"existing accounts. If this was a mistake, please proceed to \n"
-"        "
-msgstr ""
-
-#: templates/socialaccount/messages/account_connected.txt:2
-msgid ""
-"\n"
-"    The social account has been connected.\n"
-msgstr ""
-
-#: templates/socialaccount/messages/account_connected_other.txt:2
-msgid ""
-"\n"
-"    The social account is already connected to a different account.\n"
-msgstr ""
-
-#: templates/socialaccount/messages/account_disconnected.txt:2
-msgid ""
-"\n"
-"    The social account has been disconnected.\n"
-msgstr ""
-
-#: templates/socialaccount/signup.html:16
-#, python-format
-msgid ""
-"\n"
-"      You are about to use your %(provider_name)s account to login to\n"
-"      %(site_name)s. As a final step, please complete the following form:\n"
-"    "
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/forms.py:6
-msgid "Search files"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:5
-msgid "Select an image to embed"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:27
-msgid "Browse for the image you want, then click 'Embed Image' to continue..."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:29
-msgid ""
-"No images found. Upload images using the 'Image Button' dialog's 'Upload' "
-"tab."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:50
-msgid "Images in: "
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:62
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:80
-msgid "Embed Image"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:146
-msgid "Play Slideshow"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:147
-msgid "Pause Slideshow"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:148
-msgid "&lsaquo; Previous Photo"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:149
-msgid "Next Photo &rsaquo;"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:150
-msgid "Next &rsaquo;"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/ckeditor_uploader/templates/ckeditor/browse.html:151
-msgid "&lsaquo; Prev"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_form_helper.py:129
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_form_helper.py:139
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:54
-msgid "This field is required."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout.py:392
-msgid "i18n text"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout.py:394
-msgid "i18n legend"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout_objects.py:142
-#: venv/lib/python3.9/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/contrib/messages/apps.py:7
-msgid "Messages"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/contrib/sitemaps/apps.py:8
-msgid "Site Maps"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/contrib/syndication/apps.py:7
-msgid "Syndication"
-msgstr ""
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:30
-msgid "…"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:51
-msgid "That page number is not an integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:53
-msgid "That page number is less than 1"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/paginator.py:58
-msgid "That page contains no results"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:93
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:664
-msgid "Enter a valid URL."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:150
-msgid "Enter a valid integer."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:161
-msgid "Enter a valid email address."
-msgstr ""
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: venv/lib/python3.9/site-packages/django/core/validators.py:262
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:269
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:278
-#: venv/lib/python3.9/site-packages/django/core/validators.py:288
-#: venv/lib/python3.9/site-packages/django/core/validators.py:311
-msgid "Enter a valid IPv4 address."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:296
-#: venv/lib/python3.9/site-packages/django/core/validators.py:312
-msgid "Enter a valid IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:306
-#: venv/lib/python3.9/site-packages/django/core/validators.py:310
-msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:340
-msgid "Enter only digits separated by commas."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:346
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:379
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:388
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:398
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:413
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:432
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:292
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:327
-msgid "Enter a number."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:434
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:439
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:444
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:506
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:559
-msgid "Null characters are not allowed."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/base.py:1197
-#: venv/lib/python3.9/site-packages/django/forms/models.py:768
-msgid "and"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/base.py:1199
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:100
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:101
-msgid "This field cannot be null."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:102
-msgid "This field cannot be blank."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:103
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
-
-#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
-#. Eg: "Title must be unique for pub_date year"
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:107
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:126
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:958
-#, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:959
-#, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:961
-msgid "Boolean (Either True or False)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1002
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1096
-msgid "Comma-separated integers"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1145
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1147
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1290
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1150
-msgid "Date (without time)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1288
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1292
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1296
-msgid "Date (with time)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1444
-#, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1446
-msgid "Decimal number"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1585
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1588
-msgid "Duration"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1638
-msgid "Email address"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1661
-msgid "File path"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1727
-#, python-format
-msgid "“%(value)s” value must be a float."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1729
-msgid "Floating point number"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1767
-#, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1769
-msgid "Integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1852
-msgid "Big (8 byte) integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1867
-msgid "Small integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1875
-msgid "IPv4 address"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1906
-msgid "IP address"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1986
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1987
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1989
-msgid "Boolean (Either True, False or None)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2043
-msgid "Positive big integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2056
-msgid "Positive integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2069
-msgid "Positive small integer"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2083
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2115
-msgid "Text"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2181
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2183
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2186
-msgid "Time"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2312
-msgid "URL"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2334
-msgid "Raw binary data"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2399
-#, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2401
-msgid "Universally unique identifier"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/files.py:226
-msgid "File"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/files.py:375
-msgid "Image"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/json.py:18
-msgid "A JSON object"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/json.py:20
-msgid "Value must be valid JSON."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:790
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:792
-msgid "Foreign Key (type determined by related field)"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1045
-msgid "One-to-one relationship"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1099
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1100
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1142
-msgid "Many-to-many relationship"
-msgstr ""
-
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: venv/lib/python3.9/site-packages/django/forms/boundfield.py:150
-msgid ":?.!"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:247
-msgid "Enter a whole number."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:391
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1132
-msgid "Enter a valid date."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:415
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1133
-msgid "Enter a valid time."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:443
-msgid "Enter a valid date/time."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:477
-msgid "Enter a valid duration."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:478
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:538
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:539
-msgid "No file was submitted."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:540
-msgid "The submitted file is empty."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:542
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:545
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:606
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:768
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:858
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1309
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:859
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:974
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1308
-msgid "Enter a list of values."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:975
-msgid "Enter a complete value."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1191
-msgid "Enter a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:1221
-msgid "Enter a valid JSON."
-msgstr ""
-
-#. Translators: This is the default suffix added to form field labels
-#: venv/lib/python3.9/site-packages/django/forms/forms.py:76
-msgid ":"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/forms.py:203
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:370
-#, python-format
-msgid "Please submit at most %d form."
-msgid_plural "Please submit at most %d forms."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:377
-#, python-format
-msgid "Please submit at least %d form."
-msgid_plural "Please submit at least %d forms."
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:405
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:412
-msgid "Order"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:763
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:767
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:773
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:782
-msgid "Please correct the duplicate values below."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1109
-msgid "The inline value did not match the parent instance."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1193
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/models.py:1311
-#, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/utils.py:172
-#, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:403
-msgid "Clear"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:404
-msgid "Currently"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
-msgid "Change"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:714
-msgid "Unknown"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:715
-msgid "Yes"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:716
-msgid "No"
-msgstr ""
-
-#. Translators: Please do not add spaces around commas.
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:805
-msgid "yes,no,maybe"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:834
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:851
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:853
-#, python-format
-msgid "%s KB"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:855
-#, python-format
-msgid "%s MB"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:857
-#, python-format
-msgid "%s GB"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:859
-#, python-format
-msgid "%s TB"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:861
-#, python-format
-msgid "%s PB"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:66
-msgid "p.m."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:67
-msgid "a.m."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:72
-msgid "PM"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:73
-msgid "AM"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:146
-msgid "midnight"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:148
-msgid "noon"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Monday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Tuesday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Wednesday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Thursday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:6
-msgid "Friday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:7
-msgid "Saturday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:7
-msgid "Sunday"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Mon"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Tue"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Wed"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Thu"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
-msgid "Fri"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:11
-msgid "Sat"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:11
-msgid "Sun"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:14
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "September"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:15
-msgid "November"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:16
-msgid "December"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "jan"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "feb"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "mar"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "apr"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "may"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
-msgid "jun"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "jul"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "aug"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "sep"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "oct"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "nov"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
-msgid "dec"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:23
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:24
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:25
-msgctxt "abbrev. month"
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:26
-msgctxt "abbrev. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:27
-msgctxt "abbrev. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:28
-msgctxt "abbrev. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:29
-msgctxt "abbrev. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:30
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:31
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:32
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:33
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:34
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:37
-msgctxt "alt. month"
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:38
-msgctxt "alt. month"
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:39
-msgctxt "alt. month"
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:40
-msgctxt "alt. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:41
-msgctxt "alt. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:42
-msgctxt "alt. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:43
-msgctxt "alt. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:44
-msgctxt "alt. month"
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:45
-msgctxt "alt. month"
-msgid "September"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:46
-msgctxt "alt. month"
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:47
-msgctxt "alt. month"
-msgid "November"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/dates.py:48
-msgctxt "alt. month"
-msgid "December"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/ipv6.py:8
-msgid "This is not a valid IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/text.py:71
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/text.py:240
-msgid "or"
-msgstr ""
-
-#. Translators: This string is used as a separator between list elements
-#: venv/lib/python3.9/site-packages/django/utils/text.py:259
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:94
-msgid ", "
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:9
-#, python-format
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:10
-#, python-format
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:11
-#, python-format
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:12
-#, python-format
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:13
-#, python-format
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/utils/timesince.py:14
-#, python-format
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:110
-msgid "Forbidden"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:111
-msgid "CSRF verification failed. Request aborted."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:115
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your Web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:120
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:124
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:132
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:137
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/csrf.py:142
-msgid "More information is available with DEBUG=True."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:41
-msgid "No year specified"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:61
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:111
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:208
-msgid "Date out of range"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:90
-msgid "No month specified"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:142
-msgid "No day specified"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:188
-msgid "No week specified"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:338
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:367
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:594
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:628
-#, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/detail.py:54
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/list.py:67
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/list.py:72
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/generic/list.py:154
-#, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/static.py:40
-msgid "Directory indexes are not allowed here."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/static.py:42
-#, python-format
-msgid "“%(path)s” does not exist"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/static.py:80
-#, python-format
-msgid "Index of %(directory)s"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:7
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:221
-msgid "The install worked successfully! Congratulations!"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:207
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:222
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:230
-msgid "Django Documentation"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:231
-msgid "Topics, references, &amp; how-to’s"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:239
-msgid "Tutorial: A Polling App"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:240
-msgid "Get started with Django"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:248
-msgid "Django Community"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
-msgid "Connect, get help, or contribute"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/imagekit/admin.py:10
-msgid "Thumbnail"
+#: funuser/views.py:47
+msgid "Nice try"
 msgstr ""
