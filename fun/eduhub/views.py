@@ -105,11 +105,14 @@ class LabelListView(ListView):
     def paginate_queryset(self, queryset, page_size):
 
         paginator = self.get_paginator(
-            queryset, page_size, orphans=self.get_paginate_orphans(),
+            queryset, page_size,
+            orphans=self.get_paginate_orphans(),
             allow_empty_first_page=self.get_allow_empty())
+
         page_kwarg = self.page_kwarg
         page = self.kwargs.get(page_kwarg) or \
             self.request.GET.get(page_kwarg) or 1
+
         try:
             page_number = int(page)
         except ValueError:
@@ -117,8 +120,7 @@ class LabelListView(ListView):
                 page_number = paginator.num_pages
             else:
                 raise Http404(
-                    _("Page is not 'last', nor can it be converted to an int.")
-                )
+                    _("Page is not 'last', nor can it be converted to an int."))
         try:
             page = paginator.page(page_number)
             return (paginator, page, page.object_list, page.has_other_pages())
@@ -127,13 +129,16 @@ class LabelListView(ListView):
             return (paginator, page, page.object_list, page.has_other_pages())
 
     def get_queryset(self):
+
         if (not self.request.user.is_authenticated) or \
                 self.request.COOKIES.get('is_my_label_list', False):
-            return Label.objects.filter(is_legal=True)\
+            return Label.objects\
+                .filter(is_legal=True)\
                 .order_by('-creating_date')
+
         else:
-            return Label.objects.filter(is_legal=True,
-                                        author=self.request.user) \
+            return Label.objects\
+                .filter(is_legal=True, author=self.request.user)\
                 .order_by('-creating_date')
 
     def render_to_response(self, context, **response_kwargs):
@@ -150,8 +155,9 @@ class LabelDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('eduhub:label_list')
 
     def post(self, request, *args, **kwargs):
-        if not Label.objects.filter(
-                pk=kwargs['pk'], author=request.user).exists():
+        if not Label.objects\
+            .filter(pk=kwargs['pk'], author=request.user)\
+                .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
 
@@ -167,8 +173,9 @@ class LabelUpdateView(LoginRequiredMixin, UpdateView):
         return '/eduhub/label_list?page=' + self.request.COOKIES.get('page', 1)
 
     def post(self, request, *args, **kwargs):
-        if not Label.objects.filter(
-                pk=kwargs['pk'], author=request.user).exists():
+        if not Label.objects\
+            .filter(pk=kwargs['pk'], author=request.user)\
+                .exists():
             raise Http404()
         return super().post(request, *args, **kwargs)
 
@@ -183,13 +190,14 @@ class FuncontentListView(ListView):
     paginate_orphans = 1
 
     def get_queryset(self):
-        return \
-            Funcontent.objects.filter(
-                label__id=self.kwargs['label_id'],
-                is_legal=True).order_by('-uploading_date') \
+        return Funcontent.objects.filter(
+            label__id=self.kwargs['label_id'],
+            is_legal=True)\
+            .order_by('-uploading_date') \
             if len(str(self.kwargs.get('label_id', ''))) > 0 \
-            else Funcontent.objects.filter(is_legal=True).order_by(
-                '-uploading_date')
+            else Funcontent.objects\
+            .filter(is_legal=True)\
+            .order_by('-uploading_date')
 
     def render_to_response(self, context, **response_kwargs):
         response = super().render_to_response(context, **response_kwargs)
@@ -243,8 +251,9 @@ class FuncontentDeleteView(LoginRequiredMixin, DeleteView):
 
     def post(self, request, *args, **kwargs):
 
-        if not Funcontent.objects.filter(pk=kwargs['label_id'],
-                                         label__author=request.user).exists():
+        if not Funcontent.objects\
+            .filter(pk=kwargs['label_id'], label__author=request.user)\
+                .exists():
             raise Http404()
 
         self.label = Funcontent.objects.get(pk=kwargs['label_id'])
@@ -261,8 +270,9 @@ class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
     template_name = funcontent_update_template
 
     def post(self, request, *args, **kwargs):
-        if not Funcontent.objects.filter(
-                pk=kwargs['pk'], label__author=request.user).exists():
+        if not Funcontent.objects\
+            .filter(pk=kwargs['pk'], label__author=request.user)\
+                .exists():
             raise Http404()
 
         return super().post(request, *args, **kwargs)
@@ -300,8 +310,9 @@ class EduhubSearch(TemplateView):
 
     def get_context_data(self, **kwargs):
         eduhub_top_filter = self.request.COOKIES.get('eduhub_top_filter', '')
-        eduhub_top_filter = _(subjects_top[eduhub_top_filter]) if len(
-            eduhub_top_filter) > 0 else ''
+        eduhub_top_filter = \
+            _(subjects_top[eduhub_top_filter]) if len(eduhub_top_filter) > 0 \
+            else ''
 
         search_filter = self.request.GET.get('filter', '')
         context_data = super().get_context_data(**kwargs)
@@ -309,8 +320,8 @@ class EduhubSearch(TemplateView):
         if search_filter == 'labels' or search_filter == '':
             labels = Label.objects.filter(
                 (Q(name__icontains=self.request.GET.get('q'))
-                 | Q(comment__icontains=self.request.GET.get('q')))).order_by(
-                     '-creating_date')
+                 | Q(comment__icontains=self.request.GET.get('q'))))\
+                .order_by('-creating_date')
 
             paginator = Paginator(labels, 5 if search_filter == '' else 10)
             labels = paginator.get_page(self.request.GET.get('page'))
