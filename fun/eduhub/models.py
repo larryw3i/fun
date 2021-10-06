@@ -26,6 +26,12 @@ eduhubhomesticker_name = 'eduhubhomesticker'
 classification_name = 'classification'
 
 
+#  _____                            _             _
+# |  ___|   _ _ __   ___ ___  _ __ | |_ ___ _ __ | |_
+# | |_ | | | | '_ \ / __/ _ \| '_ \| __/ _ \ '_ \| __|
+# |  _|| |_| | | | | (_| (_) | | | | ||  __/ | | | |_
+# |_|   \__,_|_| |_|\___\___/|_| |_|\__\___|_| |_|\__|
+
 class Classification(models.Model):
     class Meta:
         verbose_name = _('Classification')
@@ -200,6 +206,42 @@ class Funtest(models.Model):
         verbose_name=_('Test commit'))
 
 
+#
+#     _                          _     _
+#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ _
+#   / _ \ | '_ \| '_ \| '__/ _` | / __| | '_ \ / _` |
+#  / ___ \| |_) | |_) | | | (_| | \__ \ | | | | (_| |
+# /_/   \_\ .__/| .__/|_|  \__,_|_|___/_|_| |_|\__, |
+#         |_|   |_|                            |___/
+
+class Appraising(models.Model):
+    class Meta:
+        verbose_name = _('Appraising')
+        verbose_name_plural = _('Appraisings')
+
+    def __str__(self):
+        return self.name
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    amember = models.ForeignKey(
+        to='ASharingGroupMember',
+        on_delete=models.CASCADE,
+        verbose_name=_('Appraisings from'))
+    acontent = models.ForeignKey(
+        to='ASharingContent', on_delete=models.CASCADE,
+        verbose_name=_('Content'))
+    point = models.PositiveSmallIntegerField(
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(10)])
+    DOA = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('Date of Appraising'))
+    comment = models.CharField(
+        max_length=64, verbose_name=_('Comment'))
+
+
 class ASharingContent(models.Model):
     class Meta:
         verbose_name = _('Appraising content')
@@ -217,7 +259,7 @@ class ASharingContent(models.Model):
     title = models.CharField(max_length=64, blank=False,
                              verbose_name=_('Title'))
 
-    acontent = RichTextUploadingField(
+    content = RichTextUploadingField(
         max_length=2048,
         verbose_name=_('Content'))
 
@@ -238,42 +280,6 @@ class ASharingContent(models.Model):
 
     is_legal = models.BooleanField(
         default=True, verbose_name=_('Is content legal'))
-
-
-#
-#     _                          _     _
-#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ _
-#   / _ \ | '_ \| '_ \| '__/ _` | / __| | '_ \ / _` |
-#  / ___ \| |_) | |_) | | | (_| | \__ \ | | | | (_| |
-# /_/   \_\ .__/| .__/|_|  \__,_|_|___/_|_| |_|\__, |
-#         |_|   |_|                            |___/
-
-class Appraising(models.Model):
-    class Meta:
-        verbose_name = _('Appraising')
-        verbose_name_plural = _('Appraisings')
-
-    def __str__(self):
-        return self.name
-
-    id = models.UUIDField(
-        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    afrom = models.ForeignKey(
-        to=Funuser,
-        on_delete=models.CASCADE,
-        verbose_name=_('Appraisings from'))
-    content = models.ForeignKey(
-        to=ASharingContent, on_delete=models.CASCADE,
-        verbose_name=_('Content'))
-    point = models.PositiveSmallIntegerField(
-        validators=[
-            MinValueValidator(0),
-            MaxValueValidator(10)])
-    DOA = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name=_('Date of Appraising'))
-    comment = models.CharField(
-        max_length=64, verbose_name=_('Comment'))
 
 
 class ASharingGroup(models.Model):
@@ -342,13 +348,16 @@ class ASharingGroupMember(models.Model):
         max_length=64, blank=False,
         verbose_name=_('Member Name'))
     funuser = models.ForeignKey(
+        null=False,
         to=Funuser, on_delete=models.CASCADE, verbose_name=_('funuser'))
     asharinggroup = models.ForeignKey(
         to=ASharingGroup, on_delete=models.CASCADE,
         verbose_name=_('ASharing group'))
-    memberclassification = models.ManyToManyField(
+    gclassification = models.ManyToManyField(
         to='ASGMemberClassification', blank=True,
         verbose_name=_('classifications'))
+    isjudge = models.BooleanField(
+        default=False, verbose_name=_('Is judge ?'))
     applyinginfo = models.CharField(
         max_length=64, blank=False, verbose_name=_('applying info'))
     enable = models.BooleanField(

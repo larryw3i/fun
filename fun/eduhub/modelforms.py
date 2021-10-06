@@ -15,6 +15,46 @@ from .models import (Appraising, ASGMemberClassification, ASharingContent,
                      Eduhubhomesticker, Funcontent, Funtest, Label)
 
 
+#     _                          _     _             
+#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ _ 
+#   / _ \ | '_ \| '_ \| '__/ _` | / __| | '_ \ / _` |
+#  / ___ \| |_) | |_) | | | (_| | \__ \ | | | | (_| |
+# /_/   \_\ .__/| .__/|_|  \__,_|_|___/_|_| |_|\__, |
+#         |_|   |_|                            |___/ 
+#  __  __           _      _ _____                    
+# |  \/  | ___   __| | ___| |  ___|__  _ __ _ __ ___  
+# | |\/| |/ _ \ / _` |/ _ \ | |_ / _ \| '__| '_ ` _ \ 
+# | |  | | (_) | (_| |  __/ |  _| (_) | |  | | | | | |
+# |_|  |_|\___/ \__,_|\___|_|_|  \___/|_|  |_| |_| |_|
+
+class AppraisingModelForm(ModelForm):
+    class Meta:
+        model = Appraising
+        fields = ['point', 'comment', 'acontent']
+
+    def clean(self):
+        pass
+
+
+class ASharingCModelForm(ModelForm):
+    class Meta:
+        model = ASharingContent
+        fields = ['title', 'content', 'classification']
+        labels = {
+            'content': _('Content'),
+            'classification': _('Content classification'),
+        }
+        widgets = {
+            'title': forms.TextInput(attrs={
+                'autocomplete': 'off',
+                'placeholder': _('Content title'),
+                'class': 'text-center'}),
+            'comment': forms.Textarea(attrs={'rows': '3'})
+        }
+
+    def clean(self):
+        pass
+
 class ASharingGroupModelForm(ModelForm):
     class Meta:
         model = ASharingGroup
@@ -127,31 +167,3 @@ class ClassificationModelForm(ModelForm):
                 .exists():
             raise ValidationError({'name': _("name exists")})
 
-
-class AppraisingModelForm(ModelForm):
-    class Meta:
-        model = Appraising
-        fields = ['point', 'comment', 'content']
-
-    def clean(self):
-        pass
-
-
-class ASharingCModelForm(ModelForm):
-    class Meta:
-        model = ASharingContent
-        fields = ['title', 'acontent', 'classification']
-        labels = {
-            'content': _('Content'),
-            'classification': _('Content classification'),
-        }
-        widgets = {
-            'title': forms.TextInput(attrs={
-                'autocomplete': 'off',
-                'placeholder': _('Content title'),
-                'class': 'text-center'}),
-            'comment': forms.Textarea(attrs={'rows': '3'})
-        }
-
-    def clean(self):
-        pass

@@ -61,6 +61,18 @@ eduhub_search_result_template = f'eduhub/eduhub_search_result.html'
 eduhub_how_to_classification_template = f'eduhub/how_to_classification.html'
 
 
+#  _____                            _             _
+# |  ___|   _ _ __   ___ ___  _ __ | |_ ___ _ __ | |_
+# | |_ | | | | '_ \ / __/ _ \| '_ \| __/ _ \ '_ \| __|
+# |  _|| |_| | | | | (_| (_) | | | | ||  __/ | | | |_
+# |_|   \__,_|_| |_|\___\___/|_| |_|\__\___|_| |_|\__|
+# __     ___
+# \ \   / (_) _____      __
+#  \ \ / /| |/ _ \ \ /\ / /
+#   \ V / | |  __/\ V  V /
+#    \_/  |_|\___| \_/\_/
+
+
 class LabelCreateView(LoginRequiredMixin, CreateView):
     model = Label
     form_class = LabelModelForm
@@ -288,6 +300,42 @@ class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
             kwargs={'label_id': self.object.label.id})
 
 
+funtest_create_template = f'eduhub/{funtest_name}_create.html'
+funtest_content_preview = f'eduhub/funtest_content_preview.html'
+
+class FuntestCreateView(CreateView):
+    model = Funtest
+    template_name = funtest_create_template
+    form_class = FuntestModelForm
+
+    def form_valid(self, form):
+        form.instance.test_owner = self.request.user
+        return super().form_valid(form)
+
+
+
+
+class FuntestContentPreview(TemplateView):
+    template_name = funtest_content_preview
+
+
+def how_to_classification(request):
+    if request.method == 'GET':
+        return render(request, eduhub_how_to_classification_template)
+
+
+#  _____    _       _           _     _                        __
+# | ____|__| |_   _| |__  _   _| |__ | |__   ___  _ __ ___   __\ \
+# |  _| / _` | | | | '_ \| | | | '_ \| '_ \ / _ \| '_ ` _ \ / _ \ \
+# | |__| (_| | |_| | | | | |_| | |_) | | | | (_) | | | | | |  __/\ \
+# |_____\__,_|\__,_|_| |_|\__,_|_.__/|_| |_|\___/|_| |_| |_|\___| \_\
+#      _   _      _           __     ___
+#  ___| |_(_) ___| | _____ _ _\ \   / (_) _____      __
+# / __| __| |/ __| |/ / _ \ '__\ \ / /| |/ _ \ \ /\ / /
+# \__ \ |_| | (__|   <  __/ |   \ V / | |  __/\ V  V /
+# |___/\__|_|\___|_|\_\___|_|    \_/  |_|\___| \_/\_/
+
+
 class EduhubhomestickerListView(ListView):
     model = Eduhubhomesticker
     template_name = eduhubhomesticker_list_template
@@ -348,31 +396,6 @@ class EduhubSearch(TemplateView):
         return context_data
 
 
-funtest_create_template = f'eduhub/{funtest_name}_create.html'
-
-
-class FuntestCreateView(CreateView):
-    model = Funtest
-    template_name = funtest_create_template
-    form_class = FuntestModelForm
-
-    def form_valid(self, form):
-        form.instance.test_owner = self.request.user
-        return super().form_valid(form)
-
-
-funtest_content_preview = f'eduhub/funtest_content_preview.html'
-
-
-class FuntestContentPreview(TemplateView):
-    template_name = funtest_content_preview
-
-
-def how_to_classification(request):
-    if request.method == 'GET':
-        return render(request, eduhub_how_to_classification_template)
-
-
 appraising_create_template = 'eduhub/appraising_create.html'
 appraising_list_template = 'eduhub/appraising_list.html'
 appraising_update_template = 'eduhub/appraising_update.html'
@@ -380,6 +403,12 @@ appraising_detail_template = 'eduhub/appraising_detail.html'
 appraising_delete_template = 'eduhub/appraising_delete.html'
 
 
+#     _                          _     _           __     ___
+#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ \ \   / (_) _____      __
+#   / _ \ | '_ \| '_ \| '__/ _` | / __| | '_ \ / _` \ \ / /| |/ _ \ \ /\ / /
+#  / ___ \| |_) | |_) | | | (_| | \__ \ | | | | (_| |\ V / | |  __/\ V  V /
+# /_/   \_\ .__/| .__/|_|  \__,_|_|___/_|_| |_|\__, | \_/  |_|\___| \_/\_/
+#         |_|   |_|                            |___/
 class AppraisingListView(ListView):
     model = Appraising
     template_name = appraising_list_template
@@ -392,6 +421,14 @@ class AppraisingCreateView(LoginRequiredMixin, CreateView):
     template_name = appraising_create_template
     form_class = AppraisingModelForm
     pk_url_kwarg = 'appraising_c_id'
+
+    def form_valid(self, form):
+        if not form.instance.amember.isjudge:
+            return Http404()
+        form.instance.acontent = ASharingContent.objects\
+        .get(self.kwargs['appraising_c_id'])
+        return super().form_valid(form)
+
     pass
 
 
@@ -415,7 +452,18 @@ class AppraisingDetailView(DetailView):
     form_class = AppraisingModelForm
     pass
 
-
+#     _    ____  _                _           __    
+#    / \  / ___|| |__   __ _ _ __(_)_ __   __ \ \   
+#   / _ \ \___ \| '_ \ / _` | '__| | '_ \ / _` \ \  
+#  / ___ \ ___) | | | | (_| | |  | | | | | (_| |\ \ 
+# /_/   \_\____/|_| |_|\__,_|_|  |_|_| |_|\__, | \_\
+#                                         |___/     
+#   ____            _             _ __     ___               
+#  / ___|___  _ __ | |_ ___ _ __ | |\ \   / (_) _____      __
+# | |   / _ \| '_ \| __/ _ \ '_ \| __\ \ / /| |/ _ \ \ /\ / /
+# | |__| (_) | | | | ||  __/ | | | |_ \ V / | |  __/\ V  V / 
+#  \____\___/|_| |_|\__\___|_| |_|\__| \_/  |_|\___| \_/\_/  
+                                                           
 appraising_c_create_template = 'eduhub/appraising_c_create.html'
 appraising_c_list_template = 'eduhub/appraising_c_list.html'
 appraising_c_update_template = 'eduhub/appraising_c_update.html'

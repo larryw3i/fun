@@ -28,21 +28,30 @@ from .models import (Appraising, ASGMemberClassification, ASharingContent,
 #  / ___ \ (_| | | | | | | | | | |
 # /_/   \_\__,_|_| |_| |_|_|_| |_|
 
-
 @admin.register(Appraising)
 class AppraisingAdmin(admin.ModelAdmin):
-    list_display = ('afrom', 'content', 'point', 'DOA')
+    list_display = ('amember', 'acontent', 'point', 'DOA')
     form = AppraisingModelForm
     ordering = ('-DOA',)
 
+    def save_model(self, request, obj, form, change):
+        obj.amember = ASharingGroupMember.objects.get(funuser = request.user)
+        return super().save_model(request, obj, form, change)
 
 @admin.register(ASharingGroupMember)
 class ASharingGroupMemberAdmin(admin.ModelAdmin):
-    fields = ['mname', 'funuser', 'asharinggroup', 'memberclassification',
-              'enable']
-    list_display = ['mname','asharinggroup',  'applyinginfo', 'enable', 'DOJ']
+    fields = ['mname', 'funuser', 'asharinggroup', 'gclassification',
+              'isjudge', 'enable']
+    list_display = [
+        'mname',
+        'asharinggroup',
+        'applyinginfo',
+        'isjudge',
+        'enable',
+        'DOJ']
     ordering = ('-DOJ',)
     form = ASGMemberModelForm
+
 
 @admin.register(ASGMemberClassification)
 class ASGMemberClassificationAdmin(admin.ModelAdmin):
@@ -56,6 +65,7 @@ class ASharingGroupAdmin(admin.ModelAdmin):
                     'DOC')
     form = ASharingGroupModelForm
     ordering = ('-DOC',)
+
     def save_model(self, request, obj, form, change):
         obj.founder = request.user
         return super().save_model(request, obj, form, change)
