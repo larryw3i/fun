@@ -61,6 +61,22 @@ urlpatterns = [
          views.ASharingCUpdateView.as_view(), name='appraising_c_update'),
 
 
+
+
+    path('asgmember_list',
+         views.ASGMemberListView.as_view(), name='asgmember_list'),
+    path('asgmember_create',
+         views.ASGMemberCreateView.as_view(), name='asgmember_create'),
+    path('asgmember_detail/<uuid:pk>',
+         views.ASGMemberDetailView.as_view(), name='asgmember_detail'),
+    path('asgmember_delete/<uuid:pk>',
+         views.ASGMemberDeleteView.as_view(), name='asgmember_delete'),
+    path('asgmember_update/<uuid:pk>',
+         views.ASGMemberUpdateView.as_view(), name='asgmember_update'),
+
+
+
+
     path('funtest_create/', views.FuntestCreateView.as_view(),
          name='funtest_create'),
 

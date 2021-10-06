@@ -1281,7 +1281,7 @@ msgstr "文学"
 
 #: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:234
 msgid "History"
-msgstr "历史学"
+msgstr "历史"
 
 #: eduhub/templates/eduhub/_top_filters/_eduhub_base_top_filter.html:239
 msgid "Sciences"

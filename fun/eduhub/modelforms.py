@@ -39,7 +39,7 @@ class ASGMemberClassificationModelForm(ModelForm):
         }
 
 
-class ASharingGroupMemberModelForm(ModelForm):
+class ASGMemberModelForm(ModelForm):
     class Meta:
         model = ASharingGroupMember
         fields = ['applyinginfo']

@@ -240,6 +240,14 @@ class ASharingContent(models.Model):
         default=True, verbose_name=_('Is content legal'))
 
 
+#
+#     _                          _     _
+#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ _
+#   / _ \ | '_ \| '_ \| '__/ _` | / __| | '_ \ / _` |
+#  / ___ \| |_) | |_) | | | (_| | \__ \ | | | | (_| |
+# /_/   \_\ .__/| .__/|_|  \__,_|_|___/_|_| |_|\__, |
+#         |_|   |_|                            |___/
+
 class Appraising(models.Model):
     class Meta:
         verbose_name = _('Appraising')
@@ -272,6 +280,7 @@ class ASharingGroup(models.Model):
     class Meta:
         verbose_name = _('ASharingGroup')
         verbose_name_plural = _('ASharingGroups')
+
     def __str__(self):
         return self.name
     id = models.UUIDField(
@@ -286,7 +295,7 @@ class ASharingGroup(models.Model):
     comment = models.CharField(
         max_length=64, verbose_name=_('ASharingGroup Comment'))
     DOC = models.DateTimeField(
-        auto_now_add=True, verbose_name=_('Date of Appraising'))
+        auto_now_add=True, verbose_name=_('Date of creating'))
     is_legal = models.BooleanField(
         default=True, verbose_name=_('Is legal?'))
 
@@ -299,10 +308,10 @@ class ASGMemberClassification(models.Model):
     def __str__(self):
         return ('' if self.parent is None
                 else str(self.parent) + '/'
-                ) + _(self.name)
+                ) + _(self.cname)
 
     def clean(self):
-        if '/' in self.name:
+        if '/' in self.cname:
             raise ValidationError({
                 'name': _("name includes '/' is not allowed")})
     id = models.UUIDField(
@@ -315,6 +324,7 @@ class ASGMemberClassification(models.Model):
         blank=False,
         verbose_name=_('Classification Name'))
     comment = models.CharField(
+        null=True, blank=True,
         max_length=64, verbose_name=_('Classification Comment'))
 
 
@@ -337,7 +347,7 @@ class ASharingGroupMember(models.Model):
         to=ASharingGroup, on_delete=models.CASCADE,
         verbose_name=_('ASharing group'))
     memberclassification = models.ManyToManyField(
-        to='ASGMemberClassification',  blank=True,
+        to='ASGMemberClassification', blank=True,
         verbose_name=_('classifications'))
     applyinginfo = models.CharField(
         max_length=64, blank=False, verbose_name=_('applying info'))

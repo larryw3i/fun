@@ -23,10 +23,11 @@ from humanize import naturalsize
 from fun import bleach_clean, settings, subjects_top
 
 from .apps import EduhubConfig
-from .modelforms import (AppraisingModelForm, ASharingCModelForm,
-                         EduhubhomestickerModelForm, FuncontentModelForm,
-                         FuntestModelForm, LabelModelForm)
-from .models import (Appraising, ASharingContent, Classification,
+from .modelforms import (AppraisingModelForm, ASGMemberModelForm,
+                         ASharingCModelForm, EduhubhomestickerModelForm,
+                         FuncontentModelForm, FuntestModelForm, LabelModelForm)
+from .models import (Appraising, ASGMemberClassification, ASharingContent,
+                     ASharingGroup, ASharingGroupMember, Classification,
                      Eduhubhomesticker, Funcontent, Funtest, Label,
                      content_name, eduhubhomesticker_name, funcontent_name,
                      funtest_name, label_name)
@@ -493,4 +494,91 @@ class ASharingCDetailView(DetailView):
     template_name = appraising_c_detail_template
     form_class = ASharingCModelForm
     context_object_name = 'asharingcontent'
+    pass
+
+
+#     _    ____   ____ __  __                _
+#    / \  / ___| / ___|  \/  | ___ _ __ ___ | |__   ___ _ __
+#   / _ \ \___ \| |  _| |\/| |/ _ \ '_ ` _ \| '_ \ / _ \ '__|
+#  / ___ \ ___) | |_| | |  | |  __/ | | | | | |_) |  __/ |
+# /_/   \_\____/ \____|_|  |_|\___|_| |_| |_|_.__/ \___|_|
+#
+asgmember_create_template = 'eduhub/asgmember_create.html'
+asgmember_list_template = 'eduhub/asgmember_list.html'
+asgmember_update_template = 'eduhub/asgmember_update.html'
+asgmember_detail_template = 'eduhub/asgmember_detail.html'
+asgmember_delete_template = 'eduhub/asgmember_delete.html'
+
+
+class ASGMemberListView(ListView):
+    model = ASharingGroupMember
+    template_name = asgmember_list_template
+    form_class = AppraisingModelForm
+    context_object_name = 'asgmembers'
+
+    def get_queryset(self):
+        return ASharingGroupMember.objects\
+            .filter(is_legal=True)\
+            .order_by('-DOU')
+
+
+class ASGMemberCreateView(LoginRequiredMixin, CreateView):
+    model = ASharingGroupMember
+    template_name = asgmember_create_template
+    form_class = ASGMemberModelForm
+    context_object_name = 'asgmember'
+    success_url = reverse_lazy('eduhub:asgmember_list')
+
+    def get_initial(self):
+        initial = super().get_initial()
+        classification_id = self.request.COOKIES.get(
+            'classification', uuid.UUID(int=0))
+        initial['classification'] = Classification.objects.get(
+            pk=classification_id)
+        return initial
+
+    def form_valid(self, form):
+        form.instance.acontent = bleach_clean(form.instance.acontent)
+        form.instance.cfrom = self.request.user
+        return super().form_valid(form)
+
+
+class ASGMemberUpdateView(LoginRequiredMixin, UpdateView):
+    model = ASharingGroupMember
+    template_name = asgmember_update_template
+    form_class = ASGMemberModelForm
+    context_object_name = 'asgmember'
+
+    def post(self, request, *args, **kwargs):
+        if not ASharingGroupMember.objects\
+            .filter(pk=self.pk, cfrom=request.user)\
+                .exists():
+            raise Http404()
+        return super().post(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        form.instance.acontent = bleach_clean(form.instance.acontent)
+        form.instance.cfrom = self.request.user
+        return super().form_valid(form)
+
+
+class ASGMemberDeleteView(LoginRequiredMixin, DeleteView):
+    model = ASharingGroupMember
+    template_name = asgmember_delete_template
+    form_class = ASGMemberModelForm
+    context_object_name = 'asgmember'
+
+    def post(self, request, *args, **kwargs):
+        if not ASharingGroupMember.objects\
+            .filter(pk=self.pk, cfrom=request.user)\
+                .exists():
+            raise Http404()
+        return super().post(request, *args, **kwargs)
+
+
+class ASGMemberDetailView(DetailView):
+    model = ASharingGroupMember
+    template_name = asgmember_detail_template
+    form_class = ASGMemberModelForm
+    context_object_name = 'asgmember'
     pass
