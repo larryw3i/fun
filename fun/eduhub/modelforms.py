@@ -10,8 +10,43 @@ from django.core.exceptions import ValidationError
 from django.forms import ImageField, ModelForm
 from django.utils.translation import gettext_lazy as _
 
-from .models import (Appraising, ASharingContent, Classification,
+from .models import (Appraising, ASGMemberClassification, ASharingContent,
+                     ASharingGroup, ASharingGroupMember, Classification,
                      Eduhubhomesticker, Funcontent, Funtest, Label)
+
+
+class ASharingGroupModelForm(ModelForm):
+    class Meta:
+        model = ASharingGroup
+        fields = ['name', 'subtitle', 'comment']
+
+        labels = {
+            'name': _('ASharingGroup name'),
+            'subtitle': _('ASharingGroup subtitle'),
+            'comment': _('ASharingGroup comment'),
+        }
+
+
+class ASGMemberClassificationModelForm(ModelForm):
+    class Meta:
+        model = ASGMemberClassification
+        fields = ['parent', 'cname', 'comment']
+
+        labels = {
+            'parent': _('Parent classification'),
+            'cname': _('Classification Name'),
+            'comment': _('Classification Comment'),
+        }
+
+
+class ASharingGroupMemberModelForm(ModelForm):
+    class Meta:
+        model = ASharingGroupMember
+        fields = ['applyinginfo']
+
+        labels = {
+            'applyinginfo': _('applying info'),
+        }
 
 
 class LabelModelForm(ModelForm):

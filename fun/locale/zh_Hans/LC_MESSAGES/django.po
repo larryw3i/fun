@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 05:11+0800\n"
-"PO-Revision-Date: 2021-10-06 05:28+0800\n"
+"POT-Creation-Date: 2021-10-06 13:37+0800\n"
+"PO-Revision-Date: 2021-10-06 13:40+0800\n"
 "Last-Translator: larry <larryw3i@163.com>\n"
-"Language-Team: Chinese <larryw3i@163.com>\n"
-"Language: zh\n"
+"Language-Team: Chinese (Simplified) <larryw3i@163.com>\n"
+"Language: zh_CHS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 40.0\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: auth/templates/account/account_inactive.html:5
 #: auth/templates/account/account_inactive.html:8
@@ -165,6 +165,10 @@ msgid ""
 "\n"
 "To confirm this is correct, go to %(activate_url)s"
 msgstr ""
+"您收到此邮件是因为用户 %(user_display)s 使用你的邮件地址在我们的站点 "
+"%(site_domain)s 注册账号.\n"
+"\n"
+"如果是你注册, 请点击 %(activate_url)s 确认"
 
 #: auth/templates/account/email/email_confirmation_subject.html:3
 #: auth/templates/account/email/email_confirmation_subject.txt:3
@@ -727,7 +731,7 @@ msgstr ""
 "你将使用 %(provider_name)s 账号登录\n"
 "%(site_name)s. :"
 
-#: eduhub/admin.py:118
+#: eduhub/admin.py:138
 msgid "None"
 msgstr "空"
 
@@ -803,16 +807,13 @@ msgid "Parent classification"
 msgstr "父类"
 
 #: eduhub/models.py:54
-#, fuzzy
-#| msgid "Classification creating date"
 msgid "Classification name('/' cannot be included)"
-msgstr "创建时间"
+msgstr "分类名(不能包含'/')"
 
 #: eduhub/models.py:58
-#, fuzzy
 #| msgid "Classification name"
 msgid "Classification comment"
-msgstr "类名"
+msgstr "分类备注"
 
 #: eduhub/models.py:64
 msgid "Eduhub label"
@@ -931,22 +932,18 @@ msgid "Last modifying date"
 msgstr "创建时间"
 
 #: eduhub/models.py:205
-#, fuzzy
-#| msgid "appreciation content"
 msgid "Appraising content"
-msgstr "评价内容"
+msgstr "内容"
 
 #: eduhub/models.py:206 eduhub/templates/eduhub/appraising_c_list.html:11
-#, fuzzy
 #| msgid "appreciation content"
 msgid "Appraising contents"
-msgstr "评价内容"
+msgstr "分享内容"
 
 #: eduhub/models.py:215
-#, fuzzy
 #| msgid "Content file"
 msgid "Content from"
-msgstr "内容文件"
+msgstr "分享来自"
 
 #: eduhub/models.py:218
 #, fuzzy
@@ -956,11 +953,11 @@ msgstr "标题"
 
 #: eduhub/models.py:226
 msgid "Date of appraising content creating"
-msgstr ""
+msgstr "创建时间"
 
 #: eduhub/models.py:230
 msgid "Date of appraising content updating"
-msgstr ""
+msgstr "更新时间"
 
 #: eduhub/models.py:245
 #, fuzzy
@@ -976,13 +973,12 @@ msgstr "评价"
 
 #: eduhub/models.py:256
 msgid "Appraisings from"
-msgstr ""
+msgstr "打分者"
 
 #: eduhub/models.py:266
-#, fuzzy
 #| msgid "Date out of range"
 msgid "Date of Appraising"
-msgstr "日期超出范围"
+msgstr "打分时间"
 
 #: eduhub/templates/eduhub/_classification_nav.html:15
 msgid "subject"
@@ -1160,8 +1156,6 @@ msgid "Eduhub contents"
 msgstr "内容"
 
 #: eduhub/templates/eduhub/_eduhub_base.html:65
-#, fuzzy
-#| msgid "Eduhub labels"
 msgid "Eduhub appraising"
 msgstr "打卡区"
 
@@ -1346,7 +1340,7 @@ msgstr "确定要删除"
 
 #: eduhub/templates/eduhub/appraising_c_delete.html:21
 #: eduhub/templates/eduhub/appraising_c_detail.html:51
-#: eduhub/templates/eduhub/appraising_c_list.html:56
+#: eduhub/templates/eduhub/appraising_c_list.html:53
 #: eduhub/templates/eduhub/appraising_delete.html:26
 #: eduhub/templates/eduhub/appraising_detail.html:47
 #: eduhub/templates/eduhub/appraising_list.html:68
@@ -1371,7 +1365,7 @@ msgid "Unknown user"
 msgstr "未知用户"
 
 #: eduhub/templates/eduhub/appraising_c_detail.html:47
-#: eduhub/templates/eduhub/appraising_c_list.html:50
+#: eduhub/templates/eduhub/appraising_c_list.html:48
 #: eduhub/templates/eduhub/appraising_detail.html:44
 #: eduhub/templates/eduhub/appraising_list.html:62
 #: eduhub/templates/eduhub/eduhubhomesticker_detail.html:44
@@ -1383,14 +1377,14 @@ msgstr "未知用户"
 msgid "Edit"
 msgstr "编辑"
 
-#: eduhub/templates/eduhub/appraising_c_list.html:14
+#: eduhub/templates/eduhub/appraising_c_list.html:15
 #: eduhub/templates/eduhub/appraising_list.html:25
 #: eduhub/templates/eduhub/funcontent_list.html:25
 #: eduhub/templates/eduhub/label_list.html:15
 msgid "Add"
 msgstr "添加"
 
-#: eduhub/templates/eduhub/appraising_c_list.html:43
+#: eduhub/templates/eduhub/appraising_c_list.html:42
 #: eduhub/templates/eduhub/appraising_list.html:55
 #: eduhub/templates/eduhub/eduhubhomesticker_list.html:53
 #: eduhub/templates/eduhub/funcontent_list.html:55
@@ -1517,10 +1511,9 @@ msgid "Page is not 'last', nor can it be converted to an int."
 msgstr "页数不是最后一页也不是数字哦."
 
 #: fun/apps.py:7
-#, fuzzy
 #| msgid "Sun"
 msgid "Fun"
-msgstr "周日"
+msgstr "Fun"
 
 #: fun/settings.py:183 fun/settings_.py:182
 msgid "English"
@@ -1528,11 +1521,11 @@ msgstr "English"
 
 #: fun/settings.py:184
 msgid "Chinese Simplified"
-msgstr ""
+msgstr "简体中文"
 
 #: fun/settings.py:185
 msgid "Chinese(China)"
-msgstr ""
+msgstr "中文(大陆)"
 
 #: funhome/apps.py:7
 msgid "Fun home"

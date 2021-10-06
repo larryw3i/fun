@@ -1,3 +1,4 @@
+
 django
 django-crispy-forms
 django-imagekit
@@ -7,7 +8,3 @@ django-allauth
 bleach
 humanize
 python-magic
-
-# dev
-autopep8
-isort

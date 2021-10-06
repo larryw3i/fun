@@ -266,3 +266,82 @@ class Appraising(models.Model):
         verbose_name=_('Date of Appraising'))
     comment = models.CharField(
         max_length=64, verbose_name=_('Comment'))
+
+
+class ASharingGroup(models.Model):
+    class Meta:
+        verbose_name = _('ASharingGroup')
+        verbose_name_plural = _('ASharingGroups')
+    def __str__(self):
+        return self.name
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    name = models.CharField(
+        max_length=64, blank=False, verbose_name=_('Name'))
+    subtitle = models.CharField(
+        max_length=64, blank=False, verbose_name=_('Subtitle'))
+    founder = models.ForeignKey(
+        to=Funuser, on_delete=models.CASCADE,
+        verbose_name=_('ASharingGroup Founder'))
+    comment = models.CharField(
+        max_length=64, verbose_name=_('ASharingGroup Comment'))
+    DOC = models.DateTimeField(
+        auto_now_add=True, verbose_name=_('Date of Appraising'))
+    is_legal = models.BooleanField(
+        default=True, verbose_name=_('Is legal?'))
+
+
+class ASGMemberClassification(models.Model):
+    class Meta:
+        verbose_name = _('ASharingGroup member Classification')
+        verbose_name_plural = _('ASharingGroup member Classifications')
+
+    def __str__(self):
+        return ('' if self.parent is None
+                else str(self.parent) + '/'
+                ) + _(self.name)
+
+    def clean(self):
+        if '/' in self.name:
+            raise ValidationError({
+                'name': _("name includes '/' is not allowed")})
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    parent = models.ForeignKey(
+        to='self', null=True, blank=True, on_delete=models.SET_NULL,
+        verbose_name=_('Parent classification'))
+    cname = models.CharField(
+        max_length=64,
+        blank=False,
+        verbose_name=_('Classification Name'))
+    comment = models.CharField(
+        max_length=64, verbose_name=_('Classification Comment'))
+
+
+class ASharingGroupMember(models.Model):
+    class Meta:
+        verbose_name = _('ASharingGroup member')
+        verbose_name_plural = _('ASharingGroup members')
+
+    def __str__(self):
+        return self.mname
+
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, editable=False, unique=True)
+    mname = models.CharField(
+        max_length=64, blank=False,
+        verbose_name=_('Member Name'))
+    funuser = models.ForeignKey(
+        to=Funuser, on_delete=models.CASCADE, verbose_name=_('funuser'))
+    asharinggroup = models.ForeignKey(
+        to=ASharingGroup, on_delete=models.CASCADE,
+        verbose_name=_('ASharing group'))
+    memberclassification = models.ManyToManyField(
+        to='ASGMemberClassification',  blank=True,
+        verbose_name=_('classifications'))
+    applyinginfo = models.CharField(
+        max_length=64, blank=False, verbose_name=_('applying info'))
+    enable = models.BooleanField(
+        default=False, verbose_name=_('Is member enable?'))
+    DOJ = models.DateTimeField(
+        auto_now_add=True, verbose_name=_('Date of joining'))

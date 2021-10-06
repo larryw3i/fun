@@ -8,11 +8,40 @@ from django.utils.translation import gettext_lazy as _
 
 from fun import bleach_clean
 
-from .modelforms import (AppraisingModelForm, ASharingCModelForm,
-                         ClassificationModelForm)
+from .modelforms import (AppraisingModelForm, ASGMemberClassificationModelForm,
+                         ASharingCModelForm, ASharingGroupMemberModelForm,
+                         ASharingGroupModelForm, ClassificationModelForm)
 # Register your models here.
-from .models import (Appraising, ASharingContent, Classification,
+from .models import (Appraising, ASGMemberClassification, ASharingContent,
+                     ASharingGroup, ASharingGroupMember, Classification,
                      Eduhubhomesticker, Funcontent, Label)
+
+
+@admin.register(ASharingGroupMember)
+class ASharingGroupMemberAdmin(admin.ModelAdmin):
+    list_display = (
+        'asharinggroup', 'mname', 
+        'applyinginfo', 'enable', 'DOJ'
+    )
+    form = ASharingGroupMemberModelForm
+    ordering = ('-DOJ',)
+
+
+@admin.register(ASGMemberClassification)
+class ASGMemberClassificationAdmin(admin.ModelAdmin):
+    list_display = (
+        '__str__', 'comment',
+    )
+    form = ASGMemberClassificationModelForm
+
+
+@admin.register(ASharingGroup)
+class ASharingGroupAdmin(admin.ModelAdmin):
+    list_display = (
+        'name', 'subtitle', 'founder', 'comment', 'is_legal', 'DOC'
+    )
+    form = ASharingGroupModelForm
+    ordering = ('-DOC',)
 
 
 @admin.register(Appraising)

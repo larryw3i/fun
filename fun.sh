@@ -7,6 +7,10 @@ p8(){
     autopep8 -i -a -a -r -v ./fun/
 }
 
+pi(){
+    pip3 install $( cat requirements/*.txt )
+}
+
 activate_source(){
     if [[ -x "$(which virtualenv)" ]]; then
         [[ -f "./venv/bin/activate" ]] || virtualenv venv
