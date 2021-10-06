@@ -270,7 +270,9 @@ class ASharingContent(models.Model):
     DOU = models.DateTimeField(
         auto_now=True,
         verbose_name=_('Date of appraising content updating'))
-
+    agroup =  models.ForeignKey(
+        to='ASharingGroup', on_delete=models.CASCADE, null=False, blank=False,
+        verbose_name=_('Classification'))
     classification = models.ForeignKey(
         to=Classification, on_delete=models.SET_NULL, null=True,
         verbose_name=_('Classification'))
@@ -350,8 +352,8 @@ class ASharingGroupMember(models.Model):
     funuser = models.ForeignKey(
         null=False,
         to=Funuser, on_delete=models.CASCADE, verbose_name=_('funuser'))
-    asharinggroup = models.ForeignKey(
-        to=ASharingGroup, on_delete=models.CASCADE,
+    agroup = models.ForeignKey(
+        to='ASharingGroup', on_delete=models.CASCADE,
         verbose_name=_('ASharing group'))
     gclassification = models.ManyToManyField(
         to='ASGMemberClassification', blank=True,

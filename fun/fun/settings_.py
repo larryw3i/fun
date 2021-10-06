@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'eduhub.apps.EduhubConfig',
     'funuser.apps.FunuserConfig',
     'fun.apps.FunConfig',
+    'funauth.apps.FunauthConfig'
 ]
 
 MIDDLEWARE = [
@@ -148,9 +149,10 @@ EMAIL_HOST = ''
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 465
-EMAIL_USE_SSL = ''
+EMAIL_USE_SSL = True
 EMAIL_FROM = ''
 DEFAULT_FROM_EMAIL = ''
+
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"

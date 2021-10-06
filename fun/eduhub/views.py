@@ -422,6 +422,7 @@ class AppraisingCreateView(LoginRequiredMixin, CreateView):
     form_class = AppraisingModelForm
     pk_url_kwarg = 'appraising_c_id'
 
+
     def form_valid(self, form):
         if not form.instance.amember.isjudge:
             return Http404()
@@ -493,10 +494,25 @@ class ASharingCCreateView(LoginRequiredMixin, CreateView):
     def get_initial(self):
         initial = super().get_initial()
         classification_id = self.request.COOKIES.get(
-            'classification', uuid.UUID(int=0))
+            'classification', None)
         initial['classification'] = Classification.objects.get(
-            pk=classification_id)
+            pk=classification_id) if classification_id \
+            else Classification.objects.first()
+
         return initial
+   
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        print(queryset)
+        return queryset
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     queryset = context['form'].fields['agroup'].queryset
+    #      = ASharingGroupMember.objects\
+    #     .filter(funuser=self.request.user).select_related('agroup').values('agroup')
+        
+    #     return context
+
 
     def form_valid(self, form):
         form.instance.acontent = bleach_clean(form.instance.acontent)

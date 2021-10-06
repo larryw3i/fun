@@ -39,10 +39,11 @@ class AppraisingModelForm(ModelForm):
 class ASharingCModelForm(ModelForm):
     class Meta:
         model = ASharingContent
-        fields = ['title', 'content', 'classification']
+        fields = ['title', 'content', 'agroup','classification']
         labels = {
             'content': _('Content'),
-            'classification': _('Content classification'),
+            'agroup':_('Appraising Group'),
+            'classification': _('Sharing Content classification'),
         }
         widgets = {
             'title': forms.TextInput(attrs={

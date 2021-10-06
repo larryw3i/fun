@@ -40,11 +40,11 @@ class AppraisingAdmin(admin.ModelAdmin):
 
 @admin.register(ASharingGroupMember)
 class ASharingGroupMemberAdmin(admin.ModelAdmin):
-    fields = ['mname', 'funuser', 'asharinggroup', 'gclassification',
+    fields = ['mname', 'funuser', 'agroup', 'gclassification',
               'isjudge', 'enable']
     list_display = [
         'mname',
-        'asharinggroup',
+        'agroup',
         'applyinginfo',
         'isjudge',
         'enable',
