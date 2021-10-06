@@ -16,7 +16,7 @@
     <h6 class="text-center">{{ asharingcontent.title }}</h6>
     <hr/> 
     {% autoescape off %}
-        {{ asharingcontent.acontent }}
+        {{ asharingcontent.content }}
     {% endautoescape %}
     <hr/>
     {% if asharingcontent.cfrom %}
@@ -40,6 +40,11 @@
     <p class="small">
         {{ asharingcontent.comment }}
     </p>
+    {% if user_is_judge %}
+        <div class="col col-12 text-center " insert-url=
+        "{% url 'eduhub:appraising_create' appraising_c_id=asharingcontent.id %}">
+        </div>
+    {% endif %}
     {% ifequal asharingcontent.cfrom request.user %} 
         <div class="col col-12 text-center" >
             <a href=

@@ -220,7 +220,7 @@ class Appraising(models.Model):
         verbose_name_plural = _('Appraisings')
 
     def __str__(self):
-        return self.name
+        return str(self.amember) + _(' appraise ') + str(self.acontent)
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, unique=True)

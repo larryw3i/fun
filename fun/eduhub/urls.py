@@ -40,7 +40,7 @@ urlpatterns = [
 
     path('appraising_list',
          views.AppraisingListView.as_view(), name='appraising_list'),
-    path('appraising_create/<uuid:appraising_c_id>',
+    path('appraising_create/<uuid:ac_id>',
          views.AppraisingCreateView.as_view(), name='appraising_create'),
     path('appraising_detail/<uuid:pk>',
          views.AppraisingDetailView.as_view(), name='appraising_detail'),

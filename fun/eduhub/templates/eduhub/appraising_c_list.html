@@ -23,7 +23,7 @@
                     <div class="card eduhub-content-card click-to-url" 
                         style="max-width: 100%;" 
                         data-url=
-                    "{% url 'eduhub:appraising_c_detail' pk=ac.id %}">
+                    "{% url 'eduhub:appraising_create' ac_id=ac.id %}">
 
                         <div class="card-body">
                             <p class="card-title small">
@@ -37,7 +37,7 @@
                                 {{ ac.DOU }}
                             </p>
                             <a href=
-                        "{% url 'eduhub:appraising_c_detail' pk=ac.id %}" 
+                        "{% url 'eduhub:appraising_create' ac_id=ac.id %}" 
                                 class="card-link small">
                                 {% trans 'View' %}
                             </a>

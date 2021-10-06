@@ -30,7 +30,11 @@ from .models import (Appraising, ASGMemberClassification, ASharingContent,
 class AppraisingModelForm(ModelForm):
     class Meta:
         model = Appraising
-        fields = ['point', 'comment', 'acontent']
+        fields = ['point', 'comment']
+
+        widgets = {
+            'comment': forms.Textarea(attrs={'rows': '2'})
+        }
 
     def clean(self):
         pass

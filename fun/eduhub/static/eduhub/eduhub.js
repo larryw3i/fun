@@ -1,4 +1,16 @@
 
+$(document).ready(function(){
+    $('[insert-url]').each(function(index,value){
+        $.ajax({
+            url:$(this).attr('insert-url'),
+            'dateType':'html',
+            'success':(_html)=>{
+                $(this).html(_html)
+            }
+        })
+    })
+});
+
 (function(){
 
 	$(document).on( 'click', '#eduhub_search_submit', (event)=>{
@@ -31,4 +43,5 @@
         $('.preview-img').attr(
             'src',URL.createObjectURL( event.target.files[0]) )
     });
+
 }());
