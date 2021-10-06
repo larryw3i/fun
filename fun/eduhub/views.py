@@ -24,8 +24,9 @@ from fun import bleach_clean, settings, subjects_top
 
 from .apps import EduhubConfig
 from .modelforms import (AppraisingModelForm, ASGMemberModelForm,
-                         ASharingCModelForm, EduhubhomestickerModelForm,
-                         FuncontentModelForm, FuntestModelForm, LabelModelForm)
+                         ASharingCModelForm, ASharingGroupModelForm,
+                         EduhubhomestickerModelForm, FuncontentModelForm,
+                         FuntestModelForm, LabelModelForm)
 from .models import (Appraising, ASGMemberClassification, ASharingContent,
                      ASharingGroup, ASharingGroupMember, Classification,
                      Eduhubhomesticker, Funcontent, Funtest, Label,
@@ -303,6 +304,7 @@ class FuncontentUpdateView(LoginRequiredMixin, UpdateView):
 funtest_create_template = f'eduhub/{funtest_name}_create.html'
 funtest_content_preview = f'eduhub/funtest_content_preview.html'
 
+
 class FuntestCreateView(CreateView):
     model = Funtest
     template_name = funtest_create_template
@@ -311,8 +313,6 @@ class FuntestCreateView(CreateView):
     def form_valid(self, form):
         form.instance.test_owner = self.request.user
         return super().form_valid(form)
-
-
 
 
 class FuntestContentPreview(TemplateView):
@@ -422,12 +422,11 @@ class AppraisingCreateView(LoginRequiredMixin, CreateView):
     form_class = AppraisingModelForm
     pk_url_kwarg = 'appraising_c_id'
 
-
     def form_valid(self, form):
         if not form.instance.amember.isjudge:
             return Http404()
         form.instance.acontent = ASharingContent.objects\
-        .get(self.kwargs['appraising_c_id'])
+            .get(self.kwargs['appraising_c_id'])
         return super().form_valid(form)
 
     pass
@@ -453,18 +452,19 @@ class AppraisingDetailView(DetailView):
     form_class = AppraisingModelForm
     pass
 
-#     _    ____  _                _           __    
-#    / \  / ___|| |__   __ _ _ __(_)_ __   __ \ \   
-#   / _ \ \___ \| '_ \ / _` | '__| | '_ \ / _` \ \  
-#  / ___ \ ___) | | | | (_| | |  | | | | | (_| |\ \ 
+#     _    ____  _                _           __
+#    / \  / ___|| |__   __ _ _ __(_)_ __   __ \ \
+#   / _ \ \___ \| '_ \ / _` | '__| | '_ \ / _` \ \
+#  / ___ \ ___) | | | | (_| | |  | | | | | (_| |\ \
 # /_/   \_\____/|_| |_|\__,_|_|  |_|_| |_|\__, | \_\
-#                                         |___/     
-#   ____            _             _ __     ___               
+#                                         |___/
+#   ____            _             _ __     ___
 #  / ___|___  _ __ | |_ ___ _ __ | |\ \   / (_) _____      __
 # | |   / _ \| '_ \| __/ _ \ '_ \| __\ \ / /| |/ _ \ \ /\ / /
-# | |__| (_) | | | | ||  __/ | | | |_ \ V / | |  __/\ V  V / 
-#  \____\___/|_| |_|\__\___|_| |_|\__| \_/  |_|\___| \_/\_/  
-                                                           
+# | |__| (_) | | | | ||  __/ | | | |_ \ V / | |  __/\ V  V /
+#  \____\___/|_| |_|\__\___|_| |_|\__| \_/  |_|\___| \_/\_/
+
+
 appraising_c_create_template = 'eduhub/appraising_c_create.html'
 appraising_c_list_template = 'eduhub/appraising_c_list.html'
 appraising_c_update_template = 'eduhub/appraising_c_update.html'
@@ -477,10 +477,16 @@ class ASharingCListView(ListView):
     template_name = appraising_c_list_template
     form_class = AppraisingModelForm
     context_object_name = 'asharingcontents'
+    pk_url_kwarg = 'asg_id'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['asg_id'] = self.kwargs['asg_id']
+        return context
 
     def get_queryset(self):
         return ASharingContent.objects\
-            .filter(is_legal=True)\
+            .filter(is_legal=True, agroup__id=self.kwargs['asg_id'])\
             .order_by('-DOU')
 
 
@@ -490,6 +496,7 @@ class ASharingCCreateView(LoginRequiredMixin, CreateView):
     form_class = ASharingCModelForm
     context_object_name = 'asharingcontent'
     success_url = reverse_lazy('eduhub:appraising_c_list')
+    pk_url_kwarg = 'asg_id'
 
     def get_initial(self):
         initial = super().get_initial()
@@ -498,25 +505,13 @@ class ASharingCCreateView(LoginRequiredMixin, CreateView):
         initial['classification'] = Classification.objects.get(
             pk=classification_id) if classification_id \
             else Classification.objects.first()
-
         return initial
-   
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        print(queryset)
-        return queryset
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     queryset = context['form'].fields['agroup'].queryset
-    #      = ASharingGroupMember.objects\
-    #     .filter(funuser=self.request.user).select_related('agroup').values('agroup')
-        
-    #     return context
-
 
     def form_valid(self, form):
         form.instance.acontent = bleach_clean(form.instance.acontent)
         form.instance.cfrom = self.request.user
+        form.instance.agroup = ASharingGroup.objects\
+            .get(id=self.kwargs['asg_id'])
         return super().form_valid(form)
 
 
@@ -646,3 +641,56 @@ class ASGMemberDetailView(DetailView):
     form_class = ASGMemberModelForm
     context_object_name = 'asgmember'
     pass
+
+#     _    ____  _                _              ____
+#    / \  / ___|| |__   __ _ _ __(_)_ __   __ _ / ___|_ __ ___  _   _ _ __
+#   / _ \ \___ \| '_ \ / _` | '__| | '_ \ / _` | |  _| '__/ _ \| | | | '_ \
+#  / ___ \ ___) | | | | (_| | |  | | | | | (_| | |_| | | | (_) | |_| | |_) |
+# /_/   \_\____/|_| |_|\__,_|_|  |_|_| |_|\__, |\____|_|  \___/ \__,_| .__/
+#                                         |___/                      |_|
+# __     ___
+# \ \   / (_) _____      __
+#  \ \ / /| |/ _ \ \ /\ / /
+#   \ V / | |  __/\ V  V /
+#    \_/  |_|\___| \_/\_/
+
+
+asgroup_list_template = 'eduhub/asharinggroup_list.html'
+asgroup_update_template = 'eduhub/asharinggroup_update.html'
+asgroup_delete_template = 'eduhub/asharinggroup_delete.html'
+
+
+class ASGroupListView(ListView):
+    model = ASharingGroup
+    template_name = asgroup_list_template
+    form_class = ASharingGroupModelForm
+    context_object_name = 'asgroups'
+
+    def get_queryset(self):
+        return ASharingGroup.objects\
+            .filter(is_legal=True)\
+            .order_by('-DOC')
+
+
+class ASGroupUpdateView(LoginRequiredMixin, UpdateView):
+    model = ASharingGroup
+    template_name = asgroup_update_template
+    form_class = ASharingGroupModelForm
+    context_object_name = 'asgroup'
+
+    def form_valid(self, form):
+        if form.instance.founder != self.request.user:
+            raise Http404()
+        return super().form_valid(form)
+
+
+class ASGroupDeleteView(LoginRequiredMixin, DeleteView):
+    model = ASharingGroup
+    template_name = asgroup_delete_template
+    form_class = ASharingGroupModelForm
+    context_object_name = 'asgroup'
+
+    def post(self, request, *args, **kwargs):
+        if form.instance.founder != self.request.user:
+            raise Http404()
+        return super().post(request, *args, **kwargs)

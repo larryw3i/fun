@@ -8,7 +8,7 @@ p8(){
 }
 
 pi(){
-    pip3 install $( cat requirements/*.txt )
+    pip3 install $( cat requirements/*.txt | grep -v "#" )
 }
 
 activate_source(){

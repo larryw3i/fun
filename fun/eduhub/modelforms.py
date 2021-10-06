@@ -14,18 +14,18 @@ from .models import (Appraising, ASGMemberClassification, ASharingContent,
                      ASharingGroup, ASharingGroupMember, Classification,
                      Eduhubhomesticker, Funcontent, Funtest, Label)
 
-
-#     _                          _     _             
-#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ _ 
+#     _                          _     _
+#    / \   _ __  _ __  _ __ __ _(_)___(_)_ __   __ _
 #   / _ \ | '_ \| '_ \| '__/ _` | / __| | '_ \ / _` |
 #  / ___ \| |_) | |_) | | | (_| | \__ \ | | | | (_| |
 # /_/   \_\ .__/| .__/|_|  \__,_|_|___/_|_| |_|\__, |
-#         |_|   |_|                            |___/ 
-#  __  __           _      _ _____                    
-# |  \/  | ___   __| | ___| |  ___|__  _ __ _ __ ___  
-# | |\/| |/ _ \ / _` |/ _ \ | |_ / _ \| '__| '_ ` _ \ 
+#         |_|   |_|                            |___/
+#  __  __           _      _ _____
+# |  \/  | ___   __| | ___| |  ___|__  _ __ _ __ ___
+# | |\/| |/ _ \ / _` |/ _ \ | |_ / _ \| '__| '_ ` _ \
 # | |  | | (_) | (_| |  __/ |  _| (_) | |  | | | | | |
 # |_|  |_|\___/ \__,_|\___|_|_|  \___/|_|  |_| |_| |_|
+
 
 class AppraisingModelForm(ModelForm):
     class Meta:
@@ -39,10 +39,9 @@ class AppraisingModelForm(ModelForm):
 class ASharingCModelForm(ModelForm):
     class Meta:
         model = ASharingContent
-        fields = ['title', 'content', 'agroup','classification']
+        fields = ['title', 'content', 'classification']
         labels = {
             'content': _('Content'),
-            'agroup':_('Appraising Group'),
             'classification': _('Sharing Content classification'),
         }
         widgets = {
@@ -55,6 +54,7 @@ class ASharingCModelForm(ModelForm):
 
     def clean(self):
         pass
+
 
 class ASharingGroupModelForm(ModelForm):
     class Meta:
@@ -167,4 +167,3 @@ class ClassificationModelForm(ModelForm):
                     parent=self.cleaned_data['parent'])\
                 .exists():
             raise ValidationError({'name': _("name exists")})
-

@@ -58,13 +58,16 @@
                             {% trans 'Eduhub contents' %}
                         </a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link "  
-                            href="{% url 'eduhub:appraising_c_list' %}">
-                            {% trans 'Eduhub appraising' %}
-                        </a>
-                    </li>
+                    {% user_in_asgroup as user_in_asgroup %}
+                    {% if user_in_asgroup %}
+                        <li class="nav-item">
+                            <a class="nav-link "  
+                                href=
+                            "{% url 'eduhub:asgroup_list' %}">
+                                {% trans 'Eduhub appraising' %}
+                            </a>
+                        </li>
+                    {% endif %}
 
                 </ul>
 
@@ -81,7 +84,6 @@
                         "{% trans 'What are you thinking about' %}?" 
                         aria-describedby="eduhub_search" autocomplete="off" 
                         value="{{ request.GET.q }}"/>
-
                     <button class="btn btn-outline-success my-2 my-sm-0"  
                         type="button" id="eduhub_search_submit">
                         {% trans 'search' %} &#128269;

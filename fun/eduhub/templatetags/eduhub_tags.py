@@ -5,7 +5,7 @@ import uuid
 
 from django import template
 from django.utils.translation import gettext_lazy as _
-from eduhub.models import Classification
+from eduhub.models import ASharingGroupMember, Classification
 
 from fun import settings
 
@@ -77,3 +77,11 @@ def get_classification(context):
             _html += '<br/>'
         _html += f'<a style="text-indent:{2*_len}em" id="{c.id}">{c.name}</a>'
     return _html
+
+
+@register.simple_tag(takes_context=True)
+def user_in_asgroup(context):
+    request = context['request']
+    return ASharingGroupMember.objects\
+        .filter(funuser=request.user, enable=True)\
+        .exists() and '1' or ''

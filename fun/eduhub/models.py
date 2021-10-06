@@ -270,7 +270,7 @@ class ASharingContent(models.Model):
     DOU = models.DateTimeField(
         auto_now=True,
         verbose_name=_('Date of appraising content updating'))
-    agroup =  models.ForeignKey(
+    agroup = models.ForeignKey(
         to='ASharingGroup', on_delete=models.CASCADE, null=False, blank=False,
         verbose_name=_('Classification'))
     classification = models.ForeignKey(
@@ -297,6 +297,8 @@ class ASharingGroup(models.Model):
         max_length=64, blank=False, verbose_name=_('Name'))
     subtitle = models.CharField(
         max_length=64, blank=False, verbose_name=_('Subtitle'))
+    cover = models.ImageField(
+        upload_to=upload_to, blank=True, verbose_name=_('Group cover'))
     founder = models.ForeignKey(
         to=Funuser, on_delete=models.CASCADE,
         verbose_name=_('ASharingGroup Founder'))

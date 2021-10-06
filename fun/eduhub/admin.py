@@ -28,6 +28,7 @@ from .models import (Appraising, ASGMemberClassification, ASharingContent,
 #  / ___ \ (_| | | | | | | | | | |
 # /_/   \_\__,_|_| |_| |_|_|_| |_|
 
+
 @admin.register(Appraising)
 class AppraisingAdmin(admin.ModelAdmin):
     list_display = ('amember', 'acontent', 'point', 'DOA')
@@ -35,8 +36,9 @@ class AppraisingAdmin(admin.ModelAdmin):
     ordering = ('-DOA',)
 
     def save_model(self, request, obj, form, change):
-        obj.amember = ASharingGroupMember.objects.get(funuser = request.user)
+        obj.amember = ASharingGroupMember.objects.get(funuser=request.user)
         return super().save_model(request, obj, form, change)
+
 
 @admin.register(ASharingGroupMember)
 class ASharingGroupMemberAdmin(admin.ModelAdmin):

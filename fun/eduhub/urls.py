@@ -49,9 +49,9 @@ urlpatterns = [
     path('appraising_update/<uuid:pk>',
          views.AppraisingUpdateView.as_view(), name='appraising_update'),
 
-    path('appraising_c_list',
+    path('appraising_c_list/<uuid:asg_id>',
          views.ASharingCListView.as_view(), name='appraising_c_list'),
-    path('appraising_c_create',
+    path('appraising_c_create/<uuid:asg_id>',
          views.ASharingCCreateView.as_view(), name='appraising_c_create'),
     path('appraising_c_detail/<uuid:pk>',
          views.ASharingCDetailView.as_view(), name='appraising_c_detail'),
@@ -59,8 +59,6 @@ urlpatterns = [
          views.ASharingCDeleteView.as_view(), name='appraising_c_delete'),
     path('appraising_c_update/<uuid:pk>',
          views.ASharingCUpdateView.as_view(), name='appraising_c_update'),
-
-
 
 
     path('asgmember_list',
@@ -75,6 +73,12 @@ urlpatterns = [
          views.ASGMemberUpdateView.as_view(), name='asgmember_update'),
 
 
+    path('asgroup_list',
+         views.ASGroupListView.as_view(), name='asgroup_list'),
+    path('asgroup_update/<uuid:asg_id>',
+         views.ASGroupUpdateView.as_view(), name='asgroup_update'),
+    path('asgroup_delete/<uuid:asg_id>',
+         views.ASGroupDeleteView.as_view(), name='asgroup_delete'),
 
 
     path('funtest_create/', views.FuntestCreateView.as_view(),
