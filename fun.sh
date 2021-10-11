@@ -3,11 +3,13 @@
 _args=("$@") # all parameters from terminal.
 
 p8(){
+    activate_source
     isort -v ./fun/
     autopep8 -i -a -a -r -v ./fun/
 }
 
 pi(){
+    activate_source
     pip3 install $( cat requirements/*.txt | grep -v "#" )
 }
 
