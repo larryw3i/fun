@@ -5,7 +5,7 @@ from django.http import FileResponse, Http404
 from django.shortcuts import render
 from funfile.models import Checkup
 
-from fun import settings
+from django.conf import settings
 
 # Create your views here.
 

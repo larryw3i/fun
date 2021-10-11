@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.static import serve as serve_static
 
-from fun import settings
+from django.conf import settings
 
 urlpatterns = [
 

@@ -7,7 +7,7 @@ from django import template
 from django.utils.translation import gettext_lazy as _
 from eduhub.models import ASharingGroupMember, Classification
 
-from fun import settings
+from django.conf import settings
 
 register = template.Library()
 

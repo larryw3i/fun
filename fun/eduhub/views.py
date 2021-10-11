@@ -20,7 +20,8 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
 from humanize import naturalsize
 
-from fun import bleach_clean, settings, subjects_top
+from fun import bleach_clean
+from django.conf import settings
 
 from .apps import EduhubConfig
 from .modelforms import (AppraisingModelForm, ASGMemberModelForm,
@@ -358,9 +359,7 @@ class EduhubSearch(TemplateView):
 
     def get_context_data(self, **kwargs):
         eduhub_top_filter = self.request.COOKIES.get('eduhub_top_filter', '')
-        eduhub_top_filter = \
-            _(subjects_top[eduhub_top_filter]) if len(eduhub_top_filter) > 0 \
-            else ''
+        eduhub_top_filter = ''
 
         search_filter = self.request.GET.get('filter', '')
         context_data = super().get_context_data(**kwargs)
@@ -425,27 +424,28 @@ class AppraisingCreateView(LoginRequiredMixin, CreateView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         asharingcontent = ASharingContent.objects\
-        .get(id=self.kwargs['ac_id'] )
+            .get(id=self.kwargs['ac_id'])
         context['asharingcontent'] = asharingcontent
         return context
 
     def form_valid(self, form):
         if not ASharingGroupMember.objects\
-        .filter(funuser=self.request.user, enable=True, isjudge=True)\
-        .exists():
+            .filter(funuser=self.request.user, enable=True, isjudge=True)\
+                .exists():
             return Http404()
         form.instance.acontent = ASharingContent.objects\
             .get(id=self.kwargs['ac_id'])
         form.instance.amember = ASharingGroupMember.objects\
-        .get(funuser=self.request.user)
+            .get(funuser=self.request.user)
         return super().form_valid(form)
 
     def get_success_url(self):
-        asg_id=ASharingContent.objects\
+        asg_id = ASharingContent.objects\
             .get(id=self.kwargs['ac_id']).agroup.id
         return reverse(
             'eduhub:appraising_c_list',
-            kwargs={'asg_id': asg_id })
+            kwargs={'asg_id': asg_id})
+
 
 class AppraisingUpdateView(LoginRequiredMixin, UpdateView):
     model = Appraising
@@ -527,7 +527,7 @@ class ASharingCCreateView(LoginRequiredMixin, CreateView):
         form.instance.agroup = ASharingGroup.objects\
             .get(id=self.kwargs['asg_id'])
         return super().form_valid(form)
-    
+
     def get_success_url(self):
         return reverse(
             'eduhub:appraising_c_list',
@@ -576,8 +576,8 @@ class ASharingCDetailView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user_is_judge'] = ASharingGroupMember.objects\
-        .filter(funuser=self.request.user, enable=True,isjudge=True)\
-        .exists()
+            .filter(funuser=self.request.user, enable=True, isjudge=True)\
+            .exists()
 
         return context
 
@@ -693,8 +693,8 @@ class ASGroupListView(ListView):
     context_object_name = 'asgroups'
 
     def get_queryset(self):
-        gmembers = ASharingGroupMember.objects\
-        .filter(enable=True,funuser=self.request.user).select_related('agroup')
+        gmembers = ASharingGroupMember.objects .filter(
+            enable=True, funuser=self.request.user).select_related('agroup')
         return [m.agroup for m in gmembers]
 
 

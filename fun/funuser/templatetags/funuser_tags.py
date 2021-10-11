@@ -2,7 +2,7 @@
 from django import template
 from funuser.models import Funuser
 
-from fun import settings
+from django.conf import settings
 
 register = template.Library()
 

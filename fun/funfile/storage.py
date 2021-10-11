@@ -4,8 +4,7 @@ import os
 
 from django.core.files.storage import FileSystemStorage
 
-from fun import settings
-
+from django.conf import settings
 
 def upload_to(instance, filename):
     _upload_to = os.path.join('fun', 'funfile', 'files')

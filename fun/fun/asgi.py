@@ -11,6 +11,10 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fun.settings')
+settings_exists = os.path.exists(
+    os.path.join('.',  'fun', 'settings.py'))
+os.environ.setdefault(
+    'DJANGO_SETTINGS_MODULE',
+    'fun.settings' if settings_exists else 'fun.settings_')
 
 application = get_asgi_application()

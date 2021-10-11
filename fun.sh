@@ -1,6 +1,36 @@
 #!/usr/bin/bash
 
+# tree -L 2 # my tree
+# .
+# ├── fun
+# │   ├── db.sqlite3
+# │   ├── eduhub
+# │   ├── fun
+# │   ├── funauth
+# │   ├── fundeveloper
+# │   ├── funfile
+# │   ├── funhome
+# │   ├── funlog
+# │   ├── funmiddleware
+# │   ├── funuser
+# │   ├── locale
+# │   └── manage.py
+# ├── fun.sh
+# ├── LICENSE
+# ├── README.md
+# ├── requirements
+# │   ├── dev.txt
+# │   └── produc.txt
+# ├── setup.py
+# └── venv
+#     ├── bin
+#     ├── lib
+#     └── pyvenv.cfg
+#
+
+
 _args=("$@") # all parameters from terminal.
+
 
 p8(){
     activate_source
@@ -18,15 +48,14 @@ activate_source(){
         [[ -f "./venv/bin/activate" ]] || virtualenv venv
         source ./venv/bin/activate
     else
-        echo "virtualenv doesn't exist, please install it" && exit 
-        exit
+        echo "virtualenv doesn't exist, please install it" && exit
     fi
 }
 
 init(){
-    activate_source
-    pip3 install -r requirements.txt
-    [[ -x "$(which yarn)" ]] && cd ./fun/funstatic && yarn install && cd ../..
+    activate_source;    pi;
+    [[ -x "$(which yarn)" ]] && cd ./fun/funhome/static && \
+    yarn install && cd ../../..
 
     [[ -d "./fun/funlog" ]] || mkdir ./fun/funlog
     [[ -f "./fun/funlog/django_fun.log" ]] || touch ./fun/funlog/django_fun.log
@@ -37,8 +66,7 @@ init(){
     cp ./fun/fun/settings_.py ./fun/fun/settings.py
     
     python3 ./fun/manage.py makemigrations
-    python3 ./fun/manage.py migrate
-    
+    python3 ./fun/manage.py migrate    
     python3 ./fun/manage.py compilemessages
 
     read -p "Create superuser?(y/N)" _createsuperuser
@@ -64,5 +92,8 @@ _start(){
 ug(){       update_gitignore;   }
 _s(){       _start;             }
 gita(){     p8; git add . ;     }
+
+as(){       activate_source;    }
+
 
 ${_args[0]}

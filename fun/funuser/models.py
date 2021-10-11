@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
 from imagekit.models import ImageSpecField
 
-from fun import settings
+from django.conf import settings
 
 # Create your models here.
 
