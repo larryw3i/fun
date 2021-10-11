@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 13:37+0800\n"
+"POT-Creation-Date: 2021-10-11 18:15+0800\n"
 "PO-Revision-Date: 2020-10-03 23:11+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,621 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.3\n"
 
-#: auth/templates/account/account_inactive.html:5
-#: auth/templates/account/account_inactive.html:8
-msgid "Account Inactive"
-msgstr ""
-
-#: auth/templates/account/account_inactive.html:10
-msgid "This account is inactive."
-msgstr ""
-
-#: auth/templates/account/email.html:6
-msgid "Account"
-msgstr ""
-
-#: auth/templates/account/email.html:11
-msgid "E-mail Addresses"
-msgstr ""
-
-#: auth/templates/account/email.html:15
-msgid ""
-"\n"
-"        The following e-mail addresses are associated with your account\n"
-"      "
-msgstr ""
-
-#: auth/templates/account/email.html:41
-msgid "Verified"
-msgstr ""
-
-#: auth/templates/account/email.html:43
-msgid "Unverified"
-msgstr ""
-
-#: auth/templates/account/email.html:47
-msgid "Primary"
-msgstr ""
-
-#: auth/templates/account/email.html:57
-msgid "Make Primary"
-msgstr ""
-
-#: auth/templates/account/email.html:61
-msgid "Re-send Verification"
-msgstr ""
-
-#: auth/templates/account/email.html:65
-#: auth/templates/socialaccount/connections.html:35
-msgid "Remove"
-msgstr ""
-
-#: auth/templates/account/email.html:74
-msgid "Warning"
-msgstr ""
-
-#: auth/templates/account/email.html:76
-msgid ""
-"\n"
-"        You currently do not have any e-mail address set up. You should "
-"really \n"
-"        add an e-mail address so you can receive notifications, reset your \n"
-"        password, etc\n"
-"      "
-msgstr ""
-
-#: auth/templates/account/email.html:86
-msgid "Add E-mail Address"
-msgstr ""
-
-#: auth/templates/account/email.html:92
-msgid "Add E-mail"
-msgstr ""
-
-#: auth/templates/account/email.html:104
-msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
-
-#: auth/templates/account/email/base_message.txt:1
-#, python-format
-msgid "Hello from %(site_name)s!"
-msgstr ""
-
-#: auth/templates/account/email/base_message.txt:5
-#, python-format
-msgid ""
-"Thank you for using %(site_name)s!\n"
-"%(site_domain)s"
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.html:8
-msgid "Hello from x-dove"
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.html:10
-msgid ""
-"\n"
-"            You're receiving this e-mail because user \n"
-"        "
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.html:15
-msgid ""
-"\n"
-"            has given yours as an e-mail address to connect their account.\n"
-"        "
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.html:18
-msgid "To confirm this is correct, go to"
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.html:20
-msgid "CONFIRM EMAIL"
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.html:25
-msgid ""
-" \n"
-"            Thank you from x-dove!\n"
-"        "
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_message.txt:5
-#, python-format
-msgid ""
-"You're receiving this e-mail because user %(user_display)s has given your e-"
-"mail address to register an account on %(site_domain)s.\n"
-"\n"
-"To confirm this is correct, go to %(activate_url)s"
-msgstr ""
-
-#: auth/templates/account/email/email_confirmation_subject.html:3
-#: auth/templates/account/email/email_confirmation_subject.txt:3
-msgid "Please Confirm Your E-mail Address"
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.html:7
-msgid "Hello from"
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.html:7
-#: funhome/views.py:153 funhome/views.py:186
-msgid "X-DOVE"
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.html:9
-msgid ""
-"\n"
-"        You're receiving this e-mail because you or someone else has "
-"requested \n"
-"        a password for your user account.\n"
-"        It can be safely ignored if you did not request a password reset. \n"
-"        Click the link below to reset your password.\n"
-"    "
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.html:16
-msgid "RESET PASSWORD"
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.html:19
-#, python-format
-msgid ""
-"\n"
-"            In case you forgot, your username is %(username)s.\n"
-"        "
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.html:26
-msgid "Thank you for using"
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.txt:4
-msgid ""
-"You're receiving this e-mail because you or someone else has requested a "
-"password for your user account.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password."
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_message.txt:9
-#, python-format
-msgid "In case you forgot, your username is %(username)s."
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_subject.html:3
-msgid ""
-"\n"
-"    Password Reset E-mail\n"
-msgstr ""
-
-#: auth/templates/account/email/password_reset_key_subject.txt:3
-msgid "Password Reset E-mail"
-msgstr ""
-
-#: auth/templates/account/email_confirm.html:7
-#: auth/templates/account/email_confirm.html:12
-msgid "Confirm E-mail Address"
-msgstr ""
-
-#: auth/templates/account/email_confirm.html:19
-#, python-format
-msgid ""
-"\n"
-"                Please confirm that \n"
-"                <a href=\"mailto:%(email)s\"\n"
-"                    style=\"font-size: larger;\">\n"
-"                    %(email)s\n"
-"                </a> is an e-mail address for user \n"
-"                <span style=\"font-weight: bolder;\">%(user_display)s</"
-"span>. \n"
-"            "
-msgstr ""
-
-#: auth/templates/account/email_confirm.html:34
-msgid "Confirm"
-msgstr ""
-
-#: auth/templates/account/email_confirm.html:44
-msgid ""
-"\n"
-"                This e-mail confirmation link expired or is invalid. Please\n"
-"            "
-msgstr ""
-
-#: auth/templates/account/email_confirm.html:49
-msgid "issue a new e-mail confirmation request"
-msgstr ""
-
-#: auth/templates/account/login.html:11 auth/templates/account/login.html:22
-#: auth/templates/account/login.html:43
-msgid "Sign In"
-msgstr ""
-
-#: auth/templates/account/login.html:26
-msgid "If you have not created an account yet, then please"
-msgstr ""
-
-#: auth/templates/account/login.html:27
-msgid "sign up"
-msgstr ""
-
-#: auth/templates/account/login.html:50
-msgid "Forgot Password?"
-msgstr ""
-
-#: auth/templates/account/logout.html:11 auth/templates/account/logout.html:23
-msgid "Sign Out"
-msgstr ""
-
-#: auth/templates/account/logout.html:29
-msgid "Are you sure you want to sign out?"
-msgstr ""
-
-#: auth/templates/account/logout.html:41
-msgid "Sign out now"
-msgstr ""
-
-#: auth/templates/account/messages/cannot_delete_primary_email.html:2
-#, python-format
-msgid ""
-"\n"
-"    You cannot remove your primary e-mail address (%(email)s).\n"
-msgstr ""
-
-#: auth/templates/account/messages/cannot_delete_primary_email.txt:2
-#, python-format
-msgid "You cannot remove your primary e-mail address (%(email)s)."
-msgstr ""
-
-#: auth/templates/account/messages/email_confirmation_sent.html:2
-#, python-format
-msgid ""
-"\n"
-"    Confirmation e-mail sent to %(email)s.\n"
-msgstr ""
-
-#: auth/templates/account/messages/email_confirmation_sent.txt:2
-#, python-format
-msgid "Confirmation e-mail sent to %(email)s."
-msgstr ""
-
-#: auth/templates/account/messages/email_confirmed.html:2
-#, python-format
-msgid ""
-"\n"
-"    You have confirmed %(email)s.\n"
-msgstr ""
-
-#: auth/templates/account/messages/email_confirmed.txt:2
-#, python-format
-msgid "You have confirmed %(email)s."
-msgstr ""
-
-#: auth/templates/account/messages/email_deleted.html:2
-#, python-format
-msgid ""
-"\n"
-"    Removed e-mail address %(email)s.\n"
-msgstr ""
-
-#: auth/templates/account/messages/email_deleted.txt:2
-#, python-format
-msgid "Removed e-mail address %(email)s."
-msgstr ""
-
-#: auth/templates/account/messages/logged_in.html:4
-#, python-format
-msgid ""
-"\n"
-"    Successfully signed in as %(name)s.\n"
-msgstr ""
-
-#: auth/templates/account/messages/logged_in.txt:4
-#, python-format
-msgid "Successfully signed in as %(name)s."
-msgstr ""
-
-#: auth/templates/account/messages/logged_out.html:2
-msgid ""
-"\n"
-"    You have signed out.\n"
-msgstr ""
-
-#: auth/templates/account/messages/logged_out.txt:2
-msgid "You have signed out."
-msgstr ""
-
-#: auth/templates/account/messages/password_changed.html:2
-msgid ""
-"\n"
-"    Password successfully changed.\n"
-msgstr ""
-
-#: auth/templates/account/messages/password_changed.txt:2
-msgid "Password successfully changed."
-msgstr ""
-
-#: auth/templates/account/messages/password_set.html:2
-msgid ""
-"\n"
-"    Password successfully set.\n"
-msgstr ""
-
-#: auth/templates/account/messages/password_set.txt:2
-msgid "Password successfully set."
-msgstr ""
-
-#: auth/templates/account/messages/primary_email_set.html:2
-msgid ""
-"\n"
-"    Primary e-mail address set.\n"
-msgstr ""
-
-#: auth/templates/account/messages/primary_email_set.txt:2
-msgid "Primary e-mail address set."
-msgstr ""
-
-#: auth/templates/account/messages/unverified_primary_email.html:2
-msgid ""
-"\n"
-"    Your primary e-mail address must be verified.\n"
-msgstr ""
-
-#: auth/templates/account/messages/unverified_primary_email.txt:2
-msgid "Your primary e-mail address must be verified."
-msgstr ""
-
-#: auth/templates/account/password_change.html:5
-#: auth/templates/account/password_change.html:8
-#: auth/templates/account/password_change.html:15
-#: auth/templates/account/password_reset_from_key.html:4
-#: auth/templates/account/password_reset_from_key.html:11
-#: auth/templates/account/password_reset_from_key_done.html:6
-#: auth/templates/account/password_reset_from_key_done.html:9
-msgid "Change Password"
-msgstr ""
-
-#: auth/templates/account/password_reset.html:8
-#: auth/templates/account/password_reset.html:15
-#: auth/templates/account/password_reset_done.html:6
-#: auth/templates/account/password_reset_done.html:9
-msgid "Password Reset"
-msgstr ""
-
-#: auth/templates/account/password_reset.html:24
-msgid ""
-"\n"
-"                You are administrator, please reset password via terminal\n"
-"            "
-msgstr ""
-
-#: auth/templates/account/password_reset.html:32
-msgid ""
-"\n"
-"                Forgotten your password? Enter your e-mail address below, \n"
-"                and we'll send you an e-mail allowing you to reset it\n"
-"            "
-msgstr ""
-
-#: auth/templates/account/password_reset.html:41
-msgid "Reset My Password"
-msgstr ""
-
-#: auth/templates/account/password_reset.html:46
-msgid ""
-"\n"
-"                Please contact us if you have any trouble resetting \n"
-"                your password.\n"
-"            "
-msgstr ""
-
-#: auth/templates/account/password_reset_done.html:16
-msgid ""
-"\n"
-"            We have sent you an e-mail. Please contact us if you do not "
-"receive \n"
-"            it within a few minutes.\n"
-"        "
-msgstr ""
-
-#: auth/templates/account/password_reset_from_key.html:9
-msgid "Bad Token"
-msgstr ""
-
-#: auth/templates/account/password_reset_from_key.html:18
-msgid ""
-"\n"
-"                The password reset link was invalid, possibly because it "
-"has \n"
-"                already been used.  Please request a \n"
-"            "
-msgstr ""
-
-#: auth/templates/account/password_reset_from_key.html:23
-msgid "new password reset"
-msgstr ""
-
-#: auth/templates/account/password_reset_from_key.html:33
-msgid "change password"
-msgstr ""
-
-#: auth/templates/account/password_reset_from_key.html:37
-#: auth/templates/account/password_reset_from_key_done.html:10
-msgid "Your password is now changed."
-msgstr ""
-
-#: auth/templates/account/password_set.html:5
-#: auth/templates/account/password_set.html:8
-#: auth/templates/account/password_set.html:15
-msgid "Set Password"
-msgstr ""
-
-#: auth/templates/account/signup.html:11
-#: auth/templates/socialaccount/signup.html:5
-msgid "Signup"
-msgstr ""
-
-#: auth/templates/account/signup.html:23 auth/templates/account/signup.html:51
-#: auth/templates/socialaccount/signup.html:8
-#: auth/templates/socialaccount/signup.html:19
-#: funhome/templates/funhome/_navbar.html:68
-msgid "Sign Up"
-msgstr ""
-
-#: auth/templates/account/signup.html:26
-msgid "Already have an account? Then please"
-msgstr ""
-
-#: auth/templates/account/signup.html:27
-#: funhome/templates/funhome/home_join_us.html:91
-msgid "sign in"
-msgstr ""
-
-#: auth/templates/account/signup.html:43
-#: funhome/templates/funhome/_footer.html:24
-msgid "Legal information"
-msgstr ""
-
-#: auth/templates/account/signup.html:46
-msgid "and_sign"
-msgstr ""
-
-#: auth/templates/account/signup.html:47
-msgid "Data privacy"
-msgstr ""
-
-#: auth/templates/account/signup_closed.html:5
-#: auth/templates/account/signup_closed.html:8
-msgid "Sign Up Closed"
-msgstr ""
-
-#: auth/templates/account/signup_closed.html:10
-msgid "We are sorry, but the sign up is currently closed."
-msgstr ""
-
-#: auth/templates/account/snippets/already_logged_in.html:7
-msgid "You are already logged in as"
-msgstr ""
-
-#: auth/templates/account/verification_sent.html:6
-#: auth/templates/account/verification_sent.html:10
-#: auth/templates/account/verified_email_required.html:6
-#: auth/templates/account/verified_email_required.html:10
-msgid "Verify Your E-mail Address"
-msgstr ""
-
-#: auth/templates/account/verification_sent.html:13
-msgid ""
-"\n"
-"            We have sent an e-mail to you for verification. Follow the "
-"link \n"
-"            provided to finalize the signup process. Please contact us if "
-"you \n"
-"            do not receive it within a few minutes.\n"
-"        "
-msgstr ""
-
-#: auth/templates/account/verified_email_required.html:15
-msgid ""
-"\n"
-"            This part of the site requires us to verify that\n"
-"            you are who you claim to be. For this purpose, we require that "
-"you\n"
-"            verify ownership of your e-mail address. \n"
-"        "
-msgstr ""
-
-#: auth/templates/account/verified_email_required.html:23
-msgid ""
-"\n"
-"            We have sent an e-mail to you for\n"
-"            verification. Please click on the link inside this e-mail. "
-"Please\n"
-"            contact us if you do not receive it within a few minutes.\n"
-"        "
-msgstr ""
-
-#: auth/templates/account/verified_email_required.html:31
-msgid "Note"
-msgstr ""
-
-#: auth/templates/account/verified_email_required.html:31
-msgid "you can still"
-msgstr ""
-
-#: auth/templates/account/verified_email_required.html:33
-msgid "change your e-mail address"
-msgstr ""
-
-#: auth/templates/openid/login.html:9
-msgid "OpenID Sign In"
-msgstr ""
-
-#: auth/templates/socialaccount/authentication_error.html:5
-#: auth/templates/socialaccount/authentication_error.html:8
-msgid "Social Network Login Failure"
-msgstr ""
-
-#: auth/templates/socialaccount/authentication_error.html:10
-msgid ""
-"An error occurred while attempting to login via your social network account."
-msgstr ""
-
-#: auth/templates/socialaccount/connections.html:5
-#: auth/templates/socialaccount/connections.html:8
-msgid "Account Connections"
-msgstr ""
-
-#: auth/templates/socialaccount/connections.html:11
-msgid ""
-"You can sign in to your account using any of the following third party "
-"accounts:"
-msgstr ""
-
-#: auth/templates/socialaccount/connections.html:43
-msgid ""
-"You currently have no social network accounts connected to this account."
-msgstr ""
-
-#: auth/templates/socialaccount/connections.html:46
-msgid "Add a 3rd Party Account"
-msgstr ""
-
-#: auth/templates/socialaccount/login_cancelled.html:5
-#: auth/templates/socialaccount/login_cancelled.html:9
-msgid "Login Cancelled"
-msgstr ""
-
-#: auth/templates/socialaccount/login_cancelled.html:13
-#, python-format
-msgid ""
-"You decided to cancel logging in to our site using one of your existing "
-"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
-"\">sign in</a>."
-msgstr ""
-
-#: auth/templates/socialaccount/messages/account_connected.txt:2
-msgid "The social account has been connected."
-msgstr ""
-
-#: auth/templates/socialaccount/messages/account_connected_other.txt:2
-msgid "The social account is already connected to a different account."
-msgstr ""
-
-#: auth/templates/socialaccount/messages/account_disconnected.txt:2
-msgid "The social account has been disconnected."
-msgstr ""
-
-#: auth/templates/socialaccount/signup.html:10
-#, python-format
-msgid ""
-"You are about to use your %(provider_name)s account to login to\n"
-"%(site_name)s. As a final step, please complete the following form:"
-msgstr ""
-
-#: eduhub/admin.py:138
+#: eduhub/admin.py:147
 msgid "None"
 msgstr ""
 
@@ -641,234 +27,346 @@ msgstr ""
 msgid "Eduhub"
 msgstr ""
 
-#: eduhub/modelforms.py:23 eduhub/models.py:74
-msgid "Label name"
-msgstr ""
-
-#: eduhub/modelforms.py:24
-msgid "Cover image"
-msgstr ""
-
-#: eduhub/modelforms.py:25 eduhub/modelforms.py:40 eduhub/models.py:268
-msgid "Comment"
-msgstr ""
-
-#: eduhub/modelforms.py:39 eduhub/modelforms.py:110 eduhub/models.py:114
-#: eduhub/models.py:222 eduhub/models.py:259
+#: eduhub/modelforms.py:48 eduhub/modelforms.py:119 eduhub/models.py:120
+#: eduhub/models.py:233 eduhub/models.py:264
 msgid "Content"
 msgstr ""
 
-#: eduhub/modelforms.py:41 eduhub/modelforms.py:111 eduhub/models.py:108
-msgid "Content classification"
+#: eduhub/modelforms.py:49
+msgid "Sharing Content classification"
 msgstr ""
 
-#: eduhub/modelforms.py:46 eduhub/modelforms.py:116 eduhub/models.py:111
+#: eduhub/modelforms.py:54 eduhub/modelforms.py:126 eduhub/models.py:117
 msgid "Content title"
 msgstr ""
 
-#: eduhub/modelforms.py:60 funhome/modelforms.py:22 funhome/modelforms.py:52
+#: eduhub/modelforms.py:69
+msgid "ASharingGroup name"
+msgstr ""
+
+#: eduhub/modelforms.py:70
+msgid "ASharingGroup subtitle"
+msgstr ""
+
+#: eduhub/modelforms.py:71
+msgid "ASharingGroup comment"
+msgstr ""
+
+#: eduhub/modelforms.py:81 eduhub/models.py:56 eduhub/models.py:331
+msgid "Parent classification"
+msgstr ""
+
+#: eduhub/modelforms.py:82 eduhub/models.py:335
+msgid "Classification Name"
+msgstr ""
+
+#: eduhub/modelforms.py:83 eduhub/models.py:338
+msgid "Classification Comment"
+msgstr ""
+
+#: eduhub/modelforms.py:93 eduhub/models.py:366
+msgid "applying info"
+msgstr ""
+
+#: eduhub/modelforms.py:103 eduhub/models.py:80
+msgid "Label name"
+msgstr ""
+
+#: eduhub/modelforms.py:104
+msgid "Cover image"
+msgstr ""
+
+#: eduhub/modelforms.py:105 eduhub/modelforms.py:120 eduhub/models.py:242
+msgid "Comment"
+msgstr ""
+
+#: eduhub/modelforms.py:121 eduhub/models.py:114
+msgid "Content classification"
+msgstr ""
+
+#: eduhub/modelforms.py:140 funhome/modelforms.py:22 funhome/modelforms.py:52
 #: funhome/models.py:35 funhome/models.py:79
 msgid "Sticker title"
 msgstr ""
 
-#: eduhub/modelforms.py:61 funhome/modelforms.py:23 funhome/modelforms.py:53
+#: eduhub/modelforms.py:141 funhome/modelforms.py:23 funhome/modelforms.py:53
 msgid "Sticker Cover"
 msgstr ""
 
-#: eduhub/modelforms.py:62 funhome/modelforms.py:54
+#: eduhub/modelforms.py:142 funhome/modelforms.py:54
 msgid "Sticker content"
 msgstr ""
 
-#: eduhub/modelforms.py:63 funhome/modelforms.py:25 funhome/modelforms.py:55
+#: eduhub/modelforms.py:143 funhome/modelforms.py:25 funhome/modelforms.py:55
 msgid "Sticker Comment"
 msgstr ""
 
-#: eduhub/modelforms.py:64
+#: eduhub/modelforms.py:144
 msgid "description"
 msgstr ""
 
-#: eduhub/modelforms.py:93
+#: eduhub/modelforms.py:173
 msgid "name exists"
 msgstr ""
 
-#: eduhub/models.py:31 eduhub/models.py:234
+#: eduhub/models.py:37 eduhub/models.py:275 eduhub/models.py:278
 msgid "Classification"
 msgstr ""
 
-#: eduhub/models.py:32
+#: eduhub/models.py:38
 msgid "Classifications"
 msgstr ""
 
-#: eduhub/models.py:43
+#: eduhub/models.py:49 eduhub/models.py:326
 msgid "name includes '/' is not allowed"
 msgstr ""
 
-#: eduhub/models.py:50
-msgid "Parent classification"
-msgstr ""
-
-#: eduhub/models.py:54
+#: eduhub/models.py:60
 msgid "Classification name('/' cannot be included)"
 msgstr ""
 
-#: eduhub/models.py:58
+#: eduhub/models.py:64
 msgid "Classification comment"
 msgstr ""
 
-#: eduhub/models.py:64
+#: eduhub/models.py:70
 msgid "Eduhub label"
 msgstr ""
 
-#: eduhub/models.py:65
+#: eduhub/models.py:71
 msgid "Eduhub  labels"
 msgstr ""
 
-#: eduhub/models.py:76
+#: eduhub/models.py:82
 msgid "Label comment"
 msgstr ""
 
-#: eduhub/models.py:78
+#: eduhub/models.py:84
 msgid "Label cover"
 msgstr ""
 
-#: eduhub/models.py:80
+#: eduhub/models.py:86
 msgid "Label creating date"
 msgstr ""
 
-#: eduhub/models.py:82
+#: eduhub/models.py:88
 msgid "Label author"
 msgstr ""
 
-#: eduhub/models.py:84
+#: eduhub/models.py:90
 msgid "Is label legal"
 msgstr ""
 
-#: eduhub/models.py:90
+#: eduhub/models.py:96
 msgid "Eduhub content (NEW)"
 msgstr ""
 
-#: eduhub/models.py:91
+#: eduhub/models.py:97
 msgid "Eduhub contents (NEW)"
 msgstr ""
 
-#: eduhub/models.py:104
+#: eduhub/models.py:110
 msgid "Content label"
 msgstr ""
 
-#: eduhub/models.py:117
+#: eduhub/models.py:123
 msgid "Content uploading date"
 msgstr ""
 
-#: eduhub/models.py:119
+#: eduhub/models.py:125
 msgid "Content comment"
 msgstr ""
 
-#: eduhub/models.py:121 eduhub/models.py:240
+#: eduhub/models.py:127 eduhub/models.py:284
 msgid "Is content legal"
 msgstr ""
 
-#: eduhub/models.py:126
+#: eduhub/models.py:132
 msgid "Eduhub homepage sticker"
 msgstr ""
 
-#: eduhub/models.py:127
+#: eduhub/models.py:133
 msgid "Eduhub homepage stickers"
 msgstr ""
 
-#: eduhub/models.py:136
+#: eduhub/models.py:142
 msgid "Eduhub homepage sticker title"
 msgstr ""
 
-#: eduhub/models.py:140
+#: eduhub/models.py:146
 msgid "Eduhub homepage sticker subtitle"
 msgstr ""
 
-#: eduhub/models.py:144
+#: eduhub/models.py:150
 msgid "Eduhub homepage sicker cover"
 msgstr ""
 
-#: eduhub/models.py:148
+#: eduhub/models.py:154
 msgid "Eduhub homepage sticker promulgator"
 msgstr ""
 
-#: eduhub/models.py:156
+#: eduhub/models.py:162
 msgid "Eduhub homepage sticker promulgating date"
 msgstr ""
 
-#: eduhub/models.py:159 eduhub/models.py:237
+#: eduhub/models.py:165 eduhub/models.py:281
 msgid "Eduhub homepage sticker comment"
 msgstr ""
 
-#: eduhub/models.py:162 funhome/models.py:60 funhome/models.py:104
+#: eduhub/models.py:168 funhome/models.py:60 funhome/models.py:104
 msgid "Hidden"
 msgstr ""
 
-#: eduhub/models.py:168
+#: eduhub/models.py:174
 msgid "Eduhub Test"
 msgstr ""
 
-#: eduhub/models.py:169
+#: eduhub/models.py:175
 msgid "Eduhub Tests"
 msgstr ""
 
-#: eduhub/models.py:180 eduhub/models.py:200
+#: eduhub/models.py:186 eduhub/models.py:206
 msgid "Test commit"
 msgstr ""
 
-#: eduhub/models.py:184
+#: eduhub/models.py:190
 msgid "Test owner"
 msgstr ""
 
-#: eduhub/models.py:188
+#: eduhub/models.py:194
 msgid "Template text"
 msgstr ""
 
-#: eduhub/models.py:192
+#: eduhub/models.py:198
 msgid "Test submitting date"
 msgstr ""
 
-#: eduhub/models.py:196
+#: eduhub/models.py:202
 msgid "Last modifying date"
 msgstr ""
 
-#: eduhub/models.py:205
-msgid "Appraising content"
-msgstr ""
-
-#: eduhub/models.py:206 eduhub/templates/eduhub/appraising_c_list.html:11
-msgid "Appraising contents"
-msgstr ""
-
-#: eduhub/models.py:215
-msgid "Content from"
-msgstr ""
-
-#: eduhub/models.py:218
-msgid "Title"
-msgstr ""
-
-#: eduhub/models.py:226
-msgid "Date of appraising content creating"
-msgstr ""
-
-#: eduhub/models.py:230
-msgid "Date of appraising content updating"
-msgstr ""
-
-#: eduhub/models.py:245
+#: eduhub/models.py:219
 msgid "Appraising"
 msgstr ""
 
-#: eduhub/models.py:246
+#: eduhub/models.py:220
 msgid "Appraisings"
 msgstr ""
 
-#: eduhub/models.py:256
+#: eduhub/models.py:223
+msgid " appraise "
+msgstr ""
+
+#: eduhub/models.py:230
 msgid "Appraisings from"
 msgstr ""
 
-#: eduhub/models.py:266
+#: eduhub/models.py:240
 msgid "Date of Appraising"
+msgstr ""
+
+#: eduhub/models.py:247
+msgid "Appraising content"
+msgstr ""
+
+#: eduhub/models.py:248 eduhub/templates/eduhub/appraising_c_list.html:11
+msgid "Appraising contents"
+msgstr ""
+
+#: eduhub/models.py:257
+msgid "Content from"
+msgstr ""
+
+#: eduhub/models.py:260
+msgid "Title"
+msgstr ""
+
+#: eduhub/models.py:268
+msgid "Date of appraising content creating"
+msgstr ""
+
+#: eduhub/models.py:272
+msgid "Date of appraising content updating"
+msgstr ""
+
+#: eduhub/models.py:289
+msgid "ASharingGroup"
+msgstr ""
+
+#: eduhub/models.py:290
+msgid "ASharingGroups"
+msgstr ""
+
+#: eduhub/models.py:297 eduhub/templates/eduhub/label_delete.html:38
+msgid "Name"
+msgstr ""
+
+#: eduhub/models.py:299
+msgid "Subtitle"
+msgstr ""
+
+#: eduhub/models.py:301
+msgid "Group cover"
+msgstr ""
+
+#: eduhub/models.py:304
+msgid "ASharingGroup Founder"
+msgstr ""
+
+#: eduhub/models.py:306
+msgid "ASharingGroup Comment"
+msgstr ""
+
+#: eduhub/models.py:308
+msgid "Date of creating"
+msgstr ""
+
+#: eduhub/models.py:310
+msgid "Is legal?"
+msgstr ""
+
+#: eduhub/models.py:315
+msgid "ASharingGroup member Classification"
+msgstr ""
+
+#: eduhub/models.py:316
+msgid "ASharingGroup member Classifications"
+msgstr ""
+
+#: eduhub/models.py:343
+msgid "ASharingGroup member"
+msgstr ""
+
+#: eduhub/models.py:344
+msgid "ASharingGroup members"
+msgstr ""
+
+#: eduhub/models.py:353
+msgid "Member Name"
+msgstr ""
+
+#: eduhub/models.py:356
+msgid "funuser"
+msgstr ""
+
+#: eduhub/models.py:359
+msgid "ASharing group"
+msgstr ""
+
+#: eduhub/models.py:362
+msgid "classifications"
+msgstr ""
+
+#: eduhub/models.py:364
+msgid "Is judge ?"
+msgstr ""
+
+#: eduhub/models.py:368
+msgid "Is member enable?"
+msgstr ""
+
+#: eduhub/models.py:370
+msgid "Date of joining"
 msgstr ""
 
 #: eduhub/templates/eduhub/_classification_nav.html:15
@@ -997,7 +495,7 @@ msgstr ""
 
 #: eduhub/templates/eduhub/_eduhub_base.html:51
 #: eduhub/templates/eduhub/eduhub_search_result.html:23
-#: eduhub/templates/eduhub/label_list.html:10
+#: eduhub/templates/eduhub/label_list.html:11
 msgid "Eduhub labels"
 msgstr ""
 
@@ -1008,18 +506,18 @@ msgstr ""
 msgid "Eduhub contents"
 msgstr ""
 
-#: eduhub/templates/eduhub/_eduhub_base.html:65
+#: eduhub/templates/eduhub/_eduhub_base.html:67
 msgid "Eduhub appraising"
 msgstr ""
 
-#: eduhub/templates/eduhub/_eduhub_base.html:79
-#: eduhub/templates/eduhub/_eduhub_base.html:81
+#: eduhub/templates/eduhub/_eduhub_base.html:82
+#: eduhub/templates/eduhub/_eduhub_base.html:84
 #: eduhub/templates/eduhub/_search.html:15
 #: eduhub/templates/eduhub/_search.html:16
 msgid "What are you thinking about"
 msgstr ""
 
-#: eduhub/templates/eduhub/_eduhub_base.html:87
+#: eduhub/templates/eduhub/_eduhub_base.html:89
 #: eduhub/templates/eduhub/_search.html:22
 msgid "search"
 msgstr ""
@@ -1165,8 +663,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: eduhub/templates/eduhub/appraising_c_create.html:26
-#: eduhub/templates/eduhub/appraising_create.html:26
+#: eduhub/templates/eduhub/appraising_c_create.html:22
 #: eduhub/templates/eduhub/funcontent_create.html:22
 #: eduhub/templates/eduhub/funtest_create.html:39
 #: eduhub/templates/eduhub/label_create.html:25
@@ -1191,16 +688,18 @@ msgid "Are you sure you want to delete"
 msgstr ""
 
 #: eduhub/templates/eduhub/appraising_c_delete.html:21
-#: eduhub/templates/eduhub/appraising_c_detail.html:51
+#: eduhub/templates/eduhub/appraising_c_detail.html:56
 #: eduhub/templates/eduhub/appraising_c_list.html:53
+#: eduhub/templates/eduhub/appraising_create.html:68
 #: eduhub/templates/eduhub/appraising_delete.html:26
 #: eduhub/templates/eduhub/appraising_detail.html:47
 #: eduhub/templates/eduhub/appraising_list.html:68
+#: eduhub/templates/eduhub/asharinggroup_list.html:41
 #: eduhub/templates/eduhub/funcontent_delete.html:27
 #: eduhub/templates/eduhub/funcontent_detail.html:42
 #: eduhub/templates/eduhub/funcontent_list.html:68
 #: eduhub/templates/eduhub/label_delete.html:53
-#: eduhub/templates/eduhub/label_list.html:61
+#: eduhub/templates/eduhub/label_list.html:56
 msgid "Delete"
 msgstr ""
 
@@ -1211,17 +710,20 @@ msgid "Content details"
 msgstr ""
 
 #: eduhub/templates/eduhub/appraising_c_detail.html:31
+#: eduhub/templates/eduhub/appraising_create.html:28
 msgid "Unknown user"
 msgstr ""
 
-#: eduhub/templates/eduhub/appraising_c_detail.html:47
+#: eduhub/templates/eduhub/appraising_c_detail.html:52
 #: eduhub/templates/eduhub/appraising_c_list.html:48
+#: eduhub/templates/eduhub/appraising_create.html:64
 #: eduhub/templates/eduhub/appraising_detail.html:44
 #: eduhub/templates/eduhub/appraising_list.html:62
+#: eduhub/templates/eduhub/asharinggroup_list.html:37
 #: eduhub/templates/eduhub/eduhubhomesticker_detail.html:44
 #: eduhub/templates/eduhub/funcontent_detail.html:39
 #: eduhub/templates/eduhub/funcontent_list.html:62
-#: eduhub/templates/eduhub/label_list.html:57
+#: eduhub/templates/eduhub/label_list.html:52
 #: funhome/templates/funhome/appreciation_detail.html:46
 #: funhome/templates/funhome/funhomesticker_detail.html:45
 msgid "Edit"
@@ -1230,15 +732,16 @@ msgstr ""
 #: eduhub/templates/eduhub/appraising_c_list.html:15
 #: eduhub/templates/eduhub/appraising_list.html:25
 #: eduhub/templates/eduhub/funcontent_list.html:25
-#: eduhub/templates/eduhub/label_list.html:15
+#: eduhub/templates/eduhub/label_list.html:16
 msgid "Add"
 msgstr ""
 
 #: eduhub/templates/eduhub/appraising_c_list.html:42
 #: eduhub/templates/eduhub/appraising_list.html:55
+#: eduhub/templates/eduhub/asharinggroup_list.html:32
 #: eduhub/templates/eduhub/eduhubhomesticker_list.html:53
 #: eduhub/templates/eduhub/funcontent_list.html:55
-#: eduhub/templates/eduhub/label_list.html:50
+#: eduhub/templates/eduhub/label_list.html:47
 msgid "View"
 msgstr ""
 
@@ -1253,6 +756,14 @@ msgstr ""
 #: eduhub/templates/eduhub/appraising_update.html:32
 #: eduhub/templates/eduhub/funcontent_update.html:33
 msgid "Update"
+msgstr ""
+
+#: eduhub/templates/eduhub/appraising_create.html:54
+msgid "Appraise"
+msgstr ""
+
+#: eduhub/templates/eduhub/asharinggroup_list.html:10
+msgid "Appraising Sharing Group"
 msgstr ""
 
 #: eduhub/templates/eduhub/eduhub_search_result.html:14
@@ -1328,10 +839,6 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: eduhub/templates/eduhub/label_delete.html:38
-msgid "Name"
-msgstr ""
-
 #: eduhub/templates/eduhub/label_delete.html:42
 msgid "Creating date"
 msgstr ""
@@ -1344,19 +851,19 @@ msgstr ""
 msgid "ALL"
 msgstr ""
 
-#: eduhub/views.py:72
+#: eduhub/views.py:87
 msgid "Cover image is required"
 msgstr ""
 
-#: eduhub/views.py:77
+#: eduhub/views.py:92
 msgid "Image allowed only"
 msgstr ""
 
-#: eduhub/views.py:83
+#: eduhub/views.py:98
 msgid "The length of cover should be less than"
 msgstr ""
 
-#: eduhub/views.py:121
+#: eduhub/views.py:136
 msgid "Page is not 'last', nor can it be converted to an int."
 msgstr ""
 
@@ -1364,16 +871,629 @@ msgstr ""
 msgid "Fun"
 msgstr ""
 
-#: fun/settings.py:183 fun/settings_.py:182
+#: fun/settings.py:184 fun/settings_.py:186
 msgid "English"
 msgstr ""
 
-#: fun/settings.py:184
+#: fun/settings.py:184 fun/settings.py:185
 msgid "Chinese Simplified"
 msgstr ""
 
-#: fun/settings.py:185
-msgid "Chinese(China)"
+#: funauth/templates/account/account_inactive.html:5
+#: funauth/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr ""
+
+#: funauth/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr ""
+
+#: funauth/templates/account/email.html:6
+msgid "Account"
+msgstr ""
+
+#: funauth/templates/account/email.html:11
+msgid "E-mail Addresses"
+msgstr ""
+
+#: funauth/templates/account/email.html:15
+msgid ""
+"\n"
+"        The following e-mail addresses are associated with your account\n"
+"      "
+msgstr ""
+
+#: funauth/templates/account/email.html:41
+msgid "Verified"
+msgstr ""
+
+#: funauth/templates/account/email.html:43
+msgid "Unverified"
+msgstr ""
+
+#: funauth/templates/account/email.html:47
+msgid "Primary"
+msgstr ""
+
+#: funauth/templates/account/email.html:57
+msgid "Make Primary"
+msgstr ""
+
+#: funauth/templates/account/email.html:61
+msgid "Re-send Verification"
+msgstr ""
+
+#: funauth/templates/account/email.html:65
+#: funauth/templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr ""
+
+#: funauth/templates/account/email.html:74
+msgid "Warning"
+msgstr ""
+
+#: funauth/templates/account/email.html:76
+msgid ""
+"\n"
+"        You currently do not have any e-mail address set up. You should "
+"really \n"
+"        add an e-mail address so you can receive notifications, reset your \n"
+"        password, etc\n"
+"      "
+msgstr ""
+
+#: funauth/templates/account/email.html:86
+msgid "Add E-mail Address"
+msgstr ""
+
+#: funauth/templates/account/email.html:92
+msgid "Add E-mail"
+msgstr ""
+
+#: funauth/templates/account/email.html:104
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: funauth/templates/account/email/base_message.txt:1
+#, python-format
+msgid "Hello from %(site_name)s!"
+msgstr ""
+
+#: funauth/templates/account/email/base_message.txt:5
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.html:8
+msgid "Hello from x-dove"
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.html:10
+msgid ""
+"\n"
+"            You're receiving this e-mail because user \n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.html:15
+msgid ""
+"\n"
+"            has given yours as an e-mail address to connect their account.\n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.html:18
+msgid "To confirm this is correct, go to"
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.html:20
+msgid "CONFIRM EMAIL"
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.html:25
+msgid ""
+" \n"
+"            Thank you from x-dove!\n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"You're receiving this e-mail because user %(user_display)s has given your e-"
+"mail address to register an account on %(site_domain)s.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s"
+msgstr ""
+
+#: funauth/templates/account/email/email_confirmation_subject.html:3
+#: funauth/templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.html:7
+msgid "Hello from"
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.html:7
+#: funhome/views.py:153 funhome/views.py:186
+msgid "X-DOVE"
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.html:9
+msgid ""
+"\n"
+"        You're receiving this e-mail because you or someone else has "
+"requested \n"
+"        a password for your user account.\n"
+"        It can be safely ignored if you did not request a password reset. \n"
+"        Click the link below to reset your password.\n"
+"    "
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.html:16
+msgid "RESET PASSWORD"
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.html:19
+#, python-format
+msgid ""
+"\n"
+"            In case you forgot, your username is %(username)s.\n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.html:26
+msgid "Thank you for using"
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.txt:4
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_message.txt:9
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_subject.html:3
+msgid ""
+"\n"
+"    Password Reset E-mail\n"
+msgstr ""
+
+#: funauth/templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr ""
+
+#: funauth/templates/account/email_confirm.html:7
+#: funauth/templates/account/email_confirm.html:12
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: funauth/templates/account/email_confirm.html:19
+#, python-format
+msgid ""
+"\n"
+"                Please confirm that \n"
+"                <a href=\"mailto:%(email)s\"\n"
+"                    style=\"font-size: larger;\">\n"
+"                    %(email)s\n"
+"                </a> is an e-mail address for user \n"
+"                <span style=\"font-weight: bolder;\">%(user_display)s</"
+"span>. \n"
+"            "
+msgstr ""
+
+#: funauth/templates/account/email_confirm.html:34
+msgid "Confirm"
+msgstr ""
+
+#: funauth/templates/account/email_confirm.html:44
+msgid ""
+"\n"
+"                This e-mail confirmation link expired or is invalid. Please\n"
+"            "
+msgstr ""
+
+#: funauth/templates/account/email_confirm.html:49
+msgid "issue a new e-mail confirmation request"
+msgstr ""
+
+#: funauth/templates/account/login.html:11
+#: funauth/templates/account/login.html:22
+#: funauth/templates/account/login.html:43
+msgid "Sign In"
+msgstr ""
+
+#: funauth/templates/account/login.html:26
+msgid "If you have not created an account yet, then please"
+msgstr ""
+
+#: funauth/templates/account/login.html:27
+msgid "sign up"
+msgstr ""
+
+#: funauth/templates/account/login.html:50
+msgid "Forgot Password?"
+msgstr ""
+
+#: funauth/templates/account/logout.html:11
+#: funauth/templates/account/logout.html:23
+msgid "Sign Out"
+msgstr ""
+
+#: funauth/templates/account/logout.html:29
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: funauth/templates/account/logout.html:41
+msgid "Sign out now"
+msgstr ""
+
+#: funauth/templates/account/messages/cannot_delete_primary_email.html:2
+#, python-format
+msgid ""
+"\n"
+"    You cannot remove your primary e-mail address (%(email)s).\n"
+msgstr ""
+
+#: funauth/templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr ""
+
+#: funauth/templates/account/messages/email_confirmation_sent.html:2
+#, python-format
+msgid ""
+"\n"
+"    Confirmation e-mail sent to %(email)s.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr ""
+
+#: funauth/templates/account/messages/email_confirmed.html:2
+#, python-format
+msgid ""
+"\n"
+"    You have confirmed %(email)s.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr ""
+
+#: funauth/templates/account/messages/email_deleted.html:2
+#, python-format
+msgid ""
+"\n"
+"    Removed e-mail address %(email)s.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr ""
+
+#: funauth/templates/account/messages/logged_in.html:4
+#, python-format
+msgid ""
+"\n"
+"    Successfully signed in as %(name)s.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr ""
+
+#: funauth/templates/account/messages/logged_out.html:2
+msgid ""
+"\n"
+"    You have signed out.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr ""
+
+#: funauth/templates/account/messages/password_changed.html:2
+msgid ""
+"\n"
+"    Password successfully changed.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr ""
+
+#: funauth/templates/account/messages/password_set.html:2
+msgid ""
+"\n"
+"    Password successfully set.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr ""
+
+#: funauth/templates/account/messages/primary_email_set.html:2
+msgid ""
+"\n"
+"    Primary e-mail address set.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr ""
+
+#: funauth/templates/account/messages/unverified_primary_email.html:2
+msgid ""
+"\n"
+"    Your primary e-mail address must be verified.\n"
+msgstr ""
+
+#: funauth/templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr ""
+
+#: funauth/templates/account/password_change.html:5
+#: funauth/templates/account/password_change.html:8
+#: funauth/templates/account/password_change.html:15
+#: funauth/templates/account/password_reset_from_key.html:4
+#: funauth/templates/account/password_reset_from_key.html:11
+#: funauth/templates/account/password_reset_from_key_done.html:6
+#: funauth/templates/account/password_reset_from_key_done.html:9
+msgid "Change Password"
+msgstr ""
+
+#: funauth/templates/account/password_reset.html:8
+#: funauth/templates/account/password_reset.html:15
+#: funauth/templates/account/password_reset_done.html:6
+#: funauth/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr ""
+
+#: funauth/templates/account/password_reset.html:24
+msgid ""
+"\n"
+"                You are administrator, please reset password via terminal\n"
+"            "
+msgstr ""
+
+#: funauth/templates/account/password_reset.html:32
+msgid ""
+"\n"
+"                Forgotten your password? Enter your e-mail address below, \n"
+"                and we'll send you an e-mail allowing you to reset it\n"
+"            "
+msgstr ""
+
+#: funauth/templates/account/password_reset.html:41
+msgid "Reset My Password"
+msgstr ""
+
+#: funauth/templates/account/password_reset.html:46
+msgid ""
+"\n"
+"                Please contact us if you have any trouble resetting \n"
+"                your password.\n"
+"            "
+msgstr ""
+
+#: funauth/templates/account/password_reset_done.html:16
+msgid ""
+"\n"
+"            We have sent you an e-mail. Please contact us if you do not "
+"receive \n"
+"            it within a few minutes.\n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/password_reset_from_key.html:9
+msgid "Bad Token"
+msgstr ""
+
+#: funauth/templates/account/password_reset_from_key.html:18
+msgid ""
+"\n"
+"                The password reset link was invalid, possibly because it "
+"has \n"
+"                already been used.  Please request a \n"
+"            "
+msgstr ""
+
+#: funauth/templates/account/password_reset_from_key.html:23
+msgid "new password reset"
+msgstr ""
+
+#: funauth/templates/account/password_reset_from_key.html:33
+msgid "change password"
+msgstr ""
+
+#: funauth/templates/account/password_reset_from_key.html:37
+#: funauth/templates/account/password_reset_from_key_done.html:10
+msgid "Your password is now changed."
+msgstr ""
+
+#: funauth/templates/account/password_set.html:5
+#: funauth/templates/account/password_set.html:8
+#: funauth/templates/account/password_set.html:15
+msgid "Set Password"
+msgstr ""
+
+#: funauth/templates/account/signup.html:11
+#: funauth/templates/socialaccount/signup.html:5
+msgid "Signup"
+msgstr ""
+
+#: funauth/templates/account/signup.html:22
+#: funauth/templates/account/signup.html:50
+#: funauth/templates/socialaccount/signup.html:8
+#: funauth/templates/socialaccount/signup.html:19
+#: funhome/templates/funhome/_navbar.html:68
+msgid "Sign Up"
+msgstr ""
+
+#: funauth/templates/account/signup.html:25
+msgid "Already have an account? Then please"
+msgstr ""
+
+#: funauth/templates/account/signup.html:26
+#: funhome/templates/funhome/home_join_us.html:91
+msgid "sign in"
+msgstr ""
+
+#: funauth/templates/account/signup.html:42
+#: funhome/templates/funhome/_footer.html:24
+msgid "Legal information"
+msgstr ""
+
+#: funauth/templates/account/signup.html:45
+msgid "and_sign"
+msgstr ""
+
+#: funauth/templates/account/signup.html:46
+msgid "Data privacy"
+msgstr ""
+
+#: funauth/templates/account/signup_closed.html:5
+#: funauth/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr ""
+
+#: funauth/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: funauth/templates/account/snippets/already_logged_in.html:7
+msgid "You are already logged in as"
+msgstr ""
+
+#: funauth/templates/account/verification_sent.html:6
+#: funauth/templates/account/verification_sent.html:10
+#: funauth/templates/account/verified_email_required.html:6
+#: funauth/templates/account/verified_email_required.html:10
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: funauth/templates/account/verification_sent.html:13
+msgid ""
+"\n"
+"            We have sent an e-mail to you for verification. Follow the "
+"link \n"
+"            provided to finalize the signup process. Please contact us if "
+"you \n"
+"            do not receive it within a few minutes.\n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/verified_email_required.html:15
+msgid ""
+"\n"
+"            This part of the site requires us to verify that\n"
+"            you are who you claim to be. For this purpose, we require that "
+"you\n"
+"            verify ownership of your e-mail address. \n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/verified_email_required.html:23
+msgid ""
+"\n"
+"            We have sent an e-mail to you for\n"
+"            verification. Please click on the link inside this e-mail. "
+"Please\n"
+"            contact us if you do not receive it within a few minutes.\n"
+"        "
+msgstr ""
+
+#: funauth/templates/account/verified_email_required.html:31
+msgid "Note"
+msgstr ""
+
+#: funauth/templates/account/verified_email_required.html:31
+msgid "you can still"
+msgstr ""
+
+#: funauth/templates/account/verified_email_required.html:33
+msgid "change your e-mail address"
+msgstr ""
+
+#: funauth/templates/openid/login.html:9
+msgid "OpenID Sign In"
+msgstr ""
+
+#: funauth/templates/socialaccount/authentication_error.html:5
+#: funauth/templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr ""
+
+#: funauth/templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+
+#: funauth/templates/socialaccount/connections.html:5
+#: funauth/templates/socialaccount/connections.html:8
+msgid "Account Connections"
+msgstr ""
+
+#: funauth/templates/socialaccount/connections.html:11
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr ""
+
+#: funauth/templates/socialaccount/connections.html:43
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+
+#: funauth/templates/socialaccount/connections.html:46
+msgid "Add a 3rd Party Account"
+msgstr ""
+
+#: funauth/templates/socialaccount/login_cancelled.html:5
+#: funauth/templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr ""
+
+#: funauth/templates/socialaccount/login_cancelled.html:13
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a href=\"%(login_url)s"
+"\">sign in</a>."
+msgstr ""
+
+#: funauth/templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr ""
+
+#: funauth/templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr ""
+
+#: funauth/templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr ""
+
+#: funauth/templates/socialaccount/signup.html:10
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to\n"
+"%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
 
 #: funhome/apps.py:7
