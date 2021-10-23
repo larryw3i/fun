@@ -19,7 +19,7 @@
     {% if asharingcontent.cfrom %}
         <p class="text-right " >
             <a href="
-            {% url 'funuser:funuser_detail' user_id=asharingcontent.cfrom.id %}">
+        {% url 'funuser:funuser_detail' user_id=asharingcontent.cfrom.id %}">
                 {{ asharingcontent.cfrom }}
             </a> 
         </p> 
@@ -40,7 +40,7 @@
     
     {% if user_is_judge %}
         <div class="col col-12 text-center " insert-url=
-        "{% url 'eduhub:appraising_create' appraising_c_id=asharingcontent.id %}">
+    "{% url 'eduhub:appraising_create' appraising_c_id=asharingcontent.id %}">
         </div>
     {% endif %}
 
@@ -50,6 +50,7 @@
             {{ form.media }}
             {{ form|crispy }}
             <div class="col col-12 text-center" >
+                {{ form.point.validators }}
                 <input class="btn btn-outline-info " type="submit" 
                     value="{% trans 'Appraise' %}" />
             </div>

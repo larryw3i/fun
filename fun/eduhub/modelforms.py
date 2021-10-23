@@ -33,7 +33,10 @@ class AppraisingModelForm(ModelForm):
         fields = ['point', 'comment']
 
         widgets = {
-            'comment': forms.Textarea(attrs={'rows': '2'})
+            'comment': forms.Textarea(attrs={'rows': '2'}),
+            'point': forms.NumberInput(attrs={
+                'min':Appraising.appraising_point['min'], 
+                'max':Appraising.appraising_point['max']})
         }
 
     def clean(self):
