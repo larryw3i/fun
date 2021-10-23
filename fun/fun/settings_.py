@@ -34,7 +34,7 @@ SITE_DOMAIN = ''
 SITE_NAME = ''
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-ALLOWED_HOSTS = ['127.0.0.1'] if DEBUG else ['*']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -234,7 +234,11 @@ CKEDITOR_CONFIGS = {
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 DEFAULT_FILE_STORAGE = 'funfile.storage.FunFileStorage'
-
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.MemoryFileUploadHandler',
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+]
+FILE_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024
 
 ADMINS = MANAGERS = ()
 
@@ -294,9 +298,3 @@ ALLOWED_REGISTRATION = True
 
 BEIAN_TEXT = ''
 BEIAN_URL = ''
-
-
-
-
-
-

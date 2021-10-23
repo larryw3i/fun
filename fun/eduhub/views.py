@@ -6,6 +6,7 @@ from datetime import datetime
 import bleach
 import magic
 import pytz
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core import paginator
 from django.core.exceptions import ValidationError
@@ -21,7 +22,6 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 from humanize import naturalsize
 
 from fun import bleach_clean
-from django.conf import settings
 
 from .apps import EduhubConfig
 from .modelforms import (AppraisingModelForm, ASGMemberModelForm,
@@ -239,7 +239,9 @@ class FuncontentCreateView(LoginRequiredMixin, CreateView):
         classification_id = self.request.COOKIES.get(
             'classification', uuid.UUID(int=0))
         initial['classification'] = Classification.objects.get(
-            pk=classification_id)
+            pk=classification_id) if Classification.objects.filter(
+            pk=classification_id).exists() else \
+            Classification.objects.first()
         return initial
 
     def form_valid(self, form):

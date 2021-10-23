@@ -1,13 +1,12 @@
 import os
 import uuid
 
+from django.conf import settings
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from funfile.storage import upload_to
 from imagekit.models import ImageSpecField
-
-from django.conf import settings
 
 # Create your models here.
 

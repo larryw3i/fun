@@ -231,17 +231,17 @@ class Appraising(models.Model):
     acontent = models.ForeignKey(
         to='ASharingContent', on_delete=models.CASCADE,
         verbose_name=_('Content'))
-    appraising_point = { 'min':5, 'max':10 }
+    appraising_point = {'min': 0, 'max': 10}
     point = models.SmallIntegerField(
-        default = appraising_point['min'],
+        default=appraising_point['min'],
         validators=[
-            MinValueValidator( appraising_point['min'] ),
-            MaxValueValidator( appraising_point['max'] )])
+            MinValueValidator(appraising_point['min']),
+            MaxValueValidator(appraising_point['max'])])
     DOA = models.DateTimeField(
         auto_now_add=True,
         verbose_name=_('Date of Appraising'))
     comment = models.CharField(
-        max_length=64, verbose_name=_('Comment'))    
+        max_length=64, verbose_name=_('Comment'))
 
 
 class ASharingContent(models.Model):

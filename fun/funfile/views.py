@@ -1,11 +1,10 @@
 import os
 
 import magic
+from django.conf import settings
 from django.http import FileResponse, Http404
 from django.shortcuts import render
 from funfile.models import Checkup
-
-from django.conf import settings
 
 # Create your views here.
 

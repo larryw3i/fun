@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 settings_exists = os.path.exists(
-    os.path.join('.',  'fun', 'settings.py'))
+    os.path.join('.', 'fun', 'settings.py'))
 os.environ.setdefault(
     'DJANGO_SETTINGS_MODULE',
     'fun.settings' if settings_exists else 'fun.settings_')

@@ -3,6 +3,7 @@ from datetime import datetime
 
 import magic
 import pytz
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.core import serializers
 from django.core.files import File
@@ -18,8 +19,6 @@ from django.views import View
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   TemplateView, UpdateView)
 from funfile.models import Checkup
-
-from django.conf import settings
 
 from .apps import FunhomeConfig
 from .modelforms import FunhomestickerModelForm, HomestickerModelForm

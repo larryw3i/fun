@@ -5,6 +5,7 @@ import math
 import os
 
 import magic
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core import paginator
@@ -17,8 +18,6 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
-
-from django.conf import settings
 
 from .apps import FunuserConfig
 from .modelforms import FunuserModelForm

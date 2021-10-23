@@ -4,10 +4,9 @@ import urllib
 import uuid
 
 from django import template
+from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 from eduhub.models import ASharingGroupMember, Classification
-
-from django.conf import settings
 
 register = template.Library()
 

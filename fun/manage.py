@@ -11,7 +11,7 @@ import sys
 
 def main():
     settings_exists = os.path.exists(
-        os.path.join('.',  'fun', 'settings.py'))
+        os.path.join('.', 'fun', 'settings.py'))
     os.environ.setdefault(
         'DJANGO_SETTINGS_MODULE',
         'fun.settings' if settings_exists else 'fun.settings_')
