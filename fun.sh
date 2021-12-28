@@ -31,6 +31,14 @@
 
 _args=("$@") # all parameters from terminal.
 
+activate_source(){
+    if [[ -x "$(which virtualenv)" ]]; then
+        [[ -f "./venv/bin/activate" ]] || virtualenv venv
+        source ./venv/bin/activate
+    else
+        echo "virtualenv doesn't exist, please install it" && exit
+    fi
+}
 
 p8(){
     activate_source
@@ -43,14 +51,6 @@ pi(){
     pip3 install $( cat requirements/*.txt | grep -v "#" )
 }
 
-activate_source(){
-    if [[ -x "$(which virtualenv)" ]]; then
-        [[ -f "./venv/bin/activate" ]] || virtualenv venv
-        source ./venv/bin/activate
-    else
-        echo "virtualenv doesn't exist, please install it" && exit
-    fi
-}
 
 init(){
     activate_source;    pi;
