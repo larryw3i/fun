@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'allauth.account',
 
     'funhome.apps.FunhomeConfig',
+    'funstatic.apps.FunstaticConfig',
     'funfile.apps.FunfileConfig',
     'eduhub.apps.EduhubConfig',
     'funuser.apps.FunuserConfig',
@@ -242,6 +243,10 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024
 
 ADMINS = MANAGERS = ()
 
+log_path = os.path.join(BASE_DIR, 'funnlog', 'django_fun.log')
+if not os.path.exists(log_path):
+    open(log_path, 'x').close()
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -258,7 +263,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR, 'funlog', 'django_fun.log'),
+            'filename': log_path,
             'maxBytes': 8 * 1024 * 1024,
         },
         'mail_admins': {
