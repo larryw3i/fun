@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'allauth.account',
 
     'funhome.apps.FunhomeConfig',
+    'fulog.apps.FulogConfig',
     'funstatic.apps.FunstaticConfig',
     'funfile.apps.FunfileConfig',
     'eduhub.apps.EduhubConfig',
@@ -243,7 +244,7 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 20 * 1024 * 1024
 
 ADMINS = MANAGERS = ()
 
-log_path = os.path.join(BASE_DIR, 'funnlog', 'django_fun.log')
+log_path = os.path.join(BASE_DIR, 'fulog', 'django_fun.log')
 if not os.path.exists(log_path):
     open(log_path, 'x').close()
 
