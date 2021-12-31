@@ -93,7 +93,7 @@ _start(){
         yarn
         cd ../..
     else
-        echo "yarn doesn't exist, please install it" && exit
+        echo "yarn doesn't exist, please install it"
         cd ../../..
         exit
     fi
