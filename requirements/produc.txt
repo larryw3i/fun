@@ -8,5 +8,5 @@ django-allauth
 bleach
 humanize
 python-magic
-# django-bootstrap5
 crispy-bootstrap5
+pytz

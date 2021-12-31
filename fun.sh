@@ -86,7 +86,21 @@ update_gitignore(){
 
 _start(){
     activate_source
-    python3 ./fun/manage.py runserver
+    cd ./fun
+    cd ./funstatic/static
+
+    if [[ -x "$(which yarn)" ]]; then
+        yarn
+        cd ../..
+    else
+        echo "yarn doesn't exist, please install it" && exit
+        cd ../../..
+        exit
+    fi
+
+    python3 ./manage.py migrate
+    python3 ./manage.py runserver
+    cd ..
 }
 
 ug(){       update_gitignore;   }
