@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     'crispy_forms',
-    # 'django_bootstrap5',
     'crispy_bootstrap5',
     'imagekit',
 
@@ -79,6 +78,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
     'funmiddleware.funmiddleware.TimezoneMiddleware',
 ]
+
 
 ROOT_URLCONF = 'fun.urls'
 
@@ -171,7 +171,7 @@ LOGOUT_REDIRECT_URL = '#'
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

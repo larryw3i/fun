@@ -1,7 +1,6 @@
 import hashlib
 import os
 import uuid
-from functools import partial
 
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import (RichTextUploadingField,
