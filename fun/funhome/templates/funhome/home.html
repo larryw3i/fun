@@ -10,7 +10,10 @@
 {% block content %}
     {% if user.is_authenticated %}
         {# workspace #}
+        Hello!
+        {% comment %}
         <script> location.href = `{% url 'eduhub:label_list' %}`; </script>
+        {% endcomment %}
     {% else %}
         {# welcome #}
         {% include 'funhome/home_funhomesticker.html' %}

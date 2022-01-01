@@ -94,11 +94,15 @@ class LabelCreateView(LoginRequiredMixin, CreateView):
                           context={'form': form})
 
         if form.instance.cover.file.size > max_cover_size:
-            form.add_error('cover', _(
-                'The length of cover should be less than') + ' ' +
+            form.add_error(
+                'cover',
+                _('The length of cover should be less than') +
+                ' ' +
                 naturalsize(max_cover_size))
-            return render(self.request, label_create_template,
-                          context={'form': form})
+            return render(
+                self.request, label_create_template,
+                context={'form': form}
+            )
 
         form.instance.author = self.request.user
 
