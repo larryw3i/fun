@@ -6,13 +6,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0007_alter_classification_parent_id'),
+        ("eduhub", "0007_alter_classification_parent_id"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='classification',
-            old_name='parent_id',
-            new_name='parent',
+            model_name="classification",
+            old_name="parent_id",
+            new_name="parent",
         ),
     ]

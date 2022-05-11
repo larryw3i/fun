@@ -3,5 +3,5 @@ from django.utils.translation import gettext_lazy as _
 
 
 class FunhomeConfig(AppConfig):
-    name = 'funhome'
-    verbose_name = _('Fun home')
+    name = "funhome"
+    verbose_name = _("Fun home")

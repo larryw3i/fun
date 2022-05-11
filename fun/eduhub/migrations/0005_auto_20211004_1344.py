@@ -7,24 +7,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0004_auto_20211004_1339'),
+        ("eduhub", "0004_auto_20211004_1339"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='classification',
+            name="classification",
             options={
-                'verbose_name': 'Classification',
-                'verbose_name_plural': 'Classifications'},
+                "verbose_name": "Classification",
+                "verbose_name_plural": "Classifications",
+            },
         ),
         migrations.AlterField(
-            model_name='classification',
-            name='parent_id',
+            model_name="classification",
+            name="parent_id",
             field=models.ForeignKey(
-                default='1221b706-8b7d-433c-9dc8-d840354abd1f',
+                default="1221b706-8b7d-433c-9dc8-d840354abd1f",
                 on_delete=django.db.models.deletion.CASCADE,
-                to='eduhub.classification',
-                verbose_name='Parent classification ID'),
+                to="eduhub.classification",
+                verbose_name="Parent classification ID",
+            ),
             preserve_default=False,
         ),
     ]

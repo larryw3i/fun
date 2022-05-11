@@ -7,18 +7,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0010_classification_parent'),
+        ("eduhub", "0010_classification_parent"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='classification',
-            name='parent',
+            model_name="classification",
+            name="parent",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                to='eduhub.classification',
-                verbose_name='Parent classification'),
+                to="eduhub.classification",
+                verbose_name="Parent classification",
+            ),
         ),
     ]

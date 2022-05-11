@@ -10,11 +10,11 @@ import sys
 
 
 def main():
-    settings_exists = os.path.exists(
-        os.path.join('.', 'fun', 'settings.py'))
+    settings_exists = os.path.exists(os.path.join(".", "fun", "settings.py"))
     os.environ.setdefault(
-        'DJANGO_SETTINGS_MODULE',
-        'fun.settings' if settings_exists else 'fun.settings_')
+        "DJANGO_SETTINGS_MODULE",
+        "fun.settings" if settings_exists else "fun.settings_",
+    )
 
     try:
         from django.core.management import execute_from_command_line
@@ -27,5 +27,5 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

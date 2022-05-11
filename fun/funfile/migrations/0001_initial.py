@@ -9,30 +9,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Checkup',
+            name="Checkup",
             fields=[
-                ('id',
-                 models.UUIDField(
-                     auto_created=True,
-                     default=uuid.uuid4,
-                     editable=False,
-                     primary_key=True,
-                     serialize=False)),
-                ('file_id',
-                 models.UUIDField(
-                     help_text='file uuid')),
-                ('is_legal',
-                 models.BooleanField(
-                     default=True,
-                     help_text='is legal')),
-                ('comment',
-                 models.TextField(
-                     help_text='comment')),
+                (
+                    "id",
+                    models.UUIDField(
+                        auto_created=True,
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("file_id", models.UUIDField(help_text="file uuid")),
+                (
+                    "is_legal",
+                    models.BooleanField(default=True, help_text="is legal"),
+                ),
+                ("comment", models.TextField(help_text="comment")),
             ],
         ),
     ]

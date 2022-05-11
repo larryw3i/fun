@@ -11,54 +11,166 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('eduhub', '0018_rename_appraisingcontent_asharingcontent'),
+        ("eduhub", "0018_rename_appraisingcontent_asharingcontent"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ASGMemberClassification',
+            name="ASGMemberClassification",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
-                ('cname', models.CharField(max_length=64, verbose_name='Classification Name')),
-                ('comment', models.CharField(max_length=64, verbose_name='Classification Comment')),
-                ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='eduhub.asgmemberclassification', verbose_name='Parent classification')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
+                (
+                    "cname",
+                    models.CharField(
+                        max_length=64, verbose_name="Classification Name"
+                    ),
+                ),
+                (
+                    "comment",
+                    models.CharField(
+                        max_length=64, verbose_name="Classification Comment"
+                    ),
+                ),
+                (
+                    "parent",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="eduhub.asgmemberclassification",
+                        verbose_name="Parent classification",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'ASharingGroup member Classification',
-                'verbose_name_plural': 'ASharingGroup member Classifications',
+                "verbose_name": "ASharingGroup member Classification",
+                "verbose_name_plural": "ASharingGroup member Classifications",
             },
         ),
         migrations.CreateModel(
-            name='ASharingGroup',
+            name="ASharingGroup",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
-                ('name', models.CharField(max_length=64, verbose_name='Name')),
-                ('subtitle', models.CharField(max_length=64, verbose_name='Subtitle')),
-                ('comment', models.CharField(max_length=64, verbose_name='ASharingGroup Comment')),
-                ('DOC', models.DateTimeField(auto_now_add=True, verbose_name='Date of Appraising')),
-                ('is_legal', models.BooleanField(default=True, verbose_name='Is legal?')),
-                ('founder', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='ASharingGroup Founder')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
+                ("name", models.CharField(max_length=64, verbose_name="Name")),
+                (
+                    "subtitle",
+                    models.CharField(max_length=64, verbose_name="Subtitle"),
+                ),
+                (
+                    "comment",
+                    models.CharField(
+                        max_length=64, verbose_name="ASharingGroup Comment"
+                    ),
+                ),
+                (
+                    "DOC",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Date of Appraising"
+                    ),
+                ),
+                (
+                    "is_legal",
+                    models.BooleanField(
+                        default=True, verbose_name="Is legal?"
+                    ),
+                ),
+                (
+                    "founder",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="ASharingGroup Founder",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'ASharingGroup',
-                'verbose_name_plural': 'ASharingGroups',
+                "verbose_name": "ASharingGroup",
+                "verbose_name_plural": "ASharingGroups",
             },
         ),
         migrations.CreateModel(
-            name='ASharingGroupMember',
+            name="ASharingGroupMember",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
-                ('mname', models.CharField(max_length=64, verbose_name='Member Name')),
-                ('applyinginfo', models.CharField(max_length=64, verbose_name='applying info')),
-                ('enable', models.BooleanField(default=False, verbose_name='Is member enable?')),
-                ('DOJ', models.DateTimeField(auto_now_add=True, verbose_name='Date of joining')),
-                ('asharinggroup', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='eduhub.asharinggroup', verbose_name='ASharing group')),
-                ('funuser', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='funuser')),
-                ('memberclassification', models.ManyToManyField(blank=True, to='eduhub.ASGMemberClassification', verbose_name='classifications')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
+                (
+                    "mname",
+                    models.CharField(
+                        max_length=64, verbose_name="Member Name"
+                    ),
+                ),
+                (
+                    "applyinginfo",
+                    models.CharField(
+                        max_length=64, verbose_name="applying info"
+                    ),
+                ),
+                (
+                    "enable",
+                    models.BooleanField(
+                        default=False, verbose_name="Is member enable?"
+                    ),
+                ),
+                (
+                    "DOJ",
+                    models.DateTimeField(
+                        auto_now_add=True, verbose_name="Date of joining"
+                    ),
+                ),
+                (
+                    "asharinggroup",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="eduhub.asharinggroup",
+                        verbose_name="ASharing group",
+                    ),
+                ),
+                (
+                    "funuser",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                        verbose_name="funuser",
+                    ),
+                ),
+                (
+                    "memberclassification",
+                    models.ManyToManyField(
+                        blank=True,
+                        to="eduhub.ASGMemberClassification",
+                        verbose_name="classifications",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'ASharingGroup member',
-                'verbose_name_plural': 'ASharingGroup members',
+                "verbose_name": "ASharingGroup member",
+                "verbose_name_plural": "ASharingGroup members",
             },
         ),
     ]

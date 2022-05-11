@@ -7,17 +7,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0014_auto_20211004_2129'),
+        ("eduhub", "0014_auto_20211004_2129"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='funcontent',
-            name='label',
+            model_name="funcontent",
+            name="label",
             field=models.ForeignKey(
                 null=True,
                 on_delete=django.db.models.deletion.SET_NULL,
-                to='eduhub.label',
-                verbose_name='Content label'),
+                to="eduhub.label",
+                verbose_name="Content label",
+            ),
         ),
     ]

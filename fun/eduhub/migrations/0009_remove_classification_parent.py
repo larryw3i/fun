@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0008_rename_parent_id_classification_parent'),
+        ("eduhub", "0008_rename_parent_id_classification_parent"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='classification',
-            name='parent',
+            model_name="classification",
+            name="parent",
         ),
     ]

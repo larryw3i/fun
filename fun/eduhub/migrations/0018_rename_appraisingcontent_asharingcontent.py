@@ -8,12 +8,12 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('eduhub', '0017_auto_20211006_0009'),
+        ("eduhub", "0017_auto_20211006_0009"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='AppraisingContent',
-            new_name='ASharingContent',
+            old_name="AppraisingContent",
+            new_name="ASharingContent",
         ),
     ]

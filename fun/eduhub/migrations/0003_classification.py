@@ -8,36 +8,45 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0002_auto_20211002_2335'),
+        ("eduhub", "0002_auto_20211002_2335"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Classification',
+            name="Classification",
             fields=[
-                ('id',
-                 models.UUIDField(
-                     default=uuid.uuid4,
-                     editable=False,
-                     primary_key=True,
-                     serialize=False,
-                     unique=True)),
-                ('parent_id',
-                 models.UUIDField(
-                     null=True,
-                     verbose_name='Parent classification ID')),
-                ('name',
-                 models.CharField(
-                     max_length=64,
-                     verbose_name='Classification name')),
-                ('comment',
-                 models.CharField(
-                     max_length=64,
-                     verbose_name='Classification comment')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
+                (
+                    "parent_id",
+                    models.UUIDField(
+                        null=True, verbose_name="Parent classification ID"
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        max_length=64, verbose_name="Classification name"
+                    ),
+                ),
+                (
+                    "comment",
+                    models.CharField(
+                        max_length=64, verbose_name="Classification comment"
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Appraising Classification',
-                'verbose_name_plural': 'Appraising Classifications',
+                "verbose_name": "Appraising Classification",
+                "verbose_name_plural": "Appraising Classifications",
             },
         ),
     ]

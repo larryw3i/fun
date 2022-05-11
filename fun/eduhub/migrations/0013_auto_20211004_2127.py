@@ -7,22 +7,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0012_auto_20211004_1746'),
+        ("eduhub", "0012_auto_20211004_1746"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='funcontent',
-            name='classification',
+            model_name="funcontent",
+            name="classification",
         ),
         migrations.AddField(
-            model_name='label',
-            name='classification',
+            model_name="label",
+            name="classification",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.SET_NULL,
-                to='eduhub.classification',
-                verbose_name='Label classification'),
+                to="eduhub.classification",
+                verbose_name="Label classification",
+            ),
         ),
     ]

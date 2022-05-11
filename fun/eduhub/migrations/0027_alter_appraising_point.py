@@ -7,17 +7,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0026_asharinggroup_cover'),
+        ("eduhub", "0026_asharinggroup_cover"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='appraising',
-            name='point',
+            model_name="appraising",
+            name="point",
             field=models.SmallIntegerField(
                 default=0,
                 validators=[
                     django.core.validators.MinValueValidator(0),
-                    django.core.validators.MaxValueValidator(10)]),
+                    django.core.validators.MaxValueValidator(10),
+                ],
+            ),
         ),
     ]

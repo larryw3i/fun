@@ -6,24 +6,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0011_alter_classification_parent'),
+        ("eduhub", "0011_alter_classification_parent"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='classification',
-            name='comment',
+            model_name="classification",
+            name="comment",
             field=models.CharField(
                 blank=True,
                 max_length=64,
                 null=True,
-                verbose_name='Classification comment'),
+                verbose_name="Classification comment",
+            ),
         ),
         migrations.AlterField(
-            model_name='classification',
-            name='name',
+            model_name="classification",
+            name="name",
             field=models.CharField(
                 max_length=64,
-                verbose_name="Classification name('/' cannot be included)"),
+                verbose_name="Classification name('/' cannot be included)",
+            ),
         ),
     ]

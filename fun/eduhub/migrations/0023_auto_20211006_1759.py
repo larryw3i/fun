@@ -7,31 +7,36 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0022_rename_classification_asharinggroupmember_gclassification'), ]
+        (
+            "eduhub",
+            "0022_rename_classification_asharinggroupmember_gclassification",
+        ),
+    ]
 
     operations = [
         migrations.RenameField(
-            model_name='appraising',
-            old_name='content',
-            new_name='acontent',
+            model_name="appraising",
+            old_name="content",
+            new_name="acontent",
         ),
         migrations.RenameField(
-            model_name='asharingcontent',
-            old_name='acontent',
-            new_name='content',
+            model_name="asharingcontent",
+            old_name="acontent",
+            new_name="content",
         ),
         migrations.RemoveField(
-            model_name='appraising',
-            name='afrom',
+            model_name="appraising",
+            name="afrom",
         ),
         migrations.AddField(
-            model_name='appraising',
-            name='amember',
+            model_name="appraising",
+            name="amember",
             field=models.ForeignKey(
                 default=123,
                 on_delete=django.db.models.deletion.CASCADE,
-                to='eduhub.asharinggroupmember',
-                verbose_name='Appraisings from'),
+                to="eduhub.asharinggroupmember",
+                verbose_name="Appraisings from",
+            ),
             preserve_default=False,
         ),
     ]

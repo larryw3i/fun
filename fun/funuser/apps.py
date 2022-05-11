@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
-app_name = 'funuser'
+app_name = "funuser"
 
 
 class FunuserConfig(AppConfig):

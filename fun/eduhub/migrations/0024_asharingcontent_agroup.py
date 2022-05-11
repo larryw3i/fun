@@ -7,18 +7,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('eduhub', '0023_auto_20211006_1759'),
+        ("eduhub", "0023_auto_20211006_1759"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='asharingcontent',
-            name='agroup',
+            model_name="asharingcontent",
+            name="agroup",
             field=models.ForeignKey(
                 default=123,
                 on_delete=django.db.models.deletion.CASCADE,
-                to='eduhub.asharinggroup',
-                verbose_name='Classification'),
+                to="eduhub.asharinggroup",
+                verbose_name="Classification",
+            ),
             preserve_default=False,
         ),
     ]
